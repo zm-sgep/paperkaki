@@ -43,14 +43,14 @@ Prerequisites:
 ```bash
 npm ci
 cp .env.example .env.local
+npm run db:migrate   # creates .data/dev on first run
+npm run db:seed      # development only: Primary 3 curriculum + 268 questions
 npm run dev
 ```
 
-Apply the database migrations (creates `.data/dev` on first run):
+`db:seed` loads the Primary 3 Mathematics curriculum from MOE's syllabus (updated October 2025) and the question bank, and auto-approves both for local use only. Every curriculum outcome and question still needs a human check before production (ADR-0012). The seed refuses to run when `NODE_ENV=production`.
 
-```bash
-npm run db:migrate
-```
+To try the parent journey: sign in, press **Add your child**, choose an assessment and date, tick topics, press **Generate first mock**, then download the mock paper and the answer pack.
 
 Open http://localhost:3000 and sign in with any email address (development sign-in, no password; emails in `DEV_ADMIN_EMAILS` get the admin area at `/admin`). Environment variables are validated when Next.js loads its config (`src/config/env.ts`); a missing or invalid variable stops startup and the error names each one without printing values.
 
