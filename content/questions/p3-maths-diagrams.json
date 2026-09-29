@@ -1,0 +1,8061 @@
+[
+ {
+  "familyCode": "P3-MG-AN-F01",
+  "familyTitle": "Pick the right angle",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which angle is a right angle?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 120,
+     "armLengthMm": 20,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 45,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 60,
+     "armLengthMm": 20,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 20,
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle S"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A right angle is a square corner, like the corner of a book. Angle S is a right angle."
+     }
+    ]
+   },
+   {
+    "t": "angle",
+    "degrees": 120,
+    "armLengthMm": 20,
+    "label": "P"
+   },
+   {
+    "t": "angle",
+    "degrees": 45,
+    "armLengthMm": 20,
+    "label": "Q"
+   },
+   {
+    "t": "angle",
+    "degrees": 60,
+    "armLengthMm": 20,
+    "label": "R"
+   },
+   {
+    "t": "angle",
+    "degrees": 90,
+    "armLengthMm": 20,
+    "label": "S",
+    "showRightAngleMark": true
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F02",
+  "familyTitle": "Right angle in everyday things",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of these has a right angle?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "The tip of a sharp pencil"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "The point of a party hat"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "The corner of a page in a book"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "The edge of a round plate"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A right angle is a square corner. The corner of a page in a book is a right angle. A sharp pencil tip and a party hat come to a point that is smaller than a right angle, and a round plate has no corners."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F03",
+  "familyTitle": "Right angles in a rectangle",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 6,
+     "rows": 4,
+     "cellMm": 8,
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       1,
+       3
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many right angles are there in the rectangle above?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4"
+  },
+  "verification": {
+   "expression": "1 + 1 + 1 + 1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each corner of a rectangle is a right angle. There are 4 corners, so there are 4 right angles."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F04",
+  "familyTitle": "Count the right angles",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many of these angles are right angles?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 20,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 60,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 20,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 20,
+     "label": "S"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3"
+  },
+  "verification": {
+   "expression": "1 + 0 + 1 + 1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angles P, R and S are square corners, so they are right angles. Angle Q is smaller than a right angle. There are 3 right angles."
+     }
+    ]
+   },
+   {
+    "t": "angle",
+    "degrees": 90,
+    "armLengthMm": 20,
+    "label": "P",
+    "showRightAngleMark": true
+   },
+   {
+    "t": "angle",
+    "degrees": 60,
+    "armLengthMm": 20,
+    "label": "Q"
+   },
+   {
+    "t": "angle",
+    "degrees": 90,
+    "armLengthMm": 20,
+    "label": "R",
+    "showRightAngleMark": true
+   },
+   {
+    "t": "angle",
+    "degrees": 90,
+    "armLengthMm": 20,
+    "label": "S",
+    "showRightAngleMark": true
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F05",
+  "familyTitle": "Is angle Z a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 28,
+     "label": "Z"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Is angle Z a right angle? Write Yes or No."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "Yes",
+    "yes",
+    "YES"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle Z is a square corner, like the corner of a book. Yes, it is a right angle."
+     }
+    ]
+   },
+   {
+    "t": "angle",
+    "degrees": 90,
+    "armLengthMm": 28,
+    "label": "Z",
+    "showRightAngleMark": true
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F06",
+  "familyTitle": "Is angle W a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "angle",
+     "degrees": 115,
+     "armLengthMm": 28,
+     "label": "W"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Is angle W a right angle? Write Yes or No."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "No",
+    "no",
+    "NO"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle W opens wider than a square corner, so it is not a right angle. The answer is No."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F07",
+  "familyTitle": "Right angles in six tiles",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Lim has 6 rectangular tiles. How many right angles are there in all 6 tiles altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "24"
+  },
+  "verification": {
+   "expression": "4 * 6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A rectangle has 4 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 × 4 = 24"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 24 right angles altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Knows that one rectangle has 4 right angles"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies to get 24"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F08",
+  "familyTitle": "Greater than a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which angle is greater than a right angle?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 45,
+     "armLengthMm": 20,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 130,
+     "armLengthMm": 20,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 70,
+     "armLengthMm": 20,
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle S"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare each angle with a square corner. Angle R opens wider than a right angle. Angles P and S are smaller than a right angle. Angle Q is a right angle."
+     }
+    ]
+   },
+   {
+    "t": "angle",
+    "degrees": 45,
+    "armLengthMm": 20,
+    "label": "P"
+   },
+   {
+    "t": "angle",
+    "degrees": 90,
+    "armLengthMm": 20,
+    "label": "Q",
+    "showRightAngleMark": true
+   },
+   {
+    "t": "angle",
+    "degrees": 130,
+    "armLengthMm": 20,
+    "label": "R"
+   },
+   {
+    "t": "angle",
+    "degrees": 70,
+    "armLengthMm": 20,
+    "label": "S"
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F09",
+  "familyTitle": "Smaller than a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which angle is smaller than a right angle?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 150,
+     "armLengthMm": 20,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 40,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 20,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 120,
+     "armLengthMm": 20,
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle S"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare each angle with a square corner. Angle Q opens less than a right angle. Angle R is a right angle. Angles P and S open wider than a right angle."
+     }
+    ]
+   },
+   {
+    "t": "angle",
+    "degrees": 150,
+    "armLengthMm": 20,
+    "label": "P"
+   },
+   {
+    "t": "angle",
+    "degrees": 40,
+    "armLengthMm": 20,
+    "label": "Q"
+   },
+   {
+    "t": "angle",
+    "degrees": 90,
+    "armLengthMm": 20,
+    "label": "R",
+    "showRightAngleMark": true
+   },
+   {
+    "t": "angle",
+    "degrees": 120,
+    "armLengthMm": 20,
+    "label": "S"
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F10",
+  "familyTitle": "Count angles smaller than a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many of these angles are smaller than a right angle?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 35,
+     "armLengthMm": 20,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 125,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 65,
+     "armLengthMm": 20,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 150,
+     "armLengthMm": 20,
+     "label": "S"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2"
+  },
+  "verification": {
+   "expression": "1 + 0 + 1 + 0"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angles P and R are smaller than a right angle. Angles Q and S are greater than a right angle. The answer is 2."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F11",
+  "familyTitle": "Compare angle X with a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "angle",
+     "degrees": 140,
+     "armLengthMm": 28,
+     "label": "X"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Is angle X greater than, smaller than or the same as a right angle? Write your answer in words."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "greater than a right angle",
+    "greater than",
+    "greater",
+    "bigger than a right angle",
+    "bigger than",
+    "bigger"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle X opens wider than a square corner, so it is greater than a right angle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F12",
+  "familyTitle": "Order three angles",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write P, Q and R in order, starting with the smallest angle."
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 35,
+     "armLengthMm": 24,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 120,
+     "armLengthMm": 24,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 65,
+     "armLengthMm": 24,
+     "label": "R"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "P, R, Q",
+    "P R Q",
+    "PRQ",
+    "P,R,Q",
+    "P, then R, then Q"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle P is the smallest. Angle R is a little bigger. Angle Q opens the widest."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From smallest to greatest: P, R, Q."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Identifies P as the smallest or Q as the greatest"
+    },
+    {
+     "marks": 1,
+     "criterion": "All three in the correct order P, R, Q"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F13",
+  "familyTitle": "Two angles with a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Compare angle P and angle Q with a right angle. Which sentence is correct?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 55,
+     "armLengthMm": 24,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 120,
+     "armLengthMm": 24,
+     "label": "Q"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Both angles are smaller than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Both angles are greater than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P is smaller than a right angle and angle Q is greater than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P is greater than a right angle and angle Q is smaller than a right angle."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle P is smaller than a right angle. Angle Q opens wider than a right angle, so it is greater."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F14",
+  "familyTitle": "Draw an angle greater than a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        2,
+        1
+       ],
+       "to": [
+        7,
+        1
+       ]
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        2,
+        1
+       ],
+       "label": "O"
+      }
+     ],
+     "dotGrid": {
+      "cols": 8,
+      "rows": 5
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line from point O to make an angle that is greater than a right angle."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A line from O going up and to the left, so the angle opens wider than a square corner (for example from O to the dot 2 to the left and 2 up)."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A right angle is a square corner, so a line straight up from O would make a right angle. To make a greater angle, lean the line to the left. Example: draw from O up and to the left."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       2,
+       1
+      ],
+      "to": [
+       7,
+       1
+      ]
+     },
+     {
+      "from": [
+       2,
+       1
+      ],
+      "to": [
+       0,
+       3
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       2,
+       1
+      ],
+      "label": "O"
+     }
+    ],
+    "dotGrid": {
+     "cols": 8,
+     "rows": 5
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "The new line starts at O"
+    },
+    {
+     "marks": 1,
+     "criterion": "The angle made is greater than a right angle (the line leans to the left of straight up)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F15",
+  "familyTitle": "Angle size and arm length",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which angle is the greatest?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 55,
+     "armLengthMm": 30,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 110,
+     "armLengthMm": 16,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 80,
+     "armLengthMm": 22,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 30,
+     "armLengthMm": 32,
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle S"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The size of an angle depends on how wide it opens, not on how long its lines are. Angle Q opens the widest, so it is the greatest angle."
+     }
+    ]
+   },
+   {
+    "t": "angle",
+    "degrees": 55,
+    "armLengthMm": 30,
+    "label": "P"
+   },
+   {
+    "t": "angle",
+    "degrees": 110,
+    "armLengthMm": 16,
+    "label": "Q"
+   },
+   {
+    "t": "angle",
+    "degrees": 80,
+    "armLengthMm": 22,
+    "label": "R"
+   },
+   {
+    "t": "angle",
+    "degrees": 30,
+    "armLengthMm": 32,
+    "label": "S"
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F16",
+  "familyTitle": "What an angle is",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which sentence about an angle is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "An angle is a straight line that never ends."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "An angle is the length of two lines."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "An angle is formed when two straight lines meet at a point."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "An angle is a curved line that meets at a point."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "An angle is formed when two straight lines meet at a point."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F17",
+  "familyTitle": "Longer lines do not mean bigger angle",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Amy says angle P is greater than angle Q because the lines of angle P are longer. Is Amy correct? Write Yes or No."
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 50,
+     "armLengthMm": 40,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 100,
+     "armLengthMm": 18,
+     "label": "Q"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "No",
+    "no",
+    "NO"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The size of an angle depends on how wide it opens, not on the length of its lines. Angle Q opens wider than angle P, so Amy is not correct."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F18",
+  "familyTitle": "Quarter turn",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei faces the school gate. She turns a quarter turn to face the canteen. What kind of angle has she turned through? Write: right angle, smaller than a right angle, or greater than a right angle."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "right angle",
+    "a right angle",
+    "Right angle"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A quarter turn is a turn through a square corner. So Mei has turned through a right angle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F19",
+  "familyTitle": "Order angles with different lines",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write P, Q and R in order, starting with the smallest angle."
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 80,
+     "armLengthMm": 38,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 45,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 110,
+     "armLengthMm": 26,
+     "label": "R"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "Q, P, R",
+    "Q P R",
+    "QPR",
+    "Q,P,R",
+    "Q, then P, then R"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ignore how long the lines are. Look at how wide each angle opens. Angle Q opens the least, angle P more, and angle R the most."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From smallest to greatest: Q, P, R."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Compares the openings, not the length of the lines"
+    },
+    {
+     "marks": 1,
+     "criterion": "All three in the correct order Q, P, R"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F20",
+  "familyTitle": "Angles in five triangles",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A triangle has 3 angles. How many angles are there in 5 triangles?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "15"
+  },
+  "verification": {
+   "expression": "3 * 5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each triangle has 3 angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 × 3 = 15"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 15 angles in 5 triangles."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F21",
+  "familyTitle": "Same angle, different lines",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which sentence about angle P and angle Q is correct?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 65,
+     "armLengthMm": 20,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 65,
+     "armLengthMm": 38,
+     "label": "Q"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P is greater than angle Q."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Q is greater than angle P."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P and angle Q are the same size."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "We cannot compare the angles."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle Q has longer lines, but both angles open by the same amount. The lines can be made longer without changing the size of the angle. So angle P and angle Q are the same size."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F01",
+  "familyTitle": "Perpendicular to line P",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        6
+       ],
+       "to": [
+        9,
+        6
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        4,
+        3
+       ],
+       "to": [
+        4,
+        9
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        9,
+        1
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        6,
+        2
+       ],
+       "to": [
+        10,
+        4
+       ],
+       "label": "S"
+      },
+      {
+       "from": [
+        6,
+        8
+       ],
+       "to": [
+        9,
+        10
+       ],
+       "label": "T"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which line is perpendicular to line P?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line Q"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line S"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line T"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perpendicular lines meet at a right angle (a square corner). Line Q crosses line P at a right angle, so line Q is perpendicular to line P."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       6
+      ],
+      "to": [
+       9,
+       6
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       4,
+       3
+      ],
+      "to": [
+       4,
+       9
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       9,
+       1
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       6,
+       2
+      ],
+      "to": [
+       10,
+       4
+      ],
+      "label": "S"
+     },
+     {
+      "from": [
+       6,
+       8
+      ],
+      "to": [
+       9,
+       10
+      ],
+      "label": "T"
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F02",
+  "familyTitle": "Parallel to line Q",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        3
+       ],
+       "to": [
+        9,
+        3
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        3,
+        0
+       ],
+       "to": [
+        3,
+        8
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        7,
+        0
+       ],
+       "to": [
+        7,
+        8
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        4,
+        5
+       ],
+       "to": [
+        6,
+        9
+       ],
+       "label": "S"
+      },
+      {
+       "from": [
+        0,
+        11
+       ],
+       "to": [
+        8,
+        11
+       ],
+       "label": "T"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which line is parallel to line Q?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line S"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line T"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Parallel lines are always the same distance apart and never meet. Line R stays the same distance from line Q all the way, so line R is parallel to line Q."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       3
+      ],
+      "to": [
+       9,
+       3
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       3,
+       0
+      ],
+      "to": [
+       3,
+       8
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       7,
+       0
+      ],
+      "to": [
+       7,
+       8
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       4,
+       5
+      ],
+      "to": [
+       6,
+       9
+      ],
+      "label": "S"
+     },
+     {
+      "from": [
+       0,
+       11
+      ],
+      "to": [
+       8,
+       11
+      ],
+      "label": "T"
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F03",
+  "familyTitle": "Pairs of parallel lines in a rectangle",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        7,
+        1
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        7,
+        4
+       ],
+       "to": [
+        1,
+        4
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        1,
+        4
+       ],
+       "to": [
+        1,
+        1
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        7,
+        1
+       ],
+       "to": [
+        7,
+        4
+       ],
+       "label": "S"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pairs of parallel lines are there in the figure above?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2"
+  },
+  "verification": {
+   "expression": "1 + 1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line P is parallel to line Q. Line R is parallel to line S. There are 2 pairs of parallel lines."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       7,
+       1
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       7,
+       4
+      ],
+      "to": [
+       1,
+       4
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       1,
+       1
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       7,
+       1
+      ],
+      "to": [
+       7,
+       4
+      ],
+      "label": "S"
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F04",
+  "familyTitle": "Pairs of perpendicular lines",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        2,
+        1
+       ],
+       "to": [
+        2,
+        7
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        7,
+        1
+       ],
+       "to": [
+        7,
+        7
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        0,
+        4
+       ],
+       "to": [
+        9,
+        4
+       ],
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pairs of perpendicular lines are there in the figure above?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2"
+  },
+  "verification": {
+   "expression": "1 + 1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line R meets line P at a right angle: 1 pair."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line R meets line Q at a right angle: 1 pair."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines P and Q are parallel, not perpendicular. There are 2 pairs of perpendicular lines."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       2,
+       1
+      ],
+      "to": [
+       2,
+       7
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       7,
+       1
+      ],
+      "to": [
+       7,
+       7
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       0,
+       4
+      ],
+      "to": [
+       9,
+       4
+      ],
+      "label": "R"
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds at least one pair of perpendicular lines (R with P, or R with Q)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds both pairs and gives 2"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F05",
+  "familyTitle": "Perpendicular to both lines",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        8
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        8,
+        0
+       ],
+       "to": [
+        8,
+        8
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        0,
+        4
+       ],
+       "to": [
+        10,
+        4
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        3,
+        1
+       ],
+       "to": [
+        6,
+        7
+       ],
+       "label": "S"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which line is perpendicular to both line P and line Q? Write the letter of the line."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "R",
+    "Line R",
+    "line R",
+    "r"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines P and Q are parallel and stand straight up. Line R crosses both of them at right angles, so line R is perpendicular to both."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       2,
+       0
+      ],
+      "to": [
+       2,
+       8
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       8,
+       0
+      ],
+      "to": [
+       8,
+       8
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       0,
+       4
+      ],
+      "to": [
+       10,
+       4
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       3,
+       1
+      ],
+      "to": [
+       6,
+       7
+      ],
+      "label": "S"
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F06",
+  "familyTitle": "Find the parallel pair",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        2
+       ],
+       "to": [
+        9,
+        2
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        2,
+        4
+       ],
+       "to": [
+        6,
+        10
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        1,
+        6
+       ],
+       "to": [
+        9,
+        6
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        8,
+        8
+       ],
+       "to": [
+        11,
+        10
+       ],
+       "label": "S"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which two lines are parallel? Write the letters of the two lines."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "P and R",
+    "R and P",
+    "P, R",
+    "R, P",
+    "PR",
+    "RP",
+    "P & R"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line P and line R are always the same distance apart, so they are parallel. Line Q leans and line S has a different slope, so neither is parallel to another line."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       2
+      ],
+      "to": [
+       9,
+       2
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       2,
+       4
+      ],
+      "to": [
+       6,
+       10
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       1,
+       6
+      ],
+      "to": [
+       9,
+       6
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       8,
+       8
+      ],
+      "to": [
+       11,
+       10
+      ],
+      "label": "S"
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F07",
+  "familyTitle": "Sides of a square",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which sentence about a square is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "All four sides are parallel to one another."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Opposite sides are parallel."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Neighbouring sides are parallel."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "No two sides are perpendicular."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Opposite sides of a square are always the same distance apart, so they are parallel. Neighbouring sides meet at a right angle, so they are perpendicular, not parallel."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F08",
+  "familyTitle": "Draw a parallel line through X",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        7,
+        1
+       ],
+       "label": "AB"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        3,
+        4
+       ],
+       "label": "X"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line through point X that is parallel to line AB."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A straight horizontal line through X, along the same row of dots as X (the same direction as AB)."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line AB is flat (horizontal). A parallel line stays the same distance from AB, so draw a flat line through X along the row of dots."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       7,
+       1
+      ],
+      "label": "AB"
+     },
+     {
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       7,
+       4
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       3,
+       4
+      ],
+      "label": "X"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F09",
+  "familyTitle": "Draw a perpendicular from X",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        8,
+        1
+       ],
+       "label": "AB"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        4,
+        4
+       ],
+       "label": "X"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a straight line from point X to line AB so that it is perpendicular to line AB."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A straight vertical line from X straight down to line AB (along the column of dots)."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perpendicular means meeting at a right angle. Draw straight down from X along the column of dots until you reach AB."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       0,
+       1
+      ],
+      "to": [
+       8,
+       1
+      ],
+      "label": "AB"
+     },
+     {
+      "from": [
+       4,
+       4
+      ],
+      "to": [
+       4,
+       1
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       4,
+       4
+      ],
+      "label": "X"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F10",
+  "familyTitle": "Draw a perpendicular through Y",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        3,
+        0
+       ],
+       "to": [
+        3,
+        5
+       ],
+       "label": "CD"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        3,
+        2
+       ],
+       "label": "Y"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line through point Y that is perpendicular to line CD."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A straight horizontal line through Y, crossing CD at a right angle (along the row of dots)."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line CD stands straight up. A line that meets it at a right angle is flat (horizontal). Draw a flat line through Y along the row of dots."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       3,
+       0
+      ],
+      "to": [
+       3,
+       5
+      ],
+      "label": "CD"
+     },
+     {
+      "from": [
+       0,
+       2
+      ],
+      "to": [
+       6,
+       2
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       3,
+       2
+      ],
+      "label": "Y"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F11",
+  "familyTitle": "Draw a parallel to a slanted line",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        0
+       ],
+       "to": [
+        4,
+        3
+       ],
+       "label": "AB"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        5,
+        1
+       ],
+       "label": "X"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line through point X that is parallel to line AB."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A slanted line through X going up to the right in the same way as AB (each step: one dot across and one dot up), for example from X to the dot 3 across and 3 up."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line AB goes up 1 dot for every 1 dot across. A parallel line must lean the same way. Start at X and keep going 1 across and 1 up."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       0
+      ],
+      "to": [
+       4,
+       3
+      ],
+      "label": "AB"
+     },
+     {
+      "from": [
+       5,
+       1
+      ],
+      "to": [
+       8,
+       4
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       5,
+       1
+      ],
+      "label": "X"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "The line passes through X"
+    },
+    {
+     "marks": 1,
+     "criterion": "The line leans the same way as AB (parallel to it)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F12",
+  "familyTitle": "Complete the rectangle",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        6,
+        1
+       ]
+      },
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        1,
+        4
+       ]
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        1,
+        1
+       ],
+       "label": "A"
+      },
+      {
+       "at": [
+        6,
+        1
+       ],
+       "label": "B"
+      },
+      {
+       "at": [
+        1,
+        4
+       ],
+       "label": "D"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A, B and D are three corners of rectangle ABCD. Draw the other two sides of the rectangle."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "Two lines drawn: one from B straight up to the corner C (level with D), and one from D straight across to C. C is above B and to the right of D."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Opposite sides of a rectangle are parallel. So the side from B goes straight up, parallel to AD, and the side from D goes straight across, parallel to AB. They meet at C."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       6,
+       1
+      ]
+     },
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       1,
+       4
+      ]
+     },
+     {
+      "from": [
+       6,
+       1
+      ],
+      "to": [
+       6,
+       4
+      ]
+     },
+     {
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       6,
+       4
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       1,
+       1
+      ],
+      "label": "A"
+     },
+     {
+      "at": [
+       6,
+       1
+      ],
+      "label": "B"
+     },
+     {
+      "at": [
+       1,
+       4
+      ],
+      "label": "D"
+     },
+     {
+      "at": [
+       6,
+       4
+      ],
+      "label": "C"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Draws the side from B parallel to AD (straight up)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Draws the side from D parallel to AB (straight across) so the sides meet at C"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F13",
+  "familyTitle": "Which line through X is parallel",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        7,
+        1
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        1,
+        3
+       ],
+       "to": [
+        7,
+        3
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        4,
+        3
+       ],
+       "to": [
+        4,
+        5
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        2,
+        5
+       ],
+       "to": [
+        5,
+        2
+       ],
+       "label": "S"
+      },
+      {
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        6,
+        4
+       ],
+       "label": "T"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        4,
+        3
+       ],
+       "label": "X"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei Ling draws four lines through point X. Which line is parallel to line P?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line Q"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line S"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line T"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line P is flat. The only line through X that is flat too is line Q, so line Q is parallel to line P."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       7,
+       1
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       1,
+       3
+      ],
+      "to": [
+       7,
+       3
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       4,
+       3
+      ],
+      "to": [
+       4,
+       5
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       2,
+       5
+      ],
+      "to": [
+       5,
+       2
+      ],
+      "label": "S"
+     },
+     {
+      "from": [
+       2,
+       2
+      ],
+      "to": [
+       6,
+       4
+      ],
+      "label": "T"
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       4,
+       3
+      ],
+      "label": "X"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F14",
+  "familyTitle": "Which line through X is perpendicular",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        3,
+        4
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        3,
+        1
+       ],
+       "to": [
+        7,
+        5
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        3,
+        5
+       ],
+       "to": [
+        7,
+        1
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        2,
+        3
+       ],
+       "to": [
+        8,
+        3
+       ],
+       "label": "S"
+      },
+      {
+       "from": [
+        5,
+        1
+       ],
+       "to": [
+        5,
+        5
+       ],
+       "label": "T"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        5,
+        3
+       ],
+       "label": "X"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ben draws four lines through point X. Which line is perpendicular to line P?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line Q"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line S"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line T"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line P goes up to the right. A line perpendicular to it goes up to the left, crossing at a square corner. Line R does this. Line Q goes the same way as P, so it is parallel to P."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       0,
+       1
+      ],
+      "to": [
+       3,
+       4
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       3,
+       1
+      ],
+      "to": [
+       7,
+       5
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       3,
+       5
+      ],
+      "to": [
+       7,
+       1
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       2,
+       3
+      ],
+      "to": [
+       8,
+       3
+      ],
+      "label": "S"
+     },
+     {
+      "from": [
+       5,
+       1
+      ],
+      "to": [
+       5,
+       5
+      ],
+      "label": "T"
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       5,
+       3
+      ],
+      "label": "X"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F01",
+  "familyTitle": "Read one bar",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite fruit of Class 3A",
+     "categoryAxisLabel": "Fruit",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 10,
+      "step": 1
+     },
+     "bars": [
+      {
+       "label": "Apple",
+       "value": 6
+      },
+      {
+       "label": "Banana",
+       "value": 9
+      },
+      {
+       "label": "Orange",
+       "value": 4
+      },
+      {
+       "label": "Grape",
+       "value": 7
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pupils chose bananas?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "9"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find the bar for Banana. Its top reaches 9 on the number line."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 pupils chose bananas."
+     }
+    ]
+   },
+   {
+    "t": "bargraph",
+    "title": "Favourite fruit of Class 3A",
+    "categoryAxisLabel": "Fruit",
+    "valueAxisLabel": "Number of pupils",
+    "scale": {
+     "max": 10,
+     "step": 1
+    },
+    "bars": [
+     {
+      "label": "Apple",
+      "value": 6
+     },
+     {
+      "label": "Banana",
+      "value": 9
+     },
+     {
+      "label": "Orange",
+      "value": 4
+     },
+     {
+      "label": "Grape",
+      "value": 7
+     }
+    ],
+    "orientation": "vertical"
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F02",
+  "familyTitle": "Fewest pupils",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite fruit of Class 3A",
+     "categoryAxisLabel": "Fruit",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 10,
+      "step": 1
+     },
+     "bars": [
+      {
+       "label": "Apple",
+       "value": 6
+      },
+      {
+       "label": "Banana",
+       "value": 9
+      },
+      {
+       "label": "Orange",
+       "value": 4
+      },
+      {
+       "label": "Grape",
+       "value": 7
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fruit was chosen by the fewest pupils?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Apple"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Banana"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Orange"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Grape"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The shortest bar shows the fewest pupils. The bar for Orange is the shortest (4 pupils)."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F03",
+  "familyTitle": "Total from a graph",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Cups of bubble tea sold",
+     "categoryAxisLabel": "Day",
+     "valueAxisLabel": "Number of cups",
+     "scale": {
+      "max": 50,
+      "step": 10
+     },
+     "bars": [
+      {
+       "label": "Monday",
+       "value": 20
+      },
+      {
+       "label": "Tuesday",
+       "value": 30
+      },
+      {
+       "label": "Wednesday",
+       "value": 10
+      },
+      {
+       "label": "Thursday",
+       "value": 40
+      },
+      {
+       "label": "Friday",
+       "value": 50
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many cups of bubble tea were sold from Monday to Friday altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "150"
+  },
+  "verification": {
+   "expression": "20 + 30 + 10 + 40 + 50"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Read each bar: Monday 20, Tuesday 30, Wednesday 10, Thursday 40, Friday 50."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "20 + 30 + 10 + 40 + 50 = 150"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "150 cups were sold altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads the value of every bar correctly"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 150"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F04",
+  "familyTitle": "How many more",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite sport of Primary 3 pupils",
+     "categoryAxisLabel": "Sport",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Football",
+       "value": 12
+      },
+      {
+       "label": "Badminton",
+       "value": 8
+      },
+      {
+       "label": "Swimming",
+       "value": 14
+      },
+      {
+       "label": "Basketball",
+       "value": 6
+      },
+      {
+       "label": "Table tennis",
+       "value": 10
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more pupils chose swimming than badminton?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6"
+  },
+  "verification": {
+   "expression": "14 - 8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Swimming: 14 pupils. Badminton: 8 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "14 – 8 = 6"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 more pupils chose swimming than badminton."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads both bars correctly (14 and 8)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 6"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F05",
+  "familyTitle": "Total number of pupils",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite sport of Primary 3 pupils",
+     "categoryAxisLabel": "Sport",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Football",
+       "value": 12
+      },
+      {
+       "label": "Badminton",
+       "value": 8
+      },
+      {
+       "label": "Swimming",
+       "value": 14
+      },
+      {
+       "label": "Basketball",
+       "value": 6
+      },
+      {
+       "label": "Table tennis",
+       "value": 10
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each pupil chose one sport. How many pupils took part altogether?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "44"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "50"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "60"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "12 + 8 + 14 + 6 + 10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 + 8 + 14 + 6 + 10 = 50"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "50 pupils took part altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F06",
+  "familyTitle": "Everyone except one bar",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite sport of Primary 3 pupils",
+     "categoryAxisLabel": "Sport",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Football",
+       "value": 12
+      },
+      {
+       "label": "Badminton",
+       "value": 8
+      },
+      {
+       "label": "Swimming",
+       "value": 14
+      },
+      {
+       "label": "Basketball",
+       "value": 6
+      },
+      {
+       "label": "Table tennis",
+       "value": 10
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pupils did not choose football?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "38"
+  },
+  "verification": {
+   "expression": "8 + 14 + 6 + 10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the bars for the other sports: 8 + 14 + 6 + 10 = 38."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "38 pupils did not choose football."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "(Or: 50 pupils in all, and 50 – 12 = 38.)"
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Uses the bars for the other four sports (or 50 – 12)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct answer 38"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F07",
+  "familyTitle": "After some pupils change",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 160,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite sport of Primary 3 pupils",
+     "categoryAxisLabel": "Sport",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Football",
+       "value": 12
+      },
+      {
+       "label": "Badminton",
+       "value": 8
+      },
+      {
+       "label": "Swimming",
+       "value": 14
+      },
+      {
+       "label": "Basketball",
+       "value": 6
+      },
+      {
+       "label": "Table tennis",
+       "value": 10
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "5 pupils who chose football change their minds and choose badminton instead. How many more pupils chose badminton than football now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6"
+  },
+  "verification": {
+   "expression": "(8 + 5) - (12 - 5)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Badminton now: 8 + 5 = 13."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Football now: 12 – 5 = 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "13 – 7 = 6"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 more pupils chose badminton than football."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Works out the new badminton number (13)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Works out the new football number (7)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 6"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F08",
+  "familyTitle": "Read the scale",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Stickers collected by four friends",
+     "categoryAxisLabel": "Friend",
+     "valueAxisLabel": "Number of stickers",
+     "scale": {
+      "max": 50,
+      "step": 5
+     },
+     "bars": [
+      {
+       "label": "Ann",
+       "value": 25
+      },
+      {
+       "label": "Ben",
+       "value": 40
+      },
+      {
+       "label": "Cara",
+       "value": 15
+      },
+      {
+       "label": "Dev",
+       "value": 30
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The number line on the side of the graph goes up in equal steps. Each step goes up by how many stickers?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "10"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "25"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Look at the numbers on the side: 0, 5, 10, 15, ... Each step goes up by 5 stickers."
+     }
+    ]
+   },
+   {
+    "t": "bargraph",
+    "title": "Stickers collected by four friends",
+    "categoryAxisLabel": "Friend",
+    "valueAxisLabel": "Number of stickers",
+    "scale": {
+     "max": 50,
+     "step": 5
+    },
+    "bars": [
+     {
+      "label": "Ann",
+      "value": 25
+     },
+     {
+      "label": "Ben",
+      "value": 40
+     },
+     {
+      "label": "Cara",
+      "value": 15
+     },
+     {
+      "label": "Dev",
+      "value": 30
+     }
+    ],
+    "orientation": "vertical"
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F09",
+  "familyTitle": "Scale of 10",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Visitors to the science centre",
+     "categoryAxisLabel": "Day",
+     "valueAxisLabel": "Number of visitors",
+     "scale": {
+      "max": 100,
+      "step": 10
+     },
+     "bars": [
+      {
+       "label": "Friday",
+       "value": 60
+      },
+      {
+       "label": "Saturday",
+       "value": 90
+      },
+      {
+       "label": "Sunday",
+       "value": 80
+      },
+      {
+       "label": "Monday",
+       "value": 30
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many visitors were there on Saturday?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "90"
+  },
+  "verification": {
+   "expression": "9 * 10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The scale goes up in tens. The bar for Saturday ends at 90."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There were 90 visitors on Saturday."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F10",
+  "familyTitle": "Halfway between two gridlines",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Pets owned by Class 3B",
+     "categoryAxisLabel": "Pet",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Fish",
+       "value": 9
+      },
+      {
+       "label": "Hamster",
+       "value": 6
+      },
+      {
+       "label": "Rabbit",
+       "value": 4
+      },
+      {
+       "label": "Turtle",
+       "value": 3
+      },
+      {
+       "label": "Bird",
+       "value": 12
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bar that ends between two gridlines ends exactly halfway between them. How many pupils own a fish?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "10"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "18"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "9"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "(8 + 10) / 2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The scale goes up in twos. The bar for Fish ends halfway between 8 and 10."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Halfway between 8 and 10 is 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 pupils own a fish."
+     }
+    ]
+   },
+   {
+    "t": "bargraph",
+    "title": "Pets owned by Class 3B",
+    "categoryAxisLabel": "Pet",
+    "valueAxisLabel": "Number of pupils",
+    "scale": {
+     "max": 20,
+     "step": 2
+    },
+    "bars": [
+     {
+      "label": "Fish",
+      "value": 9
+     },
+     {
+      "label": "Hamster",
+      "value": 6
+     },
+     {
+      "label": "Rabbit",
+      "value": 4
+     },
+     {
+      "label": "Turtle",
+      "value": 3
+     },
+     {
+      "label": "Bird",
+      "value": 12
+     }
+    ],
+    "orientation": "vertical"
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F11",
+  "familyTitle": "Add two bars with a scale of 2",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Pets owned by Class 3B",
+     "categoryAxisLabel": "Pet",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Fish",
+       "value": 9
+      },
+      {
+       "label": "Hamster",
+       "value": 6
+      },
+      {
+       "label": "Rabbit",
+       "value": 4
+      },
+      {
+       "label": "Turtle",
+       "value": 3
+      },
+      {
+       "label": "Bird",
+       "value": 12
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bar that ends between two gridlines ends exactly halfway between them. How many pupils own a rabbit or a turtle?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7"
+  },
+  "verification": {
+   "expression": "4 + 3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Rabbit: 4 pupils. Turtle: the bar ends halfway between 2 and 4, which is 3 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 + 3 = 7"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 pupils own a rabbit or a turtle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads both bars correctly (4 and 3)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 7"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F12",
+  "familyTitle": "Total with a scale of 5",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Stickers collected by four friends",
+     "categoryAxisLabel": "Friend",
+     "valueAxisLabel": "Number of stickers",
+     "scale": {
+      "max": 50,
+      "step": 5
+     },
+     "bars": [
+      {
+       "label": "Ann",
+       "value": 25
+      },
+      {
+       "label": "Ben",
+       "value": 40
+      },
+      {
+       "label": "Cara",
+       "value": 15
+      },
+      {
+       "label": "Dev",
+       "value": 30
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many stickers did the four friends collect altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "110"
+  },
+  "verification": {
+   "expression": "25 + 40 + 15 + 30"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ann 25, Ben 40, Cara 15, Dev 30."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "25 + 40 + 15 + 30 = 110"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "They collected 110 stickers altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads all four bars correctly"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 110"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F13",
+  "familyTitle": "Same height, different scale",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Stickers collected in Week 1",
+     "categoryAxisLabel": "Child",
+     "valueAxisLabel": "Number of stickers",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Mia",
+       "value": 12
+      },
+      {
+       "label": "Ken",
+       "value": 6
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "bargraph",
+     "title": "Stickers collected in Week 2",
+     "categoryAxisLabel": "Child",
+     "valueAxisLabel": "Number of stickers",
+     "scale": {
+      "max": 50,
+      "step": 10
+     },
+     "bars": [
+      {
+       "label": "Mia",
+       "value": 30
+      },
+      {
+       "label": "Ken",
+       "value": 10
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mia's bar looks equally tall in both graphs, but the scales are different. How many more stickers did Mia collect in Week 2 than in Week 1?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "18"
+  },
+  "verification": {
+   "expression": "30 - 12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Read the scale of each graph. Week 1 goes up in twos: Mia's bar is at 12. Week 2 goes up in tens: Mia's bar is at 30."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "30 – 12 = 18"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mia collected 18 more stickers in Week 2."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads Mia's Week 1 bar using the scale of 2 (12)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Reads Mia's Week 2 bar using the scale of 10 (30)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 18"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F14",
+  "familyTitle": "Why does the bar look shorter",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Stickers collected in Week 1",
+     "categoryAxisLabel": "Child",
+     "valueAxisLabel": "Number of stickers",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Mia",
+       "value": 12
+      },
+      {
+       "label": "Ken",
+       "value": 6
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "bargraph",
+     "title": "Stickers collected in Week 2",
+     "categoryAxisLabel": "Child",
+     "valueAxisLabel": "Number of stickers",
+     "scale": {
+      "max": 50,
+      "step": 10
+     },
+     "bars": [
+      {
+       "label": "Mia",
+       "value": 30
+      },
+      {
+       "label": "Ken",
+       "value": 10
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ken collected more stickers in Week 2 than in Week 1, but his bar looks shorter in the Week 2 graph. Why?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ken collected fewer stickers in Week 2."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "The Week 2 graph goes up in bigger steps."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "The Week 2 graph is drawn wrongly."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "The bars in the Week 2 graph are thinner."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ken's bar is at 6 in Week 1 (scale of 2) and at 10 in Week 2 (scale of 10). Ten is more than 6, but each step in Week 2 is worth 10, so the same number of stickers makes a shorter bar. Always check the scale before comparing bars from different graphs."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F31",
+  "familyTitle": "Area of a shaded rectangle",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 8,
+     "rows": 5,
+     "cellMm": 8,
+     "shaded": [
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       4,
+       2
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square is 1 square unit. What is the area of the shaded part?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "4 + 4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the shaded squares. Each row has 4 squares and there are 2 rows."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 + 4 = 8"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The area is 8 square units."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 8,
+    "rows": 5,
+    "cellMm": 8,
+    "shaded": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F32",
+  "familyTitle": "Area of an L-shaped figure",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 8,
+     "rows": 5,
+     "cellMm": 8,
+     "shaded": [
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       3
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square is 1 square unit. What is the area of the shaded part in square units?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "4 + 1 + 2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the shaded squares row by row: 4, 1 and 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 + 1 + 2 = 7"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The area is 7 square units."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 8,
+    "rows": 5,
+    "cellMm": 8,
+    "shaded": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F33",
+  "familyTitle": "Area in cm2",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 6,
+     "rows": 6,
+     "cellMm": 8,
+     "shaded": [
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       3,
+       4
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square has an area of 1 cm². What is the area of the shaded figure in cm²?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "16"
+  },
+  "verification": {
+   "expression": "2 + 6 + 6 + 2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the shaded squares in each row: 2, 6, 6 and 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 + 6 + 6 + 2 = 16"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The area is 16 cm²."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 6,
+    "rows": 6,
+    "cellMm": 8,
+    "shaded": [
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      5,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      3
+     ],
+     [
+      5,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Counts the squares carefully (row by row or in groups)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct area 16"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F34",
+  "familyTitle": "Compare two shapes",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape A"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 5,
+     "rows": 3,
+     "cellMm": 7,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape B"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 4,
+     "rows": 2,
+     "cellMm": 7,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square is 1 square unit. How many more squares are shaded in Shape A than in Shape B?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6"
+  },
+  "verification": {
+   "expression": "12 - 6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shape A: 5 + 5 + 2 = 12 shaded squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shape B: 4 + 2 = 6 shaded squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 – 6 = 6"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shape A has 6 more shaded squares."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the area of both shapes (12 and 6)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 6"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F35",
+  "familyTitle": "Which shape has area 6",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape P"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 4,
+     "rows": 2,
+     "cellMm": 6,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape Q"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 4,
+     "rows": 2,
+     "cellMm": 6,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape R"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 4,
+     "rows": 2,
+     "cellMm": 6,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape S"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 4,
+     "rows": 2,
+     "cellMm": 6,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square is 1 square unit. Which shape has an area of 6 square units?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape S"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the shaded squares in each shape: P has 4, Q has 6, R has 5 and S has 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shape Q has an area of 6 square units."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F36",
+  "familyTitle": "Squares not shaded",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 6,
+     "rows": 4,
+     "cellMm": 8,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       0,
+       3
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many squares in the grid are not shaded?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9"
+  },
+  "verification": {
+   "expression": "6 * 4 - 15"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The grid has 6 squares in each row and 4 rows: 6 × 4 = 24 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shaded squares: 5 + 5 + 4 + 1 = 15."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "24 – 15 = 9"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 squares are not shaded."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 6,
+    "rows": 4,
+    "cellMm": 8,
+    "shaded": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      0,
+      3
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the total number of squares (24) and the shaded squares (15)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 9"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F37",
+  "familyTitle": "Fill the big square",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 6,
+     "rows": 6,
+     "cellMm": 8,
+     "shaded": [
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       4
+      ]
+     ],
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       1,
+       5
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square is 1 square unit. The big square drawn in dark lines is 4 squares long and 4 squares wide. How many more squares must be shaded to fill the whole big square?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6"
+  },
+  "verification": {
+   "expression": "4 * 4 - 10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The big square has 4 × 4 = 16 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shaded squares so far: 2 + 4 + 3 + 1 = 10."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "16 – 10 = 6"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 more squares must be shaded."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 6,
+    "rows": 6,
+    "cellMm": 8,
+    "shaded": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      1,
+      4
+     ]
+    ],
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      1,
+      5
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the area of the big square (16)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Counts the shaded squares (10)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 6"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F38",
+  "familyTitle": "Perimeter of a rectangle on a grid",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 8,
+     "rows": 5,
+     "cellMm": 8,
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the rectangle?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "16",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "5 + 3 + 5 + 3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter is the distance all the way round the figure. Count the sides: 5 cm, 3 cm, 5 cm, 3 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 + 3 + 5 + 3 = 16"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 16 cm."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 8,
+    "rows": 5,
+    "cellMm": 8,
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      6,
+      1
+     ],
+     [
+      6,
+      4
+     ],
+     [
+      1,
+      4
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F39",
+  "familyTitle": "Perimeter of an L-shaped figure",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 7,
+     "rows": 6,
+     "cellMm": 8,
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       1,
+       5
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the figure?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "16",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "4 + 2 + 2 + 2 + 2 + 4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the length of every side going round the figure: 4, 2, 2, 2, 2, 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 + 2 + 2 + 2 + 2 + 4 = 16"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 16 cm."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 7,
+    "rows": 6,
+    "cellMm": 8,
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      3
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      1,
+      5
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length of each side correctly (no side missed or counted twice)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 16 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F40",
+  "familyTitle": "Perimeter of a staircase figure",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 8,
+     "rows": 5,
+     "cellMm": 8,
+     "outline": [
+      [
+       1,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the figure in cm?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "16"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "18"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "21"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "2 + 1 + 2 + 1 + 2 + 3 + 6 + 1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the length of every side: 2 + 1 + 2 + 1 + 2 + 3 + 6 + 1 = 18."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 18 cm."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 8,
+    "rows": 5,
+    "cellMm": 8,
+    "outline": [
+     [
+      1,
+      3
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      5,
+      2
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      7,
+      1
+     ],
+     [
+      7,
+      4
+     ],
+     [
+      1,
+      4
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F41",
+  "familyTitle": "Perimeter of a T-shaped figure",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 6,
+     "rows": 5,
+     "cellMm": 8,
+     "shaded": [
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       2
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the shaded figure?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "10",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "3 + 1 + 1 + 1 + 1 + 1 + 1 + 1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go round the edge of the shaded figure and add the sides: 3 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 10."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 10 cm."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 6,
+    "rows": 5,
+    "cellMm": 8,
+    "shaded": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      1,
+      2
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length of every side (no side missed)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 10 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F42",
+  "familyTitle": "Perimeter, not area",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 8,
+     "rows": 5,
+     "cellMm": 8,
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       1,
+       3
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the rectangle in cm?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "16"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "10"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "6 + 2 + 6 + 2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter is the distance round the outside: 6 + 2 + 6 + 2 = 16."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "(12 is the number of squares inside, which is the area, not the perimeter.)"
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 8,
+    "rows": 5,
+    "cellMm": 8,
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      7,
+      1
+     ],
+     [
+      7,
+      3
+     ],
+     [
+      1,
+      3
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F43",
+  "familyTitle": "Perimeter of an arch-shaped figure",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 8,
+     "rows": 6,
+     "cellMm": 8,
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the figure?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "20",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "5 + 3 + 1 + 2 + 3 + 2 + 1 + 3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go round the whole figure, including the edges inside the gap: 5 + 3 + 1 + 2 + 3 + 2 + 1 + 3 = 20."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 20 cm."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 8,
+    "rows": 6,
+    "cellMm": 8,
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      6,
+      1
+     ],
+     [
+      6,
+      4
+     ],
+     [
+      5,
+      4
+     ],
+     [
+      5,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      1,
+      4
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length of every side of the outline"
+    },
+    {
+     "marks": 1,
+     "criterion": "Includes the edges inside the gap"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 20 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]
