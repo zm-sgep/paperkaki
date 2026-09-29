@@ -115,8 +115,8 @@ const SCOPES: { name: string; codes: string[]; marks: number }[] = [
 ];
 
 describe("real question bank fixture", () => {
-  it("has 268 candidates over eleven topics", () => {
-    expect(BANK_CANDIDATES).toHaveLength(268);
+  it("has every bank question as a candidate over eleven topics", () => {
+    expect(BANK_CANDIDATES.length).toBeGreaterThanOrEqual(400);
     expect(BANK_TOPICS).toHaveLength(11);
     expect(new Set(BANK_CANDIDATES.map((c) => c.topicId)).size).toBe(11);
   });
@@ -578,10 +578,15 @@ describe("the common end-of-year format (three sections, 50 marks)", () => {
 
   it("a shortage of 2-mark multiple choice questions is a structured failure naming the part", () => {
     const bp = bankBlueprint(["FR"], 40, "balanced", END_OF_YEAR_COMMON_FORMAT);
-    const r = selectQuestions({ blueprint: bp, candidates: BANK_CANDIDATES, seed: "short" });
+    // Keep only two 2-mark multiple choice questions so Section A (6 needed) cannot be filled.
+    let kept = 0;
+    const scarce = BANK_CANDIDATES.filter((c) =>
+      c.questionType === "mcq" && c.marks === 2 ? kept++ < 2 : true,
+    );
+    const r = selectQuestions({ blueprint: bp, candidates: scarce, seed: "short" });
     expect(r).toMatchObject({ ok: false, failure: { code: "insufficient_inventory", sectionCode: "A" } });
     // Validation says the same thing in a parent's words.
-    const errors = validateBlueprint(bp, summariseInventory(bp.scope, bp.format, BANK_CANDIDATES)).errors;
+    const errors = validateBlueprint(bp, summariseInventory(bp.scope, bp.format, scarce)).errors;
     expect(errors.some((e) => /multiple-choice questions worth 2 marks/.test(e.message))).toBe(true);
   });
 

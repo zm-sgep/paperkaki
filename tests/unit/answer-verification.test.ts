@@ -247,7 +247,7 @@ describe("verifyQuestionAnswer", () => {
 
 describe("content/questions bank", () => {
   const dir = path.resolve(import.meta.dirname, "../../content/questions");
-  for (const file of ["p3-maths-number.json", "p3-maths-fmt.json", "p3-maths-gaps.json", "p3-maths-diagrams.json"]) {
+  for (const file of ["p3-maths-number.json", "p3-maths-fmt.json", "p3-maths-gaps.json", "p3-maths-diagrams.json", "p3-maths-topup-number.json", "p3-maths-topup-mgs.json"]) {
     describe(file, () => {
       const items = JSON.parse(readFileSync(path.join(dir, file), "utf8")) as unknown[];
       it("has items", () => expect(items.length).toBeGreaterThan(0));

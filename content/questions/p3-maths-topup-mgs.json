@@ -1,0 +1,8558 @@
+[
+ {
+  "familyCode": "P3-MG-LM-F51",
+  "familyTitle": "Two jogs added in metres",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kai jogged 2 km 400 m in the morning and 1 km 800 m in the evening. How far did he jog altogether? Choose the answer in metres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3200"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4100"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4200"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "5200"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2400+1800"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change each distance to metres: 2 km 400 m = 2400 m and 1 km 800 m = 1800 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2400 m + 1800 m = 4200 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3200 is what you get if the 1 km is left out of 1 km 800 m. 4100 comes from a mistake in regrouping the hundreds."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F52",
+  "familyTitle": "Distance still to run",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Zul wants to run 5 km. He has already run 4 rounds of a path that is 750 m long. How many more metres must he run? Choose the answer in metres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1000"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3000"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4250"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "2000"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "5*1000-4*750"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 rounds of the path = 4 × 750 m = 3000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 km = 5000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5000 m – 3000 m = 2000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3000 m is the distance Zul has already run. 4250 m is what you get if only 1 round is taken away."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F53",
+  "familyTitle": "Water left after filling cups",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A jug has 2 ℓ of water. Rani pours 300 ml of water into each of 5 cups. How much water is left in the jug? Choose the answer in millilitres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "500"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1500"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "1700"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3500"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "2*1000-5*300"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 cups × 300 ml = 1500 ml of water poured out."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 ℓ = 2000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2000 ml – 1500 ml = 500 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1500 ml is the amount poured out, not the amount left. 1700 ml comes from taking away only 1 cup."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F54",
+  "familyTitle": "Mugs to fill a pot",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Tay uses a 500 ml mug to fill an empty pot with water. The pot holds 3 ℓ. How many mugs of water does she need to fill the pot?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3*1000/500"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 ℓ = 3000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Every 2 mugs make 1 ℓ (500 ml + 500 ml = 1000 ml), so 3 ℓ needs 3 × 2 = 6 mugs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 is the number of litres, not the number of mugs."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F55",
+  "familyTitle": "Which conversion is correct",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following statements is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4 km 50 m = 4500 m"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 kg 30 g = 2030 g"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5 ℓ 7 ml = 5070 ml"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3 m 6 cm = 360 cm"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check each one by changing to the smaller unit."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 kg 30 g = 2000 g + 30 g = 2030 g. This is correct."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 km 50 m = 4050 m, not 4500 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 ℓ 7 ml = 5007 ml, not 5070 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 m 6 cm = 306 cm, not 360 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F56",
+  "familyTitle": "Lighter pineapple",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A watermelon has a mass of 2 kg 300 g. A pineapple is 850 g lighter than the watermelon. What is the mass of the pineapple? Choose the answer in grams."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1450"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1550"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "1350"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3150"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "2*1000+300-850"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 kg 300 g = 2300 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2300 g – 850 g = 1450 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3150 g is what you get if 850 g is added instead of taken away."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F57",
+  "familyTitle": "Milk for puddings",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Yeo needs 1 ℓ 250 ml of milk to make one batch of pudding. She makes 3 batches. She has 5 ℓ of milk at first."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much milk does she have left? Give your answer in ℓ and ml."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1250",
+   "unit": "ml",
+   "display": [
+    {
+     "t": "text",
+     "v": "1 ℓ 250 ml"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "5*1000-3*(1000+250)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Milk for 3 batches: 3 × 1 ℓ 250 ml = 3 ℓ 750 ml (or 3 × 1250 ml = 3750 ml)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 ℓ = 5000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5000 ml – 3750 ml = 1250 ml = 1 ℓ 250 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She has 1 ℓ 250 ml of milk left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the milk used for 3 batches (3750 ml or 3 ℓ 750 ml)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the milk used from 5 ℓ (5000 ml)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the answer as 1 ℓ 250 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F58",
+  "familyTitle": "Cycling to the library",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Wei Jie cycled from his home to the park, a distance of 1 km 850 m. He then cycled 2 km 300 m to the library. Finally he cycled 3 km 400 m from the library back home."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far did he cycle altogether? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7550",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "7 km 550 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "1850+2300+3400"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change the distances to metres: 1 km 850 m = 1850 m, 2 km 300 m = 2300 m, 3 km 400 m = 3400 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1850 + 2300 + 3400 = 7550 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7550 m = 7 km 550 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Wei Jie cycled 7 km 550 m altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes the three distances to metres (or adds km and m separately)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds correctly to get 7550 m"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the answer as 7 km 550 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F59",
+  "familyTitle": "Bus to Stop C and back",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bus travels from Stop A to Stop B, a distance of 2 km. It then travels 750 m to Stop C. The bus then goes back to Stop A along the same road."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far does the bus travel altogether? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5500",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "5 km 500 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "2*(2*1000+750)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Stop A to Stop C = 2 km + 750 m = 2 km 750 m = 2750 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The bus goes there and back, so the total distance is 2 × 2750 m = 5500 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5500 m = 5 km 500 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The bus travels 5 km 500 m altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the distance from Stop A to Stop C (2 km 750 m or 2750 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Doubles the distance for the return trip (5500 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the answer as 5 km 500 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F60",
+  "familyTitle": "Milk drunk in a week",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 160,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali drank 250 ml of milk every day for 6 days. Farid drank 350 ml of milk every day for 4 days."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more millilitres of milk did Ali drink than Farid?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "100",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "6*250-4*350"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ali: 6 × 250 ml = 1500 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Farid: 4 × 350 ml = 1400 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1500 ml – 1400 ml = 100 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ali drank 100 ml more than Farid."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the amount Ali drank (1500 ml)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the amount Farid drank (1400 ml)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 100 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F61",
+  "familyTitle": "Rice left in the shop",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A shop had 10 kg of rice. It sold 3 bags of rice, each with a mass of 2 kg 500 g. Later it sold another 1 kg 750 g of rice."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much rice was left? Give your answer in kg and g."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "750",
+   "unit": "g",
+   "display": [
+    {
+     "t": "text",
+     "v": "750 g"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "10*1000-3*(2*1000+500)-(1*1000+750)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 bags: 3 × 2 kg 500 g = 7 kg 500 g (7500 g)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Total sold: 7500 g + 1750 g = 9250 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "10 kg = 10 000 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "10 000 g – 9250 g = 750 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "750 g of rice was left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the mass of the 3 bags (7500 g or 7 kg 500 g)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the other 1 kg 750 g to get 9250 g sold"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts from 10 kg to get 750 g"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F62",
+  "familyTitle": "Rope for skipping",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Rao had a rope 5 m long. She cut 3 pieces, each 85 cm long, for a skipping game."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many centimetres of rope were left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "245",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "5*100-3*85"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 m = 500 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 pieces: 3 × 85 cm = 255 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "500 cm – 255 cm = 245 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "245 cm of rope was left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 5 m to 500 cm"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the length of the 3 pieces (255 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 245 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F63",
+  "familyTitle": "Amir's morning jogs",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Amir jogs 1 km 200 m every morning from Monday to Friday. On Saturday he jogs 2 km 50 m."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far does he jog from Monday to Saturday? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8050",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "8 km 50 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "5*(1000+200)+(2*1000+50)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Monday to Friday: 5 × 1 km 200 m = 5 × 1200 m = 6000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Saturday: 2 km 50 m = 2050 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6000 m + 2050 m = 8050 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8050 m = 8 km 50 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Amir jogs 8 km 50 m altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the distance for 5 days (6000 m or 6 km)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the distance on Saturday to get 8050 m"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the answer as 8 km 50 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F51",
+  "familyTitle": "Four lengths of the pool",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Lena swims one length of a pool in 45 s. She swims 4 lengths without stopping. How many minutes does she take?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "18"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "180"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "45*4/60"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 lengths take 4 × 45 s = 180 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "60 s = 1 min, so 180 s = 3 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "180 is the time in seconds, but the question asks for minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F52",
+  "familyTitle": "Two puzzles compared",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ah Kow took 2 min 15 s to solve puzzle A and 95 s to solve puzzle B. How many seconds longer did he take to solve puzzle A?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "120"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "230"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "60"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2*60+15-95"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change 2 min 15 s to seconds: 2 × 60 s + 15 s = 135 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "135 s – 95 s = 40 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "120 comes from wrongly writing 2 min 15 s as 215 s. 230 comes from adding instead of subtracting."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F53",
+  "familyTitle": "When did the film start",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A film ended at 5.10 p.m. It lasted 1 h 45 min. At what time did the film start?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.25 p.m."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6.55 p.m."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.35 p.m."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.25 p.m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go back 1 h from 5.10 p.m. to get 4.10 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go back another 45 min: 4.10 p.m. – 45 min = 3.25 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6.55 p.m. is what you get by adding instead of going back. 4.25 p.m. is what you get if only 45 min is taken away."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F54",
+  "familyTitle": "Lesson time without the break",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A tuition class started at 4.50 p.m. and ended at 6.20 p.m. There was a 15-minute break during the class. For how many minutes did the pupils have lessons?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "90"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "105"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "170"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "75"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "(6*60+20)-(4*60+50)-15"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 4.50 p.m. to 6.20 p.m.: 10 min + 1 h + 20 min = 90 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Take away the break: 90 min – 15 min = 75 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "90 min is the length of the whole class. 105 min comes from adding the break. 170 comes from subtracting 450 from 620 without changing hours to minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F55",
+  "familyTitle": "Train journey in two clocks",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kelly's train left at 2.45 p.m. and reached the station at 1735 h. How many minutes did the journey take?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "290"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "170"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "150"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "190"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "(17*60+35)-(14*60+45)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change 2.45 p.m. to the 24-hour clock: 1445 h."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 1445 h to 1735 h: 15 min to 1500 h, then 2 h 35 min = 2 h 50 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 h 50 min = 120 min + 50 min = 170 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "290 comes from subtracting 1445 from 1735 as ordinary numbers."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F56",
+  "familyTitle": "Earliest time",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the earliest time?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1300 h"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1.30 p.m."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "12.50 p.m."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "1245 h"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change every time to the same clock. Use the 24-hour clock."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1300 h stays 1300 h. 1.30 p.m. = 1330 h. 12.50 p.m. = 1250 h. 1245 h stays 1245 h."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1245 h is the smallest, so it is the earliest time (12.45 p.m.)."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F57",
+  "familyTitle": "Relay race teams",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Team A's three runners took 34 s, 41 s and 1 min 5 s to run their parts of a relay race. Team B took 2 min 35 s altogether."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many seconds faster was Team A than Team B?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "15"
+  },
+  "verification": {
+   "expression": "(2*60+35)-(34+41+60+5)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Team A: 34 s + 41 s + 1 min 5 s = 34 + 41 + 65 = 140 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Team B: 2 min 35 s = 120 s + 35 s = 155 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "155 s – 140 s = 15 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Team A was 15 seconds faster."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Team A's total time in seconds (140 s)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Changes Team B's time to seconds (155 s)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 15 s"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F58",
+  "familyTitle": "Frying noodles",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Uncle Lim takes 45 s to fry one plate of noodles. He fries 7 plates one after another. Then he takes 1 min 45 s to wash the wok."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much time does he spend altogether? Give your answer in seconds."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "420"
+  },
+  "verification": {
+   "expression": "7*45+1*60+45"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 plates: 7 × 45 s = 315 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 min 45 s = 60 s + 45 s = 105 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "315 s + 105 s = 420 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "He spends 420 seconds altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the time to fry 7 plates (315 s)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Changes 1 min 45 s to 105 s"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 420 s"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F59",
+  "familyTitle": "Museum trip",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Chua's class left school at 8.45 a.m. to go to a museum. The bus ride took 50 minutes. The class then spent 2 h 30 min at the museum."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time did the class leave the museum? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "12.05 p.m.",
+    "12.05p.m.",
+    "12.05 pm",
+    "12.05pm",
+    "12.05 PM",
+    "12.05PM",
+    "12.05 p.m",
+    "12.05p.m",
+    "12:05 p.m.",
+    "12:05p.m.",
+    "12:05 pm",
+    "12:05pm",
+    "12:05 PM",
+    "12:05PM",
+    "12:05 p.m",
+    "12:05p.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8.45 a.m. + 50 min = 9.35 a.m. (the class reached the museum)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9.35 a.m. + 2 h = 11.35 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "11.35 a.m. + 30 min = 12.05 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The class left the museum at 12.05 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the arrival time at the museum (9.35 a.m.)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds 2 h 30 min correctly to get 12.05"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes p.m. for the time after noon"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F60",
+  "familyTitle": "Two lessons and a break",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ms Ng's tuition class started at 3.50 p.m. There were two lessons of 55 minutes each, with a 10-minute break between them."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time did the class end? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "5.50 p.m.",
+    "5.50p.m.",
+    "5.50 pm",
+    "5.50pm",
+    "5.50 PM",
+    "5.50PM",
+    "5.50 p.m",
+    "5.50p.m",
+    "5:50 p.m.",
+    "5:50p.m.",
+    "5:50 pm",
+    "5:50pm",
+    "5:50 PM",
+    "5:50PM",
+    "5:50 p.m",
+    "5:50p.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "First lesson: 3.50 p.m. + 55 min = 4.45 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Break: 4.45 p.m. + 10 min = 4.55 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Second lesson: 4.55 p.m. + 55 min = 5.50 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The class ended at 5.50 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the end of the first lesson (4.45 p.m.)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the 10-minute break (4.55 p.m.)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the second lesson to get 5.50 p.m."
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F61",
+  "familyTitle": "Father's slower journey",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mira's MRT ride started at 7.40 a.m. and ended at 8.25 a.m. Her father's journey by bus took 25 minutes longer than Mira's ride. He left home at 7.20 a.m."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time did her father arrive? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "8.30 a.m.",
+    "8.30a.m.",
+    "8.30 am",
+    "8.30am",
+    "8.30 AM",
+    "8.30AM",
+    "8.30 a.m",
+    "8.30a.m",
+    "8:30 a.m.",
+    "8:30a.m.",
+    "8:30 am",
+    "8:30am",
+    "8:30 AM",
+    "8:30AM",
+    "8:30 a.m",
+    "8:30a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mira's ride: 7.40 a.m. to 8.25 a.m. = 20 min + 25 min = 45 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Her father's journey: 45 min + 25 min = 70 min = 1 h 10 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7.20 a.m. + 1 h 10 min = 8.30 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Her father arrived at 8.30 a.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length of Mira's ride (45 min)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the length of her father's journey (70 min or 1 h 10 min)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to 7.20 a.m. to get 8.30 a.m."
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F62",
+  "familyTitle": "Night flight",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Farah's flight took off at 2015 h and lasted 3 h 50 min. Ignore any difference in time zones."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time did the flight land? Write your answer using the 24-hour clock."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "0005 h",
+    "0005h",
+    "0005 hours",
+    "0005",
+    "00:05",
+    "00.05",
+    "00:05 h",
+    "00 05 h"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2015 h + 3 h = 2315 h."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2315 h + 45 min = 0000 h (midnight), so there are 5 more minutes to add for the 50 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The flight landed at 0005 h the next day."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds 3 h to get 2315 h"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds 50 min correctly, going past midnight"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the time as 0005 h in the 24-hour clock"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F63",
+  "familyTitle": "Supermarket opening hours",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 230,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A supermarket opens at 0830 h and closes at 2130 h from Monday to Friday. On Saturday it opens at 0730 h and closes at 2200 h."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more minutes is the supermarket open on Saturday than on a weekday?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "90",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "1 h 30 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(22*60)-(7*60+30)-((21*60+30)-(8*60+30))"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Weekday: 0830 h to 2130 h = 13 h = 780 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Saturday: 0730 h to 2200 h = 14 h 30 min = 840 min + 30 min = 870 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "870 min – 780 min = 90 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "It is open 90 minutes (1 h 30 min) longer on Saturday."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the weekday opening time (13 h or 780 min)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the Saturday opening time (14 h 30 min or 870 min)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 90 min"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F51",
+  "familyTitle": "Tiles for a wall",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular wall is 8 m long and 5 m high. Mrs Lee covers the whole wall with square tiles. Each tile covers an area of 1 m². How many tiles does she need?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "13"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "26"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "80"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "8*5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The number of tiles is the area of the wall."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = length × height = 8 × 5 = 40 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So Mrs Lee needs 40 tiles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "13 comes from adding 8 + 5. 26 is the perimeter of the wall."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F52",
+  "familyTitle": "Perimeter with a shorter width",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is 14 cm long. Its width is 6 cm shorter than its length. What is the perimeter of the rectangle? Choose the answer in centimetres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "22"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "36"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "44"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "2*(14+(14-6))"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Width = 14 cm – 6 cm = 8 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 2 × (14 + 8) = 2 × 22 = 44 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "22 cm is only half of the perimeter. 40 cm comes from using 6 cm as the width."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F53",
+  "familyTitle": "Area from the perimeter of a square",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [
+   "P3-MG-AR-04"
+  ],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square has a perimeter of 36 cm. What is its area? Choose the answer in cm²."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "81"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "9"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "18"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "36"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "(36/4)*(36/4)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A square has 4 equal sides, so one side = 36 ÷ 4 = 9 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = 9 × 9 = 81 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 is the length of one side. 18 is half of the perimeter."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F54",
+  "familyTitle": "Perimeter of an L-shaped figure",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 5,
+     "rows": 5,
+     "cellMm": 8,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       3
+      ]
+     ],
+     "outline": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       0,
+       4
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a small square is 2 cm. What is the perimeter of the figure? Choose the answer in centimetres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "32"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "16"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "48"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "16*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the sides going round the figure in squares: 4 + 2 + 2 + 2 + 2 + 4 = 16 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each side of a square is 2 cm, so the perimeter = 16 × 2 = 32 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "16 is the number of squares along the edge, not the length in cm. 48 is the area, not the perimeter."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 5,
+    "rows": 5,
+    "cellMm": 8,
+    "shaded": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "outline": [
+     [
+      0,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      0,
+      4
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F55",
+  "familyTitle": "Squares needed to fill a rectangle",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 7,
+     "rows": 4,
+     "cellMm": 8,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "outline": [
+      [
+       0,
+       0
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       0,
+       3
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square is 1 square unit. The shaded part is inside a rectangle drawn in dark lines. How many more squares must be shaded to fill the whole rectangle?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "15"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "9"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "5*3-9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The rectangle is 5 squares long and 3 squares wide, so it has 5 × 3 = 15 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 squares are already shaded."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "15 – 9 = 6, so 6 more squares must be shaded."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "15 is the size of the whole rectangle. 9 is the number already shaded."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F56",
+  "familyTitle": "Same area, different perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Rectangle A is 8 cm long and 2 cm wide. Square B has sides of 4 cm. Which statement is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Rectangle A has the greater area."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Both shapes have the same perimeter."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Both shapes have the same area but different perimeters."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Square B has the greater perimeter."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of A = 8 × 2 = 16 cm². Area of B = 4 × 4 = 16 cm². The areas are the same."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of A = 2 × (8 + 2) = 20 cm. Perimeter of B = 4 × 4 = 16 cm. The perimeters are different, and A has the greater perimeter."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F57",
+  "familyTitle": "Rectangle card and square card",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [
+   "P3-MG-AR-06"
+  ],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Card A is a rectangle 15 cm long and 6 cm wide. Card B is a square with a perimeter of 40 cm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the difference between the areas of the two cards? Give your answer in cm²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "10"
+  },
+  "verification": {
+   "expression": "10*10-15*6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of Card A = 15 × 6 = 90 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Side of Card B = 40 ÷ 4 = 10 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of Card B = 10 × 10 = 100 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "100 cm² – 90 cm² = 10 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the area of Card A (90 cm²)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the side (10 cm) and area (100 cm²) of Card B"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 10 cm²"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F58",
+  "familyTitle": "Rounds of the field",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali jogs 3 rounds around a rectangular field that is 45 m long and 25 m wide. He then walks 180 m to the bus stop."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far does Ali jog and walk altogether? Give your answer in metres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "600",
+   "unit": "m"
+  },
+  "verification": {
+   "expression": "3*2*(45+25)+180"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of the field = 2 × (45 + 25) = 2 × 70 = 140 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 rounds: 3 × 140 m = 420 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "420 m + 180 m = 600 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ali jogs and walks 600 m altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the perimeter of the field (140 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by 3 for 3 rounds (420 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the 180 m to get 600 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F59",
+  "familyTitle": "Wire square to rectangle",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [
+   "P3-MG-AR-05"
+  ],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A piece of wire is bent to make a square with sides of 12 cm. The wire is then straightened and bent to make a rectangle that is 16 cm long."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the width of the rectangle? Give your answer in centimetres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "4*12/2-16"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Length of the wire = perimeter of the square = 4 × 12 = 48 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The rectangle has the same perimeter, so length + width = 48 ÷ 2 = 24 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Width = 24 cm – 16 cm = 8 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length of the wire (48 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds length + width = 24 cm"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the length to get a width of 8 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F60",
+  "familyTitle": "Fence round a T-shaped garden",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 6,
+     "rows": 4,
+     "cellMm": 9,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "outline": [
+      [
+       0,
+       0
+      ],
+      [
+       6,
+       0
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       0,
+       2
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The picture shows the plan of a T-shaped garden. Each side of a small square is 2 m. Mr Wong puts a fence round the whole edge of the garden."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How long is the fence? Give your answer in metres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "40",
+   "unit": "m"
+  },
+  "verification": {
+   "expression": "(6+2+2+2+2+2+2+2)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the length of each side going round the garden in squares: 6, 2, 2, 2, 2, 2, 2 and 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 + 2 + 2 + 2 + 2 + 2 + 2 + 2 = 20 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each side of a square is 2 m, so the fence is 20 × 2 = 40 m long."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 6,
+    "rows": 4,
+    "cellMm": 9,
+    "shaded": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      3
+     ]
+    ],
+    "outline": [
+     [
+      0,
+      0
+     ],
+     [
+      6,
+      0
+     ],
+     [
+      6,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      0,
+      2
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Counts all 8 sides correctly (6, 2, 2, 2, 2, 2, 2, 2 squares)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 20 squares"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by 2 m to get 40 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F61",
+  "familyTitle": "Ribbon round a staircase figure",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 3,
+     "rows": 3,
+     "cellMm": 10,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "outline": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       0,
+       3
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a small square is 3 cm. Ling puts a ribbon round the edge of the figure. She needs another 10 cm of ribbon for a knot."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the total length of ribbon she needs? Give your answer in centimetres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "46",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "(1+1+1+1+1+1+3+3)*3+10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the sides round the figure in squares: 1, 1, 1, 1, 1, 1, 3 and 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 + 1 + 1 + 1 + 1 + 1 + 3 + 3 = 12 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 × 3 cm = 36 cm goes round the edge."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "36 cm + 10 cm = 46 cm."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 3,
+    "rows": 3,
+    "cellMm": 10,
+    "shaded": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "outline": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      0,
+      3
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the distance round the figure in squares (12)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Changes to centimetres (36 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the 10 cm for the knot to get 46 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F62",
+  "familyTitle": "Perimeter from area and length",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [
+   "P3-MG-AR-05"
+  ],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle has an area of 72 cm². Its length is 9 cm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the perimeter of the rectangle? Give your answer in centimetres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "34",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "2*(9+72/9)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Width = area ÷ length = 72 ÷ 9 = 8 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Length + width = 9 + 8 = 17 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 2 × 17 = 34 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the width (8 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds length + width (17 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Doubles to get the perimeter 34 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F63",
+  "familyTitle": "Carpet for a floor plan",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 5,
+     "rows": 3,
+     "cellMm": 10,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The shaded part shows the plan of a floor. Each square has an area of 4 m². Mr Tan covers the floor with carpet that costs $3 for every square metre."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much does the carpet cost?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "132",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "11*4*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count the shaded squares: 3 + 5 + 3 = 11 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of the floor = 11 × 4 m² = 44 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Cost = 44 × $3 = $132."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 5,
+    "rows": 3,
+    "cellMm": 10,
+    "shaded": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Counts the 11 shaded squares"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the area of the floor (44 m²)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by $3 to get $132"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F51",
+  "familyTitle": "Square cut into rectangles",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Ho cuts a square piece of cloth into 2 equal rectangles. How many right angles are there in the 2 rectangles altogether?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each rectangle has 4 corners and every corner is a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 rectangles have 2 × 4 = 8 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 is the number of right angles in the square before it was cut."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F52",
+  "familyTitle": "Compare three angles with a right angle",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at angles X, Y and Z. Which statement is correct?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 65,
+     "armLengthMm": 24,
+     "label": "X"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 24,
+     "label": "Y"
+    },
+    {
+     "t": "angle",
+     "degrees": 140,
+     "armLengthMm": 24,
+     "label": "Z"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "X and Z are smaller than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Only angle Z is greater than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Y is smaller than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angles X and Y are both right angles."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare each angle with the corner of a piece of paper (a right angle)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "X is smaller than a right angle. Y is a right angle. Z is greater than a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So only angle Z is greater than a right angle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F53",
+  "familyTitle": "Opening a laptop",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jia opens her laptop screen slowly from closed. The screen and the keyboard make an angle. Which shows how the angle changes as the screen opens?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "It goes from greater than a right angle, to a right angle, to smaller than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "It goes from a right angle, to smaller than a right angle, to greater than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "It goes from smaller than a right angle, to greater than a right angle, to a right angle."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "It goes from smaller than a right angle, to a right angle, to greater than a right angle."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "When the screen is closed there is almost no gap, so the angle is very small."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "As it opens, the angle gets bigger: first smaller than a right angle, then a right angle, then greater than a right angle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F54",
+  "familyTitle": "Angles greater than P",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many of angles Q, R and S are greater than angle P?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 50,
+     "armLengthMm": 40,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 80,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 35,
+     "armLengthMm": 45,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 110,
+     "armLengthMm": 25,
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "0"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "An angle is greater when its arms open wider. The length of the arms does not matter."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Q opens wider than P. R opens less than P. S opens wider than P."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 2 angles (Q and S) are greater than angle P."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F55",
+  "familyTitle": "Which is the right angle",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Rui draws angles P, Q and R. She says one is a right angle, one is smaller than a right angle and one is greater than a right angle. Which angle is the right angle?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 120,
+     "armLengthMm": 30,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 24,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 50,
+     "armLengthMm": 36,
+     "label": "R"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "None of the angles"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare each angle with the corner of a piece of paper."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "P is wider than the corner, so it is greater than a right angle. R is narrower, so it is smaller than a right angle. Q fits the corner exactly, so Q is the right angle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F56",
+  "familyTitle": "Between a right angle and angle S",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which angle is greater than a right angle but smaller than angle S?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 30,
+     "armLengthMm": 30,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 60,
+     "armLengthMm": 30,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 100,
+     "armLengthMm": 30,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 140,
+     "armLengthMm": 30,
+     "label": "S"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle S"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle Q"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angles P and Q are smaller than a right angle, so they cannot be the answer."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle S is greater than a right angle, but it is not smaller than itself."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle R is greater than a right angle and smaller than angle S, so R is the answer."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F57",
+  "familyTitle": "Square tiles cut in half",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Ong has 5 square tiles. He cuts 2 of the square tiles, each into 2 equal rectangles."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many right angles are there on all his tiles now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "28"
+  },
+  "verification": {
+   "expression": "3*4+4*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 3 tiles he did not cut are still squares: 3 × 4 = 12 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 2 cut tiles make 2 × 2 = 4 rectangles: 4 × 4 = 16 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 + 16 = 28 right angles."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the right angles on the 3 uncut squares (12)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the right angles on the 4 rectangles (16)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 28"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F58",
+  "familyTitle": "Set squares",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each set square has 1 right angle and 2 angles that are smaller than a right angle. Mrs Chan has 6 set squares."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more angles smaller than a right angle than right angles are there in all 6 set squares?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6"
+  },
+  "verification": {
+   "expression": "6*2-6*1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Right angles: 6 × 1 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angles smaller than a right angle: 6 × 2 = 12."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 – 6 = 6 more."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of right angles (6)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the number of angles smaller than a right angle (12)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 6"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-F59",
+  "familyTitle": "Angles in rectangles and triangles",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle has 4 angles. A triangle has 3 angles. Ben draws 5 rectangles. Amy draws 4 triangles."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more angles are in Ben's drawing than in Amy's drawing?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "5*4-4*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ben: 5 × 4 = 20 angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Amy: 4 × 3 = 12 angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "20 – 12 = 8 more angles."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of angles in Ben's rectangles (20)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the number of angles in Amy's triangles (12)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 8"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F51",
+  "familyTitle": "True statement about four lines",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        8,
+        1
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        1,
+        4
+       ],
+       "to": [
+        8,
+        4
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        3,
+        0
+       ],
+       "to": [
+        3,
+        6
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        5,
+        0
+       ],
+       "to": [
+        7,
+        6
+       ],
+       "label": "S"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 7
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at lines P, Q, R and S. Which statement is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R is parallel to line S."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line P is perpendicular to line Q."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R is perpendicular to line P."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line S is perpendicular to line Q."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines P and Q are parallel to each other (they never meet), so P is not perpendicular to Q."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line R stands straight up and meets line P at a square corner, so R is perpendicular to P."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line S leans and is not parallel to R. It does not meet Q at a square corner either."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       8,
+       1
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       8,
+       4
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       3,
+       0
+      ],
+      "to": [
+       3,
+       6
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       5,
+       0
+      ],
+      "to": [
+       7,
+       6
+      ],
+      "label": "S"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 7
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F52",
+  "familyTitle": "Pairs in a ladder",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        0
+       ],
+       "to": [
+        1,
+        6
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        6,
+        0
+       ],
+       "to": [
+        6,
+        6
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        7,
+        1
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        0,
+        3
+       ],
+       "to": [
+        7,
+        3
+       ],
+       "label": "S"
+      },
+      {
+       "from": [
+        0,
+        5
+       ],
+       "to": [
+        7,
+        5
+       ],
+       "label": "T"
+      }
+     ],
+     "dotGrid": {
+      "cols": 8,
+      "rows": 7
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The figure is made of 5 straight lines. How many pairs of perpendicular lines are there?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each of the 3 lines R, S and T is perpendicular to both line P and line Q."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Number of pairs = 3 × 2 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 comes from adding 3 + 2. 12 comes from counting every pair twice."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       0
+      ],
+      "to": [
+       1,
+       6
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       6,
+       0
+      ],
+      "to": [
+       6,
+       6
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       0,
+       1
+      ],
+      "to": [
+       7,
+       1
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       0,
+       3
+      ],
+      "to": [
+       7,
+       3
+      ],
+      "label": "S"
+     },
+     {
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       7,
+       5
+      ],
+      "label": "T"
+     }
+    ],
+    "dotGrid": {
+     "cols": 8,
+     "rows": 7
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F53",
+  "familyTitle": "Perpendicular to a parallel line",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line P is parallel to line Q. Line R is perpendicular to line P. All three lines are drawn on the same flat sheet of paper. Which statement is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R is parallel to line Q."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R meets line Q, but not at a right angle."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line R is perpendicular to line Q."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "We cannot tell how line R and line Q are related."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines P and Q go in the same direction. A line that makes a square corner with P also makes a square corner with Q."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So line R is perpendicular to line Q."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F54",
+  "familyTitle": "Which point makes a parallel line",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        3,
+        3
+       ],
+       "label": "KL"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        0,
+        1
+       ],
+       "label": "K"
+      },
+      {
+       "at": [
+        3,
+        3
+       ],
+       "label": "L"
+      },
+      {
+       "at": [
+        2,
+        3
+       ],
+       "label": "X"
+      },
+      {
+       "at": [
+        5,
+        5
+       ],
+       "label": "P"
+      },
+      {
+       "at": [
+        4,
+        6
+       ],
+       "label": "Q"
+      },
+      {
+       "at": [
+        6,
+        4
+       ],
+       "label": "R"
+      },
+      {
+       "at": [
+        5,
+        3
+       ],
+       "label": "S"
+      }
+     ],
+     "dotGrid": {
+      "cols": 8,
+      "rows": 8
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ben joins point X to one of the points P, Q, R or S. Which point should he join to X to draw a line that is parallel to line KL?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point R"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point S"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point P"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From K to L the line goes 3 squares across and 2 squares up."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A parallel line goes the same way: from X, go 3 squares across and 2 squares up. This reaches point P."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Point Q is 2 across and 3 up, which is a different slope."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F55",
+  "familyTitle": "Staircase lines",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        5
+       ],
+       "to": [
+        2,
+        5
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        2,
+        5
+       ],
+       "to": [
+        2,
+        3
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        2,
+        3
+       ],
+       "to": [
+        5,
+        3
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        5,
+        3
+       ],
+       "to": [
+        5,
+        1
+       ],
+       "label": "S"
+      }
+     ],
+     "dotGrid": {
+      "cols": 7,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at lines P, Q, R and S. Which statement is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line P is parallel to line R, and both are perpendicular to line Q."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line P is perpendicular to line R."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line Q is parallel to line R."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Line Q is perpendicular to line S."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines P and R both run across, so they are parallel to each other."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line Q runs up and down and meets P and R at square corners, so Q is perpendicular to both."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines Q and S both run up and down, so they are parallel, not perpendicular."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       2,
+       5
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       2,
+       5
+      ],
+      "to": [
+       2,
+       3
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       2,
+       3
+      ],
+      "to": [
+       5,
+       3
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       5,
+       3
+      ],
+      "to": [
+       5,
+       1
+      ],
+      "label": "S"
+     }
+    ],
+    "dotGrid": {
+     "cols": 7,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F56",
+  "familyTitle": "Steps to draw a parallel line",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ben wants to draw a line through point X that is parallel to line AB. He places one edge of a set square along line AB and holds a ruler firmly against another edge of the set square. He then slides the set square along the ruler until the first edge touches point X. What should Ben do next?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line along the ruler."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line along the edge at a right angle to line AB."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line from X to any point on line AB."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line along the edge of the set square that now touches X."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Sliding the set square along the ruler keeps the edge pointing the same way as when it was on line AB."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So a line drawn along that edge, through X, is parallel to line AB."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F57",
+  "familyTitle": "Window frame lines",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        6,
+        1
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        0,
+        4
+       ],
+       "to": [
+        6,
+        4
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        0,
+        4
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        3,
+        1
+       ],
+       "to": [
+        3,
+        4
+       ],
+       "label": "S"
+      },
+      {
+       "from": [
+        6,
+        1
+       ],
+       "to": [
+        6,
+        4
+       ],
+       "label": "T"
+      }
+     ],
+     "dotGrid": {
+      "cols": 7,
+      "rows": 5
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The figure shows a window frame made of 5 straight lines. How many more pairs of perpendicular lines than pairs of parallel lines are there?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2"
+  },
+  "verification": {
+   "expression": "3*2-(1+3)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perpendicular pairs: each of P and Q is perpendicular to R, S and T. That is 2 × 3 = 6 pairs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Parallel pairs: P and Q make 1 pair. R, S and T make 3 pairs (R and S, R and T, S and T). That is 1 + 3 = 4 pairs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 – 4 = 2 more pairs."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       0,
+       1
+      ],
+      "to": [
+       6,
+       1
+      ],
+      "label": "P"
+     },
+     {
+      "from": [
+       0,
+       4
+      ],
+      "to": [
+       6,
+       4
+      ],
+      "label": "Q"
+     },
+     {
+      "from": [
+       0,
+       1
+      ],
+      "to": [
+       0,
+       4
+      ],
+      "label": "R"
+     },
+     {
+      "from": [
+       3,
+       1
+      ],
+      "to": [
+       3,
+       4
+      ],
+      "label": "S"
+     },
+     {
+      "from": [
+       6,
+       1
+      ],
+      "to": [
+       6,
+       4
+      ],
+      "label": "T"
+     }
+    ],
+    "dotGrid": {
+     "cols": 7,
+     "rows": 5
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of perpendicular pairs (6)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the number of parallel pairs (4)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 2"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-F58",
+  "familyTitle": "Broken ladders",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each ladder has 2 long sides that are parallel to each other and 4 rungs. Every rung is perpendicular to both long sides. In each of 3 ladders, 1 rung has broken off."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pairs of perpendicular lines are there in the 3 ladders now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "18"
+  },
+  "verification": {
+   "expression": "3*(4-1)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each ladder now has 4 – 1 = 3 rungs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each rung is perpendicular to both sides, so each ladder has 3 × 2 = 6 pairs of perpendicular lines."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 ladders: 3 × 6 = 18 pairs."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of rungs left on each ladder (3)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the pairs on one ladder (6)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by 3 to get 18"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F51",
+  "familyTitle": "Tuesday and Thursday against Monday and Wednesday",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Books borrowed from the school library",
+     "categoryAxisLabel": "Day",
+     "valueAxisLabel": "Number of books",
+     "scale": {
+      "max": 50,
+      "step": 5
+     },
+     "bars": [
+      {
+       "label": "Mon",
+       "value": 30
+      },
+      {
+       "label": "Tue",
+       "value": 45
+      },
+      {
+       "label": "Wed",
+       "value": 25
+      },
+      {
+       "label": "Thu",
+       "value": 40
+      },
+      {
+       "label": "Fri",
+       "value": 35
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more books were borrowed on Tuesday and Thursday together than on Monday and Wednesday together?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "20"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "55"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "85"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "(45+40)-(30+25)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tuesday and Thursday: 45 + 40 = 85 books."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Monday and Wednesday: 30 + 25 = 55 books."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "85 – 55 = 30 books."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "85 is the total for Tuesday and Thursday only. 55 is the total for Monday and Wednesday only."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F52",
+  "familyTitle": "Most popular and least popular foods",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite hawker food of Primary 3 pupils",
+     "categoryAxisLabel": "Food",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Chicken rice",
+       "value": 18
+      },
+      {
+       "label": "Laksa",
+       "value": 12
+      },
+      {
+       "label": "Mee goreng",
+       "value": 10
+      },
+      {
+       "label": "Roti prata",
+       "value": 16
+      },
+      {
+       "label": "Nasi lemak",
+       "value": 14
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each pupil chose one food. How many fewer pupils chose the two least popular foods than the two most popular foods?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "56"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "22"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "34"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "(18+16)-(10+12)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The two most popular foods are chicken rice (18) and roti prata (16): 18 + 16 = 34 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The two least popular foods are mee goreng (10) and laksa (12): 10 + 12 = 22 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "34 – 22 = 12 fewer pupils."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F53",
+  "familyTitle": "Fair tickets with a scale of 100",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Tickets sold at the school fair",
+     "categoryAxisLabel": "Day",
+     "valueAxisLabel": "Number of tickets",
+     "scale": {
+      "max": 500,
+      "step": 100
+     },
+     "bars": [
+      {
+       "label": "Mon",
+       "value": 250
+      },
+      {
+       "label": "Tue",
+       "value": 400
+      },
+      {
+       "label": "Wed",
+       "value": 150
+      },
+      {
+       "label": "Thu",
+       "value": 350
+      },
+      {
+       "label": "Fri",
+       "value": 500
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bar that ends between two gridlines ends exactly halfway between them. How many more tickets were sold on Thursday and Friday together than on Monday and Wednesday together?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "450"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "350"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "400"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "850"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "(350+500)-(250+150)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each gridline goes up by 100 tickets, so a bar halfway between two gridlines shows 50 more than the lower gridline."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Thursday and Friday: 350 + 500 = 850 tickets. Monday and Wednesday: 250 + 150 = 400 tickets."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "850 – 400 = 450 tickets."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F54",
+  "familyTitle": "Catching up on reading time",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Minutes spent reading last week",
+     "categoryAxisLabel": "Pupil",
+     "valueAxisLabel": "Number of minutes",
+     "scale": {
+      "max": 50,
+      "step": 5
+     },
+     "bars": [
+      {
+       "label": "Ali",
+       "value": 25
+      },
+      {
+       "label": "Bala",
+       "value": 40
+      },
+      {
+       "label": "Chen",
+       "value": 15
+      },
+      {
+       "label": "Devi",
+       "value": 30
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "This week, Chen wants to read as many minutes as Bala read last week. He can add 5 more minutes to his reading each day. In how many days will Chen have added enough minutes to catch up with Bala's total?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "25"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "(40-15)/5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Bala: 40 minutes. Chen: 15 minutes. Chen needs 40 – 15 = 25 more minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "25 ÷ 5 = 5 days."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 comes from dividing Bala's total by 5. 3 comes from dividing Chen's total by 5."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F55",
+  "familyTitle": "A fifth seller not on the graph",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Tickets sold for the school concert",
+     "categoryAxisLabel": "Pupil",
+     "valueAxisLabel": "Number of tickets",
+     "scale": {
+      "max": 16,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Ann",
+       "value": 14
+      },
+      {
+       "label": "Ben",
+       "value": 8
+      },
+      {
+       "label": "Cara",
+       "value": 12
+      },
+      {
+       "label": "Dan",
+       "value": 6
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Eva also sold tickets. She sold as many tickets as Ann and Dan together. How many tickets did the 5 pupils sell altogether?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "46"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "54"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "60"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "14+8+12+6+(14+6)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 4 pupils on the graph sold 14 + 8 + 12 + 6 = 40 tickets."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Eva sold 14 + 6 = 20 tickets."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "40 + 20 = 60 tickets."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "40 is the total without Eva."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F56",
+  "familyTitle": "Which reading of the graph is true",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Cups of drinks sold at a kopitiam",
+     "categoryAxisLabel": "Drink",
+     "valueAxisLabel": "Number of cups",
+     "scale": {
+      "max": 60,
+      "step": 10
+     },
+     "bars": [
+      {
+       "label": "Teh",
+       "value": 30
+      },
+      {
+       "label": "Kopi",
+       "value": 45
+      },
+      {
+       "label": "Milo",
+       "value": 20
+      },
+      {
+       "label": "Lemon tea",
+       "value": 55
+      },
+      {
+       "label": "Barley",
+       "value": 35
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bar that ends between two gridlines ends exactly halfway between them. Which statement about the graph is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kopi sold 40 cups."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Milo sold half as many cups as lemon tea."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Lemon tea sold 10 more cups than kopi."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Teh and Milo together sold more cups than lemon tea."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each gridline goes up by 10 cups. Kopi is halfway between 40 and 50, so it sold 45 cups. Lemon tea sold 55 cups."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "55 – 45 = 10, so lemon tea sold 10 more cups than kopi."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Milo (20) is not half of 55. Teh and Milo together sold 30 + 20 = 50 cups, which is fewer than 55."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F57",
+  "familyTitle": "Money from toast sets",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Kaya toast sets sold",
+     "categoryAxisLabel": "Day",
+     "valueAxisLabel": "Number of sets",
+     "scale": {
+      "max": 40,
+      "step": 5
+     },
+     "bars": [
+      {
+       "label": "Mon",
+       "value": 20
+      },
+      {
+       "label": "Tue",
+       "value": 35
+      },
+      {
+       "label": "Wed",
+       "value": 15
+      },
+      {
+       "label": "Thu",
+       "value": 40
+      },
+      {
+       "label": "Fri",
+       "value": 30
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each set of kaya toast costs $3. How much money was collected from the sets sold on Tuesday and Thursday?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "225",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "(35+40)*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tuesday: 35 sets. Thursday: 40 sets."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "35 + 40 = 75 sets."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "75 × $3 = $225."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$225 was collected on Tuesday and Thursday."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads the bars correctly (35 and 40)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 75 sets"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by $3 to get $225"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F58",
+  "familyTitle": "Clubs that need more pupils",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Number of pupils in each club",
+     "categoryAxisLabel": "Club",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 24,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Chess",
+       "value": 12
+      },
+      {
+       "label": "Art",
+       "value": 18
+      },
+      {
+       "label": "Robotics",
+       "value": 16
+      },
+      {
+       "label": "Choir",
+       "value": 24
+      },
+      {
+       "label": "Dance",
+       "value": 20
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The principal wants each club to have 20 pupils. How many more pupils are needed altogether for the clubs that have fewer than 20 pupils?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "14"
+  },
+  "verification": {
+   "expression": "(20-12)+(20-18)+(20-16)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The clubs with fewer than 20 pupils are Chess (12), Art (18) and Robotics (16)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "More pupils needed: Chess 20 – 12 = 8, Art 20 – 18 = 2, Robotics 20 – 16 = 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 + 2 + 4 = 14 pupils."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Picks out the 3 clubs with fewer than 20 pupils"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds how many more each club needs (8, 2 and 4)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 14"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F59",
+  "familyTitle": "Weekend and weekday visitors",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Visitors to a museum",
+     "categoryAxisLabel": "Day",
+     "valueAxisLabel": "Number of visitors",
+     "scale": {
+      "max": 500,
+      "step": 100
+     },
+     "bars": [
+      {
+       "label": "Sat",
+       "value": 450
+      },
+      {
+       "label": "Sun",
+       "value": 350
+      },
+      {
+       "label": "Mon",
+       "value": 150
+      },
+      {
+       "label": "Tue",
+       "value": 250
+      },
+      {
+       "label": "Wed",
+       "value": 200
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bar that ends between two gridlines ends exactly halfway between them. How many more visitors came on Saturday and Sunday than on Monday, Tuesday and Wednesday altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "200"
+  },
+  "verification": {
+   "expression": "(450+350)-(150+250+200)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each gridline goes up by 100 visitors."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Saturday and Sunday: 450 + 350 = 800 visitors."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Monday, Tuesday and Wednesday: 150 + 250 + 200 = 600 visitors."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "800 – 600 = 200 more visitors."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads the weekend bars using the scale (450 and 350)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the weekday total (600)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 200"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F60",
+  "familyTitle": "Aiming for three hours",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Minutes of exercise on Saturday",
+     "categoryAxisLabel": "Pupil",
+     "valueAxisLabel": "Number of minutes",
+     "scale": {
+      "max": 50,
+      "step": 5
+     },
+     "bars": [
+      {
+       "label": "Ali",
+       "value": 35
+      },
+      {
+       "label": "Ben",
+       "value": 20
+      },
+      {
+       "label": "Carl",
+       "value": 45
+      },
+      {
+       "label": "Dina",
+       "value": 25
+      },
+      {
+       "label": "Emy",
+       "value": 40
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The 3 pupils who exercised the longest want to exercise for 3 hours altogether. How many more minutes must they exercise?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "60",
+   "unit": "min"
+  },
+  "verification": {
+   "expression": "3*60-(45+40+35)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 3 longest times are Carl (45 min), Emy (40 min) and Ali (35 min)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "45 + 40 + 35 = 120 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 hours = 3 × 60 = 180 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "180 min – 120 min = 60 min."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Picks the 3 longest times and adds them (120 min)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Changes 3 hours to 180 min"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 60 min"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F61",
+  "familyTitle": "Vans for the trip",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Places chosen for the class trip",
+     "categoryAxisLabel": "Place",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 32,
+      "step": 4
+     },
+     "bars": [
+      {
+       "label": "Zoo",
+       "value": 24
+      },
+      {
+       "label": "Science Centre",
+       "value": 16
+      },
+      {
+       "label": "Museum",
+       "value": 8
+      },
+      {
+       "label": "Beach",
+       "value": 32
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The pupils who chose the Zoo or the Museum will travel in vans. Each van carries 8 pupils. How many vans are needed?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4"
+  },
+  "verification": {
+   "expression": "(24+8)/8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Zoo: 24 pupils. Museum: 8 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "24 + 8 = 32 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "32 ÷ 8 = 4 vans."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads the bars correctly (24 and 8)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 32 pupils"
+    },
+    {
+     "marks": 1,
+     "criterion": "Divides by 8 to get 4 vans"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F62",
+  "familyTitle": "Two classes, two scales",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 230,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Books read by Class 3A",
+     "categoryAxisLabel": "Type of book",
+     "valueAxisLabel": "Number of books",
+     "scale": {
+      "max": 14,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Fiction",
+       "value": 12
+      },
+      {
+       "label": "Comics",
+       "value": 8
+      },
+      {
+       "label": "Science",
+       "value": 6
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "bargraph",
+     "title": "Books read by Class 3B",
+     "categoryAxisLabel": "Type of book",
+     "valueAxisLabel": "Number of books",
+     "scale": {
+      "max": 35,
+      "step": 5
+     },
+     "bars": [
+      {
+       "label": "Fiction",
+       "value": 30
+      },
+      {
+       "label": "Comics",
+       "value": 15
+      },
+      {
+       "label": "Science",
+       "value": 20
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The two graphs use different scales. How many more books did Class 3B read than Class 3A altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "39"
+  },
+  "verification": {
+   "expression": "(30+15+20)-(12+8+6)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Look at the scale of each graph. Graph A goes up by 2 and graph B goes up by 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Class 3A: 12 + 8 + 6 = 26 books."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Class 3B: 30 + 15 + 20 = 65 books."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "65 – 26 = 39 more books."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads the Class 3A bars using its scale and adds (26)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Reads the Class 3B bars using its scale and adds (65)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 39"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-F63",
+  "familyTitle": "Coloured pencils for two subjects",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Favourite subject of Primary 3 pupils",
+     "categoryAxisLabel": "Subject",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 20,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Maths",
+       "value": 14
+      },
+      {
+       "label": "English",
+       "value": 10
+      },
+      {
+       "label": "Art",
+       "value": 16
+      },
+      {
+       "label": "PE",
+       "value": 20
+      },
+      {
+       "label": "Music",
+       "value": 8
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Lim gives each pupil who chose Art or Music 3 coloured pencils. He has 80 coloured pencils. How many coloured pencils does he have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "80-(16+8)*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Art: 16 pupils. Music: 8 pupils. 16 + 8 = 24 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Pencils given out: 24 × 3 = 72."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "80 – 72 = 8 coloured pencils left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads the Art and Music bars and adds (24 pupils)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by 3 to get 72 pencils"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts from 80 to get 8"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]

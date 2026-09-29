@@ -1,0 +1,8102 @@
+[
+ {
+  "familyCode": "P3-NA-WN-F21",
+  "familyTitle": "Thousands and hundreds regrouped",
+  "primaryOutcomeCode": "P3-NA-WN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A number is made up of 5 thousands, 12 hundreds and 3 ones."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the number?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5123"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6203"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "6023"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "51203"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "5*1000+12*100+3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 hundreds = 1200 = 1 thousand and 2 hundreds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the number has 5 + 1 = 6 thousands, 2 hundreds, 0 tens and 3 ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5000 + 1200 + 3 = 6203."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Writing the digits 5, 12 and 3 side by side (5123) forgets that 12 hundreds must be regrouped."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F22",
+  "familyTitle": "Greatest even number from digit cards",
+  "primaryOutcomeCode": "P3-NA-WN-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Amir has four digit cards: 6, 0, 9 and 2."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "He uses all four cards to make the greatest even 4-digit number he can."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the number?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "9602"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "9620"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "9260"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "9206"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "9*1000+6*100+2*10+0"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "An even number must end in an even digit: 6, 0 or 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "To make the number as great as possible, put the greatest digits in the greatest places, and choose the ones digit carefully."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The greatest arrangement is 9, 6, 2, 0 with the ones digit 0, giving 9620."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9620 is greater than 9602, 9260 and 9206, and all of them are even, so 9620 is the answer."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F23",
+  "familyTitle": "Count back in hundreds, 6th number",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Lena counts back in hundreds. She starts at 8300, so 8300 is the 1st number she says."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the 6th number she says?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7900"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7700"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "7800"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "8900"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "8300-5*100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8300 is the 1st number, so the 6th number is 5 counts back from 8300."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 hundreds = 500. 8300 − 500 = 7800."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7900 is the 5th number and 7700 is the 7th number."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F24",
+  "familyTitle": "Number pattern going down, 8th number",
+  "primaryOutcomeCode": "P3-NA-WN-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at this number pattern."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "9500, 9200, 8900, 8600, ..."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the 8th number in the pattern?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7700"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7400"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "7100"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "7500"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "9500-7*300"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numbers go down by 300 each time: 9500 − 9200 = 300."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 8th number is 7 steps down from the 1st number."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 × 300 = 2100, and 9500 − 2100 = 7400."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Taking 8 steps (7100) is a common mistake."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F25",
+  "familyTitle": "Words to numerals, who is correct",
+  "primaryOutcomeCode": "P3-NA-WN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Four pupils wrote \"six thousand, three hundred and eight\" in numerals."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Anna wrote 6038.  Ben wrote 6308.  Chen wrote 6380.  Dev wrote 638."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Who wrote it correctly?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Anna"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ben"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Chen"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Dev"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Six thousand = 6000, three hundred = 300 and eight = 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6000 + 300 + 8 = 6308, so Ben is correct."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Anna's 6038 has 3 tens instead of 3 hundreds. Chen's 6380 has 8 tens instead of 8 ones. Dev's 638 leaves out the thousands."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F26",
+  "familyTitle": "Sum of two digit values",
+  "primaryOutcomeCode": "P3-NA-WN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "In the number 3572, what is the value of the digit 5 added to the value of the digit 7?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "570"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "750"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "5070"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "500+70"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "In 3572, the digit 5 is in the hundreds place, so its value is 500."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The digit 7 is in the tens place, so its value is 70."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "500 + 70 = 570."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Adding the digits 5 + 7 = 12 gives the wrong answer because it ignores place value."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F27",
+  "familyTitle": "Greatest minus smallest from cards",
+  "primaryOutcomeCode": "P3-NA-WN-04",
+  "secondaryOutcomeCodes": [
+   "P3-NA-AS-01"
+  ],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Gina has four digit cards: 3, 7, 0 and 5."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "She uses all four cards to make the greatest 4-digit number. Her brother uses all four cards to make the smallest 4-digit number."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the difference between the two numbers?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4473"
+  },
+  "verification": {
+   "expression": "7530-3057"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: The greatest number puts the greatest digits first: 7530."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The smallest 4-digit number cannot start with 0, so it starts with 3, then 0, 5, 7: 3057."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 7530 − 3057 = 4473."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The difference is 4473."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Makes the greatest number 7530"
+    },
+    {
+     "marks": 1,
+     "criterion": "Makes the smallest 4-digit number 3057 (0 is not in the thousands place)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F28",
+  "familyTitle": "Fun run counting in thousands",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [
+   "P3-NA-AS-01"
+  ],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "In 2021, there were 1350 runners in a fun run at East Coast Park."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each year for the next 3 years, the number of runners went up by 1000."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "In 2025, there were 600 fewer runners than in 2024."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many runners were there in 2025?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3750"
+  },
+  "verification": {
+   "expression": "1350+3*1000-600"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Count on in thousands: 1350, 2350, 3350, 4350. There were 4350 runners in 2024."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: 2025 had 600 fewer runners: 4350 − 600 = 3750."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There were 3750 runners in 2025."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Counts on in thousands to find 4350 runners in 2024"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts 600 from the 2024 number"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F29",
+  "familyTitle": "First number above 4000 in a pattern",
+  "primaryOutcomeCode": "P3-NA-WN-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at this number pattern."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "1800, 2050, 2300, 2550, ..."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The pattern carries on in the same way. What is the first number in the pattern that is greater than 4000?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4050"
+  },
+  "verification": {
+   "expression": "1800+9*250"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: The numbers go up by 250 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Keep counting on: 2550, 2800, 3050, 3300, 3550, 3800, 4050."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3800 is not greater than 4000, but 4050 is."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 1800 + 9 × 250 = 1800 + 2250 = 4050."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that the pattern goes up by 250 each time"
+    },
+    {
+     "marks": 1,
+     "criterion": "Continues the pattern correctly to reach 3800"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F30",
+  "familyTitle": "Boxes, packets and loose paper clips",
+  "primaryOutcomeCode": "P3-NA-WN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A stationery shop has 3 boxes of 1000 paper clips, 14 packets of 100 paper clips and 26 loose paper clips."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many paper clips are there altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4426"
+  },
+  "verification": {
+   "expression": "3*1000+14*100+26"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 3 boxes of 1000 = 3000 paper clips."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: 14 packets of 100 = 1400 paper clips."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 3000 + 1400 + 26 = 4426."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 4426 paper clips altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 3000 from the boxes and 1400 from the packets"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the three amounts correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F31",
+  "familyTitle": "Four stalls, most and fewest",
+  "primaryOutcomeCode": "P3-NA-WN-04",
+  "secondaryOutcomeCodes": [
+   "P3-NA-AS-01"
+  ],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 280,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Four food stalls at a hawker centre sold bowls of noodles last month."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Stall A sold 3250 bowls. Stall B sold 400 more bowls than Stall A. Stall C sold 900 fewer bowls than Stall A. Stall D sold 1200 more bowls than Stall B."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more bowls did the stall that sold the most sell than the stall that sold the fewest?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2500"
+  },
+  "verification": {
+   "expression": "(3250+400+1200)-(3250-900)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Stall B: 3250 + 400 = 3650. Stall C: 3250 − 900 = 2350. Stall D: 3650 + 1200 = 4850."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Compare 3250, 3650, 2350 and 4850. Stall D sold the most (4850) and Stall C sold the fewest (2350)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 4850 − 2350 = 2500."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The stall that sold the most sold 2500 more bowls."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Works out the number of bowls for Stalls B, C and D correctly"
+    },
+    {
+     "marks": 1,
+     "criterion": "Identifies the greatest (4850) and the smallest (2350) numbers"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F32",
+  "familyTitle": "Two numbers written in words",
+  "primaryOutcomeCode": "P3-NA-WN-03",
+  "secondaryOutcomeCodes": [
+   "P3-NA-AS-01"
+  ],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali wrote \"four thousand and sixty-five\" as 4650. Bala wrote \"three thousand, two hundred and nine\" as 3029."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Both pupils made a mistake."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the difference between the two correct numbers?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "856"
+  },
+  "verification": {
+   "expression": "4065-3209"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: \"Four thousand and sixty-five\" = 4000 + 65 = 4065."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: \"Three thousand, two hundred and nine\" = 3000 + 200 + 9 = 3209."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 4065 − 3209 = 856."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The difference is 856."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes 4065 correctly"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes 3209 correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F33",
+  "familyTitle": "Smallest 4-digit number in a pattern",
+  "primaryOutcomeCode": "P3-NA-WN-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 300,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The numbers in a pattern go down by the same amount each time."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "9800, 9500, 9200, 8900, ..."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The pattern carries on for as long as the numbers are 4-digit numbers. What is the smallest 4-digit number in the pattern?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1100"
+  },
+  "verification": {
+   "expression": "9800-29*300"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: The numbers go down by 300 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The smallest 4-digit number is 1000, so the pattern can go down at most 9800 − 1000 = 8800."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8800 ÷ 300 = 29 remainder 100, so the pattern goes down 29 times before the number would be less than 1000."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 9800 − 29 × 300 = 9800 − 8700 = 1100."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The next number, 800, is not a 4-digit number, so the answer is 1100."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that the pattern goes down by 300 each time"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds that the pattern goes down 29 times (8700 in total)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F23",
+  "familyTitle": "Marbles won and lost (mental)",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali had 47 marbles. He won 38 marbles and then lost 25 marbles."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many marbles does he have now?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "35"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "60"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "70"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "110"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "47+38-25"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 47 + 38 = 85 (47 + 40 = 87, then take away 2)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: 85 − 25 = 60."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ali has 60 marbles now."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "110 comes from adding 25 instead of taking it away."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F24",
+  "familyTitle": "Compensation strategy missing number",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei works out 76 + 48 in her head by adding 50 first and then adjusting."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "76 + 48 = 76 + 50 − "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number goes in the box?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "48"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "50"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "50-48"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "48 is 2 less than 50, so 76 + 48 is 2 less than 76 + 50."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "76 + 50 = 126, and 126 − 2 = 124."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the number in the box is 2, because 50 − 48 = 2."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F25",
+  "familyTitle": "Fewer people on Saturday",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "On Friday, 7340 people visited the Singapore Science Centre. On Saturday, there were 1865 fewer visitors than on Friday."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many people visited on Saturday?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5475"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5575"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "6525"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "9205"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "7340-1865"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Take away in steps: 7340 − 1000 = 6340; 6340 − 800 = 5540; 5540 − 60 = 5480; 5480 − 5 = 5475."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 1865 + 5475 = 7340."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 7340 − 1865 = 5475."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6525 comes from subtracting the smaller digit from the greater digit in each column, which is a common mistake."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F26",
+  "familyTitle": "Difference from sum and smaller number",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The sum of two numbers is 7500. The smaller number is 2850."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the difference between the two numbers?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1800"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2700"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4650"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "10350"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "(7500-2850)-2850"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: The greater number is 7500 − 2850 = 4650."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The difference is 4650 − 2850 = 1800."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4650 is the greater number, not the difference."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F27",
+  "familyTitle": "Missing digit in a subtraction",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": "62 − 2748 = 2814"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The box hides one digit. What is the digit?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "(2814+2748-5062)/100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add to check: the number in the first place is 2814 + 2748 = 5562."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 5"
+     },
+     {
+      "t": "blank"
+     },
+     {
+      "t": "text",
+      "v": "62 = 5562, and the digit in the box is 5."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F28",
+  "familyTitle": "Which is greater than 5000",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following has an answer greater than 5000?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2345 + 2567"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7005 − 2100"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3456 + 1554"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "9200 − 4300"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Work out each answer."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2345 + 2567 = 4912. 7005 − 2100 = 4905. 3456 + 1554 = 5010. 9200 − 4300 = 4900."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Only 5010 is greater than 5000, so 3456 + 1554 is the answer."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F29",
+  "familyTitle": "Bookshop sales in two months",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bookshop sold 1285 storybooks in June. In July, it sold 947 more storybooks than in June."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many storybooks did it sell in June and July altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3517"
+  },
+  "verification": {
+   "expression": "1285+(1285+947)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: July: 1285 + 947 = 2232 storybooks."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: June and July: 1285 + 2232 = 3517."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The bookshop sold 3517 storybooks altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number sold in July, 2232"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds June and July correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F30",
+  "familyTitle": "Concert tickets not sold",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "There were 5000 tickets for a school concert. 2486 tickets were sold on Monday and 1379 tickets were sold on Tuesday."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many tickets were still not sold?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1135"
+  },
+  "verification": {
+   "expression": "5000-(2486+1379)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Tickets sold: 2486 + 1379 = 3865."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Tickets not sold: 5000 − 3865 = 1135."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1135 tickets were still not sold."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the tickets sold on the two days, 3865"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the total sold from 5000"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F31",
+  "familyTitle": "Three months of driving",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Wong drove 3450 km in January. In February, he drove 875 km less than in January. In March, he drove 1260 km more than in February."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far did Mr Wong drive in the three months altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9860"
+  },
+  "verification": {
+   "expression": "3450+(3450-875)+(3450-875+1260)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: February: 3450 − 875 = 2575 km."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: March: 2575 + 1260 = 3835 km."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Altogether: 3450 + 2575 + 3835 = 9860 km."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mr Wong drove 9860 km."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the distance in February (2575 km) and in March (3835 km)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the three months correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F32",
+  "familyTitle": "Three classes (mental addition)",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Class 3A has 58 pupils. Class 3B has 17 fewer pupils than Class 3A. Class 3C has 26 more pupils than Class 3B."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pupils are there in the three classes altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "166"
+  },
+  "verification": {
+   "expression": "58+(58-17)+(58-17+26)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Class 3B: 58 − 17 = 41 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Class 3C: 41 + 26 = 67 pupils."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 58 + 41 + 67 = 166."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 166 pupils altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of pupils in 3B (41) and 3C (67)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the three classes correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F33",
+  "familyTitle": "Stickers given and returned",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali had 4500 stickers. He gave 1275 stickers to Ben and 850 stickers to Chen. Ben then gave 480 stickers back to Ali."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many stickers did Ali have then?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2855"
+  },
+  "verification": {
+   "expression": "4500-1275-850+480"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: After giving to Ben: 4500 − 1275 = 3225."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: After giving to Chen: 3225 − 850 = 2375."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: After Ben gave some back: 2375 + 480 = 2855."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ali had 2855 stickers."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Subtracts both gifts correctly to get 2375"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the 480 stickers that were given back"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F34",
+  "familyTitle": "Eggs at first",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A farmer sold 1875 eggs on Saturday and 2340 eggs on Sunday. He had 1785 eggs left."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many eggs did he have at first?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6000"
+  },
+  "verification": {
+   "expression": "1875+2340+1785"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Eggs sold: 1875 + 2340 = 4215."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Eggs at first = eggs sold + eggs left = 4215 + 1785 = 6000."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The farmer had 6000 eggs at first."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the eggs sold on both days, 4215"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the eggs left to find the number at first"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F35",
+  "familyTitle": "Stamps shared with a sister",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sam had 95 stamps. He gave 48 stamps to Tom. Sam then bought 39 more stamps. Tom gave 27 of his stamps to his sister."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many stamps do Sam and Tom have altogether now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "107"
+  },
+  "verification": {
+   "expression": "(95-48+39)+(48-27)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Sam now has 95 − 48 + 39 = 86 stamps."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Tom now has 48 − 27 = 21 stamps."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 86 + 21 = 107."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Sam and Tom have 107 stamps altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of stamps Sam has (86)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the number of stamps Tom has (21)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F25",
+  "familyTitle": "Rows of chairs then some removed",
+  "primaryOutcomeCode": "P3-NA-MD-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "There are 8 rows of chairs in a school hall. Each row has 7 chairs. Then 9 chairs are taken away."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many chairs are left in the hall?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "47"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "49"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "56"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "65"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "8*7-9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 8 × 7 = 56 chairs at first."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: 56 − 9 = 47."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 47 chairs left."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "56 is the number of chairs before any were taken away."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F26",
+  "familyTitle": "Sweets shared then eaten",
+  "primaryOutcomeCode": "P3-NA-MD-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "72 sweets are shared equally among 9 children. Each child eats 3 of the sweets."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many sweets does each child have left?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "72/9-3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 72 ÷ 9 = 8, so each child gets 8 sweets."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: 8 − 3 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each child has 5 sweets left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F27",
+  "familyTitle": "Minibuses needed",
+  "primaryOutcomeCode": "P3-NA-MD-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "53 pupils go on a trip. Each minibus can carry 8 pupils."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many minibuses are needed to carry all the pupils?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "48/8+1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "53 ÷ 8 = 6 remainder 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 minibuses carry 48 pupils, but 5 pupils are still left, so 1 more minibus is needed."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 + 1 = 7 minibuses."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The remainder is not ignored, because those pupils still need a seat."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F28",
+  "familyTitle": "Egg trays sold",
+  "primaryOutcomeCode": "P3-NA-MD-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A farmer packs 264 eggs equally into trays of 6 eggs. He sells 25 of the trays."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many trays are left?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "19"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "44"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "69"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "239"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "264/6-25"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Number of trays: 264 ÷ 6 = 44."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Trays left: 44 − 25 = 19."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 19 trays left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F29",
+  "familyTitle": "Difference of two products (mental)",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the value of 8 × 7 − 6 × 7?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "14"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "42"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "56"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "8*7-6*7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Method 1: 8 × 7 = 56 and 6 × 7 = 42, so 56 − 42 = 14."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Method 2: 8 sevens take away 6 sevens leaves 2 sevens. 2 × 7 = 14."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Subtracting only 8 − 6 = 2 forgets to multiply by 7."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F30",
+  "familyTitle": "Multiple of both 6 and 9",
+  "primaryOutcomeCode": "P3-NA-MD-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which number is in both the 6 times table and the 9 times table?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "27"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "36"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "45"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "6*6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "24 is in the 6 times table (6 × 4) but not in the 9 times table."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "27 is in the 9 times table (9 × 3) but not in the 6 times table. 45 is also only in the 9 times table (9 × 5)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "36 = 6 × 6 = 9 × 4, so 36 is in both tables."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F31",
+  "familyTitle": "Pencils shared among classes",
+  "primaryOutcomeCode": "P3-NA-MD-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A school bought 7 boxes of pencils. Each box had 125 pencils. The pencils were shared equally among 5 classes."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pencils did each class get?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "175"
+  },
+  "verification": {
+   "expression": "7*125/5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Total pencils: 7 × 125 = 875."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Each class: 875 ÷ 5 = 175."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each class got 175 pencils."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Multiplies to find the total, 875 pencils"
+    },
+    {
+     "marks": 1,
+     "criterion": "Divides the total by 5"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F32",
+  "familyTitle": "Pens given to friends",
+  "primaryOutcomeCode": "P3-NA-MD-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ah Hock bought 6 packets of pens. Each packet had 8 pens. He gave 4 pens to each of his 7 friends."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pens did Ah Hock have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "20"
+  },
+  "verification": {
+   "expression": "6*8-4*7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Pens bought: 6 × 8 = 48."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Pens given away: 4 × 7 = 28."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 48 − 28 = 20."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ah Hock had 20 pens left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the pens bought, 48"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the pens given away, 28"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F33",
+  "familyTitle": "Roses in bunches of six",
+  "primaryOutcomeCode": "P3-NA-MD-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A florist has 100 roses. She ties them into bunches of 6 roses each. Any roses that are left over cannot be sold."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "She sells each bunch for $9. How much money does she collect if she sells all the bunches?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "144",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "96/6*9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 100 ÷ 6 = 16 remainder 4. She makes 16 full bunches."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The 4 roses left over are not sold."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 16 × 9 = 144."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She collects $144."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Divides 100 by 6 to get 16 bunches (remainder 4 not used)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies the number of bunches by $9"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F34",
+  "familyTitle": "Three times as many red beads",
+  "primaryOutcomeCode": "P3-NA-MD-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "There are 145 blue beads in a jar. There are 3 times as many red beads as blue beads."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many beads are there in the jar altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "580"
+  },
+  "verification": {
+   "expression": "145+3*145"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Red beads: 3 × 145 = 435."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Altogether: 145 + 435 = 580."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 580 beads in the jar."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of red beads, 435"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the blue and red beads"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F35",
+  "familyTitle": "Furniture shopping",
+  "primaryOutcomeCode": "P3-NA-MD-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 260,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Tan had $700. He bought 4 chairs at $85 each and 3 tables at $64 each."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money did he have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "168",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "700-4*85-3*64"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Chairs: 4 × 85 = 340."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Tables: 3 × 64 = 192."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Total spent: 340 + 192 = 532. Money left: 700 − 532 = 168."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mr Tan had $168 left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the cost of the chairs (340) and the tables (192)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the total cost from 700"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F36",
+  "familyTitle": "Stickers to fill one more packet",
+  "primaryOutcomeCode": "P3-NA-MD-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 260,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Wei Jie has 95 stickers. He puts 7 stickers in each packet until he cannot fill another full packet."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more stickers does he need to fill one more packet?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3"
+  },
+  "verification": {
+   "expression": "7-(95-13*7)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 95 ÷ 7 = 13 remainder 4. He fills 13 packets and has 4 stickers left over."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: One more packet needs 7 stickers, so he needs 7 − 4 = 3 more stickers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "He needs 3 more stickers."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Divides 95 by 7 to get 13 packets and 4 stickers left over"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the remainder from 7"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F37",
+  "familyTitle": "Who has more stickers",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ravi has 6 packets of 9 stickers. Mei has 8 packets of 7 stickers."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more stickers does the one who has more stickers have than the other?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2"
+  },
+  "verification": {
+   "expression": "8*7-6*9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Ravi: 6 × 9 = 54 stickers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Mei: 8 × 7 = 56 stickers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 56 − 54 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mei has 2 more stickers than Ravi."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Ravi's stickers, 54"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds Mei's stickers, 56"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F32",
+  "familyTitle": "Slices eaten as an equivalent fraction",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A pizza was cut into 12 equal slices. Sam ate "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " of the pizza."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many slices did Sam eat?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "10"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "12/3*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " to twelfths: 3 × 4 = 12, so multiply the numerator by 4 as well: "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Sam ate 8 slices."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: the pizza has 3 equal parts of 4 slices each, and Sam ate 2 of those parts: 2 × 4 = 8."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F33",
+  "familyTitle": "Fraction between two fractions",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction is greater than "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " but smaller than "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "2/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Write each fraction in twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "We need a fraction between "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", and 8 is between 6 and 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is smaller than "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is greater than "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " is smaller than "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F34",
+  "familyTitle": "Sugar left after two uses",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Lim had "
+      },
+      {
+       "t": "frac",
+       "n": 11,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " kg of sugar. She used "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " kg to bake a cake and "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " kg to make a pudding."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much sugar was left? Give your answer in kilograms."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "11/12-1/4-1/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Sugar used: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " kg."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Sugar left: "
+     },
+     {
+      "t": "frac",
+      "n": 11,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " kg."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is the amount she used, not the amount left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F35",
+  "familyTitle": "Two missing numbers in equivalent fractions",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " = "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": "/12 = 6/"
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the sum of the two missing numbers?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "14"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "15"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "17"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "12/4*3+6/3*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", because 4 × 3 = 12 and 3 × 3 = 9. The first missing number is 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": ", because 3 × 2 = 6 and 4 × 2 = 8. The second missing number is 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 + 8 = 17."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F36",
+  "familyTitle": "Which fraction simplifies to two-thirds",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " when it is written in its simplest form?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 8,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 10,
+       "d": 12
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "2/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide the numerator and denominator by their common factor."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ": divide both by 4 to get "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Only "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " simplifies to "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F37",
+  "familyTitle": "Order fractions with tenths and fifths",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which shows the fractions "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " and "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": " in order, from the smallest to the greatest?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 5
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 5
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 5
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Write all the fractions in tenths: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "In order from the smallest: "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the order is "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F38",
+  "familyTitle": "How pupils go to school",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "In a class, "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " of the pupils walk to school and "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " of the pupils take the bus. All the other pupils take the MRT."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of the pupils take the MRT? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "1-(1/2+1/6)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Change to sixths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ". Pupils who walk or take the bus: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The whole class is "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Simplify: "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " of the pupils take the MRT."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the fractions who walk and take the bus, {4/6} or {2/3}"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts from 1 whole"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F39",
+  "familyTitle": "Milk poured from a jug",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 250,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A jug had "
+      },
+      {
+       "t": "frac",
+       "n": 11,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " ℓ of milk. Amy poured "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " ℓ of it into a glass. Ben poured "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " ℓ of it into another glass."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much milk was left in the jug? Give your answer in litres in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/2",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "11/12-1/3-1/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". Milk poured out: "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " ℓ."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: "
+     },
+     {
+      "t": "frac",
+      "n": 11,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Simplify: "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " ℓ of milk was left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the amount poured out, {5/12} ℓ"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts from {11/12} ℓ"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F40",
+  "familyTitle": "Three friends read the same book",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [
+   "P3-NA-FR-04"
+  ],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 260,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Aida, Bala and Chen each read the same storybook. Aida read "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " of it, Bala read "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " of it and Chen read "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " of it."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of the book more did the pupil who read the most read than the pupil who read the least? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/6",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "5/6-2/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Change to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Chen read the most ("
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ") and Bala read the least ("
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ")."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Chen read "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " of the book more than Bala."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes the fractions with a common denominator of 12 to compare them"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the smallest from the greatest"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F41",
+  "familyTitle": "Cake pieces left",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [
+   "P3-NA-FR-04"
+  ],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 230,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A cake was cut into 12 equal pieces. Ali ate "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " of the cake and Bala ate "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " of the cake."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pieces of cake were left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5"
+  },
+  "verification": {
+   "expression": "12-(12/4+12/3)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Change to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Pieces eaten: 3 + 4 = 7 pieces."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 12 − 7 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 pieces of cake were left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that Ali ate 3 pieces and Bala ate 4 pieces"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the pieces eaten from 12"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F42",
+  "familyTitle": "Stickers left as a simple fraction",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sam had 12 stickers. He gave 4 stickers to Tim and 2 stickers to Uma."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of his stickers did Sam have left? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/2",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "(12-4-2)/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Stickers given away: 4 + 2 = 6. Stickers left: 12 − 6 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Fraction left: "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Simplify: divide both numbers by 6. "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Sam had "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " of his stickers left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that Sam has 6 stickers left"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes {6/12} for the fraction left"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F43",
+  "familyTitle": "Equivalent fraction with a given sum",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 280,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A fraction is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": ". The sum of its numerator and its denominator is 21."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the fraction?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "9/12",
+   "acceptEquivalent": false,
+   "requireSimplest": false
+  },
+  "verification": {
+   "expression": "3*3/(4*3)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: List fractions equal to "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": ": "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", ..."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Add the numerator and denominator of each one: 3 + 4 = 7, 6 + 8 = 14, 9 + 12 = 21."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: The sum is 21 for "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fraction is "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Lists fractions equal to {3/4}: {6/8}, {9/12}"
+    },
+    {
+     "marks": 1,
+     "criterion": "Checks the sum of the numerator and denominator"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F44",
+  "familyTitle": "Shortest and longest ribbon joined",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [
+   "P3-NA-FR-04"
+  ],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 280,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali has a ribbon that is "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " m long. Bala has a ribbon that is "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " m long. Chen has a ribbon that is "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " m long."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The shortest ribbon and the longest ribbon are joined end to end. How long is the joined ribbon? Give your answer in metres in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/2",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "1/6+1/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Change to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The shortest is "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " m (Bala) and the longest is "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " m (Ali)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The joined ribbon is "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " m long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Compares the three ribbons using a common denominator"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the shortest and longest ribbon lengths"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F21",
+  "familyTitle": "Toy car and pocket money",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Zack had $20. He bought a toy car for $8.75 and gave $5.50 to his sister."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money does Zack have left? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5.25"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5.75"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "6.75"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "14.25"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "20-8.75-5.50"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Money used: $8.75 + $5.50 = $14.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Money left: $20.00 − $14.25 = $5.75."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$14.25 is the amount he used, not the amount left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F22",
+  "familyTitle": "Mug and cup together",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A cup costs $3.90. A mug costs $6.45 more than the cup."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much do a cup and a mug cost altogether? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "10.35"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "14.15"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "14.25"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "16.80"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "3.90+(3.90+6.45)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Cost of the mug: $3.90 + $6.45 = $10.35."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Cost of both: $3.90 + $10.35 = $14.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$10.35 is the cost of the mug only."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F23",
+  "familyTitle": "Cost of the book",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sara had $12.30. After she bought a book, she had $4.85 left."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much did the book cost? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.45"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.55"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8.55"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "17.15"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "12.30-4.85"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The cost of the book is the money she had at first take away the money left."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$12.30 − $4.85 = $7.45."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: $7.45 + $4.85 = $12.30."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$17.15 comes from adding instead of subtracting."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F24",
+  "familyTitle": "Money with more and less",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jun Wei has $8.40. Kelly has $2.75 more than Jun Wei. Ali has $3.20 less than Kelly."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money does Ali have? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5.65"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.95"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8.95"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "11.15"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "8.40+2.75-3.20"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Kelly has $8.40 + $2.75 = $11.15."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Ali has $11.15 − $3.20 = $7.95."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$11.15 is Kelly's money, not Ali's."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F25",
+  "familyTitle": "Saving for a bag",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bag costs $24.60. Leah has saved $17.85. Her mother gives her $4.50."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much more money does Leah still need to buy the bag? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2.25"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2.35"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.25"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6.75"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "24.60-17.85-4.50"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Money Leah has now: $17.85 + $4.50 = $22.35."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Money still needed: $24.60 − $22.35 = $2.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$6.75 is the amount she needed before her mother gave her the $4.50."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F26",
+  "familyTitle": "Which money statement is true",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which statement is true?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "$4.50 + $3.75 is more than $8.50."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "$10.00 − $3.65 is less than $6.30."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "$12.40 − $5.95 is equal to $6.45."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "$2.85 + $4.90 is equal to $7.65."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Work out each one."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$4.50 + $3.75 = $8.25, which is less than $8.50."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$10.00 − $3.65 = $6.35, which is more than $6.30."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$12.40 − $5.95 = $6.45, which is true."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$2.85 + $4.90 = $7.75, which is not $7.65."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F27",
+  "familyTitle": "Three items and change",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kai bought a sandwich for $3.95, a juice for $2.70 and a cake for $4.85. He paid with a $20 note."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much change did he get?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8.50",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "20-(3.95+2.70+4.85)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Total cost: $3.95 + $2.70 + $4.85 = $11.50."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Change: $20.00 − $11.50 = $8.50."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Kai got $8.50 change."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the three prices to get $11.50"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the total cost from $20"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F28",
+  "familyTitle": "Cost of the book after a gift",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ms Lim had $50.00. She bought a bag for $27.80. Her sister then gave her $6.45. She used some money to buy a book and had $14.20 left."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much did the book cost?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "14.45",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "50-27.80+6.45-14.20"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: After buying the bag: $50.00 − $27.80 = $22.20."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: After her sister gave her money: $22.20 + $6.45 = $28.65."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Cost of the book: $28.65 − $14.20 = $14.45."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The book cost $14.45."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the money after the bag and the gift, $28.65"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the money left from $28.65"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F29",
+  "familyTitle": "Three friends and their money",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 280,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Adam has $18.40. Bella has $5.75 more than Adam. Chen has $7.30 less than Bella."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money do the three children have altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "59.40",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "18.40+(18.40+5.75)+(18.40+5.75-7.30)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Bella: $18.40 + $5.75 = $24.15."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Chen: $24.15 − $7.30 = $16.85."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Altogether: $18.40 + $24.15 + $16.85 = $59.40."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "They have $59.40 altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Bella's money ($24.15) and Chen's money ($16.85)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the three amounts correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F30",
+  "familyTitle": "Cheaper kettle and a pot holder",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A kettle costs $34.90 at Shop A and $29.75 at Shop B. Mrs Rao bought the kettle from the shop where it was cheaper. She also bought a pot holder for $4.85 from the same shop."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "She paid with two $20 notes. How much change did she get?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5.40",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "40-(29.75+4.85)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: The kettle is cheaper at Shop B, $29.75."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Total cost: $29.75 + $4.85 = $34.60."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Change: $40.00 − $34.60 = $5.40."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mrs Rao got $5.40 change."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Chooses the cheaper kettle ($29.75) and adds the pot holder to get $34.60"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the total cost from $40"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F31",
+  "familyTitle": "Money at first",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 230,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Priya spent $8.45 on lunch and $3.90 on a magazine. She then had $12.65 left."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money did Priya have at first?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "25",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "8.45+3.90+12.65"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Money spent: $8.45 + $3.90 = $12.35."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Money at first: $12.35 + $12.65 = $25.00."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Priya had $25 at first."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the two amounts spent, $12.35"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the money left to the money spent"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F32",
+  "familyTitle": "Money after sharing",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 300,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sam has $27.50. Tom has $8.25 less than Sam. Sam gives Tom $5.00."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much more money does Tom have than Sam now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1.75",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "(27.50-8.25+5.00)-(27.50-5.00)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Tom at first: $27.50 − $8.25 = $19.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: After Sam gives Tom $5.00: Sam has $27.50 − $5.00 = $22.50 and Tom has $19.25 + $5.00 = $24.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: $24.25 − $22.50 = $1.75."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tom has $1.75 more than Sam now."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Tom's money at first ($19.25)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds how much each child has after the $5.00 is given"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F33",
+  "familyTitle": "Bun, drink and sticker in dollars and cents",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali had $5. He bought a bun for 85¢, a drink for $1.40 and a sticker for 60¢."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money did Ali have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2.15",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "5-(0.85+1.40+0.60)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Write 85¢ as $0.85 and 60¢ as $0.60."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Total cost: $0.85 + $1.40 + $0.60 = $2.85."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Money left: $5.00 − $2.85 = $2.15."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ali had $2.15 left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes cents to dollars and finds the total cost, $2.85"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the total cost from $5"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]

@@ -9,7 +9,7 @@ import { QuestionDraftSchema, type QuestionDraft } from "@/schemas/question-cont
 import { parseQuestionFilters, questionListHref } from "@/schemas/question-admin";
 
 const contentDir = path.resolve(import.meta.dirname, "../../content/questions");
-const bank = ["p3-maths-number.json", "p3-maths-fmt.json", "p3-maths-gaps.json", "p3-maths-diagrams.json"].flatMap((f) =>
+const bank = ["p3-maths-number.json", "p3-maths-fmt.json", "p3-maths-gaps.json", "p3-maths-diagrams.json", "p3-maths-topup-number.json", "p3-maths-topup-mgs.json"].flatMap((f) =>
   (JSON.parse(readFileSync(path.join(contentDir, f), "utf8")) as unknown[]).map((q) => QuestionDraftSchema.parse(q)),
 );
 const render = (q: QuestionDraft, extra = {}) => renderToStaticMarkup(createElement(QuestionView, { content: q.content, marks: q.marks, ...extra }));
