@@ -68,9 +68,9 @@ jobs:
           # Applying again must be a no-op.
           npm run db:migrate
           tables=$(PGPASSWORD=paperkaki_ci_only psql -h localhost -U paperkaki -d paperkaki -Atc \
-            "select string_agg(table_name, ',' order by table_name) from information_schema.tables where table_schema = 'public'")
+            "select string_agg(table_name, ',' order by table_name collate \"C\") from information_schema.tables where table_schema = 'public'")
           echo "public tables: $tables"
-          test "$tables" = "audit_logs,parent_profiles"
+          test "$tables" = "audit_logs,curriculum_domains,curriculum_outcome_sources,curriculum_outcomes,curriculum_topics,curriculum_versions,outcome_relationships,parent_profiles,source_documents,subjects"
 
       - name: Schema files match the committed migrations
         run: |
