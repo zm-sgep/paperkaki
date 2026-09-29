@@ -221,6 +221,59 @@ export interface LinesLayout {
   points: { cx: number; cy: number; label: TextMark }[];
 }
 
+/** Label directions to try, most natural first (up-right, then the other diagonals, then between them). */
+const LABEL_DIRECTIONS = [45, 135, 315, 225, 22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5, 0, 90, 180, 270];
+const POINT_LABEL_RADIUS = 9;
+
+/** Smallest angle in degrees between a direction and a (two-way) line direction. */
+function gapToLine(direction: number, line: number): number {
+  const d = (((direction - line) % 180) + 180) % 180;
+  return Math.min(d, 180 - d);
+}
+
+/**
+ * Put a point's label in the direction that stays furthest from every segment
+ * passing through the point, so a label never sits on top of a line.
+ */
+export function pointLabel(
+  at: readonly [number, number],
+  text: string,
+  cx: number,
+  cy: number,
+  segments: Lines["segments"],
+): TextMark {
+  const angles = segments
+    .filter((s) => {
+      const [x1, y1] = s.from;
+      const [x2, y2] = s.to;
+      const collinear = (x2 - x1) * (at[1] - y1) - (y2 - y1) * (at[0] - x1) === 0;
+      const within =
+        at[0] >= Math.min(x1, x2) && at[0] <= Math.max(x1, x2) && at[1] >= Math.min(y1, y2) && at[1] <= Math.max(y1, y2);
+      return collinear && within;
+    })
+    .map((s) => (Math.atan2(s.to[1] - s.from[1], s.to[0] - s.from[0]) * 180) / Math.PI);
+  let best = LABEL_DIRECTIONS[0] as number;
+  let bestGap = -1;
+  for (const direction of LABEL_DIRECTIONS) {
+    const gap = angles.length === 0 ? 180 : Math.min(...angles.map((a) => gapToLine(direction, a)));
+    if (gap > bestGap + 1e-9) {
+      best = direction;
+      bestGap = gap;
+    }
+  }
+  const rad = (best * Math.PI) / 180;
+  const cos = Math.cos(rad);
+  const sin = Math.sin(rad);
+  return {
+    x: r2(cx + POINT_LABEL_RADIUS * cos),
+    y: r2(cy - POINT_LABEL_RADIUS * sin + 3.5),
+    text,
+    anchor: cos > 0.35 ? "start" : cos < -0.35 ? "end" : "middle",
+    size: 10,
+    bold: true,
+  };
+}
+
 export function layoutLines(l: Lines): LinesLayout {
   const xs: number[] = [];
   const ys: number[] = [];
@@ -264,11 +317,11 @@ export function layoutLines(l: Lines): LinesLayout {
       for (let x = 0; x < l.dotGrid.cols; x += 1) dots.push({ cx: px(x), cy: py(y) });
     }
   }
-  const points = (l.points ?? []).map((p) => ({
-    cx: px(p.at[0]),
-    cy: py(p.at[1]),
-    label: { x: r2(px(p.at[0]) + 5), y: r2(py(p.at[1]) - 4), text: p.label, anchor: "start" as const, size: 10, bold: true },
-  }));
+  const points = (l.points ?? []).map((p) => {
+    const cx = px(p.at[0]);
+    const cy = py(p.at[1]);
+    return { cx, cy, label: pointLabel(p.at, p.label, cx, cy, l.segments) };
+  });
   return {
     width: r2((maxX - minX) * LINES_UNIT + 2 * LINES_PAD),
     height: r2((maxY - minY) * LINES_UNIT + 2 * LINES_PAD),

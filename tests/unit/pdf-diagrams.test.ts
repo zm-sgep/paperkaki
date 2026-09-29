@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { beforeAll, describe, expect, it } from "vitest";
 import { renderAnswerPackPdf, renderStudentPaperPdf } from "@/services/pdf";
-import { layoutAngle, layoutBarGraph, layoutGrid, layoutLines, wrapLabel } from "@/services/pdf/diagram-layout";
+import { layoutAngle, layoutBarGraph, layoutGrid, layoutLines, pointLabel, wrapLabel } from "@/services/pdf/diagram-layout";
 import { BarGraphBlockSchema } from "@/schemas/question-content";
 import {
   ANGLES,
@@ -135,6 +135,31 @@ describe("diagram layout", () => {
     // AB (y = 1) is below CD (y = 3) on the page, so its pixel y is larger.
     expect(layout.segments[0]!.y1).toBeGreaterThan(layout.segments[1]!.y1);
     expect(layout.points).toHaveLength(1);
+  });
+
+  it("puts a point label in the gap between the lines through the point", () => {
+    const cross: Parameters<typeof pointLabel>[4] = [
+      { from: [0, 2], to: [4, 2] },
+      { from: [2, 0], to: [2, 4] },
+    ];
+    // Up-right sits 45 degrees from both lines.
+    const label = pointLabel([2, 2], "X", 100, 100, cross);
+    expect(label.x).toBeGreaterThan(100);
+    expect(label.y).toBeLessThan(100 + 3.6);
+    // With four lines through the point, the label moves to a gap between them (22.5 degrees off).
+    const star: Parameters<typeof pointLabel>[4] = [
+      ...cross,
+      { from: [0, 0], to: [4, 4] },
+      { from: [0, 4], to: [4, 0] },
+    ];
+    const star1 = pointLabel([2, 2], "X", 100, 100, star);
+    const dx = star1.x - 100;
+    const dy = 100 - (star1.y - 3.5);
+    const deg = (Math.atan2(dy, dx) * 180) / Math.PI;
+    expect(Math.abs(deg - 22.5)).toBeLessThan(0.5);
+    // A line that only passes near the point does not count.
+    const far = pointLabel([2, 2], "X", 100, 100, [{ from: [0, 0], to: [4, 0] }]);
+    expect(far.x).toBeGreaterThan(100);
   });
 
   it("wraps long category labels onto two lines only at spaces", () => {

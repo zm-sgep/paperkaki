@@ -194,7 +194,7 @@ export function BlockList({
         group.push(blocks[i] as Block);
       }
       out.push(
-        <View key={i} wrap={false} style={{ flexDirection: "row", flexWrap: "wrap", columnGap: 14, alignItems: "flex-end" }}>
+        <View key={i} wrap={false} style={{ flexDirection: "row", flexWrap: "wrap", columnGap: 8, alignItems: "flex-end" }}>
           {group.map((g, j) => (
             <View key={j}>
               <BlockView block={g} images={images} />
