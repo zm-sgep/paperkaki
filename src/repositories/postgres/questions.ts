@@ -437,6 +437,7 @@ export async function listApprovedWithMappings(db: Database) {
     .select({
       question: questions,
       familyCode: questionFamilies.code,
+      familyTitle: questionFamilies.title,
       familyCurriculumVersionId: questionFamilies.curriculumVersionId,
     })
     .from(questions)
@@ -447,6 +448,7 @@ export async function listApprovedWithMappings(db: Database) {
     .select({
       questionId: questionOutcomes.questionId,
       outcomeId: questionOutcomes.outcomeId,
+      outcomeCode: curriculumOutcomes.code,
       role: questionOutcomes.role,
       outcomeVersionId: curriculumOutcomes.curriculumVersionId,
     })
