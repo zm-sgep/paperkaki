@@ -1,3 +1,5 @@
+import { mkdirSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import { PGlite } from "@electric-sql/pglite";
 import type { PgDatabase, PgQueryResultHKT } from "drizzle-orm/pg-core";
 import { drizzle as drizzleNodePg } from "drizzle-orm/node-postgres";
@@ -45,6 +47,11 @@ export function createDatabase(url: string | undefined): DatabaseHandle {
     const location = url.slice("pglite://".length);
     if (location === "") {
       throw new Error("DATABASE_URL must be pglite://memory or pglite://<directory>.");
+    }
+    if (location !== "memory") {
+      // PGlite creates only the last folder of the path. On a fresh clone `.data/` does not
+      // exist yet, so create the parent folders first.
+      mkdirSync(dirname(resolve(location)), { recursive: true });
     }
     const client = new PGlite(location === "memory" ? undefined : location);
     return {
