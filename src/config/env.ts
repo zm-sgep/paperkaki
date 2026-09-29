@@ -66,12 +66,14 @@ const envSchema = z.object({
   STORAGE_SIGNING_SECRET: secret(),
 });
 
+const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "[::1]"]);
+
 const envRules = envSchema.superRefine((value, context) => {
-  if (
-    value.NODE_ENV === "production" &&
-    value.AUTH_PROVIDER === "dev" &&
-    value.E2E_ALLOW_DEV_AUTH !== "true"
-  ) {
+  // The escape hatch only counts when the app is served from this machine, so a
+  // stray E2E_ALLOW_DEV_AUTH in a deployed environment cannot enable password-free sign-in.
+  const e2eOnLocalHost =
+    value.E2E_ALLOW_DEV_AUTH === "true" && LOCAL_HOSTS.has(new URL(value.APP_BASE_URL).hostname);
+  if (value.NODE_ENV === "production" && value.AUTH_PROVIDER === "dev" && !e2eOnLocalHost) {
     context.addIssue({
       code: "custom",
       path: ["AUTH_PROVIDER"],

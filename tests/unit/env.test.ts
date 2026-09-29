@@ -141,6 +141,17 @@ describe("parseEnv", () => {
       ).toThrow(/AUTH_PROVIDER/);
     });
 
+    it("ignores the browser-test opt-in when the app is not served from this machine", () => {
+      expect(() =>
+        parseEnv({
+          ...valid,
+          NODE_ENV: "production",
+          E2E_ALLOW_DEV_AUTH: "true",
+          APP_BASE_URL: "https://paperkaki.example.com",
+        }),
+      ).toThrow(/AUTH_PROVIDER/);
+    });
+
     it("keeps DEV_ADMIN_EMAILS optional", () => {
       expect(parseEnv(valid).DEV_ADMIN_EMAILS).toBeUndefined();
       expect(parseEnv({ ...valid, DEV_ADMIN_EMAILS: "a@example.test,b@example.test" }).DEV_ADMIN_EMAILS).toBe(
