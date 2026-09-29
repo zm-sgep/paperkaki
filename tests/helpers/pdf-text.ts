@@ -1,7 +1,9 @@
 import path from "node:path";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 
-const STANDARD_FONTS = `${path.resolve(import.meta.dirname, "../../node_modules/pdfjs-dist/standard_fonts")}/`;
+// Relative to the repository root (where every test runner starts), so the helper also loads under
+// Playwright, which compiles specs as CommonJS and has no import.meta.
+const STANDARD_FONTS = `${path.resolve(process.cwd(), "node_modules/pdfjs-dist/standard_fonts")}/`;
 
 export interface ExtractedPdf {
   pages: string[];
