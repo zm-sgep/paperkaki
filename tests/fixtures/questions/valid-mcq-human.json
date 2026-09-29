@@ -1,0 +1,84 @@
+{
+  "familyCode": "TEST-F01",
+  "familyTitle": "Fixture family",
+  "primaryOutcomeCode": "TEST-01",
+  "secondaryOutcomeCodes": [],
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "markingScheme": {
+    "method": "exact"
+  },
+  "provenance": "original_human",
+  "questionType": "mcq",
+  "content": {
+    "stem": [
+      {
+        "t": "p",
+        "c": [
+          {
+            "t": "text",
+            "v": "Which shape has 4 equal sides?"
+          }
+        ]
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "c": [
+          {
+            "t": "text",
+            "v": "Square"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "c": [
+          {
+            "t": "text",
+            "v": "Triangle"
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "c": [
+          {
+            "t": "text",
+            "v": "Circle"
+          }
+        ]
+      },
+      {
+        "id": "D",
+        "c": [
+          {
+            "t": "text",
+            "v": "Hexagon"
+          }
+        ]
+      }
+    ]
+  },
+  "answer": {
+    "kind": "mcq",
+    "correct": "A"
+  },
+  "verification": {
+    "human": true
+  },
+  "workedSolution": [
+    {
+      "t": "p",
+      "c": [
+        {
+          "t": "text",
+          "v": "Worked solution."
+        }
+      ]
+    }
+  ]
+}

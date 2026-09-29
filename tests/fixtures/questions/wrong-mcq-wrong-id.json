@@ -1,0 +1,84 @@
+{
+  "familyCode": "TEST-F01",
+  "familyTitle": "Fixture family",
+  "primaryOutcomeCode": "TEST-01",
+  "secondaryOutcomeCodes": [],
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "markingScheme": {
+    "method": "exact"
+  },
+  "provenance": "original_human",
+  "questionType": "mcq",
+  "content": {
+    "stem": [
+      {
+        "t": "p",
+        "c": [
+          {
+            "t": "text",
+            "v": "What is 2 + 2?"
+          }
+        ]
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "c": [
+          {
+            "t": "text",
+            "v": "3"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "c": [
+          {
+            "t": "text",
+            "v": "4"
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "c": [
+          {
+            "t": "text",
+            "v": "5"
+          }
+        ]
+      },
+      {
+        "id": "D",
+        "c": [
+          {
+            "t": "text",
+            "v": "6"
+          }
+        ]
+      }
+    ]
+  },
+  "answer": {
+    "kind": "mcq",
+    "correct": "C"
+  },
+  "verification": {
+    "expression": "2+2"
+  },
+  "workedSolution": [
+    {
+      "t": "p",
+      "c": [
+        {
+          "t": "text",
+          "v": "Worked solution."
+        }
+      ]
+    }
+  ]
+}

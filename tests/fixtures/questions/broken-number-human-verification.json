@@ -1,0 +1,46 @@
+{
+  "familyCode": "TEST-F01",
+  "familyTitle": "Fixture family",
+  "primaryOutcomeCode": "TEST-01",
+  "secondaryOutcomeCodes": [],
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "markingScheme": {
+    "method": "exact"
+  },
+  "provenance": "original_human",
+  "questionType": "number",
+  "content": {
+    "stem": [
+      {
+        "t": "p",
+        "c": [
+          {
+            "t": "text",
+            "v": "What is 1 + 1?"
+          }
+        ]
+      }
+    ]
+  },
+  "answer": {
+    "kind": "number",
+    "value": "2"
+  },
+  "verification": {
+    "human": true
+  },
+  "workedSolution": [
+    {
+      "t": "p",
+      "c": [
+        {
+          "t": "text",
+          "v": "Worked solution."
+        }
+      ]
+    }
+  ]
+}

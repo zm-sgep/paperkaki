@@ -1,0 +1,98 @@
+{
+  "familyCode": "TEST-F01",
+  "familyTitle": "Fixture family",
+  "primaryOutcomeCode": "TEST-01",
+  "secondaryOutcomeCodes": [],
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "markingScheme": {
+    "method": "exact"
+  },
+  "provenance": "original_human",
+  "questionType": "text",
+  "content": {
+    "stem": [
+      {
+        "t": "table",
+        "header": true,
+        "rows": [
+          [
+            [
+              {
+                "t": "text",
+                "v": "Fruit"
+              }
+            ],
+            [
+              {
+                "t": "text",
+                "v": "Number"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "t": "text",
+                "v": "Apple"
+              }
+            ],
+            [
+              {
+                "t": "text",
+                "v": "5"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "t": "text",
+                "v": "Pear"
+              }
+            ],
+            [
+              {
+                "t": "text",
+                "v": "9"
+              }
+            ]
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "c": [
+          {
+            "t": "text",
+            "v": "Which fruit is there more of, apples or pears?"
+          }
+        ]
+      }
+    ]
+  },
+  "answer": {
+    "kind": "text",
+    "accepted": [
+      "Pears",
+      "pear",
+      "pears"
+    ]
+  },
+  "verification": {
+    "human": true
+  },
+  "workedSolution": [
+    {
+      "t": "p",
+      "c": [
+        {
+          "t": "text",
+          "v": "Worked solution."
+        }
+      ]
+    }
+  ]
+}

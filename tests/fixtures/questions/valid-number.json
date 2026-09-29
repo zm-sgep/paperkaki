@@ -1,0 +1,56 @@
+{
+  "familyCode": "TEST-F01",
+  "familyTitle": "Fixture family",
+  "primaryOutcomeCode": "TEST-01",
+  "secondaryOutcomeCodes": [],
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 60,
+  "markingScheme": {
+    "method": "exact_with_unit",
+    "partialMarks": [
+      {
+        "marks": 1,
+        "criterion": "Adds the two amounts"
+      }
+    ]
+  },
+  "provenance": "original_human",
+  "questionType": "number",
+  "content": {
+    "stem": [
+      {
+        "t": "p",
+        "c": [
+          {
+            "t": "text",
+            "v": "Ben has $12.50. He earns $3.25 more. How much does he have now? Ans: "
+          },
+          {
+            "t": "blank"
+          }
+        ]
+      }
+    ]
+  },
+  "answer": {
+    "kind": "number",
+    "value": "15.75",
+    "unit": "$"
+  },
+  "verification": {
+    "expression": "12.50+3.25"
+  },
+  "workedSolution": [
+    {
+      "t": "p",
+      "c": [
+        {
+          "t": "text",
+          "v": "Worked solution."
+        }
+      ]
+    }
+  ]
+}

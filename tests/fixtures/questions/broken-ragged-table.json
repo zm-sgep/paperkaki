@@ -1,0 +1,67 @@
+{
+  "familyCode": "TEST-F01",
+  "familyTitle": "Fixture family",
+  "primaryOutcomeCode": "TEST-01",
+  "secondaryOutcomeCodes": [],
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "markingScheme": {
+    "method": "exact"
+  },
+  "provenance": "original_human",
+  "questionType": "text",
+  "content": {
+    "stem": [
+      {
+        "t": "table",
+        "header": false,
+        "rows": [
+          [
+            [
+              {
+                "t": "text",
+                "v": "a"
+              }
+            ],
+            [
+              {
+                "t": "text",
+                "v": "b"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "t": "text",
+                "v": "c"
+              }
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  "answer": {
+    "kind": "text",
+    "accepted": [
+      "x"
+    ]
+  },
+  "verification": {
+    "human": true
+  },
+  "workedSolution": [
+    {
+      "t": "p",
+      "c": [
+        {
+          "t": "text",
+          "v": "Worked solution."
+        }
+      ]
+    }
+  ]
+}

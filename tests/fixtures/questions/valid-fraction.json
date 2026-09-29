@@ -1,0 +1,66 @@
+{
+  "familyCode": "TEST-F01",
+  "familyTitle": "Fixture family",
+  "primaryOutcomeCode": "TEST-01",
+  "secondaryOutcomeCodes": [],
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "markingScheme": {
+    "method": "exact"
+  },
+  "provenance": "original_human",
+  "questionType": "fraction",
+  "content": {
+    "stem": [
+      {
+        "t": "p",
+        "c": [
+          {
+            "t": "text",
+            "v": "Find "
+          },
+          {
+            "t": "frac",
+            "n": 1,
+            "d": 4
+          },
+          {
+            "t": "text",
+            "v": " + "
+          },
+          {
+            "t": "frac",
+            "n": 1,
+            "d": 2
+          },
+          {
+            "t": "text",
+            "v": ". Give your answer in simplest form."
+          }
+        ]
+      }
+    ]
+  },
+  "answer": {
+    "kind": "fraction",
+    "value": "3/4",
+    "acceptEquivalent": true,
+    "requireSimplest": true
+  },
+  "verification": {
+    "expression": "1/4+1/2"
+  },
+  "workedSolution": [
+    {
+      "t": "p",
+      "c": [
+        {
+          "t": "text",
+          "v": "Worked solution."
+        }
+      ]
+    }
+  ]
+}
