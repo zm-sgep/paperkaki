@@ -11,6 +11,7 @@ import {
 } from "@/domain/recommendations/next-parent-action";
 import type { Database } from "@/repositories/postgres/client";
 import { listAssessmentsForParent } from "@/repositories/postgres/assessments";
+import { listPapersForAssessments } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import { getParentChildren } from "./children";
 
@@ -20,8 +21,7 @@ type Context = { db?: Database; now?: Date };
 
 /**
  * What the parent's Home needs to decide the next action, from real data: the parent's active
- * children, the selected one, and their assessments in creation order. Papers arrive with the
- * next milestone, so every assessment has an empty list for now.
+ * children, the selected one, and their assessments in creation order, each with its generated mocks.
  */
 export async function getParentHomeState(parentProfileId: string, context: Context = {}): Promise<ParentActionState> {
   const db = context.db ?? (await getReadyDb());
@@ -29,6 +29,7 @@ export async function getParentHomeState(parentProfileId: string, context: Conte
     getParentChildren(parentProfileId, { db }),
     listAssessmentsForParent(db, parentProfileId),
   ]);
+  const papers = await listPapersForAssessments(db, assessments.map((assessment) => assessment.id));
   return {
     children,
     selectedChildId: selectedChildId ?? undefined,
@@ -36,9 +37,12 @@ export async function getParentHomeState(parentProfileId: string, context: Conte
       id: assessment.id,
       childId: assessment.childId,
       name: assessment.name,
+      subject: assessment.subject,
       date: assessment.date,
       scopeConfirmed: assessment.status === "scope_confirmed",
-      papers: [],
+      papers: papers
+        .filter((paper) => paper.assessmentId === assessment.id && paper.status === "generated")
+        .map((paper) => ({ id: paper.id, number: paper.number, status: "ready" as const })),
     })),
     today: todayInSingapore(context.now),
   };

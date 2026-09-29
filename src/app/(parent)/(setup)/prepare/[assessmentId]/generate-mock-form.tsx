@@ -4,22 +4,50 @@ import { useActionState } from "react";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { generateMockAction, type MockState } from "./actions";
 
-/** The one primary action. While a problem remains it is disabled and the reason stays visible. */
-export function GenerateMockForm({ assessmentId, canGenerate, reason }: { assessmentId: string; canGenerate: boolean; reason: string | null }) {
-  const [state, formAction] = useActionState<MockState, FormData>(generateMockAction.bind(null, assessmentId), {});
+type Props = {
+  assessmentId: string;
+  /** Made when the screen was drawn. The same key never makes two mocks. */
+  requestKey: string;
+  canGenerate: boolean;
+  reason: string | null;
+  label: string;
+  variant?: "primary" | "secondary";
+};
+
+/**
+ * Creates a mock. While it works it says so calmly and the button cannot be pressed again.
+ * While a problem remains it is disabled and the reason stays visible.
+ */
+export function GenerateMockForm({ assessmentId, requestKey, canGenerate, reason, label, variant = "primary" }: Props) {
+  const [state, formAction, pending] = useActionState<MockState, FormData>(generateMockAction.bind(null, assessmentId), {});
   return (
-    <form action={formAction} className="flex flex-col gap-2">
-      <SubmitButton variant="primary" disabled={!canGenerate} aria-describedby={!canGenerate && reason ? "generate-reason" : undefined} className="w-full sm:w-auto sm:self-start">
-        Generate first mock
+    <form action={formAction} className="flex flex-col gap-3">
+      <input type="hidden" name="requestKey" value={requestKey} />
+      <SubmitButton
+        variant={variant}
+        disabled={!canGenerate}
+        aria-describedby={!canGenerate && reason ? "generate-reason" : undefined}
+        className="w-full sm:w-auto sm:self-start"
+      >
+        {pending ? "Creating your mock…" : label}
       </SubmitButton>
       {!canGenerate && reason ? (
         <p id="generate-reason" className="text-base text-ink-soft">
           {reason}
         </p>
       ) : null}
-      <p role="status" className="text-base text-ink">
-        {state.message}
-      </p>
+      <div role="status" aria-live="polite" className="text-base text-ink-soft">
+        {pending ? "This takes a few seconds. Please keep this page open." : null}
+      </div>
+      {state.problems && !pending ? (
+        <div role="alert" className="flex flex-col gap-1 rounded-lg border-2 border-danger bg-surface px-4 py-3">
+          {state.problems.map((problem) => (
+            <p key={problem} className="text-lg text-ink">
+              {problem}
+            </p>
+          ))}
+        </div>
+      ) : null}
     </form>
   );
 }

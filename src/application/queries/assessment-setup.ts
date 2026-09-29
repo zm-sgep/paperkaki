@@ -17,6 +17,7 @@ import {
   type OwnedAssessment,
 } from "@/repositories/postgres/assessments";
 import { getReadyDb } from "@/repositories/postgres/ready";
+import { listPapersForAssessments } from "@/repositories/postgres/papers";
 import { listCandidateQuestions } from "./questions";
 
 type Context = { db?: Database; now?: Date };
@@ -119,6 +120,16 @@ export type AssessmentSetup = {
   /** Questions available per covered topic. For checks, not for display. */
   inventory: { topicId: string; label: string; questionCount: number }[];
   chosenTopics: { id: string; label: string }[];
+  /** Mocks already made for this assessment, newest first. Empty until the first one exists. */
+  mocks: MockSummary[];
+};
+
+export type MockSummary = {
+  id: string;
+  number: number;
+  /** "Created Tue 14 Oct" */
+  createdText: string;
+  href: string;
 };
 
 /** Everything the "Your mock is ready to create" screen needs. Null when the assessment is not this parent's. */
@@ -132,8 +143,20 @@ export async function getAssessmentSetup(
   if (!assessment) return null;
   const plan = await buildAssessmentPlan(db, assessment);
   const selection = plan.selection?.ok ? plan.selection : null;
+  const today = todayInSingapore(context.now);
+  const mocks = (await listPapersForAssessments(db, [assessment.id]))
+    .filter((paper) => paper.status === "generated")
+    .sort((a, b) => b.number - a.number)
+    .map(
+      (paper): MockSummary => ({
+        id: paper.id,
+        number: paper.number,
+        createdText: `Created ${formatAssessmentDate(todayInSingapore(paper.createdAt), today)}`,
+        href: `/prepare/${assessment.id}/mocks/${paper.id}`,
+      }),
+    );
   return {
-    assessment: headerOf(assessment, todayInSingapore(context.now)),
+    assessment: headerOf(assessment, today),
     summary: plan.summary,
     excludedNotice: plan.excludedNotice,
     problems: plan.problems,
@@ -146,6 +169,7 @@ export async function getAssessmentSetup(
     preview: selection ? { questionCount: selection.selection.length, totalMarks: selection.report.totalMarks } : null,
     inventory: plan.inventory,
     chosenTopics: plan.chosen.map((topic) => ({ id: topic.topicId, label: topic.label })),
+    mocks,
   };
 }
 
@@ -167,8 +191,19 @@ export async function getPrepareOverview(
   const db = await resolveDb(context);
   const today = todayInSingapore(context.now);
   const rows = await listAssessmentsForParent(db, parentProfileId, childId);
+  const papers = await listPapersForAssessments(db, rows.map((row) => row.id));
   const cards = rows.map((row): AssessmentCard => {
       const header = headerOf(row, today);
+      const latest = papers.find((paper) => paper.assessmentId === row.id && paper.status === "generated");
+      if (header.scopeConfirmed && latest) {
+        return {
+          ...header,
+          stateText: `Mock ${latest.number} is ready`,
+          actionLabel: "Print mock",
+          actionHref: `/prepare/${row.id}/mocks/${latest.id}`,
+          past: row.date < today,
+        };
+      }
       return {
         ...header,
         stateText: assessmentStateText(header.scopeConfirmed),

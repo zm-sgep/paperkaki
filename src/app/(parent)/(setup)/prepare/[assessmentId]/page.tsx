@@ -1,4 +1,6 @@
+import { randomUUID } from "node:crypto";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { getAssessmentSetup } from "@/application/queries/assessment-setup";
 import { requireParent } from "@/application/queries/current-parent";
@@ -24,15 +26,43 @@ export default async function AssessmentPage({ params }: { params: Promise<{ ass
   if (!setup.assessment.scopeConfirmed) redirect(`/prepare/${assessmentId}/scope`);
 
   const blocked = setup.problems.length > 0;
+  const latest = setup.mocks[0];
+  const requestKey = randomUUID();
   return (
     <>
       <p className="-mb-3 text-base text-ink-soft">{setup.assessment.contextLine}</p>
-      <PageHeader title="Your mock is ready to create" />
+      <PageHeader title={latest ? "Your mocks" : "Your mock is ready to create"} />
 
       <Card className="flex flex-col gap-3">
         <p className="text-xl font-semibold text-ink">{setup.summary}</p>
         <p className="text-lg text-ink-soft">Each mock uses a new set of questions from the topics you chose.</p>
       </Card>
+
+      {latest ? (
+        <>
+          <ButtonLink href={latest.href} variant="primary" className="w-full sm:w-auto sm:self-start">
+            {`Print Mock ${latest.number}`}
+          </ButtonLink>
+          <section aria-labelledby="mocks-heading" className="flex flex-col gap-3">
+            <h2 id="mocks-heading" className="text-xl font-semibold text-ink">
+              Mocks
+            </h2>
+            <ul className="flex flex-col gap-2">
+              {setup.mocks.map((mock) => (
+                <li key={mock.id}>
+                  <Link
+                    href={mock.href}
+                    className="flex min-h-12 flex-col justify-center rounded-lg border border-line bg-surface px-4 py-2 hover:bg-kaki-soft sm:flex-row sm:items-center sm:justify-between"
+                  >
+                    <span className="text-lg font-semibold text-ink">{`Mock ${mock.number}`}</span>
+                    <span className="text-base text-ink-soft">{mock.createdText}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </>
+      ) : null}
 
       {setup.excludedNotice ? (
         <p role="note" className="rounded-lg border border-line bg-surface px-4 py-3 text-lg text-ink">
@@ -61,8 +91,11 @@ export default async function AssessmentPage({ params }: { params: Promise<{ ass
 
       <GenerateMockForm
         assessmentId={assessmentId}
+        requestKey={requestKey}
         canGenerate={setup.canGenerate}
         reason={blocked ? "Make the change above to continue." : null}
+        label={latest ? "Create another mock" : "Generate first mock"}
+        variant={latest ? "secondary" : "primary"}
       />
 
       <CustomisePaper

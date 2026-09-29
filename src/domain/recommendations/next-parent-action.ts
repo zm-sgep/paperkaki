@@ -17,6 +17,8 @@ export type ParentActionAssessment = {
   id: string;
   childId: string;
   name: string;
+  /** "Mathematics". When present, a ready mock reads "Mathematics WA2 · Mock 1 is ready". */
+  subject?: string;
   date: IsoDate;
   scopeConfirmed: boolean;
   papers: ParentActionPaper[];
@@ -113,7 +115,7 @@ export function nextParentAction(state: ParentActionState): ParentAction {
 
   return {
     kind: "start_mock",
-    title: `${nearest.name} · Mock ${latestPaper.number} is ready`,
+    title: `${nearest.subject ? `${nearest.subject} ` : ""}${nearest.name} · Mock ${latestPaper.number} is ready`,
     supportingText: "Print it on A4. The answer pack is separate.",
     ctaLabel: "Print mock",
     href: `/prepare/${nearest.id}/mocks/${latestPaper.id}`,

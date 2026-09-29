@@ -117,11 +117,7 @@ test.describe("parent assessment setup", () => {
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);
     await expectNoInternalWords(page);
 
-    // The generate action is a stub for now and says so.
-    await page.getByRole("button", { name: "Generate first mock" }).click();
-    await expect(page.getByRole("status").filter({ hasText: "aren't built yet" })).toBeVisible();
-
-    // Home and Prepare now reflect the state.
+    // Home and Prepare now reflect the state (creating the mock is covered by the printable-mock spec).
     const nav = page.getByRole("navigation", { name: "Main" });
     await nav.getByRole("link", { name: "Home" }).click();
     await expect(page.getByRole("heading", { level: 1, name: "WA2: topics confirmed" })).toBeVisible();

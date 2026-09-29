@@ -98,6 +98,21 @@ describe("nextParentAction", () => {
     });
   });
 
+  it("names the subject on a ready mock when it is known", () => {
+    const ready = assessment({
+      name: "WA2",
+      subject: "Mathematics",
+      scopeConfirmed: true,
+      papers: [{ id: "p1", number: 1, status: "ready" }],
+    });
+    expect(nextParentAction(state({ assessments: [ready] }))).toMatchObject({
+      kind: "start_mock",
+      title: "Mathematics WA2 · Mock 1 is ready",
+      ctaLabel: "Print mock",
+      href: "/prepare/a1/mocks/p1",
+    });
+  });
+
   it("uses the earliest upcoming assessment, whatever order they are listed in", () => {
     const later = assessment({ id: "later", name: "Maths SA1", date: "2026-11-05", scopeConfirmed: true });
     const sooner = assessment({ id: "sooner", name: "Maths WA3", date: "2026-10-20" });

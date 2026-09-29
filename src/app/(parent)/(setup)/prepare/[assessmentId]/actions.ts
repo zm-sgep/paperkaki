@@ -1,24 +1,33 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { setPaperSettings, resetToRecommendedSettings } from "@/application/commands/assessments";
+import { MockGenerationError, generateMock } from "@/application/commands/papers";
 import { InputError, NotFoundError } from "@/application/errors";
-import { getAssessmentSetup } from "@/application/queries/assessment-setup";
 import { requireParent } from "@/application/queries/current-parent";
 import { getRequestId } from "@/lib/request-context";
 
-export type MockState = { message?: string };
+export type MockState = { problems?: string[] };
 
 /**
- * STUB. Creating the mock paper is the next milestone (M4). This only checks that the assessment
- * belongs to the signed-in parent and says so honestly; it stores nothing.
+ * Creates the next mock for this assessment. The form carries a request key made when the screen
+ * was drawn, so pressing twice, or a retried request, gives the same mock instead of two.
  */
-export async function generateMockAction(assessmentId: string): Promise<MockState> {
+export async function generateMockAction(assessmentId: string, _previous: MockState, formData: FormData): Promise<MockState> {
   const parent = await requireParent();
-  const setup = await getAssessmentSetup(parent.parentProfileId, assessmentId);
-  if (!setup) notFound();
-  return { message: "Mock papers aren't built yet. Your topics and settings are saved, so nothing is lost." };
+  const requestKey = text(formData, "requestKey");
+  let result;
+  try {
+    result = await generateMock(parent.parentProfileId, assessmentId, requestKey, { requestId: (await getRequestId()) ?? null });
+  } catch (error) {
+    if (error instanceof MockGenerationError) return { problems: error.problems };
+    if (error instanceof InputError) return { problems: [error.message] };
+    if (error instanceof NotFoundError) notFound();
+    throw error;
+  }
+  revalidatePath("/", "layout");
+  redirect(`/prepare/${assessmentId}/mocks/${result.paperId}`);
 }
 
 export type SettingsState = { errors?: Record<string, string>; saved?: boolean; values?: Record<string, string> };
