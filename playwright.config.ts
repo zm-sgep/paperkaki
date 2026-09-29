@@ -61,6 +61,14 @@ export default defineConfig({
       APP_BASE_URL: baseURL,
       DATABASE_URL: "pglite://memory",
       LOG_LEVEL: "warn",
+      // Fictional, test-only values. The production build normally refuses the dev sign-in
+      // adapter; E2E_ALLOW_DEV_AUTH lets these browser tests use it.
+      AUTH_PROVIDER: "dev",
+      AUTH_SECRET: "e2e-only-auth-secret-not-used-anywhere-else-0123456789",
+      DEV_ADMIN_EMAILS: "admin@example.test",
+      E2E_ALLOW_DEV_AUTH: "true",
+      STORAGE_LOCAL_DIR: "./.data/e2e-storage",
+      STORAGE_SIGNING_SECRET: "e2e-only-storage-signing-secret-0123456789abcdef",
     },
   },
 });

@@ -13,6 +13,10 @@
   --color-ink-soft: #52606d;
   --color-kaki: #1f6f5c;
   --color-kaki-strong: #17564a;
+  --color-kaki-soft: #e4f0ec;
+  --color-surface: #ffffff;
+  --color-line: #cfd6dc;
+  --color-danger: #a4262c;
 }
 
 :root {

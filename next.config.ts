@@ -7,6 +7,8 @@ import "./src/config/env";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // PGlite loads its WebAssembly files relative to its own package; bundling it breaks that.
+  serverExternalPackages: ["@electric-sql/pglite"],
 };
 
 export default nextConfig;

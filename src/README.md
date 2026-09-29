@@ -14,4 +14,6 @@ Modular monolith (ADR-0001). Dependencies point inward: UI -> application -> dom
 | `lib/` | Small cross-cutting helpers: logger, request ID, audit event helper. | Route code and UI components. |
 | `config/` | Environment validation (`env.ts`). | Everything except `zod`. Server-side only. |
 
-Not here yet: parent, child, mock and admin route groups (added with their layouts, ADR-0009) and the navigation shell (UX-01).
+Route groups: `(parent)/` is the four-destination family shell (Home, Prepare, Progress, Rewards; account is reached from the top bar). `admin/` has its own layout and no family navigation. `sign-in/` is public. Child and mock route groups come later (ADR-0009).
+
+Sign-in and files: every protected layout, page and action calls `requireParent()` / `requireAdmin()` (`application/queries/current-parent.ts`); `proxy.ts` only redirects early. Files are reached only through `issueFileUrl()` (`application/files.ts`), which creates short-lived signed links to `/api/files/{bucket}/{key}`.

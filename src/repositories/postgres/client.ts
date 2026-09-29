@@ -60,17 +60,15 @@ export function createDatabase(url: string | undefined): DatabaseHandle {
 const globalForDb = globalThis as unknown as { __paperkakiDb?: DatabaseHandle };
 
 /**
- * The shared handle for the running app. Cached on `globalThis` outside production so
- * Next.js hot reloads in development do not open a new pool or database each time.
+ * The shared handle for the running app. Cached on `globalThis` so hot reloads in development
+ * and separately bundled routes in production all use one pool or one embedded database.
  */
 export function getDatabase(): DatabaseHandle {
   if (globalForDb.__paperkakiDb) {
     return globalForDb.__paperkakiDb;
   }
   const handle = createDatabase(process.env.DATABASE_URL);
-  if (process.env.NODE_ENV !== "production") {
-    globalForDb.__paperkakiDb = handle;
-  }
+  globalForDb.__paperkakiDb = handle;
   return handle;
 }
 

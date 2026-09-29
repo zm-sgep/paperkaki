@@ -36,6 +36,11 @@ jobs:
       APP_BASE_URL: http://localhost:3000
       DATABASE_URL: postgres://paperkaki:paperkaki_ci_only@localhost:5432/paperkaki
       LOG_LEVEL: info
+      AUTH_PROVIDER: dev
+      AUTH_SECRET: ci-only-auth-secret-not-used-anywhere-else-0123456789
+      # `next build` runs with NODE_ENV=production, which normally refuses the dev sign-in adapter.
+      E2E_ALLOW_DEV_AUTH: "true"
+      STORAGE_SIGNING_SECRET: ci-only-storage-signing-secret-0123456789abcdef
 
     steps:
       - uses: actions/checkout@v4

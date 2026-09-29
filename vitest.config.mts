@@ -8,6 +8,11 @@ const testEnv = {
   APP_BASE_URL: "http://localhost:3000",
   DATABASE_URL: "pglite://memory",
   LOG_LEVEL: "silent",
+  AUTH_PROVIDER: "dev",
+  AUTH_SECRET: "test-only-auth-secret-0123456789abcdef",
+  DEV_ADMIN_EMAILS: "admin@example.test",
+  STORAGE_LOCAL_DIR: "./.data/test-storage",
+  STORAGE_SIGNING_SECRET: "test-only-storage-signing-secret-0123456789",
 };
 
 const alias = { "@": path.resolve(import.meta.dirname, "src") };

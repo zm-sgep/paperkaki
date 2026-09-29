@@ -11,19 +11,14 @@ test("an unknown page explains itself, offers one action and shows a reference",
   await expect(page.getByText(/at .*\.(ts|js)/)).toHaveCount(0);
 });
 
-test("the not-found action leads back to the home page", async ({ page }) => {
+test("the not-found action leads back to PaperKaki (sign-in when signed out)", async ({ page }) => {
   await page.goto("/this-page-does-not-exist");
   await page.getByRole("link", { name: "Go to PaperKaki" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "PaperKaki" })).toBeVisible();
-});
-
-test("the home page has no buttons or links yet", async ({ page }) => {
-  await page.goto("/");
-  await expect(page.getByRole("link")).toHaveCount(0);
-  await expect(page.getByRole("button")).toHaveCount(0);
+  await expect(page).toHaveURL(/\/sign-in$/);
+  await expect(page.getByRole("heading", { level: 1, name: "Sign in" })).toBeVisible();
 });
 
 test("an incoming request ID is kept", async ({ request }) => {
-  const response = await request.get("/", { headers: { "x-request-id": "test-request-0001" } });
+  const response = await request.get("/sign-in", { headers: { "x-request-id": "test-request-0001" } });
   expect(response.headers()["x-request-id"]).toBe("test-request-0001");
 });

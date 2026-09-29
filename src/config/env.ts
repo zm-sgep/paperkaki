@@ -22,6 +22,15 @@ export const LOG_LEVELS = [
   "silent",
 ] as const;
 
+export const AUTH_PROVIDERS = ["dev"] as const;
+
+const MIN_SECRET_LENGTH = 32;
+
+const secret = () =>
+  z
+    .string({ error: "is required" })
+    .min(MIN_SECRET_LENGTH, { error: `must be at least ${MIN_SECRET_LENGTH} characters` });
+
 const envSchema = z.object({
   NODE_ENV: z
     .enum(["development", "test", "production"], {
@@ -39,6 +48,37 @@ const envSchema = z.object({
   LOG_LEVEL: z
     .enum(LOG_LEVELS, { error: `must be one of: ${LOG_LEVELS.join(", ")}` })
     .default("info"),
+  AUTH_PROVIDER: z
+    .enum(AUTH_PROVIDERS, { error: `must be one of: ${AUTH_PROVIDERS.join(", ")}` })
+    .default("dev"),
+  AUTH_SECRET: secret(),
+  /** Comma-separated emails that receive the admin role at sign-in. Dev adapter only. */
+  DEV_ADMIN_EMAILS: z.string().optional(),
+  /**
+   * Escape hatch for automated browser tests and CI, which run the production build
+   * (`next build`, `next start`) with the dev sign-in adapter. Never set it in a deployed
+   * environment.
+   */
+  E2E_ALLOW_DEV_AUTH: z.enum(["true", "false"]).optional(),
+  /** Where the local storage adapter keeps private files. Git-ignored. */
+  STORAGE_LOCAL_DIR: z.string().min(1).default("./.data/storage"),
+  /** Signs file URLs (HMAC-SHA256). Separate from AUTH_SECRET so either can be rotated alone. */
+  STORAGE_SIGNING_SECRET: secret(),
+});
+
+const envRules = envSchema.superRefine((value, context) => {
+  if (
+    value.NODE_ENV === "production" &&
+    value.AUTH_PROVIDER === "dev" &&
+    value.E2E_ALLOW_DEV_AUTH !== "true"
+  ) {
+    context.addIssue({
+      code: "custom",
+      path: ["AUTH_PROVIDER"],
+      message:
+        "the dev sign-in adapter is not allowed when NODE_ENV=production; a managed provider is needed before deployment (ADR-0010)",
+    });
+  }
 });
 
 export type Env = z.infer<typeof envSchema>;
@@ -84,7 +124,7 @@ export function parseEnv(source: Record<string, string | undefined>): Env {
     cleaned[key] = value === "" ? undefined : value;
   }
 
-  const result = envSchema.safeParse(cleaned);
+  const result = envRules.safeParse(cleaned);
   if (result.success) {
     return result.data;
   }

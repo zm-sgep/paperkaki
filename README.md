@@ -52,7 +52,7 @@ Apply the database migrations (creates `.data/dev` on first run):
 npm run db:migrate
 ```
 
-Open http://localhost:3000. Environment variables are validated when Next.js loads its config (`src/config/env.ts`); a missing or invalid variable stops startup and the error names each one without printing values.
+Open http://localhost:3000 and sign in with any email address (development sign-in, no password; emails in `DEV_ADMIN_EMAILS` get the admin area at `/admin`). Environment variables are validated when Next.js loads its config (`src/config/env.ts`); a missing or invalid variable stops startup and the error names each one without printing values.
 
 ## Checks
 
