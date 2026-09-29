@@ -7,21 +7,21 @@ export const NOW = new Date("2026-09-29T02:00:00Z");
 export const DATE_OK = "2026-10-14";
 
 /**
- * A new WA2 with the topics whose parent label starts with each prefix ("Fractions", "Whole"),
+ * A new WA2 (or the type given) with the topics whose parent label starts with each prefix ("Fractions", "Whole"),
  * scope confirmed and a blueprint stored: everything a mock needs. Returns the assessment id.
  */
 export async function confirmedAssessment(
   db: Database,
   parentProfileId: string,
   topicPrefixes: readonly string[],
-  options: { childId?: string; nickname?: string } = {},
+  options: { childId?: string; nickname?: string; type?: string } = {},
 ): Promise<{ assessmentId: string; childId: string; topicIds: string[] }> {
   const context = { db, now: NOW };
   const assessment = await createAssessment(
     parentProfileId,
     options.childId
-      ? { childId: options.childId, type: "wa2", date: DATE_OK }
-      : { newChildNickname: options.nickname ?? "Test Child A", type: "wa2", date: DATE_OK },
+      ? { childId: options.childId, type: options.type ?? "wa2", date: DATE_OK }
+      : { newChildNickname: options.nickname ?? "Test Child A", type: options.type ?? "wa2", date: DATE_OK },
     context,
   );
   const setup = await getScopeSetup(parentProfileId, assessment.id, context);

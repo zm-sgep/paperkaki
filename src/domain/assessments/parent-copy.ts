@@ -1,3 +1,4 @@
+import { ASSESSMENT_TYPE_LABEL, type AssessmentType } from "./assessment-types";
 import { bookletOf, formatTotalMarks, type PaperFormat, type SectionKind } from "./paper-format";
 import type { FormatChoiceId } from "./paper-format-presets";
 
@@ -59,6 +60,27 @@ const KIND_COUNT_TEXT: Record<SectionKind, string> = {
 /** "6 multiple choice · 16 short answer · 4 word problems". */
 export function formatKindsText(format: PaperFormat): string {
   return format.sections.map((section) => `${section.questionCount} ${KIND_COUNT_TEXT[section.kind]}`).join(" · ");
+}
+
+/** The kind of assessment as it reads in "future ... papers": "WA2", "end-of-year exam", "class test", or the parent's own name. */
+export function assessmentTypeInPapers(type: AssessmentType, name: string): string {
+  switch (type) {
+    case "wa1":
+    case "wa2":
+    case "wa3":
+      return ASSESSMENT_TYPE_LABEL[type];
+    case "end_of_year":
+      return "end-of-year exam";
+    case "class_test":
+      return "class test";
+    case "other":
+      return name;
+  }
+}
+
+/** "Use this format for Darius's future WA2 papers" */
+export function futureFormatLabel(childNickname: string, type: AssessmentType, name: string): string {
+  return `Use this format for ${childNickname}'s future ${assessmentTypeInPapers(type, name)} papers`;
 }
 
 /** The wording of a ready-made format choice on the "Customise paper" panel. */

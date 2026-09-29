@@ -143,6 +143,9 @@ export function paperFormatChoices(input: {
   for (const choice of all) {
     if (!unique.some((kept) => sameFormat(kept.format, choice.format))) unique.push(choice);
   }
-  const ordered = [...unique.filter((c) => c.id === first.choice), ...unique.filter((c) => c.id !== first.choice)];
+  // The recommended choice first, then the preset that fits the kind of assessment, then the rest.
+  const fitting: FormatChoiceId = input.assessmentType === "end_of_year" ? "p3_end_of_year_common" : "standard";
+  const rank = (choice: FormatChoice): number => (choice.id === first.choice ? 0 : choice.id === fitting ? 1 : 2);
+  const ordered = [...unique].sort((a, b) => rank(a) - rank(b));
   return ordered.map((choice, index) => ({ ...choice, recommended: index === 0 }));
 }

@@ -5,7 +5,11 @@ import {
   contextLine,
   countdownText,
   formatAssessmentDate,
+  formatChoiceTitle,
+  formatKindsText,
+  futureFormatLabel,
   todayInSingapore,
+  type FormatSection,
   type PaperSettings,
 } from "@/domain/assessments";
 import type { Database } from "@/repositories/postgres/client";
@@ -101,6 +105,29 @@ export async function getScopeSetup(parentProfileId: string, assessmentId: strin
   };
 }
 
+export type PaperFormatChoiceView = {
+  /** "standard", "p3_end_of_year_common", "p3_weighted_common" or "saved". Never shown to the parent. */
+  id: string;
+  /** "Common Primary 3 end-of-year format (Sections A, B, C · 50 marks · 1 h 30 min)" */
+  title: string;
+  /** "6 multiple choice · 16 short answer · 4 word problems" */
+  hint: string;
+  recommended: boolean;
+};
+
+/** What the "Paper format" choice on the Customise paper panel needs. */
+export type PaperFormatSetup = {
+  choices: PaperFormatChoiceView[];
+  /** The choice in force, or "custom" when the parent matched their school's paper. */
+  selected: string;
+  /** The parts and time in force: where "Match my school's paper" starts from. */
+  current: { durationMinutes: number; parts: FormatSection[] };
+  /** "Use this format for Darius's future WA2 papers" */
+  futureLabel: string;
+  /** True for the standard mock, whose marks and time the parent can change directly. */
+  marksAndTimeEditable: boolean;
+};
+
 export type AssessmentSetup = {
   assessment: AssessmentHeader;
   /** "40 marks · 45 min · Sections A, B": the paper format in one line. */
@@ -116,6 +143,7 @@ export type AssessmentSetup = {
   settings: PaperSettings;
   recommended: PaperSettings;
   usingRecommended: boolean;
+  paperFormat: PaperFormatSetup;
   markOptions: number[];
   /** How many questions the preview picked, when it could. Never shown as internal detail. */
   preview: { questionCount: number; totalMarks: number } | null;
@@ -168,6 +196,18 @@ export async function getAssessmentSetup(
     settings: plan.settings,
     recommended: plan.recommended,
     usingRecommended: plan.storedSettingsSource === "recommended",
+    paperFormat: {
+      choices: plan.formatChoices.map((choice) => ({
+        id: choice.id,
+        title: formatChoiceTitle(choice.id, choice.format),
+        hint: formatKindsText(choice.format),
+        recommended: choice.recommended,
+      })),
+      selected: plan.selectedChoice,
+      current: { durationMinutes: plan.format.durationMinutes, parts: plan.format.sections.map((section) => ({ ...section })) },
+      futureLabel: futureFormatLabel(assessment.childNickname, assessment.assessmentType, assessment.name),
+      marksAndTimeEditable: plan.selectedChoice === "standard",
+    },
     markOptions: allowedTotalMarks(),
     preview: selection ? { questionCount: selection.selection.length, totalMarks: selection.report.totalMarks } : null,
     inventory: plan.inventory,

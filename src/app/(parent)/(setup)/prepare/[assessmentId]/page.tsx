@@ -34,7 +34,10 @@ export default async function AssessmentPage({ params }: { params: Promise<{ ass
       <PageHeader title={latest ? "Your mocks" : "Your mock is ready to create"} />
 
       <Card className="flex flex-col gap-3">
-        <p className="text-xl font-semibold text-ink">{setup.summary}</p>
+        <div className="flex flex-col gap-1">
+          <p className="text-xl font-semibold text-ink">{setup.summary}</p>
+          {setup.topicsLine ? <p className="text-lg text-ink">{setup.topicsLine}</p> : null}
+        </div>
         <p className="text-lg text-ink-soft">Each mock uses a new set of questions from the topics you chose.</p>
       </Card>
 
@@ -103,6 +106,7 @@ export default async function AssessmentPage({ params }: { params: Promise<{ ass
         markOptions={setup.markOptions}
         settings={setup.settings}
         usingRecommended={setup.usingRecommended}
+        paperFormat={setup.paperFormat}
       />
 
       <div>
