@@ -1,0 +1,8165 @@
+[
+ {
+  "familyCode": "P3-NA-MN-F01",
+  "familyTitle": "Add two prices with regrouping",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ben bought a sandwich for $4.65 and a drink for $3.80. How much did he spend altogether? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.45"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "8.55"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8.45"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "9.45"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "4.65+3.80"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line up the decimal points and add. Cents first: 65 + 80 = 145 cents = $1 and 45 cents."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Then dollars: 4 + 3 + 1 = 8. The total is $8.45."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$7.45 comes from forgetting to add the extra $1 from the cents."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F02",
+  "familyTitle": "Subtract a price from a note",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei paid for a toy with a $10 note. The toy cost $3.75. How much change should she get? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.25"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6.25"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "6.75"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.75"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "10-3.75"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change = $10.00 − $3.75."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Count on: $3.75 + 25¢ = $4.00, then $4.00 + $6 = $10.00. So the change is $6 + 25¢ = $6.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$7.75 comes from subtracting only the dollars (10 − 3 = 7) and keeping the 75 cents."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F03",
+  "familyTitle": "Add two amounts in cents",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A pencil costs 85¢ and an eraser costs 70¢. How much do they cost altogether? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2.55"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1.45"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "0.55"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "1.55"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "0.85+0.70"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "85¢ + 70¢ = 155¢."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "100¢ makes $1, so 155¢ = $1 and 55¢ = $1.55."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F04",
+  "familyTitle": "Change from twenty dollars",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Rahman bought a book for $6.90 and a notebook for $8.45. He paid with a $20 note. How much change did he get? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.65"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5.65"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.55"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "13.10"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "20-(6.90+8.45)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Total cost = $6.90 + $8.45 = $15.35."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Change = $20.00 − $15.35 = $4.65."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$13.10 is only $20 − $6.90. It forgets the notebook."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F05",
+  "familyTitle": "How much more",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A jacket costs $12.40. A shirt costs $8.95. How much more does the jacket cost than the shirt? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.55"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.55"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.45"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.45"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "12.40-8.95"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find the difference: $12.40 − $8.95."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$8.95 + 5¢ = $9.00; $9.00 + $3.40 = $12.40. So the difference is 5¢ + $3.40 = $3.45."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A common mistake is to subtract the smaller digit from the larger digit in each column, which gives $4.55."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F06",
+  "familyTitle": "Total of three prices",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At a school bookshop, a ruler costs $2.35, a glue stick costs $4.50 and a pack of pencils costs $1.95. What is the total cost of the three items? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "8.70"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "8.80"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "9.80"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.80"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "2.35+4.50+1.95"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$2.35 + $4.50 = $6.85."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$6.85 + $1.95 = $8.80 (85¢ + 95¢ = 180¢, which is $1 and 80¢)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The total cost is $8.80."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F07",
+  "familyTitle": "Add two prices",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ben bought a bowl of noodles for $5.60 and a drink for $2.75. How much did he spend altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8.35",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "5.60+2.75"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$5.60 + $2.75: add cents first, 60¢ + 75¢ = 135¢ = $1.35."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Then dollars: 5 + 2 + 1 = 8. Answer: $8.35."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F08",
+  "familyTitle": "Subtract from whole dollars",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Lina had $9.00. She spent $4.35 on a storybook. How much money did she have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4.65",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "9.00-4.35"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$9.00 − $4.35: $4.35 + 65¢ = $5.00, and $5.00 + $4 = $9.00."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So she had 65¢ + $4 = $4.65 left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F09",
+  "familyTitle": "Add two cent amounts",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A ruler costs 95¢ and an eraser costs 65¢. How much do they cost altogether? Give your answer in dollars."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1.60",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "0.95+0.65"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "95¢ + 65¢ = 160¢."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "160¢ = $1 and 60¢ = $1.60."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F10",
+  "familyTitle": "Cents taken from dollars",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Aisha had $3.10. She bought a bun for 85¢. How much money did she have left? Give your answer in dollars."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2.25",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "3.10-0.85"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "85¢ = $0.85, so $3.10 − $0.85."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$0.85 + 15¢ = $1.00, and $1.00 + $2.10 = $3.10. So she has 15¢ + $2.10 = $2.25 left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F11",
+  "familyTitle": "Groceries and change",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Tan bought rice for $8.90 and fish for $12.45. She paid with a $50 note. How much change did she receive?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "28.65",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "50-(8.90+12.45)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Total spent = $8.90 + $12.45 = $21.35."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Change = $50.00 − $21.35 = $28.65."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the total spent, $21.35"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F12",
+  "familyTitle": "Less money than",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ravi has $15.60. Mei has $4.85 less than Ravi. How much money do they have altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "26.35",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "15.60+(15.60-4.85)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Mei's money = $15.60 − $4.85 = $10.75."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Together = $15.60 + $10.75 = $26.35."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Mei's money, $10.75"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the two amounts correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F13",
+  "familyTitle": "How much more is needed",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A toy costs $17.35. Sam has $9.80. How much more money does he need to buy the toy?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7.55",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "17.35-9.80"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Money needed = $17.35 − $9.80."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$17.35 − $9 = $8.35, then $8.35 − 80¢ = $7.55."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Sets up $17.35 − $9.80"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F14",
+  "familyTitle": "Three months of savings",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Zara saved $12.50 in January, $8.75 in February and $10.30 in March. How much did she save in the three months?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "31.55",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "12.50+8.75+10.30"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$12.50 + $8.75 = $21.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$21.25 + $10.30 = $31.55."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds two of the amounts correctly"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the third amount correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F15",
+  "familyTitle": "Missing amount",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "$"
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " + $6.45 = $10.20"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number goes in the box?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3.75",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "10.20-6.45"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The missing amount = $10.20 − $6.45."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$6.45 + 55¢ = $7.00, and $7.00 + $3.20 = $10.20. So it is 55¢ + $3.20 = $3.75."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F16",
+  "familyTitle": "Spend then receive",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jia Hui had $30. She spent $9.45 on a book. Her aunt then gave her $5.00. How much money does Jia Hui have now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "25.55",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "30-9.45+5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: After buying the book: $30.00 − $9.45 = $20.55."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: After her aunt's gift: $20.55 + $5.00 = $25.55."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds $20.55"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds $5.00 correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F17",
+  "familyTitle": "Who has more and by how much",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Anna and Ben have $25.00 altogether. Anna has $13.65. How much more money does Anna have than Ben?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2.30",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "13.65-(25.00-13.65)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Ben's money = $25.00 − $13.65 = $11.35."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Difference = $13.65 − $11.35 = $2.30."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Ben's money, $11.35"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to find the difference"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F18",
+  "familyTitle": "Mixed dollars and cents",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A pencil costs 65¢, an eraser costs 40¢ and a ruler costs $1.20. What is the total cost of the three items? Give your answer in dollars."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2.25",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "0.65+0.40+1.20"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Write every price in dollars: 65¢ = $0.65 and 40¢ = $0.40."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$0.65 + $0.40 + $1.20 = $2.25."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes all prices in the same unit"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F19",
+  "familyTitle": "Answer in cents",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shu Min had $2.00. She bought a sticker for 75¢ and a pencil for 45¢. How much money did she have left? Give your answer in cents."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "80"
+  },
+  "verification": {
+   "expression": "200-75-45"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$2.00 = 200¢."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Spent: 75¢ + 45¢ = 120¢."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Left: 200¢ − 120¢ = 80¢."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the amount spent, 120¢"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MN-F20",
+  "familyTitle": "Clothes and money left",
+  "primaryOutcomeCode": "P3-NA-MN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Kumar had $60.00. He bought a shirt for $23.40 and trousers for $31.85. How much money did he have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4.75",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "60-(23.40+31.85)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Total spent = $23.40 + $31.85 = $55.25."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Money left = $60.00 − $55.25 = $4.75."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the total spent, $55.25"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F19",
+  "familyTitle": "Best unit for a short time",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the most suitable unit to measure the time taken to clap your hands 10 times?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "hours"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "seconds"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "days"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "minutes"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Clapping 10 times takes only a few moments, so we use the smallest of these units, seconds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Minutes, hours and days are too long for such a short activity."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F20",
+  "familyTitle": "Minutes and seconds to seconds",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 min 30 s = "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " s"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "150"
+  },
+  "verification": {
+   "expression": "2*60+30"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 minute = 60 seconds, so 2 minutes = 2 × 60 = 120 seconds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "120 s + 30 s = 150 s."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F21",
+  "familyTitle": "Seconds to minutes",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many minutes are there in 240 seconds?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4",
+   "unit": "min"
+  },
+  "verification": {
+   "expression": "240/60"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "60 seconds make 1 minute."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "240 ÷ 60 = 4, so 240 seconds = 4 minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F22",
+  "familyTitle": "Seconds to minutes and seconds",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write 150 seconds in minutes and seconds."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "2 min 30 s",
+    "2 min 30 sec",
+    "2 minutes 30 seconds",
+    "2 minutes and 30 seconds",
+    "2 min 30s",
+    "2min 30s",
+    "2 min and 30 s"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "150 = 120 + 30, and 120 seconds = 2 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 150 seconds = 2 minutes 30 seconds."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F23",
+  "familyTitle": "1 min 45 s in seconds",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "1 min 45 s is the same as how many seconds?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "145"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "165"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "45"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "105"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "60+45"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 minute = 60 seconds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "60 s + 45 s = 105 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "145 comes from writing '1' and '45' side by side. Remember 1 minute is 60 seconds, not 100 seconds."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F24",
+  "familyTitle": "Longest time",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the longest time?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1 min 30 s"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "95 s"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 min"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "100 s"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change every time to seconds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 min 30 s = 90 s, 95 s stays as it is, 2 min = 120 s and 100 s stays as it is."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "120 s is the greatest, so 2 min is the longest."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F25",
+  "familyTitle": "Slower by seconds",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei ran round the field in 1 min 12 s. Ali took 15 s longer than Mei. How long did Ali take? Give your answer in seconds."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "87"
+  },
+  "verification": {
+   "expression": "60+12+15"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mei's time = 1 min 12 s = 60 + 12 = 72 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ali's time = 72 s + 15 s = 87 s."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 1 min 12 s to 72 s"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F26",
+  "familyTitle": "Song played twice",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 160,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A song lasts 3 min 40 s. Kai plays the song 2 times without any break. How long does he spend listening to the song? Give your answer in seconds."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "440"
+  },
+  "verification": {
+   "expression": "(3*60+40)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 3 min 40 s = 3 × 60 + 40 = 220 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: 2 times = 220 × 2 = 440 s."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 3 min 40 s to 220 s"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by 2"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F27",
+  "familyTitle": "Relay team total time",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Three swimmers took part in a relay. Their times were 48 s, 52 s and 1 min 5 s. What was the total time of the team? Give your answer in seconds."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "165"
+  },
+  "verification": {
+   "expression": "48+52+(60+5)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: 1 min 5 s = 60 + 5 = 65 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: 48 + 52 + 65 = 165 s."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 1 min 5 s to 65 s"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the three times"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F28",
+  "familyTitle": "12-hour to 24-hour, afternoon",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write 4.30 p.m. using the 24-hour clock."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "1630 h",
+    "1630h",
+    "1630 hours",
+    "1630",
+    "16:30",
+    "16.30",
+    "16:30 h",
+    "16 30 h"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "For times after 12 noon, add 12 to the hour."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 + 12 = 16, so 4.30 p.m. is 1630 h."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F29",
+  "familyTitle": "24-hour to 12-hour, evening",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "1905 h is the same as which of the following times?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5.05 p.m."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.05 p.m."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "9.05 p.m."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "7.50 p.m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "For times after 1200 h, subtract 12 from the hour."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "19 − 12 = 7, so 1905 h is 7.05 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F30",
+  "familyTitle": "24-hour to 12-hour, morning",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write 0645 h as a time in the 12-hour clock. Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "6.45 a.m.",
+    "6.45a.m.",
+    "6.45 am",
+    "6.45am",
+    "6.45 AM",
+    "6.45AM",
+    "6.45 a.m",
+    "6.45a.m",
+    "6:45 a.m.",
+    "6:45a.m.",
+    "6:45 am",
+    "6:45am",
+    "6:45 AM",
+    "6:45AM",
+    "6:45 a.m",
+    "6:45a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Times from 0000 h to 1159 h are in the morning (a.m.)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "0645 h is 6.45 a.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F31",
+  "familyTitle": "Late evening to 24-hour",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write 11.40 p.m. using the 24-hour clock."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "2340 h",
+    "2340h",
+    "2340 hours",
+    "2340",
+    "23:40",
+    "23.40",
+    "23:40 h",
+    "23 40 h"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "11 + 12 = 23, so the hour is 23."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "11.40 p.m. is 2340 h."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F32",
+  "familyTitle": "Train journey in 24-hour time",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A train left the station at 0830 h and arrived at 1115 h. How many minutes did the journey take?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "165",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "2 h 45 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(11*60+15)-(8*60+30)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 0830 h to 1030 h is 2 hours = 120 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 1030 h to 1115 h is 45 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Total: 120 + 45 = 165 minutes, which is 2 h 45 min."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Correct working with hours and minutes"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F33",
+  "familyTitle": "Just after midnight",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "12.20 a.m. is the same as which of the following times?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1220 h"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2020 h"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "0020 h"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "0120 h"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12.20 a.m. is just after midnight, so the hour is 00."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12.20 a.m. is 0020 h. 1220 h is 12.20 p.m. (just after noon)."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F34",
+  "familyTitle": "Film finishing time in 24-hour time",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A film starts at 1855 h and lasts 2 h 20 min. At what time does the film end? Write your answer using the 24-hour clock."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "2115 h",
+    "2115h",
+    "2115 hours",
+    "2115",
+    "21:15",
+    "21.15",
+    "21:15 h",
+    "21 15 h"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1855 h + 2 hours = 2055 h."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2055 h + 20 minutes: 5 minutes to 2100 h, then 15 more minutes = 2115 h."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The film ends at 2115 h."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds 2 hours correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F35",
+  "familyTitle": "Ferry across midnight",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A ferry left at 2345 h and arrived at 0115 h the next day. How many minutes did the ferry journey take?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "90",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "1 h 30 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(24*60+1*60+15)-(23*60+45)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 2345 h to 2400 h (midnight) is 15 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 0000 h to 0115 h is 1 h 15 min = 75 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Total: 15 + 75 = 90 minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 15 minutes to midnight"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds 75 minutes after midnight"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F36",
+  "familyTitle": "Opening hours",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bakery opens at 0700 h and closes at 1900 h. For how many hours is the bakery open?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "26"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "13"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "19-7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hours open = 19 − 7 = 12."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 0700 h to 1900 h is 12 hours (7.00 a.m. to 7.00 p.m.)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "26 is what you get by adding 19 and 7 instead of subtracting."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F37",
+  "familyTitle": "Find the starting time",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A puppet show ended at 4.35 p.m. It lasted 55 minutes. At what time did the show start? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "3.40 p.m.",
+    "3.40p.m.",
+    "3.40 pm",
+    "3.40pm",
+    "3.40 PM",
+    "3.40PM",
+    "3.40 p.m",
+    "3.40p.m",
+    "3:40 p.m.",
+    "3:40p.m.",
+    "3:40 pm",
+    "3:40pm",
+    "3:40 PM",
+    "3:40PM",
+    "3:40 p.m",
+    "3:40p.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go back 35 minutes from 4.35 p.m. to reach 4.00 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "55 − 35 = 20 more minutes back: 4.00 p.m. − 20 min = 3.40 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The show started at 3.40 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Goes back to 4.00 p.m. correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F38",
+  "familyTitle": "Find the finishing time",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A reading class starts at 9.50 a.m. and lasts 45 minutes. At what time does the class end? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "10.35 a.m.",
+    "10.35a.m.",
+    "10.35 am",
+    "10.35am",
+    "10.35 AM",
+    "10.35AM",
+    "10.35 a.m",
+    "10.35a.m",
+    "10:35 a.m.",
+    "10:35a.m.",
+    "10:35 am",
+    "10:35am",
+    "10:35 AM",
+    "10:35AM",
+    "10:35 a.m",
+    "10:35a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9.50 a.m. + 10 minutes = 10.00 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "45 − 10 = 35 minutes left to add: 10.00 a.m. + 35 min = 10.35 a.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F39",
+  "familyTitle": "Duration across noon",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ann's dance practice started at 10.30 a.m. and ended at 1.10 p.m. How many minutes did the practice last?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "160",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "2 h 40 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(13*60+10)-(10*60+30)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "10.30 a.m. to 12.30 p.m. is 2 hours = 120 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12.30 p.m. to 1.10 p.m. is 40 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Total: 120 + 40 = 160 minutes, which is 2 h 40 min."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 120 minutes from 10.30 a.m. to 12.30 p.m."
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F40",
+  "familyTitle": "Starting time given a long duration",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ryan finished his project at 2.15 p.m. He had worked on it for 3 h 40 min. At what time did he start? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "10.35 a.m.",
+    "10.35a.m.",
+    "10.35 am",
+    "10.35am",
+    "10.35 AM",
+    "10.35AM",
+    "10.35 a.m",
+    "10.35a.m",
+    "10:35 a.m.",
+    "10:35a.m.",
+    "10:35 am",
+    "10:35am",
+    "10:35 AM",
+    "10:35AM",
+    "10:35 a.m",
+    "10:35a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go back 3 hours from 2.15 p.m.: 11.15 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go back 40 minutes from 11.15 a.m.: 15 minutes back to 11.00 a.m., then 25 more minutes back to 10.35 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ryan started at 10.35 a.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Goes back 3 hours to 11.15 a.m."
+    },
+    {
+     "marks": 1,
+     "criterion": "Goes back 40 minutes correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F41",
+  "familyTitle": "Duration within the same hour range",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A science club started at 7.25 a.m. and ended at 8.10 a.m. For how many minutes did the club last?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "35"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "55"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "15"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "45"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "(8*60+10)-(7*60+25)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7.25 a.m. to 8.00 a.m. is 35 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8.00 a.m. to 8.10 a.m. is 10 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "35 + 10 = 45 minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F16",
+  "familyTitle": "Mental addition",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Work out 48 + 37 in your head. Write your answer in the box."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "85"
+  },
+  "verification": {
+   "expression": "48+37"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the tens: 40 + 30 = 70. Add the ones: 8 + 7 = 15."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "70 + 15 = 85."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F17",
+  "familyTitle": "Mental subtraction",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Work out 83 − 46 in your head."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "47"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "39"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "37"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "127"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "83-46"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Take away 40 first: 83 − 40 = 43. Then take away 6: 43 − 6 = 37."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "47 comes from 83 − 36; 127 comes from adding instead of subtracting."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F18",
+  "familyTitle": "Missing addend",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "57 + "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " = 91"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number goes in the box?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "34"
+  },
+  "verification": {
+   "expression": "91-57"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The missing number = 91 − 57."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "57 + 3 = 60, 60 + 31 = 91. So the missing number is 3 + 31 = 34."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F19",
+  "familyTitle": "Mental subtraction with regrouping",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Work out 91 − 58 in your head. Write your answer in the box."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "33"
+  },
+  "verification": {
+   "expression": "91-58"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "91 − 58 is the same as 91 − 60 + 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "91 − 60 = 31, then 31 + 2 = 33."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F20",
+  "familyTitle": "Add nearly a hundred-and-a-bit",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Work out 76 + 19 in your head."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "95"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "85"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "105"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "94"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "76+19"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "19 is 1 less than 20. So 76 + 19 = 76 + 20 − 1."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "76 + 20 = 96, and 96 − 1 = 95."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F21",
+  "familyTitle": "Number after adding",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali thinks of a number. When he adds 27 to it, he gets 82. What number did Ali think of?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "55"
+  },
+  "verification": {
+   "expression": "82-27"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Work backwards: the number = 82 − 27."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "82 − 20 = 62, and 62 − 7 = 55."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 55 + 27 = 82."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Uses subtraction 82 − 27"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F22",
+  "familyTitle": "Stickers given away",
+  "primaryOutcomeCode": "P3-NA-AS-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ms Lee had 84 stickers. She gave 39 of them to her class. How many stickers did she have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "45"
+  },
+  "verification": {
+   "expression": "84-39"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "84 − 39 = 84 − 40 + 1."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "84 − 40 = 44, and 44 + 1 = 45."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F18",
+  "familyTitle": "Mental division fact",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 30,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "56 ÷ 7 = "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "56/7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Think of the 7 times table: 7 × 8 = 56."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 56 ÷ 7 = 8."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F19",
+  "familyTitle": "Mental multiplication fact",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 30,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 9 × 6?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "63"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "54"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "45"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "56"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "9*6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 × 6 = 6 × 9 = 54."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 9 × 6 = 10 × 6 − 6 = 60 − 6 = 54."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F20",
+  "familyTitle": "Missing factor",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " × 8 = 72"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9"
+  },
+  "verification": {
+   "expression": "72/8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Think: what number times 8 gives 72? Use 72 ÷ 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 × 9 = 72, so the missing number is 9."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F21",
+  "familyTitle": "Division within tables",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "54 ÷ 6 = "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9"
+  },
+  "verification": {
+   "expression": "54/6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 × 9 = 54, so 54 ÷ 6 = 9."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F22",
+  "familyTitle": "Rows of chairs",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "There are 7 rows of chairs in a hall. Each row has 8 chairs. How many chairs are there in the hall?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "56"
+  },
+  "verification": {
+   "expression": "7*8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Number of chairs = 7 × 8 = 56."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F23",
+  "familyTitle": "Mental division answer",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 48 ÷ 8?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "48/8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 × 6 = 48, so 48 ÷ 8 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "40 comes from subtracting 8 instead of dividing by 8."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F24",
+  "familyTitle": "Share then multiply",
+  "primaryOutcomeCode": "P3-NA-MD-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "72 pencils are packed equally into 8 boxes. How many pencils are there in 3 boxes?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "27"
+  },
+  "verification": {
+   "expression": "72/8*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Pencils in 1 box = 72 ÷ 8 = 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Pencils in 3 boxes = 9 × 3 = 27."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds pencils in 1 box, 9"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F19",
+  "familyTitle": "Simplest form of six ninths",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write "
+      },
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 9
+      },
+      {
+       "t": "text",
+       "v": " in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "2/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "6/9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find a number that divides both 6 and 9. It is 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 ÷ 3 = 2 and 9 ÷ 3 = 3, so "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 and 3 cannot both be divided by any number except 1, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " is in its simplest form."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F20",
+  "familyTitle": "Simplest form of ten twelfths",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write "
+      },
+      {
+       "t": "frac",
+       "n": 10,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "5/6",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "10/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Both 10 and 12 can be divided by 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "10 ÷ 2 = 5 and 12 ÷ 2 = 6, so "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 and 6 have no common factor other than 1, so this is in its simplest form."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F21",
+  "familyTitle": "Simplest form of nine twelfths",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is "
+      },
+      {
+       "t": "frac",
+       "n": 9,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " in its simplest form?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "9/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide 9 and 12 by 3, the greatest number that goes into both."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 ÷ 3 = 3 and 12 ÷ 3 = 4, so "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F22",
+  "familyTitle": "Fraction of a group in simplest form",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "8 out of 12 pupils in a club wear glasses. What fraction of the pupils wear glasses? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "2/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "8/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fraction of pupils who wear glasses is "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide 8 and 12 by 4: "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes 8 out of 12 as a fraction"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F23",
+  "familyTitle": "Common factor to simplify",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "To write "
+      },
+      {
+       "t": "frac",
+       "n": 8,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " in its simplest form, the numerator and the denominator are both divided by the same number. Which number should be used?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "8/2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The simplest form needs the greatest number that divides both 8 and 12."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The factors of 8 are 1, 2, 4, 8. The factors of 12 are 1, 2, 3, 4, 6, 12. The greatest common factor is 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Dividing by 2 gives "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ", which can still be simplified."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F24",
+  "familyTitle": "Twelfths equal to three quarters",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " is equal to "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " twelfths."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9"
+  },
+  "verification": {
+   "expression": "3*12/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominator changes from 4 to 12. 12 ÷ 4 = 3, so multiply by 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 × 3 = 9, so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F25",
+  "familyTitle": "Denominator from a numerator of 10",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " is equal to a fraction with a numerator of 10. What is the denominator of that fraction?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "12"
+  },
+  "verification": {
+   "expression": "10*6/5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numerator changes from 5 to 10. 10 ÷ 5 = 2, so multiply by 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 × 2 = 12, so "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". The denominator is 12."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F26",
+  "familyTitle": "Ninths equal to one third",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " is equal to "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " ninths."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3"
+  },
+  "verification": {
+   "expression": "1*9/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominator changes from 3 to 9. 9 ÷ 3 = 3, so multiply by 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 × 3 = 3, so "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F27",
+  "familyTitle": "Tenths equal to two fifths",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": " is equal to a fraction with a denominator of 10. What is the numerator of that fraction?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "2*10/5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominator changes from 5 to 10, so both numbers are multiplied by 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 × 2 = 4, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 comes from adding 5 to both numbers, which does not keep the fraction equal."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F28",
+  "familyTitle": "Denominator from a numerator of 5",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " is equal to a fraction with a numerator of 5. What is the denominator of that fraction?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "10"
+  },
+  "verification": {
+   "expression": "5*2/1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numerator changes from 1 to 5, so multiply both numbers by 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 × 5 = 10, so "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ". The denominator is 10."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F29",
+  "familyTitle": "Which fraction equals two thirds",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following fractions is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "2/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Multiply the numerator and denominator of "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " by the same number."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 × 2 = 4 and 3 × 2 = 6, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " is wrong because only the denominator was multiplied."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F30",
+  "familyTitle": "Which fraction is not equal to one half",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following fractions is NOT equal to "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 12
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "5/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " (÷ 3), "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " (÷ 4) and "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " (÷ 6)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Half of 12 is 6, not 5, so "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is not equal to "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F31",
+  "familyTitle": "Same amount of pizza",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Aina ate "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " of a pizza. Ben ate "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " of an identical pizza. Who ate more pizza, Aina or Ben? If they ate the same amount, write 'same'."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "same",
+    "Same",
+    "the same",
+    "They ate the same amount",
+    "they ate the same amount",
+    "neither",
+    "Neither"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide 3 and 6 by 3: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the two fractions are equal. Aina and Ben ate the same amount."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F17",
+  "familyTitle": "Count on in hundreds",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Count on in hundreds: 4200, 4300, 4400, "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4500"
+  },
+  "verification": {
+   "expression": "4400+100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Counting on in hundreds means adding 100 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4400 + 100 = 4500."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F18",
+  "familyTitle": "Count on in thousands",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Count on in thousands: 2350, 3350, 4350, ... What is the next number?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4450"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4360"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5350"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "5450"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "4350+1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Counting on in thousands means adding 1000 each time. Only the thousands digit changes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4350 + 1000 = 5350."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F19",
+  "familyTitle": "Count back in hundreds",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Count back in hundreds: 5100, 5000, 4900, "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4800"
+  },
+  "verification": {
+   "expression": "4900-100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Counting back in hundreds means taking away 100 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4900 − 100 = 4800."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F20",
+  "familyTitle": "Count on in hundreds to ten thousand",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Count on in hundreds: 9700, 9800, 9900, "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "10000"
+  },
+  "verification": {
+   "expression": "9900+100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add 100 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9900 + 100 = 10 000. After 9 hundreds comes 10 hundreds, which is 1 thousand more, so 10 000."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F01",
+  "familyTitle": "Which measure covers flat space",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following tells us how much flat space a shape covers?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Perimeter"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mass"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Area"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Height"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area is the amount of flat space that a shape covers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter is the distance around the outside of a shape."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F02",
+  "familyTitle": "Fence around a garden",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Lim wants to put a fence along the edge of her rectangular garden. Which of the following does she need to find?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "The area of the garden"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "The perimeter of the garden"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "The volume of the garden"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "The height of the garden"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A fence goes all the way round the edge, so she needs the distance around the garden."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The distance around a shape is its perimeter."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F03",
+  "familyTitle": "Tiles on a floor",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Tan wants to cover the floor of a room with square tiles. Does he need to find the area or the perimeter of the floor? Write 'area' or 'perimeter'."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "area",
+    "Area",
+    "the area",
+    "The area"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tiles cover the whole flat surface of the floor, so he needs the area."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F04",
+  "familyTitle": "Same area, different perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Rectangle P is 6 cm long and 4 cm wide. Rectangle Q is 8 cm long and 3 cm wide. Which statement is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "P and Q have the same area and the same perimeter."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "P and Q have different areas but the same perimeter."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "P and Q have different areas and different perimeters."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "P and Q have the same area but different perimeters."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of P = 6 × 4 = 24 cm². Area of Q = 8 × 3 = 24 cm². The areas are the same."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of P = (6 + 4) × 2 = 20 cm. Perimeter of Q = (8 + 3) × 2 = 22 cm. The perimeters are different."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F05",
+  "familyTitle": "Area and perimeter are different",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square has sides of 4 cm. Its perimeter is 16 cm and its area is 16 cm². Ali says, 'Perimeter and area are the same thing because both are 16.' Is Ali correct? Write 'yes' or 'no'."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "no",
+    "No",
+    "NO"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter is the distance around the square, measured in cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area is the flat space inside the square, measured in cm². They measure different things, so the units are different even when the numbers match. Ali is not correct."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F06",
+  "familyTitle": "Unit for classroom floor area",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which unit is the most suitable for measuring the area of a classroom floor?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "cm²"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "m"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "cm"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "m²"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A classroom floor is large, so we use a large unit of area, the square metre (m²)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "cm and m are units of length, not area."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F07",
+  "familyTitle": "Unit for stamp area",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which unit is the most suitable for measuring the area of a postage stamp?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "m²"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "cm²"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "m"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "cm"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A stamp is very small, so we use a small unit of area, the square centimetre (cm²)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A square metre (m²) is much too large for a stamp."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F08",
+  "familyTitle": "Rows of square tiles",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is covered exactly with 4 rows of small squares. There are 7 small squares in each row. What is the area of the rectangle in square units?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "28"
+  },
+  "verification": {
+   "expression": "4*7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Number of small squares = 4 × 7 = 28."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each square is 1 square unit, so the area is 28 square units."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F09",
+  "familyTitle": "Unit squares covering a card",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each small square has an area of 1 cm². Exactly 45 of these small squares cover a card. What is the area of the card in cm²?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "45"
+  },
+  "verification": {
+   "expression": "45*1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each small square is 1 cm², so 45 squares are 45 × 1 = 45 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F10",
+  "familyTitle": "Sensible area of an exercise book",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the most sensible area for the cover of a school exercise book?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "600 cm²"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6 cm²"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "600 m²"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6 m²"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "An exercise book cover is about 20 cm by 30 cm, so its area is about 600 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "600 m² is the size of a large playground and 6 cm² is smaller than a stamp."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F11",
+  "familyTitle": "Card with a corner cut off",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular card is 10 cm long and 8 cm wide. A smaller rectangle 6 cm long and 3 cm wide is cut away from one corner of the card, so the card is now L-shaped. What is the perimeter of the L-shaped card?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "36",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "(10+8)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Cutting a rectangle out of a corner does not change the total length of the outside edge."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The new edge is made of a 6 cm side and a 3 cm side, which replace 6 cm + 3 cm of the old edge."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the perimeter is the same as the original rectangle: (10 + 8) × 2 = 36 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Realises the perimeter is unchanged, or adds all six sides"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F12",
+  "familyTitle": "Perimeter from all six sides",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectilinear figure has 6 straight sides. Going round the figure, the sides measure 8 cm, 5 cm, 3 cm, 4 cm, 5 cm and 9 cm. What is the perimeter of the figure?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "34",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "8+5+3+4+5+9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is the total length of all the sides."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 + 5 + 3 + 4 + 5 + 9 = 34 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the sides with at most one slip"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F13",
+  "familyTitle": "Walk around an L-shaped playground",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kim walked once round the edge of an L-shaped playground. Going round, the sides measure 12 m, 5 m, 4 m, 3 m, 8 m and 8 m. How far did Kim walk? Give your answer in metres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "32"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "36"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "44"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "12+5+4+3+8+8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The distance round the edge is the sum of all six sides."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 + 5 + 4 + 3 + 8 + 8 = 40 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "32 is what you get if one 8 m side is left out."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F14",
+  "familyTitle": "Square and rectangle joined",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square of side 6 cm and a rectangle 6 cm long and 3 cm wide are joined along a 6 cm side to make one bigger rectangle. What is the perimeter of the bigger rectangle?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "30",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "(6+6+3)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: The joined 6 cm sides disappear inside. The bigger rectangle is 6 cm + 3 cm = 9 cm long and 6 cm wide."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Perimeter = (9 + 6) × 2 = 30 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length or width of the bigger rectangle"
+    },
+    {
+     "marks": 1,
+     "criterion": "Uses the perimeter formula correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F15",
+  "familyTitle": "Perimeter of a rectangle",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is 12 cm long and 7 cm wide. What is its perimeter?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "38",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "(12+7)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 2 × (length + width)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "(12 + 7) × 2 = 19 × 2 = 38 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F16",
+  "familyTitle": "Perimeter of a hall floor",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular hall floor is 15 m long and 9 m wide. What is its perimeter? Give your answer in metres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "48"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "39"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "135"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "(15+9)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = (15 + 9) × 2 = 24 × 2 = 48 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "24 is only half the perimeter, 39 leaves out one side and 135 is the area."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F17",
+  "familyTitle": "Walk once round a garden",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular garden is 25 m long and 14 m wide. Farid walks once round the edge of the garden. How far does he walk?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "78",
+   "unit": "m"
+  },
+  "verification": {
+   "expression": "(25+14)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Distance = perimeter of the garden."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "(25 + 14) × 2 = 39 × 2 = 78 m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds length and width, 39 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F18",
+  "familyTitle": "Find the width from the perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle has a perimeter of 46 cm. Its length is 15 cm. What is its width?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "46/2-15"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Length + width = 46 ÷ 2 = 23 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Width = 23 − 15 = 8 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: (15 + 8) × 2 = 46."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds length + width = 23 cm"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the length"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F19",
+  "familyTitle": "Length is three times the width",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The width of a rectangle is 6 cm. Its length is 3 times its width. What is the perimeter of the rectangle?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "48",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "(6*3+6)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Length = 3 × 6 = 18 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Perimeter = (18 + 6) × 2 = 48 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length, 18 cm"
+    },
+    {
+     "marks": 1,
+     "criterion": "Uses the perimeter formula correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F20",
+  "familyTitle": "Perimeter of a square",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square has sides of 9 cm. What is its perimeter?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "36",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "9*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A square has 4 equal sides."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 4 × 9 = 36 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F21",
+  "familyTitle": "Perimeter of a square table",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square courtyard has sides of 11 m. What is its perimeter? Give your answer in metres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "22"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "121"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "44"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "33"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "11*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 4 × 11 = 44 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "121 is the area (11 × 11), and 22 is only two sides."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F22",
+  "familyTitle": "Wire bent into a square",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A wire 80 cm long is bent to make a square. What is the length of each side of the square?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "20",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "80/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The wire forms the perimeter of the square: 80 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A square has 4 equal sides, so each side = 80 ÷ 4 = 20 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Divides by 4"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F23",
+  "familyTitle": "Ribbon round a photo frame",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square photo frame has sides of 15 cm. Wei Ling glues a ribbon along all four edges of the frame. She also needs 5 cm of extra ribbon for a bow. What is the total length of ribbon she needs?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "65",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "15*4+5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Ribbon round the edges = 4 × 15 = 60 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Add the bow: 60 + 5 = 65 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the perimeter, 60 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F24",
+  "familyTitle": "Two squares compared",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Square X has a perimeter of 24 cm. The sides of Square Y are 3 cm longer than the sides of Square X. What is the perimeter of Square Y?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "36",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "(24/4+3)*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Side of X = 24 ÷ 4 = 6 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Side of Y = 6 + 3 = 9 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Perimeter of Y = 4 × 9 = 36 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the side of X"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the side of Y"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F25",
+  "familyTitle": "Area of a rectangle",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is 8 cm long and 5 cm wide. What is its area? Give your answer in cm²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "40"
+  },
+  "verification": {
+   "expression": "8*5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = length × width."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 × 5 = 40, so the area is 40 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F26",
+  "familyTitle": "Area of a square",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square has sides of 7 cm. What is its area? Give your answer in cm²."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "28"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "14"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "77"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "49"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "7*7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of a square = side × side = 7 × 7 = 49 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "28 is the perimeter and 14 is 7 + 7."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F27",
+  "familyTitle": "Area of a classroom floor",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The floor of a room is 6 m long and 4 m wide. What is the area of the floor? Give your answer in m²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "24"
+  },
+  "verification": {
+   "expression": "6*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = length × width = 6 × 4 = 24."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The area of the floor is 24 m²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Multiplies length and width"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F28",
+  "familyTitle": "Find the length from the area",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 160,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle has an area of 54 cm². Its width is 6 cm. What is its length?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "54/6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = length × width, so length = area ÷ width."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "54 ÷ 6 = 9, so the length is 9 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 9 × 6 = 54."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Divides the area by the width"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F29",
+  "familyTitle": "Field with a pond",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular field is 30 m long and 20 m wide. A square pond with sides of 5 m is in the field. The rest of the field is covered with grass. What is the area of the grass? Give your answer in m²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "575"
+  },
+  "verification": {
+   "expression": "30*20-5*5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Area of the field = 30 × 20 = 600 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Area of the pond = 5 × 5 = 25 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Area of grass = 600 − 25 = 575 m²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the area of the field"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the area of the pond"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-F30",
+  "familyTitle": "Compare a rectangle and a square",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Rectangle A is 10 cm long and 3 cm wide. Square B has sides of 6 cm. Which shape has the greater area?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Rectangle A"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Square B"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "They have the same area"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "It cannot be found"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of Rectangle A = 10 × 3 = 30 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of Square B = 6 × 6 = 36 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "36 is greater than 30, so Square B has the greater area."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ }
+]

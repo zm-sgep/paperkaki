@@ -1,0 +1,555 @@
+{
+  "curriculumVersion": {
+    "code": "SG-MOE-PRI-MATH-2021-UPD-2025-10",
+    "subject": "Mathematics",
+    "title": "Mathematics Syllabus Primary One to Six (2021 cohort), updated October 2025",
+    "levels": [
+      "P3"
+    ],
+    "effectiveFrom": "2025-10-01",
+    "status": "draft"
+  },
+  "sources": [
+    {
+      "id": "src-moe-pri-math-2021-upd-2025-10",
+      "title": "Mathematics Syllabus Primary One to Six (Implementation starting with 2021 Primary One Cohort), Updated: Oct 2025",
+      "publisher": "Ministry of Education, Singapore",
+      "url": "https://www.moe.gov.sg/api/media/92bff26d-b2b4-4535-b868-b8415c744b91/2021-Primary-Mathematics-Syllabus-P1-to-P6-Updated-October-2025.pdf",
+      "provenance": "official_moe",
+      "accessed": "2026-09-29",
+      "verification": "unverified",
+      "notes": "PDF of 50 pages, sha256 e8f77fe10d768e2ad5266dfc39a8821674be7eb1c81bc545ba4b841b12ae70e1. Primary 3 content is in Section 5 on printed pages 35 (Number and Algebra) and 36 (Measurement and Geometry; Statistics); printed 'Page | N' equals the PDF page index for this file. Outcome statements are the syllabus wording for Primary 3, extracted by software (PyMuPDF) and cross-checked against page images of pp. 35-36 by the drafter; a human must still check every statement against the PDF before sign-off. Wording is verbatim (case and punctuation as printed, superscripts written as cm² and m²). Where the syllabus lists bullets under a lead-in (e.g. 'measuring' then 'length in kilometres (km)'), the statement joins lead-in and bullet with unchanged words. A compound bullet is split into separate outcomes only where it contains separately quotable parts (right angles / angles greater than/smaller than a right angle; perimeter bullets). Codes of earlier-draft outcomes are kept where the content clearly corresponds and are never reused for different content; retired codes are listed in curriculum-diff.md. The topic 'notes' field quotes syllabus wording that limits scope. The syllabus lists no separate Primary 3 word-problem or problem-solving content item."
+    }
+  ],
+  "domains": [
+    {
+      "code": "P3-NA",
+      "title": "Number and Algebra",
+      "topics": [
+        {
+          "code": "P3-NA-WN",
+          "title": "Numbers up to 10 000",
+          "parentLabel": "Whole numbers to 10 000",
+          "sortOrder": 1,
+          "notes": [
+            "Sub-strand: \"WHOLE NUMBERS\"; heading: \"1. Numbers up to 10 000\" (p. 35)"
+          ],
+          "outcomes": [
+            {
+              "code": "P3-NA-WN-01",
+              "statement": "counting in hundreds/thousands",
+              "childLabel": "Count in 100s and 1000s",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 1. Numbers up to 10 000, 1.1"
+              }
+            },
+            {
+              "code": "P3-NA-WN-02",
+              "statement": "number notation, representations and place values (thousands, hundreds, tens, ones)",
+              "childLabel": "Place value",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 1. Numbers up to 10 000, 1.2"
+              }
+            },
+            {
+              "code": "P3-NA-WN-03",
+              "statement": "reading and writing numbers in numerals and in words",
+              "childLabel": "Numbers in words",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 1. Numbers up to 10 000, 1.3"
+              }
+            },
+            {
+              "code": "P3-NA-WN-04",
+              "statement": "comparing and ordering numbers",
+              "childLabel": "Compare and order numbers",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 1. Numbers up to 10 000, 1.4"
+              }
+            },
+            {
+              "code": "P3-NA-WN-06",
+              "statement": "patterns in number sequences",
+              "childLabel": "Number patterns",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 1. Numbers up to 10 000, 1.5"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-NA-AS",
+          "title": "Addition and Subtraction",
+          "parentLabel": "Adding and subtracting bigger numbers",
+          "sortOrder": 2,
+          "notes": [
+            "Sub-strand: \"WHOLE NUMBERS\"; heading: \"2. Addition and Subtraction\" (p. 35)",
+            "Scope limit: \"addition and subtraction algorithms (up to 4 digits)\"",
+            "Scope limit: \"mental calculation involving addition and subtraction of two 2-digit numbers\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-NA-AS-01",
+              "statement": "addition and subtraction algorithms (up to 4 digits)",
+              "childLabel": "Add and subtract big numbers",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 2. Addition and Subtraction, 2.1"
+              }
+            },
+            {
+              "code": "P3-NA-AS-04",
+              "statement": "mental calculation involving addition and subtraction of two 2-digit numbers",
+              "childLabel": "Add and subtract in your head",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 2. Addition and Subtraction, 2.2"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-NA-MD",
+          "title": "Multiplication and Division",
+          "parentLabel": "Times tables, multiplying and dividing",
+          "sortOrder": 3,
+          "notes": [
+            "Sub-strand: \"WHOLE NUMBERS\"; heading: \"3. Multiplication and Division\" (p. 35)",
+            "Scope limit: \"multiplication tables of 6, 7, 8 and 9\"",
+            "Scope limit: \"multiplication and division algorithms (up to 3 digits by 1 digit)\"",
+            "Scope limit: \"mental calculation involving multiplication and division within multiplication tables\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-NA-MD-01",
+              "statement": "multiplication tables of 6, 7, 8 and 9",
+              "childLabel": "Times tables 6 to 9",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 3. Multiplication and Division, 3.1"
+              }
+            },
+            {
+              "code": "P3-NA-MD-02",
+              "statement": "multiplying and dividing within the multiplication tables",
+              "childLabel": "Times tables and division facts",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 3. Multiplication and Division, 3.2"
+              }
+            },
+            {
+              "code": "P3-NA-MD-05",
+              "statement": "division with remainder",
+              "childLabel": "Division with remainder",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 3. Multiplication and Division, 3.3"
+              }
+            },
+            {
+              "code": "P3-NA-MD-03",
+              "statement": "multiplication and division algorithms (up to 3 digits by 1 digit)",
+              "childLabel": "Multiply and divide big numbers",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 3. Multiplication and Division, 3.4"
+              }
+            },
+            {
+              "code": "P3-NA-MD-07",
+              "statement": "mental calculation involving multiplication and division within multiplication tables",
+              "childLabel": "Multiply and divide in your head",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Whole Numbers, 3. Multiplication and Division, 3.5"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-NA-FR",
+          "title": "Fractions",
+          "parentLabel": "Fractions",
+          "sortOrder": 4,
+          "notes": [
+            "Sub-strand: \"FRACTIONS\"; headings: \"1. Equivalent fractions\" and \"2. Addition and Subtraction\" (p. 35)",
+            "Scope limit: \"comparing and ordering unlike fractions with denominators of given fractions not exceeding 12\"",
+            "Scope limit: \"adding and subtracting two related fractions within one whole with denominators of given fractions not exceeding 12\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-NA-FR-01",
+              "statement": "equivalent fractions",
+              "childLabel": "Equal fractions",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Fractions, 1. Equivalent fractions, 1.1"
+              }
+            },
+            {
+              "code": "P3-NA-FR-06",
+              "statement": "expressing a fraction in its simplest form",
+              "childLabel": "Simplest form",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Fractions, 1. Equivalent fractions, 1.2"
+              }
+            },
+            {
+              "code": "P3-NA-FR-02",
+              "statement": "comparing and ordering unlike fractions with denominators of given fractions not exceeding 12",
+              "childLabel": "Compare and order fractions",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Fractions, 1. Equivalent fractions, 1.3"
+              }
+            },
+            {
+              "code": "P3-NA-FR-07",
+              "statement": "writing the equivalent fraction of a fraction given the denominator or the numerator",
+              "childLabel": "Fill in the equal fraction",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Fractions, 1. Equivalent fractions, 1.4"
+              }
+            },
+            {
+              "code": "P3-NA-FR-04",
+              "statement": "adding and subtracting two related fractions within one whole with denominators of given fractions not exceeding 12",
+              "childLabel": "Add and subtract fractions",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Fractions, 2. Addition and Subtraction, 2.1"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-NA-MN",
+          "title": "Money",
+          "parentLabel": "Money in dollars and cents",
+          "sortOrder": 5,
+          "notes": [
+            "Sub-strand: \"MONEY\"; heading: \"1. Money\" (p. 35)"
+          ],
+          "outcomes": [
+            {
+              "code": "P3-NA-MN-01",
+              "statement": "adding and subtracting money in decimal notation",
+              "childLabel": "Add and subtract money",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 35, Primary 3, Number and Algebra, Money, 1. Money, 1.1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "P3-MG",
+      "title": "Measurement and Geometry",
+      "topics": [
+        {
+          "code": "P3-MG-LM",
+          "title": "Length, Mass and Volume",
+          "parentLabel": "Measuring length, weight and liquid amounts",
+          "sortOrder": 1,
+          "notes": [
+            "Sub-strand: \"MEASUREMENT\"; heading: \"1. Length, Mass and Volume\" (p. 36)",
+            "Scope limit: \"(numbers involved should be within easy manipulation)\"",
+            "Conversion pairs listed under 1.3: \"kilometres and metres\"; \"metres and centimetres\"; \"kilograms and grams\"; \"litres and millilitres\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-MG-LM-01",
+              "statement": "measuring length in kilometres (km)",
+              "childLabel": "Kilometres",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Measurement, 1. Length, Mass and Volume, 1.1, first bullet"
+              }
+            },
+            {
+              "code": "P3-MG-LM-02",
+              "statement": "measuring volume of liquid in millilitres (ml)",
+              "childLabel": "Millilitres",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Measurement, 1. Length, Mass and Volume, 1.1, second bullet"
+              }
+            },
+            {
+              "code": "P3-MG-LM-05",
+              "statement": "measuring length/mass/volume (of liquid) in compound units",
+              "childLabel": "Measuring in two units",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Measurement, 1. Length, Mass and Volume, 1.2"
+              }
+            },
+            {
+              "code": "P3-MG-LM-03",
+              "statement": "converting a measurement in compound units to the smaller unit, and vice versa: kilometres and metres; metres and centimetres; kilograms and grams; litres and millilitres",
+              "childLabel": "Convert units",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Measurement, 1. Length, Mass and Volume, 1.3 with its four bullets"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-MG-TM",
+          "title": "Time",
+          "parentLabel": "Time and how long things take",
+          "sortOrder": 2,
+          "notes": [
+            "Sub-strand: \"MEASUREMENT\"; heading: \"2. Time\" (p. 36)"
+          ],
+          "outcomes": [
+            {
+              "code": "P3-MG-TM-03",
+              "statement": "measuring time in seconds",
+              "childLabel": "Seconds",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Measurement, 2. Time, 2.1"
+              }
+            },
+            {
+              "code": "P3-MG-TM-02",
+              "statement": "finding the starting time, finishing time or duration given the other two quantities",
+              "childLabel": "Start, finish and how long",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Measurement, 2. Time, 2.2"
+              }
+            },
+            {
+              "code": "P3-MG-TM-04",
+              "statement": "24-hour clock",
+              "childLabel": "24-hour clock",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Measurement, 2. Time, 2.3"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-MG-AR",
+          "title": "Area and Perimeter",
+          "parentLabel": "Area and perimeter",
+          "sortOrder": 3,
+          "notes": [
+            "Sub-strand: \"AREA AND VOLUME\"; heading: \"1. Area and Perimeter\" (p. 36)",
+            "Scope limit: \"excluding conversion between cm² and m²\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-MG-AR-03",
+              "statement": "concepts of area and perimeter of a plane figure",
+              "childLabel": "What area and perimeter mean",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Area and Volume, 1. Area and Perimeter, 1.1"
+              }
+            },
+            {
+              "code": "P3-MG-AR-01",
+              "statement": "measuring area in square units, cm² and m², excluding conversion between cm² and m²",
+              "childLabel": "Area in square units",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Area and Volume, 1. Area and Perimeter, 1.2"
+              }
+            },
+            {
+              "code": "P3-MG-AR-02",
+              "statement": "perimeter of rectilinear figure",
+              "childLabel": "Perimeter of a rectilinear figure",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Area and Volume, 1. Area and Perimeter, 1.3, first bullet"
+              }
+            },
+            {
+              "code": "P3-MG-AR-05",
+              "statement": "perimeter of rectangle",
+              "childLabel": "Perimeter of a rectangle",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Area and Volume, 1. Area and Perimeter, 1.3, second bullet"
+              }
+            },
+            {
+              "code": "P3-MG-AR-06",
+              "statement": "perimeter of square",
+              "childLabel": "Perimeter of a square",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Area and Volume, 1. Area and Perimeter, 1.3, third bullet"
+              }
+            },
+            {
+              "code": "P3-MG-AR-04",
+              "statement": "area of rectangle/square",
+              "childLabel": "Area of a rectangle or square",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Area and Volume, 1. Area and Perimeter, 1.4"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-MG-AN",
+          "title": "Angles",
+          "parentLabel": "Angles and right angles",
+          "sortOrder": 4,
+          "notes": [
+            "Sub-strand: \"GEOMETRY\"; heading: \"1. Angles\" (p. 36)"
+          ],
+          "outcomes": [
+            {
+              "code": "P3-MG-AN-03",
+              "statement": "concepts of angle",
+              "childLabel": "What an angle is",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Geometry, 1. Angles, 1.1"
+              }
+            },
+            {
+              "code": "P3-MG-AN-01",
+              "statement": "right angles",
+              "childLabel": "Right angles",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Geometry, 1. Angles, 1.2, first part"
+              }
+            },
+            {
+              "code": "P3-MG-AN-02",
+              "statement": "angles greater than/smaller than a right angle",
+              "childLabel": "Bigger or smaller angle",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Geometry, 1. Angles, 1.2, second part"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-MG-PL",
+          "title": "Perpendicular and Parallel Lines",
+          "parentLabel": "Parallel and perpendicular lines",
+          "sortOrder": 5,
+          "notes": [
+            "Sub-strand: \"GEOMETRY\"; heading: \"2. Perpendicular and Parallel Lines\" (p. 36)"
+          ],
+          "outcomes": [
+            {
+              "code": "P3-MG-PL-01",
+              "statement": "perpendicular and parallel lines",
+              "childLabel": "Perpendicular and parallel lines",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Geometry, 2. Perpendicular and Parallel Lines, 2.1"
+              }
+            },
+            {
+              "code": "P3-MG-PL-03",
+              "statement": "drawing perpendicular and parallel lines",
+              "childLabel": "Draw the lines",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Measurement and Geometry, Geometry, 2. Perpendicular and Parallel Lines, 2.2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "P3-ST",
+      "title": "Statistics",
+      "topics": [
+        {
+          "code": "P3-ST-BG",
+          "title": "Bar Graphs",
+          "parentLabel": "Reading bar graphs",
+          "sortOrder": 1,
+          "notes": [
+            "Sub-strand: \"DATA REPRESENTATION AND INTERPRETATION\"; heading: \"1. Bar Graphs\" (p. 36)"
+          ],
+          "outcomes": [
+            {
+              "code": "P3-ST-BG-01",
+              "statement": "reading and interpreting data from bar graphs",
+              "childLabel": "Read a bar graph",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Statistics, Data Representation and Interpretation, 1. Bar Graphs, 1.1"
+              }
+            },
+            {
+              "code": "P3-ST-BG-03",
+              "statement": "using different scales on axis",
+              "childLabel": "Different scales",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-math-2021-upd-2025-10",
+                "pageOrSection": "p. 36, Primary 3, Statistics, Data Representation and Interpretation, 1. Bar Graphs, 1.2"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

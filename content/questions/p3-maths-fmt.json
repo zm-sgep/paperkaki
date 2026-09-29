@@ -144,7 +144,7 @@
  {
   "familyCode": "P3-NA-FR-F02",
   "familyTitle": "Twelfths equal to two thirds",
-  "primaryOutcomeCode": "P3-NA-FR-01",
+  "primaryOutcomeCode": "P3-NA-FR-07",
   "secondaryOutcomeCodes": [],
   "questionType": "number",
   "difficulty": "basic",
@@ -234,7 +234,7 @@
  {
   "familyCode": "P3-NA-FR-F03",
   "familyTitle": "Pizza slices simplest form",
-  "primaryOutcomeCode": "P3-NA-FR-01",
+  "primaryOutcomeCode": "P3-NA-FR-06",
   "secondaryOutcomeCodes": [],
   "questionType": "fraction",
   "difficulty": "standard",
@@ -902,7 +902,7 @@
  {
   "familyCode": "P3-NA-FR-F08",
   "familyTitle": "Order three fractions MCQ",
-  "primaryOutcomeCode": "P3-NA-FR-03",
+  "primaryOutcomeCode": "P3-NA-FR-02",
   "secondaryOutcomeCodes": [],
   "questionType": "mcq",
   "difficulty": "standard",
@@ -1215,7 +1215,7 @@
  {
   "familyCode": "P3-NA-FR-F09",
   "familyTitle": "Third fraction in order",
-  "primaryOutcomeCode": "P3-NA-FR-03",
+  "primaryOutcomeCode": "P3-NA-FR-02",
   "secondaryOutcomeCodes": [],
   "questionType": "fraction",
   "difficulty": "standard",
@@ -1413,7 +1413,7 @@
  {
   "familyCode": "P3-NA-FR-F10",
   "familyTitle": "Fraction between two fractions",
-  "primaryOutcomeCode": "P3-NA-FR-03",
+  "primaryOutcomeCode": "P3-NA-FR-02",
   "secondaryOutcomeCodes": [],
   "questionType": "fraction",
   "difficulty": "challenging",
@@ -2270,7 +2270,7 @@
  {
   "familyCode": "P3-NA-FR-F15",
   "familyTitle": "Subtract related fractions MCQ",
-  "primaryOutcomeCode": "P3-NA-FR-05",
+  "primaryOutcomeCode": "P3-NA-FR-04",
   "secondaryOutcomeCodes": [],
   "questionType": "mcq",
   "difficulty": "standard",
@@ -2453,7 +2453,7 @@
  {
   "familyCode": "P3-NA-FR-F16",
   "familyTitle": "Subtract same denominator",
-  "primaryOutcomeCode": "P3-NA-FR-05",
+  "primaryOutcomeCode": "P3-NA-FR-04",
   "secondaryOutcomeCodes": [],
   "questionType": "fraction",
   "difficulty": "basic",
@@ -2578,7 +2578,7 @@
  {
   "familyCode": "P3-NA-FR-F17",
   "familyTitle": "Orange juice left",
-  "primaryOutcomeCode": "P3-NA-FR-05",
+  "primaryOutcomeCode": "P3-NA-FR-04",
   "secondaryOutcomeCodes": [],
   "questionType": "fraction",
   "difficulty": "standard",
@@ -2770,10 +2770,8 @@
  {
   "familyCode": "P3-NA-FR-F18",
   "familyTitle": "Book not yet read",
-  "primaryOutcomeCode": "P3-NA-FR-05",
-  "secondaryOutcomeCodes": [
-   "P3-NA-FR-04"
-  ],
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
   "questionType": "fraction",
   "difficulty": "challenging",
   "cognitiveDemand": "reasoning",
@@ -4090,7 +4088,7 @@
  {
   "familyCode": "P3-MG-LM-F14",
   "familyTitle": "Total mass of shopping",
-  "primaryOutcomeCode": "P3-MG-LM-04",
+  "primaryOutcomeCode": "P3-MG-LM-05",
   "secondaryOutcomeCodes": [],
   "questionType": "mcq",
   "difficulty": "standard",
@@ -4201,7 +4199,7 @@
  {
   "familyCode": "P3-MG-LM-F15",
   "familyTitle": "Water left in a tank",
-  "primaryOutcomeCode": "P3-MG-LM-04",
+  "primaryOutcomeCode": "P3-MG-LM-05",
   "secondaryOutcomeCodes": [],
   "questionType": "number",
   "difficulty": "standard",
@@ -4287,7 +4285,7 @@
  {
   "familyCode": "P3-MG-LM-F16",
   "familyTitle": "Sugar and flour mass",
-  "primaryOutcomeCode": "P3-MG-LM-04",
+  "primaryOutcomeCode": "P3-MG-LM-05",
   "secondaryOutcomeCodes": [],
   "questionType": "number",
   "difficulty": "challenging",
@@ -4386,7 +4384,7 @@
  {
   "familyCode": "P3-MG-LM-F17",
   "familyTitle": "Filling a container",
-  "primaryOutcomeCode": "P3-MG-LM-04",
+  "primaryOutcomeCode": "P3-MG-LM-03",
   "secondaryOutcomeCodes": [],
   "questionType": "number",
   "difficulty": "challenging",
@@ -4485,7 +4483,7 @@
  {
   "familyCode": "P3-MG-LM-F18",
   "familyTitle": "Walking to school and back",
-  "primaryOutcomeCode": "P3-MG-LM-04",
+  "primaryOutcomeCode": "P3-MG-LM-05",
   "secondaryOutcomeCodes": [],
   "questionType": "number",
   "difficulty": "challenging",
@@ -4595,468 +4593,9 @@
   "provenance": "original_ai"
  },
  {
-  "familyCode": "P3-MG-TM-F01",
-  "familyTitle": "Ten minutes to four",
-  "primaryOutcomeCode": "P3-MG-TM-01",
-  "secondaryOutcomeCodes": [],
-  "questionType": "mcq",
-  "difficulty": "basic",
-  "cognitiveDemand": "recall",
-  "marks": 1,
-  "estimatedSeconds": 45,
-  "content": {
-   "stem": [
-    {
-     "t": "p",
-     "c": [
-      {
-       "t": "text",
-       "v": "It is 10 minutes to 4 in the afternoon. Which of the following shows the time?"
-      }
-     ]
-    }
-   ],
-   "options": [
-    {
-     "id": "A",
-     "c": [
-      {
-       "t": "text",
-       "v": "4.10 p.m."
-      }
-     ]
-    },
-    {
-     "id": "B",
-     "c": [
-      {
-       "t": "text",
-       "v": "3.10 p.m."
-      }
-     ]
-    },
-    {
-     "id": "C",
-     "c": [
-      {
-       "t": "text",
-       "v": "3.50 p.m."
-      }
-     ]
-    },
-    {
-     "id": "D",
-     "c": [
-      {
-       "t": "text",
-       "v": "4.50 p.m."
-      }
-     ]
-    }
-   ]
-  },
-  "answer": {
-   "kind": "mcq",
-   "correct": "C"
-  },
-  "verification": {
-   "human": true
-  },
-  "workedSolution": [
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "'To' means the minutes left before the next hour. 10 minutes to 4 is 10 minutes before 4.00 p.m."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "60 − 10 = 50, so the time is 3.50 p.m."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "4.10 p.m. is 10 minutes past 4, and 3.10 p.m. is 10 minutes past 3."
-     }
-    ]
-   }
-  ],
-  "markingScheme": {
-   "method": "exact"
-  },
-  "provenance": "original_ai"
- },
- {
-  "familyCode": "P3-MG-TM-F02",
-  "familyTitle": "Twenty-five past nine",
-  "primaryOutcomeCode": "P3-MG-TM-01",
-  "secondaryOutcomeCodes": [],
-  "questionType": "text",
-  "difficulty": "basic",
-  "cognitiveDemand": "recall",
-  "marks": 1,
-  "estimatedSeconds": 50,
-  "content": {
-   "stem": [
-    {
-     "t": "p",
-     "c": [
-      {
-       "t": "text",
-       "v": "Write the time that is 25 minutes past 9 in the morning. Use a.m. or p.m. in your answer."
-      }
-     ]
-    }
-   ]
-  },
-  "answer": {
-   "kind": "text",
-   "accepted": [
-    "9.25 a.m.",
-    "9.25a.m.",
-    "9.25 am",
-    "9.25am",
-    "9.25 AM",
-    "9.25AM",
-    "9.25 a.m",
-    "9.25a.m",
-    "9:25 a.m.",
-    "9:25a.m.",
-    "9:25 am",
-    "9:25am",
-    "9:25 AM",
-    "9:25AM",
-    "9:25 a.m",
-    "9:25a.m"
-   ]
-  },
-  "verification": {
-   "human": true
-  },
-  "workedSolution": [
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "25 minutes past 9 means 9 hours and 25 minutes."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "It is in the morning, so we write a.m. The time is 9.25 a.m."
-     }
-    ]
-   }
-  ],
-  "markingScheme": {
-   "method": "exact"
-  },
-  "provenance": "original_ai"
- },
- {
-  "familyCode": "P3-MG-TM-F03",
-  "familyTitle": "Twenty to six",
-  "primaryOutcomeCode": "P3-MG-TM-01",
-  "secondaryOutcomeCodes": [],
-  "questionType": "text",
-  "difficulty": "basic",
-  "cognitiveDemand": "application",
-  "marks": 1,
-  "estimatedSeconds": 60,
-  "content": {
-   "stem": [
-    {
-     "t": "p",
-     "c": [
-      {
-       "t": "text",
-       "v": "Write the time that is 20 minutes to 6 in the evening. Use a.m. or p.m. in your answer."
-      }
-     ]
-    }
-   ]
-  },
-  "answer": {
-   "kind": "text",
-   "accepted": [
-    "5.40 p.m.",
-    "5.40p.m.",
-    "5.40 pm",
-    "5.40pm",
-    "5.40 PM",
-    "5.40PM",
-    "5.40 p.m",
-    "5.40p.m",
-    "5:40 p.m.",
-    "5:40p.m.",
-    "5:40 pm",
-    "5:40pm",
-    "5:40 PM",
-    "5:40PM",
-    "5:40 p.m",
-    "5:40p.m"
-   ]
-  },
-  "verification": {
-   "human": true
-  },
-  "workedSolution": [
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "20 minutes to 6 is 20 minutes before 6.00 p.m."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "60 − 20 = 40, so it is 40 minutes past 5."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "It is in the evening, so the time is 5.40 p.m."
-     }
-    ]
-   }
-  ],
-  "markingScheme": {
-   "method": "exact"
-  },
-  "provenance": "original_ai"
- },
- {
-  "familyCode": "P3-MG-TM-F04",
-  "familyTitle": "Same as 6.48 p.m.",
-  "primaryOutcomeCode": "P3-MG-TM-01",
-  "secondaryOutcomeCodes": [],
-  "questionType": "mcq",
-  "difficulty": "standard",
-  "cognitiveDemand": "application",
-  "marks": 1,
-  "estimatedSeconds": 75,
-  "content": {
-   "stem": [
-    {
-     "t": "p",
-     "c": [
-      {
-       "t": "text",
-       "v": "Which of the following is the same as 6.48 p.m.?"
-      }
-     ]
-    }
-   ],
-   "options": [
-    {
-     "id": "A",
-     "c": [
-      {
-       "t": "text",
-       "v": "12 minutes past 6 p.m."
-      }
-     ]
-    },
-    {
-     "id": "B",
-     "c": [
-      {
-       "t": "text",
-       "v": "12 minutes to 7 p.m."
-      }
-     ]
-    },
-    {
-     "id": "C",
-     "c": [
-      {
-       "t": "text",
-       "v": "48 minutes to 7 p.m."
-      }
-     ]
-    },
-    {
-     "id": "D",
-     "c": [
-      {
-       "t": "text",
-       "v": "18 minutes to 7 p.m."
-      }
-     ]
-    }
-   ]
-  },
-  "answer": {
-   "kind": "mcq",
-   "correct": "B"
-  },
-  "verification": {
-   "human": true
-  },
-  "workedSolution": [
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "6.48 p.m. is 48 minutes past 6."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "60 − 48 = 12, so it is 12 minutes before 7.00 p.m. That is 12 minutes to 7."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "12 minutes past 6 is 6.12 p.m., and 48 minutes to 7 is 6.12 p.m., so they are wrong."
-     }
-    ]
-   }
-  ],
-  "markingScheme": {
-   "method": "exact"
-  },
-  "provenance": "original_ai"
- },
- {
-  "familyCode": "P3-MG-TM-F05",
-  "familyTitle": "Earliest time",
-  "primaryOutcomeCode": "P3-MG-TM-01",
-  "secondaryOutcomeCodes": [],
-  "questionType": "mcq",
-  "difficulty": "standard",
-  "cognitiveDemand": "application",
-  "marks": 1,
-  "estimatedSeconds": 90,
-  "content": {
-   "stem": [
-    {
-     "t": "p",
-     "c": [
-      {
-       "t": "text",
-       "v": "Which of the following times is the earliest in the afternoon?"
-      }
-     ]
-    }
-   ],
-   "options": [
-    {
-     "id": "A",
-     "c": [
-      {
-       "t": "text",
-       "v": "3.55 p.m."
-      }
-     ]
-    },
-    {
-     "id": "B",
-     "c": [
-      {
-       "t": "text",
-       "v": "10 minutes past 4 p.m."
-      }
-     ]
-    },
-    {
-     "id": "C",
-     "c": [
-      {
-       "t": "text",
-       "v": "A quarter to 4 p.m."
-      }
-     ]
-    },
-    {
-     "id": "D",
-     "c": [
-      {
-       "t": "text",
-       "v": "4.05 p.m."
-      }
-     ]
-    }
-   ]
-  },
-  "answer": {
-   "kind": "mcq",
-   "correct": "C"
-  },
-  "verification": {
-   "human": true
-  },
-  "workedSolution": [
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "Write each time in hours and minutes."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "3.55 p.m.; 10 minutes past 4 = 4.10 p.m.; a quarter to 4 = 3.45 p.m.; 4.05 p.m."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "c": [
-     {
-      "t": "text",
-      "v": "All are in the afternoon. The earliest is the one with the smallest number of minutes after 3 o'clock: 3.45 p.m., which is a quarter to 4."
-     }
-    ]
-   }
-  ],
-  "markingScheme": {
-   "method": "exact"
-  },
-  "provenance": "original_ai"
- },
- {
   "familyCode": "P3-MG-TM-F06",
   "familyTitle": "Reach home after school",
-  "primaryOutcomeCode": "P3-MG-TM-01",
+  "primaryOutcomeCode": "P3-MG-TM-02",
   "secondaryOutcomeCodes": [],
   "questionType": "text",
   "difficulty": "standard",
@@ -5345,9 +4884,7 @@
   "familyCode": "P3-MG-TM-F09",
   "familyTitle": "Journey to school",
   "primaryOutcomeCode": "P3-MG-TM-02",
-  "secondaryOutcomeCodes": [
-   "P3-MG-TM-01"
-  ],
+  "secondaryOutcomeCodes": [],
   "questionType": "text",
   "difficulty": "challenging",
   "cognitiveDemand": "reasoning",
@@ -5546,7 +5083,7 @@
   "secondaryOutcomeCodes": [],
   "questionType": "mcq",
   "difficulty": "basic",
-  "cognitiveDemand": "recall",
+  "cognitiveDemand": "application",
   "marks": 1,
   "estimatedSeconds": 50,
   "content": {
