@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { buildBlueprint } from "@/domain/assessments";
+import { printedBookletOf } from "@/domain/assessments/paper-format";
 import { workingSpaceFor } from "@/domain/papers";
 import {
   SECTION_INSTRUCTIONS,
@@ -81,6 +82,28 @@ describe("paper documents (M4-04, M4-05 inputs)", () => {
     );
     // No booklet field at all when the format has none.
     expect(buildStudentPaper({ assessmentName: "WA2", mockNumber: 1, blueprint, questions }).sections.every((s) => !("booklet" in s))).toBe(true);
+  });
+
+  it("prints a part named like a booklet as its own booklet, so it starts on a new page", () => {
+    const bp = buildBlueprint({
+      curriculumVersionId: "v1",
+      level: "P3",
+      subject: "Mathematics",
+      topics: [{ topicId: "t1", label: "Fractions", outcomeIds: ["o1"] }],
+      settings: { totalMarks: 10, durationMinutes: 60, difficulty: "balanced" },
+      format: {
+        durationMinutes: 60,
+        sections: [
+          { label: "Booklet A", kind: "mcq" as const, questionCount: 2, totalMarks: 5 },
+          { label: "paper 2", kind: "short" as const, questionCount: 1, totalMarks: 5 },
+          { label: "Section C", kind: "short" as const, questionCount: 1, totalMarks: 5 },
+        ],
+      },
+    });
+    const paper = buildStudentPaper({ assessmentName: "WA2", mockNumber: 1, blueprint: bp, questions });
+    expect(paper.sections.map((s) => s.booklet)).toEqual(["Booklet A", "paper 2"]);
+    // An ordinary section name is not a booklet.
+    expect(printedBookletOf({ label: "Section C", kind: "short", questionCount: 1, totalMarks: 5 })).toBeUndefined();
   });
 
   it("gives more working space to more marks and none to multiple choice", () => {

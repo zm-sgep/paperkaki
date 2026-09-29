@@ -244,6 +244,18 @@ export function bookletOf(section: FormatSection): string | undefined {
 }
 
 /**
+ * The booklet a part is printed in. A part named like a booklet ("Booklet B", "Paper 2") is printed
+ * as its own booklet even when no separate booklet name was given, because parents type the school's
+ * own names into the part name and expect each booklet to start on a new page.
+ */
+export function printedBookletOf(section: FormatSection): string | undefined {
+  const booklet = bookletOf(section);
+  if (booklet !== undefined) return booklet;
+  const label = section.label.trim();
+  return /^(booklet|paper)\b/i.test(label) ? label : undefined;
+}
+
+/**
  * Tidies a format the parent typed: trims names, drops blank booklet names, and keeps `marksEach`
  * only while it still explains the part's marks. Does not change what the parent chose.
  */

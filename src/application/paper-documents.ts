@@ -7,7 +7,7 @@
  * only, and the renderer refuses anything else.
  */
 import { blueprintSections, type Blueprint, type SectionCode } from "@/domain/assessments/blueprint";
-import { bookletOf, type SectionKind } from "@/domain/assessments/paper-format";
+import { printedBookletOf, type SectionKind } from "@/domain/assessments/paper-format";
 import { workingSpaceFor } from "@/domain/papers/working-space";
 import type { Answer, Block, Inline, QuestionContent, QuestionType } from "@/schemas/question-content";
 import type { AnswerPack, AnswerPackSection, StudentPaper, StudentQuestion, StudentSection } from "@/services/pdf/types";
@@ -92,7 +92,7 @@ const marksOf = (questions: readonly PaperContentQuestion[]): number => question
 export function buildStudentPaper(input: PaperContentInput): StudentPaper {
   const { blueprint } = input;
   const sections: StudentSection[] = inSectionOrder(blueprint, input.questions).map(({ section, questions }) => {
-    const booklet = bookletOf(section);
+    const booklet = printedBookletOf(section);
     return {
       title: sectionTitle(section.label, marksOf(questions)),
       ...(booklet === undefined ? {} : { booklet }),
@@ -120,7 +120,7 @@ export function buildStudentPaper(input: PaperContentInput): StudentPaper {
 
 export function buildAnswerPack(input: PaperContentInput): AnswerPack {
   const sections: AnswerPackSection[] = inSectionOrder(input.blueprint, input.questions).map(({ section, questions }) => {
-    const booklet = bookletOf(section);
+    const booklet = printedBookletOf(section);
     return {
       title: sectionTitle(section.label, marksOf(questions)),
       ...(booklet === undefined ? {} : { booklet }),
