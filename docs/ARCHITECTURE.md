@@ -66,16 +66,15 @@ Application services
 
 ```text
 src/
-  app/
-    (auth)/
-    dashboard/
-    child/
-    children/
-    assessments/
-    papers/
-    results/
-    practice/
-    rewards/
+  app/                      # routes follow INFORMATION_ARCHITECTURE.md (ADR-0009)
+    (auth)/sign-in/
+    (parent)/home/
+    (parent)/prepare/
+    (parent)/progress/
+    (parent)/rewards/
+    (parent)/account/       # children, school, settings: not primary navigation
+    (child)/                # later: today, practice, progress, rewards
+    mock/[attemptId]/       # later: isolated Mock Mode layout
     admin/
 
   components/
@@ -91,9 +90,11 @@ src/
     questions/
     assessments/
     papers/
+    attempts/
     marking/
     mastery/
     rewards/
+    recommendations/        # next-action policy (ADR-0008)
 
   application/
     commands/
