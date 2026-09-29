@@ -1,0 +1,31 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# local environment files (never commit real values; see .env.example)
+.env
+.env*.local
+
+# local PGlite / dev data
+/.data/
+
+# tests
+/coverage/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# typescript
+*.tsbuildinfo
+
+# misc
+.DS_Store
+npm-debug.log*

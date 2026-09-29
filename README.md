@@ -33,28 +33,36 @@ Then add:
 
 `marking -> mastery -> targeted practice -> adaptive mock -> mastery-based rewards`
 
-## Read these before coding
+## Local development
 
-1. `CLAUDE.md`
-2. `HANDOFF_PROMPT.md`
-3. `docs/PRD.md`
-4. `docs/UX_PRINCIPLES.md`
-5. `docs/INFORMATION_ARCHITECTURE.md`
-6. `docs/UX_SPEC.md`
-7. `docs/USABILITY_ACCEPTANCE_CRITERIA.md`
-8. `docs/UX_RESEARCH_NOTES.md`
-9. `docs/ARCHITECTURE.md`
-10. `docs/DATA_MODEL.md`
-11. `docs/GAMIFICATION_REWARDS_SPEC.md`
-12. `docs/ROADMAP.md`
-13. relevant ADRs and backlog items.
+Prerequisites:
 
-## Important build rule
+- Node.js 22 (`.nvmrc`; run `nvm use`) and npm 10 or newer.
+- No database server is needed for local work: the default `DATABASE_URL` uses a file-backed PGlite database under `.data/` (git-ignored).
 
-Do **not** ask an LLM to generate a complete exam paper directly.
+```bash
+npm ci
+cp .env.example .env.local
+npm run dev
+```
 
-The system must create a structured assessment blueprint, select or generate validated question items, validate the resulting paper, then render it deterministically.
+Open http://localhost:3000. Environment variables are validated when Next.js loads its config (`src/config/env.ts`); a missing or invalid variable stops startup and the error names each one without printing values.
 
-## UX rule
+## Checks
 
-Do not expose internal system concepts such as `Assessment Blueprint`, outcome IDs, reward multipliers, confidence internals, or question-bank structure to ordinary parents or children unless they explicitly open an advanced/admin view.
+| Command | What it runs |
+| --- | --- |
+| `npm run typecheck` | `tsc --noEmit` (strict, `noUncheckedIndexedAccess`) |
+| `npm run lint` | ESLint flat config, including architecture boundary rules |
+| `npm run test:unit` | Vitest unit tests |
+| `npm test` | Vitest unit tests |
+| `npm run build` | Production build |
+
+## Docs
+
+Start with [`CLAUDE.md`](CLAUDE.md) (product objective, UX invariants, architecture boundaries and required reading order). Everything else lives in [`docs/`](docs/): product, UX, architecture, data model, backlog and decision records (`docs/decisions/`). `src/README.md` maps each source folder to what it owns and what it may not import.
+
+Ground rules that apply to every change:
+
+- Do **not** ask an LLM to generate a complete exam paper directly. The system builds a structured assessment blueprint, selects or generates validated question items, validates the paper, then renders it deterministically.
+- Do not expose internal system concepts such as `Assessment Blueprint`, outcome IDs, reward multipliers, confidence internals or question-bank structure to ordinary parents or children unless they explicitly open an advanced/admin view.
