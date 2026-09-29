@@ -144,7 +144,7 @@ const SnapshotSchema = z.object({
   savedAt: z.string(),
 });
 
-export type RestoredAttempt = { state: MockAttemptState; elapsedSeconds: number };
+export type RestoredAttempt = { state: MockAttemptState; elapsedSeconds: number; savedAt: string };
 
 /**
  * Turns a saved snapshot (an object or JSON text) back into state for THIS paper. Returns null when
@@ -179,6 +179,7 @@ export function restoreSnapshot(raw: unknown, attemptId: string, questionIds: re
       flagged: parsed.data.flagged.filter((id) => known.has(id)),
     },
     elapsedSeconds: parsed.data.elapsedSeconds,
+    savedAt: parsed.data.savedAt,
   };
 }
 
