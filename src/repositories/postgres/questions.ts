@@ -228,6 +228,24 @@ export async function getProfileRole(db: Database, profileId: string): Promise<"
   return row?.role ?? null;
 }
 
+/** Ids of draft versions in the named families of one curriculum version, in family and version order. */
+export async function listDraftIdsInFamilies(db: Database, versionId: string, familyCodes: readonly string[]): Promise<string[]> {
+  if (familyCodes.length === 0) return [];
+  const rows = await db
+    .select({ id: questions.id })
+    .from(questions)
+    .innerJoin(questionFamilies, eq(questionFamilies.id, questions.familyId))
+    .where(
+      and(
+        eq(questions.curriculumVersionId, versionId),
+        eq(questions.status, "draft"),
+        inArray(questionFamilies.code, [...familyCodes]),
+      ),
+    )
+    .orderBy(asc(questionFamilies.code), asc(questions.version));
+  return rows.map((r) => r.id);
+}
+
 // ---------------------------------------------------------------------------
 // Admin list (M2-06)
 // ---------------------------------------------------------------------------

@@ -18,6 +18,7 @@
     "db:migrate": "tsx scripts/db-migrate.ts",
     "db:seed": "tsx scripts/db-seed.ts",
     "curriculum:import": "tsx scripts/import-curriculum.ts",
+    "questions:import": "tsx scripts/import-questions.ts",
     "test:integration": "vitest run --project integration",
     "test:e2e": "playwright test",
     "check": "npm run typecheck && npm run lint && npm test && npm run build && npm run test:e2e"
