@@ -22,6 +22,20 @@ export default defineConfig({
           include: ["tests/unit/**/*.test.ts"],
           environment: "node",
           env: testEnv,
+          // Loading the ESLint flat config (architecture boundary test) takes a moment.
+          testTimeout: 30_000,
+        },
+      },
+      {
+        resolve: { alias },
+        test: {
+          name: "integration",
+          include: ["tests/integration/**/*.test.ts"],
+          environment: "node",
+          env: testEnv,
+          // Each file boots its own in-memory PGlite and applies the migrations.
+          testTimeout: 30_000,
+          hookTimeout: 60_000,
         },
       },
     ],
