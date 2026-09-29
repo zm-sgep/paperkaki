@@ -167,7 +167,8 @@ test.describe("signed in as an admin", () => {
     expect(response?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 2, name: "Curriculum" })).toBeVisible();
     await expect(page.getByRole("heading", { level: 2, name: "Question bank" })).toBeVisible();
-    await expect(page.getByText("Not built yet")).toHaveCount(1);
+    await expect(page.getByRole("link", { name: "Browse and review questions" })).toBeVisible();
+    await expect(page.getByText("Not built yet")).toHaveCount(0);
     await expect(page.getByRole("link", { name: "Browse curriculum versions" })).toBeVisible();
     await expect(page.getByRole("navigation")).toHaveCount(0);
   });
