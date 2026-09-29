@@ -101,6 +101,12 @@ export const assessmentRequirements = pgTable(
     totalMarks: integer("total_marks").notNull(),
     durationMinutes: integer("duration_minutes").notNull(),
     difficulty: difficultyPreset("difficulty").notNull(),
+    /**
+     * The paper format the parent chose (src/domain/assessments/paper-format.ts), zod-validated when read.
+     * Null means the standard mock, built from the marks and time above. When set, `total_marks` and
+     * `duration_minutes` always equal the format's own total and time.
+     */
+    paperFormat: jsonb("paper_format").$type<Record<string, unknown>>(),
     source: requirementsSource("source").notNull(),
     updatedAt: timestamp("updated_at", { withTimezone: true })
       .notNull()
@@ -142,17 +148,32 @@ export const blueprintScopeItems = pgTable(
     topicId: uuid("topic_id")
       .notNull()
       .references(() => curriculumTopics.id, { onDelete: "restrict" }),
+    /** The marks this topic should carry on the whole paper: a balanced target the selector aims for. */
     targetMarks: integer("target_marks").notNull(),
-    sectionAMarks: integer("section_a_marks").notNull(),
-    sectionBMarks: integer("section_b_marks").notNull(),
   },
-  (table) => [
-    unique("blueprint_scope_items_topic_key").on(table.blueprintId, table.topicId),
-    check(
-      "blueprint_scope_items_marks_add_up",
-      sql`${table.sectionAMarks} + ${table.sectionBMarks} = ${table.targetMarks}`,
-    ),
-  ],
+  (table) => [unique("blueprint_scope_items_topic_key").on(table.blueprintId, table.topicId)],
+);
+
+/**
+ * The paper format a parent saved for one child and one kind of assessment ("Match my school's
+ * paper"), so the next assessment of that kind starts from it. Owned through the child, so every
+ * read and write is scoped by the parent.
+ */
+export const schoolPaperFormats = pgTable(
+  "school_paper_formats",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    childId: uuid("child_id")
+      .notNull()
+      .references(() => children.id, { onDelete: "restrict" }),
+    assessmentType: assessmentType("assessment_type").notNull(),
+    format: jsonb("format").$type<Record<string, unknown>>().notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
+      .notNull()
+      .defaultNow()
+      .$onUpdate(() => new Date()),
+  },
+  (table) => [unique("school_paper_formats_child_type_key").on(table.childId, table.assessmentType)],
 );
 
 export type Assessment = typeof assessments.$inferSelect;
@@ -160,3 +181,4 @@ export type NewAssessment = typeof assessments.$inferInsert;
 export type AssessmentScopeItem = typeof assessmentScopeItems.$inferSelect;
 export type AssessmentRequirements = typeof assessmentRequirements.$inferSelect;
 export type AssessmentBlueprint = typeof assessmentBlueprints.$inferSelect;
+export type SchoolPaperFormat = typeof schoolPaperFormats.$inferSelect;

@@ -267,7 +267,7 @@ describe("assessment setup (M3)", () => {
       expect(await versions()).toBe(1);
       const setup = await getAssessmentSetup(parentA, assessmentId, ctx());
       expect(setup?.usingRecommended).toBe(true);
-      expect(setup?.summary).toMatch(/^\d+ marks · \d+ minutes · /);
+      expect(setup?.summary).toMatch(/^\d+ marks · \d+ min · Sections A, B$/);
       expect(setup?.canGenerate).toBe(true);
       expect(setup?.preview?.totalMarks).toBe(setup?.settings.totalMarks);
     });
@@ -284,7 +284,7 @@ describe("assessment setup (M3)", () => {
       await setPaperSettings(parentA, assessmentId, { totalMarks: 30, durationMinutes: 40, difficulty: "harder" }, ctx());
       expect(await versions()).toBe(2);
       const setup = await getAssessmentSetup(parentA, assessmentId, ctx());
-      expect(setup?.summary.startsWith("30 marks · 40 minutes")).toBe(true);
+      expect(setup?.summary).toBe("30 marks · 40 min · Sections A, B");
       expect(setup?.usingRecommended).toBe(false);
     });
 
@@ -338,7 +338,7 @@ describe("assessment setup (M3)", () => {
       const setup = await getAssessmentSetup(parentA, a.id, ctx());
       expect(setup?.excludedNotice).toBe(`We can't include ${topicsWithoutQuestions[0]} yet, so this mock covers the other topic.`);
       expect(setup?.chosenTopics).toHaveLength(2);
-      expect(setup?.summary).not.toContain(topicsWithoutQuestions[0]);
+      expect(setup?.topicsLine).toBe("Fractions");
       const scope = await getScopeSetup(parentA, a.id, ctx());
       expect(scope?.topics.find((t) => t.id === empty)).toMatchObject({ selected: true, hasQuestions: false });
     });

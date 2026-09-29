@@ -103,8 +103,10 @@ export async function getScopeSetup(parentProfileId: string, assessmentId: strin
 
 export type AssessmentSetup = {
   assessment: AssessmentHeader;
-  /** "40 marks · 45 minutes · Fractions, Time, Measurement" */
+  /** "40 marks · 45 min · Sections A, B": the paper format in one line. */
   summary: string;
+  /** "Fractions, Time, Measurement": the topics the mock covers, shown below the summary. */
+  topicsLine: string;
   /** Names of the topics left out because the bank has no questions for them yet. */
   excludedNotice: string | null;
   /** Hard problems in plain words; the mock cannot be created while any remain. */
@@ -158,6 +160,7 @@ export async function getAssessmentSetup(
   return {
     assessment: headerOf(assessment, today),
     summary: plan.summary,
+    topicsLine: plan.topicsLine,
     excludedNotice: plan.excludedNotice,
     problems: plan.problems,
     notices: plan.notices,

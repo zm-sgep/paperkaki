@@ -16,6 +16,7 @@ import {
   recommendPaperFormat,
   sameFormat,
   standardFormat,
+  standardFormatVariants,
   validatePaperFormat,
   type FormatSection,
   type PaperFormat,
@@ -72,6 +73,23 @@ describe("presets", () => {
     expect(formatTotalMarks(presetFormat("standard", { topicCount: 1 }))).toBe(20);
     expect(formatTotalMarks(presetFormat("standard", { topicCount: 2 }))).toBe(30);
     expect(formatTotalMarks(presetFormat("standard", { topicCount: 5 }))).toBe(40);
+  });
+
+  it("standard variants are all valid, distinct and start with the preferred format", () => {
+    for (let total = 10; total <= 60; total += 5) {
+      const settings = { totalMarks: total, durationMinutes: total + 5 };
+      const variants = standardFormatVariants(settings);
+      expect(variants[0]).toEqual(standardFormat(settings));
+      expect(new Set(variants.map((v) => JSON.stringify(v))).size, `total ${total}`).toBe(variants.length);
+      for (const v of variants) {
+        expect(validatePaperFormat(v), `total ${total}`).toEqual([]);
+        expect(formatTotalMarks(v)).toBe(total);
+      }
+    }
+    // The preferred multiple choice part is all 1-mark questions; a later variant allows 2-mark ones.
+    const many = standardFormatVariants({ totalMarks: 20, durationMinutes: 25 });
+    expect(many[0]?.sections[0]).toMatchObject({ questionCount: 5, totalMarks: 5, marksEach: 1 });
+    expect(many.some((v) => v.sections[0]?.marksEach === undefined && v.sections[0]?.questionCount === 4)).toBe(true);
   });
 
   it("returns copies, so a preset cannot be changed by accident", () => {

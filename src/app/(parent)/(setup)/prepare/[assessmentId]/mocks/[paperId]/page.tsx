@@ -26,7 +26,10 @@ export default async function MockPage({ params }: { params: Promise<{ assessmen
       <PageHeader title={mock.heading} />
 
       <Card className="flex flex-col gap-4">
-        <p className="text-xl font-semibold text-ink">{mock.summary}</p>
+        <div className="flex flex-col gap-1">
+          <p className="text-xl font-semibold text-ink">{mock.summary}</p>
+          {mock.topicsLine ? <p className="text-lg text-ink-soft">{mock.topicsLine}</p> : null}
+        </div>
         {/* Plain links, not next/link: these answer with a redirect to a private file, never a page. */}
         <a
           href={mock.studentHref}

@@ -97,10 +97,11 @@ test.describe("parent assessment setup", () => {
     await expect(page).toHaveURL(new RegExp(`/prepare/${assessmentId}$`));
     await expect(page.getByRole("heading", { level: 1, name: "Your mock is ready to create" })).toBeVisible();
     await expect(page.getByText("Each mock uses a new set of questions from the topics you chose.")).toBeVisible();
-    const summary = page.getByText(/^\d+ marks · \d+ minutes · Fractions/);
+    const summary = page.getByText(/^\d+ marks · \d+ min · Sections A, B$/);
     await expect(summary).toBeVisible();
     await expect(summary).toContainText("marks");
-    await expect(summary).toContainText("minutes");
+    await expect(summary).toContainText("min");
+    await expect(page.getByText(/^Fractions/)).toBeVisible();
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);
     await expect(page.locator('[data-variant="primary"]')).toHaveText("Generate first mock");
     await expectNoInternalWords(page);
@@ -113,7 +114,7 @@ test.describe("parent assessment setup", () => {
     await expect(page.getByText("Saved. The summary above is up to date.")).toBeVisible();
     await expect(page.getByText(/^20 marks · /)).toBeVisible();
     await page.getByRole("button", { name: "Use recommended settings" }).click();
-    await expect(page.getByText(/^30 marks · 35 minutes · /)).toBeVisible();
+    await expect(page.getByText(/^30 marks · 35 min · /)).toBeVisible();
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);
     await expectNoInternalWords(page);
 

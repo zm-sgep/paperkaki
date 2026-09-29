@@ -69,7 +69,7 @@ export const paperQuestions = pgTable(
       .references(() => papers.id, { onDelete: "restrict" }),
     /** The printed question number, 1 upward. */
     position: integer("position").notNull(),
-    /** "A" (multiple choice) or "B" (short answer). */
+    /** The part of the paper: "A", "B", "C" ... by its position in the paper format. */
     sectionCode: text("section_code").notNull(),
     /** The exact question version. A correction is a new version, never an edit of this row. */
     questionId: uuid("question_id")
@@ -83,7 +83,7 @@ export const paperQuestions = pgTable(
     index("idx_paper_questions_question").on(table.questionId),
     check("paper_questions_position_positive", sql`${table.position} >= 1`),
     check("paper_questions_marks_positive", sql`${table.marks} > 0`),
-    check("paper_questions_section", sql`${table.sectionCode} IN ('A', 'B')`),
+    check("paper_questions_section", sql`${table.sectionCode} ~ '^[A-H]$'`),
   ],
 );
 

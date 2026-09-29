@@ -83,7 +83,7 @@ test.describe("printable mock", () => {
 
     // Screen C: one primary action.
     await expect(page.getByRole("heading", { level: 1, name: "Your mock is ready to create" })).toBeVisible();
-    await expect(page.getByText(/^40 marks · 45 minutes · /)).toBeVisible();
+    await expect(page.getByText("40 marks · 45 min · Sections A, B")).toBeVisible();
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);
     await expectNoInternalWords(page);
     await expectNoSideScroll(page);
@@ -98,7 +98,8 @@ test.describe("printable mock", () => {
     // The mock page: summary, one primary download, the answer pack quietly, one tip.
     await expect(page.getByRole("heading", { level: 1, name: "Mock 1 is ready" })).toBeVisible();
     await expect(page.getByText(/^Test Child A · Mathematics WA2 · /)).toBeVisible();
-    await expect(page.getByText(/^40 marks · 45 minutes · .*Fractions/)).toBeVisible();
+    await expect(page.getByText("40 marks · 45 min · Sections A, B")).toBeVisible();
+    await expect(page.getByText(/Fractions/)).toBeVisible();
     await expect(page.getByText("Print on A4. Give Test Child A 45 minutes.")).toBeVisible();
     await expect(page.getByText("Keep this for yourself. It has the answers.")).toBeVisible();
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);

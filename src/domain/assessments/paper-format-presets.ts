@@ -6,7 +6,7 @@
  * format the parent already saved for this child and assessment type comes before both.
  */
 import type { AssessmentType } from "./assessment-types";
-import { sameFormat, type FormatSection, type PaperFormat } from "./paper-format";
+import { FORMAT_LIMITS, sameFormat, type FormatSection, type PaperFormat } from "./paper-format";
 import { recommendPaperSettings } from "./recommend";
 
 export const PAPER_FORMAT_PRESETS = ["standard", "p3_end_of_year_common", "p3_weighted_common"] as const;
@@ -17,31 +17,61 @@ export type FormatChoiceId = PaperFormatPreset | "saved";
 
 /**
  * Today's mock: multiple choice first, then short answer, scaled to the paper's marks. About a
- * quarter of the marks are multiple choice (rounded half up), each worth 1 mark. Short answer
- * questions are worth 1 or 2 marks, about a quarter of them worth 2.
+ * quarter of the marks are multiple choice (rounded half up), and the rest are short answer
+ * questions worth 1 or 2 marks. How many questions are worth 2 marks is a choice: the first variant
+ * makes the multiple choice questions all 1 mark and puts about a third of the short-answer marks in
+ * 2-mark questions; the others move those numbers one at a time, so the caller can pick the first
+ * one the question bank can fill.
  */
-export function standardFormat(settings: { totalMarks: number; durationMinutes: number }): PaperFormat {
+export function standardFormatVariants(settings: { totalMarks: number; durationMinutes: number }): PaperFormat[] {
   const multipleChoiceMarks = Math.floor((settings.totalMarks + 2) / 4);
   const shortMarks = settings.totalMarks - multipleChoiceMarks;
-  const sections: FormatSection[] = [];
+
+  const mcqParts: (FormatSection | undefined)[] = [];
   if (multipleChoiceMarks > 0) {
-    sections.push({
-      label: "Section A",
-      kind: "mcq",
-      questionCount: multipleChoiceMarks,
-      totalMarks: multipleChoiceMarks,
-      marksEach: 1,
-    });
+    for (let twos = 0; 2 * twos <= multipleChoiceMarks; twos += 1) {
+      mcqParts.push({
+        label: "Section A",
+        kind: "mcq",
+        questionCount: multipleChoiceMarks - twos,
+        totalMarks: multipleChoiceMarks,
+        ...(twos === 0 ? { marksEach: 1 } : {}),
+      });
+    }
+  } else {
+    mcqParts.push(undefined);
   }
+
+  const shortParts: (FormatSection | undefined)[] = [];
   if (shortMarks > 0) {
-    sections.push({
-      label: sections.length === 0 ? "Section A" : "Section B",
-      kind: "short",
-      questionCount: shortMarks - Math.floor(shortMarks / 4),
-      totalMarks: shortMarks,
-    });
+    const primary = Math.round(shortMarks / 3);
+    for (let step = 0; step <= shortMarks; step += 1) {
+      for (const twos of step === 0 ? [primary] : [primary - step, primary + step]) {
+        if (twos >= 0 && 2 * twos <= shortMarks && shortMarks - twos <= FORMAT_LIMITS.maxQuestions) {
+          shortParts.push({ label: "", kind: "short", questionCount: shortMarks - twos, totalMarks: shortMarks });
+        }
+      }
+    }
+    if (shortParts.length === 0) shortParts.push({ label: "", kind: "short", questionCount: shortMarks - primary, totalMarks: shortMarks });
+  } else {
+    shortParts.push(undefined);
   }
-  return { durationMinutes: settings.durationMinutes, sections };
+
+  const variants: PaperFormat[] = [];
+  for (const mcq of mcqParts) {
+    for (const short of shortParts) {
+      const sections: FormatSection[] = [];
+      if (mcq) sections.push({ ...mcq });
+      if (short) sections.push({ ...short, label: sections.length === 0 ? "Section A" : "Section B" });
+      variants.push({ durationMinutes: settings.durationMinutes, sections });
+    }
+  }
+  return variants;
+}
+
+/** The first (preferred) standard format for these settings. */
+export function standardFormat(settings: { totalMarks: number; durationMinutes: number }): PaperFormat {
+  return standardFormatVariants(settings)[0] as PaperFormat;
 }
 
 /** Section A: 6 multiple choice x 2 = 12. Section B: 16 open-ended, 26 marks. Section C: 4 word problems x 3 = 12. */

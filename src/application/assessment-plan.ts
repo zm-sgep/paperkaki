@@ -1,13 +1,22 @@
 import {
   buildBlueprint,
   explainForParent,
-  recommendPaperSettings,
-  validateBlueprint,
   excludedTopicsNotice,
+  formatSummaryLine,
+  formatTotalMarks,
   joinLabels,
-  summaryLine,
+  paperFormatChoices,
+  recommendPaperFormat,
+  recommendPaperSettings,
+  sameFormat,
+  standardFormatVariants,
+  validateBlueprint,
   type Blueprint,
+  type DifficultyLevel,
+  type FormatChoice,
+  type FormatChoiceId,
   type Issue,
+  type PaperFormat,
   type PaperSettings,
 } from "@/domain/assessments";
 import { selectQuestions, summariseInventory, type SelectionResult } from "@/domain/papers";
@@ -15,11 +24,13 @@ import type { Database } from "@/repositories/postgres/client";
 import {
   getLatestBlueprint,
   getRequirements,
+  getSchoolPaperFormat,
   insertBlueprintVersion,
   listScopeItems,
   listTopicsInVersion,
   type OwnedAssessment,
 } from "@/repositories/postgres/assessments";
+import { parsePaperFormat } from "@/schemas/paper-format";
 import { listCandidateQuestions, type QuestionCandidate } from "./queries/questions";
 
 /**
@@ -29,6 +40,10 @@ import { listCandidateQuestions, type QuestionCandidate } from "./queries/questi
  *
  * The parent's scope is the truth: a topic the bank cannot cover yet stays in the scope, but is
  * left out of the design explicitly and named in `excludedNotice`.
+ *
+ * The paper format follows the same rule as the other settings: until the parent chooses one it is
+ * the recommendation (the child's saved format first, else by assessment type); once they choose,
+ * it stays as they chose.
  */
 
 export type AssessmentPlan = {
@@ -40,7 +55,19 @@ export type AssessmentPlan = {
   excludedNotice: string | null;
   storedSettingsSource: "recommended" | "parent";
   recommended: PaperSettings;
+  /** Marks and time always equal the paper format's own. */
   settings: PaperSettings;
+  /** The parts of the paper the mock follows. */
+  format: PaperFormat;
+  /** Which ready-made choice the format is, or "custom" for the parent's own. */
+  selectedChoice: FormatChoiceId | "custom";
+  recommendedChoice: FormatChoiceId;
+  /** The recommended choice's format (for "standard", the format the marks and time give). */
+  recommendedFormat: PaperFormat;
+  /** Every ready-made choice, the recommended one first. */
+  formatChoices: FormatChoice[];
+  /** The format saved for this child and assessment type, if any. */
+  savedFormat: PaperFormat | null;
   blueprint: Blueprint;
   /** Hard problems, in the parent's words, each with the way forward. */
   problems: string[];
@@ -49,18 +76,28 @@ export type AssessmentPlan = {
   candidates: QuestionCandidate[];
   inventory: { topicId: string; label: string; questionCount: number }[];
   selection: SelectionResult | null;
+  /** "50 marks · 1 h 30 min · Sections A, B, C" */
   summary: string;
+  /** "Fractions, Time, Angles" */
+  topicsLine: string;
   canGenerate: boolean;
 };
 
 const PREVIEW_SEED = "preview";
 
+/** JSON form of a format, for storage. */
+export function formatToJson(format: PaperFormat): Record<string, unknown> {
+  return JSON.parse(JSON.stringify(format)) as Record<string, unknown>;
+}
+
 export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessment): Promise<AssessmentPlan> {
-  const [scopeItems, versionTopics, requirements] = await Promise.all([
+  const [scopeItems, versionTopics, requirements, savedJson] = await Promise.all([
     listScopeItems(db, assessment.id),
     listTopicsInVersion(db, assessment.curriculumVersionId, assessment.level),
     getRequirements(db, assessment.id),
+    getSchoolPaperFormat(db, assessment.parentProfileId, assessment.childId, assessment.assessmentType),
   ]);
+  const savedFormat = parsePaperFormat(savedJson) ?? null;
 
   const storedOutcomes = new Set(scopeItems.map((item) => item.outcomeId));
   const chosenTopics = versionTopics
@@ -84,22 +121,60 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
   const covered = new Set(candidates.map((candidate) => candidate.topicId));
   const included = chosenTopics.filter((topic) => covered.has(topic.topicId));
   const excluded = chosenTopics.filter((topic) => !covered.has(topic.topicId)).map(({ topicId, label }) => ({ topicId, label }));
+  const topics = included.map((topic) => ({ topicId: topic.topicId, label: topic.label, outcomeIds: topic.outcomeIds }));
 
-  const recommended = recommendPaperSettings({ topicCount: included.length });
-  const settings: PaperSettings =
-    requirements?.source === "parent"
-      ? { totalMarks: requirements.totalMarks, durationMinutes: requirements.durationMinutes, difficulty: requirements.difficulty }
-      : recommended;
-
-  const blueprint = buildBlueprint({
-    curriculumVersionId: assessment.curriculumVersionId,
-    level: "P3",
-    subject: "Mathematics",
-    topics: included.map((topic) => ({ topicId: topic.topicId, label: topic.label, outcomeIds: topic.outcomeIds })),
-    settings,
+  const recommendation = recommendPaperFormat({
+    assessmentType: assessment.assessmentType,
+    topicCount: included.length,
+    savedFormat,
   });
+  const recommendedSettings: PaperSettings =
+    recommendation.choice === "standard"
+      ? recommendPaperSettings({ topicCount: included.length })
+      : {
+          totalMarks: formatTotalMarks(recommendation.format),
+          durationMinutes: recommendation.format.durationMinutes,
+          difficulty: "balanced",
+        };
+  const formatChoices = paperFormatChoices({ assessmentType: assessment.assessmentType, topicCount: included.length, savedFormat });
 
-  const inventory = summariseInventory(blueprint.scope, blueprint.sections, candidates);
+  // What is in force: the parent's own choice, or the recommendation.
+  const parentChose = requirements?.source === "parent";
+  const storedFormat = parentChose ? (parsePaperFormat(requirements.paperFormat) ?? null) : null;
+  const difficulty: DifficultyLevel = parentChose ? requirements.difficulty : recommendedSettings.difficulty;
+  const standardSettings = parentChose
+    ? { totalMarks: requirements.totalMarks, durationMinutes: requirements.durationMinutes }
+    : recommendedSettings;
+  const explicitFormat = parentChose ? storedFormat : recommendation.choice === "standard" ? null : recommendation.format;
+
+  const draft = (format: PaperFormat | undefined): Blueprint =>
+    buildBlueprint({
+      curriculumVersionId: assessment.curriculumVersionId,
+      level: "P3",
+      subject: "Mathematics",
+      topics,
+      settings: { ...standardSettings, difficulty },
+      format,
+    });
+  const check = (blueprint: Blueprint): { errors: Issue[]; warnings: Issue[] } =>
+    validateBlueprint(blueprint, summariseInventory(blueprint.scope, blueprint.format, candidates));
+
+  // The standard mock has several ways to split the short-answer marks; use the first the bank can fill.
+  let blueprint: Blueprint;
+  if (explicitFormat) {
+    blueprint = draft(explicitFormat);
+  } else {
+    const variants = standardFormatVariants(standardSettings);
+    const workable = variants.find((variant) => check(draft(variant)).errors.length === 0) ?? variants[0];
+    blueprint = draft(workable);
+  }
+  const format = blueprint.format;
+  const settings: PaperSettings = {
+    totalMarks: blueprint.totalMarks,
+    durationMinutes: blueprint.durationMinutes,
+    difficulty,
+  };
+
   const issues: { errors: Issue[]; warnings: Issue[] } =
     included.length === 0 && chosenTopics.length > 0
       ? {
@@ -111,7 +186,7 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
           ],
           warnings: [],
         }
-      : validateBlueprint(blueprint, inventory);
+      : check(blueprint);
 
   const problems = explainForParent(issues.errors);
   const notices = explainForParent(issues.warnings);
@@ -120,9 +195,16 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
   if (problems.length === 0) {
     selection = selectQuestions({ blueprint, candidates, seed: PREVIEW_SEED });
     if (!selection.ok) {
-      problems.push("We couldn't fit questions to those exact marks. Try a different number of marks or add another topic.");
+      problems.push(
+        selection.failure.code === "topic_not_covered"
+          ? "We couldn't fit every topic into this paper format. Choose fewer topics or a different paper format."
+          : "We couldn't fit questions to this paper format exactly. Try a different paper format or add another topic.",
+      );
     }
   }
+
+  const matching = explicitFormat ? formatChoices.find((choice) => sameFormat(choice.format, format)) : undefined;
+  const selectedChoice: FormatChoiceId | "custom" = explicitFormat ? (matching?.id ?? "custom") : "standard";
 
   return {
     chosen: chosenTopics.map(({ topicId, label }) => ({ topicId, label })),
@@ -133,8 +215,14 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
       included.length,
     ),
     storedSettingsSource: requirements?.source ?? "recommended",
-    recommended,
+    recommended: recommendedSettings,
     settings,
+    format,
+    selectedChoice,
+    recommendedChoice: recommendation.choice,
+    recommendedFormat: recommendation.format,
+    formatChoices,
+    savedFormat,
     blueprint,
     problems,
     notices,
@@ -145,11 +233,8 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
       questionCount: candidates.filter((c) => c.topicId === topic.topicId).length,
     })),
     selection,
-    summary: summaryLine({
-      totalMarks: settings.totalMarks,
-      durationMinutes: settings.durationMinutes,
-      topicLabels: included.map((topic) => topic.label),
-    }),
+    summary: formatSummaryLine(format),
+    topicsLine: included.map((topic) => topic.label).join(", "),
     canGenerate: problems.length === 0 && included.length > 0,
   };
 }
@@ -183,12 +268,7 @@ export async function syncBlueprint(db: Database, assessment: OwnedAssessment): 
     assessmentId: assessment.id,
     version,
     spec,
-    scope: plan.blueprint.scope.map((item) => ({
-      topicId: item.topicId,
-      targetMarks: item.targetMarks,
-      sectionAMarks: item.sectionMarks.A,
-      sectionBMarks: item.sectionMarks.B,
-    })),
+    scope: plan.blueprint.scope.map((item) => ({ topicId: item.topicId, targetMarks: item.targetMarks })),
   });
   return version;
 }

@@ -6,7 +6,8 @@
  * The student paper carries no answer data at all: this module builds it from question content
  * only, and the renderer refuses anything else.
  */
-import type { Blueprint, SectionCode } from "@/domain/assessments/blueprint";
+import { blueprintSections, type Blueprint, type SectionCode } from "@/domain/assessments/blueprint";
+import { bookletOf, type SectionKind } from "@/domain/assessments/paper-format";
 import { workingSpaceFor } from "@/domain/papers/working-space";
 import type { Answer, Block, Inline, QuestionContent, QuestionType } from "@/schemas/question-content";
 import type { AnswerPack, AnswerPackSection, StudentPaper, StudentQuestion, StudentSection } from "@/services/pdf/types";
@@ -38,9 +39,11 @@ export const STUDENT_INSTRUCTIONS: readonly string[] = [
   "Calculators are not allowed.",
 ];
 
-const SECTION_INSTRUCTIONS: Record<SectionCode, string> = {
-  A: "Choose the one correct answer. Write its number in the brackets.",
-  B: "Write your answer on the line. Show your working in the space given.",
+/** Default wording for each kind of part. */
+export const SECTION_INSTRUCTIONS: Record<SectionKind, string> = {
+  mcq: "For each question, four options are given. One of them is the correct answer. Write its number (1, 2, 3 or 4) in the brackets provided.",
+  short: "Write your answers in the spaces provided. Give your answers in the units stated.",
+  word_problem: "Show your working clearly in the space below each question. Write your answers in the spaces provided.",
 };
 
 export function paperTitle(assessmentName: string, mockNumber: number): string {
@@ -76,48 +79,59 @@ export function answerInlines(answer: Answer, content: QuestionContent): Inline[
 
 function inSectionOrder(blueprint: Blueprint, questions: readonly PaperContentQuestion[]) {
   const sorted = [...questions].sort((a, b) => a.number - b.number);
-  return blueprint.sections
+  return blueprintSections(blueprint)
     .map((section) => ({ section, questions: sorted.filter((q) => q.sectionCode === section.code) }))
     .filter((group) => group.questions.length > 0);
 }
 
-const sectionTitle = (code: SectionCode, marks: number): string => `Section ${code} (${marks} ${marks === 1 ? "mark" : "marks"})`;
+/** "Section A (12 marks)": the school's own name for the part, with its marks. */
+export const sectionTitle = (label: string, marks: number): string => `${label} (${marks} ${marks === 1 ? "mark" : "marks"})`;
+
+const marksOf = (questions: readonly PaperContentQuestion[]): number => questions.reduce((total, q) => total + q.marks, 0);
 
 export function buildStudentPaper(input: PaperContentInput): StudentPaper {
   const { blueprint } = input;
-  const sections: StudentSection[] = inSectionOrder(blueprint, input.questions).map(({ section, questions }) => ({
-    title: sectionTitle(section.code, questions.reduce((total, q) => total + q.marks, 0)),
-    instructions: SECTION_INSTRUCTIONS[section.code],
-    questions: questions.map(
-      (q): StudentQuestion => ({
-        number: q.number,
-        marks: q.marks,
-        content: q.content,
-        workingSpace: workingSpaceFor(q.questionType, q.marks),
-      }),
-    ),
-  }));
+  const sections: StudentSection[] = inSectionOrder(blueprint, input.questions).map(({ section, questions }) => {
+    const booklet = bookletOf(section);
+    return {
+      title: sectionTitle(section.label, marksOf(questions)),
+      ...(booklet === undefined ? {} : { booklet }),
+      instructions: SECTION_INSTRUCTIONS[section.kind],
+      questions: questions.map(
+        (q): StudentQuestion => ({
+          number: q.number,
+          marks: q.marks,
+          content: q.content,
+          workingSpace: workingSpaceFor(q.questionType, q.marks),
+        }),
+      ),
+    };
+  });
   return {
     title: paperTitle(input.assessmentName, input.mockNumber),
     levelLabel: "Primary 3",
     subjectLabel: "Mathematics",
     durationMinutes: blueprint.durationMinutes,
-    totalMarks: input.questions.reduce((total, q) => total + q.marks, 0),
+    totalMarks: marksOf(input.questions),
     instructions: [...STUDENT_INSTRUCTIONS],
     sections,
   };
 }
 
 export function buildAnswerPack(input: PaperContentInput): AnswerPack {
-  const sections: AnswerPackSection[] = inSectionOrder(input.blueprint, input.questions).map(({ section, questions }) => ({
-    title: sectionTitle(section.code, questions.reduce((total, q) => total + q.marks, 0)),
-    questions: questions.map((q) => ({
-      number: q.number,
-      marks: q.marks,
-      answer: answerInlines(q.answer, q.content),
-      workedSolution: q.workedSolution,
-      topicLabel: q.topicLabel,
-    })),
-  }));
+  const sections: AnswerPackSection[] = inSectionOrder(input.blueprint, input.questions).map(({ section, questions }) => {
+    const booklet = bookletOf(section);
+    return {
+      title: sectionTitle(section.label, marksOf(questions)),
+      ...(booklet === undefined ? {} : { booklet }),
+      questions: questions.map((q) => ({
+        number: q.number,
+        marks: q.marks,
+        answer: answerInlines(q.answer, q.content),
+        workedSolution: q.workedSolution,
+        topicLabel: q.topicLabel,
+      })),
+    };
+  });
   return { title: paperTitle(input.assessmentName, input.mockNumber), sections };
 }

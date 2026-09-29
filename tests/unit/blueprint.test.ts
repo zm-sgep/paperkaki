@@ -1,13 +1,18 @@
 import { describe, expect, it } from "vitest";
 import {
   DIFFICULTY_PRESETS,
-  allocateMarks,
+  END_OF_YEAR_COMMON_FORMAT,
   buildBlueprint,
+  blueprintSections,
+  formatTotalMarks,
+  splitEvenly,
+  standardFormat,
   type BlueprintInput,
   type DifficultyLevel,
+  type PaperFormat,
 } from "@/domain/assessments";
 
-function input(topicCount: number, totalMarks: number, difficulty: DifficultyLevel = "balanced"): BlueprintInput {
+function input(topicCount: number, totalMarks: number, difficulty: DifficultyLevel = "balanced", format?: PaperFormat): BlueprintInput {
   return {
     curriculumVersionId: "cv-test",
     level: "P3",
@@ -18,39 +23,29 @@ function input(topicCount: number, totalMarks: number, difficulty: DifficultyLev
       outcomeIds: [`T${i + 1}-01`, `T${i + 1}-02`],
     })),
     settings: { totalMarks, durationMinutes: 45, difficulty },
+    format,
   };
 }
 
-describe("buildBlueprint", () => {
-  it("splits 40 marks over 3 topics as 14/13/13 with section A 4/3/3", () => {
+describe("buildBlueprint without a format (the standard mock)", () => {
+  it("splits 40 marks over 3 topics as 14/13/13 with two parts of 10 and 30 marks", () => {
     const bp = buildBlueprint(input(3, 40));
     expect(bp.scope.map((s) => s.targetMarks)).toEqual([14, 13, 13]);
-    expect(bp.scope.map((s) => s.sectionMarks.A)).toEqual([4, 3, 3]);
-    expect(bp.scope.map((s) => s.sectionMarks.B)).toEqual([10, 10, 10]);
-    expect(bp.sections.map((s) => [s.code, s.marks])).toEqual([
-      ["A", 10],
-      ["B", 30],
+    expect(blueprintSections(bp).map((s) => [s.code, s.kind, s.totalMarks])).toEqual([
+      ["A", "mcq", 10],
+      ["B", "short", 30],
     ]);
+    expect(bp.format).toEqual(standardFormat({ totalMarks: 40, durationMinutes: 45 }));
   });
 
-  it("uses 25% for section A, rounding half up", () => {
-    const a = (total: number) => buildBlueprint(input(1, total)).sections[0]?.marks;
+  it("uses 25% for the multiple choice part, rounding half up", () => {
+    const a = (total: number) => buildBlueprint(input(1, total)).format.sections[0]?.totalMarks;
     expect(a(40)).toBe(10);
     expect(a(20)).toBe(5);
     expect(a(30)).toBe(8);
     expect(a(10)).toBe(3);
     expect(a(15)).toBe(4);
     expect(a(60)).toBe(15);
-  });
-
-  it("names the two sections and their question types", () => {
-    const bp = buildBlueprint(input(2, 30));
-    expect(bp.sections[0]).toMatchObject({ code: "A", title: "Multiple choice", types: ["mcq"] });
-    expect(bp.sections[1]).toMatchObject({
-      code: "B",
-      title: "Short answer",
-      types: ["number", "fraction", "text"],
-    });
   });
 
   it("carries header fields, scope in parent order, and the no-repeat rule", () => {
@@ -75,19 +70,14 @@ describe("buildBlueprint", () => {
     }
   });
 
-  it("keeps section and topic marks consistent for every allowed total and topic count", () => {
+  it("keeps part and topic marks consistent for every allowed total and topic count", () => {
     for (let total = 10; total <= 60; total += 5) {
       for (let n = 1; n <= 11; n += 1) {
         const bp = buildBlueprint(input(n, total));
         const sum = (xs: number[]) => xs.reduce((a, b) => a + b, 0);
         expect(sum(bp.scope.map((s) => s.targetMarks))).toBe(total);
-        expect(sum(bp.scope.map((s) => s.sectionMarks.A))).toBe(bp.sections[0]?.marks);
-        expect(sum(bp.scope.map((s) => s.sectionMarks.B))).toBe(bp.sections[1]?.marks);
-        for (const s of bp.scope) {
-          expect(s.sectionMarks.A + s.sectionMarks.B).toBe(s.targetMarks);
-          expect(s.sectionMarks.A).toBeGreaterThanOrEqual(0);
-          expect(s.sectionMarks.B).toBeGreaterThanOrEqual(0);
-        }
+        expect(formatTotalMarks(bp.format)).toBe(total);
+        expect(bp.totalMarks).toBe(total);
         if (total >= n) expect(bp.scope.every((s) => s.targetMarks >= 1)).toBe(true);
       }
     }
@@ -118,16 +108,31 @@ describe("buildBlueprint", () => {
   });
 });
 
-describe("allocateMarks", () => {
-  it("matches the blueprint numbers", () => {
-    expect(allocateMarks(40, 3)).toEqual({
-      sectionA: 10,
-      sectionB: 30,
-      topics: [
-        { targetMarks: 14, A: 4, B: 10 },
-        { targetMarks: 13, A: 3, B: 10 },
-        { targetMarks: 13, A: 3, B: 10 },
-      ],
-    });
+describe("buildBlueprint with a format", () => {
+  it("carries the format and takes marks and time from it", () => {
+    const bp = buildBlueprint(input(5, 40, "balanced", END_OF_YEAR_COMMON_FORMAT));
+    expect(bp.format).toEqual(END_OF_YEAR_COMMON_FORMAT);
+    expect(bp.totalMarks).toBe(50);
+    expect(bp.durationMinutes).toBe(90);
+    expect(bp.scope.map((s) => s.targetMarks)).toEqual([10, 10, 10, 10, 10]);
+    expect(blueprintSections(bp).map((s) => [s.code, s.label])).toEqual([
+      ["A", "Section A"],
+      ["B", "Section B"],
+      ["C", "Section C"],
+    ]);
+  });
+
+  it("copies the format, so the blueprint cannot change a shared preset", () => {
+    const bp = buildBlueprint(input(2, 40, "balanced", END_OF_YEAR_COMMON_FORMAT));
+    bp.format.sections[0]!.label = "Changed";
+    expect(END_OF_YEAR_COMMON_FORMAT.sections[0]?.label).toBe("Section A");
+  });
+});
+
+describe("splitEvenly", () => {
+  it("gives the remainder to the earliest parts", () => {
+    expect(splitEvenly(40, 3)).toEqual([14, 13, 13]);
+    expect(splitEvenly(50, 11)).toEqual([5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4]);
+    expect(splitEvenly(10, 0)).toEqual([]);
   });
 });

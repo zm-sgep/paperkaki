@@ -11,6 +11,7 @@ import {
   curriculumOutcomes,
   curriculumTopics,
   parentProfiles,
+  schoolPaperFormats,
   type Assessment,
   type AssessmentRequirements,
   type Child,
@@ -107,7 +108,7 @@ export async function setLastSelectedChildId(db: Database, parentProfileId: stri
 // Assessments
 // ---------------------------------------------------------------------------
 
-export type OwnedAssessment = Assessment & { childNickname: string; childArchived: boolean };
+export type OwnedAssessment = Assessment & { childNickname: string; childArchived: boolean; parentProfileId: string };
 
 /** One assessment, only if its child belongs to this parent. */
 export async function getOwnedAssessment(
@@ -122,7 +123,9 @@ export async function getOwnedAssessment(
     .innerJoin(children, eq(children.id, assessments.childId))
     .where(and(eq(assessments.id, assessmentId), eq(children.parentProfileId, parentProfileId)))
     .limit(1);
-  return row ? { ...row.assessment, childNickname: row.nickname, childArchived: row.archivedAt !== null } : null;
+  return row
+    ? { ...row.assessment, childNickname: row.nickname, childArchived: row.archivedAt !== null, parentProfileId }
+    : null;
 }
 
 /** Assessments of this parent's active children, oldest created first (ties on date keep this order). */
@@ -143,7 +146,7 @@ export async function listAssessmentsForParent(
       ),
     )
     .orderBy(asc(assessments.createdAt), asc(assessments.id));
-  return rows.map((row) => ({ ...row.assessment, childNickname: row.nickname, childArchived: false }));
+  return rows.map((row) => ({ ...row.assessment, childNickname: row.nickname, childArchived: false, parentProfileId }));
 }
 
 export async function insertAssessment(
@@ -263,12 +266,61 @@ export async function upsertRequirements(
     durationMinutes: number;
     difficulty: AssessmentRequirements["difficulty"];
     source: AssessmentRequirements["source"];
+    /** The chosen paper format as JSON, or null for the standard mock. */
+    paperFormat: Record<string, unknown> | null;
   },
 ): Promise<void> {
   await db
     .insert(assessmentRequirements)
     .values({ assessmentId, ...values })
     .onConflictDoUpdate({ target: assessmentRequirements.assessmentId, set: { ...values, updatedAt: new Date() } });
+}
+
+// ---------------------------------------------------------------------------
+// School paper formats (saved per child and assessment type)
+// ---------------------------------------------------------------------------
+
+/** The format saved for one of this parent's children, or null. Another parent's child matches nothing. */
+export async function getSchoolPaperFormat(
+  db: Database,
+  parentProfileId: string,
+  childId: string,
+  assessmentType: Assessment["assessmentType"],
+): Promise<Record<string, unknown> | null> {
+  if (!isUuid(childId)) return null;
+  const [row] = await db
+    .select({ format: schoolPaperFormats.format })
+    .from(schoolPaperFormats)
+    .innerJoin(children, eq(children.id, schoolPaperFormats.childId))
+    .where(
+      and(
+        eq(schoolPaperFormats.childId, childId),
+        eq(schoolPaperFormats.assessmentType, assessmentType),
+        eq(children.parentProfileId, parentProfileId),
+      ),
+    )
+    .limit(1);
+  return row?.format ?? null;
+}
+
+/** Saves (or replaces) the format for this parent's child. Returns false when the child is not theirs. */
+export async function upsertSchoolPaperFormat(
+  db: Database,
+  parentProfileId: string,
+  childId: string,
+  assessmentType: Assessment["assessmentType"],
+  format: Record<string, unknown>,
+): Promise<boolean> {
+  const child = await getOwnedChild(db, parentProfileId, childId);
+  if (!child) return false;
+  await db
+    .insert(schoolPaperFormats)
+    .values({ childId, assessmentType, format })
+    .onConflictDoUpdate({
+      target: [schoolPaperFormats.childId, schoolPaperFormats.assessmentType],
+      set: { format, updatedAt: new Date() },
+    });
+  return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -294,7 +346,7 @@ export async function insertBlueprintVersion(
     assessmentId: string;
     version: number;
     spec: Record<string, unknown>;
-    scope: { topicId: string; targetMarks: number; sectionAMarks: number; sectionBMarks: number }[];
+    scope: { topicId: string; targetMarks: number }[];
   },
 ): Promise<string> {
   const [row] = await db

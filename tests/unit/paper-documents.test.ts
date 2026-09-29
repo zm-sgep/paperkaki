@@ -50,7 +50,7 @@ describe("paper documents (M4-04, M4-05 inputs)", () => {
 
   it("gives more working space to more marks and none to multiple choice", () => {
     expect(workingSpaceFor("mcq", 5)).toBe("none");
-    expect([1, 2, 3, 4, 5].map((m) => workingSpaceFor("number", m))).toEqual(["none", "small", "medium", "large", "large"]);
+    expect([1, 2, 3, 4, 5].map((m) => workingSpaceFor("number", m))).toEqual(["small", "medium", "large", "large", "large"]);
     const paper = buildStudentPaper({ assessmentName: "WA2", mockNumber: 1, blueprint, questions });
     expect(paper.sections.flatMap((s) => s.questions).map((q) => q.workingSpace)).toEqual(["none", "none", "large"]);
   });

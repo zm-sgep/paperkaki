@@ -1,12 +1,18 @@
 import { InputError, NotFoundError } from "@/application/errors";
-import { buildAssessmentPlan, syncBlueprint } from "@/application/assessment-plan";
+import { buildAssessmentPlan, formatToJson, syncBlueprint, type AssessmentPlan } from "@/application/assessment-plan";
 import { getCurriculumVersionForLevel } from "@/application/queries/curriculum";
 import {
   deriveAssessmentName,
+  formatTotalMarks,
+  normalisePaperFormat,
+  presetFormat,
   recommendPaperSettings,
   todayInSingapore,
   validateAssessmentDate,
+  validatePaperFormat,
   type AssessmentType,
+  type PaperFormat,
+  type PaperFormatPreset,
 } from "@/domain/assessments";
 import { recordAuditEvent } from "@/lib/audit";
 import type { Database } from "@/repositories/postgres/client";
@@ -20,11 +26,14 @@ import {
   replaceScopeItems,
   setAssessmentStatus,
   upsertRequirements,
+  upsertSchoolPaperFormat,
   type OwnedAssessment,
 } from "@/repositories/postgres/assessments";
 import type { Assessment } from "@/repositories/postgres/schema";
+import { parsePaperFormat } from "@/schemas/paper-format";
 import {
   AssessmentTypeSchema,
+  DifficultyInputSchema,
   NicknameSchema,
   PaperSettingsInputSchema,
   SUPPORTED_SUBJECT,
@@ -180,8 +189,7 @@ export async function confirmScope(
     // Recommended settings follow the topics until the parent changes them.
     const stored = await getRequirements(tx, assessmentId);
     if (!stored || stored.source === "recommended") {
-      const plan = await buildAssessmentPlan(tx, confirmed);
-      await upsertRequirements(tx, assessmentId, { ...recommendPaperSettings({ topicCount: plan.included.length }), source: "recommended" });
+      await storeRecommended(tx, assessmentId, await buildAssessmentPlan(tx, confirmed));
     }
     await syncBlueprint(tx, confirmed);
 
@@ -198,7 +206,20 @@ export async function confirmScope(
   });
 }
 
-/** Saves the parent's own paper settings. They are stored apart from the topics. */
+/** Stores the recommendation (settings and paper format) as what is in force. It follows the topics until the parent chooses. */
+async function storeRecommended(db: Database, assessmentId: string, plan: AssessmentPlan): Promise<void> {
+  await upsertRequirements(db, assessmentId, {
+    ...plan.recommended,
+    paperFormat: plan.recommendedChoice === "standard" ? null : formatToJson(plan.recommendedFormat),
+    source: "recommended",
+  });
+}
+
+/**
+ * Saves the parent's own paper settings. They are stored apart from the topics. With marks and time
+ * this is the standard mock scaled to those marks; with only a difficulty, the paper format in force
+ * (and so its marks and time) stays as it is.
+ */
 export async function setPaperSettings(
   parentProfileId: string,
   assessmentId: string,
@@ -206,16 +227,30 @@ export async function setPaperSettings(
   context: CommandContext = {},
 ): Promise<void> {
   const db = await resolveCommandDb(context);
-  const parsed = PaperSettingsInputSchema.safeParse(input);
-  if (!parsed.success) throw new InputError(fieldErrorsOf(parsed.error));
+  const difficultyOnly = input.totalMarks === undefined && input.durationMinutes === undefined;
+  const standard = difficultyOnly ? null : PaperSettingsInputSchema.safeParse(input);
+  const difficultyChoice = difficultyOnly ? DifficultyInputSchema.safeParse(input) : null;
+  const failure = standard && !standard.success ? standard.error : difficultyChoice && !difficultyChoice.success ? difficultyChoice.error : null;
+  if (failure) throw new InputError(fieldErrorsOf(failure));
   await db.transaction(async (tx) => {
     const assessment = await requireOwnedAssessment(tx, parentProfileId, assessmentId);
-    await upsertRequirements(tx, assessmentId, { ...parsed.data, source: "parent" });
+    if (standard?.success) {
+      await upsertRequirements(tx, assessmentId, { ...standard.data, paperFormat: null, source: "parent" });
+    } else if (difficultyChoice?.success) {
+      const plan = await buildAssessmentPlan(tx, assessment);
+      await upsertRequirements(tx, assessmentId, {
+        totalMarks: plan.settings.totalMarks,
+        durationMinutes: plan.settings.durationMinutes,
+        difficulty: difficultyChoice.data.difficulty,
+        paperFormat: plan.selectedChoice === "standard" ? null : formatToJson(plan.format),
+        source: "parent",
+      });
+    }
     await syncBlueprint(tx, assessment);
   });
 }
 
-/** "Use recommended settings": back to the suggestion for the chosen topics. */
+/** "Use recommended settings": back to the suggestion for the chosen topics and assessment. */
 export async function resetToRecommendedSettings(
   parentProfileId: string,
   assessmentId: string,
@@ -224,9 +259,102 @@ export async function resetToRecommendedSettings(
   const db = await resolveCommandDb(context);
   await db.transaction(async (tx) => {
     const assessment = await requireOwnedAssessment(tx, parentProfileId, assessmentId);
-    const plan = await buildAssessmentPlan(tx, assessment);
-    await upsertRequirements(tx, assessmentId, { ...recommendPaperSettings({ topicCount: plan.included.length }), source: "recommended" });
+    await storeRecommended(tx, assessmentId, await buildAssessmentPlan(tx, assessment));
     await syncBlueprint(tx, assessment);
   });
 }
 
+export type PaperFormatInput = {
+  /** "standard", a ready-made format, "saved" (this child's saved format) or "custom". */
+  choice: string;
+  /** The parent's own parts and time, as read from the form. Only used for "custom". */
+  customFormat?: unknown;
+  /** Keep a custom format for this child's future papers of the same kind. Default true. */
+  saveForFuture?: boolean | undefined;
+};
+
+const PRESET_CHOICES: readonly string[] = ["p3_end_of_year_common", "p3_weighted_common"];
+
+/** Errors of a custom format keyed for the form: one entry per part ("part-0"), the rest under "format". */
+function customFormatErrors(format: PaperFormat): Record<string, string> {
+  const errors: Record<string, string> = {};
+  for (const issue of validatePaperFormat(format)) {
+    const key = issue.sectionIndex === undefined ? "format" : `part-${issue.sectionIndex}`;
+    errors[key] = errors[key] ? `${errors[key]} ${issue.message}` : issue.message;
+  }
+  return errors;
+}
+
+/**
+ * Saves the paper format the parent chose: the standard mock, a ready-made format, the child's saved
+ * format, or "Match my school's paper" (their own parts, optionally kept for the child's future papers
+ * of this kind). The paper's marks and time follow the format.
+ */
+export async function setPaperFormat(
+  parentProfileId: string,
+  assessmentId: string,
+  input: PaperFormatInput,
+  context: CommandContext = {},
+): Promise<void> {
+  const db = await resolveCommandDb(context);
+  await db.transaction(async (tx) => {
+    const assessment = await requireOwnedAssessment(tx, parentProfileId, assessmentId);
+    const plan = await buildAssessmentPlan(tx, assessment);
+    const difficulty = plan.settings.difficulty;
+
+    let paperFormat: PaperFormat | null;
+    let totalMarks: number;
+    let durationMinutes: number;
+    let saveCustom: PaperFormat | null = null;
+
+    if (input.choice === "standard") {
+      paperFormat = null;
+      // Keep marks and time the parent already tuned for the standard mock; otherwise the recommendation.
+      const keep = plan.selectedChoice === "standard" && plan.storedSettingsSource === "parent";
+      const standard = keep ? plan.settings : recommendPaperSettings({ topicCount: plan.included.length });
+      totalMarks = standard.totalMarks;
+      durationMinutes = standard.durationMinutes;
+    } else if (PRESET_CHOICES.includes(input.choice)) {
+      paperFormat = presetFormat(input.choice as PaperFormatPreset, { topicCount: plan.included.length });
+      totalMarks = formatTotalMarks(paperFormat);
+      durationMinutes = paperFormat.durationMinutes;
+    } else if (input.choice === "saved") {
+      if (!plan.savedFormat) throw new InputError({ format: "There is no saved format yet. Choose another format." });
+      paperFormat = plan.savedFormat;
+      totalMarks = formatTotalMarks(paperFormat);
+      durationMinutes = paperFormat.durationMinutes;
+    } else if (input.choice === "custom") {
+      const parsed = parsePaperFormat(input.customFormat);
+      if (!parsed) throw new InputError({ format: "Check the parts of the paper and try again." });
+      paperFormat = normalisePaperFormat(parsed);
+      const errors = customFormatErrors(paperFormat);
+      if (Object.keys(errors).length > 0) throw new InputError(errors);
+      totalMarks = formatTotalMarks(paperFormat);
+      durationMinutes = paperFormat.durationMinutes;
+      if (input.saveForFuture !== false) saveCustom = paperFormat;
+    } else {
+      throw new InputError({ format: "Choose one of the paper formats." });
+    }
+
+    await upsertRequirements(tx, assessmentId, {
+      totalMarks,
+      durationMinutes,
+      difficulty,
+      paperFormat: paperFormat ? formatToJson(paperFormat) : null,
+      source: "parent",
+    });
+    if (saveCustom) {
+      const saved = await upsertSchoolPaperFormat(tx, parentProfileId, assessment.childId, assessment.assessmentType, formatToJson(saveCustom));
+      if (!saved) throw new NotFoundError();
+    }
+    await syncBlueprint(tx, assessment);
+    await recordAuditEvent(tx, {
+      action: "assessment.paper_format_set",
+      entityType: "assessment",
+      entityId: assessmentId,
+      actorProfileId: parentProfileId,
+      metadata: { choice: input.choice, totalMarks, partCount: paperFormat?.sections.length ?? null, savedForFuture: saveCustom !== null },
+      requestId: context.requestId ?? null,
+    });
+  });
+}

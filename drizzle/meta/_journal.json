@@ -57,6 +57,13 @@
       "when": 1790701452346,
       "tag": "0007_paper_immutability",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1790723688478,
+      "tag": "0008_paper_formats",
+      "breakpoints": true
     }
   ]
 }

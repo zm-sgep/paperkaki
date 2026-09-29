@@ -4,6 +4,8 @@ import {
   todayInSingapore,
 } from "@/domain/assessments";
 import { ANSWER_PACK_NOTE, mockReadyHeading, mockSummaryLine, printTip } from "@/domain/papers";
+import { formatSummaryLine } from "@/domain/assessments";
+import { parsePaperFormat } from "@/schemas/paper-format";
 import type { Database } from "@/repositories/postgres/client";
 import { getOwnedPaper, type OwnedPaper } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
@@ -24,8 +26,10 @@ export type MockPage = {
   heading: string;
   /** "Test Child A · Mathematics WA2 · Tue 14 Oct" */
   contextLine: string;
-  /** "40 marks · 45 minutes · Fractions, Whole numbers" */
+  /** "40 marks · 45 min · Sections A, B" */
   summary: string;
+  /** "Fractions, Whole numbers" */
+  topicsLine: string;
   tip: string;
   answerPackNote: string;
   /** Local links that redirect to a fresh short-lived signed URL, after an ownership check. */
@@ -34,16 +38,21 @@ export type MockPage = {
   backHref: string;
 };
 
-type SpecShape = { totalMarks?: unknown; durationMinutes?: unknown; scope?: unknown };
+type SpecShape = { totalMarks?: unknown; durationMinutes?: unknown; scope?: unknown; format?: unknown };
 
 /** Marks, minutes and topic labels of the blueprint version the paper was built from. */
-function summaryOf(paper: OwnedPaper): { totalMarks: number; durationMinutes: number; topicLabels: string[] } {
+function summaryOf(paper: OwnedPaper): { totalMarks: number; durationMinutes: number; topicLabels: string[]; line: string } {
   const spec = paper.blueprintSpec as SpecShape;
   const scope = Array.isArray(spec.scope) ? (spec.scope as { label?: unknown }[]) : [];
+  const totalMarks = typeof spec.totalMarks === "number" ? spec.totalMarks : 0;
+  const durationMinutes = typeof spec.durationMinutes === "number" ? spec.durationMinutes : 0;
+  const format = parsePaperFormat(spec.format);
   return {
-    totalMarks: typeof spec.totalMarks === "number" ? spec.totalMarks : 0,
-    durationMinutes: typeof spec.durationMinutes === "number" ? spec.durationMinutes : 0,
+    totalMarks,
+    durationMinutes,
     topicLabels: scope.map((topic) => topic.label).filter((label): label is string => typeof label === "string"),
+    // A paper made before paper formats existed has no format: fall back to marks and time.
+    line: format ? formatSummaryLine(format) : mockSummaryLine({ totalMarks, durationMinutes, topicLabels: [] }),
   };
 }
 
@@ -65,7 +74,8 @@ export async function getMockPage(
     number: paper.number,
     heading: mockReadyHeading(paper.number),
     contextLine: `${paper.childNickname} · ${paper.assessmentSubject} ${paper.assessmentName} · ${formatAssessmentDate(paper.assessmentDate, today)}`,
-    summary: mockSummaryLine(summary),
+    summary: summary.line,
+    topicsLine: summary.topicLabels.join(", "),
     tip: printTip(paper.childNickname, summary.durationMinutes),
     answerPackNote: ANSWER_PACK_NOTE,
     studentHref: `${base}/download/student`,

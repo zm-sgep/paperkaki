@@ -37,6 +37,8 @@ export interface StudentQuestion extends NoAnswerFields {
 
 export interface StudentSection extends NoAnswerFields {
   title: string;
+  /** e.g. "Booklet A". Consecutive sections with the same booklet are printed together, each booklet on a new page. */
+  booklet?: string;
   instructions?: string;
   questions: StudentQuestion[];
 }
@@ -63,6 +65,8 @@ export interface AnswerPackQuestion {
 
 export interface AnswerPackSection {
   title: string;
+  /** Same booklet name as the student paper, so answers sit under the same headings. */
+  booklet?: string;
   questions: AnswerPackQuestion[];
 }
 

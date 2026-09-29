@@ -182,8 +182,9 @@ describe("mock generation command (M4-06)", () => {
       tip: "Print on A4. Give Test Child A 45 minutes.",
       answerPackNote: "Keep this for yourself. It has the answers.",
     });
-    expect(page?.summary).toBe("40 marks · 45 minutes · Whole numbers to 10 000, Adding and subtracting bigger numbers, Fractions");
-    expect(`${page?.heading}${page?.summary}${page?.tip}`).not.toMatch(/blueprint|outcome|P3-|%/i);
+    expect(page?.summary).toBe("40 marks · 45 min · Sections A, B");
+    expect(page?.topicsLine).toBe("Whole numbers to 10 000, Adding and subtracting bigger numbers, Fractions");
+    expect(`${page?.heading}${page?.summary}${page?.topicsLine}${page?.tip}`).not.toMatch(/blueprint|outcome|P3-|%/i);
     const url = await getMockDownloadUrl({ parentProfileId: parentA, role: "parent" }, assessmentId, first!.id, "answers", context());
     expect(url).toContain(`/api/files/paper-pdfs/parents/${parentA}/assessments/${assessmentId}/mock-1-answers.pdf`);
     expect(url).toContain("exp=300");

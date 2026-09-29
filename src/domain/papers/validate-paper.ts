@@ -9,7 +9,9 @@
  * its answer verifies, whether its files resolve) and passes them in. Nothing here reads a database
  * or a file.
  */
-import type { Blueprint, SectionCode } from "@/domain/assessments/blueprint";
+import { blueprintSections, type Blueprint, type SectionCode } from "@/domain/assessments/blueprint";
+import { questionKindOf } from "@/domain/assessments/paper-format";
+import type { QuestionType } from "@/schemas/question-content";
 import type { SelectedQuestion } from "./select-questions";
 
 /** What the caller found out about one selected question version. */
@@ -18,6 +20,8 @@ export type PaperQuestionFacts = {
   approved: boolean;
   /** Marks stored on the question version itself. */
   marks: number;
+  /** The stored question type: with the marks it decides which kind of part the question may go in. */
+  questionType: QuestionType;
   hasAnswer: boolean;
   /** Outcome of the independent answer check (src/domain/questions/verify.ts). */
   answerVerified: boolean;
@@ -32,6 +36,9 @@ export type PaperFailureCode =
   | "total_marks"
   | "topic_marks"
   | "section_marks"
+  | "section_count"
+  | "section_kind"
+  | "topic_missing"
   | "numbering"
   | "section_order"
   | "duplicate_question"
@@ -63,7 +70,7 @@ export type ScopeReportTopic = {
 export type ScopeReport = {
   totalMarks: number;
   topics: ScopeReportTopic[];
-  sections: { code: SectionCode; marks: number; questionCount: number }[];
+  sections: { code: SectionCode; label: string; marks: number; questionCount: number }[];
 };
 
 export type PaperValidation =
@@ -92,9 +99,9 @@ export function buildScopeReport(blueprint: Blueprint, selection: readonly Selec
         questionCount: chosen.length,
       };
     }),
-    sections: blueprint.sections.map((section) => {
+    sections: blueprintSections(blueprint).map((section) => {
       const chosen = selection.filter((q) => q.sectionCode === section.code);
-      return { code: section.code, marks: sum(chosen.map((q) => q.marks)), questionCount: chosen.length };
+      return { code: section.code, label: section.label, marks: sum(chosen.map((q) => q.marks)), questionCount: chosen.length };
     }),
   };
 }
@@ -122,7 +129,8 @@ export function validatePaper(input: ValidatePaperInput): PaperValidation {
   if (numbers.some((n, index) => n !== index + 1)) {
     fail({ code: "numbering", detail: `Question numbers are ${numbers.join(", ")}; they must run 1 to ${selection.length} in order.` });
   }
-  const sectionRank = new Map(blueprint.sections.map((section, index) => [section.code, index]));
+  const sections = blueprintSections(blueprint);
+  const sectionRank = new Map(sections.map((section, index) => [section.code, index]));
   let lastRank = -1;
   for (const q of selection) {
     const rank = sectionRank.get(q.sectionCode);
@@ -144,10 +152,11 @@ export function validatePaper(input: ValidatePaperInput): PaperValidation {
     seen.add(q.questionId);
   }
 
-  // Every scope topic and section carries exactly the marks the design asked for.
+  // Every topic of the scope is on the paper, and nothing from outside it. (Topic marks are balanced
+  // as well as the bank allows, so they are a goal, not a rule.)
   for (const topic of scope.topics) {
-    if (topic.actualMarks !== topic.targetMarks || (topic.targetMarks > 0 && topic.questionCount === 0)) {
-      fail({ code: "topic_marks", detail: `Topic ${topic.topicId} has ${topic.actualMarks} marks, expected ${topic.targetMarks}.` });
+    if (topic.questionCount === 0) {
+      fail({ code: "topic_missing", detail: `Topic ${topic.topicId} has no question on the paper.` });
     }
   }
   const knownTopics = new Set(blueprint.scope.map((topic) => topic.topicId));
@@ -156,11 +165,19 @@ export function validatePaper(input: ValidatePaperInput): PaperValidation {
       fail({ code: "topic_marks", questionId: q.questionId, number: q.number, detail: `Question ${q.number} is outside the confirmed scope.` });
     }
   }
-  for (const section of blueprint.sections) {
-    const expected = sum(blueprint.scope.map((topic) => topic.sectionMarks[section.code]));
-    const actual = scope.sections.find((s) => s.code === section.code)?.marks ?? 0;
-    if (actual !== expected) {
-      fail({ code: "section_marks", detail: `Section ${section.code} has ${actual} marks, expected ${expected}.` });
+  // Every part carries exactly the questions and marks the format asked for.
+  for (const section of sections) {
+    const found = scope.sections.find((s) => s.code === section.code);
+    if ((found?.questionCount ?? 0) !== section.questionCount) {
+      fail({ code: "section_count", detail: `${section.label} has ${found?.questionCount ?? 0} questions, expected ${section.questionCount}.` });
+    }
+    if ((found?.marks ?? 0) !== section.totalMarks) {
+      fail({ code: "section_marks", detail: `${section.label} has ${found?.marks ?? 0} marks, expected ${section.totalMarks}.` });
+    }
+    if (section.marksEach !== undefined) {
+      for (const q of selection.filter((item) => item.sectionCode === section.code && item.marks !== section.marksEach)) {
+        fail({ code: "section_marks", questionId: q.questionId, number: q.number, detail: `Question ${q.number} is worth ${q.marks} marks, but every question in ${section.label} is worth ${section.marksEach}.` });
+      }
     }
   }
 
@@ -176,6 +193,10 @@ export function validatePaper(input: ValidatePaperInput): PaperValidation {
     if (!facts.approved) fail({ code: "not_approved", ...at, detail: `Question ${q.number} is not approved.` });
     if (facts.marks !== q.marks) {
       fail({ code: "marks_mismatch", ...at, detail: `Question ${q.number} is worth ${facts.marks} marks, not ${q.marks}.` });
+    }
+    const part = sections.find((section) => section.code === q.sectionCode);
+    if (part && questionKindOf({ questionType: facts.questionType, marks: facts.marks }) !== part.kind) {
+      fail({ code: "section_kind", ...at, detail: `Question ${q.number} is a ${facts.questionType} question worth ${facts.marks} marks and does not belong in ${part.label}.` });
     }
     if (!facts.hasAnswer) fail({ code: "no_answer", ...at, detail: `Question ${q.number} has no answer.` });
     else if (!facts.answerVerified) {

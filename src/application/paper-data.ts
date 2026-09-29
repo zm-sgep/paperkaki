@@ -60,6 +60,7 @@ export async function loadPaperQuestions(
           questionId: question.id,
           approved: question.status === "approved",
           marks: question.marks,
+          questionType: question.questionType,
           hasAnswer: AnswerSchema.safeParse(question.answer).success,
           answerVerified: verification?.ok === true,
           verificationReasons: reasons,
