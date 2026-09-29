@@ -1,3 +1,6 @@
+import { bookletOf, formatTotalMarks, type PaperFormat, type SectionKind } from "./paper-format";
+import type { FormatChoiceId } from "./paper-format-presets";
+
 /**
  * Parent-facing wording for the assessment setup screens. Pure, so the sentences are unit-tested
  * and never assembled inside components. No internal terms and no percentages (UX rule 9).
@@ -14,6 +17,64 @@ export function summaryLine(input: { totalMarks: number; durationMinutes: number
   return [`${input.totalMarks} marks`, `${input.durationMinutes} minutes`, input.topicLabels.join(", ")]
     .filter((part) => part !== "")
     .join(" · ");
+}
+
+/** "45 min", "1 h", "1 h 30 min". */
+export function durationText(minutes: number): string {
+  const hours = Math.floor(minutes / 60);
+  const rest = minutes % 60;
+  if (hours === 0) return `${rest} min`;
+  return rest === 0 ? `${hours} h` : `${hours} h ${rest} min`;
+}
+
+const SECTION_LETTER = /^section\s+([A-Za-z0-9]+)$/i;
+
+/** "Sections A, B, C" when the parts are named that way, otherwise their names: "Booklet A, Booklet B". */
+export function formatPartsText(format: PaperFormat): string {
+  const names: string[] = [];
+  for (const section of format.sections) {
+    const name = bookletOf(section) ?? section.label.trim();
+    if (name !== "" && names[names.length - 1] !== name) names.push(name);
+  }
+  const letters = names.map((name) => SECTION_LETTER.exec(name)?.[1]);
+  if (names.length > 0 && letters.every((letter) => letter !== undefined)) {
+    return `${names.length === 1 ? "Section" : "Sections"} ${letters.join(", ")}`;
+  }
+  return names.join(", ");
+}
+
+/** "50 marks · 1 h 30 min · Sections A, B, C": the paper format in one line. */
+export function formatSummaryLine(format: PaperFormat): string {
+  return [`${formatTotalMarks(format)} marks`, durationText(format.durationMinutes), formatPartsText(format)]
+    .filter((part) => part !== "")
+    .join(" · ");
+}
+
+const KIND_COUNT_TEXT: Record<SectionKind, string> = {
+  mcq: "multiple choice",
+  short: "short answer",
+  word_problem: "word problems",
+};
+
+/** "6 multiple choice · 16 short answer · 4 word problems". */
+export function formatKindsText(format: PaperFormat): string {
+  return format.sections.map((section) => `${section.questionCount} ${KIND_COUNT_TEXT[section.kind]}`).join(" · ");
+}
+
+/** The wording of a ready-made format choice on the "Customise paper" panel. */
+export function formatChoiceTitle(choice: FormatChoiceId, format: PaperFormat): string {
+  const total = `${formatTotalMarks(format)} marks`;
+  const time = durationText(format.durationMinutes);
+  switch (choice) {
+    case "standard":
+      return `Standard mock (${formatPartsText(format)} · ${total} · ${time})`;
+    case "p3_end_of_year_common":
+      return `Common Primary 3 end-of-year format (${formatPartsText(format)} · ${total} · ${time})`;
+    case "p3_weighted_common":
+      return `Short weighted assessment (${total} · ${time})`;
+    case "saved":
+      return `Your saved school format (${formatPartsText(format)} · ${total} · ${time})`;
+  }
 }
 
 /** The calm notice for topics the bank cannot cover yet. Null when nothing is left out. */
