@@ -1,0 +1,5016 @@
+[
+ {
+  "familyCode": "P3-NA-WN-F01",
+  "familyTitle": "Count on in hundreds",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kai counts on in hundreds: 3400, 3500, 3600, ..."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number does he say next?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3610"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3700"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3601"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4600"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3600+100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Counting on in hundreds means adding 100 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3600 + 100 = 3700."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Only the hundreds digit changes: 34 hundreds, 35 hundreds, 36 hundreds, then 37 hundreds."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F02",
+  "familyTitle": "Count on in tens across a hundred and a thousand",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Amirah counts on in tens: 2970, 2980, 2990, "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number should go in the box?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3000"
+  },
+  "verification": {
+   "expression": "2990+10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Counting on in tens means adding 10 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2990 + 10 = 3000."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2990 is 299 tens. One more ten makes 300 tens, which is 3000."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F03",
+  "familyTitle": "Position in a count",
+  "primaryOutcomeCode": "P3-NA-WN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei Ling counts on in hundreds. She starts at 4750, so 4750 is the 1st number she says."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the 8th number she says?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5450"
+  },
+  "verification": {
+   "expression": "4750+7*100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 1st number is 4750. No hundreds have been added yet."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "To reach the 8th number she adds 100 seven times (not eight times)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 × 100 = 700."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4750 + 700 = 5450."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Recognises that 100 is added 7 times (700) to reach the 8th number"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 5450"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F04",
+  "familyTitle": "Value of a digit",
+  "primaryOutcomeCode": "P3-NA-WN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "In the number 7305, what is the value of the digit 3?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "300"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3000"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "3*100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Write 7305 in a place-value chart: 7 thousands, 3 hundreds, 0 tens, 5 ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The digit 3 is in the hundreds place, so its value is 3 × 100 = 300."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F05",
+  "familyTitle": "Expanded form with an empty place",
+  "primaryOutcomeCode": "P3-NA-WN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "8 thousands 4 hundreds 6 ones = "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8406"
+  },
+  "verification": {
+   "expression": "8*1000+4*100+6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 thousands = 8000"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 hundreds = 400"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are no tens, so the tens digit is 0."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 ones = 6"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8000 + 400 + 6 = 8406."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F06",
+  "familyTitle": "Place value riddle",
+  "primaryOutcomeCode": "P3-NA-WN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "I am a 4-digit number."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "My thousands digit is 4. My hundreds digit is 3 less than my thousands digit. My tens digit is 0. My ones digit is the sum of my thousands digit and my hundreds digit."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number am I?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4105"
+  },
+  "verification": {
+   "expression": "4*1000+(4-3)*100+0*10+(4+(4-3))"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Thousands digit: 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds digit: 4 − 3 = 1."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens digit: 0."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones digit: 4 + 1 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The number is 4105."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the hundreds digit (1) and the ones digit (5)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the correct number 4105"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F07",
+  "familyTitle": "Words to numerals",
+  "primaryOutcomeCode": "P3-NA-WN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write \"six thousand and forty-seven\" in numerals."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6047"
+  },
+  "verification": {
+   "expression": "6*1000+40+7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Six thousand: 6 in the thousands place."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are no hundreds, so write 0 in the hundreds place."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Forty-seven: 4 tens and 7 ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The number is 6047."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F07",
+  "familyTitle": "Words to numerals",
+  "primaryOutcomeCode": "P3-NA-WN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which shows \"five thousand, two hundred and nine\" in numerals?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5290"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5209"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5029"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "5092"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "5*1000+2*100+9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 thousands, 2 hundreds, 0 tens and 9 ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The tens place is empty, so write a 0 there: 5209."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5290 has 9 tens and 0 ones. 5029 has 0 hundreds and 2 tens."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F08",
+  "familyTitle": "Numerals to words",
+  "primaryOutcomeCode": "P3-NA-WN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write 3080 in words."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "three thousand and eighty",
+    "three thousand eighty",
+    "three thousand, and eighty",
+    "three thousand and eighty."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3080 has 3 thousands, 0 hundreds, 8 tens and 0 ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 thousands is \"three thousand\". 8 tens is \"eighty\". There are no hundreds and no ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The answer is \"three thousand and eighty\"."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F09",
+  "familyTitle": "Greatest number, different lengths",
+  "primaryOutcomeCode": "P3-NA-WN-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which is the greatest number?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "987"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1203"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "1032"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "999"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "1203"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A 4-digit number is always greater than a 3-digit number, so 987 and 999 are not the greatest."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare 1203 and 1032. Both have 1 thousand."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare the hundreds: 2 hundreds is more than 0 hundreds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 1203 is the greatest."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F10",
+  "familyTitle": "Missing digit in a comparison",
+  "primaryOutcomeCode": "P3-NA-WN-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the smallest digit that can go in the box so that 53"
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": "4 is greater than 5372?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7"
+  },
+  "verification": {
+   "expression": "7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Both numbers have 5 thousands and 3 hundreds, so compare the tens."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "If the box is 7, the number is 5374. The tens are equal (7 and 7), so compare the ones: 4 is greater than 2. So 5374 is greater than 5372."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "If the box is any digit smaller than 7, for example 6, the number is 5364. This is smaller than 5372."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The smallest digit that works is 7."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F11",
+  "familyTitle": "Compare two numbers in context",
+  "primaryOutcomeCode": "P3-NA-WN-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Tan's car travelled 8462 km last year. Mr Lee's car travelled 8426 km last year."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Whose car travelled the greater distance?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "Mr Tan",
+    "Tan",
+    "Mr Tan's car",
+    "mr tan"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare 8462 and 8426."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The thousands (8) and the hundreds (4) are the same."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare the tens: 6 tens is more than 2 tens."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 8462 is greater. Mr Tan's car travelled the greater distance."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F12",
+  "familyTitle": "Order four 4-digit numbers",
+  "primaryOutcomeCode": "P3-NA-WN-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Arrange these numbers in order, starting with the smallest."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "3608, 3068, 3860, 3806"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write your answer with commas between the numbers."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "3068, 3608, 3806, 3860",
+    "3068,3608,3806,3860",
+    "3068 3608 3806 3860",
+    "3068 < 3608 < 3806 < 3860"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "All the numbers have 3 thousands, so compare the hundreds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3068 has 0 hundreds, so it is the smallest."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3608 has 6 hundreds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3806 and 3860 both have 8 hundreds. Compare the tens: 0 tens is less than 6 tens, so 3806 is smaller than 3860."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From smallest to greatest: 3068, 3608, 3806, 3860."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Smallest (3068) and greatest (3860) are in the correct places"
+    },
+    {
+     "marks": 1,
+     "criterion": "All four numbers in the correct order"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F13",
+  "familyTitle": "Smallest number from digit cards",
+  "primaryOutcomeCode": "P3-NA-WN-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sam has four digit cards: 5, 0, 8 and 3."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "He uses all four cards to make the smallest 4-digit number he can. What number does he make?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3058"
+  },
+  "verification": {
+   "expression": "3*1000+0*100+5*10+8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "To make the smallest number, put the smallest digits in the biggest places."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "But 0 cannot go in the thousands place, because then the number would only have 3 digits."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the thousands digit is 3 (the smallest digit that is not 0)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Then put the remaining digits in order from smallest: 0, 5, 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The number is 3058."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F12",
+  "familyTitle": "Order four 4-digit numbers",
+  "primaryOutcomeCode": "P3-NA-WN-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which list shows the numbers 7203, 7320, 7230 and 7023 in order, starting with the greatest?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7023, 7203, 7230, 7320"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7320, 7230, 7203, 7023"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "7320, 7203, 7230, 7023"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "7230, 7320, 7203, 7023"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "All the numbers have 7 thousands. Compare the hundreds."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7320 has 3 hundreds, the most, so it is the greatest."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7230 and 7203 both have 2 hundreds. 7230 has 3 tens and 7203 has 0 tens, so 7230 is greater."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7023 has 0 hundreds, so it is the smallest."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From greatest to smallest: 7320, 7230, 7203, 7023."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F14",
+  "familyTitle": "Rule of a number pattern",
+  "primaryOutcomeCode": "P3-NA-WN-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at this number pattern: 2350, 2650, 2950, 3250, ..."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "By how much does the number go up each time?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "300"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "350"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3000"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "2650-2350"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find the difference between neighbouring numbers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2650 − 2350 = 300, and 2950 − 2650 = 300."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numbers go up by 300 each time."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F15",
+  "familyTitle": "Complete a decreasing pattern",
+  "primaryOutcomeCode": "P3-NA-WN-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Complete the number pattern."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "6000, 5750, 5500, 5250, "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5000"
+  },
+  "verification": {
+   "expression": "5250-250"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6000 − 5750 = 250, so the numbers go down by 250 each time."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5250 − 250 = 5000."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-WN-F16",
+  "familyTitle": "Find a far term in a pattern",
+  "primaryOutcomeCode": "P3-NA-WN-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at this number pattern: 1250, 1400, 1550, 1700, ..."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the 10th number in the pattern?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2600"
+  },
+  "verification": {
+   "expression": "1250+9*150"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The pattern goes up by 150 each time (1400 − 1250 = 150)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From the 1st number to the 10th number there are 9 jumps of 150."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 × 150 = 1350."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1250 + 1350 = 2600."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the rule (+150) and that there are 9 jumps, working out 9 × 150 = 1350"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 2600"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F01",
+  "familyTitle": "Add two 4-digit numbers with regrouping",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 3456 + 2318?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "5764"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "5774"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5784"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6774"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3456+2318"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the ones: 6 + 8 = 14. Write 4 and regroup 1 ten."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the tens: 5 + 1 + 1 (regrouped) = 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the hundreds: 4 + 3 = 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the thousands: 3 + 2 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3456 + 2318 = 5774."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F01",
+  "familyTitle": "Add two 4-digit numbers with regrouping",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the sum of 2876 and 1549?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4325"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4415"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4425"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3425"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2876+1549"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 6 + 9 = 15. Write 5 and regroup 1 ten."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 7 + 4 + 1 = 12. Write 2 and regroup 1 hundred."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 8 + 5 + 1 = 14. Write 4 and regroup 1 thousand."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Thousands: 2 + 1 + 1 = 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2876 + 1549 = 4425."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F02",
+  "familyTitle": "Add 3-digit numbers",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "354 + 268 = "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "622"
+  },
+  "verification": {
+   "expression": "354+268"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 4 + 8 = 12. Write 2 and regroup 1 ten."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 5 + 6 + 1 = 12. Write 2 and regroup 1 hundred."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 3 + 2 + 1 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "354 + 268 = 622."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F03",
+  "familyTitle": "Add with regrouping across zeros",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Find the sum of 6095 and 2908."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9003"
+  },
+  "verification": {
+   "expression": "6095+2908"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 5 + 8 = 13. Write 3 and regroup 1 ten."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 9 + 0 + 1 = 10. Write 0 and regroup 1 hundred."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 0 + 9 + 1 = 10. Write 0 and regroup 1 thousand."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Thousands: 6 + 2 + 1 = 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6095 + 2908 = 9003."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F04",
+  "familyTitle": "Add three numbers",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Add 3800, 2475 and 1336."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7611"
+  },
+  "verification": {
+   "expression": "3800+2475+1336"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the first two numbers: 3800 + 2475 = 6275."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Then add the third number: 6275 + 1336 = 7611."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3800 + 2475 + 1336 = 7611."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds two of the numbers correctly (for example 3800 + 2475 = 6275)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 7611"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F05",
+  "familyTitle": "Missing digit in an addition",
+  "primaryOutcomeCode": "P3-NA-AS-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The digit in the box is missing."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": "47 + 2586 = 5933"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the missing digit?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3"
+  },
+  "verification": {
+   "expression": "(5933-2586-3047)/100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The sum is 5933 and one of the numbers added is 2586."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The missing number is 5933 − 2586 = 3347."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the number is 3347 and the missing digit (in the hundreds place) is 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 3347 + 2586 = 5933."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F06",
+  "familyTitle": "Subtract with regrouping",
+  "primaryOutcomeCode": "P3-NA-AS-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 5462 − 2315?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3153"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3157"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3147"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "7777"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "5462-2315"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 2 is less than 5, so regroup 1 ten. 12 − 5 = 7. The tens digit is now 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 5 − 1 = 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 4 − 3 = 1."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Thousands: 5 − 2 = 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5462 − 2315 = 3147."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F06",
+  "familyTitle": "Subtract with regrouping",
+  "primaryOutcomeCode": "P3-NA-AS-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Subtract 145 from 372."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "227"
+  },
+  "verification": {
+   "expression": "372-145"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "\"Subtract 145 from 372\" means 372 − 145."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 2 is less than 5, so regroup 1 ten. 12 − 5 = 7. The tens digit is now 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 6 − 4 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 3 − 1 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "372 − 145 = 227."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F07",
+  "familyTitle": "Subtract across a zero",
+  "primaryOutcomeCode": "P3-NA-AS-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 6402 − 2758?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4356"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3644"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3744"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3654"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "6402-2758"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 2 is less than 8. There are 0 tens, so regroup from the hundreds first."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Regroup 1 hundred as 10 tens. Then regroup 1 ten as 10 ones. Ones: 12 − 8 = 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 9 − 5 = 4 (one ten was taken)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 3 is less than 7, so regroup 1 thousand. 13 − 7 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Thousands: 5 − 2 = 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6402 − 2758 = 3644."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F07",
+  "familyTitle": "Subtract across a zero",
+  "primaryOutcomeCode": "P3-NA-AS-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "5003 − 2748 = "
+      },
+      {
+       "t": "blank"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2255"
+  },
+  "verification": {
+   "expression": "5003-2748"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are zeros in the tens and hundreds places, so regroup from the thousands."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5003 is the same as 4 thousands, 9 hundreds, 9 tens and 13 ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 13 − 8 = 5. Tens: 9 − 4 = 5. Hundreds: 9 − 7 = 2. Thousands: 4 − 2 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5003 − 2748 = 2255. Check: 2255 + 2748 = 5003."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F08",
+  "familyTitle": "Subtract from ten thousand",
+  "primaryOutcomeCode": "P3-NA-AS-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 10 000 − 3846?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6154"
+  },
+  "verification": {
+   "expression": "10000-3846"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A quick way: first work out 9999 − 3846 by taking each digit from 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 − 3 = 6, 9 − 8 = 1, 9 − 4 = 5, 9 − 6 = 3, so 9999 − 3846 = 6153."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "10 000 is 1 more than 9999, so add 1: 6153 + 1 = 6154."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 6154 + 3846 = 10 000."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F09",
+  "familyTitle": "Find the smaller number from the difference",
+  "primaryOutcomeCode": "P3-NA-AS-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The difference between two numbers is 2875. The bigger number is 6040."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the smaller number?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3165"
+  },
+  "verification": {
+   "expression": "6040-2875"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The difference is what you get when you subtract the smaller number from the bigger number."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So smaller number = bigger number − difference = 6040 − 2875."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6040 − 2875 = 3165."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 6040 − 3165 = 2875."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Uses the correct method: 6040 − 2875"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 3165"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F10",
+  "familyTitle": "Add then subtract in one story",
+  "primaryOutcomeCode": "P3-NA-AS-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A school library had 3250 books. It bought 485 more books and then gave away 120 old books."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many books did the library have in the end?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3735"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3615"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3855"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "2645"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3250+485-120"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Books after buying more: 3250 + 485 = 3735."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Books after giving some away: 3735 − 120 = 3615."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The library had 3615 books in the end."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3735 is the number before the old books were given away. 3855 comes from adding 120 instead of subtracting."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F11",
+  "familyTitle": "One-step addition story",
+  "primaryOutcomeCode": "P3-NA-AS-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "There were 458 people at a hawker centre at noon. In the next hour, 279 more people came in."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many people were at the hawker centre then?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "179"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "727"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "737"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "637"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "458+279"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "\"More people came in\" means we add."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "458 + 279 = 737."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 8 + 9 = 17 (write 7, regroup 1 ten). Tens: 5 + 7 + 1 = 13 (write 3, regroup 1 hundred). Hundreds: 4 + 2 + 1 = 7."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F12",
+  "familyTitle": "Two spending amounts",
+  "primaryOutcomeCode": "P3-NA-AS-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Goh had $5000. She spent $1275 on a fridge and $890 on a washing machine."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money did she have left?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2835",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "5000-1275-890"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Total money spent: 1275 + 890 = 2165."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Money left: 5000 − 2165 = 2835."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mrs Goh had $2835 left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the total spent ($2165) or subtracts one amount correctly (5000 − 1275 = 3725)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer $2835"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F13",
+  "familyTitle": "Compare then find the total",
+  "primaryOutcomeCode": "P3-NA-AS-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali has 1850 stamps. Ben has 465 fewer stamps than Ali."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many stamps do they have altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3235"
+  },
+  "verification": {
+   "expression": "1850+(1850-465)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Number of stamps Ben has: 1850 − 465 = 1385."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Number of stamps altogether: 1850 + 1385 = 3235."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "They have 3235 stamps altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Ben's stamps: 1850 − 465 = 1385"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds Ali's and Ben's stamps"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 3235"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F14",
+  "familyTitle": "Split a total, then give some away",
+  "primaryOutcomeCode": "P3-NA-AS-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kai Wen and Priya collected 6000 cards altogether. Kai Wen collected 2745 of them."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Priya then gave 350 of her cards to a friend."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many cards does Priya have now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2905"
+  },
+  "verification": {
+   "expression": "6000-2745-350"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Cards Priya collected: 6000 − 2745 = 3255."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Cards Priya has after giving 350 away: 3255 − 350 = 2905."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Priya has 2905 cards now."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Priya's cards: 6000 − 2745 = 3255"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the 350 cards she gave away"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 2905"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-AS-F15",
+  "familyTitle": "Work backwards to find the start",
+  "primaryOutcomeCode": "P3-NA-AS-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A stallholder at a wet market sold 1250 eggs. Then a supplier delivered 3480 more eggs to him. He then had 5000 eggs."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many eggs did he have at first?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2770"
+  },
+  "verification": {
+   "expression": "5000-3480+1250"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Work backwards."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Before the delivery he had: 5000 − 3480 = 1520 eggs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Before he sold the eggs he had: 1520 + 1250 = 2770 eggs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "He had 2770 eggs at first."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 2770 − 1250 = 1520, and 1520 + 3480 = 5000."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of eggs before the delivery: 5000 − 3480 = 1520"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds back the 1250 eggs sold: 1520 + 1250"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 2770"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F01",
+  "familyTitle": "Multiplication fact 7 x 8",
+  "primaryOutcomeCode": "P3-NA-MD-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 30,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 7 × 8?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "48"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "54"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "56"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "63"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "7*8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 × 8 = 56."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A memory trick: the numbers 5, 6, 7, 8 make \"56 = 7 × 8\"."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "54 is 6 × 9 and 63 is 7 × 9, so they are different facts."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F02",
+  "familyTitle": "Times table in a story",
+  "primaryOutcomeCode": "P3-NA-MD-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A spider has 8 legs. How many legs do 9 spiders have altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "72"
+  },
+  "verification": {
+   "expression": "9*8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 spiders with 8 legs each: 9 × 8 = 72."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 72 legs altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F03",
+  "familyTitle": "Find two numbers from a product",
+  "primaryOutcomeCode": "P3-NA-MD-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Two different whole numbers between 5 and 10 are multiplied. The product is 56."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the sum of the two numbers?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "15"
+  },
+  "verification": {
+   "expression": "56/7+7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numbers between 5 and 10 are 6, 7, 8 and 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Try the products: 6 × 7 = 42, 6 × 8 = 48, 6 × 9 = 54, 7 × 8 = 56, 7 × 9 = 63, 8 × 9 = 72."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Only 7 × 8 = 56, so the numbers are 7 and 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 + 8 = 15."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the two numbers 7 and 8"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 15"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F04",
+  "familyTitle": "Division fact 63 divided by 9",
+  "primaryOutcomeCode": "P3-NA-MD-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 30,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 63 ÷ 9?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "9"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "63/9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Use the 9 times table: 9 × 7 = 63."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 63 ÷ 9 = 7."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F05",
+  "familyTitle": "Missing divisor",
+  "primaryOutcomeCode": "P3-NA-MD-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Fill in the box."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "48 ÷ "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " = 6"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "48/6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Think of the multiplication fact: 6 × 8 = 48."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 48 ÷ 8 = 6, and the missing number is 8."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F06",
+  "familyTitle": "Equal sharing with division facts",
+  "primaryOutcomeCode": "P3-NA-MD-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A baker packs 72 buns equally into 8 boxes. How many buns are in each box?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "9"
+  },
+  "verification": {
+   "expression": "72/8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Share equally: 72 ÷ 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 × 9 = 72, so 72 ÷ 8 = 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 9 buns in each box."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F07",
+  "familyTitle": "Multiply a 3-digit number by 1 digit",
+  "primaryOutcomeCode": "P3-NA-MD-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 246 × 3?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "728"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "738"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "638"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "628"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "246*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 6 × 3 = 18. Write 8 and regroup 1 ten."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 4 × 3 = 12, and 12 + 1 = 13. Write 3 and regroup 1 hundred."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 2 × 3 = 6, and 6 + 1 = 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "246 × 3 = 738."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F07",
+  "familyTitle": "Multiply a 3-digit number by 1 digit",
+  "primaryOutcomeCode": "P3-NA-MD-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Find the value of 214 × 4."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "856"
+  },
+  "verification": {
+   "expression": "214*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 4 × 4 = 16. Write 6 and regroup 1 ten."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 1 × 4 = 4, and 4 + 1 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 2 × 4 = 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "214 × 4 = 856."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F08",
+  "familyTitle": "Multiply with a zero in the tens",
+  "primaryOutcomeCode": "P3-NA-MD-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Find the value of 908 × 6."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5448"
+  },
+  "verification": {
+   "expression": "908*6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 8 × 6 = 48. Write 8 and regroup 4 tens."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 0 × 6 = 0, and 0 + 4 = 4. Write 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 9 × 6 = 54."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "908 × 6 = 5448."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F09",
+  "familyTitle": "Divide with a zero in the quotient",
+  "primaryOutcomeCode": "P3-NA-MD-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is 824 ÷ 4?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "216"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "26"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "206"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "226"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "824/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 8 ÷ 4 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 2 ÷ 4 = 0 with 2 tens left over. Write 0 in the tens place. Regroup the 2 tens as 20 ones."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 20 + 4 = 24, and 24 ÷ 4 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "824 ÷ 4 = 206. Check: 206 × 4 = 824."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F10",
+  "familyTitle": "Divide a 3-digit number by 1 digit",
+  "primaryOutcomeCode": "P3-NA-MD-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Find the value of 936 ÷ 3."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "312"
+  },
+  "verification": {
+   "expression": "936/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hundreds: 9 ÷ 3 = 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tens: 3 ÷ 3 = 1."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ones: 6 ÷ 3 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "936 ÷ 3 = 312."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F11",
+  "familyTitle": "Undo a division, then divide again",
+  "primaryOutcomeCode": "P3-NA-MD-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Chua thinks of a number. When he divides it by 7, the answer is exactly 84."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What answer would he get if he divided his number by 4 instead?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "147"
+  },
+  "verification": {
+   "expression": "84*7/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find his number: 84 × 7 = 588."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide by 4: 588 ÷ 4 = 147."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 147 × 4 = 588."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number 588 (84 × 7)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 147"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F12",
+  "familyTitle": "Remainder of a division",
+  "primaryOutcomeCode": "P3-NA-MD-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the remainder when 47 is divided by 6?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "11"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "47-6*7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 × 7 = 42, and 6 × 8 = 48 is too big."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 47 ÷ 6 = 7 remainder 5. Since 47 − 42 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The remainder is 5. It must always be smaller than the divisor, 6."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F13",
+  "familyTitle": "Boxes needed after a remainder",
+  "primaryOutcomeCode": "P3-NA-MD-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Ong has 50 pencils. Each box can hold 8 pencils."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many boxes does she need to hold all the pencils?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7"
+  },
+  "verification": {
+   "expression": "(50-2)/8+1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "50 ÷ 8 = 6 remainder 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 boxes can be filled completely, but 2 pencils are left over."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 2 pencils need another box, so she needs 6 + 1 = 7 boxes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 50 ÷ 8 = 6 remainder 2"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds one more box for the leftover pencils to get 7"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F14",
+  "familyTitle": "Division with remainder, 3-digit number",
+  "primaryOutcomeCode": "P3-NA-MD-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Divide 250 by 7."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write your answer as the quotient and the remainder, for example 12 R 3."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "35 R 5",
+    "35 r 5",
+    "35R5",
+    "35 remainder 5",
+    "quotient 35, remainder 5"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 × 30 = 210, and 250 − 210 = 40."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 × 5 = 35, and 40 − 35 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 250 ÷ 7 = 35 remainder 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 35 × 7 = 245, and 245 + 5 = 250."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Correct quotient 35 or correct remainder 5"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct quotient and remainder: 35 R 5"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F15",
+  "familyTitle": "Multiply then add in a shopping story",
+  "primaryOutcomeCode": "P3-NA-MD-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ben bought 4 books at $18 each and a pen for $7."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much money did he pay altogether? Give your answer in dollars."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "72"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "79"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "100"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "29"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "4*18+7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Cost of the 4 books: 4 × 18 = 72."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Add the pen: 72 + 7 = 79."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ben paid $79 altogether."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The mistake 4 × (18 + 7) = 100 multiplies the price of the pen by 4 too."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F16",
+  "familyTitle": "Multiply then find the change",
+  "primaryOutcomeCode": "P3-NA-MD-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each packet of noodles costs $6. Mr Lee bought 7 packets and paid with a $50 note."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much change did he receive?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "50-6*7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Cost of 7 packets: 7 × 6 = 42."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Change: 50 − 42 = 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mr Lee received $8 change."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the cost of 7 packets: 7 × 6 = $42"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer $8"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-MD-F17",
+  "familyTitle": "Subtract, then share equally",
+  "primaryOutcomeCode": "P3-NA-MD-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Farah had 156 stickers. She gave 24 stickers to her brother. She then shared the rest equally among 4 friends."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many stickers did each friend get?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "33"
+  },
+  "verification": {
+   "expression": "(156-24)/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Stickers left after giving some to her brother: 156 − 24 = 132."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Share equally among 4 friends: 132 ÷ 4 = 33."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each friend got 33 stickers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Check: 33 × 4 = 132."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the stickers left: 156 − 24 = 132"
+    },
+    {
+     "marks": 1,
+     "criterion": "Divides by 4 correctly"
+    },
+    {
+     "marks": 1,
+     "criterion": "Correct final answer 33"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]

@@ -1,0 +1,6272 @@
+[
+ {
+  "familyCode": "P3-NA-FR-F01",
+  "familyTitle": "Equal to three quarters",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 4
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "(3*2)/(4*2)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Multiply the numerator and the denominator by the same number."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 × 2 = 6 and 4 × 2 = 8, so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The other options are not equal. For example, "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " comes from adding 2 to the top and the bottom, which does not keep the fraction the same."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F02",
+  "familyTitle": "Twelfths equal to two thirds",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " is equal to "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " twelfths."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "2*12/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominator changes from 3 to 12. 12 ÷ 3 = 4, so we multiply by 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Multiply the numerator by 4 as well: 2 × 4 = 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", so the answer is 8 twelfths."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F03",
+  "familyTitle": "Pizza slices simplest form",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A pizza was cut into 12 equal slices. Mrs Tan's family ate 8 slices."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of the pizza did they eat? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "2/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "8/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "They ate 8 out of 12 slices, which is "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " of the pizza."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide the numerator and the denominator by 4: 8 ÷ 4 = 2 and 12 ÷ 4 = 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "In simplest form, they ate "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " of the pizza."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes 8/12 as the fraction eaten"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F04",
+  "familyTitle": "Numerator and denominator differ by 3",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The denominator of a fraction is 3 more than its numerator. The fraction is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write the fraction. Do not simplify your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "6/9",
+   "acceptEquivalent": false,
+   "requireSimplest": false
+  },
+  "verification": {
+   "expression": "(2*3/(3-2))/(3*3/(3-2))"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "In "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ", the denominator is 3 − 2 = 1 more than the numerator."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "We need the difference to be 3 instead of 1, so multiply the numerator and the denominator by 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 × 3 = 6 and 3 × 3 = 9. The fraction is "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": ". Check: 9 − 6 = 3."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Multiplies top and bottom of 2/3 by the same number (for example 4/6)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F05",
+  "familyTitle": "Smallest with same numerator",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction is the smallest?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 6
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "All the fractions have the same numerator, 3, so we compare the size of each part."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "When the whole is cut into more equal parts, each part is smaller. The larger the denominator, the smaller the fraction."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 is the largest denominator, so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is the smallest."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F06",
+  "familyTitle": "Greater than two thirds",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction is greater than "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 9,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "9/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " to twelfths: 2 × 4 = 8 and 3 × 4 = 12, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Now compare with "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". Only "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " has a numerator greater than 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " to "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", which is smaller than "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". So the answer is "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F07",
+  "familyTitle": "Who has the most water",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali, Bala and Chen each have a water bottle of the same size. Ali's bottle is "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " full, Bala's bottle is "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " full and Chen's bottle is "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " full."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Who has the most water in his bottle?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "Bala",
+    "bala"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change all three fractions to twelfths."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". Ali has "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare 5, 6 and 4 twelfths. 6 twelfths is the greatest, so Bala has the most water."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes the fractions with a common denominator of 12"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F08",
+  "familyTitle": "Order three fractions MCQ",
+  "primaryOutcomeCode": "P3-NA-FR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at these fractions: "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " and "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which list shows them in order from the smallest to the greatest?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change every fraction to twelfths. "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". The third fraction is already "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Order the numerators 7, 8, 9 from smallest to greatest: "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the order is "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F09",
+  "familyTitle": "Third fraction in order",
+  "primaryOutcomeCode": "P3-NA-FR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Arrange the fractions "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " and "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " in order from the smallest to the greatest."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction comes third?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "2/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "8/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change all the fractions to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Order the numerators 5, 9, 6, 8 from smallest to greatest: 5, 6, 8, 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The order is "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": ". The third fraction is "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes at least three of the fractions in twelfths"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F10",
+  "familyTitle": "Fraction between two fractions",
+  "primaryOutcomeCode": "P3-NA-FR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write a fraction with a denominator of 12 that is greater than "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " but smaller than "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "7/12",
+   "acceptEquivalent": false,
+   "requireSimplest": false
+  },
+  "verification": {
+   "expression": "(6+8)/(2*12)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change both fractions to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "We need a numerator that is greater than 6 and smaller than 8. The only whole number is 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fraction is "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 1/2 and 2/3 to twelfths (6/12 and 8/12)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F11",
+  "familyTitle": "Add same denominator MCQ",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      },
+      {
+       "t": "text",
+       "v": " + "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 8
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 16
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 8
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "3/8 + 2/8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominators are the same, so add the numerators and keep the denominator."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 + 2 = 5, so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Do not add the denominators. "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 16
+     },
+     {
+      "t": "text",
+      "v": " is wrong because the size of each part stays the same (eighths)."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F12",
+  "familyTitle": "Add related fractions",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Find "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " + "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": ". Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "3/4",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "5/12 + 1/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide the top and bottom by 3 to simplify: "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F13",
+  "familyTitle": "Flour for cake and cookies",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mum used "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      },
+      {
+       "t": "text",
+       "v": " kg of flour to bake a cake and "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " kg of flour to make cookies."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many kilograms of flour did she use altogether?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Answer: "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " kg"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "5/8",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "3/8 + 1/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the two amounts: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " to eighths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": ". Mum used "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " kg of flour altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 1/4 to 2/8 or shows 3/8 + 1/4 with a common denominator"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F14",
+  "familyTitle": "Two ribbons total length",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Lina has two pieces of ribbon. The first piece is "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " m long. The second piece is "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " m longer than the first piece."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the total length of the two pieces of ribbon?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Answer: "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " m"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "7/12",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "1/4 + (1/4 + 1/12)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Find the length of the second piece."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". The second piece is "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Add the two pieces. "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The total length is "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length of the second piece (4/12 or 1/3 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the two lengths using a common denominator"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F15",
+  "familyTitle": "Subtract related fractions MCQ",
+  "primaryOutcomeCode": "P3-NA-FR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 8
+      },
+      {
+       "t": "text",
+       "v": " − "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 4
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "7/8 - 3/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " to eighths: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Do not subtract the numerators and denominators separately. That gives "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": ", which is wrong."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F16",
+  "familyTitle": "Subtract same denominator",
+  "primaryOutcomeCode": "P3-NA-FR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Find "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " − "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": ". Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "2/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "5/6 - 1/6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominators are the same, so subtract the numerators: 5 − 1 = 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide the top and bottom by 2 to simplify: "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F17",
+  "familyTitle": "Orange juice left",
+  "primaryOutcomeCode": "P3-NA-FR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jia Wen had "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " ℓ of orange juice. She drank "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " ℓ of it."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much orange juice was left? Give your answer in its simplest form."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Answer: "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " ℓ"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "5/6 - 1/2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " to sixths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Simplify: "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ". There was "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " ℓ of orange juice left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 1/2 to 3/6 or subtracts with a common denominator"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-F18",
+  "familyTitle": "Book not yet read",
+  "primaryOutcomeCode": "P3-NA-FR-05",
+  "secondaryOutcomeCodes": [
+   "P3-NA-FR-04"
+  ],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Aisyah read "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " of a storybook on Saturday and "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " of it on Sunday."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of the storybook has she not read? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/3",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "1 - (1/4 + 5/12)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Find the fraction she has read. "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The whole book is 1 = "
+     },
+     {
+      "t": "frac",
+      "n": 12,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 12,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Simplify: "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ". She has not read "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " of the book."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds 1/4 and 5/12 correctly to get 8/12 or 2/3"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts the fraction read from 1 whole"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F01",
+  "familyTitle": "Metres in 3 km",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many metres are there in 3 km?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "300"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3000"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3*1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 km = 1000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 km = 3 × 1000 m = 3000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "300 and 30 are wrong because they leave out zeros. 3 is wrong because it is still in kilometres."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F02",
+  "familyTitle": "Metres to km whole",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Fill in the blank."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "5000 m = "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " km"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5",
+   "unit": "km"
+  },
+  "verification": {
+   "expression": "5000/1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1000 m = 1 km."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5000 m ÷ 1000 = 5, so 5000 m = 5 km."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F03",
+  "familyTitle": "Longest distance",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following distances is the longest?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1 km 900 m"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 km 5 m"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 km 50 m"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "1990 m"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change every distance to metres."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 km 900 m = 1900 m, 2 km 5 m = 2005 m, 2 km 50 m = 2050 m and 1990 m stays the same."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2050 m is the greatest, so 2 km 50 m is the longest distance."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F04",
+  "familyTitle": "Laps around a park track",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ryan ran 6 rounds around a park track. The track is 750 m long."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far did he run altogether? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4500",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "4 km 500 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "6*750"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Multiply the length of one round by the number of rounds: 6 × 750 m = 4500 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1000 m = 1 km, so 4500 m = 4000 m + 500 m = 4 km 500 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ryan ran 4 km 500 m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 6 x 750 = 4500 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F05",
+  "familyTitle": "Millilitres in 4 litres",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many millilitres are there in 4 ℓ?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "400"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4000"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "4*1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 ℓ = 1000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 ℓ = 4 × 1000 ml = 4000 ml."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F06",
+  "familyTitle": "Water left in a pail",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A pail contains 2 ℓ of water. Hana scoops out 650 ml of the water."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much water is left in the pail? Give your answer in millilitres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1350",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "2*1000 - 650"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change 2 ℓ to millilitres: 2 ℓ = 2000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Subtract the water scooped out: 2000 ml − 650 ml = 1350 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There is 1350 ml of water left."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 2 l to 2000 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F07",
+  "familyTitle": "Same as 2500 ml",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the same as 2500 ml?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 ℓ 5 ml"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 ℓ 50 ml"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "25 ℓ"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 ℓ 500 ml"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2500 ml = 2000 ml + 500 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2000 ml = 2 ℓ, so 2500 ml = 2 ℓ 500 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 ℓ 5 ml is only 2005 ml and 2 ℓ 50 ml is only 2050 ml."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F08",
+  "familyTitle": "Millilitres to litres whole",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Fill in the blank."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "8000 ml = "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " ℓ"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8",
+   "unit": "l"
+  },
+  "verification": {
+   "expression": "8000/1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1000 ml = 1 ℓ."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8000 ml ÷ 1000 = 8, so 8000 ml = 8 ℓ."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F09",
+  "familyTitle": "3 kg 40 g to grams",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Express 3 kg 40 g in grams."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "340"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3400"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3040"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3004"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "3*1000+40"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 kg = 3000 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3000 g + 40 g = 3040 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Be careful with the zero. 3 kg 40 g is not 3400 g or 340 g."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F10",
+  "familyTitle": "2 km 300 m to metres",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 55,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Fill in the blank."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "2 km 300 m = "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " m"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2300",
+   "unit": "m"
+  },
+  "verification": {
+   "expression": "2*1000+300"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 km = 2000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2000 m + 300 m = 2300 m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F11",
+  "familyTitle": "5070 g to kg and g",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Express 5070 g in kilograms and grams."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5070",
+   "unit": "g",
+   "display": [
+    {
+     "t": "text",
+     "v": "5 kg 70 g"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "5*1000+70"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1000 g = 1 kg. There are 5 thousands in 5070, so 5070 g contains 5 kg."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5070 g − 5000 g = 70 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5070 g = 5 kg 70 g."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F12",
+  "familyTitle": "8 m 6 cm to centimetres",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Express 8 m 6 cm in centimetres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "806",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "8*100+6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 m = 100 cm, so 8 m = 800 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "800 cm + 6 cm = 806 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Remember that 6 cm is 06 in the tens and ones places, so the answer is 806 cm, not 86 cm or 860 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F13",
+  "familyTitle": "Tank total in litres",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [
+   "P3-MG-LM-02"
+  ],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A tank had 1 ℓ 90 ml of water. Mrs Ang poured in 910 ml more water."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many litres of water are in the tank now?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2",
+   "unit": "l",
+   "display": [
+    {
+     "t": "text",
+     "v": "2 ℓ"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(1*1000+90+910)/1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change 1 ℓ 90 ml to millilitres: 1000 ml + 90 ml = 1090 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the water poured in: 1090 ml + 910 ml = 2000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2000 ml = 2 ℓ. There are 2 ℓ of water in the tank."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds 1090 ml and 910 ml to get 2000 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F14",
+  "familyTitle": "Total mass of shopping",
+  "primaryOutcomeCode": "P3-MG-LM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Amir bought 3 packets of noodles. Each packet has a mass of 250 g. He also bought a tin of sardines with a mass of 155 g."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the total mass of the things he bought? Choose the answer in grams."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "605"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "655"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "750"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "905"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "3*250+155"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mass of 3 packets of noodles = 3 × 250 g = 750 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the tin of sardines: 750 g + 155 g = 905 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "750 g is wrong because it leaves out the tin. 605 g is wrong because it subtracts the tin."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F15",
+  "familyTitle": "Water left in a tank",
+  "primaryOutcomeCode": "P3-MG-LM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A tank contains 5 ℓ of water. Mrs Lee uses 2 ℓ 350 ml of water for cooking."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much water is left in the tank? Give your answer in ℓ and ml."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2650",
+   "unit": "ml",
+   "display": [
+    {
+     "t": "text",
+     "v": "2 ℓ 650 ml"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "5*1000 - (2*1000+350)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change both amounts to millilitres: 5 ℓ = 5000 ml and 2 ℓ 350 ml = 2350 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5000 ml − 2350 ml = 2650 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2650 ml = 2000 ml + 650 ml = 2 ℓ 650 ml."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes the amounts to millilitres and subtracts correctly for 2650 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F16",
+  "familyTitle": "Sugar and flour mass",
+  "primaryOutcomeCode": "P3-MG-LM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei Ling bought 2 packets of sugar and 1 packet of flour. Each packet of sugar has a mass of 1 kg 250 g. The packet of flour has a mass of 900 g."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the total mass of the packets? Give your answer in kg and g."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3400",
+   "unit": "g",
+   "display": [
+    {
+     "t": "text",
+     "v": "3 kg 400 g"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "2*(1*1000+250)+900"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Mass of one packet of sugar = 1 kg 250 g = 1250 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Mass of 2 packets of sugar = 2 × 1250 g = 2500 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Add the flour: 2500 g + 900 g = 3400 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3400 g = 3 kg 400 g."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the mass of 2 packets of sugar (2500 g or 2 kg 500 g)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the flour to the sugar"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F17",
+  "familyTitle": "Filling a container",
+  "primaryOutcomeCode": "P3-MG-LM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A container can hold 5 ℓ of water. Sam pours the water from 3 bottles into the empty container. Each bottle has 750 ml of water."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much more water, in millilitres, is needed to fill the container completely?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2750",
+   "unit": "ml",
+   "display": [
+    {
+     "t": "text",
+     "v": "2 ℓ 750 ml"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "5*1000 - 3*750"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Water from 3 bottles = 3 × 750 ml = 2250 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The container holds 5 ℓ = 5000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 5000 ml − 2250 ml = 2750 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2750 ml more water is needed."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the water in 3 bottles (2250 ml)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Changes 5 l to 5000 ml and subtracts"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-F18",
+  "familyTitle": "Walking to school and back",
+  "primaryOutcomeCode": "P3-MG-LM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 4,
+  "estimatedSeconds": 300,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The distance from Pei Shan's home to the bus stop is 450 m. The distance from the bus stop to her school is 3 times as far."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Pei Shan walks from her home to the bus stop and then to her school. After school, she walks the same way back home."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far does she walk altogether? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3600",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "3 km 600 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "2*(450 + 3*450)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Distance from the bus stop to school = 3 × 450 m = 1350 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Distance from home to school = 450 m + 1350 m = 1800 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: She walks to school and back, so 2 × 1800 m = 3600 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3600 m = 3000 m + 600 m = 3 km 600 m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the bus stop to school distance (1350 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the one-way distance (1800 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Doubles for the return trip (3600 m)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F01",
+  "familyTitle": "Ten minutes to four",
+  "primaryOutcomeCode": "P3-MG-TM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "It is 10 minutes to 4 in the afternoon. Which of the following shows the time?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.10 p.m."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.10 p.m."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.50 p.m."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.50 p.m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "'To' means the minutes left before the next hour. 10 minutes to 4 is 10 minutes before 4.00 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "60 − 10 = 50, so the time is 3.50 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4.10 p.m. is 10 minutes past 4, and 3.10 p.m. is 10 minutes past 3."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F02",
+  "familyTitle": "Twenty-five past nine",
+  "primaryOutcomeCode": "P3-MG-TM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write the time that is 25 minutes past 9 in the morning. Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "9.25 a.m.",
+    "9.25a.m.",
+    "9.25 am",
+    "9.25am",
+    "9.25 AM",
+    "9.25AM",
+    "9.25 a.m",
+    "9.25a.m",
+    "9:25 a.m.",
+    "9:25a.m.",
+    "9:25 am",
+    "9:25am",
+    "9:25 AM",
+    "9:25AM",
+    "9:25 a.m",
+    "9:25a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "25 minutes past 9 means 9 hours and 25 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "It is in the morning, so we write a.m. The time is 9.25 a.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F03",
+  "familyTitle": "Twenty to six",
+  "primaryOutcomeCode": "P3-MG-TM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write the time that is 20 minutes to 6 in the evening. Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "5.40 p.m.",
+    "5.40p.m.",
+    "5.40 pm",
+    "5.40pm",
+    "5.40 PM",
+    "5.40PM",
+    "5.40 p.m",
+    "5.40p.m",
+    "5:40 p.m.",
+    "5:40p.m.",
+    "5:40 pm",
+    "5:40pm",
+    "5:40 PM",
+    "5:40PM",
+    "5:40 p.m",
+    "5:40p.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "20 minutes to 6 is 20 minutes before 6.00 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "60 − 20 = 40, so it is 40 minutes past 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "It is in the evening, so the time is 5.40 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F04",
+  "familyTitle": "Same as 6.48 p.m.",
+  "primaryOutcomeCode": "P3-MG-TM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 75,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the same as 6.48 p.m.?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "12 minutes past 6 p.m."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "12 minutes to 7 p.m."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "48 minutes to 7 p.m."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "18 minutes to 7 p.m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6.48 p.m. is 48 minutes past 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "60 − 48 = 12, so it is 12 minutes before 7.00 p.m. That is 12 minutes to 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 minutes past 6 is 6.12 p.m., and 48 minutes to 7 is 6.12 p.m., so they are wrong."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F05",
+  "familyTitle": "Earliest time",
+  "primaryOutcomeCode": "P3-MG-TM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following times is the earliest in the afternoon?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3.55 p.m."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "10 minutes past 4 p.m."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "A quarter to 4 p.m."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4.05 p.m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Write each time in hours and minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3.55 p.m.; 10 minutes past 4 = 4.10 p.m.; a quarter to 4 = 3.45 p.m.; 4.05 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "All are in the afternoon. The earliest is the one with the smallest number of minutes after 3 o'clock: 3.45 p.m., which is a quarter to 4."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F06",
+  "familyTitle": "Reach home after school",
+  "primaryOutcomeCode": "P3-MG-TM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "School ends at 1.20 p.m. Kai reaches home 50 minutes later."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time does Kai reach home? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "2.10 p.m.",
+    "2.10p.m.",
+    "2.10 pm",
+    "2.10pm",
+    "2.10 PM",
+    "2.10PM",
+    "2.10 p.m",
+    "2.10p.m",
+    "2:10 p.m.",
+    "2:10p.m.",
+    "2:10 pm",
+    "2:10pm",
+    "2:10 PM",
+    "2:10PM",
+    "2:10 p.m",
+    "2:10p.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1.20 p.m. + 40 minutes = 2.00 p.m. (because 20 + 40 = 60 minutes)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 50 − 40 = 10 minutes left to add: 2.00 p.m. + 10 minutes = 2.10 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Kai reaches home at 2.10 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reaches 2.00 p.m. or adds minutes correctly to 60"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F07",
+  "familyTitle": "Movie end time",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A movie starts at 3.45 p.m. and lasts 1 h 30 min."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time does the movie end? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "5.15 p.m.",
+    "5.15p.m.",
+    "5.15 pm",
+    "5.15pm",
+    "5.15 PM",
+    "5.15PM",
+    "5.15 p.m",
+    "5.15p.m",
+    "5:15 p.m.",
+    "5:15p.m.",
+    "5:15 pm",
+    "5:15pm",
+    "5:15 PM",
+    "5:15PM",
+    "5:15 p.m",
+    "5:15p.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the hours first: 3.45 p.m. + 1 h = 4.45 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the minutes: 4.45 p.m. + 30 min = 5.15 p.m. (15 minutes to reach 5.00 p.m., then 15 more)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The movie ends at 5.15 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds 1 h to get 4.45 p.m. or adds 30 min correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F08",
+  "familyTitle": "Swimming lesson start",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jun's swimming lesson lasted 1 h 15 min. It ended at 11.20 a.m."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time did the lesson start? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "10.05 a.m.",
+    "10.05a.m.",
+    "10.05 am",
+    "10.05am",
+    "10.05 AM",
+    "10.05AM",
+    "10.05 a.m",
+    "10.05a.m",
+    "10:05 a.m.",
+    "10:05a.m.",
+    "10:05 am",
+    "10:05am",
+    "10:05 AM",
+    "10:05AM",
+    "10:05 a.m",
+    "10:05a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go back in time. 11.20 a.m. − 1 h = 10.20 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "10.20 a.m. − 15 min = 10.05 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The lesson started at 10.05 a.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Subtracts 1 h to get 10.20 a.m. or subtracts 15 min correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F09",
+  "familyTitle": "Journey to school",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [
+   "P3-MG-TM-01"
+  ],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei left home at 6.55 a.m. She walked to the bus stop for 10 minutes, waited 15 minutes for the bus and then took a 35-minute bus ride to school."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time did Mei reach school? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "7.55 a.m.",
+    "7.55a.m.",
+    "7.55 am",
+    "7.55am",
+    "7.55 AM",
+    "7.55AM",
+    "7.55 a.m",
+    "7.55a.m",
+    "7:55 a.m.",
+    "7:55a.m.",
+    "7:55 am",
+    "7:55am",
+    "7:55 AM",
+    "7:55AM",
+    "7:55 a.m",
+    "7:55a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find the total time taken: 10 min + 15 min + 35 min = 60 min = 1 h."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6.55 a.m. + 1 h = 7.55 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mei reached school at 7.55 a.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the three times to get 60 minutes or 1 hour"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the total to 6.55 a.m."
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F10",
+  "familyTitle": "Night train",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A night train left the station at 10.45 p.m. The journey took 2 h 30 min."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "At what time did the train arrive the next day? Use a.m. or p.m. in your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "1.15 a.m.",
+    "1.15a.m.",
+    "1.15 am",
+    "1.15am",
+    "1.15 AM",
+    "1.15AM",
+    "1.15 a.m",
+    "1.15a.m",
+    "1:15 a.m.",
+    "1:15a.m.",
+    "1:15 am",
+    "1:15am",
+    "1:15 AM",
+    "1:15AM",
+    "1:15 a.m",
+    "1:15a.m"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the hours first: 10.45 p.m. + 1 h = 11.45 p.m., and + 1 h more = 12.45 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the minutes: 12.45 a.m. + 30 min = 1.15 a.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The train arrived at 1.15 a.m. the next day."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds 2 h to get 12.45 a.m. or adds the minutes correctly"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F11",
+  "familyTitle": "Show duration MCQ",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A puppet show starts at 4.00 p.m. and ends at 4.45 p.m. How many minutes does the show last?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "45"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "55"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "15"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "100"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "(4*60+45)-(4*60+0)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 4.00 p.m. to 4.45 p.m. is 45 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "55 and 100 come from mixing up minutes and hours. 15 is the time from 4.45 p.m. to 5.00 p.m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F12",
+  "familyTitle": "Baking minutes",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Aini started baking at 2.10 p.m. and finished at 2.50 p.m."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many minutes did she spend baking?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Answer: "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " min"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "40",
+   "unit": "min"
+  },
+  "verification": {
+   "expression": "(2*60+50)-(2*60+10)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Both times are in the same hour. Subtract the minutes: 50 − 10 = 40."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She spent 40 minutes baking."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F13",
+  "familyTitle": "Morning class MCQ",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A reading class starts at 9.40 a.m. and ends at 11.15 a.m. How many minutes does the class last?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "65"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "145"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "155"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "95"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "(11*60+15)-(9*60+40)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 9.40 a.m. to 10.00 a.m. is 20 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 10.00 a.m. to 11.15 a.m. is 1 h 15 min = 75 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "20 min + 75 min = 95 min. The class lasts 95 minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F14",
+  "familyTitle": "Football training",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Football training started at 4.20 p.m. and ended at 6.05 p.m."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How long was the training? Give your answer in minutes."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "105",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "1 h 45 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(6*60+5)-(4*60+20)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 4.20 p.m. to 6.20 p.m. is 2 h. But the training ended 15 minutes earlier, at 6.05 p.m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 h − 15 min = 1 h 45 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 h 45 min = 60 min + 45 min = 105 minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds a correct part, e.g. 4.20 p.m. to 6.00 p.m. is 1 h 40 min"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F15",
+  "familyTitle": "Lunch break",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The lunch break at a school starts at 11.50 a.m. and ends at 1.20 p.m."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many minutes long is the lunch break?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "90",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "1 h 30 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(13*60+20)-(11*60+50)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 11.50 a.m. to 12.00 noon is 10 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 12.00 noon to 1.20 p.m. is 1 h 20 min = 80 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "10 min + 80 min = 90 min. The lunch break is 90 minutes long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 10 min to noon and 1 h 20 min after noon"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F16",
+  "familyTitle": "Longest activity",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following lasts the longest?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1 h 20 min"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "85 min"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "1 h 10 min"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "75 min"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change every duration to minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 h 20 min = 80 min, 85 min stays as it is, 1 h 10 min = 70 min and 75 min stays as it is."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "85 min is the greatest, so 85 min lasts the longest."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F17",
+  "familyTitle": "Two train rides and a wait",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Farah took a train ride that lasted 1 h 20 min. She then waited for 25 minutes at an interchange and took a second train ride that lasted 50 minutes."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How long did the whole trip take from the start of the first ride to the end of the second ride? Give your answer in minutes."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "155",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "2 h 35 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "(1*60+20)+25+50"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change 1 h 20 min to minutes: 60 + 20 = 80 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the waiting time and the second ride: 80 + 25 + 50 = 155 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "155 minutes = 2 h 35 min."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 1 h 20 min to 80 minutes"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds all three parts"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-F18",
+  "familyTitle": "Time at the pool",
+  "primaryOutcomeCode": "P3-MG-TM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A swimming pool is open from 8.30 a.m. to 12.15 p.m. Ann arrived 35 minutes after the pool opened. She left 20 minutes before the pool closed."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "For how many minutes did Ann stay at the pool?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "170",
+   "unit": "min",
+   "display": [
+    {
+     "t": "text",
+     "v": "2 h 50 min"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "((12*60+15)-(8*60+30))-35-20"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Time the pool is open: 8.30 a.m. to 12.30 p.m. is 4 h, so 8.30 a.m. to 12.15 p.m. is 4 h − 15 min = 3 h 45 min = 225 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ann was not there for the first 35 minutes and the last 20 minutes: 35 + 20 = 55 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "225 min − 55 min = 170 minutes."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the time the pool is open (225 minutes)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds 35 + 20 = 55 minutes not at the pool"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]
