@@ -21,6 +21,7 @@
     "questions:import": "tsx scripts/import-questions.ts",
     "test:integration": "vitest run --project integration",
     "test:e2e": "playwright test",
+    "test:e2e:mock-preview": "playwright test -c playwright.mock-preview.config.ts",
     "check": "npm run typecheck && npm run lint && npm test && npm run build && npm run test:e2e"
   },
   "dependencies": {

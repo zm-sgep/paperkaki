@@ -229,7 +229,11 @@ export function HandwritingCanvas({ initialStrokes, onChange, debounceMs = 300, 
     if (kind === "mouse" && event.button !== 0) return;
     if (activeRef.current) return;
     if (toolRef.current === "pen" && isFull(strokesRef.current)) return;
-    event.currentTarget.setPointerCapture(event.pointerId);
+    try {
+      event.currentTarget.setPointerCapture(event.pointerId);
+    } catch {
+      // Not every pointer can be captured; drawing still works while it stays over the canvas.
+    }
     event.preventDefault();
     if (toolRef.current === "eraser") {
       activeRef.current = { pointerId: event.pointerId, kind, stroke: { id: "", tool: "eraser", points: [], width: 0 }, points: [], startedAt: event.timeStamp };
