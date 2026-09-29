@@ -20,7 +20,11 @@ export default async function AdminPage() {
       </section>
       <section>
         <h2 className="text-xl font-semibold text-ink">Question bank</h2>
-        <p className="text-lg text-ink-soft">Not built yet</p>
+        <p className="text-lg text-ink-soft">
+          <Link href="/admin/questions" className="text-kaki underline underline-offset-4">
+            Browse and review questions
+          </Link>
+        </p>
       </section>
     </>
   );

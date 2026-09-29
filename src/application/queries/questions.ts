@@ -1,5 +1,5 @@
 import type { Candidate } from "@/domain/papers";
-import { describeVerification, verifyQuestionAnswer, type VerificationResult } from "@/domain/questions";
+import { describeVerification, stemSummary, verifyQuestionAnswer, type VerificationResult } from "@/domain/questions";
 import type { Database } from "@/repositories/postgres/client";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import {
@@ -15,10 +15,11 @@ import {
   type QuestionEvent,
   type QuestionListFilters,
   type QuestionListPage,
+  type QuestionListRow,
   type QuestionWithFamily,
   type ReviewTrailEntry,
 } from "@/repositories/postgres/questions";
-import type { QuestionDraft } from "@/schemas/question-content";
+import { QuestionContentSchema, type QuestionDraft } from "@/schemas/question-content";
 import { rowToDraftInput, safeParseDraft } from "../question-drafts";
 import { getCurriculumTree, listCurriculumVersions, type QueryContext } from "./curriculum";
 
@@ -31,15 +32,25 @@ async function resolveDb(context: QueryContext): Promise<Database> {
   return context.db ?? (await getReadyDb());
 }
 
-export type { QuestionListFilters, QuestionListPage };
+export type { QuestionListFilters };
+
+export type AdminQuestionRow = Omit<QuestionListRow, "content"> & { summary: string };
+export type AdminQuestionPage = Omit<QuestionListPage, "rows"> & { rows: AdminQuestionRow[] };
 
 /** One page (25) of questions for the admin list; every filter narrows the result (AND). */
 export async function listQuestionsForAdmin(
   filters: QuestionListFilters,
   page: number,
   context: QueryContext = {},
-): Promise<QuestionListPage> {
-  return listQuestionsPage(await resolveDb(context), filters, page);
+): Promise<AdminQuestionPage> {
+  const result = await listQuestionsPage(await resolveDb(context), filters, page);
+  return {
+    ...result,
+    rows: result.rows.map(({ content, ...row }) => {
+      const parsed = QuestionContentSchema.safeParse(content);
+      return { ...row, summary: parsed.success ? stemSummary(parsed.data) : "(this question cannot be read)" };
+    }),
+  };
 }
 
 export type QuestionCandidate = Candidate & { estimatedSeconds: number };
