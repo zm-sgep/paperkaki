@@ -53,7 +53,8 @@ export const PaperSettingsInputSchema = z.object({
     .max(PAPER_LIMITS.maxMinutes, { error: `Choose ${PAPER_LIMITS.maxMinutes} minutes or fewer.` }),
   difficulty: z.enum(["easier", "balanced", "harder"], { error: "Choose Easier, Balanced or Harder." }),
 });
-export type PaperSettingsInput = z.input<typeof PaperSettingsInputSchema>;
+/** Raw values as they arrive from a form; the schema above checks them. */
+export type PaperSettingsInput = { totalMarks: unknown; durationMinutes: unknown; difficulty: unknown };
 
 /** Turns a zod failure into { fieldName: first message }. */
 export function fieldErrorsOf(error: z.ZodError): Record<string, string> {

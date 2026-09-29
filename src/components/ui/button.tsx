@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ButtonHTMLAttributes, ComponentProps } from "react";
 
-export type ButtonVariant = "primary" | "secondary" | "quiet";
+export type ButtonVariant = "primary" | "secondary" | "quiet" | "danger";
 
 const base =
   "inline-flex min-h-12 min-w-12 items-center justify-center gap-2 rounded-lg px-5 py-3 text-base font-semibold transition-colors focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-kaki disabled:cursor-not-allowed aria-disabled:cursor-not-allowed";
@@ -11,6 +11,8 @@ const variants: Record<ButtonVariant, string> = {
     "bg-kaki text-white hover:bg-kaki-strong disabled:bg-line disabled:text-ink-soft aria-disabled:bg-line aria-disabled:text-ink-soft",
   secondary:
     "border-2 border-kaki bg-surface text-kaki hover:bg-kaki-soft disabled:border-line disabled:text-ink-soft aria-disabled:border-line aria-disabled:text-ink-soft",
+  danger:
+    "border-2 border-danger bg-surface text-danger hover:bg-danger hover:text-white disabled:border-line disabled:text-ink-soft aria-disabled:border-line aria-disabled:text-ink-soft",
   quiet: "text-kaki underline-offset-4 hover:bg-kaki-soft hover:underline disabled:text-ink-soft",
 };
 

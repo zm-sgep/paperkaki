@@ -216,7 +216,7 @@ export async function setPaperSettings(
 }
 
 /** "Use recommended settings": back to the suggestion for the chosen topics. */
-export async function useRecommendedSettings(
+export async function resetToRecommendedSettings(
   parentProfileId: string,
   assessmentId: string,
   context: CommandContext = {},

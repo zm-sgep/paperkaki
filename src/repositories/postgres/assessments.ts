@@ -22,6 +22,13 @@ import {
  * can never reach another parent's rows: no match simply returns nothing.
  */
 
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/** Ids from URLs and forms may be anything: a malformed one simply matches nothing. */
+function isUuid(value: string): boolean {
+  return UUID.test(value);
+}
+
 // ---------------------------------------------------------------------------
 // Children
 // ---------------------------------------------------------------------------
@@ -35,6 +42,7 @@ export async function listActiveChildren(db: Database, parentProfileId: string):
 }
 
 export async function getOwnedChild(db: Database, parentProfileId: string, childId: string): Promise<Child | null> {
+  if (!isUuid(childId)) return null;
   const [row] = await db
     .select()
     .from(children)
@@ -58,6 +66,7 @@ export async function updateOwnedChild(
   childId: string,
   values: { nickname: string; schoolName: string | null },
 ): Promise<Child | null> {
+  if (!isUuid(childId)) return null;
   const [row] = await db
     .update(children)
     .set(values)
@@ -72,6 +81,7 @@ export async function archiveOwnedChild(
   childId: string,
   now: Date,
 ): Promise<Child | null> {
+  if (!isUuid(childId)) return null;
   const [row] = await db
     .update(children)
     .set({ archivedAt: now })
@@ -105,6 +115,7 @@ export async function getOwnedAssessment(
   parentProfileId: string,
   assessmentId: string,
 ): Promise<OwnedAssessment | null> {
+  if (!isUuid(assessmentId)) return null;
   const [row] = await db
     .select({ assessment: assessments, nickname: children.nickname, archivedAt: children.archivedAt })
     .from(assessments)

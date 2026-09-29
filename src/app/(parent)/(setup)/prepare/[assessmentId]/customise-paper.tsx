@@ -1,0 +1,87 @@
+"use client";
+
+import { useActionState } from "react";
+import { ChoiceCard } from "@/components/ui/choice-card";
+import { Field, inputClassName } from "@/components/ui/field";
+import { SubmitButton } from "@/components/ui/submit-button";
+import { saveSettingsAction, type SettingsState } from "./actions";
+
+type Props = {
+  assessmentId: string;
+  markOptions: number[];
+  settings: { totalMarks: number; durationMinutes: number; difficulty: string };
+  usingRecommended: boolean;
+};
+
+const DIFFICULTIES = [
+  { value: "easier", label: "Easier" },
+  { value: "balanced", label: "Balanced" },
+  { value: "harder", label: "Harder" },
+];
+
+/** Collapsed by default: most parents never need it (progressive disclosure). */
+export function CustomisePaper({ assessmentId, markOptions, settings, usingRecommended }: Props) {
+  const [state, formAction] = useActionState<SettingsState, FormData>(saveSettingsAction.bind(null, assessmentId), {});
+  const errors = state.errors ?? {};
+  const marks = state.values?.totalMarks ?? String(settings.totalMarks);
+  const minutes = state.values?.durationMinutes ?? String(settings.durationMinutes);
+  const difficulty = state.values?.difficulty ?? settings.difficulty;
+
+  return (
+    <details open={state.errors ? true : undefined} className="rounded-2xl border border-line bg-surface p-5 sm:p-6">
+      <summary className="flex min-h-12 cursor-pointer items-center text-lg font-semibold text-kaki">Customise paper</summary>
+      <form key={`${settings.totalMarks}-${settings.durationMinutes}-${settings.difficulty}`} action={formAction} className="mt-4 flex flex-col gap-6">
+        <Field id="totalMarks" label="Total marks" error={errors.totalMarks}>
+          <select id="totalMarks" name="totalMarks" defaultValue={marks} className={`${inputClassName} sm:max-w-xs`}>
+            {markOptions.map((option) => (
+              <option key={option} value={option}>
+                {option} marks
+              </option>
+            ))}
+          </select>
+        </Field>
+        <Field id="durationMinutes" label="Time in minutes" error={errors.durationMinutes}>
+          <input
+            id="durationMinutes"
+            name="durationMinutes"
+            type="number"
+            inputMode="numeric"
+            min={15}
+            max={120}
+            defaultValue={minutes}
+            aria-invalid={errors.durationMinutes ? true : undefined}
+            aria-describedby={errors.durationMinutes ? "durationMinutes-error" : undefined}
+            className={`${inputClassName} sm:max-w-xs`}
+          />
+        </Field>
+        <fieldset className="flex flex-col gap-3">
+          <legend className="pb-1 text-lg font-medium text-ink">How hard?</legend>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {DIFFICULTIES.map((option) => (
+              <ChoiceCard key={option.value} type="radio" name="difficulty" value={option.value} label={option.label} defaultChecked={difficulty === option.value} />
+            ))}
+          </div>
+          {errors.difficulty ? (
+            <p role="alert" className="text-base font-medium text-danger">
+              {errors.difficulty}
+            </p>
+          ) : null}
+        </fieldset>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <SubmitButton variant="secondary" name="intent" value="save" className="w-full sm:w-auto">
+            Save settings
+          </SubmitButton>
+          {usingRecommended ? null : (
+            <SubmitButton variant="quiet" name="intent" value="recommended" formNoValidate className="w-full sm:w-auto">
+              Use recommended settings
+            </SubmitButton>
+          )}
+        </div>
+        <p role="status" className="text-base text-ink">
+          {state.saved ? "Saved. The summary above is up to date." : null}
+        </p>
+      </form>
+    </details>
+  );
+}
+

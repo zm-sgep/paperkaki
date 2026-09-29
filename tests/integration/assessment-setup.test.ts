@@ -6,7 +6,7 @@ import {
   createAssessment,
   setAssessmentScope,
   setPaperSettings,
-  useRecommendedSettings,
+  resetToRecommendedSettings,
 } from "@/application/commands/assessments";
 import { InputError, NotFoundError } from "@/application/errors";
 import { getParentChildren } from "@/application/queries/children";
@@ -301,8 +301,8 @@ describe("assessment setup (M3)", () => {
       expect(await requirements()).toMatchObject({ totalMarks: 30, source: "parent" });
     });
 
-    it("useRecommendedSettings resets to the suggestion and versions the change", async () => {
-      await useRecommendedSettings(parentA, assessmentId, ctx());
+    it("resetToRecommendedSettings resets to the suggestion and versions the change", async () => {
+      await resetToRecommendedSettings(parentA, assessmentId, ctx());
       expect(await requirements()).toMatchObject({ source: "recommended" });
       expect(await versions()).toBe(3);
     });
@@ -385,7 +385,7 @@ describe("assessment setup (M3)", () => {
       await expect(
         setPaperSettings(b, assessment, { totalMarks: 20, durationMinutes: 30, difficulty: "easier" }, ctx()),
       ).rejects.toBeInstanceOf(NotFoundError);
-      await expect(useRecommendedSettings(b, assessment, ctx())).rejects.toBeInstanceOf(NotFoundError);
+      await expect(resetToRecommendedSettings(b, assessment, ctx())).rejects.toBeInstanceOf(NotFoundError);
     });
 
     it("every query returns nothing", async () => {
