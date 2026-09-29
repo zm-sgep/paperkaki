@@ -88,8 +88,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Playwright smoke tests
-        env:
-          DATABASE_URL: pglite://memory
+        # The Playwright config prepares its own file-backed PGlite database (migrate + seed).
         run: npm run test:e2e
 
       - name: Upload Playwright report

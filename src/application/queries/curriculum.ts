@@ -7,12 +7,14 @@ import type {
 } from "@/domain/curriculum";
 import type { Database } from "@/repositories/postgres/client";
 import {
+  countVersionContents,
   findVersionForSubjectLevel,
   getCurriculumTree as loadCurriculumTree,
   getOutcomeDetail,
   getVersion,
   listOutcomesByTopic,
   listVersions,
+  type VersionCounts,
 } from "@/repositories/postgres/curriculum";
 import { getReadyDb } from "@/repositories/postgres/ready";
 
@@ -92,4 +94,23 @@ export async function getOutcomeWithSources(
     return null;
   }
   return getOutcomeDetail(db, versionId, outcomeId);
+}
+
+export type CurriculumVersionOverview = CurriculumVersionSummary & VersionCounts;
+
+/** Every version with its content counts, newest first. For the admin curriculum browser. */
+export async function listCurriculumVersionOverviews(context: QueryContext = {}): Promise<CurriculumVersionOverview[]> {
+  const db = await resolveDb(context);
+  const versions = await listVersions(db);
+  return Promise.all(versions.map(async (version) => ({ ...version, ...(await countVersionContents(db, version.id)) })));
+}
+
+/** One version with its content counts. Admin only. */
+export async function getCurriculumVersionOverview(
+  versionId: string,
+  context: QueryContext = {},
+): Promise<CurriculumVersionOverview | null> {
+  const db = await resolveDb(context);
+  const version = await getVersion(db, versionId);
+  return version ? { ...version, ...(await countVersionContents(db, versionId)) } : null;
 }

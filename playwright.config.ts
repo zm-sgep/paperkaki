@@ -3,6 +3,8 @@ import { defineConfig, devices } from "@playwright/test";
 
 const PORT = 3100;
 const baseURL = `http://localhost:${PORT}`;
+/** File-backed so the seed step and the server share one database. Recreated on every run. */
+const E2E_DB_DIR = "./.data/e2e-db";
 
 /**
  * Chromium location. In CI, `playwright install chromium` provides the matching browser and
@@ -53,13 +55,22 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: `npm run build && npm run start -- --port ${PORT}`,
+    // Prepares the browser-test database first: a fresh file-backed PGlite database, migrated
+    // and seeded with the published P3 curriculum (development seed, ADR-0012), plus one
+    // fictional DRAFT curriculum version that the admin tests use to mark outcomes verified.
+    command: [
+      `node -e "require('node:fs').rmSync('${E2E_DB_DIR}', { recursive: true, force: true })"`,
+      "npm run db:seed",
+      "npm run curriculum:import -- tests/fixtures/curriculum/e2e-draft.json",
+      "npm run build",
+      `npm run start -- --port ${PORT}`,
+    ].join(" && "),
     url: baseURL,
     timeout: 240_000,
     reuseExistingServer: false,
     env: {
       APP_BASE_URL: baseURL,
-      DATABASE_URL: "pglite://memory",
+      DATABASE_URL: `pglite://${E2E_DB_DIR}`,
       LOG_LEVEL: "warn",
       // Fictional, test-only values. The production build normally refuses the dev sign-in
       // adapter; E2E_ALLOW_DEV_AUTH lets these browser tests use it.

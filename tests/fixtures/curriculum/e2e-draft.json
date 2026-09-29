@@ -1,0 +1,61 @@
+{
+  "curriculumVersion": {
+    "code": "E2E-DRAFT-FICTIONAL",
+    "subject": "Mathematics",
+    "title": "Fictional draft curriculum for browser tests",
+    "levels": ["P3"],
+    "effectiveFrom": "2026-10-01",
+    "status": "draft"
+  },
+  "sources": [
+    {
+      "id": "src-e2e-fictional",
+      "title": "Fictional test syllabus (not a real document)",
+      "publisher": "Fictional Test Publisher",
+      "provenance": "official_school",
+      "verification": "unverified",
+      "notes": "Used only by the browser tests. Never a real curriculum source."
+    },
+    {
+      "id": "src-e2e-fictional-2",
+      "title": "Second fictional test document",
+      "publisher": "Fictional Test Publisher",
+      "provenance": "official_school",
+      "verification": "unverified"
+    }
+  ],
+  "domains": [
+    {
+      "code": "E2E-D1",
+      "title": "Fictional domain",
+      "topics": [
+        {
+          "code": "E2E-T1",
+          "title": "Draft-only topic",
+          "parentLabel": "Draft-only topic for parents",
+          "notes": ["Fictional scope note for browser tests"],
+          "outcomes": [
+            {
+              "code": "E2E-O-PHONE",
+              "statement": "fictional outcome checked by the phone browser test",
+              "childLabel": "Fictional phone outcome",
+              "sourceRef": { "sourceId": "src-e2e-fictional" }
+            },
+            {
+              "code": "E2E-O-IPAD",
+              "statement": "fictional outcome checked by the iPad browser test",
+              "childLabel": "Fictional iPad outcome",
+              "sourceRef": { "sourceId": "src-e2e-fictional" }
+            },
+            {
+              "code": "E2E-O-PAGED",
+              "statement": "fictional outcome that already has a page reference",
+              "childLabel": "Fictional paged outcome",
+              "sourceRef": { "sourceId": "src-e2e-fictional-2", "pageOrSection": "p. 12, section 3" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

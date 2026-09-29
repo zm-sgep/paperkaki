@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { requireAdmin } from "@/application/queries/current-parent";
 import { PageHeader } from "@/components/ui/page-header";
 
@@ -11,7 +12,11 @@ export default async function AdminPage() {
       <PageHeader title="Admin" />
       <section>
         <h2 className="text-xl font-semibold text-ink">Curriculum</h2>
-        <p className="text-lg text-ink-soft">Not built yet</p>
+        <p className="text-lg text-ink-soft">
+          <Link href="/admin/curriculum" className="text-kaki underline underline-offset-4">
+            Browse curriculum versions
+          </Link>
+        </p>
       </section>
       <section>
         <h2 className="text-xl font-semibold text-ink">Question bank</h2>
