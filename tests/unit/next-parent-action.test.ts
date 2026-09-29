@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  nearestUpcomingAssessment,
   nextParentAction,
   type ParentActionAssessment,
   type ParentActionState,
@@ -30,6 +31,7 @@ describe("nextParentAction", () => {
     expect(nextParentAction(state({ children: [] }))).toEqual({
       kind: "add_child",
       title: "Who are you preparing?",
+      supportingText: "PaperKaki makes practice papers for your child's next school assessment.",
       ctaLabel: "Add your child",
       href: "/prepare/new",
     });
@@ -39,6 +41,7 @@ describe("nextParentAction", () => {
     expect(nextParentAction(state())).toEqual({
       kind: "add_assessment",
       title: "What is Mia preparing for?",
+      supportingText: "Tell us the assessment and date. We'll build a mock paper around it.",
       ctaLabel: "Add upcoming assessment",
       href: "/prepare/new",
     });
@@ -61,6 +64,7 @@ describe("nextParentAction", () => {
     expect(nextParentAction(state({ assessments: [assessment()] }))).toEqual({
       kind: "confirm_scope",
       title: "Maths WA3: choose the topics",
+      supportingText: "Tick the topics from the school's notice.",
       ctaLabel: "Choose topics",
       href: "/prepare/a1/scope",
     });
@@ -70,6 +74,7 @@ describe("nextParentAction", () => {
     expect(nextParentAction(state({ assessments: [assessment({ scopeConfirmed: true })] }))).toEqual({
       kind: "generate_mock",
       title: "Maths WA3: topics confirmed",
+      supportingText: "We'll create a mock paper from the topics you chose.",
       ctaLabel: "Generate first mock",
       href: "/prepare/a1",
     });
@@ -87,6 +92,7 @@ describe("nextParentAction", () => {
     expect(nextParentAction(state({ assessments: [withPapers] }))).toEqual({
       kind: "start_mock",
       title: "Maths WA3 · Mock 3 is ready",
+      supportingText: "Print it on A4. The answer pack is separate.",
       ctaLabel: "Print mock",
       href: "/prepare/a1/mocks/p3",
     });
@@ -140,6 +146,30 @@ describe("nextParentAction", () => {
       expect(action.href).toMatch(/^\/prepare/);
     }
     expect(kinds.size).toBe(5);
+  });
+
+  it("gives every action one sentence of supporting text", () => {
+    const paper = { id: "p1", number: 1, status: "ready" as const };
+    for (const input of [
+      state({ children: [] }),
+      state(),
+      state({ assessments: [assessment()] }),
+      state({ assessments: [assessment({ scopeConfirmed: true })] }),
+      state({ assessments: [assessment({ scopeConfirmed: true, papers: [paper] })] }),
+    ]) {
+      const text = nextParentAction(input).supportingText ?? "";
+      expect(text).toMatch(/^[A-Z].*\.$/);
+    }
+  });
+
+  it("nearestUpcomingAssessment follows the current child and ignores past dates", () => {
+    const soon = assessment({ id: "soon", date: "2026-10-01" });
+    const past = assessment({ id: "past", date: "2026-09-01" });
+    const forBen = assessment({ id: "ben", childId: ben.id, date: "2026-09-30" });
+    const input = state({ children: [mia, ben], assessments: [past, soon, forBen] });
+    expect(nearestUpcomingAssessment(input)?.id).toBe("soon");
+    expect(nearestUpcomingAssessment({ ...input, selectedChildId: ben.id })?.id).toBe("ben");
+    expect(nearestUpcomingAssessment(state({ children: [] }))).toBeUndefined();
   });
 
   it("does not change its input", () => {

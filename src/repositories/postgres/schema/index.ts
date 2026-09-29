@@ -4,3 +4,4 @@ export * from "./identity";
 export * from "./audit";
 export * from "./curriculum";
 export * from "./questions";
+export * from "./assessments";

@@ -36,6 +36,13 @@
       "when": 1790698157516,
       "tag": "0004_question_immutability",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790699905596,
+      "tag": "0005_assessment_setup",
+      "breakpoints": true
     }
   ]
 }
