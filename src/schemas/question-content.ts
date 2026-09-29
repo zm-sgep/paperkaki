@@ -70,10 +70,178 @@ export const ImageBlockSchema = z
   })
   .strict();
 
+// ---------------------------------------------------------------------------
+// Diagram blocks: structured data drawn by deterministic renderers, never
+// images and never free-form. Each block validates that what it describes can
+// actually be drawn (bars within scale, cells on the grid, and so on).
+// ---------------------------------------------------------------------------
+
+const IntCoordSchema = z.number().int();
+
+/** Longest bar/axis label; keeps category labels legible in a fixed layout. */
+export const BAR_LABEL_MAX_LENGTH = 16;
+/** The bar-graph value axis draws one gridline per step; more than this is unreadable. */
+export const BAR_GRAPH_MAX_STEPS = 12;
+/** A grid must fit beside the question number and marks columns of an A4 paper. */
+export const GRID_MAX_WIDTH_MM = 130;
+
+export const BarGraphBlockSchema = z
+  .object({
+    t: z.literal("bargraph"),
+    title: z.string().min(1),
+    categoryAxisLabel: z.string().min(1),
+    valueAxisLabel: z.string().min(1),
+    scale: z
+      .object({ max: z.number().int().min(2), step: z.number().int().min(1) })
+      .strict(),
+    bars: z
+      .array(
+        z
+          .object({
+            label: z.string().min(1).max(BAR_LABEL_MAX_LENGTH),
+            value: z.number().int().min(0),
+          })
+          .strict(),
+      )
+      .min(2)
+      .max(6),
+    orientation: z.enum(["vertical", "horizontal"]),
+  })
+  .strict()
+  .superRefine((g, ctx) => {
+    const issue = (message: string, path: (string | number)[]) =>
+      ctx.addIssue({ code: "custom", message, path });
+    const { max, step } = g.scale;
+    if (step > max) issue("Scale step must not exceed the scale max", ["scale", "step"]);
+    else if (max % step !== 0) issue("Scale max must be a whole number of steps", ["scale", "max"]);
+    else if (max / step > BAR_GRAPH_MAX_STEPS) {
+      issue(`Scale must have at most ${BAR_GRAPH_MAX_STEPS} steps`, ["scale", "step"]);
+    }
+    const seen = new Set<string>();
+    g.bars.forEach((bar, i) => {
+      if (bar.value > max) issue(`Bar value ${bar.value} exceeds the scale max ${max}`, ["bars", i, "value"]);
+      if (seen.has(bar.label)) issue(`Duplicate bar label "${bar.label}"`, ["bars", i, "label"]);
+      seen.add(bar.label);
+    });
+  });
+
+const GridCellSchema = z.tuple([IntCoordSchema.min(0), IntCoordSchema.min(0)]);
+const GridPointSchema = z.tuple([IntCoordSchema.min(0), IntCoordSchema.min(0)]);
+
+export const GridBlockSchema = z
+  .object({
+    t: z.literal("grid"),
+    cols: z.number().int().min(2).max(14),
+    rows: z.number().int().min(2).max(10),
+    cellMm: z.number().min(5).max(10),
+    /** Unit squares to shade, as [col, row] with [0, 0] the top-left square. */
+    shaded: z.array(GridCellSchema).min(1).optional(),
+    /** Closed rectilinear polygon along grid lines, as [x, y] vertices with [0, 0] the top-left corner. */
+    outline: z.array(GridPointSchema).min(4).optional(),
+  })
+  .strict()
+  .superRefine((g, ctx) => {
+    const issue = (message: string, path: (string | number)[]) =>
+      ctx.addIssue({ code: "custom", message, path });
+    if (g.shaded === undefined && g.outline === undefined) {
+      issue("A grid needs shaded squares, an outline, or both", ["shaded"]);
+    }
+    if (g.cols * g.cellMm > GRID_MAX_WIDTH_MM) {
+      issue(`Grid is wider than ${GRID_MAX_WIDTH_MM} mm`, ["cols"]);
+    }
+    const seen = new Set<string>();
+    g.shaded?.forEach(([col, row], i) => {
+      if (col >= g.cols || row >= g.rows) issue(`Shaded square [${col}, ${row}] is outside the grid`, ["shaded", i]);
+      const key = `${col},${row}`;
+      if (seen.has(key)) issue(`Shaded square [${col}, ${row}] is listed twice`, ["shaded", i]);
+      seen.add(key);
+    });
+    const outline = g.outline;
+    if (outline) {
+      outline.forEach(([x, y], i) => {
+        if (x > g.cols || y > g.rows) issue(`Outline point [${x}, ${y}] is outside the grid`, ["outline", i]);
+      });
+      outline.forEach(([x, y], i) => {
+        const [nx, ny] = outline[(i + 1) % outline.length] as [number, number];
+        if (x === nx && y === ny) issue("Outline has a zero-length side", ["outline", i]);
+        else if (x !== nx && y !== ny) issue("Outline sides must be horizontal or vertical", ["outline", i]);
+      });
+    }
+  });
+
+export const AngleBlockSchema = z
+  .object({
+    t: z.literal("angle"),
+    degrees: z.number().int().min(20).max(170),
+    armLengthMm: z.number().min(15).max(45),
+    label: z.string().min(1).max(4).optional(),
+    showRightAngleMark: z.boolean().optional(),
+  })
+  .strict()
+  .superRefine((a, ctx) => {
+    if (a.showRightAngleMark === true && a.degrees !== 90) {
+      ctx.addIssue({
+        code: "custom",
+        message: "The right-angle mark can only be shown on a 90 degree angle",
+        path: ["showRightAngleMark"],
+      });
+    }
+  });
+
+const LineCoordSchema = z.tuple([IntCoordSchema.min(0).max(12), IntCoordSchema.min(0).max(12)]);
+
+export const LinesBlockSchema = z
+  .object({
+    t: z.literal("lines"),
+    segments: z
+      .array(
+        z
+          .object({
+            from: LineCoordSchema,
+            to: LineCoordSchema,
+            label: z.string().min(1).max(4).optional(),
+          })
+          .strict(),
+      )
+      .min(1)
+      .max(8),
+    points: z
+      .array(z.object({ at: LineCoordSchema, label: z.string().min(1).max(4) }).strict())
+      .max(8)
+      .optional(),
+    /** Dots at every integer coordinate from [0, 0] to [cols - 1, rows - 1], for the child to draw on. */
+    dotGrid: z
+      .object({ cols: z.number().int().min(2).max(13), rows: z.number().int().min(2).max(13) })
+      .strict()
+      .optional(),
+  })
+  .strict()
+  .superRefine((l, ctx) => {
+    const issue = (message: string, path: (string | number)[]) =>
+      ctx.addIssue({ code: "custom", message, path });
+    l.segments.forEach((s, i) => {
+      if (s.from[0] === s.to[0] && s.from[1] === s.to[1]) issue("A segment must have two different ends", ["segments", i]);
+    });
+    const dots = l.dotGrid;
+    if (dots) {
+      const inside = ([x, y]: readonly [number, number]) => x < dots.cols && y < dots.rows;
+      l.segments.forEach((s, i) => {
+        if (!inside(s.from) || !inside(s.to)) issue("Segment ends must lie on the dot grid", ["segments", i]);
+      });
+      l.points?.forEach((p, i) => {
+        if (!inside(p.at)) issue("Point must lie on the dot grid", ["points", i]);
+      });
+    }
+  });
+
 export const BlockSchema = z.discriminatedUnion("t", [
   ParagraphBlockSchema,
   TableBlockSchema,
   ImageBlockSchema,
+  BarGraphBlockSchema,
+  GridBlockSchema,
+  AngleBlockSchema,
+  LinesBlockSchema,
 ]);
 export type Block = z.infer<typeof BlockSchema>;
 

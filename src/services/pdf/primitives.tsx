@@ -2,6 +2,8 @@ import { Font, Image, StyleSheet, Text, View } from "@react-pdf/renderer";
 import type { ComponentProps, ReactElement } from "react";
 type Style = NonNullable<ComponentProps<typeof View>["style"]>;
 import type { Block, Inline } from "@/schemas/question-content";
+import { DiagramView, isDiagramBlock } from "./diagrams";
+import { pdfText } from "./primitives-text";
 import type { PdfImage } from "./types";
 
 /**
@@ -15,16 +17,7 @@ Font.registerHyphenationCallback((word) => [word]);
 export const MM = 72 / 25.4;
 export const A4_HEIGHT = 297 * MM;
 
-/** Helvetica (WinAnsi) has no glyph for these; map to the nearest printable form. */
-const GLYPH_MAP: Record<string, string> = {
-  "−": "–", // minus sign -> en dash
-  "ℓ": "l", // script small l (litre) -> l
-  " ": " ",
-};
-
-export function pdfText(text: string): string {
-  return text.replace(/[−ℓ ]/g, (c) => GLYPH_MAP[c] ?? c);
-}
+export { pdfText };
 
 export const colors = { ink: "#000000", muted: "#444444", rule: "#000000", faint: "#888888", tint: "#efefef" };
 
@@ -161,6 +154,7 @@ export function BlockView({
 }): ReactElement {
   if (block.t === "p") return <InlineRun inlines={block.c} />;
   if (block.t === "image") return <ImageOrPlaceholder block={block} image={images?.[block.assetKey]} />;
+  if (isDiagramBlock(block)) return <DiagramView block={block} />;
   return (
     <View style={[styles.table, { width: Math.min(block.rows[0]?.length ?? 1, 5) * 88 }]}>
       {block.rows.map((row, r) => (
@@ -177,6 +171,42 @@ export function BlockView({
       ))}
     </View>
   );
+}
+
+/**
+ * A run of blocks. Consecutive angle diagrams sit side by side (wrapping if
+ * needed) so a "which angle?" question does not become a tall column.
+ */
+export function BlockList({
+  blocks,
+  images,
+}: {
+  blocks: readonly Block[];
+  images: Readonly<Record<string, PdfImage | null>> | undefined;
+}): ReactElement {
+  const out: ReactElement[] = [];
+  for (let i = 0; i < blocks.length; i += 1) {
+    const block = blocks[i] as Block;
+    if (block.t === "angle") {
+      const group: Block[] = [block];
+      while ((blocks[i + 1] as Block | undefined)?.t === "angle") {
+        i += 1;
+        group.push(blocks[i] as Block);
+      }
+      out.push(
+        <View key={i} wrap={false} style={{ flexDirection: "row", flexWrap: "wrap", columnGap: 14, alignItems: "flex-end" }}>
+          {group.map((g, j) => (
+            <View key={j}>
+              <BlockView block={g} images={images} />
+            </View>
+          ))}
+        </View>,
+      );
+    } else {
+      out.push(<BlockView key={i} block={block} images={images} />);
+    }
+  }
+  return <View>{out}</View>;
 }
 
 export function marksLabel(marks: number): string {

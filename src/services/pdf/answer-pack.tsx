@@ -1,7 +1,7 @@
 import { Document, Page, Text, View, renderToBuffer } from "@react-pdf/renderer";
 import type { ReactElement } from "react";
 import { DEFAULT_CREATION_DATE } from "./student-paper";
-import { A4_HEIGHT, BlockView, InlineRun, MM, colors, marksLabel, pdfText, styles } from "./primitives";
+import { A4_HEIGHT, BlockList, InlineRun, MM, colors, marksLabel, pdfText, styles } from "./primitives";
 import type { AnswerPack, AnswerPackQuestion, RenderOptions } from "./types";
 
 function AnswerQuestion({ question, images }: { question: AnswerPackQuestion; images: RenderOptions["images"] }): ReactElement {
@@ -22,9 +22,7 @@ function AnswerQuestion({ question, images }: { question: AnswerPackQuestion; im
         </View>
       </View>
       <Text style={[styles.bold, { fontSize: 10, marginBottom: 2 }]}>Worked solution</Text>
-      {question.workedSolution.map((block, i) => (
-        <BlockView key={i} block={block} images={images} />
-      ))}
+      <BlockList blocks={question.workedSolution} images={images} />
     </View>
   );
 }

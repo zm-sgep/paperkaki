@@ -1,7 +1,7 @@
 import { Document, Page, Text, View, renderToBuffer } from "@react-pdf/renderer";
 import type { ReactElement } from "react";
 import type { QuestionContent } from "@/schemas/question-content";
-import { A4_HEIGHT, BlockView, InlineRun, MM, colors, marksLabel, pdfText, styles } from "./primitives";
+import { A4_HEIGHT, BlockList, InlineRun, MM, colors, marksLabel, pdfText, styles } from "./primitives";
 import type { PdfImage, RenderOptions, StudentPaper, StudentQuestion, StudentSection, WorkingSpace } from "./types";
 
 /** Fixed so identical input gives identical bytes. */
@@ -76,9 +76,7 @@ function Question({
       <View style={{ flexDirection: "row" }}>
         <Text style={[styles.bold, { width: 26 }]}>{`${question.number}.`}</Text>
         <View style={{ flex: 1 }}>
-          {question.content.stem.map((block, i) => (
-            <BlockView key={i} block={block} images={images} />
-          ))}
+          <BlockList blocks={question.content.stem} images={images} />
           <Options content={question.content} />
           {isMcq ? null : (
             <View style={{ flexDirection: "row", alignItems: "flex-end", marginTop: 6 }}>
