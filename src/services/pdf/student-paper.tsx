@@ -124,14 +124,21 @@ function FillLine({ label, flex }: { label: string; flex: number }): ReactElemen
   );
 }
 
-function Header({ paper }: { paper: StudentPaper }): ReactElement {
+type BookletInfo = { name: string; marks: number };
+
+function Header({ paper, booklet }: { paper: StudentPaper; booklet?: BookletInfo }): ReactElement {
   return (
     <View style={{ marginBottom: 10 }}>
       <Text style={{ fontSize: 8, color: colors.muted }}>PaperKaki</Text>
       <Text style={[styles.bold, { fontSize: 20, marginTop: 4, lineHeight: 1.2 }]}>{pdfText(paper.title)}</Text>
       <Text style={{ fontSize: 12, marginTop: 2 }}>{`${pdfText(paper.levelLabel)} · ${pdfText(paper.subjectLabel)}`}</Text>
-      <Text style={{ fontSize: 11, marginTop: 6 }}>
-        {`Duration: ${paper.durationMinutes} minutes   Total: ${paper.totalMarks} marks`}
+      {booklet ? (
+        <Text style={[styles.bold, { fontSize: 16, marginTop: 8 }]}>{pdfText(booklet.name)}</Text>
+      ) : null}
+      <Text style={{ fontSize: 11, marginTop: booklet ? 3 : 6 }}>
+        {booklet
+          ? `Duration: ${paper.durationMinutes} minutes (whole paper)   Total: ${booklet.marks} marks (this booklet)`
+          : `Duration: ${paper.durationMinutes} minutes   Total: ${paper.totalMarks} marks`}
       </Text>
       <View style={{ flexDirection: "row", marginTop: 14 }}>
         <FillLine label="Name" flex={3} />
@@ -153,6 +160,60 @@ function Header({ paper }: { paper: StudentPaper }): ReactElement {
   );
 }
 
+/** Consecutive sections of the same booklet, in paper order. A paper with no booklets is one group. */
+function groupByBooklet(sections: readonly StudentSection[]): { booklet: string | undefined; sections: StudentSection[] }[] {
+  const groups: { booklet: string | undefined; sections: StudentSection[] }[] = [];
+  for (const section of sections) {
+    const last = groups[groups.length - 1];
+    if (last && last.booklet === section.booklet) last.sections.push(section);
+    else groups.push({ booklet: section.booklet, sections: [section] });
+  }
+  return groups;
+}
+
+const marksOfSections = (sections: readonly StudentSection[]): number =>
+  sections.reduce((total, section) => total + section.questions.reduce((sum, q) => sum + q.marks, 0), 0);
+
+/** One page run: the header, then the sections. With booklets, each booklet starts its own run on a new page. */
+function PaperPages({
+  paper,
+  sections,
+  booklet,
+  images,
+}: {
+  paper: StudentPaper;
+  sections: StudentSection[];
+  booklet?: BookletInfo;
+  images: RenderOptions["images"];
+}): ReactElement {
+  return (
+    <Page size="A4" style={[styles.body, { paddingTop: 20 * MM, paddingBottom: 22 * MM, paddingHorizontal: 20 * MM }]}>
+      <Header paper={paper} {...(booklet ? { booklet } : {})} />
+      {sections.map((section, s) => {
+        const [first, ...rest] = section.questions;
+        return (
+          <View key={s}>
+            {/* Keep the heading with its first question so it is never stranded at a page bottom. */}
+            <View wrap={false}>
+              <SectionHeading section={section} />
+              {first ? <Question question={first} images={images} /> : null}
+            </View>
+            {rest.map((q) => (
+              <Question key={q.number} question={q} images={images} />
+            ))}
+          </View>
+        );
+      })}
+      {/* Page numbers run through the whole paper, booklet after booklet. */}
+      <Text
+        fixed
+        style={{ position: "absolute", top: A4_HEIGHT - 13 * MM, left: 20 * MM, right: 20 * MM, textAlign: "center", fontSize: 9, color: colors.muted }}
+        render={({ pageNumber, totalPages }) => `Page ${pageNumber} of ${totalPages}`}
+      />
+    </Page>
+  );
+}
+
 export function StudentPaperDocument({ paper, options = {} }: { paper: StudentPaper; options?: RenderOptions }): ReactElement {
   const { images, creationDate = DEFAULT_CREATION_DATE } = options;
   return (
@@ -165,29 +226,15 @@ export function StudentPaperDocument({ paper, options = {} }: { paper: StudentPa
       modificationDate={creationDate}
       language="en-SG"
     >
-      <Page size="A4" style={[styles.body, { paddingTop: 20 * MM, paddingBottom: 22 * MM, paddingHorizontal: 20 * MM }]}>
-        <Header paper={paper} />
-        {paper.sections.map((section, s) => {
-          const [first, ...rest] = section.questions;
-          return (
-            <View key={s}>
-              {/* Keep the heading with its first question so it is never stranded at a page bottom. */}
-              <View wrap={false}>
-                <SectionHeading section={section} />
-                {first ? <Question question={first} images={images} /> : null}
-              </View>
-              {rest.map((q) => (
-                <Question key={q.number} question={q} images={images} />
-              ))}
-            </View>
-          );
-        })}
-        <Text
-          fixed
-          style={{ position: "absolute", top: A4_HEIGHT - 13 * MM, left: 20 * MM, right: 20 * MM, textAlign: "center", fontSize: 9, color: colors.muted }}
-          render={({ pageNumber, totalPages }) => `Page ${pageNumber} of ${totalPages}`}
+      {groupByBooklet(paper.sections).map((group, g) => (
+        <PaperPages
+          key={g}
+          paper={paper}
+          sections={group.sections}
+          images={images}
+          {...(group.booklet === undefined ? {} : { booklet: { name: group.booklet, marks: marksOfSections(group.sections) } })}
         />
-      </Page>
+      ))}
     </Document>
   );
 }

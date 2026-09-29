@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { buildBlueprint } from "@/domain/assessments";
 import { workingSpaceFor } from "@/domain/papers";
 import {
+  SECTION_INSTRUCTIONS,
   STUDENT_INSTRUCTIONS,
   answerInlines,
   buildAnswerPack,
@@ -46,6 +47,40 @@ describe("paper documents (M4-04, M4-05 inputs)", () => {
     const paper = buildStudentPaper({ assessmentName: "WA2", mockNumber: 1, blueprint, questions });
     expect(paper.sections.map((s) => s.title)).toEqual(["Section A (5 marks)", "Section B (5 marks)"]);
     expect(paper.sections.map((s) => s.questions.map((q) => q.number))).toEqual([[1, 2], [3]]);
+  });
+
+  it("gives each part the instructions for its kind, and carries booklet names through to both documents", () => {
+    const format = {
+      durationMinutes: 60,
+      sections: [
+        { label: "Section A", booklet: "Booklet A", kind: "mcq" as const, questionCount: 2, totalMarks: 5 },
+        { label: "Section B", booklet: "Booklet B", kind: "short" as const, questionCount: 1, totalMarks: 5 },
+      ],
+    };
+    // (Marks here are only for building documents; the paper validator is not involved.)
+    const bp = buildBlueprint({
+      curriculumVersionId: "v1",
+      level: "P3",
+      subject: "Mathematics",
+      topics: [{ topicId: "t1", label: "Fractions", outcomeIds: ["o1"] }],
+      settings: { totalMarks: 10, durationMinutes: 60, difficulty: "balanced" },
+      format,
+    });
+    const input = { assessmentName: "WA2", mockNumber: 1, blueprint: bp, questions };
+    const paper = buildStudentPaper(input);
+    expect(paper.sections.map((s) => [s.title, s.booklet, s.instructions])).toEqual([
+      ["Section A (5 marks)", "Booklet A", SECTION_INSTRUCTIONS.mcq],
+      ["Section B (5 marks)", "Booklet B", SECTION_INSTRUCTIONS.short],
+    ]);
+    expect(buildAnswerPack(input).sections.map((s) => [s.title, s.booklet])).toEqual([
+      ["Section A (5 marks)", "Booklet A"],
+      ["Section B (5 marks)", "Booklet B"],
+    ]);
+    expect(SECTION_INSTRUCTIONS.word_problem).toBe(
+      "Show your working clearly in the space below each question. Write your answers in the spaces provided.",
+    );
+    // No booklet field at all when the format has none.
+    expect(buildStudentPaper({ assessmentName: "WA2", mockNumber: 1, blueprint, questions }).sections.every((s) => !("booklet" in s))).toBe(true);
   });
 
   it("gives more working space to more marks and none to multiple choice", () => {

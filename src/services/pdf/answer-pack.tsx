@@ -50,6 +50,11 @@ export function AnswerPackDocument({ pack, options = {} }: { pack: AnswerPack; o
         <Text style={[styles.bold, { fontSize: 20, marginBottom: 10, lineHeight: 1.2 }]}>{pdfText(pack.title)}</Text>
         {pack.sections.map((section, s) => (
           <View key={s}>
+            {section.booklet !== undefined && section.booklet !== pack.sections[s - 1]?.booklet ? (
+              <Text minPresenceAhead={100} style={[styles.bold, { fontSize: 16, marginTop: 10, marginBottom: 4 }]}>
+                {pdfText(section.booklet)}
+              </Text>
+            ) : null}
             <Text
               minPresenceAhead={80}
               style={[styles.bold, { fontSize: 13, marginTop: 6, marginBottom: 8, borderBottomWidth: 0.8, borderBottomColor: colors.ink, borderBottomStyle: "solid", paddingBottom: 2 }]}
