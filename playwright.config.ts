@@ -26,6 +26,9 @@ const launchOptions = executablePath ? { executablePath } : {};
 
 export default defineConfig({
   testDir: "./tests/e2e",
+  // The Mock Mode preview page is development-only (404 in production), so its spec runs from
+  // playwright.mock-preview.config.ts against `next dev`.
+  testIgnore: /mock-mode\.spec\.ts/,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
