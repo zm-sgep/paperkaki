@@ -4,8 +4,11 @@ import { getQuestionEditorOptions, listCandidateQuestions, listQuestionsForAdmin
 import type { Database } from "@/repositories/postgres/client";
 import { seedRealBank } from "../helpers/seed-bank";
 import { createTestDb, type TestDatabase } from "../helpers/test-db";
+import { BANK_SIZE } from "../helpers/question-bank";
 
-/** Filters, pagination and index use over the real seeded bank (268 approved questions). */
+const PAGE_COUNT = Math.ceil(BANK_SIZE / 25);
+
+/** Filters, pagination and index use over the real seeded bank (every question in content/questions, approved). */
 describe("question list filters and pagination (M2-06)", () => {
   let testDb: TestDatabase;
   let db: Database;
@@ -25,27 +28,27 @@ describe("question list filters and pagination (M2-06)", () => {
 
   it("lists everything, 25 per page, in a stable order", async () => {
     const first = await list({});
-    expect(first.total).toBe(268);
+    expect(first.total).toBe(BANK_SIZE);
     expect(first.pageSize).toBe(25);
-    expect(first.pageCount).toBe(11);
+    expect(first.pageCount).toBe(PAGE_COUNT);
     expect(first.rows).toHaveLength(25);
-    const last = await list({}, 11);
-    expect(last.rows).toHaveLength(268 - 10 * 25);
+    const last = await list({}, PAGE_COUNT);
+    expect(last.rows).toHaveLength(BANK_SIZE - (PAGE_COUNT - 1) * 25);
 
     const seen = new Set<string>();
-    for (let page = 1; page <= 11; page += 1) {
+    for (let page = 1; page <= PAGE_COUNT; page += 1) {
       for (const row of (await list({}, page)).rows) {
         expect(seen.has(row.id)).toBe(false);
         seen.add(row.id);
       }
     }
-    expect(seen.size).toBe(268);
+    expect(seen.size).toBe(BANK_SIZE);
     const codes = first.rows.map((r) => r.familyCode);
     expect([...codes].sort()).toEqual(codes);
   });
 
   it("clamps a page number that is out of range", async () => {
-    expect((await list({}, 999)).page).toBe(11);
+    expect((await list({}, 999)).page).toBe(PAGE_COUNT);
     expect((await list({}, 0)).page).toBe(1);
   });
 
@@ -55,10 +58,10 @@ describe("question list filters and pagination (M2-06)", () => {
     expect(fractions).toBeDefined();
     const result = await list({ topicId: fractions?.id });
     expect(result.total).toBeGreaterThan(0);
-    expect(result.total).toBeLessThan(268);
+    expect(result.total).toBeLessThan(BANK_SIZE);
     expect(result.rows.every((r) => r.topicTitle === "Fractions")).toBe(true);
     const everyTopic = await Promise.all(topics.map((t) => list({ topicId: t.id })));
-    expect(everyTopic.reduce((n, r) => n + r.total, 0)).toBe(268);
+    expect(everyTopic.reduce((n, r) => n + r.total, 0)).toBe(BANK_SIZE);
   });
 
   it("filters by outcome", async () => {
@@ -70,14 +73,14 @@ describe("question list filters and pagination (M2-06)", () => {
   });
 
   it("filters by level, type, difficulty and status", async () => {
-    expect((await list({ level: "P3" })).total).toBe(268);
+    expect((await list({ level: "P3" })).total).toBe(BANK_SIZE);
     expect((await list({ level: "P4" })).total).toBe(0);
     const mcq = await list({ questionType: "mcq" });
     expect(mcq.total).toBeGreaterThan(0);
     expect(mcq.rows.every((r) => r.questionType === "mcq")).toBe(true);
     const hard = await list({ difficulty: "challenging" });
     expect(hard.rows.every((r) => r.difficulty === "challenging")).toBe(true);
-    expect((await list({ status: "approved" })).total).toBe(268);
+    expect((await list({ status: "approved" })).total).toBe(BANK_SIZE);
     expect((await list({ status: "draft" })).total).toBe(0);
     expect((await list({ status: "retired" })).total).toBe(0);
   });
@@ -130,8 +133,8 @@ describe("question list filters and pagination (M2-06)", () => {
     const { topics } = await getQuestionEditorOptions(null, { db });
     const outcomeIds = topics.flatMap((t) => t.outcomes.map((o) => o.id));
     const candidates = await listCandidateQuestions({ curriculumVersionId: versionId, outcomeIds, level: "P3", subject: "Mathematics" }, { db });
-    expect(candidates).toHaveLength(268);
-    expect(new Set(candidates.map((c) => c.questionId)).size).toBe(268);
+    expect(candidates).toHaveLength(BANK_SIZE);
+    expect(new Set(candidates.map((c) => c.questionId)).size).toBe(BANK_SIZE);
     expect(candidates.every((c) => c.marks > 0 && c.topicId && c.familyId && c.primaryOutcomeId)).toBe(true);
   });
 });

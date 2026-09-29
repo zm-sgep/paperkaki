@@ -9,6 +9,7 @@ import { questionFamilies, questionReviews, questions } from "@/repositories/pos
 import { buildDraft, createQuestionBed, type QuestionBed } from "../factories";
 import { createTestDb, type TestDatabase } from "../helpers/test-db";
 import { readContentQuestionFiles, seedRealBank } from "../helpers/seed-bank";
+import { BANK_SIZE } from "../helpers/question-bank";
 
 const ticked = { curriculum: true, answer: true, clarity: true, ageAppropriate: true };
 
@@ -146,7 +147,7 @@ describe("development question seed (M2-07)", () => {
     const testDb = await createTestDb();
     try {
       const expected = readContentQuestionFiles().reduce((n, f) => n + (f.input as unknown[]).length, 0);
-      expect(expected).toBe(268);
+      expect(expected).toBe(BANK_SIZE);
       const first = await seedRealBank(testDb.db);
       expect(first.imported.created).toBe(expected);
       expect(first.approved).toBe(expected);

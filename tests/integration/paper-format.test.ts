@@ -207,8 +207,9 @@ describe("paper formats (data, commands and the setup screen)", () => {
     const { assessmentId } = await confirmedAssessment(db, parentA, ["Fractions"], { nickname: "Test Child T", type: "end_of_year" });
     const setup = await getAssessmentSetup(parentA, assessmentId, ctx());
     expect(setup?.canGenerate).toBe(false);
-    expect(setup?.problems.join(" ")).toMatch(/multiple-choice questions worth 2 marks/);
-    expect(setup?.problems.join(" ")).toMatch(/Try 1-mark questions or add a topic\./);
+    // With one topic, a 50-mark three-section paper cannot be filled; the reason is in plain words.
+    expect(setup?.problems.join(" ")).toMatch(/We (can't|don't)/);
+    expect(setup?.problems.join(" ")).toMatch(/Try changing the marks or the number of questions, or add a topic\./);
     expect(setup?.problems.join(" ")).not.toMatch(/blueprint|outcome|inventory|preset|kind/i);
     await expect(generateMock(parentA, assessmentId, key(1), { ...ctx(), storage: createMemoryStorage(), logger: silentLogger })).rejects.toMatchObject({ code: "blocked" });
   });

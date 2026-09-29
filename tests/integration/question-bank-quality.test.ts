@@ -11,6 +11,7 @@ import { createLocalStorage } from "@/services/storage/local-adapter";
 import { buildDraft, createQuestionBed } from "../factories";
 import { seedRealBank } from "../helpers/seed-bank";
 import { createTestDb, type TestDatabase } from "../helpers/test-db";
+import { BANK_SIZE } from "../helpers/question-bank";
 
 /**
  * Consistency of the approved question bank (M2-08): exactly one primary outcome, marks > 0,
@@ -41,7 +42,7 @@ describe("question bank quality suite (M2-08)", () => {
 
   it("passes for every approved question in the seeded bank", async () => {
     const { checked, violations } = await checkQuestionBankQuality({ db, storage });
-    expect(checked).toBe(268);
+    expect(checked).toBe(BANK_SIZE);
     expect(violations).toEqual([]);
   });
 

@@ -58,3 +58,6 @@ export function topicsByShortCode(shortCodes: string[]): BankTopic[] {
     return t;
   });
 }
+
+/** Number of questions in content/questions, so tests follow the bank as it grows. */
+export const BANK_SIZE = BANK_CANDIDATES.length;
