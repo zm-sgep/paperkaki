@@ -1,0 +1,38 @@
+# File Index
+
+- `CLAUDE.md`
+- `HANDOFF_PROMPT.md`
+- `PACKAGE_NOTES_V3.md`
+- `README.md`
+- `START_WITH_CLAUDE.md`
+- `db/schema.sql`
+- `docs/ARCHITECTURE.md`
+- `docs/BACKLOG-M0-M4.md`
+- `docs/BACKLOG-M11-GAMIFICATION.md`
+- `docs/BACKLOG-UX.md`
+- `docs/BUILD_ORDER.md`
+- `docs/DATA_MODEL.md`
+- `docs/GAMIFICATION_REWARDS_SPEC.md`
+- `docs/IMPLEMENTATION_PLAYBOOK.md`
+- `docs/INFORMATION_ARCHITECTURE.md`
+- `docs/PRD.md`
+- `docs/ROADMAP.md`
+- `docs/USABILITY_ACCEPTANCE_CRITERIA.md`
+- `docs/UX_PRINCIPLES.md`
+- `docs/UX_RESEARCH_NOTES.md`
+- `docs/UX_SPEC.md`
+- `docs/decisions/ADR-0001-modular-monolith.md`
+- `docs/decisions/ADR-0002-ai-gateway.md`
+- `docs/decisions/ADR-0003-curriculum-versioning.md`
+- `docs/decisions/ADR-0004-question-versioning.md`
+- `docs/decisions/ADR-0005-private-object-storage.md`
+- `docs/decisions/ADR-0006-reward-engine-and-ledger.md`
+- `docs/decisions/ADR-0007-family-navigation-and-progressive-disclosure.md`
+- `docs/decisions/ADR-0008-state-driven-home-and-contextual-onboarding.md`
+- `docs/visuals/child-ipad-marking-flow.png`
+- `docs/visuals/child-mock-exam-flow.png`
+- `docs/visuals/parent-dashboard-concept.png`
+- `github_issues.csv`
+- `scripts/README.md`
+
+- `docs/BRAND.md` — PaperKaki brand baseline and tone.

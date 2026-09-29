@@ -1,0 +1,379 @@
+planning_id,title,milestone,priority,size,dependencies,body,labels
+M0-01,M0-01 Scaffold Next.js TypeScript application,M0 Foundation,P0,M,,"Create the base web application with TypeScript, Tailwind, environment validation and project folder boundaries.
+
+Acceptance criteria:
+- [ ] App starts locally
+- [ ] TypeScript strict mode enabled
+- [ ] Environment variables validated at startup
+- [ ] Folder structure follows ARCHITECTURE.md
+- [ ] README contains local setup instructions","P0,M0,size:M"
+M0-02,M0-02 Provision PostgreSQL and migration workflow,M0 Foundation,P0,M,M0-01,"Configure PostgreSQL access, typed query layer/ORM and migration commands.
+
+Acceptance criteria:
+- [ ] Local database can be started or connected
+- [ ] Migration command creates schema deterministically
+- [ ] CI can validate migrations
+- [ ] No production credentials committed
+
+Dependencies: M0-01","P0,M0,size:M"
+M0-03,M0-03 Implement managed parent authentication,M0 Foundation,P0,M,"M0-01,M0-02","Add parent sign-in/sign-out and protected routes using managed auth.
+
+Acceptance criteria:
+- [ ] Unauthenticated user cannot access dashboard
+- [ ] Authenticated user has an application parent profile
+- [ ] Server-side ownership identity is available
+- [ ] Auth flow covered by integration/E2E smoke test
+
+Dependencies: M0-01, M0-02","P0,M0,size:M"
+M0-04,M0-04 Create application layout and protected dashboard shell,M0 Foundation,P1,S,M0-03,"Create mobile-first parent dashboard shell and navigation.
+
+Acceptance criteria:
+- [ ] Dashboard renders on phone and desktop
+- [ ] Loading/error/empty states exist
+- [ ] No domain business logic in UI components
+
+Dependencies: M0-03","P1,M0,size:S"
+M0-05,M0-05 Add private object storage abstraction,M0 Foundation,P1,M,"M0-01,M0-03","Create StorageService interface and private bucket configuration for generated PDFs/assets.
+
+Acceptance criteria:
+- [ ] Objects are private by default
+- [ ] Signed URL helper checks ownership or admin access
+- [ ] Storage keys, not public URLs, are stored
+- [ ] Unit tests cover adapter contract
+
+Dependencies: M0-01, M0-03","P1,M0,size:M"
+M0-06,M0-06 Set up CI quality gates,M0 Foundation,P0,M,"M0-01,M0-02","Add CI for typecheck, lint, unit/integration tests and build.
+
+Acceptance criteria:
+- [ ] PR workflow runs required checks
+- [ ] Failure blocks merge
+- [ ] Commands documented locally
+- [ ] CI does not require production secrets
+
+Dependencies: M0-01, M0-02","P0,M0,size:M"
+M0-07,M0-07 Set up test harness and factories,M0 Foundation,P0,M,"M0-01,M0-02,M0-03","Configure unit, integration and E2E foundations plus deterministic test data factories.
+
+Acceptance criteria:
+- [ ] Unit test command works
+- [ ] Integration DB tests run in isolation
+- [ ] E2E smoke test can run
+- [ ] All test child data is fictional
+
+Dependencies: M0-01, M0-02, M0-03","P0,M0,size:M"
+M0-08,"M0-08 Add structured logging, error boundaries and audit helper",M0 Foundation,P1,M,"M0-01,M0-02","Provide structured server logs, safe user errors and audit-event helper.
+
+Acceptance criteria:
+- [ ] No sensitive child content logged by default
+- [ ] Unexpected errors receive correlation/request ID
+- [ ] Audit helper can record admin/domain events
+- [ ] User sees safe error states
+
+Dependencies: M0-01, M0-02","P1,M0,size:M"
+M1-01,M1-01 Implement curriculum database schema,M1 Curriculum,P0,L,M0-02,"Add source documents, curriculum versions, domains, topics, outcomes and relationships as incremental migrations.
+
+Acceptance criteria:
+- [ ] Schema matches DATA_MODEL.md intent
+- [ ] Foreign keys and required indexes exist
+- [ ] Published curriculum records are not edited through normal service APIs
+- [ ] Migration tests pass
+
+Dependencies: M0-02","P0,M1,size:L"
+M1-02,M1-02 Build curriculum repository and domain services,M1 Curriculum,P0,M,M1-01,"Implement typed repositories and query services for curriculum tree/outcomes.
+
+Acceptance criteria:
+- [ ] Fetch curriculum by subject/version/level
+- [ ] Fetch outcomes by topic
+- [ ] Repository enforces version scoping
+- [ ] Unit/integration tests cover queries
+
+Dependencies: M1-01","P0,M1,size:M"
+M1-03,M1-03 Create curriculum source/provenance workflow,M1 Curriculum,P0,M,"M1-01,M1-02","Support source document registration and evidence links to outcomes.
+
+Acceptance criteria:
+- [ ] Each outcome can have one or more source references
+- [ ] Source page/section and verification state stored
+- [ ] Admin can see evidence for an outcome
+- [ ] No outcome is publishable without at least one source
+
+Dependencies: M1-01, M1-02","P0,M1,size:M"
+M1-04,M1-04 Define P3 Maths curriculum import format,M1 Curriculum,P0,M,"M1-02,M1-03","Create a version-controlled CSV/JSON import contract for verified P3 Maths curriculum data.
+
+Acceptance criteria:
+- [ ] Schema documented
+- [ ] Importer validates IDs/levels/source refs
+- [ ] Importer is idempotent
+- [ ] Invalid rows fail with actionable errors
+
+Dependencies: M1-02, M1-03","P0,M1,size:M"
+M1-05,M1-05 Seed verified P3 Maths curriculum,M1 Curriculum,P0,L,M1-04,"Populate the P3 Mathematics curriculum from verified source material.
+
+Acceptance criteria:
+- [ ] All seeded outcomes reference source documents
+- [ ] Stable codes are unique
+- [ ] No invented outcome is inserted
+- [ ] Seed can rerun safely
+- [ ] Human verification checklist completed
+
+Dependencies: M1-04","P0,M1,size:L"
+M1-06,M1-06 Build admin curriculum browser,M1 Curriculum,P1,M,"M1-02,M1-03,M0-04","Provide read-oriented admin UI to browse version -> domain -> topic -> outcome -> evidence.
+
+Acceptance criteria:
+- [ ] Admin-only access
+- [ ] Shows source provenance
+- [ ] Filters by level/topic
+- [ ] Clearly labels draft/published curriculum version
+
+Dependencies: M1-02, M1-03, M0-04","P1,M1,size:M"
+M1-07,M1-07 Build parent-safe curriculum selection API,M1 Curriculum,P0,M,"M1-02,M1-05","Expose only active/published curriculum nodes required by assessment setup.
+
+Acceptance criteria:
+- [ ] Parent can fetch P3 Maths topics/outcomes
+- [ ] Draft/retired records excluded
+- [ ] API response stable and typed
+- [ ] Ownership is not relevant to public curriculum but auth is required for app route
+
+Dependencies: M1-02, M1-05","P0,M1,size:M"
+M2-01,M2-01 Implement question-bank schema and versioning,M2 Question Bank,P0,L,M1-01,"Add question families, immutable versions, outcome mappings, assets and reviews.
+
+Acceptance criteria:
+- [ ] Approved/used version cannot be edited in place
+- [ ] Primary outcome required before approval
+- [ ] Version uniqueness enforced
+- [ ] Indexes support generation queries
+
+Dependencies: M1-01","P0,M2,size:L"
+M2-02,M2-02 Build question content and answer schemas,M2 Question Bank,P0,L,M2-01,"Define structured JSON schemas for P3 Maths question content, answer schema, solution and rendering metadata.
+
+Acceptance criteria:
+- [ ] Supports numeric, short answer and MCQ first
+- [ ] Fractions/math expressions have canonical representation
+- [ ] Schemas server-validated
+- [ ] Fixtures demonstrate each supported question type
+
+Dependencies: M2-01","P0,M2,size:L"
+M2-03,M2-03 Create admin question editor,M2 Question Bank,P0,L,"M2-01,M2-02,M1-06","Build admin UI to create question family/version, map outcomes and enter answer/solution.
+
+Acceptance criteria:
+- [ ] Cannot save malformed content
+- [ ] Can select primary and secondary outcomes
+- [ ] Preview renders as pupil will see it
+- [ ] Draft autosave or explicit safe save exists
+
+Dependencies: M2-01, M2-02, M1-06","P0,M2,size:L"
+M2-04,M2-04 Implement question review and approval workflow,M2 Question Bank,P0,M,"M2-03,M0-08","Add review checklist and state transitions.
+
+Acceptance criteria:
+- [ ] Approval requires curriculum validity, answer validity and clarity confirmation
+- [ ] Audit trail stored
+- [ ] Only authorised admin can approve
+- [ ] Retired questions excluded from generation
+
+Dependencies: M2-03, M0-08","P0,M2,size:M"
+M2-05,M2-05 Implement deterministic answer verification utilities,M2 Question Bank,P0,M,M2-02,"Create reusable validators for numeric/fraction/simple MCQ answer correctness.
+
+Acceptance criteria:
+- [ ] Canonicalises supported answers
+- [ ] Handles equivalent fractions where intended
+- [ ] No floating-point equality errors for exact Maths
+- [ ] Unit tests cover edge cases
+
+Dependencies: M2-02","P0,M2,size:M"
+M2-06,M2-06 Build question-bank filters and search,M2 Question Bank,P1,M,"M2-01,M1-02","Filter admin questions by level/topic/outcome/type/difficulty/status.
+
+Acceptance criteria:
+- [ ] Filters combine correctly
+- [ ] Pagination supported
+- [ ] Approved-only query path efficient
+- [ ] Relevant indexes used
+
+Dependencies: M2-01, M1-02","P1,M2,size:M"
+M2-07,M2-07 Seed first approved P3 Maths question set,M2 Question Bank,P0,L,"M2-03,M2-04,M2-05","Create a curated set sufficient to generate multiple papers for at least one meaningful P3 Maths scope.
+
+Acceptance criteria:
+- [ ] Minimum agreed inventory per selected outcome exists
+- [ ] Every question has answer and worked solution
+- [ ] All items human-approved
+- [ ] No copyrighted exam questions copied without rights
+
+Dependencies: M2-03, M2-04, M2-05","P0,M2,size:L"
+M2-08,M2-08 Add question-bank quality test suite,M2 Question Bank,P0,M,"M2-01,M2-02,M2-04","Add automated consistency checks across approved questions.
+
+Acceptance criteria:
+- [ ] Approved questions always have primary outcome
+- [ ] Marks positive
+- [ ] Answer schema valid
+- [ ] Referenced assets exist
+- [ ] No duplicate family/version
+- [ ] Test fails on intentionally broken fixture
+
+Dependencies: M2-01, M2-02, M2-04","P0,M2,size:M"
+M3-01,M3-01 Implement child profile CRUD with ownership,M3 Assessment Builder,P0,M,"M0-03,M0-04,M0-07","Allow parent to create/edit/archive minimal child profiles.
+
+Acceptance criteria:
+- [ ] Parent sees only own children
+- [ ] Required fields nickname/level/year
+- [ ] School optional/selectable
+- [ ] No sensitive child fields added
+
+Dependencies: M0-03, M0-04, M0-07","P0,M3,size:M"
+M3-02,M3-02 Implement upcoming assessment creation,M3 Assessment Builder,P0,M,"M3-01,M1-07","Create P3 Maths assessment record with type/date/name and curriculum version.
+
+Acceptance criteria:
+- [ ] Assessment belongs to child owner
+- [ ] P3 Maths is only enabled MVP route
+- [ ] Applicable curriculum version selected explicitly
+- [ ] Draft assessment can be edited
+
+Dependencies: M3-01, M1-07","P0,M3,size:M"
+M3-03,M3-03 Implement manual assessment scope selector,M3 Assessment Builder,P0,L,"M3-02,M1-07","Parent selects confirmed P3 Maths topics/outcomes.
+
+Acceptance criteria:
+- [ ] Displays parent-friendly topic labels
+- [ ] Stores exact outcome/topic IDs
+- [ ] Parent can edit before confirmation
+- [ ] Confirmed state clearly shown
+- [ ] No out-of-version outcomes accepted
+
+Dependencies: M3-02, M1-07","P0,M3,size:L"
+M3-04,M3-04 Implement assessment requirements form,M3 Assessment Builder,P1,M,M3-02,"Capture duration, marks and supported format preferences.
+
+Acceptance criteria:
+- [ ] Duration/marks validated
+- [ ] Defaults are editable suggestions, not school claims
+- [ ] Values stored separately from curriculum scope
+- [ ] Invalid values blocked
+
+Dependencies: M3-02","P1,M3,size:M"
+M3-05,M3-05 Implement blueprint generation service,M3 Assessment Builder,P0,L,"M3-03,M3-04","Convert confirmed scope and requirements into a draft blueprint.
+
+Acceptance criteria:
+- [ ] All confirmed required outcomes represented
+- [ ] Mark targets sum to total or validator flags them
+- [ ] Difficulty percentages sum to 100
+- [ ] Blueprint is versioned
+- [ ] Service unit tests cover normal and impossible cases
+
+Dependencies: M3-03, M3-04","P0,M3,size:L"
+M3-06,M3-06 Implement blueprint validation engine,M3 Assessment Builder,P0,L,"M3-05,M2-06,M2-08","Validate marks, scope coverage, supported question types, available inventory and duration warnings.
+
+Acceptance criteria:
+- [ ] Hard errors and warnings separated
+- [ ] Impossible blueprint cannot be used
+- [ ] Insufficient approved question inventory is reported
+- [ ] No silent auto-correction
+- [ ] Validation deterministic and tested
+
+Dependencies: M3-05, M2-06, M2-08","P0,M3,size:L"
+M3-07,M3-07 Build parent blueprint review screen,M3 Assessment Builder,P0,M,"M3-05,M3-06,M0-04","Show simple parent-readable summary with optional advanced detail.
+
+Acceptance criteria:
+- [ ] Shows duration/marks/topics/difficulty
+- [ ] Parent can go back and edit scope
+- [ ] Validation errors actionable
+- [ ] Curriculum jargon hidden by default
+
+Dependencies: M3-05, M3-06, M0-04","P0,M3,size:M"
+M3-08,M3-08 Create question-selection preview service,M3 Assessment Builder,P1,L,"M3-06,M2-07","Implement deterministic candidate selection preview without freezing a paper.
+
+Acceptance criteria:
+- [ ] Uses approved questions only
+- [ ] Matches curriculum version and scope
+- [ ] Avoids duplicate question IDs
+- [ ] Returns exact total marks when possible
+- [ ] Returns structured failure reason otherwise
+
+Dependencies: M3-06, M2-07","P1,M3,size:L"
+M4-01,M4-01 Implement paper and paper-question schema,M4 Printable Mock,P0,M,"M2-01,M3-05","Add frozen paper instances and ordered exact question-version references.
+
+Acceptance criteria:
+- [ ] Paper references exact question IDs/versions
+- [ ] Question list immutable after generated status
+- [ ] Paper version unique per assessment
+- [ ] Cascade/restrict rules protect history
+
+Dependencies: M2-01, M3-05","P0,M4,size:M"
+M4-02,M4-02 Implement deterministic paper selection algorithm,M4 Printable Mock,P0,L,"M4-01,M3-08","Select questions satisfying blueprint hard constraints and optimising soft constraints.
+
+Acceptance criteria:
+- [ ] Exact total marks
+- [ ] Required scope covered
+- [ ] Approved questions only
+- [ ] No duplicate question
+- [ ] Respects allowed types
+- [ ] Difficulty distribution reported
+- [ ] Failure is explicit when no valid set exists
+
+Dependencies: M4-01, M3-08","P0,M4,size:L"
+M4-03,M4-03 Implement final paper validation,M4 Printable Mock,P0,M,"M4-02,M2-08","Validate selected paper before freezing/rendering.
+
+Acceptance criteria:
+- [ ] Total marks exact
+- [ ] Question numbering/order valid
+- [ ] Every question has answer
+- [ ] All assets resolvable
+- [ ] Scope report generated
+- [ ] Validation failure prevents generation
+
+Dependencies: M4-02, M2-08","P0,M4,size:M"
+M4-04,M4-04 Build deterministic student-paper renderer,M4 Printable Mock,P0,XL,"M4-03,M0-05","Render an A4 printable student paper from structured paper data.
+
+Acceptance criteria:
+- [ ] Header shows subject/mock/duration/marks
+- [ ] Questions paginate cleanly
+- [ ] Working space configurable
+- [ ] Maths/fractions render correctly
+- [ ] No answers appear
+- [ ] Page numbers present
+- [ ] Representative fixture manually reviewed
+
+Dependencies: M4-03, M0-05","P0,M4,size:XL"
+M4-05,M4-05 Build parent answer-pack renderer,M4 Printable Mock,P0,L,M4-04,"Render separate answer key and worked solutions.
+
+Acceptance criteria:
+- [ ] Question numbering matches student paper
+- [ ] Marks shown
+- [ ] Worked solution included when available
+- [ ] Curriculum mapping can be included in parent section
+- [ ] Stored privately
+
+Dependencies: M4-04","P0,M4,size:L"
+M4-06,M4-06 Implement paper generation command and history UI,M4 Printable Mock,P0,L,"M4-02,M4-03,M4-04,M4-05","Create/freeze/render paper and show prior generated versions.
+
+Acceptance criteria:
+- [ ] Generation is idempotent for request key
+- [ ] New regenerate action creates new paper version
+- [ ] Parent sees own papers only
+- [ ] Download uses authorised signed URL
+- [ ] Status/errors shown clearly
+
+Dependencies: M4-02, M4-03, M4-04, M4-05","P0,M4,size:L"
+M4-07,M4-07 Add PDF golden tests and structural checks,M4 Printable Mock,P0,M,"M4-04,M4-05","Add fixture-based rendering tests and PDF metadata/page checks.
+
+Acceptance criteria:
+- [ ] Known fixture renders consistently
+- [ ] Student fixture contains no answer text markers
+- [ ] Answer pack contains expected solution markers
+- [ ] Page count/mark metadata tested where feasible
+
+Dependencies: M4-04, M4-05","P0,M4,size:M"
+M4-08,M4-08 Create end-to-end Milestone 4 parent flow,M4 Printable Mock,P0,L,"M4-06,M4-07","Automate main workflow from sign-in to paper generation.
+
+Acceptance criteria:
+- [ ] E2E covers child -> assessment -> scope -> blueprint -> generate
+- [ ] Student PDF and answer pack records created
+- [ ] Access control tested for another user
+- [ ] CI runs reliable E2E smoke path
+
+Dependencies: M4-06, M4-07","P0,M4,size:L"
+UX-01,UX-01 Parent four-destination shell,UX,P0,M,,Implement Home / Prepare / Progress / Rewards shell and responsive navigation.,"P0,UX,size:M"
+UX-02,UX-02 Child four-destination shell,UX,P0,M,,Implement Today / Practice / Progress / Rewards shell.,"P0,UX,size:M"
+UX-03,UX-03 State-driven parent Home,UX,P0,L,,Centralise next-action selection and render one dominant parent Home CTA.,"P0,UX,size:L"
+UX-04,UX-04 Child Today mission,UX,P0,M,,Show one recommended/resume mission and done-for-today state.,"P0,UX,size:M"
+UX-05,UX-05 Simplified assessment setup,UX,P0,L,,Implement Upload -> Confirm -> Generate normal path with Customise secondary.,"P0,UX,size:L"
+UX-06,UX-06 Dedicated iPad Mock Mode,UX,P0,XL,,"Implement isolated mock layout with autosave, timer, progress and no gamification.","P0,UX,size:XL"
+UX-07,UX-07 Marked-paper split review,UX,P1,L,,Implement paper-dominant review with linked feedback panel.,"P1,UX,size:L"
+UX-08,UX-08 Action-oriented results,UX,P0,M,,Show what changed and next action before detailed analytics.,"P0,UX,size:M"
+UX-09,UX-09 Contextual first-use guidance,UX,P1,S,,Implement contextual tips instead of mandatory onboarding.,"P1,UX,size:S"
+UX-10,UX-10 Core-flow UX instrumentation,UX,P1,M,,Instrument core flow state/abandonment/help events.,"P1,UX,size:M"
+UX-11,UX-11 Parent usability test,UX,P0,M,,Run task-based unassisted assessment-setup test before broad beta.,"P0,UX,size:M"
+UX-12,UX-12 Child iPad usability test,UX,P0,M,,Run task-based mock attempt/review test before broad beta.,"P0,UX,size:M"
