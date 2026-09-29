@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: paperkaki
+          POSTGRES_PASSWORD: paperkaki_ci_only
+          POSTGRES_DB: paperkaki
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U paperkaki -d paperkaki"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      # Fictional, CI-only values. Tests and the build use in-memory PGlite or never connect.
+      APP_BASE_URL: http://localhost:3000
+      DATABASE_URL: postgres://paperkaki:paperkaki_ci_only@localhost:5432/paperkaki
+      LOG_LEVEL: info
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit and integration tests
+        run: npm test
+
+      - name: Migrations apply to PostgreSQL 16
+        run: |
+          npm run db:migrate
+          # Applying again must be a no-op.
+          npm run db:migrate
+          tables=$(PGPASSWORD=paperkaki_ci_only psql -h localhost -U paperkaki -d paperkaki -Atc \
+            "select string_agg(table_name, ',' order by table_name) from information_schema.tables where table_schema = 'public'")
+          echo "public tables: $tables"
+          test "$tables" = "audit_logs,parent_profiles"
+
+      - name: Schema files match the committed migrations
+        run: |
+          npx drizzle-kit generate --name ci_drift_check
+          if [ -n "$(git status --porcelain -- drizzle)" ]; then
+            echo "Schema changed without a migration. Run 'npm run db:generate' and commit the result."
+            git status --porcelain -- drizzle
+            exit 1
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Playwright smoke tests
+        env:
+          DATABASE_URL: pglite://memory
+        run: npm run test:e2e
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

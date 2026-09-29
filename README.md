@@ -46,6 +46,12 @@ cp .env.example .env.local
 npm run dev
 ```
 
+Apply the database migrations (creates `.data/dev` on first run):
+
+```bash
+npm run db:migrate
+```
+
 Open http://localhost:3000. Environment variables are validated when Next.js loads its config (`src/config/env.ts`); a missing or invalid variable stops startup and the error names each one without printing values.
 
 ## Checks
@@ -54,9 +60,18 @@ Open http://localhost:3000. Environment variables are validated when Next.js loa
 | --- | --- |
 | `npm run typecheck` | `tsc --noEmit` (strict, `noUncheckedIndexedAccess`) |
 | `npm run lint` | ESLint flat config, including architecture boundary rules |
-| `npm run test:unit` | Vitest unit tests |
-| `npm test` | Vitest unit tests |
+| `npm run test:unit` | Vitest unit tests (`tests/unit`) |
+| `npm run test:integration` | Vitest integration tests against an in-memory PGlite database (`tests/integration`) |
+| `npm test` | Unit and integration tests |
 | `npm run build` | Production build |
+| `npm run test:e2e` | Playwright smoke tests on a phone and an iPad landscape viewport (`tests/e2e`). Builds and starts the app on port 3100 with in-memory PGlite. |
+| `npm run check` | All of the above, in order |
+
+Database commands: `npm run db:generate` creates a migration from the schema files in `src/repositories/postgres/schema/`; `npm run db:migrate` applies pending migrations to whatever `DATABASE_URL` points at (PostgreSQL or PGlite). Commit generated files under `drizzle/`.
+
+Playwright needs Chromium. In a fresh checkout run `npx playwright install chromium` once. If a browser is already installed elsewhere, set `PLAYWRIGHT_CHROMIUM_PATH` to its executable.
+
+CI (`.github/workflows/ci.yml`) runs typecheck, lint, unit and integration tests, applies the migrations to a `postgres:16` service and checks the schema files match them, builds, and runs the Playwright smoke tests.
 
 ## Docs
 
