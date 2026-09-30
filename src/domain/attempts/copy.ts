@@ -49,19 +49,19 @@ export type MarkingStep = { id: "uploaded" | "reading" | "marking" | "preparing"
 export function markingStepsFor(mode: "ipad" | "print_upload", stage: string): MarkingStep[] {
   const order = ["reading", "marking", "preparing", "done"];
   const at = stage === "failed" ? 0 : Math.max(0, order.indexOf(stage));
-  const state = (index: number, own: number): MarkingStep["state"] => {
+  const state = (own: number): MarkingStep["state"] => {
     if (stage === "failed" && own === 0) return "failed";
-    if (stage === "done" || index < own) return "done";
-    return index === own ? "active" : "waiting";
+    if (stage === "done" || own < at) return "done";
+    return own === at ? "active" : "waiting";
   };
   const steps: MarkingStep[] = [];
   if (mode === "print_upload") {
     steps.push({ id: "uploaded", label: "Uploading paper", state: "done" });
-    steps.push({ id: "reading", label: "Reading answers", state: state(at, 0) });
+    steps.push({ id: "reading", label: "Reading answers", state: state(0) });
   } else {
     steps.push({ id: "uploaded", label: "Paper handed in", state: "done" });
   }
-  steps.push({ id: "marking", label: "Marking questions", state: state(at, 1) });
-  steps.push({ id: "preparing", label: "Preparing results", state: state(at, 2) });
+  steps.push({ id: "marking", label: "Marking questions", state: state(1) });
+  steps.push({ id: "preparing", label: "Preparing results", state: state(2) });
   return steps;
 }

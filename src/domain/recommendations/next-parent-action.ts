@@ -175,7 +175,7 @@ function attemptAction(state: ParentActionState, child: ParentActionChild): Pare
     const count = needsReview.reviewCount;
     return {
       kind: "review_marking",
-      title: count && count > 0 ? `${plural(count, "answer needs", "answers need")} a quick check` : "A few answers need a quick check",
+      title: count && count > 0 ? `We need a quick check on ${plural(count, "answer", "answers")}` : "We need a quick check on a few answers",
       supportingText: `We weren't sure how to mark some of ${child.nickname}'s answers, and it takes about a minute to check.`,
       ctaLabel: "Check answers",
       href: `/progress/review/${needsReview.id}`,

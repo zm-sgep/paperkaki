@@ -72,13 +72,13 @@ describe("nextParentAction: new attempt-driven states", () => {
   it("review_marking: the parent, not the child, checks uncertain answers", () => {
     expect(nextParentAction(state({ attempts: [attempt({ status: "needs_review", reviewCount: 2 })] }))).toEqual({
       kind: "review_marking",
-      title: "2 answers need a quick check",
+      title: "We need a quick check on 2 answers",
       supportingText: "We weren't sure how to mark some of Mia's answers, and it takes about a minute to check.",
       ctaLabel: "Check answers",
       href: "/progress/review/t1",
     });
-    expect(nextParentAction(state({ attempts: [attempt({ status: "needs_review", reviewCount: 1 })] })).title).toBe("1 answer needs a quick check");
-    expect(nextParentAction(state({ attempts: [attempt({ status: "needs_review" })] })).title).toBe("A few answers need a quick check");
+    expect(nextParentAction(state({ attempts: [attempt({ status: "needs_review", reviewCount: 1 })] })).title).toBe("We need a quick check on 1 answer");
+    expect(nextParentAction(state({ attempts: [attempt({ status: "needs_review" })] })).title).toBe("We need a quick check on a few answers");
   });
 
   it("review_result: marked and not yet seen", () => {

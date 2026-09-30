@@ -154,7 +154,7 @@ describe("marking review, results and the marked paper (M7)", () => {
 
   it("puts 'a quick check' on the parent's Home and nothing on the child's Today yet", async () => {
     const home = await getParentHome(parentA, ctx());
-    expect(home.action).toMatchObject({ kind: "review_marking", title: "1 answer needs a quick check", ctaLabel: "Check answers", href: `/progress/review/${first.attemptId}` });
+    expect(home.action).toMatchObject({ kind: "review_marking", title: "We need a quick check on 1 answer", ctaLabel: "Check answers", href: `/progress/review/${first.attemptId}` });
     expect((await getChildToday(child, ctx())).action.kind).toBe("done_today");
   });
 

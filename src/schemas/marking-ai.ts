@@ -40,10 +40,8 @@ export const MarkResponseModelSchema = z.object({
   reviewRequired: z.boolean(),
 });
 
-const AnswerTextSchema = z
-  .string()
-  .transform((value) => value.replace(/\s+/g, " ").trim())
-  .pipe(z.string().max(120));
+/** One long answer never spoils the whole reading: it is cut to a length no child's answer line needs. */
+const AnswerTextSchema = z.string().transform((value) => value.replace(/\s+/g, " ").trim().slice(0, 300));
 
 /** One question's final answer as written on the paper. An empty text means nothing was written. */
 export const ReadAnswerSchema = z.object({

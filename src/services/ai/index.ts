@@ -23,6 +23,11 @@ export function isNoticeUploadAvailable(): boolean {
   return env.AI_PROVIDER !== "disabled";
 }
 
+/** Is uploading a finished, printed paper offered? Only when a provider that can read handwriting is set up. */
+export function isPaperUploadAvailable(): boolean {
+  return env.AI_PROVIDER !== "disabled";
+}
+
 function adapterFromEnv(): AIAdapter {
   switch (env.AI_PROVIDER) {
     case "anthropic":

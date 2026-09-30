@@ -55,8 +55,8 @@ export type FixturePageOptions = {
 
 /** A deterministic, contrasty page image (portrait by default) carrying the fixture in a text chunk. */
 export function encodeFixturePage(fixture: FixturePage, options: FixturePageOptions = {}): Uint8Array {
-  const width = options.width ?? 360;
-  const height = options.height ?? 510;
+  const width = options.width ?? 600;
+  const height = options.height ?? 850;
   const rows = Buffer.alloc((width + 1) * height);
   let seed = ((fixture.page ?? 0) + 1) * 2654435761;
   const next = () => {

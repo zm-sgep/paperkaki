@@ -50,7 +50,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ attemp
       <>
         <p className="-mb-3 text-base text-ink-soft">{status.label}</p>
         <PageHeader
-          title={status.waitingCount === 1 ? "1 answer needs a quick check" : `${status.waitingCount} answers need a quick check`}
+          title={status.waitingCount === 1 ? "We need a quick check on 1 answer" : `We need a quick check on ${status.waitingCount} answers`}
           description={`We weren't sure how to mark some of ${status.childNickname}'s answers. It takes about a minute, and then the results are ready.`}
         />
         <div>

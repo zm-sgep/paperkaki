@@ -5,3 +5,4 @@ export * from "./marking-input";
 export * from "./stroke-model";
 export * from "./mock-paper";
 export * from "./copy";
+export * from "./print-upload";

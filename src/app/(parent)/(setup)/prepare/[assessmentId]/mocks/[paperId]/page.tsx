@@ -43,6 +43,22 @@ export default async function MockPage({ params }: { params: Promise<{ assessmen
         </a>
         <p className="text-lg text-ink-soft">{mock.tip}</p>
         <IpadOption paperId={mock.paperId} childNickname={mock.childNickname} status={mock.ipad} />
+        {mock.upload.attempt ? (
+          <p data-upload-status className="text-lg text-ink">
+            {mock.upload.attempt.message}{" "}
+            <Link href={mock.upload.attempt.href} className="font-semibold text-kaki underline underline-offset-4">
+              See results
+            </Link>
+          </p>
+        ) : null}
+        {mock.upload.available ? (
+          <div className="flex flex-col gap-1">
+            <Link href={mock.upload.href} data-variant="secondary" className={`${buttonClassName("secondary")} w-full sm:w-auto sm:self-start`}>
+              Upload the finished paper
+            </Link>
+            <p className="text-base text-ink-soft">Photos of each page, once {mock.childNickname} has written on the printed paper.</p>
+          </div>
+        ) : null}
       </Card>
 
       <div className="flex flex-col gap-2">

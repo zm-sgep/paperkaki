@@ -11,6 +11,7 @@ import { handedInText, inProgressOnIpadText, waitingOnTodayText } from "@/domain
 import { listAttemptsForPaper } from "@/repositories/postgres/attempts";
 import { getOwnedPaper, type OwnedPaper } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
+import { isPaperUploadAvailable } from "@/services/ai";
 import { isStorageBucket, type StorageService } from "@/services/storage";
 
 type Context = { db?: Database; now?: Date; storage?: StorageService };
@@ -40,6 +41,11 @@ export type MockPage = {
   backHref: string;
   /** Whether this mock can go to the iPad, or where it already is. Null attempt means "not given to the iPad". */
   ipad: { attemptId: string; status: "assigned" | "in_progress" | "submitted"; message: string } | null;
+  /**
+   * The quiet way to hand in a printed paper: photos of the finished pages. `attempt` is set once a paper
+   * has been uploaded, and points at where it is being marked or its results.
+   */
+  upload: { available: boolean; href: string; attempt: { message: string; href: string } | null };
   childNickname: string;
 };
 
@@ -74,7 +80,9 @@ export async function getMockPage(
   const today = todayInSingapore(context.now);
   const base = `/prepare/${assessmentId}/mocks/${paperId}`;
   const db = await resolveDb(context);
-  const attempt = (await listAttemptsForPaper(db, paperId))[0];
+  const attempts = await listAttemptsForPaper(db, paperId);
+  const attempt = attempts.find((candidate) => candidate.mode === "ipad");
+  const uploaded = attempts.find((candidate) => candidate.mode === "print_upload");
   const ipad: MockPage["ipad"] = !attempt
     ? null
     : attempt.status === "assigned"
@@ -96,6 +104,12 @@ export async function getMockPage(
     answersHref: `${base}/download/answers`,
     backHref: `/prepare/${assessmentId}`,
     ipad,
+    upload: {
+      // Offered when a reader is set up and the mock is not already on the iPad.
+      available: isPaperUploadAvailable() && (!attempt || attempt.status === "submitted" || attempt.status === "marked"),
+      href: `${base}/upload`,
+      attempt: uploaded ? { message: `${paper.childNickname}'s printed Mock ${paper.number} was uploaded.`, href: `/progress/results/${uploaded.id}` } : null,
+    },
     childNickname: paper.childNickname,
   };
 }
