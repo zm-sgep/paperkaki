@@ -20,7 +20,7 @@ function RenameForm({ child }: { child: Child }) {
   const id = `rename-${child.id}`;
   return (
     <details className="w-full">
-      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-kaki-strong">Rename</summary>
+      <summary className="-ml-2 inline-flex min-h-12 cursor-pointer items-center rounded-control px-2 text-base font-semibold hover:bg-kaki-soft text-kaki-strong">Rename</summary>
       <form action={formAction} className="mt-2 flex flex-col gap-3">
         <Field id={id} label={`New name for ${child.nickname}`} error={state.error}>
           <input id={id} name="nickname" type="text" defaultValue={child.nickname} maxLength={40} autoComplete="off" aria-invalid={state.error ? true : undefined} aria-describedby={state.error ? `${id}-error` : undefined} className={inputClassName} />
@@ -36,7 +36,7 @@ function RenameForm({ child }: { child: Child }) {
 function ArchiveForm({ child }: { child: Child }) {
   return (
     <details className="w-full">
-      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-danger">Archive</summary>
+      <summary className="-ml-2 inline-flex min-h-12 cursor-pointer items-center rounded-control px-2 text-base font-semibold hover:bg-kaki-soft text-danger">Archive</summary>
       <form action={archiveChildAction.bind(null, child.id)} className="mt-2 flex flex-col gap-3 rounded-control border border-coral/40 bg-coral-soft p-4">
         <p className="text-lg text-ink">
           Archive {child.nickname}? Their assessments will be hidden from your screens.
@@ -53,7 +53,7 @@ function SetUpDevice({ child }: { child: Child }) {
   const [state, formAction] = useActionState<PairingState, FormData>(createPairingCodeAction.bind(null, child.id), {});
   return (
     <details className="w-full">
-      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-kaki-strong">Set up {child.nickname}&apos;s iPad</summary>
+      <summary className="-ml-2 inline-flex min-h-12 cursor-pointer items-center rounded-control px-2 text-base font-semibold hover:bg-kaki-soft text-kaki-strong">Set up {child.nickname}&apos;s iPad</summary>
       <div className="mt-2 flex flex-col gap-3 rounded-control border border-line bg-paper p-4">
         <p className="text-lg text-ink">
           On {child.nickname}&apos;s device, open the link below and type the code. The code works once, for 10 minutes.
@@ -81,7 +81,7 @@ function SetUpDevice({ child }: { child: Child }) {
 function RemoveDevice({ device }: { device: Device }) {
   return (
     <details className="w-full">
-      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-danger">Remove</summary>
+      <summary className="-ml-2 inline-flex min-h-12 cursor-pointer items-center rounded-control px-2 text-base font-semibold hover:bg-kaki-soft text-danger">Remove</summary>
       <form action={removeDeviceAction.bind(null, device.id)} className="mt-2 flex flex-col gap-3 rounded-control border border-coral/40 bg-coral-soft p-4">
         <p className="text-lg text-ink">Remove {device.label}? It will need a new code to open PaperKaki again.</p>
         <SubmitButton variant="danger" className="w-full sm:w-auto sm:self-start">

@@ -16,7 +16,7 @@ export function Stars({ count, label, size = "md" }: { count: number; label?: st
           key={index}
           aria-hidden="true"
           strokeWidth={1.75}
-          className={`${box} shrink-0 ${index < filled ? "fill-kaya stroke-kaya-strong" : "fill-transparent stroke-ink-soft/45"}`}
+          className={`${box} shrink-0 ${index < filled ? "fill-kaya stroke-kaya-strong" : "fill-transparent stroke-line-strong"}`}
         />
       ))}
     </span>

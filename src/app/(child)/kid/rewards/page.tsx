@@ -135,13 +135,10 @@ export default async function ChildRewardsPage() {
                     </span>
                     <div className="flex min-w-0 flex-col items-start gap-1.5">
                       <span className="text-xl font-bold leading-snug text-ink">{request.title}</span>
-                      <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-base text-ink-soft">
-                        <Chip tone={chip.tone} size="lg" icon={<ChipIcon />}>
-                          {request.statusText}
-                        </Chip>
-                        <span aria-hidden="true">·</span>
-                        <span>{request.dayText}</span>
-                      </span>
+                      <Chip tone={chip.tone} size="lg" icon={<ChipIcon />}>
+                        {request.statusText}
+                      </Chip>
+                      <span className="text-base text-ink-soft">{request.dayText}</span>
                     </div>
                   </div>
                   {request.canTakeBack ? (

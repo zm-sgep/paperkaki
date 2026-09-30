@@ -14,7 +14,7 @@ import { SubmitButton } from "@/components/ui/submit-button";
 
 /** A small white pill for one quiet fact ("Next: WA2 · Tue 14 Oct"), used with an icon in front. */
 export const childPillClassName =
-  "inline-flex w-fit max-w-full items-center gap-2.5 rounded-full border border-child-line bg-child-card px-5 py-2.5 text-lg font-semibold leading-snug text-ink shadow-child";
+  "inline-flex w-fit max-w-full items-center gap-2.5 rounded-[1.75rem] border border-child-line bg-child-card px-5 py-2.5 text-lg font-semibold leading-snug text-ink shadow-child";
 
 /** A rounded, warm card for the child screens. */
 export function ChildCard({ children, className }: { children: ReactNode; className?: string }) {

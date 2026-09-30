@@ -27,9 +27,12 @@ function Chevron() {
 }
 
 /** The reward's picture (the parent chose an emoji for it) on a soft tile. */
-function RewardSymbol({ symbol, size = "md" }: { symbol: string; size?: "md" | "lg" }) {
+function RewardSymbol({ symbol, size = "md", onTint = false }: { symbol: string; size?: "md" | "lg"; onTint?: boolean }) {
   return (
-    <span aria-hidden="true" className={`flex shrink-0 items-center justify-center rounded-2xl bg-kaya-soft ${size === "lg" ? "h-14 w-14 text-3xl" : "h-12 w-12 text-2xl"}`}>
+    <span
+      aria-hidden="true"
+      className={`flex shrink-0 items-center justify-center rounded-2xl ${onTint ? "bg-white shadow-card" : "bg-kaya-soft"} ${size === "lg" ? "h-14 w-14 text-3xl" : "h-12 w-12 text-2xl"}`}
+    >
       {symbol}
     </span>
   );
@@ -127,7 +130,7 @@ export default async function RewardsPage() {
                 className="flex flex-col gap-4 rounded-hero border-2 border-kaya/60 bg-linear-to-br from-kaya-soft from-60% to-white p-5 shadow-hero sm:p-6"
               >
                 <div className="flex items-start gap-4">
-                  <RewardSymbol symbol={request.symbol} size="lg" />
+                  <RewardSymbol symbol={request.symbol} size="lg" onTint />
                   <p className="text-lg text-ink">
                     <span className="font-semibold">{request.childNickname}</span> would like{" "}
                     <span className="font-semibold">{request.title}</span>{" "}
@@ -155,7 +158,7 @@ export default async function RewardsPage() {
             {view.awaiting.map((request) => (
               <li key={request.id} className="flex flex-col gap-4 rounded-card border border-kaki/30 bg-kaki-soft p-5 shadow-card">
                 <div className="flex items-center gap-4">
-                  <RewardSymbol symbol={request.symbol} />
+                  <RewardSymbol symbol={request.symbol} onTint />
                   <p className="text-lg text-ink">
                     <span className="font-semibold">{request.title}</span> for {request.childNickname}
                   </p>

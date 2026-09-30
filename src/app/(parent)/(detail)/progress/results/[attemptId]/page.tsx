@@ -5,11 +5,12 @@ import { notFound } from "next/navigation";
 import { markResultSeenByParent } from "@/application/commands/marking-review";
 import { requireParent } from "@/application/queries/current-parent";
 import { getMarkingStatus, getParentResult } from "@/application/queries/results";
-import { Sprout } from "@/components/illustrations";
+import { ReadyPaper, Sprout } from "@/components/illustrations";
 import { ActionCard } from "@/components/ui/action-card";
 import { ButtonLink, buttonClassName } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Chip, type ChipTone } from "@/components/ui/chip";
+import { HeroAction } from "@/components/ui/hero-action";
 import { PageHeader } from "@/components/ui/page-header";
 import { MarkingProgress } from "./marking-progress";
 import { RetryForm } from "./retry-form";
@@ -63,18 +64,14 @@ export default async function ResultsPage({ params }: { params: Promise<{ attemp
 
   if (status.state === "needs_check") {
     return (
-      <>
-        <p className="-mb-3 text-base text-ink-soft">{status.label}</p>
-        <PageHeader
-          title={status.waitingCount === 1 ? "We need a quick check on 1 answer" : `We need a quick check on ${status.waitingCount} answers`}
-          description={`We weren't sure how to mark some of ${status.childNickname}'s answers. It takes about a minute, and then the results are ready.`}
-        />
-        <div>
-          <ButtonLink href={`/progress/review/${attemptId}`} variant="primary" className="w-full sm:w-auto">
-            Check answers
-          </ButtonLink>
-        </div>
-      </>
+      <HeroAction
+        eyebrow={<span>{status.label}</span>}
+        title={status.waitingCount === 1 ? "We need a quick check on 1 answer" : `We need a quick check on ${status.waitingCount} answers`}
+        supportingText={`We weren't sure how to mark some of ${status.childNickname}'s answers. It takes about a minute, and then the results are ready.`}
+        ctaLabel="Check answers"
+        href={`/progress/review/${attemptId}`}
+        illustration={<ReadyPaper className="h-24 w-auto md:h-36" />}
+      />
     );
   }
 

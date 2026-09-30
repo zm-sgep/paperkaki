@@ -60,6 +60,20 @@ const TEXT_PAIRS: [string, string, string][] = [
   ["danger", "surface", "inline error text"],
   ["danger", "paper", "inline error text on the page"],
   ["warning-strong", "warning-soft", "Mock Mode notices (unchanged)"],
+  // The child screens sit on a cream page with warm cards.
+  ["ink", "child-canvas", "body text on the child's page"],
+  ["ink", "child-card", "body text on the child's cards"],
+  ["ink-soft", "child-canvas", "supporting text on the child's page"],
+  ["ink-soft", "child-card", "supporting text on the child's cards"],
+  ["kaki-strong", "child-canvas", "teal text on the child's page (Hi {name}, links)"],
+  ["kaki-strong", "child-card", "teal text on the child's cards (nav label, row action)"],
+  ["kaya-strong", "child-card", "warm text on the child's cards (points pill, balance)"],
+  ["coral-strong", "child-card", "gentle alert text on the child's cards"],
+  ["ink", "child-line", "text on the progress track and unselected dots"],
+  ["surface", "kaki-hover", "primary button, pressed, on the child's hero"],
+  ["kaki-strong", "paper", "strong teal text on the parent's page"],
+  ["ink", "paper", "text on the returned-paper answer strip"],
+  ["kaya-strong", "paper", "warm text on the page"],
 ];
 
 /** The edge of a control must stand out from what is behind it: 3:1. */
@@ -68,6 +82,12 @@ const EDGE_PAIRS: [string, string, string][] = [
   ["line-strong", "paper", "input and checkbox edge on the page"],
   ["kaki", "surface", "selected row and focus ring on cards"],
   ["kaki", "paper", "focus ring on the page"],
+  ["kaki", "child-card", "selected choice and focus ring on the child's cards"],
+  ["kaki", "child-line", "progress fill against its track"],
+  ["kaya-strong", "kaya", "star outline against its yellow fill"],
+  ["line-strong", "child-card", "empty star outline"],
+  ["surface", "coral", "icon on the coral circle"],
+  ["ink", "kaya", "icon on the kaya circle"],
 ];
 
 describe("design tokens", () => {
