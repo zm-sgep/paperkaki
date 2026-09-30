@@ -6,3 +6,4 @@ export * from "./curriculum";
 export * from "./questions";
 export * from "./assessments";
 export * from "./papers";
+export * from "./ai";

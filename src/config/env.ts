@@ -24,6 +24,9 @@ export const LOG_LEVELS = [
 
 export const AUTH_PROVIDERS = ["dev"] as const;
 
+/** Which model provider reads school notices (ADR-0002). `disabled` hides upload everywhere. */
+export const AI_PROVIDERS = ["disabled", "fixture", "anthropic"] as const;
+
 const MIN_SECRET_LENGTH = 32;
 
 const secret = () =>
@@ -64,6 +67,20 @@ const envSchema = z.object({
   STORAGE_LOCAL_DIR: z.string().min(1).default("./.data/storage"),
   /** Signs file URLs (HMAC-SHA256). Separate from AUTH_SECRET so either can be rotated alone. */
   STORAGE_SIGNING_SECRET: secret(),
+  /**
+   * `disabled` (default): no model is called and the school-notice upload is not offered (ADR-0011).
+   * `fixture`: deterministic recorded results for tests and browser tests; never calls a model.
+   * `anthropic`: the Anthropic API; needs ANTHROPIC_API_KEY.
+   */
+  AI_PROVIDER: z
+    .enum(AI_PROVIDERS, { error: `must be one of: ${AI_PROVIDERS.join(", ")}` })
+    .default("disabled"),
+  /** Required only when AI_PROVIDER=anthropic. Never logged, never sent to the browser. */
+  ANTHROPIC_API_KEY: z.string().min(1).optional(),
+  /** Model that reads school notices. Defaults to the current model named in src/services/ai. */
+  AI_EXTRACTION_MODEL: z.string().min(1).optional(),
+  /** Where the fixture provider looks for recorded results (`<sha256>.json`). */
+  AI_FIXTURE_DIR: z.string().min(1).optional(),
 });
 
 const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "[::1]"]);
@@ -73,6 +90,20 @@ const envRules = envSchema.superRefine((value, context) => {
   // stray E2E_ALLOW_DEV_AUTH in a deployed environment cannot enable password-free sign-in.
   const e2eOnLocalHost =
     value.E2E_ALLOW_DEV_AUTH === "true" && LOCAL_HOSTS.has(new URL(value.APP_BASE_URL).hostname);
+  if (value.AI_PROVIDER === "anthropic" && !value.ANTHROPIC_API_KEY) {
+    context.addIssue({
+      code: "custom",
+      path: ["ANTHROPIC_API_KEY"],
+      message: "is required when AI_PROVIDER=anthropic",
+    });
+  }
+  if (value.NODE_ENV === "production" && value.AI_PROVIDER === "fixture" && !e2eOnLocalHost) {
+    context.addIssue({
+      code: "custom",
+      path: ["AI_PROVIDER"],
+      message: "the fixture provider returns recorded answers and is not allowed when NODE_ENV=production",
+    });
+  }
   if (value.NODE_ENV === "production" && value.AUTH_PROVIDER === "dev" && !e2eOnLocalHost) {
     context.addIssue({
       code: "custom",

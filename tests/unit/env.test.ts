@@ -17,6 +17,7 @@ describe("parseEnv", () => {
       LOG_LEVEL: "info",
       AUTH_PROVIDER: "dev",
       STORAGE_LOCAL_DIR: "./.data/storage",
+      AI_PROVIDER: "disabled",
     });
   });
 
@@ -157,6 +158,47 @@ describe("parseEnv", () => {
       expect(parseEnv({ ...valid, DEV_ADMIN_EMAILS: "a@example.test,b@example.test" }).DEV_ADMIN_EMAILS).toBe(
         "a@example.test,b@example.test",
       );
+    });
+  });
+  describe("school-notice reading (AI provider)", () => {
+    it("defaults to disabled, so no upload is offered and no key is needed", () => {
+      const env = parseEnv(valid);
+      expect(env.AI_PROVIDER).toBe("disabled");
+      expect(env.ANTHROPIC_API_KEY).toBeUndefined();
+    });
+
+    it("accepts the fixture provider without a key", () => {
+      expect(parseEnv({ ...valid, AI_PROVIDER: "fixture" }).AI_PROVIDER).toBe("fixture");
+    });
+
+    it("requires ANTHROPIC_API_KEY only when the provider is anthropic", () => {
+      expect(() => parseEnv({ ...valid, AI_PROVIDER: "anthropic" })).toThrow(
+        /ANTHROPIC_API_KEY: is required when AI_PROVIDER=anthropic/,
+      );
+      const env = parseEnv({ ...valid, AI_PROVIDER: "anthropic", ANTHROPIC_API_KEY: "test-key-not-real", AI_EXTRACTION_MODEL: "some-model" });
+      expect(env.AI_PROVIDER).toBe("anthropic");
+      expect(env.AI_EXTRACTION_MODEL).toBe("some-model");
+    });
+
+    it("rejects an unknown provider and never prints the key", () => {
+      expect(() => parseEnv({ ...valid, AI_PROVIDER: "magic" })).toThrow(/AI_PROVIDER: must be one of: disabled, fixture, anthropic/);
+      const key = "sk-test-do-not-print-0123456789";
+      let message = "";
+      try {
+        parseEnv({ ...valid, AI_PROVIDER: "magic", ANTHROPIC_API_KEY: key });
+      } catch (caught) {
+        message = (caught as Error).message;
+      }
+      expect(message).not.toBe("");
+      expect(message).not.toContain(key);
+    });
+
+    it("does not allow the recorded-answers provider in a deployed production build", () => {
+      const production = { ...valid, NODE_ENV: "production", AI_PROVIDER: "fixture", E2E_ALLOW_DEV_AUTH: "true" };
+      expect(parseEnv(production).AI_PROVIDER).toBe("fixture");
+      expect(() =>
+        parseEnv({ ...production, APP_BASE_URL: "https://paperkaki.example.com", AUTH_PROVIDER: "dev" }),
+      ).toThrow(/AI_PROVIDER: the fixture provider/);
     });
   });
 });
