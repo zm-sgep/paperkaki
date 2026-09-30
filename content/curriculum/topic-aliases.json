@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "note": "School wording for Primary 3 Mathematics topics, mapped to the topic codes in p3-maths-moe-2025-10.json. This is a lookup of how schools write topic names on notices; it adds no curriculum topics or outcomes. Wording is normalised before matching (case, punctuation, '&' and 'and', plurals, digit grouping), so each entry covers its usual spellings. 'appliesAcross' means the wording names no single topic.",
+  "aliases": [
+    { "label": "Numbers to 10 000", "topic": "P3-NA-WN" },
+    { "label": "Whole Numbers to 10 000", "topic": "P3-NA-WN" },
+    { "label": "Numbers up to 10 000", "topic": "P3-NA-WN" },
+    { "label": "Whole Numbers", "topic": "P3-NA-WN" },
+    { "label": "Addition and Subtraction", "topic": "P3-NA-AS" },
+    { "label": "Addition and Subtraction within 10 000", "topic": "P3-NA-AS" },
+    { "label": "Money", "topic": "P3-NA-MN" },
+    { "label": "Multiplication Tables of 6, 7, 8 and 9", "topic": "P3-NA-MD" },
+    { "label": "Multiplication Tables", "topic": "P3-NA-MD" },
+    { "label": "Multiplication and Division", "topic": "P3-NA-MD" },
+    { "label": "Multiplication", "topic": "P3-NA-MD" },
+    { "label": "Division", "topic": "P3-NA-MD" },
+    { "label": "Fractions", "topic": "P3-NA-FR" },
+    { "label": "Length, Mass and Volume", "topic": "P3-MG-LM" },
+    { "label": "Time", "topic": "P3-MG-TM" },
+    { "label": "Area and Perimeter", "topic": "P3-MG-AR" },
+    { "label": "Perimeter and Area", "topic": "P3-MG-AR" },
+    { "label": "Angles", "topic": "P3-MG-AN" },
+    { "label": "Perpendicular and Parallel Lines", "topic": "P3-MG-PL" },
+    { "label": "Parallel and Perpendicular Lines", "topic": "P3-MG-PL" },
+    { "label": "Bar Graphs", "topic": "P3-ST-BG" },
+    { "label": "More Word Problems", "appliesAcross": true },
+    { "label": "Word Problems", "appliesAcross": true }
+  ]
+}

@@ -89,11 +89,9 @@ describe("AI gateway", () => {
   });
 });
 
-type CreateArgs = Parameters<AnthropicLike["beta"]["messages"]["create"]>;
-
 function fakeClient(replies: Array<unknown | Error>): { client: AnthropicLike; create: ReturnType<typeof vi.fn> } {
   const queue = [...replies];
-  const create = vi.fn(async (..._args: CreateArgs) => {
+  const create = vi.fn(async () => {
     const next = queue.shift();
     if (next instanceof Error) throw next;
     return next;
