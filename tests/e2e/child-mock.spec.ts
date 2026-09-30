@@ -270,9 +270,10 @@ test.describe("child: the iPad mock, start to finish", () => {
     await page.reload();
     await expect(page.getByRole("heading", { name: "Paper submitted. Well done!" })).toBeVisible();
 
-    // Today shows the done state, and the paper cannot be opened again.
+    // Today moves on. When every answer could be marked by rule the results are already there ("Your ... is marked");
+    // when one needs a grown-up's quick check it is "done for today" until that is done. The paper cannot be opened again.
     await page.getByRole("link", { name: "Back to Today" }).click();
-    await expect(page.getByRole("heading", { level: 1, name: "You're done for today. Nice work." })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: /^(You're done for today\. Nice work\.|Your Mathematics WA2 · Mock 1 is marked)$/ })).toBeVisible();
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);
     await shot(page, "done", tag);
     await page.goto(`/mock/${attemptId}/start`);
