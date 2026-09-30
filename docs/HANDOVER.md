@@ -23,7 +23,8 @@ Decisions are recorded in `docs/decisions/ADR-0009` to `ADR-0012`.
 2. Choose and add a managed login provider (ADR-0010).
 3. Add an AI key (`AI_PROVIDER=anthropic`, `ANTHROPIC_API_KEY`) and run `npm run eval:extraction` to test letter reading for real.
 4. Confirm with MOE that storing and showing syllabus outcome wording is allowed for a commercial product.
-5. Smaller gaps: HEIC photos not accepted; uploaded PDF pages of a finished paper cannot be shown or reordered; no screen to undo an approved reward.
+5. Intermittent test failure: on 30 September 2026 one `npx vitest run` reported 2 failures, and the next four runs passed. The names were not captured; the likely cause is a time limit in a test on a busy machine (for example the selector timing checks). If it recurs, record the test names and fix the test.
+6. Smaller gaps: HEIC photos not accepted; uploaded PDF pages of a finished paper cannot be shown or reordered; no screen to undo an approved reward.
 
 ## How the work was run (worked well)
 - One issue at a time: read the ADRs and backlog, write a precise spec, implement, run typecheck, lint, all unit tests and the FULL Playwright suite, then look at phone (390x844) and iPad landscape (1180x820) screenshots before committing.
