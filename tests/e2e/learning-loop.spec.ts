@@ -150,6 +150,8 @@ test.describe("the learning loop", () => {
     const firstCheck = await checkOne(page, true);
     if (firstCheck === "wrong") {
       await expect(page.locator("[data-feedback-heading]")).toHaveText("Not quite");
+      // The child's own answer stays on screen beside the hint.
+      await expect(page.locator("[data-your-answer]")).toContainText("Your answer:");
       await expect(page.locator("[data-hint]")).toBeVisible();
       await expect(page.locator("[data-solution]")).toHaveCount(0);
       await page.getByRole("button", { name: "Show how" }).click();

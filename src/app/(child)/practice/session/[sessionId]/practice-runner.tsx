@@ -55,6 +55,33 @@ const PANEL: Record<PracticeFeedback["result"], { box: string; heading: string; 
   unclear: { box: "border-kaya/50 bg-kaya-soft", heading: "text-kaya-strong", icon: "bg-kaya text-ink" },
 };
 
+/**
+ * After checking, the child still sees what they answered, so the hint and the worked solution can be
+ * read against it (recognition over recall).
+ */
+function YourAnswer({ answer }: { answer: ReactNode }): ReactElement {
+  return (
+    <div data-your-answer className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-child-line pt-4 text-xl">
+      <span className="font-semibold text-ink-soft">Your answer:</span>
+      <span className="font-bold text-ink">{answer}</span>
+    </div>
+  );
+}
+
+type McqOption = NonNullable<PracticeQuestionView["content"]["options"]>[number];
+
+function ChosenOption({ options, chosen, imageUrls }: { options: readonly McqOption[]; chosen: string | null; imageUrls: PracticeQuestionView["imageUrls"] }): ReactElement {
+  const index = options.findIndex((option) => option.id === chosen);
+  const option = options[index];
+  if (!option) return <span>—</span>;
+  return (
+    <span className="inline-flex items-baseline gap-2">
+      <span>({index + 1})</span>
+      <BlockListView blocks={[{ t: "p", c: option.c }]} imageUrls={imageUrls} />
+    </span>
+  );
+}
+
 /** A white card inside the feedback panel: "A hint" or "Here is how". */
 function PanelNote({ icon, title, children, ...marker }: { icon: ReactElement; title: string; children: ReactNode; "data-hint"?: boolean; "data-solution"?: boolean }) {
   return (
@@ -141,7 +168,20 @@ export function PracticeRunner({ sessionId, focusLabel, progressText, dots, ques
       <section aria-label="Question" data-question-card className="flex flex-col gap-6 rounded-3xl border border-child-line bg-child-card p-5 shadow-child sm:p-8">
         <QuestionView content={isMcq ? { stem: question.content.stem } : question.content} imageUrls={question.imageUrls} className="text-xl sm:text-2xl" />
 
-        {feedback ? null : isMcq ? (
+        {feedback ? (
+          <YourAnswer
+            answer={
+              isMcq ? (
+                <ChosenOption options={question.content.options ?? []} chosen={selected} imageUrls={question.imageUrls} />
+              ) : (
+                <span>
+                  {typed.trim()}
+                  {unit ? ` ${unit}` : ""}
+                </span>
+              )
+            }
+          />
+        ) : isMcq ? (
           <McqAnswer questionId={`practice-${question.position}`} options={question.content.options ?? []} value={selected ?? undefined} onChange={setSelected} shape="soft" />
         ) : (
           <TypedAnswer kind={input.kind === "fraction" ? "fraction" : input.kind === "text" ? "text" : "number"} value={typed} onChange={setTyped} unit={unit} shape="soft" />
