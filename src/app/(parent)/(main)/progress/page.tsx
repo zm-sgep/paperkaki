@@ -19,7 +19,17 @@ export default async function ProgressPage() {
   const parent = await requireParent();
   const progress = await getParentProgress(parent.parentProfileId);
 
-  if (progress.kind !== "ready") {
+  if (progress.kind === "no_child") {
+    return (
+      <>
+        <PageHeader title="Progress" />
+        <EmptyState title="Nothing to show yet">
+          After your child&apos;s first mock, you&apos;ll see what is improving and what needs work.
+        </EmptyState>
+      </>
+    );
+  }
+  if (progress.kind === "empty") {
     return (
       <>
         <PageHeader title="Progress" />
@@ -31,9 +41,7 @@ export default async function ProgressPage() {
             </ButtonLink>
           }
         >
-          {progress.kind === "no_child"
-            ? "Add your child and their next assessment, and you'll see how they are getting on here."
-            : `After ${progress.childNickname}'s first mock or practice, you'll see what is improving and what needs work.`}
+          After {progress.childNickname}&apos;s first mock or practice, you&apos;ll see what is improving and what needs work.
         </EmptyState>
       </>
     );
