@@ -24,6 +24,7 @@
   /* The child screens: a warmer page and softer cards than the parent screens. */
   --color-child-canvas: #fff5e4;
   --color-child-card: #fffdf9;
+  --color-child-line: #ecd9b8;
 }
 
 :root {
