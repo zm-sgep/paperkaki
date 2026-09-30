@@ -29,7 +29,7 @@ export default async function UploadPage({ params }: { params: Promise<{ assessm
       />
       <UploadPages paperId={screen.paperId} pages={screen.pages} countNote={screen.countNote} available={screen.available} blocked={screen.blocked} />
       <div>
-        <Link href={screen.backHref} className={buttonClassName("quiet")}>
+        <Link href={screen.backHref} className={buttonClassName("quiet", "md", { flush: true })}>
           Back to the mock
         </Link>
       </div>

@@ -131,7 +131,7 @@ export default async function AssessmentPage({ params }: { params: Promise<{ ass
       />
 
       <div>
-        <ButtonLink href={`/prepare/${assessmentId}/scope`} variant="quiet">
+        <ButtonLink href={`/prepare/${assessmentId}/scope`} variant="quiet" flush>
           Change topics
         </ButtonLink>
       </div>

@@ -83,7 +83,7 @@ export default async function QuickCheckPage({ params }: { params: Promise<{ att
       </Card>
 
       <div>
-        <Link href="/home" className={buttonClassName("quiet")}>
+        <Link href="/home" className={buttonClassName("quiet", "md", { flush: true })}>
           Back to Home
         </Link>
       </div>

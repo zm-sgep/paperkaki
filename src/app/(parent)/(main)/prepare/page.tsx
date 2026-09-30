@@ -65,7 +65,7 @@ export default async function PreparePage() {
             ))}
           </ul>
           <div>
-            <ButtonLink href="/prepare/new" variant="quiet">
+            <ButtonLink href="/prepare/new" variant="quiet" flush>
               <Plus aria-hidden="true" className="h-5 w-5" />
               Add upcoming assessment
             </ButtonLink>

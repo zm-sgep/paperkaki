@@ -36,7 +36,7 @@ export function NoticeFailed({ sourceId, code, retry, childId }: { sourceId: str
         ) : null}
         <NoticeUploadForm childId={childId} label="Try another file" variant={retry ? "secondary" : "primary"} />
         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-          <ButtonLink href="/prepare/new?manual=1" variant="quiet" className="self-start">
+          <ButtonLink href="/prepare/new?manual=1" variant="quiet" flush className="self-start">
             Enter details myself
           </ButtonLink>
           <form action={deleteNoticeAction.bind(null, sourceId)}>

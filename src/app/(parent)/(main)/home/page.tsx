@@ -31,6 +31,7 @@ export default async function HomePage() {
           href="/rewards"
           illustration={<HomeIllustration kind="reward_request" />}
         />
+        {/* This hero carries no chips, so the line is what says which assessment comes next. */}
         {contextLine ? <p className="text-lg text-ink-soft">{contextLine}</p> : null}
       </>
     );
@@ -56,7 +57,8 @@ export default async function HomePage() {
           ) : null
         }
       />
-      {contextLine ? <p className="text-lg text-ink-soft">{contextLine}</p> : null}
+      {/* The hero's chips already say which child, which assessment and how many days: the line only fills in when they are absent. */}
+      {!context && contextLine ? <p className="text-lg text-ink-soft">{contextLine}</p> : null}
       {request ? (
         <p data-reward-request className="text-lg text-ink-soft">
           {request.childNickname} asked for {request.title}.{" "}

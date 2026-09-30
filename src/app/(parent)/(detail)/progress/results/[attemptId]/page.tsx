@@ -37,7 +37,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ attemp
         <MarkingProgress attemptId={attemptId} steps={status.steps} live={!failed} />
         {failed ? <RetryForm attemptId={attemptId} /> : null}
         <div>
-          <Link href="/home" className={buttonClassName("quiet")}>
+          <Link href="/home" className={buttonClassName("quiet", "md", { flush: true })}>
             Back to Home
           </Link>
         </div>

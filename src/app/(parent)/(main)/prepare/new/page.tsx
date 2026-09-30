@@ -34,7 +34,7 @@ export default async function NewAssessmentPage({ searchParams }: { searchParams
           panel
         />
         <div>
-          <ButtonLink href="/prepare/new?manual=1" variant="quiet">
+          <ButtonLink href="/prepare/new?manual=1" variant="quiet" flush>
             Enter details myself
           </ButtonLink>
         </div>
@@ -53,7 +53,7 @@ export default async function NewAssessmentPage({ searchParams }: { searchParams
       />
       {upload ? (
         <div>
-          <ButtonLink href="/prepare/new" variant="quiet">
+          <ButtonLink href="/prepare/new" variant="quiet" flush>
             Upload the school notice instead
           </ButtonLink>
         </div>

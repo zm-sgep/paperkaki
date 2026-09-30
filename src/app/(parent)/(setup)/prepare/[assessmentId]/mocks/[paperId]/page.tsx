@@ -84,7 +84,7 @@ export default async function MockPage({ params }: { params: Promise<{ assessmen
       </div>
 
       <div>
-        <Link href={mock.backHref} className={buttonClassName("quiet")}>
+        <Link href={mock.backHref} className={buttonClassName("quiet", "md", { flush: true })}>
           <ArrowLeft aria-hidden="true" className="h-5 w-5" />
           All mocks
         </Link>

@@ -65,7 +65,7 @@ export default async function ParentPracticePage({ searchParams }: { searchParam
       )}
       {suggestion.alreadySuggested ? null : (
         <div>
-          <ButtonLink href="/progress" variant="quiet">
+          <ButtonLink href="/progress" variant="quiet" flush>
             Back to Progress
           </ButtonLink>
         </div>

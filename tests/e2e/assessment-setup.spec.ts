@@ -124,7 +124,9 @@ test.describe("parent assessment setup", () => {
     await expect(page.getByRole("heading", { level: 1, name: "WA2: topics confirmed" })).toBeVisible();
     await expect(page.getByRole("main").getByRole("link", { name: "Generate first mock" })).toBeVisible();
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);
-    await expect(page.getByText(/^Next: WA2 · /)).toBeVisible();
+    // The hero's chips say which child, which assessment and how many days; the same facts are not repeated as a line below.
+    await expect(page.getByText(/^in 14 days$/)).toHaveCount(1);
+    await expect(page.getByText(/^Next: WA2 · /)).toHaveCount(0);
     await expectNoInternalWords(page);
 
     await nav.getByRole("link", { name: "Prepare" }).click();
