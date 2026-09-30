@@ -1,30 +1,89 @@
 @import "tailwindcss";
 
 /*
- * Design tokens. Calm, readable, no implementation language.
- * Body text is at least 16px; the system font stack avoids any font download.
+ * Design tokens. A warm, trustworthy local study companion: paper-coloured pages, teal for
+ * "do this", kaya yellow for small moments of delight, coral for gentle "look at this".
+ * No implementation language. The fonts are installed from npm (see layout.tsx) and served by
+ * the app itself, so nothing is fetched from another site.
+ *
+ * Every text/background pair used in the UI is checked for WCAG AA contrast in
+ * tests/unit/design-tokens.test.ts. Change a colour here and that test tells you if it still works.
  */
 @theme {
   --font-sans:
-    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Plus Jakarta Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
     sans-serif;
-  --color-paper: #faf8f3;
-  --color-ink: #1f2933;
-  --color-ink-soft: #52606d;
-  --color-kaki: #1f6f5c;
-  --color-kaki-strong: #17564a;
-  --color-kaki-soft: #e4f0ec;
+  /* The child screens. Wired up now; the child experience starts using it in the next design pass. */
+  --font-child:
+    "Nunito Variable", "Plus Jakarta Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+  /* Mock Mode and other exam-like surfaces keep the plain system look. */
+  --font-exam:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  /* Surfaces and text */
+  --color-paper: #faf7f1;
   --color-surface: #ffffff;
-  --color-line: #cfd6dc;
-  --color-danger: #a4262c;
-  /* Gentle "pay attention" amber for the mock timer and notices. Not an error, never red. */
+  --color-ink: #1d2a2e;
+  --color-ink-soft: #52616a;
+  --color-line: #e5e1d8;
+  /* The edge of a control (input, checkbox). Dark enough to see (3:1) without looking heavy. */
+  --color-line-strong: #84908c;
+
+  /* Primary: teal. `kaki` is the button and link colour; `kaki-hover` is pressed/hover; `kaki-strong`
+     is teal used as text on light or tinted backgrounds; `kaki-soft` is the tint behind it. */
+  --color-kaki: #0e7c6b;
+  --color-kaki-hover: #0b6556;
+  --color-kaki-strong: #0a5a4d;
+  --color-kaki-soft: #e3f2ee;
+
+  /* Accent: kaya yellow. Small, warm highlights; `kaya-strong` is the only one safe as text. */
+  --color-kaya: #f2b53a;
+  --color-kaya-soft: #fdf3dc;
+  --color-kaya-strong: #8a5a00;
+
+  /* Gentle alert: coral. For "look at this", never a siren. `danger` is kept as the error text colour. */
+  --color-coral: #e4735a;
+  --color-coral-soft: #fce9e4;
+  --color-coral-strong: #a33a22;
+  --color-danger: #a33a22;
+  --color-danger-soft: #fce9e4;
+
+  /* Mock timer and notices. Unchanged: Mock Mode keeps its plain, calm look. */
   --color-warning: #b26a00;
   --color-warning-strong: #6b3f00;
   --color-warning-soft: #fff3d1;
+
   /* The child screens: a warmer page and softer cards than the parent screens. */
   --color-child-canvas: #fff5e4;
   --color-child-card: #fffdf9;
   --color-child-line: #ecd9b8;
+
+  /* Shape: 12px controls, 20px cards, 28px hero cards (8px grid). */
+  --radius-control: 0.75rem;
+  --radius-card: 1.25rem;
+  --radius-hero: 1.75rem;
+
+  /* Depth: soft and layered, never heavy. */
+  --shadow-card:
+    0 1px 1px rgb(29 42 46 / 0.04), 0 2px 6px rgb(29 42 46 / 0.05), 0 10px 24px -8px rgb(29 42 46 / 0.08);
+  --shadow-hero:
+    0 1px 2px rgb(10 90 77 / 0.06), 0 6px 16px -4px rgb(10 90 77 / 0.1), 0 24px 48px -16px rgb(10 90 77 / 0.16);
+  --shadow-bar: 0 -1px 0 rgb(29 42 46 / 0.04), 0 -8px 24px -12px rgb(29 42 46 / 0.12);
+  --shadow-button:
+    inset 0 1px 0 rgb(255 255 255 / 0.22), inset 0 -1px 0 rgb(0 0 0 / 0.08), 0 1px 2px rgb(10 90 77 / 0.3);
+
+  --animate-enter: enter 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(6px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 :root {
@@ -39,12 +98,69 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  /* 16px on a phone, 17px from tablet width up. */
   font-size: 1rem;
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+@media (min-width: 48rem) {
+  body {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Headings sit tight and balance their lines; utilities on a component still win. */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Numbers that matter (scores, counts, countdowns) line up. */
+[data-numeric] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* A visible 3px ring in teal, held off the control so it never hides the edge. */
 :focus-visible {
   outline: 3px solid var(--color-kaki);
   outline-offset: 3px;
+}
+
+::selection {
+  background-color: #bfe3da;
+  color: var(--color-ink);
+}
+
+/*
+ * Full Mock Mode and other exam-like surfaces stay plain: the system font, no decoration on
+ * buttons. Only the colour tokens above reach them.
+ */
+[data-exam] {
+  font-family: var(--font-exam);
+}
+
+[data-exam] [data-variant] {
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* A spinner that stands still looks broken, so it only slows down. */
+  .animate-spin {
+    animation-duration: 2.4s !important;
+    animation-iteration-count: infinite !important;
+  }
 }

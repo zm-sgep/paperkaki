@@ -1,6 +1,7 @@
 "use client";
 
 import { StatusScreen, primaryActionClassName } from "@/components/ui/status-screen";
+import "@fontsource-variable/plus-jakarta-sans/wght.css";
 import "./globals.css";
 
 // Replaces the root layout when it fails, so it supplies its own document and styles.
