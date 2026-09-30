@@ -20,7 +20,7 @@ function RenameForm({ child }: { child: Child }) {
   const id = `rename-${child.id}`;
   return (
     <details className="w-full">
-      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-kaki">Rename</summary>
+      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-kaki-strong">Rename</summary>
       <form action={formAction} className="mt-2 flex flex-col gap-3">
         <Field id={id} label={`New name for ${child.nickname}`} error={state.error}>
           <input id={id} name="nickname" type="text" defaultValue={child.nickname} maxLength={40} autoComplete="off" aria-invalid={state.error ? true : undefined} aria-describedby={state.error ? `${id}-error` : undefined} className={inputClassName} />
@@ -37,7 +37,7 @@ function ArchiveForm({ child }: { child: Child }) {
   return (
     <details className="w-full">
       <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-danger">Archive</summary>
-      <form action={archiveChildAction.bind(null, child.id)} className="mt-2 flex flex-col gap-3 rounded-lg border-2 border-danger p-4">
+      <form action={archiveChildAction.bind(null, child.id)} className="mt-2 flex flex-col gap-3 rounded-control border border-coral/40 bg-coral-soft p-4">
         <p className="text-lg text-ink">
           Archive {child.nickname}? Their assessments will be hidden from your screens.
         </p>
@@ -53,14 +53,14 @@ function SetUpDevice({ child }: { child: Child }) {
   const [state, formAction] = useActionState<PairingState, FormData>(createPairingCodeAction.bind(null, child.id), {});
   return (
     <details className="w-full">
-      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-kaki">Set up {child.nickname}&apos;s iPad</summary>
-      <div className="mt-2 flex flex-col gap-3 rounded-lg border-2 border-line p-4">
+      <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-kaki-strong">Set up {child.nickname}&apos;s iPad</summary>
+      <div className="mt-2 flex flex-col gap-3 rounded-control border border-line bg-paper p-4">
         <p className="text-lg text-ink">
           On {child.nickname}&apos;s device, open the link below and type the code. The code works once, for 10 minutes.
         </p>
         {state.code ? (
           <div data-pairing-code className="flex flex-col gap-2">
-            <p aria-label={`Code ${state.code}`} className="text-4xl font-semibold tabular-nums tracking-widest text-ink">
+            <p aria-label={`Code ${state.code}`} data-numeric className="w-fit rounded-control bg-kaki-soft px-5 py-3 text-4xl font-bold tracking-widest text-kaki-strong">
               {state.code}
             </p>
             <p className="break-all text-lg text-ink">
@@ -82,7 +82,7 @@ function RemoveDevice({ device }: { device: Device }) {
   return (
     <details className="w-full">
       <summary className="inline-flex min-h-12 cursor-pointer items-center px-2 text-base font-semibold text-danger">Remove</summary>
-      <form action={removeDeviceAction.bind(null, device.id)} className="mt-2 flex flex-col gap-3 rounded-lg border-2 border-danger p-4">
+      <form action={removeDeviceAction.bind(null, device.id)} className="mt-2 flex flex-col gap-3 rounded-control border border-coral/40 bg-coral-soft p-4">
         <p className="text-lg text-ink">Remove {device.label}? It will need a new code to open PaperKaki again.</p>
         <SubmitButton variant="danger" className="w-full sm:w-auto sm:self-start">
           Yes, remove it
@@ -96,15 +96,22 @@ export function ChildrenSection({ kids, devices = [] }: { kids: Child[]; devices
   const [state, formAction] = useActionState<ChildFormState, FormData>(addChildAction, {});
   return (
     <Card className="flex flex-col gap-5" >
-      <h2 className="text-xl font-semibold text-ink">Children</h2>
+      <h2 className="text-xl font-bold tracking-tight text-ink">Children</h2>
       {kids.length === 0 ? (
         <p className="text-lg text-ink-soft">No children yet. Add one below, or when you add an assessment.</p>
       ) : (
         <ul className="flex flex-col divide-y divide-line">
           {kids.map((child) => (
-            <li key={child.id} className="flex flex-col gap-1 py-3 first:pt-0">
-              <p className="text-lg font-medium text-ink">{child.nickname}</p>
-              <p className="text-base text-ink-soft">Primary 3</p>
+            <li key={child.id} className="flex flex-col gap-1 py-4 first:pt-0">
+              <div className="flex items-center gap-3">
+                <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-kaki-soft text-lg font-bold text-kaki-strong">
+                  {Array.from(child.nickname.trim())[0]?.toUpperCase() ?? "?"}
+                </span>
+                <div className="flex min-w-0 flex-col">
+                  <p className="truncate text-lg font-semibold text-ink">{child.nickname}</p>
+                  <p className="text-base text-ink-soft">Primary 3</p>
+                </div>
+              </div>
               <div data-child-devices={child.id} className="flex flex-col gap-1">
                 {devices
                   .filter((device) => device.childId === child.id)

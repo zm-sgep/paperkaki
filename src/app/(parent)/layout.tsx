@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { getParentChildren } from "@/application/queries/children";
 import { requireParent } from "@/application/queries/current-parent";
+import { Logo } from "@/components/brand/Logo";
 import { ChildSelector } from "@/components/parent/child-selector";
 import { ParentNav } from "@/components/parent/parent-nav";
 import { selectChildAction } from "./actions";
@@ -18,14 +19,14 @@ export default async function ParentLayout({ children }: { children: ReactNode }
 
   return (
     <div className="min-h-dvh">
-      <header className="fixed inset-x-0 top-0 z-30 flex h-16 items-center justify-between border-b border-line bg-surface px-4 sm:px-6">
-        <span className="text-xl font-semibold tracking-tight text-kaki">PaperKaki</span>
-        <div className="flex items-center gap-3">
+      <header className="fixed inset-x-0 top-0 z-30 flex h-16 items-center justify-between gap-2 border-b border-line bg-surface/95 px-4 backdrop-blur sm:px-6">
+        <Logo size={26} className="shrink-0" />
+        <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <ChildSelector options={kids} selectedChildId={selectedChildId} onSelect={selectChildAction} />
           <Link
             href="/account"
             aria-label="Account"
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-kaki text-lg font-semibold text-white hover:bg-kaki-strong"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-kaki text-lg font-bold text-white shadow-button transition-colors hover:bg-kaki-hover"
           >
             <span aria-hidden="true">{initial}</span>
           </Link>

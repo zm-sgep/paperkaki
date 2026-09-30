@@ -1,10 +1,21 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { BookOpen, ClipboardCheck, GraduationCap, NotebookPen, Shapes, UserRound } from "lucide-react";
+import { useActionState, useState, type ReactNode } from "react";
 import { ChoiceCard } from "@/components/ui/choice-card";
 import { Field, inputClassName } from "@/components/ui/field";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { createAssessmentAction, type NewAssessmentState } from "./actions";
+
+/** A picture for each kind of assessment. Decoration: the name beside it says what it is. */
+const TYPE_ICON: Record<string, ReactNode> = {
+  wa1: <ClipboardCheck />,
+  wa2: <ClipboardCheck />,
+  wa3: <ClipboardCheck />,
+  end_of_year: <GraduationCap />,
+  class_test: <NotebookPen />,
+  other: <Shapes />,
+};
 
 type Props = {
   kids: { id: string; nickname: string }[];
@@ -26,10 +37,10 @@ export function NewAssessmentForm({ kids, selectedChildId, types, today }: Props
     <form action={formAction} className="flex flex-col gap-8" noValidate>
       {hasChildren ? (
         <fieldset className="flex flex-col gap-3">
-          <legend className="pb-1 text-lg font-medium text-ink">Who is it for?</legend>
+          <legend className="pb-1 text-lg font-semibold text-ink">Who is it for?</legend>
           <div className="grid gap-3 sm:grid-cols-2">
             {kids.map((child) => (
-              <ChoiceCard key={child.id} type="radio" name="childId" value={child.id} label={child.nickname} defaultChecked={child.id === initialChild} />
+              <ChoiceCard key={child.id} type="radio" name="childId" value={child.id} label={child.nickname} icon={<UserRound />} defaultChecked={child.id === initialChild} />
             ))}
           </div>
           <p className="text-base text-ink-soft">
@@ -48,20 +59,23 @@ export function NewAssessmentForm({ kids, selectedChildId, types, today }: Props
               defaultValue={values.nickname}
               aria-invalid={errors.nickname ? true : undefined}
               aria-describedby={errors.nickname ? "nickname-error" : undefined}
-              className={inputClassName}
+              className={`${inputClassName} sm:max-w-md`}
             />
           </Field>
         </div>
       )}
 
-      <div className="flex flex-col gap-1">
-        <span className="text-lg font-medium text-ink">Level and subject</span>
-        <p className="text-lg text-ink">Primary 3 · Mathematics</p>
+      <div className="flex flex-col gap-2">
+        <span className="text-lg font-semibold text-ink">Level and subject</span>
+        <div className="flex items-center gap-3 rounded-control bg-kaki-soft px-4 py-3">
+          <BookOpen aria-hidden="true" className="h-6 w-6 shrink-0 text-kaki-strong" />
+          <p className="text-lg font-semibold text-ink">Primary 3 · Mathematics</p>
+        </div>
         <p className="text-base text-ink-soft">PaperKaki covers Primary 3 Mathematics for now.</p>
       </div>
 
       <fieldset className="flex flex-col gap-3" aria-describedby={errors.type ? "type-error" : undefined}>
-        <legend className="pb-1 text-lg font-medium text-ink">Which assessment?</legend>
+        <legend className="pb-1 text-lg font-semibold text-ink">Which assessment?</legend>
         <div className="grid gap-3 sm:grid-cols-2">
           {types.map((option) => (
             <ChoiceCard
@@ -70,6 +84,7 @@ export function NewAssessmentForm({ kids, selectedChildId, types, today }: Props
               name="type"
               value={option.value}
               label={option.label}
+              icon={TYPE_ICON[option.value] ?? <Shapes />}
               defaultChecked={values.type === option.value}
               onChange={() => setType(option.value)}
             />
@@ -116,7 +131,7 @@ export function NewAssessmentForm({ kids, selectedChildId, types, today }: Props
         </p>
       ) : null}
 
-      <SubmitButton variant="primary" className="w-full sm:w-auto sm:self-start">
+      <SubmitButton variant="primary" size="lg" className="w-full sm:w-auto sm:self-start">
         Choose topics
       </SubmitButton>
     </form>

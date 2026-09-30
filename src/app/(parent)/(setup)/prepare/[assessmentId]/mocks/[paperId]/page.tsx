@@ -1,8 +1,10 @@
+import { ArrowLeft, Download, FileCheck } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getMockPage } from "@/application/queries/papers";
 import { requireParent } from "@/application/queries/current-parent";
+import { CheckCircleBurst } from "@/components/illustrations";
 import { buttonClassName } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
@@ -23,42 +25,48 @@ export default async function MockPage({ params }: { params: Promise<{ assessmen
 
   return (
     <>
-      <p className="-mb-3 text-base text-ink-soft">{mock.contextLine}</p>
+      <p className="-mb-3 text-base font-medium text-ink-soft">{mock.contextLine}</p>
       <PageHeader title={mock.heading} />
 
-      <Card className="flex flex-col gap-4">
-        <div className="flex flex-col gap-1">
-          <p className="text-xl font-semibold text-ink">{mock.summary}</p>
-          {mock.topicsLine ? <p className="text-lg text-ink-soft">{mock.topicsLine}</p> : null}
+      <Card className="flex flex-col gap-6 md:flex-row-reverse md:items-start md:justify-between md:gap-8">
+        <div aria-hidden="true" className="flex shrink-0 justify-center md:pt-2">
+          <CheckCircleBurst className="h-28 w-auto md:h-36" />
         </div>
-        {/* Plain links, not next/link: these answer with a redirect to a private file, never a page. */}
-        <a
-          href={mock.studentHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          data-variant="primary"
-          className={`${buttonClassName("primary")} w-full sm:w-auto sm:self-start`}
-        >
-          Download mock paper
-        </a>
-        <p className="text-lg text-ink-soft">{mock.tip}</p>
-        <IpadOption paperId={mock.paperId} childNickname={mock.childNickname} status={mock.ipad} />
-        {mock.upload.attempt ? (
-          <p data-upload-status className="text-lg text-ink">
-            {mock.upload.attempt.message}{" "}
-            <Link href={mock.upload.attempt.href} className="font-semibold text-kaki underline underline-offset-4">
-              See results
-            </Link>
-          </p>
-        ) : null}
-        {mock.upload.available ? (
-          <div className="flex flex-col gap-1">
-            <Link href={mock.upload.href} data-variant="secondary" className={`${buttonClassName("secondary")} w-full sm:w-auto sm:self-start`}>
-              Upload the finished paper
-            </Link>
-            <p className="text-base text-ink-soft">Photos of each page, once {mock.childNickname} has written on the printed paper.</p>
+        <div className="flex min-w-0 flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <p className="text-xl font-bold tracking-tight text-ink">{mock.summary}</p>
+            {mock.topicsLine ? <p className="text-base text-ink-soft">{mock.topicsLine}</p> : null}
           </div>
-        ) : null}
+          {/* Plain links, not next/link: these answer with a redirect to a private file, never a page. */}
+          <a
+            href={mock.studentHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-variant="primary"
+            className={`${buttonClassName("primary", "lg")} w-full sm:w-auto sm:self-start`}
+          >
+            <Download aria-hidden="true" className="h-5 w-5" />
+            Download mock paper
+          </a>
+          <p className="text-lg text-ink-soft">{mock.tip}</p>
+          <IpadOption paperId={mock.paperId} childNickname={mock.childNickname} status={mock.ipad} />
+          {mock.upload.attempt ? (
+            <p data-upload-status className="text-lg text-ink">
+              {mock.upload.attempt.message}{" "}
+              <Link href={mock.upload.attempt.href} className="font-semibold text-kaki-strong underline underline-offset-4">
+                See results
+              </Link>
+            </p>
+          ) : null}
+          {mock.upload.available ? (
+            <div className="flex flex-col gap-2">
+              <Link href={mock.upload.href} data-variant="secondary" className={`${buttonClassName("secondary")} w-full sm:w-auto sm:self-start`}>
+                Upload the finished paper
+              </Link>
+              <p className="text-base text-ink-soft">Photos of each page, once {mock.childNickname} has written on the printed paper.</p>
+            </div>
+          ) : null}
+        </div>
       </Card>
 
       <div className="flex flex-col gap-2">
@@ -69,6 +77,7 @@ export default async function MockPage({ params }: { params: Promise<{ assessmen
           data-variant="secondary"
           className={`${buttonClassName("secondary")} w-full sm:w-auto sm:self-start`}
         >
+          <FileCheck aria-hidden="true" className="h-5 w-5" />
           Download answer pack
         </a>
         <p className="text-base text-ink-soft">{mock.answerPackNote}</p>
@@ -76,6 +85,7 @@ export default async function MockPage({ params }: { params: Promise<{ assessmen
 
       <div>
         <Link href={mock.backHref} className={buttonClassName("quiet")}>
+          <ArrowLeft aria-hidden="true" className="h-5 w-5" />
           All mocks
         </Link>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Check } from "lucide-react";
 import { useActionState, useState, type ReactNode } from "react";
 import {
   ASSESSMENT_TYPES,
@@ -16,24 +17,26 @@ import type { NoticeReviewView } from "@/application/queries/notice-sources";
 import { FormatPartsEditor, useFormatDraft } from "@/components/parent/format-parts-editor";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Chip } from "@/components/ui/chip";
 import { ChoiceCard } from "@/components/ui/choice-card";
 import { Field, inputClassName } from "@/components/ui/field";
+import { Notice } from "@/components/ui/notice";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { confirmNoticeAction, deleteNoticeAction, type ConfirmNoticeState } from "./actions";
 
 /** "Please check", beside anything the notice was not sure about. Words, not numbers. */
 function PleaseCheck() {
   return (
-    <span className="ml-2 inline-block rounded-md border border-line bg-surface px-2 py-0.5 align-middle text-sm font-semibold text-ink">
+    <Chip tone="kaya" className="ml-2 align-middle">
       Please check
-    </span>
+    </Chip>
   );
 }
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <section className="flex flex-col gap-2">
-      <h2 className="text-lg font-semibold text-ink">{title}</h2>
+    <section className="flex flex-col gap-2 border-t border-line pt-5">
+      <h2 className="text-lg font-bold tracking-tight text-ink">{title}</h2>
       {children}
     </section>
   );
@@ -117,7 +120,9 @@ export function NoticeReviewForm({ view }: { view: NoticeReviewView }) {
   return (
     <div className="flex flex-col gap-6">
       {view.multipleSubjects ? (
-        <p className="rounded-lg bg-kaki-soft px-4 py-3 text-lg text-ink">We used the Mathematics part of the letter.</p>
+        <Notice>
+          <p>We used the Mathematics part of the letter.</p>
+        </Notice>
       ) : null}
 
       <form action={formAction} className="flex flex-col gap-6" noValidate>
@@ -132,13 +137,13 @@ export function NoticeReviewForm({ view }: { view: NoticeReviewView }) {
         <input type="hidden" name="saveForFuture" value={saveForFuture ? "true" : "false"} />
 
         {errorList.length > 0 ? (
-          <div role="alert" className="flex flex-col gap-1 rounded-lg border-2 border-danger bg-surface px-4 py-3">
+          <Notice tone="alert" role="alert">
             {errorList.map(([key, message]) => (
-              <p key={key} className="text-lg font-semibold text-danger">
+              <p key={key} className="font-semibold text-danger">
                 {message}
               </p>
             ))}
-          </div>
+          </Notice>
         ) : null}
 
         {editing ? (
@@ -171,7 +176,7 @@ export function NoticeReviewForm({ view }: { view: NoticeReviewView }) {
             </Field>
 
             <fieldset className="flex flex-col gap-3">
-              <legend className="pb-1 text-lg font-medium text-ink">Topics</legend>
+              <legend className="pb-1 text-lg font-semibold text-ink">Topics</legend>
               <div className="grid gap-3 sm:grid-cols-2">
                 {view.allTopics.map((topic) => (
                   <ChoiceCard
@@ -199,7 +204,7 @@ export function NoticeReviewForm({ view }: { view: NoticeReviewView }) {
 
             {hasFormat ? (
               <div className="flex flex-col gap-4">
-                <h2 className="text-lg font-semibold text-ink">Paper format{checkTime ? <PleaseCheck /> : null}</h2>
+                <h2 className="text-lg font-bold tracking-tight text-ink">Paper format{checkTime ? <PleaseCheck /> : null}</h2>
                 <FormatPartsEditor draft={draft} serverErrors={serverErrors} />
               </div>
             ) : (
@@ -219,17 +224,17 @@ export function NoticeReviewForm({ view }: { view: NoticeReviewView }) {
           </div>
         ) : (
           <Card className="flex flex-col gap-6">
-            <p className="text-xl font-semibold text-ink">
+            <p className="text-xl font-bold tracking-tight text-ink">
               {[
                 <span key="name">
                   {name}
                   {checkType ? <PleaseCheck /> : null}
                 </span>,
-                <span key="date">
+                <span key="date" className="whitespace-nowrap">
                   {dateText === "" ? "Date not found" : dateText}
                   {checkDate ? <PleaseCheck /> : null}
                 </span>,
-                <span key="time">
+                <span key="time" className="whitespace-nowrap">
                   {validMinutes === null ? "Time not found" : durationText(validMinutes)}
                   {checkTime ? <PleaseCheck /> : null}
                 </span>,
@@ -257,8 +262,8 @@ export function NoticeReviewForm({ view }: { view: NoticeReviewView }) {
                 <ul className="flex flex-col gap-1 text-lg text-ink">
                   {chosenTopics.map((topic) => (
                     <li key={topic.code} className="flex items-start gap-2">
-                      <span aria-hidden="true" className="font-semibold text-kaki">
-                        ✓
+                      <span aria-hidden="true" className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-kaki-soft text-kaki-strong">
+                        <Check className="h-3.5 w-3.5" strokeWidth={3.5} />
                       </span>
                       <span>
                         {topic.label}
@@ -301,7 +306,7 @@ export function NoticeReviewForm({ view }: { view: NoticeReviewView }) {
         ) : null}
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <SubmitButton variant="primary" disabled={editing && formatIssues.length > 0} className="w-full sm:w-auto">
+          <SubmitButton variant="primary" size="lg" disabled={editing && formatIssues.length > 0} className="w-full sm:w-auto">
             Looks right
           </SubmitButton>
           <Button variant="secondary" onClick={() => setEditing((current) => !current)} className="w-full sm:w-auto">

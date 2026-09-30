@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import { Notice } from "@/components/ui/notice";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { generateMockAction, type MockState } from "./actions";
 
@@ -25,6 +26,7 @@ export function GenerateMockForm({ assessmentId, requestKey, canGenerate, reason
       <input type="hidden" name="requestKey" value={requestKey} />
       <SubmitButton
         variant={variant}
+        size={variant === "primary" ? "lg" : "md"}
         disabled={!canGenerate}
         aria-describedby={!canGenerate && reason ? "generate-reason" : undefined}
         className="w-full sm:w-auto sm:self-start"
@@ -40,13 +42,11 @@ export function GenerateMockForm({ assessmentId, requestKey, canGenerate, reason
         {pending ? "This takes a few seconds. Please keep this page open." : null}
       </div>
       {state.problems && !pending ? (
-        <div role="alert" className="flex flex-col gap-1 rounded-lg border-2 border-danger bg-surface px-4 py-3">
+        <Notice tone="alert" role="alert">
           {state.problems.map((problem) => (
-            <p key={problem} className="text-lg text-ink">
-              {problem}
-            </p>
+            <p key={problem}>{problem}</p>
           ))}
-        </div>
+        </Notice>
       ) : null}
     </form>
   );

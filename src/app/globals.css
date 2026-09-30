@@ -60,6 +60,8 @@
   --color-child-line: #ecd9b8;
 
   /* Shape: 12px controls, 20px cards, 28px hero cards (8px grid). */
+  --tracking-tight: -0.018em;
+
   --radius-control: 0.75rem;
   --radius-card: 1.25rem;
   --radius-hero: 1.75rem;
@@ -104,6 +106,8 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Plus Jakarta Sans draws a very narrow "1" (WA1 reads as WAI); its tabular numerals give every digit room. */
+  font-variant-numeric: tabular-nums;
 }
 
 @media (min-width: 48rem) {
@@ -116,7 +120,8 @@ body {
 h1,
 h2,
 h3 {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.018em;
+  word-spacing: 0.04em;
   text-wrap: balance;
 }
 

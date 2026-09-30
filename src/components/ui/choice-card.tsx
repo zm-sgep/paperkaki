@@ -1,11 +1,19 @@
 import { Check } from "lucide-react";
 import type { ReactNode } from "react";
 
+const cardStyle =
+  "rounded-control border-[1.5px] border-line bg-surface shadow-[0_1px_1px_rgb(29_42_46/0.03)] group-hover:border-kaki/50 group-has-checked:border-kaki group-has-checked:bg-kaki-soft group-has-checked:shadow-[inset_0_0_0_1px_var(--color-kaki)] group-has-focus-visible:outline-3 group-has-focus-visible:outline-offset-3 group-has-focus-visible:outline-kaki";
+
+/** Flat rows inside a bordered list: a hover tint, a teal tint when chosen, and an inset focus ring so a clipped list never hides it. */
+const rowStyle =
+  "bg-surface group-hover:bg-paper group-has-checked:bg-kaki-soft group-has-focus-visible:outline-3 group-has-focus-visible:-outline-offset-3 group-has-focus-visible:outline-kaki";
+
 /**
  * A large tappable choice: a radio (pick one) or a checkbox (pick several). At least 56px tall.
  * The selected state is shown by a tick, a heavier border and a tint, never by colour alone, and
  * the native input stays in the page (visually hidden) so keyboards and screen readers work.
  *
+ * `layout="row"` drops the card's own border so rows can sit in one list with dividers (a topic checklist).
  * `icon` adds a decorative picture on the left (for choices that are things, like "End-of-year exam").
  * Leave it out for plain rows such as a topic list; the tick is then the only icon in the row.
  */
@@ -16,6 +24,7 @@ export function ChoiceCard({
   label,
   hint,
   icon,
+  layout = "card",
   checked,
   defaultChecked,
   onChange,
@@ -27,6 +36,7 @@ export function ChoiceCard({
   label: ReactNode;
   hint?: ReactNode;
   icon?: ReactNode;
+  layout?: "card" | "row";
   checked?: boolean;
   defaultChecked?: boolean;
   onChange?: (checked: boolean) => void;
@@ -43,7 +53,7 @@ export function ChoiceCard({
         disabled={disabled}
         onChange={onChange ? (event) => onChange(event.currentTarget.checked) : undefined}
       />
-      <span className="flex min-h-14 items-center gap-3 rounded-control border-[1.5px] border-line bg-surface px-4 py-3 text-lg text-ink shadow-[0_1px_1px_rgb(29_42_46/0.03)] transition-[border-color,background-color,box-shadow] duration-150 group-hover:border-kaki/50 group-has-checked:border-kaki group-has-checked:bg-kaki-soft group-has-checked:font-semibold group-has-checked:shadow-[inset_0_0_0_1px_var(--color-kaki)] group-has-focus-visible:outline-3 group-has-focus-visible:outline-offset-3 group-has-focus-visible:outline-kaki group-has-disabled:cursor-not-allowed group-has-disabled:opacity-60">
+      <span className={`flex min-h-14 items-center gap-3 px-4 py-3 text-lg text-ink transition-[border-color,background-color,box-shadow] duration-150 group-has-checked:font-semibold group-has-disabled:cursor-not-allowed group-has-disabled:opacity-60 ${layout === "row" ? rowStyle : cardStyle}`}>
         <span
           aria-hidden="true"
           className={`flex h-6 w-6 shrink-0 items-center justify-center border-[1.5px] border-line-strong bg-surface text-white transition-colors duration-150 group-has-checked:border-kaki group-has-checked:bg-kaki ${

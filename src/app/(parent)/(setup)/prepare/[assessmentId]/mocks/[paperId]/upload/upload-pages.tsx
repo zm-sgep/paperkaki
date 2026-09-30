@@ -149,7 +149,7 @@ export function UploadPages({
               onDragStart={() => setDragging(page.id)}
               onDragOver={(event) => event.preventDefault()}
               onDrop={() => drop(page.id)}
-              className={`flex flex-col gap-2 rounded-xl border-2 bg-surface p-3 ${page.problem ? "border-warning" : "border-line"}`}
+              className={`flex flex-col gap-2 rounded-control border-[1.5px] bg-surface p-3 ${page.problem ? "border-warning" : "border-line"}`}
             >
               <span className="text-base font-semibold text-ink">{page.label}</span>
               {page.isPdf ? (
@@ -168,7 +168,7 @@ export function UploadPages({
                       disabled={busy || index === 0}
                       onClick={() => run(() => movePageAction(paperId, page.id, "earlier"))}
                       aria-label={`Move ${page.label} earlier`}
-                      className="min-h-12 min-w-12 rounded-lg border-2 border-line px-3 text-lg font-semibold text-ink disabled:opacity-40"
+                      className="min-h-12 min-w-12 rounded-control border-[1.5px] border-line-strong px-3 text-lg font-semibold text-ink disabled:opacity-40"
                     >
                       ←
                     </button>
@@ -177,7 +177,7 @@ export function UploadPages({
                       disabled={busy || index === pages.length - 1}
                       onClick={() => run(() => movePageAction(paperId, page.id, "later"))}
                       aria-label={`Move ${page.label} later`}
-                      className="min-h-12 min-w-12 rounded-lg border-2 border-line px-3 text-lg font-semibold text-ink disabled:opacity-40"
+                      className="min-h-12 min-w-12 rounded-control border-[1.5px] border-line-strong px-3 text-lg font-semibold text-ink disabled:opacity-40"
                     >
                       →
                     </button>
@@ -188,7 +188,7 @@ export function UploadPages({
                   disabled={busy}
                   onClick={() => run(() => removePageAction(paperId, page.id))}
                   aria-label={`Remove ${page.label}`}
-                  className="min-h-12 rounded-lg px-3 text-base font-semibold text-kaki underline underline-offset-4 disabled:opacity-40"
+                  className="min-h-12 rounded-control px-3 text-base font-semibold text-kaki-strong underline underline-offset-4 disabled:opacity-40"
                 >
                   {page.problem ? "Retake" : "Remove"}
                 </button>

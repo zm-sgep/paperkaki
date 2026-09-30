@@ -28,7 +28,7 @@ export function HeroAction({
     <section className="relative overflow-hidden rounded-hero border border-kaki/15 bg-linear-to-br from-kaki-soft from-55% to-white p-6 shadow-hero motion-safe:animate-enter sm:p-8">
       <div className="flex flex-col gap-5 md:flex-row-reverse md:items-center md:justify-between md:gap-8">
         {illustration ? (
-          <div aria-hidden="true" className="flex shrink-0 justify-start md:justify-center md:pr-2">
+          <div aria-hidden="true" className="flex shrink-0 justify-center md:pr-2">
             {illustration}
           </div>
         ) : null}

@@ -31,6 +31,7 @@ export default async function NewAssessmentPage({ searchParams }: { searchParams
           selectedChildId={selectedChildId}
           label="Upload school notice"
           hint="A PDF, or a photo or screenshot of the notice."
+          panel
         />
         <div>
           <ButtonLink href="/prepare/new?manual=1" variant="quiet">

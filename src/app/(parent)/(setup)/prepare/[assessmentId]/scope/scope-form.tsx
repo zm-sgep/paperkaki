@@ -25,7 +25,7 @@ export function ScopeForm({ assessmentId, topics }: { assessmentId: string; topi
     <form action={formAction} className="flex flex-col gap-6">
       <fieldset className="flex flex-col gap-3">
         <legend className="sr-only">Topics</legend>
-        <div className="grid gap-3 md:grid-cols-2">
+        <div className="flex flex-col divide-y divide-line overflow-hidden rounded-card border border-line bg-surface shadow-card">
           {topics.map((topic) => (
             <ChoiceCard
               key={topic.id}
@@ -34,6 +34,7 @@ export function ScopeForm({ assessmentId, topics }: { assessmentId: string; topi
               value={topic.id}
               label={topic.label}
               hint={topic.hasQuestions ? undefined : "Not in our question bank yet"}
+              layout="row"
               defaultChecked={topic.selected}
               onChange={(on) => toggle(topic.id, on)}
             />
@@ -42,7 +43,7 @@ export function ScopeForm({ assessmentId, topics }: { assessmentId: string; topi
       </fieldset>
 
       <div className="flex flex-col gap-2">
-        <SubmitButton variant="primary" disabled={none} className="w-full sm:w-auto sm:self-start">
+        <SubmitButton variant="primary" size="lg" disabled={none} className="w-full sm:w-auto sm:self-start">
           Confirm topics
         </SubmitButton>
         {none ? (

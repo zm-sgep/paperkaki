@@ -3,6 +3,7 @@
 import { useActionState, useState } from "react";
 import type { FormatSection } from "@/domain/assessments";
 import { FormatPartsEditor, toDraft, useFormatDraft } from "@/components/parent/format-parts-editor";
+import { Chip } from "@/components/ui/chip";
 import { ChoiceCard } from "@/components/ui/choice-card";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { saveFormatAction, type FormatState } from "./actions";
@@ -54,7 +55,7 @@ export function PaperFormatForm({ assessmentId, choices, selected, current, futu
   return (
     <form action={formAction} className="flex flex-col gap-5">
       <fieldset className="flex flex-col gap-3">
-        <legend className="pb-1 text-lg font-medium text-ink">Paper format</legend>
+        <legend className="pb-1 text-lg font-semibold text-ink">Paper format</legend>
         <div className="grid gap-3">
           {choices.map((option) => (
             <ChoiceCard
@@ -68,7 +69,7 @@ export function PaperFormatForm({ assessmentId, choices, selected, current, futu
                 <>
                   {option.title}{" "}
                   {option.recommended ? (
-                    <span className="rounded-md bg-kaki px-2 py-0.5 text-sm font-semibold text-white">Recommended</span>
+                    <Chip tone="teal" className="align-middle">Recommended</Chip>
                   ) : null}
                 </>
               }

@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import { useActionState } from "react";
 import { ChoiceCard } from "@/components/ui/choice-card";
 import { Field, inputClassName } from "@/components/ui/field";
@@ -31,8 +32,11 @@ export function CustomisePaper({ assessmentId, markOptions, settings, usingRecom
   const difficulty = state.values?.difficulty ?? settings.difficulty;
 
   return (
-    <details open={state.errors ? true : undefined} className="rounded-2xl border border-line bg-surface p-5 sm:p-6">
-      <summary className="flex min-h-12 cursor-pointer items-center text-lg font-semibold text-kaki">Customise paper</summary>
+    <details open={state.errors ? true : undefined} className="group rounded-card border border-line bg-surface p-5 shadow-card sm:p-6">
+      <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between text-lg font-semibold text-kaki-strong [&::-webkit-details-marker]:hidden">
+        Customise paper
+        <ChevronDown aria-hidden="true" className="h-5 w-5 text-ink-soft transition-transform group-open:rotate-180" strokeWidth={2.5} />
+      </summary>
       <div className="mt-4 flex flex-col gap-8">
         <PaperFormatForm
           assessmentId={assessmentId}
@@ -73,7 +77,7 @@ export function CustomisePaper({ assessmentId, markOptions, settings, usingRecom
           <p className="text-base text-ink-soft">Marks and time come from the paper format above.</p>
         )}
         <fieldset className="flex flex-col gap-3">
-          <legend className="pb-1 text-lg font-medium text-ink">How hard?</legend>
+          <legend className="pb-1 text-lg font-semibold text-ink">How hard?</legend>
           <div className="grid gap-3 sm:grid-cols-3">
             {DIFFICULTIES.map((option) => (
               <ChoiceCard key={option.value} type="radio" name="difficulty" value={option.value} label={option.label} defaultChecked={difficulty === option.value} />

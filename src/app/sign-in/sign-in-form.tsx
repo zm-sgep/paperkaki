@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import { inputClassName } from "@/components/ui/field";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { signInAction, type SignInState } from "./actions";
 
@@ -9,7 +10,7 @@ export function SignInForm() {
   return (
     <form action={formAction} className="flex flex-col gap-4" noValidate>
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="text-lg font-medium text-ink">
+        <label htmlFor="email" className="text-lg font-semibold text-ink">
           Email address
         </label>
         <input
@@ -23,7 +24,7 @@ export function SignInForm() {
           defaultValue={state.email}
           aria-invalid={state.error ? true : undefined}
           aria-describedby={state.error ? "email-error" : undefined}
-          className="min-h-12 rounded-lg border-2 border-line bg-surface px-4 text-lg text-ink focus-visible:border-kaki"
+          className={inputClassName}
         />
         {state.error ? (
           <p id="email-error" role="alert" className="text-base font-medium text-danger">
@@ -31,7 +32,7 @@ export function SignInForm() {
           </p>
         ) : null}
       </div>
-      <SubmitButton variant="primary" className="w-full">
+      <SubmitButton variant="primary" size="lg" className="w-full">
         Continue
       </SubmitButton>
       <p className="text-sm text-ink-soft">Development sign-in. No password needed.</p>

@@ -20,7 +20,7 @@ export function IpadOption({
   const [state, formAction] = useActionState<AssignState, FormData>(assignToIpadAction.bind(null, paperId), {});
   if (status) {
     return (
-      <p data-ipad-status className="text-lg font-medium text-ink">
+      <p data-ipad-status className="rounded-control bg-kaki-soft px-4 py-3 text-lg font-medium text-ink">
         {status.message}
       </p>
     );

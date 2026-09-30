@@ -29,14 +29,14 @@ export function NoticeFailed({ sourceId, code, retry, childId }: { sourceId: str
       <div className="flex flex-col gap-4">
         {retry ? (
           <form action={retryNoticeAction.bind(null, sourceId)}>
-            <SubmitButton variant="primary" className="w-full sm:w-auto">
+            <SubmitButton variant="primary" size="lg" className="w-full sm:w-auto">
               Try again
             </SubmitButton>
           </form>
         ) : null}
         <NoticeUploadForm childId={childId} label="Try another file" variant={retry ? "secondary" : "primary"} />
         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-          <ButtonLink href="/prepare/new?manual=1" variant="quiet">
+          <ButtonLink href="/prepare/new?manual=1" variant="quiet" className="self-start">
             Enter details myself
           </ButtonLink>
           <form action={deleteNoticeAction.bind(null, sourceId)}>

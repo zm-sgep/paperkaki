@@ -20,7 +20,7 @@ export function EmptyState({
   return (
     <Card className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
       {illustration ? (
-        <div aria-hidden="true" className="shrink-0">
+        <div aria-hidden="true" className="flex w-full shrink-0 justify-center sm:w-auto">
           {illustration}
         </div>
       ) : null}

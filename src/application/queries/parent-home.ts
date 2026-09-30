@@ -4,6 +4,7 @@ import {
   todayInSingapore,
 } from "@/domain/assessments/dates";
 import {
+  currentChild,
   nearestUpcomingAssessment,
   nextParentAction,
   type ParentAction,
@@ -104,6 +105,8 @@ export type ParentHome = {
   action: ParentAction;
   /** One compact line of context, e.g. "Next: WA2 · Tue 14 Oct (in 12 days)". Null when there is nothing to add. */
   contextLine: string | null;
+  /** Who and what the screen is about, for the small chips above the headline. Null when there is no upcoming assessment. */
+  context: { childNickname: string; assessmentName: string; countdown: string } | null;
   /** A reward request waiting for an answer. Secondary to the learning action, unless nothing else is due. */
   rewardRequest: { count: number; childNickname: string; title: string } | null;
 };
@@ -112,9 +115,14 @@ export async function getParentHome(parentProfileId: string, context: Context = 
   const state = await getParentHomeState(parentProfileId, context);
   const nearest = nearestUpcomingAssessment(state);
   const rewardRequest = await getWaitingRequest(parentProfileId, context.db ? { db: context.db } : {});
+  const child = currentChild(state);
   return {
     rewardRequest,
     action: nextParentAction(state),
+    context:
+      nearest && child
+        ? { childNickname: child.nickname, assessmentName: nearest.name, countdown: countdownText(nearest.date, state.today) }
+        : null,
     contextLine: nearest
       ? `Next: ${nearest.name} · ${formatAssessmentDate(nearest.date, state.today)} (${countdownText(nearest.date, state.today)})`
       : null,

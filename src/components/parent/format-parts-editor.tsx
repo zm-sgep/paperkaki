@@ -119,7 +119,7 @@ export function FormatPartsEditor({ draft, serverErrors = {} }: { draft: FormatD
         const messages = [...partIssues(index), ...(serverErrors[`part-${index}`] && partIssues(index).length === 0 ? [serverErrors[`part-${index}`] as string] : [])];
         const id = `part-${index}`;
         return (
-          <li key={index} className="flex flex-col gap-4 rounded-xl border-2 border-line bg-surface p-4">
+          <li key={index} className="flex flex-col gap-4 rounded-control border-[1.5px] border-line bg-surface p-4">
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-semibold text-ink">{`Part ${index + 1}`}</h3>
               <Button
@@ -133,7 +133,7 @@ export function FormatPartsEditor({ draft, serverErrors = {} }: { draft: FormatD
             </div>
 
             <div className="flex flex-col gap-2">
-              <label htmlFor={`${id}-name`} className="text-lg font-medium text-ink">
+              <label htmlFor={`${id}-name`} className="text-lg font-semibold text-ink">
                 Name of this part
               </label>
               <input
@@ -147,7 +147,7 @@ export function FormatPartsEditor({ draft, serverErrors = {} }: { draft: FormatD
               />
               {part.showBooklet ? (
                 <div className="flex flex-col gap-2">
-                  <label htmlFor={`${id}-booklet`} className="text-lg font-medium text-ink">
+                  <label htmlFor={`${id}-booklet`} className="text-lg font-semibold text-ink">
                     Booklet name
                   </label>
                   <input
@@ -171,7 +171,7 @@ export function FormatPartsEditor({ draft, serverErrors = {} }: { draft: FormatD
 
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="flex flex-col gap-2">
-                <label htmlFor={`${id}-kind`} className="text-lg font-medium text-ink">
+                <label htmlFor={`${id}-kind`} className="text-lg font-semibold text-ink">
                   Question type
                 </label>
                 <select
@@ -188,7 +188,7 @@ export function FormatPartsEditor({ draft, serverErrors = {} }: { draft: FormatD
                 </select>
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor={`${id}-count`} className="text-lg font-medium text-ink">
+                <label htmlFor={`${id}-count`} className="text-lg font-semibold text-ink">
                   Number of questions
                 </label>
                 <input
@@ -204,7 +204,7 @@ export function FormatPartsEditor({ draft, serverErrors = {} }: { draft: FormatD
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor={`${id}-marks`} className="text-lg font-medium text-ink">
+                <label htmlFor={`${id}-marks`} className="text-lg font-semibold text-ink">
                   Total marks
                 </label>
                 <input
@@ -240,7 +240,7 @@ export function FormatPartsEditor({ draft, serverErrors = {} }: { draft: FormatD
     </div>
 
     <div className="flex flex-col gap-2">
-      <label htmlFor="paper-duration" className="text-lg font-medium text-ink">
+      <label htmlFor="paper-duration" className="text-lg font-semibold text-ink">
         Time in minutes
       </label>
       <input
