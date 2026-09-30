@@ -2,11 +2,11 @@ import { Check } from "lucide-react";
 import type { ReactNode } from "react";
 
 const cardStyle =
-  "rounded-control border-[1.5px] border-line bg-surface shadow-[0_1px_1px_rgb(29_42_46/0.03)] group-hover:border-kaki/50 group-has-checked:border-kaki group-has-checked:bg-kaki-soft group-has-checked:shadow-[inset_0_0_0_1px_var(--color-kaki)] group-has-focus-visible:outline-3 group-has-focus-visible:outline-offset-3 group-has-focus-visible:outline-kaki";
+  "rounded-control border-[1.5px] border-line bg-surface shadow-[0_1px_1px_rgb(29_42_46/0.03)] group-hover/choice:border-kaki/50 group-has-checked/choice:border-kaki group-has-checked/choice:bg-kaki-soft group-has-checked/choice:shadow-[inset_0_0_0_1px_var(--color-kaki)] group-has-focus-visible/choice:outline-3 group-has-focus-visible/choice:outline-offset-3 group-has-focus-visible/choice:outline-kaki";
 
 /** Flat rows inside a bordered list: a hover tint, a teal tint when chosen, and an inset focus ring so a clipped list never hides it. */
 const rowStyle =
-  "bg-surface group-hover:bg-paper group-has-checked:bg-kaki-soft group-has-focus-visible:outline-3 group-has-focus-visible:-outline-offset-3 group-has-focus-visible:outline-kaki";
+  "bg-surface group-hover/choice:bg-paper group-has-checked/choice:bg-kaki-soft group-has-focus-visible/choice:outline-3 group-has-focus-visible/choice:-outline-offset-3 group-has-focus-visible/choice:outline-kaki";
 
 /**
  * A large tappable choice: a radio (pick one) or a checkbox (pick several). At least 56px tall.
@@ -43,7 +43,7 @@ export function ChoiceCard({
   disabled?: boolean;
 }) {
   return (
-    <label className="group relative block cursor-pointer">
+    <label className="group/choice relative block cursor-pointer">
       <input
         type={type}
         name={name}
@@ -53,19 +53,19 @@ export function ChoiceCard({
         disabled={disabled}
         onChange={onChange ? (event) => onChange(event.currentTarget.checked) : undefined}
       />
-      <span className={`flex min-h-14 items-center gap-3 px-4 py-3 text-lg text-ink transition-[border-color,background-color,box-shadow] duration-150 group-has-checked:font-semibold group-has-disabled:cursor-not-allowed group-has-disabled:opacity-60 ${layout === "row" ? rowStyle : cardStyle}`}>
+      <span className={`flex min-h-14 items-center gap-3 px-4 py-3 text-lg text-ink transition-[border-color,background-color,box-shadow] duration-150 group-has-checked/choice:font-semibold group-has-disabled/choice:cursor-not-allowed group-has-disabled/choice:opacity-60 ${layout === "row" ? rowStyle : cardStyle}`}>
         <span
           aria-hidden="true"
-          className={`flex h-6 w-6 shrink-0 items-center justify-center border-[1.5px] border-line-strong bg-surface text-white transition-colors duration-150 group-has-checked:border-kaki group-has-checked:bg-kaki ${
+          className={`flex h-6 w-6 shrink-0 items-center justify-center border-[1.5px] border-line-strong bg-surface text-white transition-colors duration-150 group-has-checked/choice:border-kaki group-has-checked/choice:bg-kaki ${
             type === "radio" ? "rounded-full" : "rounded-md"
           }`}
         >
-          <Check className="h-4 w-4 opacity-0 group-has-checked:opacity-100" strokeWidth={3.5} />
+          <Check className="h-4 w-4 opacity-0 group-has-checked/choice:opacity-100" strokeWidth={3.5} />
         </span>
         {icon ? (
           <span
             aria-hidden="true"
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-kaki-soft text-kaki-strong transition-colors group-has-checked:bg-white [&>svg]:h-6 [&>svg]:w-6"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-kaki-soft text-kaki-strong transition-colors group-has-checked/choice:bg-white [&>svg]:h-6 [&>svg]:w-6"
           >
             {icon}
           </span>

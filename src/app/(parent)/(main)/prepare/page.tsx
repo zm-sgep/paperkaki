@@ -73,10 +73,10 @@ export default async function PreparePage() {
         </>
       )}
       {overview.past.length > 0 ? (
-        <details className="group rounded-card border border-line bg-surface p-5 shadow-card">
+        <details className="group/details rounded-card border border-line bg-surface p-5 shadow-card">
           <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between text-lg font-semibold text-ink [&::-webkit-details-marker]:hidden">
             Past assessments
-            <span aria-hidden="true" className="text-ink-soft transition-transform group-open:rotate-180">
+            <span aria-hidden="true" className="text-ink-soft transition-transform group-open/details:rotate-180">
               <ChevronDown className="h-5 w-5" strokeWidth={2.5} />
             </span>
           </summary>

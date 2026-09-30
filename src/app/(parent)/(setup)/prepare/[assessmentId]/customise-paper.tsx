@@ -32,10 +32,10 @@ export function CustomisePaper({ assessmentId, markOptions, settings, usingRecom
   const difficulty = state.values?.difficulty ?? settings.difficulty;
 
   return (
-    <details open={state.errors ? true : undefined} className="group rounded-card border border-line bg-surface p-5 shadow-card sm:p-6">
+    <details open={state.errors ? true : undefined} className="group/details rounded-card border border-line bg-surface p-5 shadow-card sm:p-6">
       <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between text-lg font-semibold text-kaki-strong [&::-webkit-details-marker]:hidden">
         Customise paper
-        <ChevronDown aria-hidden="true" className="h-5 w-5 text-ink-soft transition-transform group-open:rotate-180" strokeWidth={2.5} />
+        <ChevronDown aria-hidden="true" className="h-5 w-5 text-ink-soft transition-transform group-open/details:rotate-180" strokeWidth={2.5} />
       </summary>
       <div className="mt-4 flex flex-col gap-8">
         <PaperFormatForm
