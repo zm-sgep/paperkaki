@@ -1,6 +1,7 @@
 import { and, eq } from "drizzle-orm";
 import { MARK_ATTEMPT_JOB, resetFailedMarking, settleAttempt } from "@/application/attempt-marking";
 import { InputError, NotFoundError } from "@/application/errors";
+import { awardForMistakeReview, awardSafely } from "@/application/rewards";
 import { recordAuditEvent } from "@/lib/audit";
 import { getAttemptHeader, isUuid } from "@/repositories/postgres/attempts";
 import {
@@ -114,10 +115,13 @@ export async function markMistakesReviewed(
   const db = await resolveCommandDb(context);
   const header = await getAttemptHeader(db, attemptId, who);
   if (!header || header.attempt.status !== "marked" || header.attempt.mistakesReviewedAt) return;
+  const now = context.now ?? new Date();
   await db
     .update(attemptSessions)
-    .set({ mistakesReviewedAt: context.now ?? new Date() })
+    .set({ mistakesReviewedAt: now })
     .where(and(eq(attemptSessions.id, attemptId), eq(attemptSessions.status, "marked")));
+  // Going through mistakes is learning: it earns Learning Points once, and never blocks the review itself.
+  await awardSafely(() => awardForMistakeReview(db, header.attempt.childId, attemptId, now), "mistake-review");
 }
 
 /**

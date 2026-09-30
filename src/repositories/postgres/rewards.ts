@@ -1,6 +1,8 @@
 import { and, asc, desc, eq, gte, inArray, isNull, lte, or, sql } from "drizzle-orm";
 import type { Database } from "./client";
 import {
+  assessmentScopeItems,
+  assessments,
   children,
   parentRewards,
   pointLedger,
@@ -233,4 +235,16 @@ export async function countRequestsSince(db: Database, childId: string, rewardId
       ),
     );
   return row?.count ?? 0;
+}
+
+// --- Context lookups --------------------------------------------------------
+
+/** The skills of the child's assessments that are still to come and have their topics confirmed. */
+export async function listUpcomingScopeOutcomeIds(db: Database, childId: string, today: string): Promise<string[]> {
+  const rows = await db
+    .selectDistinct({ outcomeId: assessmentScopeItems.outcomeId })
+    .from(assessmentScopeItems)
+    .innerJoin(assessments, eq(assessments.id, assessmentScopeItems.assessmentId))
+    .where(and(eq(assessments.childId, childId), eq(assessments.status, "scope_confirmed"), gte(assessments.date, today)));
+  return rows.map((row) => row.outcomeId);
 }

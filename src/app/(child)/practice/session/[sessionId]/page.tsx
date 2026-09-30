@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getPracticeRun } from "@/application/queries/practice";
 import { requireChild } from "@/application/queries/current-child";
 import { ChildHero } from "@/components/child/child-card";
+import { PointsEarned } from "@/components/child/points-earned";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { finishAction } from "./actions";
 import { PracticeRunner } from "./practice-runner";
@@ -24,7 +25,9 @@ export default async function PracticeSessionPage({ params }: { params: Promise<
         supportingText={run.next.title}
         ctaLabel={run.next.ctaLabel}
         href={run.next.href}
-      />
+      >
+        <PointsEarned reward={run.reward} />
+      </ChildHero>
     );
   }
 

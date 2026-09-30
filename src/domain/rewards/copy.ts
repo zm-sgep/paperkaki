@@ -24,13 +24,15 @@ export function pointsHeadline(points: number): string {
 export type SummaryDetails = {
   /** The topic in the child's words, when the activity was about one. */
   topicLabel?: string | undefined;
+  /** What to call the activity when it was not about one topic, for example "your mock". */
+  subject?: string | undefined;
   /** How many mistakes were gone through, for a mistake review. */
   mistakeCount?: number | undefined;
 };
 
 /** What the child did, as the end of "You ...": one short phrase per reason. */
 function phraseFor(reason: LearningReason, details: SummaryDetails): string {
-  const topic = details.topicLabel;
+  const topic = details.topicLabel ?? details.subject;
   switch (reason) {
     case "first_mastery":
       return topic ? `got really secure in ${topic}` : "got really secure in a skill";

@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { and, asc, eq } from "drizzle-orm";
 import { recordAttemptEvidence } from "@/application/mastery";
+import { awardForMockResult, awardSafely } from "@/application/rewards";
 import { markableOf } from "@/application/marking-support";
 import { decisionFromAiMarking, markAttempt, type MarkableQuestion } from "@/domain/marking";
 import { markingResponseFor, shownUnitOf, type SavedAnswer } from "@/domain/attempts";
@@ -50,7 +51,8 @@ async function setStage(db: Database, attemptId: string, stage: "reading" | "mar
  * otherwise stays `submitted` for the parent's quick check. Safe to call again.
  */
 export async function settleAttempt(db: Database, attemptId: string, now: Date): Promise<{ marked: boolean; waiting: number }> {
-  return db.transaction(async (tx) => {
+  let becameMarked: string | null = null;
+  const result = await db.transaction(async (tx) => {
     const [locked] = await tx.select().from(attemptSessions).where(eq(attemptSessions.id, attemptId)).for("update");
     if (!locked) return { marked: false, waiting: 0 };
     const marking = await listAttemptMarking(tx, attemptId, locked.paperId);
@@ -61,11 +63,15 @@ export async function settleAttempt(db: Database, attemptId: string, now: Date):
       await tx.update(attemptSessions).set({ status: "marked", markedAt: now, markingStage: "done" }).where(eq(attemptSessions.id, attemptId));
       // The mark that counts is final now, so the answers become evidence of what the child can do.
       await recordAttemptEvidence(tx, attemptId, now);
+      becameMarked = locked.childId;
       return { marked: true, waiting: 0 };
     }
     await tx.update(attemptSessions).set({ markingStage: "done" }).where(eq(attemptSessions.id, attemptId));
     return { marked: false, waiting };
   });
+  // The results are ready now, so the mock can earn Learning Points (never while the paper is being sat).
+  if (becameMarked) await awardSafely(() => awardForMockResult(db, becameMarked as string, attemptId, now), "mock-result");
+  return result;
 }
 
 function layoutOf(question: MarkedQuestion): PaperLayoutQuestion {

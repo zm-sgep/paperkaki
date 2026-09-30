@@ -1,5 +1,6 @@
 import { InputError, NotFoundError } from "@/application/errors";
 import { recomputeMasteryProfiles } from "@/application/mastery";
+import { awardForPractice, awardSafely } from "@/application/rewards";
 import { getLearningMap, practiceCandidateOf, recommendedTopic, type LearningMap, type MapTopic } from "@/application/queries/learning-map";
 import type { CurrentChild } from "@/application/queries/current-child";
 import { shownUnitOf } from "@/domain/attempts";
@@ -406,6 +407,9 @@ export async function finishPractice(child: CurrentChild, sessionId: string, con
     metadata: { minutes, questionCount: items.length },
     requestId: context.requestId ?? null,
   });
+  // Learning Points follow the learning and never change it: if awarding fails the set still stands, and the
+  // end screen tries again (awarding is once per set).
+  await awardSafely(() => awardForPractice(db, child.childId, sessionId, now), "practice");
   return { sessionId, minutes };
 }
 

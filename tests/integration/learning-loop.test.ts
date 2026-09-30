@@ -261,8 +261,11 @@ describe("the learning loop: practice, progress and suggestions (M8, M9)", () =>
     // One set is the day's plan: the next step is "You're done for today".
     expect(done.next).toMatchObject({ kind: "done_today", title: "You're done for today. Nice work." });
     await expect(answerPracticeQuestion(child, sessionId, 1, answerOf((await listPracticeItems(db, sessionId))[0]!, true), ctx())).rejects.toBeInstanceOf(InputError);
-    // The end screen and Today never mention points, mastery or a percentage.
-    expect(JSON.stringify(done).toLowerCase()).not.toMatch(/mastery|points|percent|%/);
+    // The words of the end screen and of Today never mention mastery or a percentage. Learning Points are
+    // shown there after learning (Milestone 11), in plain words: no codes, no percentages.
+    const { reward, ...words } = done;
+    expect(JSON.stringify(words).toLowerCase()).not.toMatch(/mastery|points|percent|%/);
+    expect(`${reward?.line ?? ""} ${reward?.redirect ?? ""}`.toLowerCase()).not.toMatch(/mastery|percent|%|_/);
   });
 
   it("practice moved the child's skills forward and never past what the evidence supports", async () => {

@@ -18,6 +18,8 @@ import { getReadyDb } from "@/repositories/postgres/ready";
 import { AnswerSchema, QuestionContentSchema, WorkedSolutionSchema, type Block, type QuestionContent } from "@/schemas/question-content";
 import { getStorage, type StorageService } from "@/services/storage";
 import { getChildToday } from "./child-today";
+import { getPracticeReward } from "./rewards";
+import type { ActivityReward } from "@/application/rewards";
 import type { CurrentChild } from "./current-child";
 import { getLearningMap, recommendedTopic, startedTopics, type MapTopic } from "./learning-map";
 
@@ -140,7 +142,7 @@ export type PracticeRun =
       question: PracticeQuestionView;
     }
   | { state: "finish"; sessionId: string; focusLabel: string; dots: PracticeDot[] }
-  | { state: "done"; sessionId: string; focusLabel: string; endText: string; minutesText: string; next: ChildAction };
+  | { state: "done"; sessionId: string; focusLabel: string; endText: string; minutesText: string; next: ChildAction; reward: ActivityReward | null };
 
 function dotsOf(items: { position: number; result: string | null }[], currentPosition: number | null): PracticeDot[] {
   return items.map((item) => ({
@@ -158,7 +160,9 @@ export async function getPracticeRun(child: CurrentChild, sessionId: string, con
   if (session.status === "completed") {
     const minutes = session.minutes ?? 1;
     const { action } = await getChildToday(child, context);
-    return { state: "done", sessionId, focusLabel: session.focusLabel, endText: practiceEndText(session.focusLabel, minutes), minutesText: minutesText(minutes), next: action };
+    // What the set earned (awarded when it finished; tried again here if that did not complete).
+    const reward = await getPracticeReward(child, sessionId, context);
+    return { state: "done", sessionId, focusLabel: session.focusLabel, endText: practiceEndText(session.focusLabel, minutes), minutesText: minutesText(minutes), next: action, reward };
   }
   const items = await listPracticeItems(db, session.id);
   const current = items.find((item) => item.response.answeredAt === null);

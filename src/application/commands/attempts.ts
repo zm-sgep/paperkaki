@@ -2,6 +2,7 @@ import { and, eq, inArray, sql } from "drizzle-orm";
 import { InputError, NotFoundError } from "@/application/errors";
 import { MARK_ATTEMPT_JOB } from "@/application/attempt-marking";
 import { recordAttemptEvidence } from "@/application/mastery";
+import { awardForMockResult, awardSafely } from "@/application/rewards";
 import { markableOf } from "@/application/marking-support";
 import { summaryOf } from "@/application/queries/papers";
 import type { CurrentChild } from "@/application/queries/current-child";
@@ -266,7 +267,7 @@ export async function submitAttempt(child: CurrentChild, attemptId: string, cont
   const storage = context.storage ?? getStorage();
   const now = context.now ?? new Date();
 
-  return db.transaction(async (tx): Promise<SubmitResult> => {
+  const submitted = await db.transaction(async (tx): Promise<SubmitResult> => {
     const header = await getAttemptHeader(tx, attemptId, { childId: child.childId });
     if (!header) throw new NotFoundError();
 
@@ -377,4 +378,10 @@ export async function submitAttempt(child: CurrentChild, attemptId: string, cont
     });
     return { ok: true, alreadySubmitted: false, reviewCount: result.totals.reviewCount, ...(markingJobId ? { markingJobId } : {}) };
   });
+  // A paper marked entirely by rule has its results at once, so it earns its Learning Points now. One that
+  // waits for a quick check earns them when the last answer is checked (settleAttempt).
+  if (submitted.ok && !submitted.alreadySubmitted && submitted.reviewCount === 0) {
+    await awardSafely(() => awardForMockResult(db, child.childId, attemptId, now), "mock-result");
+  }
+  return submitted;
 }

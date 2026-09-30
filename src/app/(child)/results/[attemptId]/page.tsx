@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { markResultSeenByChild } from "@/application/commands/marking-review";
 import { requireChild } from "@/application/queries/current-child";
+import { getMockReward } from "@/application/queries/rewards";
 import { getChildResult, getMarkingStatus } from "@/application/queries/results";
 import { ChildCard, ChildHero } from "@/components/child/child-card";
+import { PointsEarned } from "@/components/child/points-earned";
 import { ButtonLink } from "@/components/ui/button";
 
 export const metadata: Metadata = { title: "Your results · PaperKaki" };
@@ -30,6 +32,8 @@ export default async function ChildResultsPage({ params }: { params: Promise<{ a
     );
   }
   await markResultSeenByChild(child.childId, attemptId);
+  // The paper is marked, so the mock has earned what it earns (tried again here if that did not finish earlier).
+  const reward = await getMockReward(child, attemptId);
 
   return (
     <>
@@ -43,6 +47,8 @@ export default async function ChildResultsPage({ params }: { params: Promise<{ a
           {result.headline}
         </p>
       </div>
+
+      <PointsEarned reward={reward} />
 
       {result.thingsToLearn.length > 0 ? (
         <ChildCard className="flex flex-col gap-3">

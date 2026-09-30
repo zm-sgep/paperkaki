@@ -17,6 +17,7 @@ import { markingSummaries } from "@/repositories/postgres/marking";
 import { listPapersForAssessments } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import { getParentChildren } from "./children";
+import { getWaitingRequest } from "./rewards";
 import { getPracticeSummary } from "./practice-summary";
 
 export { todayInSingapore };
@@ -103,12 +104,16 @@ export type ParentHome = {
   action: ParentAction;
   /** One compact line of context, e.g. "Next: WA2 · Tue 14 Oct (in 12 days)". Null when there is nothing to add. */
   contextLine: string | null;
+  /** A reward request waiting for an answer. Secondary to the learning action, unless nothing else is due. */
+  rewardRequest: { count: number; childNickname: string; title: string } | null;
 };
 
 export async function getParentHome(parentProfileId: string, context: Context = {}): Promise<ParentHome> {
   const state = await getParentHomeState(parentProfileId, context);
   const nearest = nearestUpcomingAssessment(state);
+  const rewardRequest = await getWaitingRequest(parentProfileId, context.db ? { db: context.db } : {});
   return {
+    rewardRequest,
     action: nextParentAction(state),
     contextLine: nearest
       ? `Next: ${nearest.name} · ${formatAssessmentDate(nearest.date, state.today)} (${countdownText(nearest.date, state.today)})`
