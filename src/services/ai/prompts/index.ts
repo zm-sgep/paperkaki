@@ -7,3 +7,6 @@ export type PromptTemplate = { id: string; version: string; system: string; user
 
 export { NOTICE_EXTRACTION_PROMPT } from "./notice-extraction";
 export { TOPIC_MAPPING_PROMPT } from "./topic-mapping";
+export { MARK_RESPONSE_PROMPT } from "./mark-response";
+export { READ_ANSWERS_PROMPT } from "./read-answers";
+export { READ_PAGE_NUMBERS_PROMPT } from "./read-page-numbers";

@@ -13,7 +13,8 @@ export { createAIService } from "./gateway";
 export { createAnthropicAdapter, DEFAULT_EXTRACTION_MODEL } from "./anthropic-adapter";
 export { createFixtureAdapter } from "./fixture-adapter";
 export { createDisabledAdapter } from "./disabled-adapter";
-export { NOTICE_EXTRACTION_PROMPT, TOPIC_MAPPING_PROMPT } from "./prompts";
+export { MARK_RESPONSE_PROMPT, NOTICE_EXTRACTION_PROMPT, READ_ANSWERS_PROMPT, READ_PAGE_NUMBERS_PROMPT, TOPIC_MAPPING_PROMPT } from "./prompts";
+export { encodeFixturePage, readFixturePage, type FixturePage } from "./fixture-pages";
 
 const DEFAULT_FIXTURE_DIR = "./tests/fixtures/ai";
 

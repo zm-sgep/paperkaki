@@ -70,11 +70,11 @@ describe("AI gateway", () => {
     ]);
   });
 
-  it("does nothing when disabled, and the later methods are not implemented", async () => {
+  it("does nothing when disabled, and the question methods are not implemented yet", async () => {
     const ai = createAIService({ adapter: createDisabledAdapter() });
     await expect(ai.extractSchoolNotice(input)).rejects.toMatchObject({ code: "disabled" });
     await expect(ai.generateQuestion({})).rejects.toThrow("not implemented");
-    await expect(ai.markResponse({})).rejects.toThrow("not implemented");
+    await expect(ai.markResponse({ questionText: "q", marks: 3, markingScheme: { method: "exact", partialMarks: [] }, correctAnswer: "1", workedSolution: "1", childAnswer: null })).rejects.toMatchObject({ code: "disabled" });
   });
 
   it("does not let a failing recorder fail the call", async () => {

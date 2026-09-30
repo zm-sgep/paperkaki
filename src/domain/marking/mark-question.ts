@@ -182,6 +182,7 @@ function markNumber(q: MarkableQuestion, response: MarkingResponse, answer: Numb
  */
 export function markQuestion(question: MarkableQuestion, response: MarkingResponse = {}): MarkingDecision {
   const { answer } = question;
+  if (response.answerUnclear) return review(question, "The handwriting on the paper could not be read with confidence.");
   switch (answer.kind) {
     case "mcq":
       return markMcq(question, response, answer);

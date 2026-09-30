@@ -1,0 +1,9 @@
+{
+  "*": {
+    "proposedScore": 2,
+    "confidence": "low",
+    "reason": "The method looks right, but there is a slip in the last step.",
+    "errorType": "calculation",
+    "reviewRequired": true
+  }
+}

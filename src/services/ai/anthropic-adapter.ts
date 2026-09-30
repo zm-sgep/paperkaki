@@ -1,7 +1,15 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
+import { MarkResponseModelSchema, ReadAnswersModelSchema, ReadPageNumbersModelSchema } from "@/schemas/marking-ai";
 import { NoticeExtractionModelSchema, TopicMappingModelSchema } from "@/schemas/notice-extraction";
-import { NOTICE_EXTRACTION_PROMPT, TOPIC_MAPPING_PROMPT, type PromptTemplate } from "./prompts";
+import {
+  MARK_RESPONSE_PROMPT,
+  NOTICE_EXTRACTION_PROMPT,
+  READ_ANSWERS_PROMPT,
+  READ_PAGE_NUMBERS_PROMPT,
+  TOPIC_MAPPING_PROMPT,
+  type PromptTemplate,
+} from "./prompts";
 import { AIError, type AIAdapter, type AdapterOutput, type ExtractSchoolNoticeInput } from "./types";
 
 /**
@@ -47,7 +55,7 @@ export function createAnthropicAdapter(options: { apiKey: string; model?: string
   // Our own single retry replaces the SDK's default two.
   const client: AnthropicLike = options.client ?? new Anthropic({ apiKey: options.apiKey, maxRetries: 0 });
 
-  async function ask(prompt: PromptTemplate, content: Block[], schema: typeof NoticeExtractionModelSchema | typeof TopicMappingModelSchema): Promise<AdapterOutput> {
+  async function ask(prompt: PromptTemplate, content: Block[], schema: Parameters<typeof zodOutputFormat>[0]): Promise<AdapterOutput> {
     const { type, schema: jsonSchema } = zodOutputFormat(schema);
     const send = () =>
       client.beta.messages.create(
@@ -111,6 +119,45 @@ export function createAnthropicAdapter(options: { apiKey: string; model?: string
         labels: input.labels.map((label) => `- ${label}`).join("\n"),
       });
       return ask(TOPIC_MAPPING_PROMPT, [{ type: "text", text }], TopicMappingModelSchema);
+    },
+    markResponse(input) {
+      const scheme = [
+        input.markingScheme.method === "exact_with_unit" ? "the answer and its unit must be right" : "the answer must be right",
+        ...input.markingScheme.partialMarks.map((partial) => `${partial.marks} mark(s) for: ${partial.criterion}`),
+      ].join("; ");
+      const content: Block[] = [
+        ...(input.working ? [fileBlock(input.working)] : []),
+        {
+          type: "text",
+          text: MARK_RESPONSE_PROMPT.user({
+            questionText: input.questionText,
+            marks: String(input.marks),
+            scheme,
+            correctAnswer: input.correctAnswer,
+            workedSolution: input.workedSolution,
+            childAnswer: input.childAnswer ?? "(none)",
+            hasPicture: input.working ? "yes" : "no",
+          }),
+        },
+      ];
+      return ask(MARK_RESPONSE_PROMPT, content, MarkResponseModelSchema);
+    },
+    readAnswers(input) {
+      const layout = input.questions
+        .map((question) => `${question.position}: ${question.kind === "mcq" ? "multiple choice" : question.kind}${question.unit ? ` (unit ${question.unit} is printed)` : ""}, ${question.marks} mark(s)`)
+        .join("\n");
+      const content: Block[] = [
+        ...input.pages.map(fileBlock),
+        { type: "text", text: READ_ANSWERS_PROMPT.user({ layout, pages: String(input.pages.length) }) },
+      ];
+      return ask(READ_ANSWERS_PROMPT, content, ReadAnswersModelSchema);
+    },
+    readPageNumbers(input) {
+      const content: Block[] = [
+        ...input.pages.map(fileBlock),
+        { type: "text", text: READ_PAGE_NUMBERS_PROMPT.user({ pages: String(input.pages.length) }) },
+      ];
+      return ask(READ_PAGE_NUMBERS_PROMPT, content, ReadPageNumbersModelSchema);
     },
   };
 }

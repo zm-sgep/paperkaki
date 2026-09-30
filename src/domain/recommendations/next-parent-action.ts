@@ -178,7 +178,7 @@ function attemptAction(state: ParentActionState, child: ParentActionChild): Pare
       title: count && count > 0 ? `${plural(count, "answer needs", "answers need")} a quick check` : "A few answers need a quick check",
       supportingText: `We weren't sure how to mark some of ${child.nickname}'s answers, and it takes about a minute to check.`,
       ctaLabel: "Check answers",
-      href: `/review/${needsReview.id}`,
+      href: `/progress/review/${needsReview.id}`,
     };
   }
 
@@ -200,7 +200,7 @@ function attemptAction(state: ParentActionState, child: ParentActionChild): Pare
       title: `We're marking ${child.nickname}'s ${named(submitted)}`,
       supportingText: "The results will be here in a moment.",
       ctaLabel: "See marking progress",
-      href: `/mock/${submitted.id}`,
+      href: `/progress/results/${submitted.id}`,
     };
   }
 
@@ -223,7 +223,7 @@ function attemptAction(state: ParentActionState, child: ParentActionChild): Pare
       title: `Go through ${plural(withMistakes.unreviewedMistakes, "mistake", "mistakes")} from ${named(withMistakes)}`,
       supportingText: "Fixing mistakes is the quickest way to improve.",
       ctaLabel: "Review mistakes",
-      href: `/progress/results/${withMistakes.resultId}`,
+      href: `/progress/results/${withMistakes.resultId}#mistakes`,
     };
   }
   return undefined;

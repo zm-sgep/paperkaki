@@ -1,5 +1,7 @@
 import { and, eq, inArray, sql } from "drizzle-orm";
 import { InputError, NotFoundError } from "@/application/errors";
+import { MARK_ATTEMPT_JOB } from "@/application/attempt-marking";
+import { markableOf } from "@/application/marking-support";
 import { summaryOf } from "@/application/queries/papers";
 import type { CurrentChild } from "@/application/queries/current-child";
 import { markAttempt, type MarkableQuestion } from "@/domain/marking";
@@ -22,9 +24,10 @@ import {
 import { getOwnedAssessment } from "@/repositories/postgres/assessments";
 import { getOwnedPaper } from "@/repositories/postgres/papers";
 import { attemptResponses, attemptSessions, markingDecisions, type AttemptSession } from "@/repositories/postgres/schema";
-import { AnswerSchema, MarkingSchemeSchema } from "@/schemas/question-content";
+import { AnswerSchema } from "@/schemas/question-content";
 import { SaveProgressInputSchema, type SaveProgressInput } from "@/schemas/attempt";
 import { renderStrokesPng, type SnapshotStroke } from "@/services/handwriting/render-png";
+import type { JobService } from "@/services/jobs";
 import { getStorage, type StorageService } from "@/services/storage";
 import { resolveCommandDb, type CommandContext } from "./children";
 
@@ -37,7 +40,11 @@ import { resolveCommandDb, type CommandContext } from "./children";
 
 export const HANDWRITING_BUCKET = "attempt-handwriting";
 
-export type AttemptContext = CommandContext & { storage?: StorageService };
+export type AttemptContext = CommandContext & {
+  storage?: StorageService;
+  /** When given, answers that need the AI marker are queued as a job (the caller starts it after answering the child). */
+  jobs?: Pick<JobService, "enqueue">;
+};
 
 function isUniqueViolation(error: unknown, constraint: string): boolean {
   for (let cause: unknown = error; cause instanceof Error; cause = cause.cause) {
@@ -239,6 +246,8 @@ export type SubmitResult = {
   alreadySubmitted: boolean;
   /** How many answers need a person to look at them. Never shown to the child. */
   reviewCount: number;
+  /** The marking job to start once the child has been answered, when one was queued. */
+  markingJobId?: string;
 };
 
 export function handwritingKeyFor(parentProfileId: string, attemptId: string, position: number): string {
@@ -303,12 +312,7 @@ export async function submitAttempt(child: CurrentChild, attemptId: string, cont
     }
 
     // Mark by rule. The paper question id is the marking key, so every question has exactly one result.
-    const markable: MarkableQuestion[] = paperQuestions.map((item) => {
-      const answer = AnswerSchema.safeParse(item.question.answer);
-      const scheme = MarkingSchemeSchema.safeParse(item.question.markingScheme);
-      if (!answer.success || !scheme.success) throw new Error("A question on this paper cannot be marked.");
-      return { id: item.paperQuestionId, questionType: item.question.questionType, marks: item.marks, answer: answer.data, markingScheme: scheme.data };
-    });
+    const markable: MarkableQuestion[] = paperQuestions.map((item) => markableOf(item));
     const saved: Record<string, SavedAnswer> = {};
     for (const item of paperQuestions) {
       const response = responseByQuestion.get(item.paperQuestionId);
@@ -339,12 +343,23 @@ export async function submitAttempt(child: CurrentChild, attemptId: string, cont
       })),
     );
 
+    // What happens next: nothing waits (marked now), the AI marker can look at what rules could not
+    // settle (a job), or only the parent can (marked once they have checked).
+    const aiCanHelp =
+      context.jobs !== undefined &&
+      result.results.some(({ questionId, decision }) => decision.reviewRequired && keys.has(questionId));
+    const settledNow = result.totals.reviewCount === 0;
+    let markingJobId: string | undefined;
+    if (aiCanHelp && context.jobs) markingJobId = (await context.jobs.enqueue(MARK_ATTEMPT_JOB, { attemptId }, tx)).id;
+
     const elapsed = elapsedSecondsSince(locked.startedAt, now);
     await tx
       .update(attemptSessions)
       .set({
-        status: "submitted",
+        status: settledNow ? "marked" : "submitted",
         submittedAt: now,
+        ...(settledNow ? { markedAt: now } : {}),
+        markingStage: aiCanHelp ? "marking" : "done",
         elapsedSeconds: elapsed,
         overTimeSeconds: overTimeSecondsFor(locked.timeLimitSeconds, elapsed),
       })
@@ -357,6 +372,6 @@ export async function submitAttempt(child: CurrentChild, attemptId: string, cont
       metadata: { paperId: header.paperId, reviewCount: result.totals.reviewCount, overTimeSeconds: overTimeSecondsFor(locked.timeLimitSeconds, elapsed) },
       requestId: context.requestId ?? null,
     });
-    return { ok: true, alreadySubmitted: false, reviewCount: result.totals.reviewCount };
+    return { ok: true, alreadySubmitted: false, reviewCount: result.totals.reviewCount, ...(markingJobId ? { markingJobId } : {}) };
   });
 }

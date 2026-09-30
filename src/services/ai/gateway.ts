@@ -1,4 +1,11 @@
 import type { z } from "zod";
+import {
+  MarkResponseOutputSchema,
+  ReadAnswersOutputSchema,
+  ReadPageNumbersOutputSchema,
+  type ReadAnswersOutput,
+  type ReadPageNumbersOutput,
+} from "@/schemas/marking-ai";
 import { NoticeExtractionSchema, TopicMappingSchema, type NoticeExtraction, type TopicMapping } from "@/schemas/notice-extraction";
 import {
   AIError,
@@ -9,6 +16,10 @@ import {
   type AdapterOutput,
   type ExtractSchoolNoticeInput,
   type MapTopicsInput,
+  type MarkingInput,
+  type MarkingResult,
+  type ReadAnswersInput,
+  type ReadPageNumbersInput,
 } from "./types";
 
 /**
@@ -81,7 +92,24 @@ export function createAIService(options: { adapter: AIAdapter; record?: AIRunRec
     },
     generateQuestion: async () => notImplemented("generateQuestion"),
     validateQuestion: async () => notImplemented("validateQuestion"),
-    markResponse: async () => notImplemented("markResponse"),
+    markResponse: (input: MarkingInput): Promise<MarkingResult> => run("mark_response", () => adapter.markResponse(input), MarkResponseOutputSchema),
+    async readAnswers(input: ReadAnswersInput): Promise<ReadAnswersOutput> {
+      const read = await run("read_answers", () => adapter.readAnswers(input), ReadAnswersOutputSchema);
+      // Only questions that are on the paper, and only the first reading of each: nothing invented gets through.
+      const known = new Set(input.questions.map((question) => question.position));
+      const seen = new Set<number>();
+      const answers = read.answers.filter((answer) => {
+        if (!known.has(answer.position) || seen.has(answer.position)) return false;
+        seen.add(answer.position);
+        return true;
+      });
+      return { answers };
+    },
+    readPageNumbers: (input: ReadPageNumbersInput): Promise<ReadPageNumbersOutput> =>
+      run("read_page_numbers", () => adapter.readPageNumbers(input), ReadPageNumbersOutputSchema).then((read) => ({
+        // One entry per photo, in order, however many the model returned.
+        pages: input.pages.map((_, index) => read.pages[index] ?? { pageNumber: null }),
+      })),
     diagnoseError: async () => notImplemented("diagnoseError"),
   };
 }

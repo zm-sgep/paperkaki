@@ -26,6 +26,8 @@ export type ChildActionState = {
    * the paper itself: `label` as its title ("Mathematics WA2 · Mock 1") and the time as its detail.
    */
   dueMock?: { attemptId: string; label?: string; durationText?: string };
+  /** A marked mock the child has not looked at yet. `resultId` is the attempt's id. */
+  newResult?: { resultId: string; label?: string };
   /** Marked work with mistakes the child has not gone through yet. */
   mistakes?: { count: number; resultId: string };
   practice?: {
@@ -39,6 +41,7 @@ export type ChildActionKind =
   | "resume_mock"
   | "resume_practice"
   | "start_mock"
+  | "see_results"
   | "fix_mistakes"
   | "start_practice"
   | "done_today";
@@ -56,6 +59,7 @@ export const CHILD_ACTION_ORDER: readonly ChildActionKind[] = [
   "resume_mock",
   "resume_practice",
   "start_mock",
+  "see_results",
   "fix_mistakes",
   "start_practice",
   "done_today",
@@ -112,6 +116,16 @@ export function nextChildAction(state: ChildActionState): ChildAction {
     };
   }
 
+  if (state.newResult) {
+    return {
+      kind: "see_results",
+      title: state.newResult.label ? `Your ${state.newResult.label} is marked` : "Your mock is marked",
+      supportingText: "Come and see how you did.",
+      ctaLabel: "See my results",
+      href: `/results/${state.newResult.resultId}`,
+    };
+  }
+
   if (state.mistakes && state.mistakes.count > 0) {
     const { count, resultId } = state.mistakes;
     return {
@@ -119,7 +133,7 @@ export function nextChildAction(state: ChildActionState): ChildAction {
       title: count === 1 ? "Let's fix 1 mistake" : `Let's fix ${count} mistakes`,
       supportingText: "Each one you fix helps you remember it next time.",
       ctaLabel: "Review mistakes",
-      href: `/progress/results/${resultId}`,
+      href: `/results/${resultId}`,
     };
   }
 

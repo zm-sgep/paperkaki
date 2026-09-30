@@ -35,7 +35,7 @@ describe("school notice upload, reading and confirming (M5)", () => {
   /** The fixture provider, with a way to make the next call fail. */
   let failNext: AIError | null = null;
   const counting = (adapter: AIAdapter): AIAdapter => ({
-    provider: adapter.provider,
+    ...adapter,
     async extractSchoolNotice(input) {
       extractionCalls += 1;
       if (failNext) {

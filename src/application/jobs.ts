@@ -1,6 +1,7 @@
 import { logger } from "@/lib/logger";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import { createJobService, type JobService } from "@/services/jobs";
+import { MARK_ATTEMPT_JOB, processAttemptMarking } from "./attempt-marking";
 import { NOTICE_EXTRACTION_JOB, processNoticeSource } from "./notice-processing";
 
 const globalForJobs = globalThis as unknown as { __paperkakiJobs?: Promise<JobService> };
@@ -14,6 +15,11 @@ export function getJobService(): Promise<JobService> {
       const sourceId = payload.sourceId;
       if (typeof sourceId !== "string") return;
       await processNoticeSource(sourceId, { db });
+    });
+    jobs.register(MARK_ATTEMPT_JOB, async (payload) => {
+      const attemptId = payload.attemptId;
+      if (typeof attemptId !== "string") return;
+      await processAttemptMarking(attemptId, { db });
     });
     return jobs;
   })();

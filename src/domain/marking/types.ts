@@ -19,9 +19,11 @@ export type MarkingResponse = {
   typedUnit?: string | undefined;
   /** True when the child wrote working on the paper or the iPad canvas. */
   hasHandwriting?: boolean | undefined;
+  /** True when the answer was read from a photographed paper and the reading was not sure of it. */
+  answerUnclear?: boolean | undefined;
 };
 
-export type MarkingMethod = "deterministic" | "needs_review";
+export type MarkingMethod = "deterministic" | "needs_review" | "ai_assisted";
 export type MarkingConfidence = "high" | "low";
 
 export type MarkingDecision = {

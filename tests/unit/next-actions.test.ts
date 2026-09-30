@@ -65,7 +65,7 @@ describe("nextParentAction: new attempt-driven states", () => {
       title: "We're marking Mia's Maths WA3 · Mock 1",
       supportingText: "The results will be here in a moment.",
       ctaLabel: "See marking progress",
-      href: "/mock/t1",
+      href: "/progress/results/t1",
     });
   });
 
@@ -75,7 +75,7 @@ describe("nextParentAction: new attempt-driven states", () => {
       title: "2 answers need a quick check",
       supportingText: "We weren't sure how to mark some of Mia's answers, and it takes about a minute to check.",
       ctaLabel: "Check answers",
-      href: "/review/t1",
+      href: "/progress/review/t1",
     });
     expect(nextParentAction(state({ attempts: [attempt({ status: "needs_review", reviewCount: 1 })] })).title).toBe("1 answer needs a quick check");
     expect(nextParentAction(state({ attempts: [attempt({ status: "needs_review" })] })).title).toBe("A few answers need a quick check");
@@ -97,7 +97,7 @@ describe("nextParentAction: new attempt-driven states", () => {
       title: "Go through 3 mistakes from Maths WA3 · Mock 1",
       supportingText: "Fixing mistakes is the quickest way to improve.",
       ctaLabel: "Review mistakes",
-      href: "/progress/results/r1",
+      href: "/progress/results/r1#mistakes",
     });
     expect(nextParentAction(state({ attempts: [attempt({ status: "marked", unreviewedMistakes: 1 })] })).title).toBe(
       "Go through 1 mistake from Maths WA3 · Mock 1",
@@ -401,6 +401,7 @@ describe("nextChildAction", () => {
     unfinishedMock: { attemptId: "m1" },
     unfinishedPractice: { sessionId: "s1", focusName: "Length" },
     dueMock: { attemptId: "m2", label: "Maths WA3 Mock 2" },
+    newResult: { resultId: "r0", label: "Maths WA3 Mock 1" },
     mistakes: { count: 3, resultId: "r1" },
     practice: { outcomes: [outcome({ name: "Fractions" })], minutesToday: 0 },
   };
@@ -442,13 +443,24 @@ describe("nextChildAction", () => {
     expect(nextChildAction({ ...base, dueMock: { attemptId: "m3" } }).title).toBe("Your mock is ready");
   });
 
+  it("then a new result to look at, before the mistakes", () => {
+    expect(nextChildAction({ ...base, newResult: { resultId: "r0", label: "Maths WA3 Mock 1" }, mistakes: { count: 3, resultId: "r0" } })).toEqual({
+      kind: "see_results",
+      title: "Your Maths WA3 Mock 1 is marked",
+      supportingText: "Come and see how you did.",
+      ctaLabel: "See my results",
+      href: "/results/r0",
+    });
+    expect(nextChildAction({ ...base, newResult: { resultId: "r0" } }).title).toBe("Your mock is marked");
+  });
+
   it("then mistakes to fix", () => {
     expect(nextChildAction({ ...base, mistakes: { count: 3, resultId: "r1" }, practice: full.practice as NonNullable<ChildActionState["practice"]> })).toEqual({
       kind: "fix_mistakes",
       title: "Let's fix 3 mistakes",
       supportingText: "Each one you fix helps you remember it next time.",
       ctaLabel: "Review mistakes",
-      href: "/progress/results/r1",
+      href: "/results/r1",
     });
     expect(nextChildAction({ ...base, mistakes: { count: 1, resultId: "r1" } }).title).toBe("Let's fix 1 mistake");
     expect(nextChildAction({ ...base, mistakes: { count: 0, resultId: "r1" } }).kind).toBe("done_today");
@@ -490,6 +502,7 @@ describe("nextChildAction", () => {
       [{ unfinishedMock: full.unfinishedMock! }, "resume_mock"],
       [{ unfinishedPractice: full.unfinishedPractice! }, "resume_practice"],
       [{ dueMock: full.dueMock! }, "start_mock"],
+      [{ newResult: full.newResult! }, "see_results"],
       [{ mistakes: full.mistakes! }, "fix_mistakes"],
       [{ practice: full.practice! }, "start_practice"],
       [{}, "done_today"],
@@ -510,6 +523,7 @@ describe("nextChildAction", () => {
       base,
       { ...base, dueMock: { attemptId: "m", label: "Maths WA3 Mock 2" } },
       { ...base, mistakes: { count: 2, resultId: "r" } },
+      { ...base, newResult: { resultId: "r", label: "Maths WA3 Mock 1" } },
       { ...base, practice: { outcomes: [outcome({ state: "learning", recentAccuracy: 0.2 })] } },
       { ...base, unfinishedPractice: { sessionId: "s" } },
     ];
