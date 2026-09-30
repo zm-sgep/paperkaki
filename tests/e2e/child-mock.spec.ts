@@ -143,7 +143,7 @@ test.describe("child: the iPad mock, start to finish", () => {
     for (const [label, text] of [
       ["Practice", "Practice will appear here after your first mock."],
       ["Progress", "Your progress will show here after your first mock."],
-      ["Rewards", "Rewards will appear here when a grown-up sets them up."],
+      ["Rewards", "Your grown-up hasn't set up any rewards yet."],
     ] as const) {
       await nav.getByRole("link", { name: label }).click();
       await expect(page.getByRole("heading", { level: 1, name: label })).toBeVisible();

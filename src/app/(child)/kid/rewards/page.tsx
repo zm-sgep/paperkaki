@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { requireChild } from "@/application/queries/current-child";
 import { getChildRewards } from "@/application/queries/rewards";
 import { ChildCard } from "@/components/child/child-card";
+import { ButtonLink } from "@/components/ui/button";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { AskButton } from "./ask-button";
 import { takeBackRequestAction } from "./actions";
@@ -35,8 +36,11 @@ export default async function ChildRewardsPage() {
           Rewards from your grown-up
         </h2>
         {view.rewards.length === 0 ? (
-          <ChildCard>
+          <ChildCard className="flex flex-col items-start gap-4">
             <p className="text-xl text-ink-soft">Your grown-up hasn&apos;t set up any rewards yet. Keep learning, and check back soon.</p>
+            <ButtonLink href="/today" variant="secondary" className="min-h-14 rounded-2xl px-8 text-lg">
+              Back to Today
+            </ButtonLink>
           </ChildCard>
         ) : (
           <ul data-rewards className="flex flex-col gap-4">
