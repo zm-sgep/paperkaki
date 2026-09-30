@@ -346,7 +346,9 @@ export async function getMarkedPaper(viewer: Viewer, attemptId: string, context:
       correctAnswer,
       workedSolution: solution.success ? solution.data : [],
       whatHappened: whatHappenedText({ audience, score: ordered.score, marks: item.marks, childAnswer, correctAnswer, answered }),
-      explanation: mistake ? explanationFor(errorType) : null,
+      // A parent with a marker's specific note reads that note only; the general sentence for the
+      // kind of slip would say the same thing twice.
+      explanation: mistake && !(audience === "parent" && ai?.reason) ? explanationFor(errorType) : null,
       parentNote: audience === "parent" && ai ? ai.reason : null,
       topicLabel: result.topicLabel,
       tryHref: audience === "parent" ? `/progress/practice?topic=${encodeURIComponent(result.topicId)}` : `/practice?outcome=${encodeURIComponent(result.outcomeId)}`,

@@ -321,9 +321,11 @@ describe("marking review, results and the marked paper (M7)", () => {
       // The parent sees the marker's one sentence beside the mark; the child does not.
       const parentPaper = await getMarkedPaper({ kind: "parent", parentProfileId: parentA }, second.attemptId, ctx());
       expect(parentPaper?.entries[0]?.parentNote).toBe("Right method, one slip at the end.");
-      expect(parentPaper?.entries[0]?.explanation).toMatch(/slip in the calculation/);
+      // Only the marker's specific note, not the general sentence as well (it would say the same thing twice).
+      expect(parentPaper?.entries[0]?.explanation).toBeNull();
       const childPaper = await getMarkedPaper({ kind: "child", childId: child.childId }, second.attemptId, ctx());
       expect(childPaper?.entries[0]?.parentNote).toBeNull();
+      expect(childPaper?.entries[0]?.explanation).toMatch(/slip in the calculation/);
       expect(JSON.stringify(childPaper)).not.toMatch(/Right method, one slip at the end\./);
     });
 
