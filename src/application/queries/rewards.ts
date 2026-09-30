@@ -245,7 +245,7 @@ export type ParentRewardRow2 = {
   icon: string;
   cost: number;
   active: boolean;
-  /** "All children", or the child's name. */
+  /** "all children", or the child's name. */
   forText: string;
   childId: string | null;
   weeklyLimit: number | null;
@@ -344,7 +344,7 @@ export async function getParentRewards(parentProfileId: string, context: Context
     icon: reward.icon,
     cost: reward.cost,
     active: reward.active,
-    forText: reward.childId ? (nameOf.get(reward.childId) ?? "One child") : "All children",
+    forText: reward.childId ? (nameOf.get(reward.childId) ?? "One child") : "all children",
     childId: reward.childId,
     weeklyLimit: reward.weeklyLimit,
     availableFrom: reward.availableFrom,

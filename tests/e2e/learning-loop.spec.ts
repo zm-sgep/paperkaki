@@ -245,7 +245,9 @@ test.describe("the learning loop", () => {
     await expect(page.getByText("You're done for today. Nice work.")).toBeVisible();
     await expect(page.locator('[data-variant="primary"]')).toHaveCount(1);
     await expect(page.locator('[data-variant="primary"]')).toHaveText("See my progress");
-    expect((await page.locator("main").innerText()).toLowerCase()).not.toMatch(/point|reward|badge|streak/);
+    // Learning Points show here, after the learning, in plain words; there are still no badges or streaks.
+    await expect(page.locator("[data-points-earned]")).toHaveText(/^\+\d+ Learning Points? · You .+\.$/);
+    expect((await page.locator("main").innerText()).toLowerCase()).not.toMatch(/reward|badge|streak/);
     await expectChildClean(page);
     await shot(page, "practice-end", tag);
     await page.goto("/today");

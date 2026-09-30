@@ -80,3 +80,38 @@ export async function expectNoSideScroll(page: Page) {
 export async function expectFamilyWords(page: Page) {
   expect(await page.locator("body").innerText()).not.toMatch(INTERNAL_WORDS);
 }
+
+// ---------------------------------------------------------------------------
+// A child practising, for tests that only need the child to finish a set.
+
+type Give = { option: number } | { typed: string } | null;
+
+/** The question on screen as a child sees it: its words, and the choices when it has them. */
+async function shownQuestionText(page: Page, scope: string): Promise<string> {
+  const choices = page.locator("[data-mcq]");
+  return `${await page.locator(scope).innerText()}\n${(await choices.count()) > 0 ? await choices.innerText() : ""}`;
+}
+
+async function giveAnswer(page: Page, answer: Give) {
+  if (!answer) return;
+  if ("option" in answer) await page.locator("[data-mcq] label").nth(answer.option).click();
+  else await page.getByRole("textbox", { name: "Your answer" }).fill(answer.typed);
+}
+
+/**
+ * Answers every question of the practice set on screen correctly (looked up in the question bank) and presses
+ * Finish, which leaves the calm end screen showing.
+ */
+export async function answerPracticeSetRight(page: Page, findQuestion: (visibleText: string) => { right: Give }) {
+  for (let guard = 0; guard < 20; guard += 1) {
+    const question = findQuestion(await shownQuestionText(page, "[data-question-card]"));
+    await giveAnswer(page, question.right);
+    await page.getByRole("button", { name: "Check answer" }).click();
+    await expect(page.locator("[data-feedback]")).toBeVisible();
+    const last = await page.getByRole("button", { name: "Finish" }).count();
+    await page.getByRole("button", { name: /^(Next question|Finish)$/ }).click();
+    if (last > 0) return;
+    await expect(page.locator("[data-feedback]")).toHaveCount(0);
+  }
+  throw new Error("The practice set did not end.");
+}
