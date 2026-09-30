@@ -8,3 +8,4 @@ export * from "./assessments";
 export * from "./papers";
 export * from "./ai";
 export * from "./notices";
+export * from "./child-access";

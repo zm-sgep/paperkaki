@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getParentChildren } from "@/application/queries/children";
+import { getParentChildren, listChildDevices } from "@/application/queries/children";
 import { requireParent } from "@/application/queries/current-parent";
 import { Card } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Account · PaperKaki" };
 
 export default async function AccountPage() {
   const parent = await requireParent();
-  const { children } = await getParentChildren(parent.parentProfileId);
+  const [{ children }, devices] = await Promise.all([getParentChildren(parent.parentProfileId), listChildDevices(parent.parentProfileId)]);
   return (
     <>
       <PageHeader title="Account" />
@@ -30,7 +30,7 @@ export default async function AccountPage() {
           <SubmitButton variant="secondary">Sign out</SubmitButton>
         </form>
       </Card>
-      <ChildrenSection kids={children} />
+      <ChildrenSection kids={children} devices={devices} />
     </>
   );
 }

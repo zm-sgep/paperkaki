@@ -78,6 +78,13 @@
       "when": 1790726838593,
       "tag": "0010_notice_sources_and_jobs",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1790729086432,
+      "tag": "0011_child_devices",
+      "breakpoints": true
     }
   ]
 }

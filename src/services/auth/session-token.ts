@@ -24,27 +24,18 @@ async function hmacKey(secret: string, usage: "sign" | "verify"): Promise<Crypto
   return crypto.subtle.importKey("raw", encoder.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, [usage]);
 }
 
-export async function signSessionToken(
-  secret: string,
-  parentProfileId: string,
-  now: Date = new Date(),
-  maxAgeSeconds: number = SESSION_MAX_AGE_SECONDS,
-): Promise<string> {
-  const issuedAt = Math.floor(now.getTime() / 1000);
-  const payload: Payload = { sub: parentProfileId, iat: issuedAt, exp: issuedAt + maxAgeSeconds };
+/** Signs any JSON payload: base64url(payload) + "." + base64url(HMAC-SHA256). */
+export async function signPayload(secret: string, payload: Record<string, unknown>): Promise<string> {
   const body = toBase64Url(encoder.encode(JSON.stringify(payload)));
   const signature = await crypto.subtle.sign("HMAC", await hmacKey(secret, "sign"), encoder.encode(body));
   return `${body}.${toBase64Url(new Uint8Array(signature))}`;
 }
 
-export type VerifiedSession = { parentProfileId: string; issuedAt: Date; expiresAt: Date };
-
-/** Constant-time signature check (crypto.subtle.verify), then expiry. Returns null on any failure. */
-export async function verifySessionToken(
-  secret: string,
-  token: string | undefined | null,
-  now: Date = new Date(),
-): Promise<VerifiedSession | null> {
+/**
+ * Constant-time signature check (crypto.subtle.verify). Returns the payload object, or null when the
+ * token is malformed or was not signed with this secret. Expiry is the caller's to check.
+ */
+export async function verifyPayload(secret: string, token: string | undefined | null): Promise<Record<string, unknown> | null> {
   if (!token || token.length > 1024) {
     return null;
   }
@@ -72,10 +63,35 @@ export async function verifySessionToken(
   if (!bodyBytes) {
     return null;
   }
-  let payload: Partial<Payload>;
   try {
-    payload = JSON.parse(decoder.decode(bodyBytes)) as Partial<Payload>;
+    const parsed: unknown = JSON.parse(decoder.decode(bodyBytes));
+    return typeof parsed === "object" && parsed !== null && !Array.isArray(parsed) ? (parsed as Record<string, unknown>) : null;
   } catch {
+    return null;
+  }
+}
+
+export async function signSessionToken(
+  secret: string,
+  parentProfileId: string,
+  now: Date = new Date(),
+  maxAgeSeconds: number = SESSION_MAX_AGE_SECONDS,
+): Promise<string> {
+  const issuedAt = Math.floor(now.getTime() / 1000);
+  const payload: Payload = { sub: parentProfileId, iat: issuedAt, exp: issuedAt + maxAgeSeconds };
+  return signPayload(secret, payload);
+}
+
+export type VerifiedSession = { parentProfileId: string; issuedAt: Date; expiresAt: Date };
+
+/** Signature check, then expiry. Returns null on any failure. */
+export async function verifySessionToken(
+  secret: string,
+  token: string | undefined | null,
+  now: Date = new Date(),
+): Promise<VerifiedSession | null> {
+  const payload = (await verifyPayload(secret, token)) as Partial<Payload> | null;
+  if (!payload) {
     return null;
   }
   if (

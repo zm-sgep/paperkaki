@@ -17,6 +17,13 @@
   --color-surface: #ffffff;
   --color-line: #cfd6dc;
   --color-danger: #a4262c;
+  /* Gentle "pay attention" amber for the mock timer and notices. Not an error, never red. */
+  --color-warning: #b26a00;
+  --color-warning-strong: #6b3f00;
+  --color-warning-soft: #fff3d1;
+  /* The child screens: a warmer page and softer cards than the parent screens. */
+  --color-child-canvas: #fff5e4;
+  --color-child-card: #fffdf9;
 }
 
 :root {
