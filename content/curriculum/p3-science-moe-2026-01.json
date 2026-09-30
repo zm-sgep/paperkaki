@@ -1,0 +1,403 @@
+{
+  "curriculumVersion": {
+    "code": "SG-MOE-PRI-SCI-2023-UPD-2026-01",
+    "subject": "Science",
+    "title": "Science Teaching & Learning Syllabus Primary Three to Six (2023 cohort), updated January 2026",
+    "levels": [
+      "P3"
+    ],
+    "effectiveFrom": "2026-01-01",
+    "status": "draft"
+  },
+  "sources": [
+    {
+      "id": "src-moe-pri-sci-2023-upd-2026-01",
+      "title": "Science Teaching & Learning Syllabus Primary Three to Six, Standard / Foundation (Implementation starting with 2023 Primary Three Cohort), Updated Jan 2026",
+      "publisher": "Ministry of Education, Singapore",
+      "url": "https://moe.gov.sg/media/files/primary/syllabus/Primary%20Science%20Syllabus%202023.pdf",
+      "provenance": "official_moe",
+      "accessed": "2026-09-30",
+      "verification": "unverified",
+      "notes": "PDF of 87 pages, sha256 0556023ceb55fe80de75ae044011b8c77ea7ea494a1873d2b224a9b2b8083ab0. Printed page number = PDF page index minus 1 (the printed number is at the foot of each page); every page reference in this file is the printed number. Level is taken from the '(P3)' in the heading of each Section 5 learning-outcomes table and from Table 2 (p. 20). Primary 3 content is on printed pp. 38 (Diversity of Living and Non-Living Things), 39-40 (Diversity of Materials), 42 (Cycles in Plants and Animals, Life Cycles) and 62 (Interaction of Forces, Magnets). Table 2 marks topics not required for Foundation Science by underline: no P3 topic is underlined and no P3 topic has a separate Foundation table, so all content here applies to Standard and Foundation. Each outcome is one bullet or sub-bullet of the Core Ideas column (knowledge and understanding) or the Practices column (skills and processes); the column is named in each sourceRef. The Values, Ethics and Attitudes column is quoted in topic notes, not imported as outcomes. Wording is verbatim (case, punctuation and curly quotes as printed). Where a bullet has sub-bullets, each sub-bullet is one outcome and its statement is the lead-in bullet and the sub-bullet joined by a single space, words unchanged; one sub-bullet holding two sentences (magnets, poles) is split into two outcomes by quoting each sentence. MOE lists one topic for Diversity of Living and Non-Living Things and one for Life Cycles; PaperKaki groups each into two topics (LN/CL and PL/AN) for scope matching, noted on each topic. Extracted by software (PyMuPDF), every quoted string machine-checked against the page text and the six P3 pages checked against page images by the drafter; extracted by software; needs a human check before sign-off. The syllabus gives no P3-specific list of question types or skills beyond the Practices bullets and the general Ways of Thinking and Doing (Table 1, pp. 15-18, stated to the end of P4)."
+    }
+  ],
+  "domains": [
+    {
+      "code": "P3-SC-DIV",
+      "title": "Diversity",
+      "topics": [
+        {
+          "code": "P3-SC-DIV-LN",
+          "title": "Diversity of Living and Non-Living Things (General characteristics)",
+          "parentLabel": "Living and non-living things",
+          "sortOrder": 1,
+          "notes": [
+            "Theme: \"Diversity\" (p. 37); topic heading: \"Diversity of Living and Non-Living Things (General characteristics and classification) (P3)\" (p. 38)",
+            "PaperKaki grouping, not MOE wording: MOE lists one topic, \"Diversity of Living and Non-Living Things (General characteristics and classification) (P3)\" (p. 38); its outcomes are grouped into two parents, P3-SC-DIV-LN and P3-SC-DIV-CL, so that a school scope can name either. Outcome wording is unchanged MOE wording.",
+            "Values, Ethics and Attitudes column of the same syllabus topic (p. 38; not imported as outcomes): \"Show curiosity by questioning and exploring the surrounding living and non-living things.\"; \"Show care and concern by being responsible towards living things.\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-SC-DIV-LN-01",
+              "statement": "Describe the characteristics of living things. Need water, food and air to survive",
+              "childLabel": "What living things need",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Core Ideas, bullet 1, first sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-LN-02",
+              "statement": "Describe the characteristics of living things. Grow, respond and reproduce",
+              "childLabel": "What living things do",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Core Ideas, bullet 1, second sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-LN-03",
+              "statement": "Observe a variety of living and non-living things and infer differences between them.",
+              "childLabel": "Tell living from non-living things",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Practices, bullet 1"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-SC-DIV-CL",
+          "title": "Diversity of Living and Non-Living Things (Classification)",
+          "parentLabel": "Grouping living things",
+          "sortOrder": 2,
+          "notes": [
+            "Theme: \"Diversity\" (p. 37); topic heading: \"Diversity of Living and Non-Living Things (General characteristics and classification) (P3)\" (p. 38)",
+            "PaperKaki grouping, not MOE wording: MOE lists one topic, \"Diversity of Living and Non-Living Things (General characteristics and classification) (P3)\" (p. 38); its outcomes are grouped into two parents, P3-SC-DIV-LN and P3-SC-DIV-CL, so that a school scope can name either. Outcome wording is unchanged MOE wording.",
+            "Scope limit (p. 38): \"Recall of names of specific living things (e.g., guppy) and their characteristics (e.g., give birth to young alive) is not required.\"",
+            "Groups named under \"Recognise some broad groups of living things based on similarities and differences.\" (p. 38): \"Plants (flowering, non-flowering)\"; \"Animals (amphibians, birds, fish, insects, mammals, reptiles)\"; \"Fungi (mould, mushroom, yeast)\"; \"Bacteria\". The classifying skill bullet reads \"Classify living things into broad groups (in plants and animals) based on similarities and differences of common observable characteristics.\" (p. 38)",
+            "Values, Ethics and Attitudes column of the same syllabus topic (p. 38; not imported as outcomes): \"Show curiosity by questioning and exploring the surrounding living and non-living things.\"; \"Show care and concern by being responsible towards living things.\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-SC-DIV-CL-01",
+              "statement": "Recognise some broad groups of living things based on similarities and differences. Plants (flowering, non-flowering)",
+              "childLabel": "Flowering and non-flowering plants",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Core Ideas, bullet 2, first sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-CL-02",
+              "statement": "Recognise some broad groups of living things based on similarities and differences. Animals (amphibians, birds, fish, insects, mammals, reptiles)",
+              "childLabel": "Groups of animals",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Core Ideas, bullet 2, second sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-CL-03",
+              "statement": "Recognise some broad groups of living things based on similarities and differences. Fungi (mould, mushroom, yeast)",
+              "childLabel": "Fungi",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Core Ideas, bullet 2, third sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-CL-04",
+              "statement": "Recognise some broad groups of living things based on similarities and differences. Bacteria",
+              "childLabel": "Bacteria",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Core Ideas, bullet 2, fourth sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-CL-05",
+              "statement": "Classify living things into broad groups (in plants and animals) based on similarities and differences of common observable characteristics.",
+              "childLabel": "Sort living things into groups",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 38, Primary 3, Diversity, Diversity of Living and Non-Living Things (General characteristics and classification), Practices, bullet 2"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-SC-DIV-MA",
+          "title": "Diversity of Materials",
+          "parentLabel": "Materials and their properties",
+          "sortOrder": 3,
+          "notes": [
+            "Theme: \"Diversity\" (p. 37); topic heading: \"Diversity of Materials (P3)\" (pp. 39-40; the last note runs onto p. 40)",
+            "Scope note (p. 39): \"The focus is on how the properties of materials are used.\"",
+            "Scope note (p. 39): \"The “strength” of a material is its ability to be subjected to loads without breaking.\"",
+            "Scope note (p. 39): \"The “flexibility” of a material is its ability to bend without breaking.\"",
+            "Scope limit (p. 39): \"The “ability to float on water” refers to whether an object is able to stay on or near the surface of water and not sink. (The concept of density is not required.)\"",
+            "Scope note (p. 39): \"A material is “waterproof” when it does not absorb water.\"",
+            "Scope limit (p. 40): \"The “transparency” of a material refers to whether the material allows most/ some or no light to pass through. (The use of terms – transparent/ translucent/ opaque is not required.)\"",
+            "Values, Ethics and Attitudes column of the same syllabus topic (p. 39; not imported as outcomes): \"Show objectivity by using data and information to validate observations and explanations about the properties and uses of materials.\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-SC-DIV-MA-01",
+              "statement": "Relate the use of various types of materials (wood, metal, ceramic, rubber, glass, plastic, fabric) to their physical properties.",
+              "childLabel": "Why we use different materials",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 39, Primary 3, Diversity, Diversity of Materials, Core Ideas, bullet 1"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-MA-02",
+              "statement": "Compare physical properties of materials. Strength",
+              "childLabel": "Strong materials",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 39, Primary 3, Diversity, Diversity of Materials, Practices, bullet 1, first sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-MA-03",
+              "statement": "Compare physical properties of materials. Flexibility",
+              "childLabel": "Bendy materials",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 39, Primary 3, Diversity, Diversity of Materials, Practices, bullet 1, second sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-MA-04",
+              "statement": "Compare physical properties of materials. Ability to float/sink in water",
+              "childLabel": "Float or sink",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 39, Primary 3, Diversity, Diversity of Materials, Practices, bullet 1, third sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-MA-05",
+              "statement": "Compare physical properties of materials. Waterproof",
+              "childLabel": "Waterproof materials",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 39, Primary 3, Diversity, Diversity of Materials, Practices, bullet 1, fourth sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-DIV-MA-06",
+              "statement": "Compare physical properties of materials. Transparency",
+              "childLabel": "Letting light through",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 39, Primary 3, Diversity, Diversity of Materials, Practices, bullet 1, fifth sub-bullet (its note continues on p. 40)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "P3-SC-CYC",
+      "title": "Cycles",
+      "topics": [
+        {
+          "code": "P3-SC-CYC-PL",
+          "title": "Cycles in Plants and Animals (Life Cycles): Plants",
+          "parentLabel": "Life cycles of plants",
+          "sortOrder": 1,
+          "notes": [
+            "Theme: \"Cycles\" (p. 41); topic heading: \"Cycles in Plants and Animals (Life Cycles) (P3)\" (p. 42)",
+            "PaperKaki grouping, not MOE wording: MOE lists one topic, \"Cycles in Plants and Animals (Life Cycles) (P3)\" (p. 42); its outcomes are grouped into P3-SC-CYC-PL and P3-SC-CYC-AN following the syllabus's own \"Plants\" / \"Animals\" sub-bullets and its separate plant and animal practice bullets. Outcome wording is unchanged MOE wording.",
+            "Scope limit (p. 42): \"The focus is on the stages (seed, young plant, adult plant) of flowering plants. Processes in plant reproduction (pollination, fertilisation, seed dispersal and germination) are introduced in the topic of Cycles in Plants and Animals (Reproduction) in P5.\"",
+            "Values, Ethics and Attitudes column of the same syllabus topic (p. 42; not imported as outcomes): \"Show curiosity by questioning and exploring the surrounding plants and animals.\"; \"Show care and concern by being responsible towards plants and animals.\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-SC-CYC-PL-01",
+              "statement": "Show an understanding that different living things have different life cycles. Plants",
+              "childLabel": "Plants have life cycles",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 42, Primary 3, Cycles, Cycles in Plants and Animals (Life Cycles), Core Ideas, bullet 1, first sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-CYC-PL-02",
+              "statement": "Observe and compare the life cycles of plants grown from seeds over a period of time.",
+              "childLabel": "Seed, young plant, adult plant",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 42, Primary 3, Cycles, Cycles in Plants and Animals (Life Cycles), Practices, bullet 1"
+              }
+            }
+          ]
+        },
+        {
+          "code": "P3-SC-CYC-AN",
+          "title": "Cycles in Plants and Animals (Life Cycles): Animals",
+          "parentLabel": "Life cycles of animals",
+          "sortOrder": 2,
+          "notes": [
+            "Theme: \"Cycles\" (p. 41); topic heading: \"Cycles in Plants and Animals (Life Cycles) (P3)\" (p. 42)",
+            "PaperKaki grouping, not MOE wording: MOE lists one topic, \"Cycles in Plants and Animals (Life Cycles) (P3)\" (p. 42); its outcomes are grouped into P3-SC-CYC-PL and P3-SC-CYC-AN following the syllabus's own \"Plants\" / \"Animals\" sub-bullets and its separate plant and animal practice bullets. Outcome wording is unchanged MOE wording.",
+            "Animals named in the syllabus for this topic (p. 42): \"(chicken, cockroach, frog, grasshopper, beetle, butterfly, mosquito)\"",
+            "Values, Ethics and Attitudes column of the same syllabus topic (p. 42; not imported as outcomes): \"Show curiosity by questioning and exploring the surrounding plants and animals.\"; \"Show care and concern by being responsible towards plants and animals.\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-SC-CYC-AN-01",
+              "statement": "Show an understanding that different living things have different life cycles. Animals",
+              "childLabel": "Animals have life cycles",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 42, Primary 3, Cycles, Cycles in Plants and Animals (Life Cycles), Core Ideas, bullet 1, second sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-CYC-AN-02",
+              "statement": "Observe and compare the life cycles of animals over a period of time (chicken, cockroach, frog, grasshopper, beetle, butterfly, mosquito)",
+              "childLabel": "Compare animal life cycles",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 42, Primary 3, Cycles, Cycles in Plants and Animals (Life Cycles), Practices, bullet 2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "P3-SC-INT",
+      "title": "Interactions",
+      "topics": [
+        {
+          "code": "P3-SC-INT-MG",
+          "title": "Interaction of Forces (Magnets)",
+          "parentLabel": "Magnets",
+          "sortOrder": 1,
+          "notes": [
+            "Theme: \"Interactions\" (p. 61); topic heading: \"Interaction of Forces (Magnets) (P3)\" (p. 62)",
+            "Scope limit (p. 62): \"Recall of magnetic materials such as nickel and cobalt is not required.\"",
+            "Scope limit (p. 62): \"Magnetic shielding and magnetic induction are not required.\"",
+            "Only magnets are P3 content under this heading; the other forces (frictional, gravitational, elastic spring) are taught at P6 (p. 63 onwards) and are not included.",
+            "Values, Ethics and Attitudes column of the same syllabus topic (p. 62; not imported as outcomes): \"Show curiosity in exploring the uses of magnets in everyday life.\""
+          ],
+          "outcomes": [
+            {
+              "code": "P3-SC-INT-MG-01",
+              "statement": "Recognise that a magnet can exert a push or a pull.",
+              "childLabel": "Magnets push and pull",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Core Ideas, bullet 1"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-02",
+              "statement": "Identify the characteristics of magnets. Magnets can be made of iron or steel.",
+              "childLabel": "What magnets are made of",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Core Ideas, bullet 2, first sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-03",
+              "statement": "Identify the characteristics of magnets. Magnets have two poles.",
+              "childLabel": "Two poles",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Core Ideas, bullet 2, second sub-bullet, first sentence"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-04",
+              "statement": "Identify the characteristics of magnets. A freely suspended bar magnet comes to rest pointing in a North-South direction.",
+              "childLabel": "Magnets point North-South",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Core Ideas, bullet 2, second sub-bullet, second sentence"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-05",
+              "statement": "Identify the characteristics of magnets. Unlike poles attract and like poles repel.",
+              "childLabel": "Poles attract and repel",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Core Ideas, bullet 2, third sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-06",
+              "statement": "Identify the characteristics of magnets. Magnets attract magnetic materials.",
+              "childLabel": "What magnets attract",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Core Ideas, bullet 2, fourth sub-bullet"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-07",
+              "statement": "Recognise uses of magnets in everyday objects.",
+              "childLabel": "Magnets in everyday things",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Core Ideas, bullet 3"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-08",
+              "statement": "Compare magnets, non-magnetic materials and magnetic materials.",
+              "childLabel": "Magnetic and non-magnetic",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Practices, bullet 1"
+              }
+            },
+            {
+              "code": "P3-SC-INT-MG-09",
+              "statement": "Make a magnet by the stroke method and the electrical method.",
+              "childLabel": "Make a magnet",
+              "verification": "unverified",
+              "sourceRef": {
+                "sourceId": "src-moe-pri-sci-2023-upd-2026-01",
+                "pageOrSection": "p. 62, Primary 3, Interactions, Interaction of Forces (Magnets), Practices, bullet 2"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
