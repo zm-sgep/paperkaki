@@ -21,6 +21,8 @@ export type PracticeSummary = {
   suggested?: { outcomeId: string; name: string };
 };
 
+const isFullSet = (session: { origin: string }): boolean => session.origin !== "similar";
+
 export async function getPracticeSummary(childId: string, context: { db: Database; now: Date }): Promise<PracticeSummary> {
   const { db, now } = context;
   const [map, open, suggestion, todaySessions, marked] = await Promise.all([
@@ -40,8 +42,9 @@ export async function getPracticeSummary(childId: string, context: { db: Databas
   return {
     outcomes: map ? startedTopics(map).map((topic) => topic.practice) : [],
     minutesToday: todaySessions.reduce((sum, session) => sum + (session.minutes ?? 0), 0),
-    setsToday: todaySessions.length,
-    sessionsSinceLastMock: sinceMock.length,
+    // "Try one like this" from a mistake is one question, not a practice set: it does not count as the day's practice.
+    setsToday: todaySessions.filter(isFullSet).length,
+    sessionsSinceLastMock: sinceMock.filter(isFullSet).length,
     ...(open ? { unfinished: { sessionId: open.id, focusName: open.focusLabel } } : {}),
     ...(suggestedTopic ? { suggested: { outcomeId: suggestedTopic.topicId, name: suggestedTopic.label } } : {}),
   };

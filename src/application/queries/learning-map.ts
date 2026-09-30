@@ -139,8 +139,6 @@ export function startedTopics(map: LearningMap): MapTopic[] {
 export function recommendedTopic(map: LearningMap, now: Date): MapTopic | undefined {
   const started = startedTopics(map);
   const weakest = weakestDueOutcome(started.map((topic) => topic.practice), now.toISOString());
-  const found = weakest ? started.find((topic) => topic.topicId === weakest.outcomeId) : undefined;
-  // A child with no work yet is offered the first topic, so Practice is never a blank page.
-  return found ?? (started.length === 0 ? map.topics[0] : undefined);
+  return weakest ? started.find((topic) => topic.topicId === weakest.outcomeId) : undefined;
 }
 

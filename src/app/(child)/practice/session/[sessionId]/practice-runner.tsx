@@ -108,7 +108,7 @@ export function PracticeRunner({ sessionId, focusLabel, progressText, dots, ques
       </div>
 
       <section aria-label="Question" data-question-card className="flex flex-col gap-5 rounded-3xl border-2 border-child-line bg-child-card p-5 sm:p-8">
-        <QuestionView content={question.content} imageUrls={question.imageUrls} className="text-xl sm:text-2xl" />
+        <QuestionView content={isMcq ? { stem: question.content.stem } : question.content} imageUrls={question.imageUrls} className="text-xl sm:text-2xl" />
 
         {feedback ? null : isMcq ? (
           <McqAnswer questionId={`practice-${question.position}`} options={question.content.options ?? []} value={selected ?? undefined} onChange={setSelected} />

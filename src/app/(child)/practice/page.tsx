@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getPracticeHome, type PracticeCard as CardData } from "@/application/queries/practice";
 import { requireChild } from "@/application/queries/current-child";
-import { ChildCard, ChildHero } from "@/components/child/child-card";
+import { ChildCard, ChildEmptyState, ChildHero } from "@/components/child/child-card";
 import { Stars } from "@/components/child/stars";
 import { ButtonLink } from "@/components/ui/button";
 import { SubmitButton } from "@/components/ui/submit-button";
@@ -40,6 +40,25 @@ export default async function ChildPracticePage({ searchParams }: { searchParams
   const { outcome } = await searchParams;
   const home = await getPracticeHome(child, { outcome });
   const { primary } = home;
+
+  // Before a first mock there is nothing to base a recommendation on: say so, and keep the topics to browse.
+  if (!home.started && !primary) {
+    return (
+      <>
+        <ChildEmptyState title="Practice">Practice will appear here after your first mock.</ChildEmptyState>
+        {home.browse.length > 0 ? (
+          <details className="rounded-3xl border-2 border-child-line bg-child-card p-6" data-browse>
+            <summary className="flex min-h-12 cursor-pointer items-center text-2xl font-semibold text-ink">Browse topics</summary>
+            <ul className="flex flex-col pt-2">
+              {home.browse.map((card) => (
+                <TopicRow key={card.topicId} card={card} />
+              ))}
+            </ul>
+          </details>
+        ) : null}
+      </>
+    );
+  }
 
   return (
     <>

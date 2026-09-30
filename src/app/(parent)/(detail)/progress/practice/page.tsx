@@ -43,8 +43,8 @@ export default async function ParentPracticePage({ searchParams }: { searchParam
     <>
       <PageHeader title="Practice" description={`${topicLabel} practice is done by ${childNickname}, on their own device, in about 15 minutes.`} />
       {suggestion.alreadySuggested ? (
-        <Card data-suggested className="flex flex-col items-start gap-3 border-kaki/30 bg-kaki-soft">
-          <h2 className="text-2xl font-semibold tracking-tight text-ink">Suggested to {childNickname}</h2>
+        <Card className="flex flex-col items-start gap-3 border-kaki/30 bg-kaki-soft">
+          <h2 data-suggested className="text-2xl font-semibold tracking-tight text-ink">Suggested to {childNickname}</h2>
           <p className="text-lg text-ink-soft">{topicLabel} practice is now the first thing on {childNickname}&apos;s Today screen.</p>
           <ButtonLink href="/progress" variant="primary" className="w-full sm:w-auto">
             Back to Progress

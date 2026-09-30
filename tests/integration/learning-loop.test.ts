@@ -97,6 +97,15 @@ describe("the learning loop: practice, progress and suggestions (M8, M9)", () =>
     expect(practice.practiceTopicId).toBeDefined();
   });
 
+  it("gives the parent Suggest as the next action while the child has not practised yet", async () => {
+    await markResultSeenByParent(parentA, mock.attemptId, ctx());
+    const progress = await getParentProgress(parentA, ctx(at(2000)));
+    if (progress.kind !== "ready") throw new Error("expected progress");
+    expect(progress.action).toMatchObject({ kind: "start_practice", href: expect.stringMatching(/^\/progress\/practice\?topic=/) });
+    expect(progress.action.ctaLabel).toMatch(/^Suggest .+ practice to Darius$/);
+    expect((await getParentHome(parentA, ctx(at(2000)))).action.ctaLabel).toMatch(/^Start 15-minute .+ practice$/);
+  });
+
   it("has a learning map: topics with their skills and where the child is, only for what the bank can test", async () => {
     const map = await getLearningMap(child.childId, { db, now: at(2000) });
     expect(map).not.toBeNull();
@@ -116,9 +125,12 @@ describe("the learning loop: practice, progress and suggestions (M8, M9)", () =>
   let topicId: string;
   let firstEvidenceCount: number;
 
-  it("starts a set of 6 to 10 approved questions for the recommended topic, and starting again resumes it", async () => {
+  it("starts a set of 6 to 10 approved questions for a topic, and starting again resumes it", async () => {
     firstEvidenceCount = (await listEvidenceForChild(db, child.childId)).length;
-    const started = await startRecommendedPractice(child, ctx());
+    // Money is one skill with plenty of number and multiple-choice questions, so what follows never depends on the luck of the draw.
+    const map = await getLearningMap(child.childId, { db, now: at(2000) });
+    const money = map!.topics.find((topic) => topic.label.startsWith("Money"))!;
+    const started = await startPractice(child, { kind: "topic", topicId: money.topicId }, {}, ctx());
     expect(started.resumed).toBe(false);
     sessionId = started.sessionId;
     const items = await listPracticeItems(db, sessionId);
@@ -129,13 +141,14 @@ describe("the learning loop: practice, progress and suggestions (M8, M9)", () =>
     expect(new Set(items.map((item) => item.question.id)).size).toBe(items.length);
     expect(new Set(items.map((item) => item.question.familyId)).size).toBe(items.length);
     const [session] = await db.select().from(practiceSessions).where(eq(practiceSessions.id, sessionId));
-    expect(session).toMatchObject({ childId: child.childId, status: "in_progress", origin: "recommended", focusKind: "topic" });
+    expect(session).toMatchObject({ childId: child.childId, status: "in_progress", origin: "chosen", focusKind: "topic", focusLabel: money.label });
     topicId = session!.topicId;
     // Nothing answered yet, so nothing counts.
     expect(await listEvidenceForChild(db, child.childId)).toHaveLength(firstEvidenceCount);
 
-    const again = await startRecommendedPractice(child, ctx(at(2100)));
-    expect(again).toEqual({ sessionId, resumed: true });
+    // Starting what is recommended, or anything else, while a set is open goes back to that set.
+    expect(await startRecommendedPractice(child, ctx(at(2100)))).toEqual({ sessionId, resumed: true });
+    expect(await startPractice(child, { kind: "topic", topicId: money.topicId }, {}, ctx(at(2100)))).toEqual({ sessionId, resumed: true });
     expect(await db.select().from(practiceSessions)).toHaveLength(1);
   });
 

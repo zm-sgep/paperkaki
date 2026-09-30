@@ -19,7 +19,7 @@ import { AnswerSchema, QuestionContentSchema, WorkedSolutionSchema, type Block, 
 import { getStorage, type StorageService } from "@/services/storage";
 import { getChildToday } from "./child-today";
 import type { CurrentChild } from "./current-child";
-import { getLearningMap, recommendedTopic, type MapTopic } from "./learning-map";
+import { getLearningMap, recommendedTopic, startedTopics, type MapTopic } from "./learning-map";
 
 /**
  * What the child's Practice screens show (M9, UX_SPEC section 8): one recommended card, the mistakes still
@@ -43,6 +43,8 @@ export type PracticeCard = {
 };
 
 export type PracticeHome = {
+  /** False for a child with no mock or practice yet: Practice waits for a first mock, with the topics still there to browse. */
+  started: boolean;
   /** Set when the child was sent here from a mistake ("Try one like this"). */
   requested: { outcomeId: string; label: string } | null;
   /** The primary card. `resume` when a set is waiting to be finished. */
@@ -105,6 +107,7 @@ export async function getPracticeHome(child: CurrentChild, options: { outcome?: 
   const toWorkOn = topics.filter((topic) => isWeakOutcome(topic.practice) && !shown.has(topic.topicId)).slice(0, 3);
   toWorkOn.forEach((topic) => shown.add(topic.topicId));
   return {
+    started: startedTopics(map ?? { curriculumVersionId: "", topics: [], candidates: [] }).length > 0 || open !== null || mistakes.length > 0,
     requested: requestedOutcome ? { outcomeId: requestedOutcome.outcomeId, label: requestedOutcome.label } : null,
     primary,
     mistakes,

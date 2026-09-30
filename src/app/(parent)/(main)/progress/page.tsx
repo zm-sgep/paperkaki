@@ -47,7 +47,11 @@ export default async function ProgressPage() {
         <p data-summary className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
           {progress.sentence}
         </p>
-        {progress.action.supportingText ? <p className="text-lg text-ink-soft">{progress.action.title}. {progress.action.supportingText}</p> : <p className="text-lg text-ink-soft">{progress.action.title}</p>}
+        {progress.action.kind === "start_practice" ? (
+          progress.action.supportingText ? <p className="text-lg text-ink-soft">{progress.action.supportingText}</p> : null
+        ) : (
+          <p className="text-lg text-ink-soft">{progress.action.title}</p>
+        )}
         <ButtonLink href={progress.action.href} variant="primary" className="w-full sm:w-auto">
           {progress.action.ctaLabel}
         </ButtonLink>
