@@ -17,6 +17,7 @@ import { markingSummaries } from "@/repositories/postgres/marking";
 import { listPapersForAssessments } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import { getParentChildren } from "./children";
+import { getPracticeSummary } from "./practice-summary";
 
 export { todayInSingapore };
 
@@ -38,9 +39,22 @@ export async function getParentHomeState(parentProfileId: string, context: Conte
     db,
     attemptHeaders.filter((header) => header.attempt.status === "submitted" || header.attempt.status === "marked").map((header) => header.attempt.id),
   );
+  // Practice for the child in view: what is worth practising, and what has been done since the last mock.
+  const practice = selectedChildId ? await getPracticeSummary(selectedChildId, { db, now: context.now ?? new Date() }) : undefined;
   return {
     children,
     selectedChildId: selectedChildId ?? undefined,
+    ...(practice
+      ? {
+          practice: {
+            outcomes: practice.outcomes,
+            sessionsSinceLastMock: practice.sessionsSinceLastMock,
+            minutesToday: practice.minutesToday,
+            setsToday: practice.setsToday,
+            ...(practice.suggested ? { pendingSuggestion: { name: practice.suggested.name } } : {}),
+          },
+        }
+      : {}),
     assessments: assessments.map((assessment) => ({
       id: assessment.id,
       childId: assessment.childId,

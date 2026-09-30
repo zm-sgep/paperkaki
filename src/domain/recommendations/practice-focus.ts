@@ -78,7 +78,10 @@ export function weakestDueOutcome(outcomes: readonly PracticeOutcome[], now: str
   return outcomes.filter((o) => isDueForPractice(o, now)).sort(compareOutcomes)[0];
 }
 
-/** True once today's practice minutes reach the daily target. Unknown minutes count as zero. */
-export function dailyPracticeComplete(minutesToday: number | undefined): boolean {
-  return (minutesToday ?? 0) >= DAILY_PRACTICE_TARGET_MINUTES;
+/**
+ * True once today's practice reaches the daily target: the minutes add up to it, or one whole practice set
+ * has been finished (a set is the day's plan, however quickly it went). Unknown counts as none.
+ */
+export function dailyPracticeComplete(minutesToday: number | undefined, setsToday: number | undefined = 0): boolean {
+  return (setsToday ?? 0) >= 1 || (minutesToday ?? 0) >= DAILY_PRACTICE_TARGET_MINUTES;
 }

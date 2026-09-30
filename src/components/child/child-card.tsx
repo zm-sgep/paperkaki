@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { ButtonLink } from "@/components/ui/button";
+import { SubmitButton } from "@/components/ui/submit-button";
 
 /** A rounded, warm card for the child screens. */
 export function ChildCard({ children, className }: { children: ReactNode; className?: string }) {
@@ -20,21 +21,36 @@ export function ChildHero({
   supportingText,
   ctaLabel,
   href,
+  action,
+  as: Heading = "h1",
 }: {
   overline?: string;
   title: ReactNode;
   supportingText?: ReactNode;
   ctaLabel: string;
+  /** Where the button goes. Ignored when `action` is given. */
   href: string;
+  /** A server action the button runs instead of following a link (for a one-tap start). */
+  action?: () => Promise<void>;
+  /** The card is the page's heading by default; a page with its own heading uses "h2". */
+  as?: "h1" | "h2";
 }) {
   return (
     <section className="flex flex-col items-start gap-4 rounded-3xl border-2 border-kaki/30 bg-kaki-soft p-6 sm:p-8">
       {overline ? <p className="text-base font-semibold uppercase tracking-wide text-kaki-strong">{overline}</p> : null}
-      <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">{title}</h1>
+      <Heading className={`${Heading === "h1" ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"} font-semibold tracking-tight text-ink`}>{title}</Heading>
       {supportingText ? <p className="text-xl text-ink-soft">{supportingText}</p> : null}
-      <ButtonLink href={href} variant="primary" className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
-        {ctaLabel}
-      </ButtonLink>
+      {action ? (
+        <form action={action} className="w-full sm:w-auto">
+          <SubmitButton variant="primary" className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
+            {ctaLabel}
+          </SubmitButton>
+        </form>
+      ) : (
+        <ButtonLink href={href} variant="primary" className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
+          {ctaLabel}
+        </ButtonLink>
+      )}
     </section>
   );
 }

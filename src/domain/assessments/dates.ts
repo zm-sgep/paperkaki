@@ -21,6 +21,11 @@ export function todayInSingapore(now: Date = new Date()): IsoDate {
   }).format(now);
 }
 
+/** The moment the Singapore calendar day of `now` began (midnight, UTC+8). */
+export function startOfSingaporeDay(now: Date = new Date()): Date {
+  return new Date(`${todayInSingapore(now)}T00:00:00+08:00`);
+}
+
 /** True for a real calendar day such as "2026-10-14" ("2026-02-30" is not one). */
 export function isValidIsoDate(value: string): boolean {
   const match = ISO_DATE.exec(value);

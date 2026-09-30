@@ -11,16 +11,13 @@ CREATE TABLE "practice_responses" (
 	"score" integer,
 	"max_score" integer NOT NULL,
 	"result" text,
-	"hint_shown" boolean DEFAULT false NOT NULL,
-	"solution_shown" boolean DEFAULT false NOT NULL,
 	"answered_at" timestamp with time zone,
 	CONSTRAINT "practice_responses_added_as" CHECK ("practice_responses"."added_as" IN ('planned', 'similar')),
 	CONSTRAINT "practice_responses_option" CHECK ("practice_responses"."selected_option" IS NULL OR "practice_responses"."selected_option" IN ('A', 'B', 'C', 'D')),
 	CONSTRAINT "practice_responses_typed_length" CHECK ("practice_responses"."typed_answer" IS NULL OR char_length("practice_responses"."typed_answer") <= 500),
 	CONSTRAINT "practice_responses_result" CHECK ("practice_responses"."result" IS NULL OR "practice_responses"."result" IN ('right', 'wrong', 'unclear')),
 	CONSTRAINT "practice_responses_score_range" CHECK ("practice_responses"."score" IS NULL OR "practice_responses"."score" BETWEEN 0 AND "practice_responses"."max_score"),
-	CONSTRAINT "practice_responses_answered_matches_result" CHECK (("practice_responses"."answered_at" IS NULL) = ("practice_responses"."result" IS NULL)),
-	CONSTRAINT "practice_responses_position" CHECK ("practice_responses"."position" >= 1)
+	CONSTRAINT "practice_responses_answered_matches_result" CHECK (("practice_responses"."answered_at" IS NULL) = ("practice_responses"."result" IS NULL))
 );
 --> statement-breakpoint
 CREATE TABLE "practice_sessions" (

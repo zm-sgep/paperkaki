@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { boolean, check, index, integer, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
+import { check, index, integer, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
 import { curriculumOutcomes, curriculumTopics } from "./curriculum";
 import { children, parentProfiles } from "./identity";
 import { questions } from "./questions";
@@ -87,8 +87,6 @@ export const practiceResponses = pgTable(
     maxScore: integer("max_score").notNull(),
     /** "right", "wrong", or "unclear" when a person would need to look (no evidence is written for that). */
     result: text("result"),
-    hintShown: boolean("hint_shown").notNull().default(false),
-    solutionShown: boolean("solution_shown").notNull().default(false),
     answeredAt: timestamp("answered_at", { withTimezone: true }),
   },
   (table) => [
@@ -101,7 +99,6 @@ export const practiceResponses = pgTable(
     check("practice_responses_result", sql`${table.result} IS NULL OR ${table.result} IN ('right', 'wrong', 'unclear')`),
     check("practice_responses_score_range", sql`${table.score} IS NULL OR ${table.score} BETWEEN 0 AND ${table.maxScore}`),
     check("practice_responses_answered_matches_result", sql`(${table.answeredAt} IS NULL) = (${table.result} IS NULL)`),
-    check("practice_responses_position", sql`${table.position} >= 1`),
   ],
 );
 

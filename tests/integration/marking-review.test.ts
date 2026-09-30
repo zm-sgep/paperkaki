@@ -5,6 +5,7 @@ import { assignMockToChild, saveAttemptProgress, startAttempt, submitAttempt } f
 import { createChild } from "@/application/commands/children";
 import { markMistakesReviewed, markResultSeenByChild, markResultSeenByParent, saveMarkingReview } from "@/application/commands/marking-review";
 import { generateMock } from "@/application/commands/papers";
+import { recordAttemptEvidence } from "@/application/mastery";
 import { InputError, NotFoundError } from "@/application/errors";
 import { getChildToday } from "@/application/queries/child-today";
 import type { CurrentChild } from "@/application/queries/current-child";
@@ -20,6 +21,7 @@ import {
 import { serialiseStrokes } from "@/domain/attempts";
 import type { Database } from "@/repositories/postgres/client";
 import { listAttemptPaperQuestions } from "@/repositories/postgres/attempts";
+import { listEvidenceForChild } from "@/repositories/postgres/mastery";
 import { attemptSessions, markingDecisions, markingReviews, attemptResponses } from "@/repositories/postgres/schema";
 import { AnswerSchema } from "@/schemas/question-content";
 import { createAIService } from "@/services/ai/gateway";
@@ -217,6 +219,16 @@ describe("marking review, results and the marked paper (M7)", () => {
     await expect(saveMarkingReview(parentA, first.attemptId, { paperQuestionId: first.wordProblem.paperQuestionId, score: 0 }, ctx())).rejects.toBeInstanceOf(InputError);
   });
 
+  it("writes mastery evidence only once the parent's check has made the marks final, once per answer", async () => {
+    const evidence = await listEvidenceForChild(db, child.childId);
+    expect(evidence.filter((row) => row.attemptId === first.attemptId)).toHaveLength(first.items.length);
+    // The checked answer counts at the mark the parent gave, not at the provisional 0.
+    const checked = evidence.find((row) => row.questionId === first.wordProblem.question.id);
+    expect(checked?.scoreRatio).toBeCloseTo((first.wordProblem.marks - 1) / first.wordProblem.marks);
+    await recordAttemptEvidence(db, first.attemptId, at(900));
+    expect((await listEvidenceForChild(db, child.childId)).filter((row) => row.attemptId === first.attemptId)).toHaveLength(first.items.length);
+  });
+
   it("totals the marks that count, in the words a parent reads, and this is the first mock", async () => {
     const total = first.items.reduce((sum, item) => sum + item.marks, 0);
     const result = await getParentResult(parentA, first.attemptId, ctx());
@@ -244,7 +256,7 @@ describe("marking review, results and the marked paper (M7)", () => {
 
   it("gives the child a warm result with no comparisons, and the marked paper puts the mistake first", async () => {
     const result = await getChildResult(child.childId, first.attemptId, ctx());
-    expect(result).toMatchObject({ mistakeCount: 1, reviewHref: `/results/${first.attemptId}/paper` });
+    expect(result).toMatchObject({ mistakeCount: 1, reviewHref: `/results/${first.attemptId}/mistakes` });
     expect(result?.headline).toMatch(/^(Fantastic work|Great effort)! Let's fix 1 mistake\.$/);
     expect(result?.thingsToLearn).toHaveLength(1);
     expect(JSON.stringify(result)).not.toMatch(/rank|average|other children|weak/i);
@@ -272,7 +284,7 @@ describe("marking review, results and the marked paper (M7)", () => {
     home = await getParentHome(parentA, ctx());
     expect(home.action).toMatchObject({ kind: "review_mistakes", href: `/progress/results/${first.attemptId}#mistakes` });
     today = await getChildToday(child, ctx());
-    expect(today.action).toMatchObject({ kind: "fix_mistakes", title: "Let's fix 1 mistake", ctaLabel: "Review mistakes", href: `/results/${first.attemptId}` });
+    expect(today.action).toMatchObject({ kind: "fix_mistakes", title: "Let's fix 1 mistake", ctaLabel: "Review mistakes", href: `/results/${first.attemptId}/mistakes` });
 
     // Someone else's account changes nothing here.
     await markMistakesReviewed({ parentProfileId: parentB }, first.attemptId, ctx());

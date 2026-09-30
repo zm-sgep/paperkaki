@@ -235,7 +235,18 @@ describe("nextParentAction: after the mock is done", () => {
       title: "Length needs attention",
       supportingText: "A 15-minute practice set will help.",
       ctaLabel: "Start 15-minute Length practice",
-      href: "/progress/practice",
+      href: "/progress/practice?topic=b",
+    });
+  });
+
+  it("a practice the parent already suggested is not suggested again", () => {
+    const outcomes = [outcome({ outcomeId: "b", name: "Length", state: "learning" })];
+    expect(nextParentAction(state({ ...seen, practice: { outcomes, pendingSuggestion: { name: "Length" } } }))).toEqual({
+      kind: "done_today",
+      title: "Length practice is ready for Mia",
+      supportingText: "It is waiting on their Today screen.",
+      ctaLabel: "See progress",
+      href: "/progress",
     });
   });
 
@@ -392,6 +403,12 @@ describe("practice focus", () => {
     expect(dailyPracticeComplete(14)).toBe(false);
     expect(dailyPracticeComplete(15)).toBe(true);
   });
+
+  it("dailyPracticeComplete counts one whole set as the day's practice", () => {
+    expect(dailyPracticeComplete(2, 1)).toBe(true);
+    expect(dailyPracticeComplete(0, 0)).toBe(false);
+    expect(dailyPracticeComplete(undefined, undefined)).toBe(false);
+  });
 });
 
 describe("nextChildAction", () => {
@@ -424,7 +441,7 @@ describe("nextChildAction", () => {
       title: "Let's finish your Length practice",
       supportingText: "Pick up where you left off.",
       ctaLabel: "Continue",
-      href: "/practice/s1",
+      href: "/practice/session/s1",
     });
     expect(nextChildAction({ ...base, unfinishedPractice: { sessionId: "s9" } }).title).toBe("Let's finish your practice");
   });
@@ -460,7 +477,7 @@ describe("nextChildAction", () => {
       title: "Let's fix 3 mistakes",
       supportingText: "Each one you fix helps you remember it next time.",
       ctaLabel: "Review mistakes",
-      href: "/results/r1",
+      href: "/results/r1/mistakes",
     });
     expect(nextChildAction({ ...base, mistakes: { count: 1, resultId: "r1" } }).title).toBe("Let's fix 1 mistake");
     expect(nextChildAction({ ...base, mistakes: { count: 0, resultId: "r1" } }).kind).toBe("done_today");
@@ -476,7 +493,34 @@ describe("nextChildAction", () => {
       supportingText: "About 15 minutes.",
       ctaLabel: "Start",
       href: "/practice",
+      practiceTopicId: "b",
     });
+  });
+
+  it("a parent's suggestion is the mission, even when today's practice is done", () => {
+    const practice = {
+      outcomes: [outcome({ outcomeId: "b", name: "Fractions", state: "learning" })],
+      minutesToday: 15,
+      setsToday: 1,
+      suggested: { outcomeId: "len", name: "Length" },
+    };
+    expect(nextChildAction({ ...base, practice })).toEqual({
+      kind: "start_practice",
+      title: "Practise Length",
+      supportingText: "Your grown-up picked this for you. About 15 minutes.",
+      ctaLabel: "Start",
+      href: "/practice",
+      practiceTopicId: "len",
+    });
+    // Still behind a mock in progress, a due mock, new results and mistakes.
+    expect(nextChildAction({ ...base, practice, mistakes: { count: 2, resultId: "r" } }).kind).toBe("fix_mistakes");
+    expect(nextChildAction({ ...base, practice, dueMock: { attemptId: "m" } }).kind).toBe("start_mock");
+  });
+
+  it("one finished practice set is the day's plan: done for today, however short it was", () => {
+    const practice = { outcomes: [outcome({ state: "learning" })], minutesToday: 3, setsToday: 1 };
+    expect(nextChildAction({ ...base, practice }).kind).toBe("done_today");
+    expect(nextChildAction({ ...base, practice: { ...practice, setsToday: 0 } }).kind).toBe("start_practice");
   });
 
   it("otherwise: You're done for today. Nice work.", () => {

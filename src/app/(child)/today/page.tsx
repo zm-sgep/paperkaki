@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getChildToday } from "@/application/queries/child-today";
 import { requireChild } from "@/application/queries/current-child";
 import { ChildHero } from "@/components/child/child-card";
+import { startRecommendedAction } from "../practice/actions";
 
 export const metadata: Metadata = { title: "Today · PaperKaki" };
 export const dynamic = "force-dynamic";
@@ -18,6 +19,7 @@ export default async function TodayPage() {
         supportingText={action.supportingText}
         ctaLabel={action.ctaLabel}
         href={action.href}
+        {...(action.kind === "start_practice" ? { action: startRecommendedAction } : {})}
       />
       {countdownLine ? <p className="text-xl text-ink-soft">{countdownLine}</p> : null}
     </>

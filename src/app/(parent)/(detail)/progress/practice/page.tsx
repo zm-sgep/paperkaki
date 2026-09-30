@@ -1,27 +1,75 @@
 import type { Metadata } from "next";
+import { getParentPracticeSuggestion } from "@/application/queries/progress";
 import { requireParent } from "@/application/queries/current-parent";
 import { ButtonLink } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { PageHeader } from "@/components/ui/page-header";
+import { SubmitButton } from "@/components/ui/submit-button";
+import { suggestPracticeAction } from "./actions";
 
 export const metadata: Metadata = { title: "Practice · PaperKaki" };
+export const dynamic = "force-dynamic";
 
-/** A placeholder until practice sets arrive: honest about it, with one way back. */
-export default async function ParentPracticePage() {
-  await requireParent();
+/**
+ * Practice is done by the child, on their own device, so the parent's part is to suggest it: one button that
+ * puts the topic at the top of their Today. Suggesting again changes nothing, and there is one way back.
+ */
+export default async function ParentPracticePage({ searchParams }: { searchParams: Promise<{ topic?: string }> }) {
+  const parent = await requireParent();
+  const { topic } = await searchParams;
+  const suggestion = await getParentPracticeSuggestion(parent.parentProfileId, topic);
+
+  if (!suggestion) {
+    return (
+      <>
+        <PageHeader title="Practice" />
+        <EmptyState
+          title="Nothing to suggest yet"
+          action={
+            <ButtonLink href="/progress" variant="secondary">
+              Back to Progress
+            </ButtonLink>
+          }
+        >
+          After a mock or some practice, we can suggest the topic that will help most.
+        </EmptyState>
+      </>
+    );
+  }
+
+  const { childNickname, topicLabel } = suggestion;
   return (
     <>
-      <PageHeader title="Practice" />
-      <EmptyState
-        title="Practice sets are on their way"
-        action={
-          <ButtonLink href="/progress" variant="secondary">
+      <PageHeader title="Practice" description={`${topicLabel} practice is done by ${childNickname}, on their own device, in about 15 minutes.`} />
+      {suggestion.alreadySuggested ? (
+        <Card data-suggested className="flex flex-col items-start gap-3 border-kaki/30 bg-kaki-soft">
+          <h2 className="text-2xl font-semibold tracking-tight text-ink">Suggested to {childNickname}</h2>
+          <p className="text-lg text-ink-soft">{topicLabel} practice is now the first thing on {childNickname}&apos;s Today screen.</p>
+          <ButtonLink href="/progress" variant="primary" className="w-full sm:w-auto">
             Back to Progress
           </ButtonLink>
-        }
-      >
-        Short practice sets for the topics that need work will appear here soon. For now, the marked paper shows the questions worth going through together.
-      </EmptyState>
+        </Card>
+      ) : (
+        <Card className="flex flex-col items-start gap-3 border-kaki/30 bg-kaki-soft">
+          <h2 className="text-2xl font-semibold tracking-tight text-ink">{topicLabel}</h2>
+          <p className="text-lg text-ink-soft">
+            {childNickname} will see it as their next mission, with a Start button. Nothing else to set up.
+          </p>
+          <form action={suggestPracticeAction.bind(null, suggestion.childId, suggestion.topicId)} className="w-full sm:w-auto">
+            <SubmitButton variant="primary" className="w-full sm:w-auto">
+              Suggest to {childNickname}
+            </SubmitButton>
+          </form>
+        </Card>
+      )}
+      {suggestion.alreadySuggested ? null : (
+        <div>
+          <ButtonLink href="/progress" variant="quiet">
+            Back to Progress
+          </ButtonLink>
+        </div>
+      )}
     </>
   );
 }

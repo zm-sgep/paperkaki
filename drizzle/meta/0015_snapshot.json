@@ -1,5 +1,5 @@
 {
-  "id": "5286e7d5-da20-4980-8c48-08312c27fc99",
+  "id": "e3589ac0-cf23-444c-8e23-97dd5d3c3210",
   "prevId": "df30c484-a8af-47b3-b622-be2191e23d77",
   "version": "7",
   "dialect": "postgresql",
@@ -4469,20 +4469,6 @@
           "primaryKey": false,
           "notNull": false
         },
-        "hint_shown": {
-          "name": "hint_shown",
-          "type": "boolean",
-          "primaryKey": false,
-          "notNull": true,
-          "default": false
-        },
-        "solution_shown": {
-          "name": "solution_shown",
-          "type": "boolean",
-          "primaryKey": false,
-          "notNull": true,
-          "default": false
-        },
         "answered_at": {
           "name": "answered_at",
           "type": "timestamp with time zone",
@@ -4617,10 +4603,6 @@
         "practice_responses_answered_matches_result": {
           "name": "practice_responses_answered_matches_result",
           "value": "(\"practice_responses\".\"answered_at\" IS NULL) = (\"practice_responses\".\"result\" IS NULL)"
-        },
-        "practice_responses_position": {
-          "name": "practice_responses_position",
-          "value": "\"practice_responses\".\"position\" >= 1"
         }
       },
       "isRLSEnabled": false

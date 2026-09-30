@@ -34,6 +34,13 @@ export type ChildActionState = {
     outcomes: PracticeOutcome[];
     /** Practice minutes done today. */
     minutesToday?: number;
+    /** Practice sets finished today. One whole set is the day's plan. */
+    setsToday?: number;
+    /**
+     * A topic a parent has suggested and the child has not started. It is the mission until it is started,
+     * even on a day the plan is otherwise done. `outcomeId` is the topic's id, as for the other outcomes.
+     */
+    suggested?: { outcomeId: string; name: string };
   };
 };
 
@@ -52,6 +59,8 @@ export type ChildAction = {
   supportingText: string;
   ctaLabel: string;
   href: string;
+  /** For "start_practice": the topic to practise, so the button can begin the set in one tap. */
+  practiceTopicId?: string;
 };
 
 /** Checked in this order; the first that applies is the mission. */
@@ -93,7 +102,7 @@ export function nextChildAction(state: ChildActionState): ChildAction {
       title: focusName ? `Let's finish your ${focusName} practice` : "Let's finish your practice",
       supportingText: "Pick up where you left off.",
       ctaLabel: "Continue",
-      href: `/practice/${sessionId}`,
+      href: `/practice/session/${sessionId}`,
     };
   }
 
@@ -133,11 +142,22 @@ export function nextChildAction(state: ChildActionState): ChildAction {
       title: count === 1 ? "Let's fix 1 mistake" : `Let's fix ${count} mistakes`,
       supportingText: "Each one you fix helps you remember it next time.",
       ctaLabel: "Review mistakes",
-      href: `/results/${resultId}`,
+      href: `/results/${resultId}/mistakes`,
     };
   }
 
-  const focus = state.practice && !dailyPracticeComplete(state.practice.minutesToday)
+  const suggested = state.practice?.suggested;
+  if (suggested) {
+    return {
+      kind: "start_practice",
+      title: `Practise ${suggested.name}`,
+      supportingText: `Your grown-up picked this for you. About ${PRACTICE_SESSION_MINUTES} minutes.`,
+      ctaLabel: "Start",
+      href: "/practice",
+      practiceTopicId: suggested.outcomeId,
+    };
+  }
+  const focus = state.practice && !dailyPracticeComplete(state.practice.minutesToday, state.practice.setsToday)
     ? weakestDueOutcome(state.practice.outcomes, state.now)
     : undefined;
   if (focus) {
@@ -147,6 +167,7 @@ export function nextChildAction(state: ChildActionState): ChildAction {
       supportingText: `About ${PRACTICE_SESSION_MINUTES} minutes.`,
       ctaLabel: "Start",
       href: "/practice",
+      practiceTopicId: focus.outcomeId,
     };
   }
 

@@ -265,7 +265,7 @@ export async function getChildResult(childId: string, attemptId: string, context
     headline: childHeadline({ score, maxScore, mistakeCount }),
     thingsToLearn: thingsToLearn(questions),
     mistakeCount,
-    reviewHref: `/results/${attemptId}/paper`,
+    reviewHref: `/results/${attemptId}/mistakes`,
   };
 }
 
@@ -294,6 +294,11 @@ export type MarkedPaperEntry = {
   /** The marker's one-sentence note for the parent. Never shown to the child. */
   parentNote: string | null;
   topicLabel: string;
+  /** The skill, in the child's words: "Add and subtract big numbers". */
+  skillLabel: string;
+  /** The skill this question tests, and the exact question, so "Try one like this" can find a different one. */
+  outcomeId: string;
+  questionId: string;
   /** Where "Try one like this" goes. */
   tryHref: string;
 };
@@ -351,6 +356,9 @@ export async function getMarkedPaper(viewer: Viewer, attemptId: string, context:
       explanation: mistake && !(audience === "parent" && ai?.reason) ? explanationFor(errorType) : null,
       parentNote: audience === "parent" && ai ? ai.reason : null,
       topicLabel: result.topicLabel,
+      skillLabel: result.skillLabel,
+      outcomeId: result.outcomeId,
+      questionId: item.question.id,
       tryHref: audience === "parent" ? `/progress/practice?topic=${encodeURIComponent(result.topicId)}` : `/practice?outcome=${encodeURIComponent(result.outcomeId)}`,
     });
   }
@@ -435,14 +443,16 @@ export async function getQuickCheck(parentProfileId: string, attemptId: string, 
 // Recent results, for Progress
 // ---------------------------------------------------------------------------
 
-export type RecentResult = { attemptId: string; label: string; childNickname: string; scoreText: string; href: string };
+export type RecentResult = { attemptId: string; childId: string; label: string; childNickname: string; scoreText: string; href: string };
 
 /** The newest marked mocks the viewer can open, newest first. */
-export async function listRecentResults(viewer: Viewer, limit = 5, context: Context = {}): Promise<RecentResult[]> {
+export async function listRecentResults(viewer: Viewer, limit = 5, context: Context & { childId?: string } = {}): Promise<RecentResult[]> {
   const db = await resolveDb(context);
   const headers =
     viewer.kind === "parent"
-      ? (await listAttemptHeadersForParent(db, viewer.parentProfileId)).filter((header) => header.attempt.status === "marked")
+      ? (await listAttemptHeadersForParent(db, viewer.parentProfileId)).filter(
+          (header) => header.attempt.status === "marked" && (context.childId === undefined || header.attempt.childId === context.childId),
+        )
       : await listMarkedAttemptHeaders(db, viewer.childId);
   const newest = headers.sort((a, b) => (b.attempt.markedAt?.getTime() ?? 0) - (a.attempt.markedAt?.getTime() ?? 0)).slice(0, limit);
   const results: RecentResult[] = [];
@@ -451,6 +461,7 @@ export async function listRecentResults(viewer: Viewer, limit = 5, context: Cont
     if (!totals) continue;
     results.push({
       attemptId: header.attempt.id,
+      childId: header.attempt.childId,
       label: attemptLabel(header.assessmentSubject, header.assessmentName, header.paperNumber),
       childNickname: header.childNickname,
       scoreText: scoreText(totals.score, totals.maxScore),

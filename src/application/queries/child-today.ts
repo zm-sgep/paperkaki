@@ -7,6 +7,7 @@ import { listMarkedAttemptHeaders, listOpenAttemptHeaders } from "@/repositories
 import { markingSummaries } from "@/repositories/postgres/marking";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import type { CurrentChild } from "./current-child";
+import { getPracticeSummary } from "./practice-summary";
 
 type Context = { db?: Database; now?: Date };
 
@@ -19,7 +20,8 @@ export type ChildToday = {
 /** The state the child's next-action policy decides from. Grows as more kinds of activity exist. */
 export async function getChildActionState(child: CurrentChild, context: Context = {}): Promise<ChildActionState> {
   const db = context.db ?? (await getReadyDb());
-  const state: ChildActionState = { now: (context.now ?? new Date()).toISOString() };
+  const now = context.now ?? new Date();
+  const state: ChildActionState = { now: now.toISOString() };
   const open = await listOpenAttemptHeaders(db, child.childId);
   // A paper being sat comes first; among several, the one worked on most recently (headers are newest first).
   const inProgress = open.find((header) => header.attempt.status === "in_progress");
@@ -51,6 +53,16 @@ export async function getChildActionState(child: CurrentChild, context: Context 
   }
   const withMistakes = marked.find((header) => header.attempt.mistakesReviewedAt === null && (summaries.get(header.attempt.id)?.mistakes ?? 0) > 0);
   if (withMistakes) state.mistakes = { count: summaries.get(withMistakes.attempt.id)?.mistakes ?? 0, resultId: withMistakes.attempt.id };
+
+  // Practice: a set left unfinished, then the topics worth practising (and a parent's suggestion).
+  const practice = await getPracticeSummary(child.childId, { db, now });
+  if (practice.unfinished) state.unfinishedPractice = practice.unfinished;
+  state.practice = {
+    outcomes: practice.outcomes,
+    minutesToday: practice.minutesToday,
+    setsToday: practice.setsToday,
+    ...(practice.suggested ? { suggested: practice.suggested } : {}),
+  };
   return state;
 }
 

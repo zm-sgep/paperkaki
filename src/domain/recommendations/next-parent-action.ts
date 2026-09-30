@@ -69,6 +69,10 @@ export type ParentActionPractice = {
   sessionsSinceLastMock?: number;
   /** Practice minutes done today. */
   minutesToday?: number;
+  /** Practice sets finished today. */
+  setsToday?: number;
+  /** A practice the parent already suggested that the child has not started. Suggesting again would say nothing new. */
+  pendingSuggestion?: { name: string };
 };
 
 export type ParentActionState = {
@@ -258,14 +262,24 @@ function afterMockAction(
     };
   }
 
+  if (practice?.pendingSuggestion) {
+    return {
+      kind: "done_today",
+      title: `${practice.pendingSuggestion.name} practice is ready for ${child.nickname}`,
+      supportingText: "It is waiting on their Today screen.",
+      ctaLabel: "See progress",
+      href: "/progress",
+    };
+  }
+
   const weak = practice?.outcomes ? weakestWeakOutcome(practice.outcomes) : undefined;
-  if (weak && !dailyPracticeComplete(practice?.minutesToday)) {
+  if (weak && !dailyPracticeComplete(practice?.minutesToday, practice?.setsToday)) {
     return {
       kind: "start_practice",
       title: `${weak.name} needs attention`,
       supportingText: `A ${PRACTICE_SESSION_MINUTES}-minute practice set will help.`,
       ctaLabel: `Start ${PRACTICE_SESSION_MINUTES}-minute ${weak.name} practice`,
-      href: "/progress/practice",
+      href: `/progress/practice?topic=${encodeURIComponent(weak.outcomeId)}`,
     };
   }
 

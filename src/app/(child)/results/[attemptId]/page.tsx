@@ -58,7 +58,7 @@ export default async function ChildResultsPage({ params }: { params: Promise<{ a
         </ChildCard>
       ) : null}
 
-      <div>
+      <div className="flex flex-col items-start gap-3">
         {result.mistakeCount > 0 ? (
           <ButtonLink href={result.reviewHref} variant="primary" className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
             Review mistakes
@@ -68,6 +68,9 @@ export default async function ChildResultsPage({ params }: { params: Promise<{ a
             Back to Today
           </ButtonLink>
         )}
+        <ButtonLink href={`/results/${result.attemptId}/paper`} variant="quiet" className="min-h-14 rounded-2xl px-6 text-lg">
+          See my whole paper
+        </ButtonLink>
       </div>
     </>
   );

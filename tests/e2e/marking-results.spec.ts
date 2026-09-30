@@ -202,7 +202,9 @@ test.describe("marking, quick check, results and the marked paper", () => {
     await expectNoSideScroll(page);
     await shot(page, "child-results", tag);
 
-    await page.getByRole("link", { name: "Review mistakes" }).click();
+    // "Review mistakes" goes through them one at a time (its own test covers that); the whole paper is a quiet link.
+    await expect(page.getByRole("link", { name: "Review mistakes" })).toHaveAttribute("href", `/results/${attemptId}/mistakes`);
+    await page.getByRole("link", { name: "See my whole paper" }).click();
     await expect(page).toHaveURL(new RegExp(`/results/${attemptId}/paper$`));
     const childFirst = page.locator(`[data-mistakes] [data-question="${wordProblem}"]`);
     await expect(childFirst).toContainText(`Question ${wordProblem}`);
