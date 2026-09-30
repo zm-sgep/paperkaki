@@ -19,6 +19,7 @@
     "db:seed": "tsx scripts/db-seed.ts",
     "curriculum:import": "tsx scripts/import-curriculum.ts",
     "questions:import": "tsx scripts/import-questions.ts",
+    "eval:extraction": "tsx evals/scope-extraction/run.ts",
     "test:integration": "vitest run --project integration",
     "test:e2e": "playwright test",
     "test:e2e:mock-preview": "playwright test -c playwright.mock-preview.config.ts",

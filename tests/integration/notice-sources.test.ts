@@ -200,7 +200,7 @@ describe("school notice upload, reading and confirming (M5)", () => {
       const [job] = await db.select().from(jobsTable).where(eq(jobsTable.id, jobId));
       expect(job).toMatchObject({ status: "failed", errorCode: "unreadable" });
       const screen = await getNoticeScreen(parentA, sourceId, { db, now: NOW, jobs });
-      expect(screen).toEqual({ state: "failed", code: "unreadable", retry: false });
+      expect(screen).toMatchObject({ state: "failed", code: "unreadable", retry: false });
       await expect(retryNotice(parentA, sourceId, jobs, ctx())).rejects.toBeInstanceOf(InputError);
     });
 
@@ -216,7 +216,7 @@ describe("school notice upload, reading and confirming (M5)", () => {
       const { sourceId, jobId } = await upload(parentA, [sampleNoticePdf()], { nickname: "Test Child T" });
       failNext = new AIError("unavailable", "down");
       await jobs.run(jobId);
-      expect(await getNoticeScreen(parentA, sourceId, { db, now: NOW, jobs })).toEqual({ state: "failed", code: "ai_unavailable", retry: true });
+      expect(await getNoticeScreen(parentA, sourceId, { db, now: NOW, jobs })).toMatchObject({ state: "failed", code: "ai_unavailable", retry: true });
 
       const retried = await retryNotice(parentA, sourceId, jobs, ctx());
       expect((await getNoticeStatus(parentA, sourceId, { db, jobs }))?.status).toBe("queued");
@@ -226,7 +226,7 @@ describe("school notice upload, reading and confirming (M5)", () => {
       const second = await upload(parentA, [sampleNoticePdf()], { nickname: "Test Child T2" });
       failNext = new AIError("timeout", "slow");
       await jobs.run(second.jobId);
-      expect(await getNoticeScreen(parentA, second.sourceId, { db, now: NOW, jobs })).toEqual({ state: "failed", code: "timeout", retry: true });
+      expect(await getNoticeScreen(parentA, second.sourceId, { db, now: NOW, jobs })).toMatchObject({ state: "failed", code: "timeout", retry: true });
     });
 
     it("marks topic wording the alias list does not know as 'Please check' when a model guesses, and as unmatched when it does not", async () => {

@@ -1,0 +1,41 @@
+{
+  "note": "What a correct reading of each invented sample notice gives for Mathematics. Topics are curriculum topic codes after the alias table (and, for wording it does not know, the model's mapping) has been applied.",
+  "cases": [
+    {
+      "id": "p3-eoy-sample-pdf",
+      "files": ["tests/fixtures/notices/p3-eoy-sample.pdf"],
+      "expected": {
+        "date": "2026-10-27",
+        "startTime": "08:00",
+        "durationMinutes": 90,
+        "assessmentType": "end_of_year",
+        "topics": ["P3-MG-AN", "P3-MG-AR", "P3-MG-LM", "P3-MG-PL", "P3-MG-TM", "P3-NA-AS", "P3-NA-FR", "P3-NA-MD", "P3-NA-MN", "P3-NA-WN", "P3-ST-BG"],
+        "appliesAcross": true,
+        "sections": [
+          { "label": "Section A", "kind": "mcq", "questionCount": 6, "totalMarks": 12 },
+          { "label": "Section B", "kind": "short", "questionCount": 16, "totalMarks": 26 },
+          { "label": "Section C", "kind": "word_problem", "questionCount": 4, "totalMarks": 12 }
+        ],
+        "notesMention": ["protractor"]
+      }
+    },
+    {
+      "id": "p3-eoy-sample-photos",
+      "files": ["tests/fixtures/notices/p3-eoy-sample-photo-1.png", "tests/fixtures/notices/p3-eoy-sample-photo-2.png"],
+      "expected": {
+        "date": "2026-10-27",
+        "startTime": "08:00",
+        "durationMinutes": 90,
+        "assessmentType": "end_of_year",
+        "topics": ["P3-MG-AN", "P3-MG-AR", "P3-MG-LM", "P3-MG-PL", "P3-MG-TM", "P3-NA-AS", "P3-NA-FR", "P3-NA-MD", "P3-NA-MN", "P3-NA-WN", "P3-ST-BG"],
+        "appliesAcross": true,
+        "sections": [
+          { "label": "Section A", "kind": "mcq", "questionCount": 6, "totalMarks": 12 },
+          { "label": "Section B", "kind": "short", "questionCount": 16, "totalMarks": 26 },
+          { "label": "Section C", "kind": "word_problem", "questionCount": 4, "totalMarks": 12 }
+        ],
+        "notesMention": ["protractor"]
+      }
+    }
+  ]
+}

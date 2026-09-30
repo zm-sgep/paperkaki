@@ -174,8 +174,10 @@ test.describe("paper format", () => {
     const text = await downloadStudentText(page, `e2e-format-custom-student-${tag}.pdf`);
     expect(text).toContain("Booklet A (12 marks)");
     expect(text).toContain("Booklet B (26 marks)");
-    expect(text).toContain("Total: 38 marks");
-    expect(text).toContain("Duration: 75 minutes");
+    // Parts named like booklets print as booklets, each with its own header (commit 5f79de6).
+    expect(text).toContain("Total: 12 marks (this booklet)");
+    expect(text).toContain("Total: 26 marks (this booklet)");
+    expect(text).toContain("Duration: 75 minutes (whole paper)");
     expect(text).not.toContain("Section C");
 
     // The next end-of-year assessment for the same child starts from the saved format.
