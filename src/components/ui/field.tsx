@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 
-/** The class every text-like input uses: 48px tall, visible border, larger text. */
+/** The class every text-like input uses: 48px tall, a clearly visible edge, larger text. */
 export const inputClassName =
-  "min-h-12 w-full rounded-lg border-2 border-line bg-surface px-4 text-lg text-ink focus-visible:border-kaki aria-[invalid=true]:border-danger";
+  "min-h-12 w-full rounded-control border-[1.5px] border-line-strong bg-surface px-4 text-lg text-ink transition-colors hover:border-ink-soft focus-visible:border-kaki aria-[invalid=true]:border-danger";
 
 /** A label above its control, with an optional hint and an inline error in plain words. */
 export function Field({
@@ -20,7 +20,7 @@ export function Field({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-lg font-medium text-ink">
+      <label htmlFor={id} className="text-lg font-semibold text-ink">
         {label}
       </label>
       {hint ? (

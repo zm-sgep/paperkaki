@@ -137,14 +137,21 @@ h3 {
 }
 
 /*
- * Full Mock Mode and other exam-like surfaces stay plain: the system font, no decoration on
- * buttons. Only the colour tokens above reach them.
+ * Full Mock Mode and other exam-like surfaces stay plain: the system font, the old 8px corners and
+ * no decoration on buttons. Only the colour tokens above reach them.
  */
-[data-exam] {
+[data-mock-mode],
+[data-mock-mode-loading],
+[data-mock-start] {
   font-family: var(--font-exam);
 }
 
-[data-exam] [data-variant] {
+[data-mock-mode] [data-variant] {
+  border-radius: 0.5rem;
+}
+
+[data-mock-mode] [data-variant],
+[data-mock-start] [data-variant] {
   box-shadow: none;
 }
 
