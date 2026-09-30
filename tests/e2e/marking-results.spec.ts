@@ -161,7 +161,9 @@ test.describe("marking, quick check, results and the marked paper", () => {
     const panel = parent.locator("[data-feedback-panel]");
     await expect(panel.getByRole("heading", { level: 2, name: `Question ${wordProblem}` })).toBeVisible();
     await expect(panel.locator("[data-what-happened]")).toContainText("They wrote 0.01");
-    await expect(panel.getByText("slip in the calculation")).toBeVisible();
+    // The parent reads the marker's specific note once, not the general sentence as well.
+    await expect(panel.getByText("slip in the last step")).toBeVisible();
+    await expect(panel.getByText("slip in the calculation")).toHaveCount(0);
     await expect(panel.getByRole("heading", { level: 3, name: "Worked solution" })).toBeVisible();
     await expect(panel.locator("[data-worked-solution]")).not.toBeEmpty();
     await expect(panel.getByRole("link", { name: "Try one like this" })).toHaveAttribute("href", /\/progress\/practice/);
