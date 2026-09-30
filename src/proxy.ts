@@ -7,7 +7,7 @@ import { SESSION_COOKIE_NAME, verifySessionToken } from "@/services/auth/session
 /** Areas that need a signed-in parent. Admin is checked for role by its layout and page. */
 const PROTECTED_PREFIXES = ["/home", "/prepare", "/progress", "/rewards", "/account", "/admin"] as const;
 /** Child screens that have no parent version. */
-const CHILD_ONLY_PREFIXES = ["/today", "/practice", "/kid"] as const;
+const CHILD_ONLY_PREFIXES = ["/today", "/practice", "/results", "/kid"] as const;
 /**
  * Destinations both experiences have (ADR-0009). A signed-in parent gets the parent screen; a child
  * device gets the child screen, served from /kid/... behind the same address.

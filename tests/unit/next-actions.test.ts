@@ -235,7 +235,7 @@ describe("nextParentAction: after the mock is done", () => {
       title: "Length needs attention",
       supportingText: "A 15-minute practice set will help.",
       ctaLabel: "Start 15-minute Length practice",
-      href: "/practice",
+      href: "/progress/practice",
     });
   });
 

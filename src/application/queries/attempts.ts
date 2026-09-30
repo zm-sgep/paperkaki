@@ -3,6 +3,7 @@ import { referencedAssetKeys } from "@/domain/questions";
 import type { Database } from "@/repositories/postgres/client";
 import {
   getAttemptHeader,
+  type AttemptScope,
   listAttemptPaperQuestions,
   listAttemptResponses,
   type AttemptHeader,
@@ -10,7 +11,7 @@ import {
 import { getReadyDb } from "@/repositories/postgres/ready";
 import type { AttemptSession } from "@/repositories/postgres/schema";
 import { AnswerSchema, QuestionContentSchema, type Block } from "@/schemas/question-content";
-import { getStorage, type StorageService } from "@/services/storage";
+import { getStorage, isStorageBucket, type StorageService } from "@/services/storage";
 import type { CurrentChild } from "./current-child";
 
 type Context = { db?: Database; now?: Date };
@@ -172,13 +173,14 @@ export async function getParentAttemptView(parentProfileId: string, attemptId: s
  * session is valid and only for keys the paper's questions use, so there is no link to keep or share.
  */
 export async function getAttemptAsset(
-  child: CurrentChild,
+  child: CurrentChild | AttemptScope,
   attemptId: string,
   key: string,
   context: Context & { storage?: StorageService } = {},
 ): Promise<{ body: Uint8Array; contentType: string } | null> {
   const db = await resolveDb(context);
-  const header = await getAttemptHeader(db, attemptId, { childId: child.childId });
+  const scope: AttemptScope = "parentProfileId" in child ? { parentProfileId: child.parentProfileId } : { childId: child.childId };
+  const header = await getAttemptHeader(db, attemptId, scope);
   if (!header || header.attempt.status === "assigned") return null;
   const items = await listAttemptPaperQuestions(db, header.paperId);
   const allowed = new Set<string>();
@@ -189,4 +191,27 @@ export async function getAttemptAsset(
   }
   if (!allowed.has(key)) return null;
   return (context.storage ?? getStorage()).get({ bucket: "question-assets", key });
+}
+
+/**
+ * A picture of the working on one question of a paper that has been handed in: the snapshot of the pen
+ * strokes, or the photographed page. Only the child it belongs to and their parent can see it, and it is
+ * served through the app (no link is ever stored or shared).
+ */
+export async function getAttemptWorkingImage(
+  scope: AttemptScope,
+  attemptId: string,
+  position: number,
+  context: Context & { storage?: StorageService } = {},
+): Promise<{ body: Uint8Array; contentType: string } | null> {
+  if (!Number.isInteger(position) || position < 1) return null;
+  const db = await resolveDb(context);
+  const header = await getAttemptHeader(db, attemptId, scope);
+  if (!header || header.attempt.status === "assigned" || header.attempt.status === "in_progress") return null;
+  const items = await listAttemptPaperQuestions(db, header.paperId);
+  const item = items.find((candidate) => candidate.position === position);
+  if (!item) return null;
+  const response = (await listAttemptResponses(db, attemptId)).find((row) => row.paperQuestionId === item.paperQuestionId);
+  if (!response?.handwritingBucket || !response.handwritingKey || !isStorageBucket(response.handwritingBucket)) return null;
+  return (context.storage ?? getStorage()).get({ bucket: response.handwritingBucket, key: response.handwritingKey });
 }

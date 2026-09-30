@@ -39,3 +39,29 @@ export function inProgressOnIpadText(mockNumber: number, childNickname: string):
 export function handedInText(mockNumber: number, childNickname: string): string {
   return `${childNickname} handed in Mock ${mockNumber}.`;
 }
+
+export type MarkingStep = { id: "uploaded" | "reading" | "marking" | "preparing"; label: string; state: "done" | "active" | "waiting" | "failed" };
+
+/**
+ * The steps of the marking progress screen. It only ever shows where marking really is (no countdown,
+ * no made-up time). A paper done on the iPad was never uploaded or read from photos, so it has fewer steps.
+ */
+export function markingStepsFor(mode: "ipad" | "print_upload", stage: string): MarkingStep[] {
+  const order = ["reading", "marking", "preparing", "done"];
+  const at = stage === "failed" ? 0 : Math.max(0, order.indexOf(stage));
+  const state = (index: number, own: number): MarkingStep["state"] => {
+    if (stage === "failed" && own === 0) return "failed";
+    if (stage === "done" || index < own) return "done";
+    return index === own ? "active" : "waiting";
+  };
+  const steps: MarkingStep[] = [];
+  if (mode === "print_upload") {
+    steps.push({ id: "uploaded", label: "Uploading paper", state: "done" });
+    steps.push({ id: "reading", label: "Reading answers", state: state(at, 0) });
+  } else {
+    steps.push({ id: "uploaded", label: "Paper handed in", state: "done" });
+  }
+  steps.push({ id: "marking", label: "Marking questions", state: state(at, 1) });
+  steps.push({ id: "preparing", label: "Preparing results", state: state(at, 2) });
+  return steps;
+}

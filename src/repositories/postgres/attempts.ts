@@ -90,6 +90,14 @@ export async function listOpenAttemptHeaders(db: Database, childId: string): Pro
   );
 }
 
+/** A child's marked attempts, newest mark first. */
+export async function listMarkedAttemptHeaders(db: Database, childId: string): Promise<AttemptHeader[]> {
+  const rows = await headerSelect(db)
+    .where(and(eq(attemptSessions.childId, childId), eq(attemptSessions.status, "marked")))
+    .orderBy(desc(attemptSessions.markedAt));
+  return rows.filter((row) => !row.archivedAt).map((row) => ({ ...row, paperId: row.attempt.paperId, questionCount: 0, totalMarks: 0 }));
+}
+
 /** Every attempt of these children, for a parent's Home. Newest first. */
 export async function listAttemptHeadersForParent(db: Database, parentProfileId: string): Promise<AttemptHeader[]> {
   const rows = await headerSelect(db)

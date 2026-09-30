@@ -265,7 +265,7 @@ function afterMockAction(
       title: `${weak.name} needs attention`,
       supportingText: `A ${PRACTICE_SESSION_MINUTES}-minute practice set will help.`,
       ctaLabel: `Start ${PRACTICE_SESSION_MINUTES}-minute ${weak.name} practice`,
-      href: "/practice",
+      href: "/progress/practice",
     };
   }
 

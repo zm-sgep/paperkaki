@@ -13,6 +13,7 @@ import type { Database } from "@/repositories/postgres/client";
 import { attemptLabel } from "@/domain/attempts";
 import { listAssessmentsForParent } from "@/repositories/postgres/assessments";
 import { listAttemptHeadersForParent } from "@/repositories/postgres/attempts";
+import { markingSummaries } from "@/repositories/postgres/marking";
 import { listPapersForAssessments } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import { getParentChildren } from "./children";
@@ -33,6 +34,10 @@ export async function getParentHomeState(parentProfileId: string, context: Conte
     listAttemptHeadersForParent(db, parentProfileId),
   ]);
   const papers = await listPapersForAssessments(db, assessments.map((assessment) => assessment.id));
+  const summaries = await markingSummaries(
+    db,
+    attemptHeaders.filter((header) => header.attempt.status === "submitted" || header.attempt.status === "marked").map((header) => header.attempt.id),
+  );
   return {
     children,
     selectedChildId: selectedChildId ?? undefined,
@@ -48,20 +53,30 @@ export async function getParentHomeState(parentProfileId: string, context: Conte
         .map((paper) => ({ id: paper.id, number: paper.number, status: "ready" as const })),
     })),
     today: todayInSingapore(context.now),
-    // Marked attempts join once results exist; until then an attempt is given, in progress or handed in.
-    attempts: attemptHeaders.flatMap((header) => {
+    attempts: attemptHeaders.map((header) => {
       const { attempt } = header;
-      if (attempt.status === "marked") return [];
-      return [
-        {
-          id: attempt.id,
-          childId: attempt.childId,
-          paperId: attempt.paperId,
-          status: attempt.status,
-          startedAt: (attempt.startedAt ?? attempt.assignedAt).toISOString(),
-          label: attemptLabel(header.assessmentSubject, header.assessmentName, header.paperNumber),
-        },
-      ];
+      const summary = summaries.get(attempt.id) ?? { waiting: 0, mistakes: 0 };
+      const base = {
+        id: attempt.id,
+        childId: attempt.childId,
+        paperId: attempt.paperId,
+        startedAt: (attempt.markedAt ?? attempt.startedAt ?? attempt.assignedAt).toISOString(),
+        label: attemptLabel(header.assessmentSubject, header.assessmentName, header.paperNumber),
+      };
+      if (attempt.status === "marked") {
+        return {
+          ...base,
+          status: "marked" as const,
+          resultId: attempt.id,
+          resultSeen: attempt.parentResultSeenAt !== null,
+          unreviewedMistakes: attempt.mistakesReviewedAt === null ? summary.mistakes : 0,
+        };
+      }
+      // Handed in: still being marked, or marked except for a few answers that need the parent's quick check.
+      if (attempt.status === "submitted" && attempt.markingStage === "done" && summary.waiting > 0) {
+        return { ...base, status: "needs_review" as const, reviewCount: summary.waiting };
+      }
+      return { ...base, status: attempt.status };
     }),
   };
 }

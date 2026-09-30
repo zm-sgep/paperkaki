@@ -3,6 +3,7 @@ import type { Database } from "./client";
 import { listAttemptPaperQuestions, listAttemptResponses, type AttemptPaperQuestion } from "./attempts";
 import {
   assessments,
+  attemptResponses,
   attemptSessions,
   children,
   curriculumOutcomes,
@@ -140,4 +141,39 @@ export async function attemptTotals(db: Database, attemptId: string, paperId: st
     maxScore += question.marks;
   }
   return { score, maxScore };
+}
+
+export type MarkingSummary = { waiting: number; mistakes: number };
+
+/**
+ * For each attempt: how many answers wait for the parent's check, and how many were marked below full
+ * marks (the mistakes). Only the decision in force counts.
+ */
+export async function markingSummaries(db: Database, attemptIds: readonly string[]): Promise<Map<string, MarkingSummary>> {
+  const summaries = new Map<string, MarkingSummary>();
+  if (attemptIds.length === 0) return summaries;
+  const rows = await db
+    .select({
+      attemptId: attemptResponses.attemptId,
+      responseId: markingDecisions.attemptResponseId,
+      seq: markingDecisions.seq,
+      reviewRequired: markingDecisions.reviewRequired,
+      finalScore: markingDecisions.finalScore,
+      maxScore: markingDecisions.maxScore,
+    })
+    .from(markingDecisions)
+    .innerJoin(attemptResponses, eq(attemptResponses.id, markingDecisions.attemptResponseId))
+    .where(inArray(attemptResponses.attemptId, [...attemptIds]));
+  const newest = new Map<string, (typeof rows)[number]>();
+  for (const row of rows) {
+    const known = newest.get(row.responseId);
+    if (!known || row.seq > known.seq) newest.set(row.responseId, row);
+  }
+  for (const row of newest.values()) {
+    const summary = summaries.get(row.attemptId) ?? { waiting: 0, mistakes: 0 };
+    if (row.reviewRequired && row.finalScore === null) summary.waiting += 1;
+    else if (row.finalScore !== null && row.finalScore < row.maxScore) summary.mistakes += 1;
+    summaries.set(row.attemptId, summary);
+  }
+  return summaries;
 }

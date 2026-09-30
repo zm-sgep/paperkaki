@@ -33,7 +33,7 @@ export default async function ParentLayout({ children }: { children: ReactNode }
       </header>
       <ParentNav />
       <main className="mx-auto flex max-w-3xl flex-col gap-6 px-4 pb-28 pt-24 sm:px-6 md:ml-60 md:max-w-none md:px-10 md:pb-12">
-        <div className="flex w-full max-w-3xl flex-col gap-6">{children}</div>
+        <div className="flex w-full max-w-3xl flex-col gap-6 has-[[data-wide-page]]:max-w-none">{children}</div>
       </main>
     </div>
   );

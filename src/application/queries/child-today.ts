@@ -3,7 +3,8 @@ import { countdownText, formatAssessmentDate, todayInSingapore } from "@/domain/
 import { nextChildAction, type ChildAction, type ChildActionState } from "@/domain/recommendations/next-child-action";
 import type { Database } from "@/repositories/postgres/client";
 import { listAssessmentsForParent } from "@/repositories/postgres/assessments";
-import { listOpenAttemptHeaders } from "@/repositories/postgres/attempts";
+import { listMarkedAttemptHeaders, listOpenAttemptHeaders } from "@/repositories/postgres/attempts";
+import { markingSummaries } from "@/repositories/postgres/marking";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import type { CurrentChild } from "./current-child";
 
@@ -37,6 +38,19 @@ export async function getChildActionState(child: CurrentChild, context: Context 
       durationText: formatDuration(due.attempt.timeLimitSeconds / 60),
     };
   }
+
+  // Marked work: the newest result the child has not looked at, then the newest with mistakes not yet gone through.
+  const marked = await listMarkedAttemptHeaders(db, child.childId);
+  const summaries = await markingSummaries(db, marked.map((header) => header.attempt.id));
+  const unseen = marked.find((header) => header.attempt.childResultSeenAt === null);
+  if (unseen) {
+    state.newResult = {
+      resultId: unseen.attempt.id,
+      label: attemptLabel(unseen.assessmentSubject, unseen.assessmentName, unseen.paperNumber),
+    };
+  }
+  const withMistakes = marked.find((header) => header.attempt.mistakesReviewedAt === null && (summaries.get(header.attempt.id)?.mistakes ?? 0) > 0);
+  if (withMistakes) state.mistakes = { count: summaries.get(withMistakes.attempt.id)?.mistakes ?? 0, resultId: withMistakes.attempt.id };
   return state;
 }
 

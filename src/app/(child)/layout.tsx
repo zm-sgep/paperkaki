@@ -17,7 +17,7 @@ export default async function ChildLayout({ children }: { children: ReactNode })
       </header>
       <ChildNav />
       <main className="mx-auto flex max-w-3xl flex-col gap-6 px-4 pb-32 pt-24 sm:px-6 md:ml-64 md:max-w-none md:px-10 md:pb-12">
-        <div className="flex w-full max-w-3xl flex-col gap-6">
+        <div className="flex w-full max-w-3xl flex-col gap-6 has-[[data-wide-page]]:max-w-none">
           {children}
           <p className="pt-6 text-base text-ink-soft">
             <Link href="/sign-in" className="inline-flex min-h-12 items-center underline underline-offset-4">
