@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Logo } from "@/components/brand/Logo";
 import { buttonClassName } from "./button";
 
 /**
@@ -18,6 +19,9 @@ export function StatusScreen({
 }) {
   return (
     <main className="mx-auto flex min-h-dvh max-w-xl flex-col items-start justify-center gap-5 px-4 py-12 sm:px-6">
+      <div className="pb-3">
+        <Logo />
+      </div>
       <h1 className="text-[1.75rem] font-bold leading-tight tracking-tight text-ink sm:text-[2rem]">{title}</h1>
       <div className="flex flex-col gap-2 text-lg text-ink-soft">{children}</div>
       <div className="pt-2">{action}</div>
