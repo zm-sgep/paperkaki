@@ -28,5 +28,7 @@ export async function saveReviewAction(attemptId: string, paperQuestionId: strin
     throw error;
   }
   revalidatePath("/", "layout");
-  redirect(resultsReady ? `/progress/results/${attemptId}` : `/progress/review/${attemptId}`);
+  // Results when nothing is left; otherwise this page shows the next answer (the revalidation above refreshes it).
+  if (resultsReady) redirect(`/progress/results/${attemptId}`);
+  return {};
 }

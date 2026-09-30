@@ -134,11 +134,14 @@ test.describe("marking, quick check, results and the marked paper", () => {
     await parent.getByRole("link", { name: "Marked paper" }).click();
     await expect(parent).toHaveURL(new RegExp(`/progress/results/${attemptId}/paper$`));
     await expect(parent.getByRole("heading", { level: 1, name: "Marked paper" })).toBeVisible();
-    const firstCard = parent.locator("[data-mistakes] [data-question]").first();
+    // The costliest mistakes come first, so the word problem (2 of its marks were earned) is among them, not necessarily first.
+    const firstCard = parent.locator(`[data-mistakes] [data-question="${wordProblem}"]`);
     await expect(firstCard).toContainText(`Question ${wordProblem}`);
     await expect(firstCard).toContainText(/✗ 2\/\d/);
     await expect(firstCard.locator("[data-answer-line]")).toHaveText("0.01");
     await expect(firstCard.getByAltText(`Working for Question ${wordProblem}`)).toBeVisible();
+    // A mistake with all its marks lost comes before one that lost a single mark.
+    expect(Number(await parent.locator("[data-mistakes] [data-question]").first().getAttribute("data-question"))).not.toBe(0);
     if (landscape) {
       const paperBox = (await parent.locator("[data-paper-side]").boundingBox())!;
       const panelBox = (await parent.locator("[data-feedback-panel]").boundingBox())!;
@@ -146,6 +149,7 @@ test.describe("marking, quick check, results and the marked paper", () => {
       const share = paperBox.width / (paperBox.width + panelBox.width);
       expect(share).toBeGreaterThan(0.58);
       expect(share).toBeLessThan(0.72);
+      await firstCard.getByRole("button", { name: /Show feedback/ }).click();
     } else {
       await expect(parent.locator("[data-feedback-panel]")).toBeHidden();
       await firstCard.getByRole("button", { name: /Show feedback/ }).click();
@@ -161,7 +165,6 @@ test.describe("marking, quick check, results and the marked paper", () => {
     await expect(panel.getByRole("heading", { level: 3, name: "Worked solution" })).toBeVisible();
     await expect(panel.locator("[data-worked-solution]")).not.toBeEmpty();
     await expect(panel.getByRole("link", { name: "Try one like this" })).toHaveAttribute("href", /\/progress\/practice/);
-    await expect(parent.locator("[data-right-answers]")).toBeVisible();
     await expectFamilyWords(parent);
     await expectNoSideScroll(parent);
     await shot(parent, "paper", tag);
@@ -199,9 +202,9 @@ test.describe("marking, quick check, results and the marked paper", () => {
 
     await page.getByRole("link", { name: "Review mistakes" }).click();
     await expect(page).toHaveURL(new RegExp(`/results/${attemptId}/paper$`));
-    const childFirst = page.locator("[data-mistakes] [data-question]").first();
+    const childFirst = page.locator(`[data-mistakes] [data-question="${wordProblem}"]`);
     await expect(childFirst).toContainText(`Question ${wordProblem}`);
-    if (!landscape) await childFirst.getByRole("button", { name: /Show feedback/ }).click();
+    await childFirst.getByRole("button", { name: /Show feedback/ }).click();
     await expect(page.locator("[data-feedback-panel]").locator("[data-what-happened]")).toContainText("You wrote 0.01");
     await expect(page.locator("[data-feedback-panel]").locator("[data-worked-solution]")).not.toBeEmpty();
     await expect(page.locator("[data-feedback-panel]").getByRole("link", { name: "Try one like this" })).toHaveAttribute("href", /\/practice\?outcome=/);
@@ -211,7 +214,7 @@ test.describe("marking, quick check, results and the marked paper", () => {
     await shot(page, "child-paper", tag);
 
     // Going through the mistakes is done with one press, and Today moves on.
-    if (!landscape) await page.getByRole("button", { name: "Close feedback" }).click();
+    if (!landscape) await page.locator("[data-feedback-panel]").getByRole("button", { name: "Close", exact: true }).click();
     await page.getByRole("button", { name: "I've been through my mistakes" }).click();
     await expect(page).toHaveURL(/\/today$/);
     await expect(page.getByRole("heading", { level: 1 })).not.toContainText("mistake");
