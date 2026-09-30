@@ -24,6 +24,8 @@ export interface StorageService {
   /** Returns null when the object does not exist. */
   get(input: ObjectRef): Promise<StoredObject | null>;
   exists(input: ObjectRef): Promise<boolean>;
+  /** Removes the object. Removing one that is already gone is not an error. */
+  delete(input: ObjectRef): Promise<void>;
   /**
    * A time-limited path, `/api/files/{bucket}/{key}?exp=...&sig=...`, that serves the object.
    * `expiresInSeconds` must be a whole number from 1 to 600. Only src/application/files.ts

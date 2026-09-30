@@ -7,3 +7,4 @@ export * from "./questions";
 export * from "./assessments";
 export * from "./papers";
 export * from "./ai";
+export * from "./notices";

@@ -29,6 +29,9 @@ export function createMemoryStorage(): MemoryStorage {
     async exists(ref) {
       return objects.has(keyOf(ref));
     },
+    async delete(ref) {
+      objects.delete(keyOf(ref));
+    },
     async createSignedUrl({ bucket, key, expiresInSeconds }) {
       return `/api/files/${bucket}/${key}?exp=${expiresInSeconds}&sig=test`;
     },

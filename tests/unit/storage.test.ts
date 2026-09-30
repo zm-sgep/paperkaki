@@ -54,6 +54,16 @@ describe("local storage adapter contract", () => {
     expect(await storage.exists({ bucket: "submission-uploads", key: "a" })).toBe(false);
   });
 
+  it("deletes an object and its content type, and deleting a missing object is not an error", async () => {
+    const ref = { bucket: "assessment-source-uploads", key: "parent/source/0.pdf" } as const;
+    await storage.put({ ...ref, body: text("x"), contentType: "application/pdf" });
+    await storage.delete(ref);
+    expect(await storage.exists(ref)).toBe(false);
+    expect(await storage.get(ref)).toBeNull();
+    await expect(storage.delete(ref)).resolves.toBeUndefined();
+    await expect(storage.delete({ bucket: "paper-pdfs", key: "../escape.pdf" })).rejects.toThrow();
+  });
+
   it("returns null for a missing object", async () => {
     expect(await storage.get({ bucket: "paper-pdfs", key: "nothing/here.pdf" })).toBeNull();
   });

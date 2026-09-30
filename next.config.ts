@@ -8,7 +8,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   // PGlite loads its WebAssembly files relative to its own package; bundling it breaks that.
-  serverExternalPackages: ["@electric-sql/pglite"],
+  serverExternalPackages: ["@electric-sql/pglite", "pdfjs-dist"],
+  experimental: {
+    // The school-notice upload posts up to 10 MB of files with the form.
+    serverActions: { bodySizeLimit: "12mb" },
+    proxyClientMaxBodySize: "12mb",
+  },
 };
 
 export default nextConfig;

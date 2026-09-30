@@ -1,6 +1,6 @@
 // The storage folder is chosen at runtime (STORAGE_LOCAL_DIR); the comments below stop the
 // bundler from tracing the whole project into the server output for these dynamic paths.
-import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { createSignedFileUrl } from "./signing";
 import {
@@ -83,6 +83,12 @@ export function createLocalStorage(options: {
         }
         throw error;
       }
+    },
+
+    async delete(ref) {
+      const { file, meta } = locate(ref);
+      await rm(/*turbopackIgnore: true*/ file, { force: true });
+      await rm(/*turbopackIgnore: true*/ meta, { force: true });
     },
 
     createSignedUrl(input) {

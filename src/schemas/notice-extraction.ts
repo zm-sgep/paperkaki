@@ -147,3 +147,37 @@ export const TopicAliasTableSchema = z.object({
 });
 
 export type TopicAliasTable = z.infer<typeof TopicAliasTableSchema>;
+
+const ReviewPartSchema = z.object({
+  label: z.string(),
+  booklet: z.string().optional(),
+  kind: z.enum(NOTICE_SECTION_KINDS),
+  questionCount: z.number(),
+  totalMarks: z.number(),
+  check: z.boolean(),
+});
+
+/** What is stored in `assessment_sources.extraction`: the Mathematics part as read, and the review built from it. */
+export const StoredNoticeSchema = z.object({
+  version: z.literal(1),
+  /** Only the Mathematics entry of what the model read; other subjects are not kept. */
+  raw: z.object({ subjects: z.array(z.unknown()), documentYear: z.number().optional() }),
+  review: z.object({
+    multipleSubjects: z.boolean(),
+    assessment: z.object({
+      type: z.enum(NOTICE_ASSESSMENT_TYPES),
+      name: z.string(),
+      date: z.string().nullable(),
+      startTime: z.string().nullable(),
+      durationMinutes: z.number().nullable(),
+      check: z.object({ type: z.boolean(), date: z.boolean(), duration: z.boolean() }),
+    }),
+    topics: z.array(z.object({ code: z.string(), check: z.boolean() })),
+    appliesAcross: z.boolean(),
+    unmatchedLabels: z.array(z.string()),
+    format: z.object({ parts: z.array(ReviewPartSchema), totalMarks: z.number().nullable() }).nullable(),
+    notes: z.array(z.string()),
+  }),
+});
+
+export type StoredNotice = z.infer<typeof StoredNoticeSchema>;

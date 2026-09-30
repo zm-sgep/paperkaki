@@ -6,3 +6,5 @@ export * from "./assessment-types";
 export * from "./parent-copy";
 export * from "./paper-format";
 export * from "./paper-format-presets";
+export * from "./notice";
+export * from "./notice-upload";

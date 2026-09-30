@@ -14,6 +14,7 @@ function fakeStorage() {
     put: async () => undefined,
     get: async () => null,
     exists: async () => false,
+    delete: async () => undefined,
     createSignedUrl: async (input) => {
       calls.push({ bucket: input.bucket, key: input.key, expiresInSeconds: input.expiresInSeconds });
       return `/api/files/${input.bucket}/${input.key}?exp=1&sig=fake`;

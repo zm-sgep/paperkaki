@@ -182,7 +182,7 @@ export async function setAssessmentStatus(
 // Curriculum lookups scoped to one version
 // ---------------------------------------------------------------------------
 
-export type VersionTopic = { topicId: string; label: string; outcomeIds: string[] };
+export type VersionTopic = { topicId: string; code: string; label: string; outcomeIds: string[] };
 
 /** Topics of one curriculum version and level in curriculum order, each with its outcome ids in order. */
 export async function listTopicsInVersion(
@@ -193,6 +193,7 @@ export async function listTopicsInVersion(
   const rows = await db
     .select({
       topicId: curriculumTopics.id,
+      code: curriculumTopics.code,
       label: curriculumTopics.parentLabel,
       outcomeId: curriculumOutcomes.id,
     })
@@ -215,7 +216,7 @@ export async function listTopicsInVersion(
     );
   const byTopic = new Map<string, VersionTopic>();
   for (const row of rows) {
-    const topic = byTopic.get(row.topicId) ?? { topicId: row.topicId, label: row.label, outcomeIds: [] };
+    const topic = byTopic.get(row.topicId) ?? { topicId: row.topicId, code: row.code, label: row.label, outcomeIds: [] };
     topic.outcomeIds.push(row.outcomeId);
     byTopic.set(row.topicId, topic);
   }

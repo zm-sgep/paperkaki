@@ -1,0 +1,167 @@
+{
+  "subjects": [
+    {
+      "subject": "English Language",
+      "assessmentName": "End-of-Year Examination",
+      "assessmentType": "end_of_year",
+      "date": "2026-10-20",
+      "startTime": "08:00",
+      "durationMinutes": 105,
+      "topics": [],
+      "notes": []
+    },
+    {
+      "subject": "Mother Tongue Language",
+      "assessmentName": "End-of-Year Examination",
+      "assessmentType": "end_of_year",
+      "date": "2026-10-22",
+      "startTime": "08:00",
+      "durationMinutes": 75,
+      "topics": [],
+      "notes": []
+    },
+    {
+      "subject": "Mathematics",
+      "assessmentName": "End-of-Year Examination",
+      "assessmentType": "end_of_year",
+      "date": "2026-10-27",
+      "startTime": "08:00",
+      "durationMinutes": 90,
+      "topics": [
+        {
+          "schoolLabel": "Numbers to 10 000",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Addition and Subtraction",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Money",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Multiplication Tables of 6, 7, 8 and 9",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Multiplication and Division",
+          "confident": true
+        },
+        {
+          "schoolLabel": "More Word Problems",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Bar Graphs",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Angles",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Perpendicular and Parallel Lines",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Fractions",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Length, Mass and Volume",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Area and Perimeter",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Time",
+          "confident": true
+        }
+      ],
+      "notes": [
+        "Protractors are not allowed during examination"
+      ],
+      "format": {
+        "sections": [
+          {
+            "label": "Section A",
+            "kind": "mcq",
+            "wording": "Multiple-Choice questions",
+            "questionCount": 6,
+            "totalMarks": 12,
+            "confident": true
+          },
+          {
+            "label": "Section B",
+            "kind": "short",
+            "wording": "Open-ended questions",
+            "questionCount": 16,
+            "totalMarks": 26,
+            "confident": true
+          },
+          {
+            "label": "Section C",
+            "kind": "word_problem",
+            "wording": "Word Problems",
+            "questionCount": 4,
+            "totalMarks": 12,
+            "confident": true
+          }
+        ],
+        "totalMarks": 50
+      }
+    },
+    {
+      "subject": "Science",
+      "assessmentName": "End-of-Year Examination",
+      "assessmentType": "end_of_year",
+      "date": "2026-10-29",
+      "startTime": "08:00",
+      "durationMinutes": 100,
+      "topics": [
+        {
+          "schoolLabel": "Diversity of Living Things",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Plant Parts and Functions",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Matter",
+          "confident": true
+        },
+        {
+          "schoolLabel": "Materials",
+          "confident": true
+        }
+      ],
+      "notes": [],
+      "format": {
+        "sections": [
+          {
+            "label": "Booklet A",
+            "kind": "mcq",
+            "wording": "Multiple-Choice questions",
+            "questionCount": 18,
+            "totalMarks": 36,
+            "confident": true
+          },
+          {
+            "label": "Booklet B",
+            "kind": "short",
+            "wording": "Structured questions",
+            "questionCount": 8,
+            "totalMarks": 24,
+            "confident": false
+          }
+        ],
+        "totalMarks": 60
+      }
+    }
+  ],
+  "documentYear": 2026
+}

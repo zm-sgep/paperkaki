@@ -71,6 +71,13 @@
       "when": 1790726577570,
       "tag": "0009_ai_runs",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1790726838593,
+      "tag": "0010_notice_sources_and_jobs",
+      "breakpoints": true
     }
   ]
 }
