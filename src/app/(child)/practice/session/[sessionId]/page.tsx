@@ -22,8 +22,12 @@ export default async function PracticeSessionPage({ params }: { params: Promise<
     return (
       <ChildHero
         title={run.endText}
-        supportingText={run.next.title}
-        ctaLabel={run.next.ctaLabel}
+        // The heading is about the practice just done, so the next mission is named as what comes next,
+        // and a bare "Start" says what it starts.
+        supportingText={run.next.kind === "done_today" ? run.next.title : `Next: ${run.next.title}`}
+        ctaLabel={
+          run.next.ctaLabel === "Start" ? (run.next.kind === "start_mock" ? "Start mock" : "Start practice") : run.next.ctaLabel
+        }
         href={run.next.href}
       >
         <PointsEarned reward={run.reward} />
