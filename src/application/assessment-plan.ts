@@ -1,6 +1,7 @@
 import {
   buildBlueprint,
   explainForParent,
+  adaptiveFocusText,
   excludedTopicsNotice,
   formatSummaryLine,
   formatTotalMarks,
@@ -19,7 +20,10 @@ import {
   type PaperFormat,
   type PaperSettings,
 } from "@/domain/assessments";
-import { selectQuestions, summariseInventory, type SelectionResult } from "@/domain/papers";
+import { adaptiveFocus, applyFocus, selectQuestions, summariseInventory, type AdaptiveFocus, type SelectionResult } from "@/domain/papers";
+import { getLearningMap } from "@/application/queries/learning-map";
+import type { MasteryState } from "@/domain/mastery";
+import { getLatestPaperNumber } from "@/repositories/postgres/papers";
 import type { Database } from "@/repositories/postgres/client";
 import {
   getLatestBlueprint,
@@ -76,6 +80,13 @@ export type AssessmentPlan = {
   candidates: QuestionCandidate[];
   inventory: { topicId: string; label: string; questionCount: number }[];
   selection: SelectionResult | null;
+  /**
+   * How a later mock leans, when the child's work says where. Null for the first mock and while nothing is
+   * known. Internal: parents only ever read `focusLine`.
+   */
+  focus: (AdaptiveFocus & { mockNumber: number }) | null;
+  /** "Mock 2 will focus a little more on Length and Time, and still cover every topic." Null when nothing stands out. */
+  focusLine: string | null;
   /** "50 marks · 1 h 30 min · Sections A, B, C" */
   summary: string;
   /** "Fractions, Time, Angles" */
@@ -90,7 +101,42 @@ export function formatToJson(format: PaperFormat): Record<string, unknown> {
   return JSON.parse(JSON.stringify(format)) as Record<string, unknown>;
 }
 
-export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessment): Promise<AssessmentPlan> {
+/**
+ * Where the next mock should lean, from what the child has shown. Only for Mock 2 and later, and only once
+ * there is evidence; otherwise the marks are shared evenly, as for the first mock.
+ */
+async function focusForNextMock(
+  db: Database,
+  assessment: OwnedAssessment,
+  blueprint: Blueprint,
+  candidates: readonly QuestionCandidate[],
+  now: Date,
+): Promise<(AdaptiveFocus & { mockNumber: number }) | null> {
+  const mockNumber = (await getLatestPaperNumber(db, assessment.id)) + 1;
+  if (mockNumber < 2) return null;
+  const map = await getLearningMap(assessment.childId, { db, now });
+  if (!map || map.topics.every((topic) => topic.mastery.state === "not_started")) return null;
+  const topicOf = new Map(map.topics.map((topic) => [topic.topicId, topic]));
+  // Only skills the bank can test count: a skill with no questions could never improve.
+  const testable = new Set(candidates.map((candidate) => candidate.primaryOutcomeId));
+  const scope = blueprint.scope.map((item) => ({ topicId: item.topicId, outcomeIds: item.outcomeIds.filter((id) => testable.has(id)) }));
+  const outcomes = scope.flatMap((item) =>
+    item.outcomeIds.map((outcomeId) => {
+      const outcome = topicOf.get(item.topicId)?.testable.find((entry) => entry.outcomeId === outcomeId);
+      return {
+        outcomeId,
+        topicId: item.topicId,
+        state: outcome?.attention ?? ("not_started" as MasteryState),
+        ...(outcome?.mastery.reviewDueAt ? { reviewDueAt: outcome.mastery.reviewDueAt } : {}),
+      };
+    }),
+  );
+  const topics = scope.map((item) => ({ topicId: item.topicId, state: topicOf.get(item.topicId)?.mastery.attention ?? ("not_started" as MasteryState) }));
+  return { ...adaptiveFocus({ scope, totalMarks: blueprint.totalMarks, topics, outcomes, now: now.toISOString() }), mockNumber };
+}
+
+export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessment, options: { now?: Date } = {}): Promise<AssessmentPlan> {
+  const now = options.now ?? new Date();
   const [scopeItems, versionTopics, requirements, savedJson] = await Promise.all([
     listScopeItems(db, assessment.id),
     listTopicsInVersion(db, assessment.curriculumVersionId, assessment.level),
@@ -168,6 +214,9 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
     const workable = variants.find((variant) => check(draft(variant)).errors.length === 0) ?? variants[0];
     blueprint = draft(workable);
   }
+  // A later mock leans a little towards what needs work. The format and the topics stay exactly as chosen.
+  const focus = await focusForNextMock(db, assessment, blueprint, candidates, now);
+  if (focus) blueprint = { ...blueprint, scope: applyFocus(blueprint.scope, focus) };
   const format = blueprint.format;
   const settings: PaperSettings = {
     totalMarks: blueprint.totalMarks,
@@ -193,7 +242,12 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
 
   let selection: SelectionResult | null = null;
   if (problems.length === 0) {
-    selection = selectQuestions({ blueprint, candidates, seed: PREVIEW_SEED });
+    selection = selectQuestions({
+      blueprint,
+      candidates,
+      seed: PREVIEW_SEED,
+      ...(focus ? { outcomeBoost: focus.outcomeBoost, dueOutcomeIds: focus.dueOutcomeIds } : {}),
+    });
     if (!selection.ok) {
       problems.push(
         selection.failure.code === "topic_not_covered"
@@ -233,6 +287,13 @@ export async function buildAssessmentPlan(db: Database, assessment: OwnedAssessm
       questionCount: candidates.filter((c) => c.topicId === topic.topicId).length,
     })),
     selection,
+    focus,
+    focusLine: focus
+      ? adaptiveFocusText(
+          focus.mockNumber,
+          focus.focusTopicIds.map((id) => blueprint.scope.find((item) => item.topicId === id)?.label ?? "").filter((label) => label !== ""),
+        )
+      : null,
     summary: formatSummaryLine(format),
     topicsLine: included.map((topic) => topic.label).join(", "),
     canGenerate: problems.length === 0 && included.length > 0,
@@ -256,9 +317,9 @@ export function canonicalJson(value: unknown): string {
  * Returns the version number now in force, or null when there is nothing to design (no topic
  * the bank can cover). Called after the scope is confirmed or the settings change.
  */
-export async function syncBlueprint(db: Database, assessment: OwnedAssessment): Promise<number | null> {
+export async function syncBlueprint(db: Database, assessment: OwnedAssessment, now?: Date): Promise<number | null> {
   if (assessment.status !== "scope_confirmed") return null;
-  const plan = await buildAssessmentPlan(db, assessment);
+  const plan = await buildAssessmentPlan(db, assessment, now ? { now } : {});
   if (plan.blueprint.scope.length === 0) return null;
   const latest = await getLatestBlueprint(db, assessment.id);
   const spec = plan.blueprint as unknown as Record<string, unknown>;

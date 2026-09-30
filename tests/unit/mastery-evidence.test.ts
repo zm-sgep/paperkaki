@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
   MASTERY_STATE_WORDS,
+  attentionStateOf,
   deriveMastery,
   evidenceFromAnswers,
   scoreRatioOf,
   starsForState,
   topicMasteryOf,
-  topicStateOf,
   type MarkedAnswerFacts,
   type MasteryState,
 } from "@/domain/mastery";
@@ -82,21 +82,27 @@ describe("mastery in words, stars and topics", () => {
     expect(states.map(starsForState)).toEqual([0, 1, 2, 3, 4, 4]);
   });
 
-  it("calls a topic by the typical state of its outcomes, never secure while parts are untouched", () => {
-    expect(topicStateOf([])).toBe("not_started");
-    expect(topicStateOf(["not_started", "not_started"])).toBe("not_started");
-    expect(topicStateOf(["mastered", "mastered"])).toBe("mastered");
-    expect(topicStateOf(["mastered", "not_started"])).toBe("developing");
-    expect(topicStateOf(["learning", "not_started", "not_started"])).toBe("learning");
-    expect(topicStateOf(["retained", "retained"])).toBe("retained");
+  it("sees a skill doing well as 'not weak': too few answers to say more, or almost there", () => {
+    // Right so far but too little evidence (the mastery rules keep it at "learning"): nothing to worry about.
+    expect(attentionStateOf({ state: "learning", evidenceCount: 2, recentAccuracy: 1 })).toBe("not_started");
+    // Enough answers, one session only (the rules keep it at "getting there"): nearly there.
+    expect(attentionStateOf({ state: "developing", evidenceCount: 6, recentAccuracy: 0.9 })).toBe("almost_mastered");
+    // Answered badly: still weak.
+    expect(attentionStateOf({ state: "learning", evidenceCount: 5, recentAccuracy: 0.2 })).toBe("learning");
+    expect(attentionStateOf({ state: "developing", evidenceCount: 5, recentAccuracy: 0.5 })).toBe("developing");
+    // Other states are left alone.
+    expect(attentionStateOf({ state: "mastered", evidenceCount: 9, recentAccuracy: 1 })).toBe("mastered");
+    expect(attentionStateOf({ state: "not_started", evidenceCount: 0 })).toBe("not_started");
   });
 
-  it("summarises a topic for ordering: accuracy, latest practice and the earliest review", () => {
-    const topic = topicMasteryOf([
-      { outcomeId: "a", state: "mastered", evidenceCount: 6, sessions: 2, lastPracticedAt: "2026-09-01T00:00:00.000Z", reviewDueAt: "2026-09-20T00:00:00.000Z", recentAccuracy: 0.9 },
-      { outcomeId: "b", state: "developing", evidenceCount: 3, sessions: 1, lastPracticedAt: "2026-09-10T00:00:00.000Z", recentAccuracy: 0.5 },
-    ]);
-    expect(topic).toMatchObject({ state: "almost_mastered", stars: 3, lastPracticedAt: "2026-09-10T00:00:00.000Z", reviewDueAt: "2026-09-20T00:00:00.000Z", evidenceCount: 9 });
-    expect(topic.recentAccuracy).toBeCloseTo(0.7);
+  it("judges a topic on all its evidence together, and never calls it secure while a skill is untouched", () => {
+    const secure = { outcomeId: "t", state: "mastered" as const, evidenceCount: 9, sessions: 3, lastPracticedAt: "2026-09-10T00:00:00.000Z", reviewDueAt: "2026-09-20T00:00:00.000Z", recentAccuracy: 0.95 };
+    expect(topicMasteryOf({ pooled: secure, testableCount: 4, coveredCount: 4 })).toMatchObject({ state: "mastered", attention: "mastered", stars: 4, reviewDueAt: "2026-09-20T00:00:00.000Z", sessions: 3, evidenceCount: 9 });
+    const partial = topicMasteryOf({ pooled: secure, testableCount: 4, coveredCount: 3 });
+    expect(partial).toMatchObject({ state: "almost_mastered", stars: 3 });
+    expect(partial.reviewDueAt).toBeUndefined();
+    const weak = topicMasteryOf({ pooled: { outcomeId: "t", state: "learning", evidenceCount: 6, sessions: 1, recentAccuracy: 0.2 }, testableCount: 4, coveredCount: 2 });
+    expect(weak).toMatchObject({ state: "learning", attention: "learning", stars: 1 });
+    expect(topicMasteryOf({ pooled: { outcomeId: "t", state: "not_started", evidenceCount: 0, sessions: 0 }, testableCount: 3, coveredCount: 0 })).toMatchObject({ state: "not_started", stars: 0 });
   });
 });

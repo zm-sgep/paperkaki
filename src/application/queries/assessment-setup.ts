@@ -136,6 +136,8 @@ export type AssessmentSetup = {
   topicsLine: string;
   /** Names of the topics left out because the bank has no questions for them yet. */
   excludedNotice: string | null;
+  /** For a later mock: "Mock 2 will focus a little more on Length and Time, and still cover every topic." Null otherwise. */
+  focusLine: string | null;
   /** Hard problems in plain words; the mock cannot be created while any remain. */
   problems: string[];
   notices: string[];
@@ -171,7 +173,7 @@ export async function getAssessmentSetup(
   const db = await resolveDb(context);
   const assessment = await readableAssessment(db, parentProfileId, assessmentId);
   if (!assessment) return null;
-  const plan = await buildAssessmentPlan(db, assessment);
+  const plan = await buildAssessmentPlan(db, assessment, context.now ? { now: context.now } : {});
   const selection = plan.selection?.ok ? plan.selection : null;
   const today = todayInSingapore(context.now);
   const mocks = (await listPapersForAssessments(db, [assessment.id]))
@@ -190,6 +192,7 @@ export async function getAssessmentSetup(
     summary: plan.summary,
     topicsLine: plan.topicsLine,
     excludedNotice: plan.excludedNotice,
+    focusLine: plan.focusLine,
     problems: plan.problems,
     notices: plan.notices,
     canGenerate: plan.canGenerate && assessment.status === "scope_confirmed",

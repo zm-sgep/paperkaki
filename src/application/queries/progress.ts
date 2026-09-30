@@ -2,7 +2,7 @@ import { attemptLabel } from "@/domain/attempts";
 import {
   MASTERY_STATE_HELP,
   MASTERY_STATE_WORDS,
-  deriveMastery,
+  deriveOutcomeMastery,
   evidenceWords,
   mistakePatterns,
   progressSentence,
@@ -72,7 +72,6 @@ export type ParentProgress =
     };
 
 function rowOf(topic: MapTopic): TopicProgressRow {
-  const sessions = Math.max(0, ...topic.testable.map((outcome) => outcome.mastery.sessions));
   return {
     topicId: topic.topicId,
     label: topic.label,
@@ -80,32 +79,41 @@ function rowOf(topic: MapTopic): TopicProgressRow {
     word: MASTERY_STATE_WORDS[topic.mastery.state],
     help: MASTERY_STATE_HELP[topic.mastery.state],
     stars: starsForState(topic.mastery.state),
-    evidence: evidenceWords(topic.mastery.evidenceCount, sessions),
+    evidence: evidenceWords(topic.mastery.evidenceCount, topic.mastery.sessions),
     href: `/progress/topics/${topic.topicId}`,
   };
 }
 
-/** Each skill's state before the latest work, so a topic can be called improved. Left out when there was nothing before. */
+/**
+ * Each topic as the one-sentence summary reads it: its state now, and its state before the latest work so a
+ * topic can be called improved. There is no "before" when the latest work was the first.
+ */
 async function progressTopics(db: Database, childId: string, map: LearningMap, now: Date): Promise<ProgressTopic[]> {
   const evidence = (await listEvidenceForChild(db, childId)).map(evidenceRowToDomain);
   const latest = evidence.reduce<{ sessionId: string; at: string } | null>((best, entry) => (!best || entry.at > best.at ? { sessionId: entry.sessionId, at: entry.at } : best), null);
   const earlier = latest ? evidence.filter((entry) => entry.sessionId !== latest.sessionId) : [];
-  const before = new Map(deriveMastery(earlier, now).map((outcome) => [outcome.outcomeId, outcome.state]));
-  return map.topics.map((topic) => ({
-    topicId: topic.topicId,
-    label: topic.label,
-    state: topic.mastery.state,
-    ...(topic.mastery.recentAccuracy !== undefined ? { recentAccuracy: topic.mastery.recentAccuracy } : {}),
-    outcomes: topic.testable.map((outcome): TopicOutcomeState => {
-      const previous = before.get(outcome.outcomeId);
-      return {
-        outcomeId: outcome.outcomeId,
-        state: outcome.mastery.state,
-        evidenceCount: outcome.mastery.evidenceCount,
-        ...(previous && previous !== "not_started" ? { previousState: previous } : {}),
-      };
-    }),
-  }));
+  const judgedAt = new Date(Math.max(now.getTime(), latest ? Date.parse(latest.at) : 0));
+  return map.topics.map((topic): ProgressTopic => {
+    const ids = new Set(topic.testable.map((outcome) => outcome.outcomeId));
+    const before = deriveOutcomeMastery(
+      topic.topicId,
+      earlier.filter((entry) => ids.has(entry.outcomeId)).map((entry) => ({ ...entry, outcomeId: topic.topicId })),
+      judgedAt,
+    );
+    const outcome: TopicOutcomeState = {
+      outcomeId: topic.topicId,
+      state: topic.mastery.state,
+      evidenceCount: topic.mastery.evidenceCount,
+      ...(before.state !== "not_started" ? { previousState: before.state } : {}),
+    };
+    return {
+      topicId: topic.topicId,
+      label: topic.label,
+      state: topic.mastery.attention,
+      ...(topic.mastery.recentAccuracy !== undefined ? { recentAccuracy: topic.mastery.recentAccuracy } : {}),
+      outcomes: [outcome],
+    };
+  });
 }
 
 /** The kinds of slip in a child's newest marked mocks, from what marking saw and from questions left blank. */

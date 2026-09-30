@@ -120,3 +120,12 @@ export function contextLine(input: { childNickname: string; subject: string; nam
 export function assessmentStateText(scopeConfirmed: boolean): string {
   return scopeConfirmed ? "Topics confirmed" : "Choose topics";
 }
+
+/**
+ * Screen C for a later mock: what it leans towards, and that nothing is left out. Null when nothing
+ * stands out, so the usual sentence stays.
+ */
+export function adaptiveFocusText(mockNumber: number, focusLabels: readonly string[]): string | null {
+  if (mockNumber < 2 || focusLabels.length === 0) return null;
+  return `Mock ${mockNumber} will focus a little more on ${joinLabels(focusLabels.slice(0, 2))}, and still cover every topic.`;
+}

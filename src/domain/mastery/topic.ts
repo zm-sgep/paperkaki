@@ -1,3 +1,4 @@
+import { MASTERY_POLICY_V1 } from "./policy";
 import { MASTERY_STATE_RANK, type MasteryState, type OutcomeMastery } from "./types";
 
 /**
@@ -39,49 +40,60 @@ export const MASTERY_STATE_STARS: Record<MasteryState, number> = {
 
 export const MAX_STARS = 4;
 
-const STATE_BY_RANK: readonly MasteryState[] = ["not_started", "learning", "developing", "almost_mastered", "mastered", "retained"];
-
 export function starsForState(state: MasteryState): number {
   return MASTERY_STATE_STARS[state];
 }
 
 /**
- * A topic's state from its outcomes' states. The typical state of the outcomes the question bank can
- * test, rounded down, so a topic is never called secure while parts of it are untouched; and once any
- * outcome has been started, the topic is at least "Learning".
+ * The state as far as practice and attention are concerned. The mastery rules keep an outcome at "learning"
+ * until it has three answers, and at "getting there" until a second session, however well it went. That is
+ * right for mastery, but it is not a reason to worry: a skill answered right so far is not one that "needs
+ * attention". So a skill that is doing well is shown to the practice and attention rules as
+ *   - "almost there" when there is enough to say so, or
+ *   - "not started" (nothing worrying, nothing settled) when there is too little.
+ * A skill answered badly keeps its state.
  */
-export function topicStateOf(outcomeStates: readonly MasteryState[]): MasteryState {
-  if (outcomeStates.length === 0) return "not_started";
-  const total = outcomeStates.reduce((sum, state) => sum + MASTERY_STATE_RANK[state], 0);
-  const typical = Math.floor(total / outcomeStates.length);
-  const started = outcomeStates.some((state) => state !== "not_started");
-  return STATE_BY_RANK[Math.max(started ? 1 : 0, typical)] as MasteryState;
+export function attentionStateOf(outcome: Pick<OutcomeMastery, "state" | "evidenceCount" | "recentAccuracy">): MasteryState {
+  if (outcome.state !== "learning" && outcome.state !== "developing") return outcome.state;
+  if (outcome.recentAccuracy === undefined || outcome.recentAccuracy < MASTERY_POLICY_V1.bands.almostMastered) return outcome.state;
+  return outcome.evidenceCount >= MASTERY_POLICY_V1.minItemsForBands ? "almost_mastered" : "not_started";
 }
 
 export type TopicMastery = {
+  /** The topic's state by the mastery rules over all its evidence. */
   state: MasteryState;
+  /** The state practice and attention go by (see `attentionStateOf`). */
+  attention: MasteryState;
   stars: number;
-  /** Mean of the recent accuracy of the started outcomes, 0..1. For ordering only; never shown. */
+  /** Weighted recent accuracy 0..1 over the topic's evidence. For ordering only; never shown. */
   recentAccuracy?: number;
-  /** ISO 8601, the newest practice on any outcome of the topic. */
+  /** ISO 8601, the newest practice on any skill of the topic. */
   lastPracticedAt?: string;
-  /** ISO 8601, the earliest spaced review that is coming due among the topic's secure outcomes. */
+  /** ISO 8601, when the topic's spaced review is due, once it is secure. */
   reviewDueAt?: string;
+  /** First-attempt answers the state rests on, and the sessions they came from. */
   evidenceCount: number;
+  sessions: number;
 };
 
-/** Everything the screens and the practice policy need about one topic, from its outcomes' mastery. */
-export function topicMasteryOf(outcomes: readonly OutcomeMastery[]): TopicMastery {
-  const state = topicStateOf(outcomes.map((outcome) => outcome.state));
-  const accuracies = outcomes.flatMap((outcome) => (outcome.recentAccuracy === undefined ? [] : [outcome.recentAccuracy]));
-  const practiced = outcomes.flatMap((outcome) => (outcome.lastPracticedAt ? [outcome.lastPracticedAt] : []));
-  const due = outcomes.flatMap((outcome) => (outcome.reviewDueAt ? [outcome.reviewDueAt] : []));
+/**
+ * A topic is judged on all its evidence together (the same rules as a skill), and is never called secure
+ * or remembered while some skill the bank can test has not been seen at all: "almost there" is as far as it
+ * goes until every skill has been tried.
+ */
+export function topicMasteryOf(input: { pooled: OutcomeMastery; testableCount: number; coveredCount: number }): TopicMastery {
+  const { pooled } = input;
+  const capped = input.coveredCount < input.testableCount && MASTERY_STATE_RANK[pooled.state] > MASTERY_STATE_RANK.almost_mastered;
+  const state: MasteryState = capped ? "almost_mastered" : pooled.state;
+  const attention = attentionStateOf({ state, evidenceCount: pooled.evidenceCount, ...(pooled.recentAccuracy !== undefined ? { recentAccuracy: pooled.recentAccuracy } : {}) });
   return {
     state,
+    attention,
     stars: starsForState(state),
-    ...(accuracies.length > 0 ? { recentAccuracy: accuracies.reduce((a, b) => a + b, 0) / accuracies.length } : {}),
-    ...(practiced.length > 0 ? { lastPracticedAt: [...practiced].sort()[practiced.length - 1] as string } : {}),
-    ...(due.length > 0 ? { reviewDueAt: [...due].sort()[0] as string } : {}),
-    evidenceCount: outcomes.reduce((sum, outcome) => sum + outcome.evidenceCount, 0),
+    ...(pooled.recentAccuracy !== undefined ? { recentAccuracy: pooled.recentAccuracy } : {}),
+    ...(pooled.lastPracticedAt ? { lastPracticedAt: pooled.lastPracticedAt } : {}),
+    ...(pooled.reviewDueAt && !capped ? { reviewDueAt: pooled.reviewDueAt } : {}),
+    evidenceCount: pooled.evidenceCount,
+    sessions: pooled.sessions,
   };
 }

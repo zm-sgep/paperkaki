@@ -38,7 +38,9 @@ export default async function AssessmentPage({ params }: { params: Promise<{ ass
           <p className="text-xl font-semibold text-ink">{setup.summary}</p>
           {setup.topicsLine ? <p className="text-lg text-ink">{setup.topicsLine}</p> : null}
         </div>
-        <p className="text-lg text-ink-soft">Each mock uses a new set of questions from the topics you chose.</p>
+        <p data-mock-focus className="text-lg text-ink-soft">
+          {setup.focusLine ?? "Each mock uses a new set of questions from the topics you chose."}
+        </p>
       </Card>
 
       {latest ? (

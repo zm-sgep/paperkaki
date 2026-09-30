@@ -3,6 +3,7 @@ import { generateMock } from "@/application/commands/papers";
 import type { CurrentChild } from "@/application/queries/current-child";
 import type { Database } from "@/repositories/postgres/client";
 import { listAttemptPaperQuestions, type AttemptPaperQuestion } from "@/repositories/postgres/attempts";
+import { listQuestionTopics } from "@/repositories/postgres/marking";
 import { AnswerSchema } from "@/schemas/question-content";
 import type { StorageService } from "@/services/storage";
 import { NOW } from "./assessment-fixtures";
@@ -27,7 +28,8 @@ export async function playMock(input: {
   key: number;
   /** Seconds after NOW that the mock is handed in. Later mocks should pass later times. */
   handedInAt?: number;
-  plan: (item: AttemptPaperQuestion) => PlayedAnswer;
+  /** How to answer a question. `topicId` is the topic the question is about. */
+  plan: (item: AttemptPaperQuestion, topicId: string | undefined) => PlayedAnswer;
 }): Promise<{ paperId: string; attemptId: string; items: (AttemptPaperQuestion & { played: PlayedAnswer })[] }> {
   const at = (seconds: number) => new Date(NOW.getTime() + seconds * 1000);
   const base = input.handedInAt ?? 600;
@@ -36,7 +38,8 @@ export async function playMock(input: {
   const { attemptId } = await assignMockToChild(input.parentProfileId, paperId, ctx(at(base - 400)));
   await startAttempt(input.child, attemptId, ctx(at(base - 300)));
   const items = await listAttemptPaperQuestions(input.db, paperId);
-  const played = items.map((item) => ({ ...item, played: input.plan(item) }));
+  const topicOf = new Map((await listQuestionTopics(input.db, items.map((item) => item.question.id))).map((topic) => [topic.questionId, topic.topicId]));
+  const played = items.map((item) => ({ ...item, played: input.plan(item, topicOf.get(item.question.id)) }));
   const responses = played.map((item) => {
     const answer = AnswerSchema.parse(item.question.answer);
     const base = { paperQuestionId: item.paperQuestionId, selected: null, typed: null, strokes: null, flagged: false };

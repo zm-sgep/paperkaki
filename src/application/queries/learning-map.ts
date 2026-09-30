@@ -1,8 +1,9 @@
-import { ensureEvidenceForChild } from "@/application/mastery";
-import { topicMasteryOf, type OutcomeMastery, type TopicMastery } from "@/domain/mastery";
+import { ensureEvidenceForChild, evidenceRowToDomain } from "@/application/mastery";
+import { attentionStateOf, deriveOutcomeMastery, topicMasteryOf, type OutcomeMastery, type TopicMastery } from "@/domain/mastery";
+import type { MasteryState } from "@/domain/mastery";
 import { weakestDueOutcome, type PracticeCandidate, type PracticeOutcome } from "@/domain/recommendations";
 import type { Database } from "@/repositories/postgres/client";
-import { listMasteryProfiles } from "@/repositories/postgres/mastery";
+import { listEvidenceForChild, listMasteryProfiles } from "@/repositories/postgres/mastery";
 import { listApprovedCandidates, type CandidateQuestion } from "@/repositories/postgres/questions";
 import { getCurriculumTree, getCurriculumVersionForLevel } from "./curriculum";
 
@@ -23,6 +24,8 @@ export type MapOutcome = {
   /** False when the bank has no approved question for it yet. */
   testable: boolean;
   mastery: OutcomeMastery;
+  /** The state practice and attention go by: a skill doing well is not "weak" just because it has few answers. */
+  attention: MasteryState;
 };
 
 export type MapTopic = {
@@ -68,10 +71,14 @@ export async function getLearningMap(childId: string, context: Context): Promise
 
   await ensureEvidenceForChild(db, childId, now);
   const outcomeIds = tree.domains.flatMap((domain) => domain.topics.flatMap((topic) => topic.outcomes.map((outcome) => outcome.id)));
-  const [candidates, profiles] = await Promise.all([
+  const [candidates, profiles, evidenceRows] = await Promise.all([
     listApprovedCandidates(db, { curriculumVersionId: version.id, outcomeIds, level: LEARNING_LEVEL, subject: LEARNING_SUBJECT }),
     listMasteryProfiles(db, childId),
+    listEvidenceForChild(db, childId),
   ]);
+  const evidence = evidenceRows.map(evidenceRowToDomain);
+  // A topic is judged on all its evidence together. Evidence dated after `now` is never left out of that.
+  const judgedAt = new Date(Math.max(now.getTime(), ...evidenceRows.map((row) => row.occurredAt.getTime())));
   const testableIds = new Set(candidates.map((candidate) => candidate.primaryOutcomeId));
   const profileOf = new Map(profiles.map((profile) => [profile.outcomeId, profile]));
 
@@ -92,11 +99,17 @@ export async function getLearningMap(childId: string, context: Context): Promise
               ...(profile.recentAccuracy !== null ? { recentAccuracy: profile.recentAccuracy } : {}),
             }
           : { outcomeId: outcome.id, state: "not_started", evidenceCount: 0, sessions: 0 };
-        return { outcomeId: outcome.id, label: outcome.childLabel, testable: testableIds.has(outcome.id), mastery };
+        return { outcomeId: outcome.id, label: outcome.childLabel, testable: testableIds.has(outcome.id), mastery, attention: attentionStateOf(mastery) };
       });
       const testable = outcomes.filter((outcome) => outcome.testable);
       if (testable.length === 0) continue;
-      const mastery = topicMasteryOf(testable.map((outcome) => outcome.mastery));
+      const testableIdsOfTopic = new Set(testable.map((outcome) => outcome.outcomeId));
+      const pooled = deriveOutcomeMastery(
+        topic.id,
+        evidence.filter((entry) => testableIdsOfTopic.has(entry.outcomeId)).map((entry) => ({ ...entry, outcomeId: topic.id })),
+        judgedAt,
+      );
+      const mastery = topicMasteryOf({ pooled, testableCount: testable.length, coveredCount: testable.filter((outcome) => outcome.mastery.state !== "not_started").length });
       topics.push({
         topicId: topic.id,
         label: topic.parentLabel,
@@ -106,7 +119,7 @@ export async function getLearningMap(childId: string, context: Context): Promise
         practice: {
           outcomeId: topic.id,
           name: topic.parentLabel,
-          state: mastery.state,
+          state: mastery.attention,
           ...(mastery.recentAccuracy !== undefined ? { recentAccuracy: mastery.recentAccuracy } : {}),
           ...(mastery.lastPracticedAt ? { lastPracticedAt: mastery.lastPracticedAt } : {}),
           ...(mastery.reviewDueAt ? { reviewDueAt: mastery.reviewDueAt } : {}),

@@ -102,6 +102,7 @@ export async function generateMock(
   const db = await resolveCommandDb(context);
   const storage = context.storage ?? getStorage();
   const log = context.logger ?? appLogger;
+  const now = context.now ?? new Date();
 
   const assessment = await getOwnedAssessment(db, parentProfileId, assessmentId);
   if (!assessment || assessment.childArchived) throw new NotFoundError();
@@ -118,7 +119,7 @@ export async function generateMock(
   }
 
   // The current design and the approved questions for it. Hard problems are the parent's to fix.
-  const plan = await buildAssessmentPlan(db, assessment);
+  const plan = await buildAssessmentPlan(db, assessment, { now });
   if (plan.problems.length > 0 || plan.included.length === 0) {
     throw new MockGenerationError("blocked", plan.problems.length > 0 ? plan.problems : [MOCK_GENERATION_MESSAGES.noFit]);
   }
@@ -128,7 +129,13 @@ export async function generateMock(
   const seed = `${assessmentId}:${number}`;
   const avoidQuestionIds = await listUsedQuestionIds(db, assessmentId);
 
-  const selection = selectQuestions({ blueprint: plan.blueprint, candidates: plan.candidates, seed, avoidQuestionIds });
+  const selection = selectQuestions({
+    blueprint: plan.blueprint,
+    candidates: plan.candidates,
+    seed,
+    avoidQuestionIds,
+    ...(plan.focus ? { outcomeBoost: plan.focus.outcomeBoost, dueOutcomeIds: plan.focus.dueOutcomeIds } : {}),
+  });
   if (!selection.ok) {
     log.warn({ assessmentId, failure: selection.failure.code }, "mock selection failed");
     throw new MockGenerationError("no_fit", [MOCK_GENERATION_MESSAGES.noFit]);
@@ -194,7 +201,7 @@ export async function generateMock(
       const raced = await findPaperByRequestKey(tx, requestKey);
       if (raced) return resultOf(raced, false);
 
-      const blueprintVersion = await syncBlueprint(tx, assessment);
+      const blueprintVersion = await syncBlueprint(tx, assessment, now);
       const blueprint = await getLatestBlueprint(tx, assessmentId);
       if (!blueprint || blueprintVersion !== blueprint.version || canonicalJson(blueprint.spec) !== canonicalJson(plan.blueprint)) {
         throw new MockGenerationError("changed_meanwhile", [MOCK_GENERATION_MESSAGES.changedMeanwhile]);
@@ -215,6 +222,7 @@ export async function generateMock(
             scope: validation.scope,
             blueprintVersion: blueprint.version,
             questionCount: chosenIds.length,
+            ...(plan.focus ? { adaptive: { mockNumber: plan.focus.mockNumber, focusTopicIds: plan.focus.focusTopicIds, dueOutcomeIds: plan.focus.dueOutcomeIds } } : {}),
           },
           studentPdfBucket: PAPER_BUCKET,
           studentPdfKey: keys.student,

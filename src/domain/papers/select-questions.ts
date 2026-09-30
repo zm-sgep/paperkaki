@@ -77,7 +77,17 @@ export type SelectQuestionsInput = {
   seed: string;
   /** Questions from earlier papers of the same assessment; used only if unavoidable. */
   avoidQuestionIds?: readonly string[];
+  /**
+   * A soft preference for some skills' questions (an adaptive mock leans towards weak skills and
+   * skills due for review). A multiplier per primary outcome id; 1 or missing means none.
+   */
+  outcomeBoost?: Readonly<Record<string, number>>;
+  /** Skills due for a spaced review: a paper that includes a question from each scores better. Soft. */
+  dueOutcomeIds?: readonly string[];
 };
+
+/** What the soft preferences hold, in one place, so it travels through the search as one value. */
+type Preferences = { boost: Readonly<Record<string, number>>; due: readonly string[] };
 
 const DIFFICULTIES: readonly Difficulty[] = ["basic", "standard", "challenging"];
 const DIFFICULTY_RANK: Record<Difficulty, number> = { basic: 0, standard: 1, challenging: 2 };
@@ -88,7 +98,9 @@ const ATTEMPT_STEP_LIMIT = 100_000;
 const MIN_DIFFICULTY_FRACTION = 0.02;
 
 /** Soft-goal weights. An avoided question outweighs everything else. */
-const SCORE = { avoided: 10_000, difficulty: 1, topicBalance: 1.5, spread: 4, outcomeRepeat: 2 } as const;
+const SCORE = { avoided: 10_000, difficulty: 1, topicBalance: 1.5, spread: 4, outcomeRepeat: 2, dueMissing: 6 } as const;
+/** At most this many due skills are asked for, so retention stays a small share of the paper. */
+const MAX_DUE_SKILLS = 3;
 
 type Slot = { index: number; section: BlueprintSection; pool: Candidate[] };
 
@@ -204,6 +216,7 @@ function orderPool(
   rng: () => number,
   avoid: ReadonlySet<string>,
   laterTopics: ReadonlySet<string>,
+  prefs: Preferences,
 ): Candidate[] {
   const poolMarks = emptyDifficultyMarks();
   for (const c of pool) poolMarks[c.difficulty] += c.marks;
@@ -232,7 +245,7 @@ function orderPool(
     return weight;
   };
 
-  const keyed = pool.map((c) => ({ c, key: Math.log(rng() || Number.EPSILON) / difficultyWeight(c.difficulty) }));
+  const keyed = pool.map((c) => ({ c, key: Math.log(rng() || Number.EPSILON) / (difficultyWeight(c.difficulty) * (prefs.boost[c.primaryOutcomeId] ?? 1)) }));
   keyed.sort((a, b) => (b.key !== a.key ? b.key - a.key : byQuestionId(a.c, b.c)));
 
   // Within a topic: outcome variety (the best of each outcome first, then the second best of each...).
@@ -353,7 +366,7 @@ function* partSubsets(order: readonly Candidate[], count: number, total: number,
 }
 
 /** Lower is better. Everything except `avoided` is a soft goal. */
-function scoreAttempt(bp: Blueprint, slots: readonly Slot[], picks: readonly (readonly Candidate[])[], avoid: ReadonlySet<string>): number {
+function scoreAttempt(bp: Blueprint, slots: readonly Slot[], picks: readonly (readonly Candidate[])[], avoid: ReadonlySet<string>, prefs: Preferences): number {
   const all = picks.flat();
   const total = sum(all.map((c) => c.marks));
   const byDifficulty = emptyDifficultyMarks();
@@ -388,7 +401,10 @@ function scoreAttempt(bp: Blueprint, slots: readonly Slot[], picks: readonly (re
     spread += Math.max(0, Math.min(slots.length, questions) - (topicSections.get(topic.topicId)?.size ?? 0));
     repeats += Math.max(0, Math.min(questions, topic.outcomeIds.length) - (topicOutcomes.get(topic.topicId)?.size ?? 0));
   }
+  const present = new Set(all.map((c) => c.primaryOutcomeId));
+  const dueMissing = prefs.due.filter((id) => !present.has(id)).length;
   return (
+    SCORE.dueMissing * dueMissing +
     SCORE.avoided * all.filter((c) => avoid.has(c.questionId)).length +
     SCORE.difficulty * difficultyDistance +
     SCORE.topicBalance * balance +
@@ -404,6 +420,7 @@ function runAttempt(
   index: number,
   avoid: ReadonlySet<string>,
   requireCoverage: boolean,
+  prefs: Preferences,
 ): Attempt | undefined {
   const ordered = [...slots].sort(
     (a, b) => a.pool.length / a.section.questionCount - b.pool.length / b.section.questionCount || a.index - b.index,
@@ -432,7 +449,7 @@ function runAttempt(
     const laterTopics = later[ci] as Set<string>;
     const rng = rngFromSeed(`${derivedSeed}|${slot.section.code}`);
     const available = slot.pool.filter((c) => !ctx.used.has(c.questionId) && !ctx.families.has(c.familyId));
-    const order = orderPool(available, bp, ctx, rng, avoid, laterTopics);
+    const order = orderPool(available, bp, ctx, rng, avoid, laterTopics, prefs);
     ctx.partSteps = 0;
     const missing = (topicId: string): boolean => (ctx.questionsByTopic.get(topicId) ?? 0) === 0;
     const uncovered = requireCoverage ? topicIds.filter(missing) : [];
@@ -458,7 +475,7 @@ function runAttempt(
     picks: picks.map((p) => [...p]),
     slots: ordered,
     usedAvoided: all.filter((c) => avoid.has(c.questionId)).length,
-    score: scoreAttempt(bp, ordered, picks, avoid),
+    score: scoreAttempt(bp, ordered, picks, avoid, prefs),
     index,
   };
 }
@@ -470,6 +487,7 @@ function bestAttempt(
   avoid: ReadonlySet<string>,
   mode: string,
   requireCoverage: boolean,
+  prefs: Preferences,
 ): Attempt | undefined {
   // Cheap necessary check: every part must be able to reach its exact count and marks.
   for (const slot of slots) {
@@ -477,7 +495,7 @@ function bestAttempt(
   }
   let best: Attempt | undefined;
   for (let k = 0; k < ATTEMPTS; k += 1) {
-    const a = runAttempt(bp, slots, `${seed}#${mode}${k}`, k, avoid, requireCoverage);
+    const a = runAttempt(bp, slots, `${seed}#${mode}${k}`, k, avoid, requireCoverage, prefs);
     if (!a) continue;
     if (!best || a.score < best.score - 1e-9) best = a;
   }
@@ -549,19 +567,20 @@ export function selectQuestions(input: SelectQuestionsInput): SelectionResult {
 
   const avoid = new Set(input.avoidQuestionIds ?? []);
   const none: ReadonlySet<string> = new Set();
+  const prefs: Preferences = { boost: input.outcomeBoost ?? {}, due: [...(input.dueOutcomeIds ?? [])].sort().slice(0, MAX_DUE_SKILLS) };
   const fullSlots = buildSlots(bp, candidates, none);
 
   let best: Attempt | undefined;
   if (avoid.size > 0) {
-    best = bestAttempt(bp, buildSlots(bp, candidates, avoid), seed, none, "x", true);
+    best = bestAttempt(bp, buildSlots(bp, candidates, avoid), seed, none, "x", true, prefs);
   }
-  best ??= bestAttempt(bp, fullSlots, seed, avoid, "f", true);
+  best ??= bestAttempt(bp, fullSlots, seed, avoid, "f", true, prefs);
 
   if (!best) {
     const known = diagnose(bp, fullSlots);
     if (known) return { ok: false, failure: known };
     // Everything is reachable part by part: is it the "every topic appears" rule that blocks?
-    const relaxed = bestAttempt(bp, fullSlots, seed, avoid, "r", false);
+    const relaxed = bestAttempt(bp, fullSlots, seed, avoid, "r", false, prefs);
     if (relaxed) {
       const present = new Set(relaxed.picks.flat().map((c) => c.topicId));
       const missing = bp.scope.find((s) => !present.has(s.topicId));

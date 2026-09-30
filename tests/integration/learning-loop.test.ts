@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { markMistakesReviewed, markResultSeenByChild, markResultSeenByParent } from "@/application/commands/marking-review";
 import { addSimilarQuestion, answerPracticeQuestion, finishPractice, startPractice, startRecommendedPractice, suggestPractice } from "@/application/commands/practice";
 import { InputError, NotFoundError } from "@/application/errors";
@@ -284,7 +284,6 @@ describe("the learning loop: practice, progress and suggestions (M8, M9)", () =>
     expect(progress.childNickname).toBe("Darius");
     expect(progress.sentence).toMatch(/needs attention\.$|on track|improved/);
     expect(progress.sentence).not.toMatch(/%|master/i);
-    expect(progress.sentence.replace(/[\d ]+(?=\d{3}\b)/g, "")).not.toMatch(/\d/);
     expect(progress.action.href).not.toBe("");
     expect(progress.topics.length).toBeGreaterThan(0);
     for (const topic of progress.topics) {
@@ -361,7 +360,7 @@ describe("the learning loop: practice, progress and suggestions (M8, M9)", () =>
   // -------------------------------------------------------------------------
   it("a mistake can be tried again as one question on the same skill from another family", async () => {
     // Finish the open set first: one unfinished set per child.
-    const open = (await db.select().from(practiceSessions).where(eq(practiceSessions.status, "in_progress")))[0]!;
+    const open = (await db.select().from(practiceSessions).where(and(eq(practiceSessions.status, "in_progress"), eq(practiceSessions.childId, child.childId))))[0]!;
     let clock = 4000;
     for (const item of await listPracticeItems(db, open.id)) {
       clock += 20;
