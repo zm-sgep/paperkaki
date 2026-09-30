@@ -50,7 +50,11 @@ npm run dev
 
 `db:seed` loads the Primary 3 Mathematics curriculum from MOE's syllabus (updated October 2025) and the question bank, and auto-approves both for local use only. Every curriculum outcome and question still needs a human check before production (ADR-0012). The seed refuses to run when `NODE_ENV=production`.
 
-To try the parent journey: sign in, press **Add your child**, choose an assessment and date, tick topics, press **Generate first mock**, then download the mock paper and the answer pack.
+To try the parent journey: sign in, press **Add your child**, choose an assessment and date, tick topics, press **Generate first mock**, then download the mock paper and the answer pack. Under **Customise paper → Paper format** you can match the school's paper (for example Sections A, B and C, or Booklet A and B).
+
+To try the child journey: on the mock page choose **Do it on iPad instead**, then in **Account** choose **Hand this device to …** (or **Set up …'s iPad** for a 6-digit code on another device at `/child`). The child's **Today** screen shows the mock. After submitting, the parent sees results under **Progress**, the child can review mistakes and practise, and Learning Points and rewards appear under **Rewards**.
+
+Reading a school letter and marking handwriting use an AI service. They are off by default (`AI_PROVIDER=disabled`), and parents then tick topics by hand. To turn them on, set `AI_PROVIDER=anthropic` and `ANTHROPIC_API_KEY` in `.env.local`. `AI_PROVIDER=fixture` uses recorded sample answers for tests only.
 
 Open http://localhost:3000 and sign in with any email address (development sign-in, no password; emails in `DEV_ADMIN_EMAILS` get the admin area at `/admin`). Environment variables are validated when Next.js loads its config (`src/config/env.ts`); a missing or invalid variable stops startup and the error names each one without printing values.
 
