@@ -12,3 +12,4 @@ export * from "./child-access";
 export * from "./attempts";
 export * from "./practice";
 export * from "./mastery";
+export * from "./rewards";
