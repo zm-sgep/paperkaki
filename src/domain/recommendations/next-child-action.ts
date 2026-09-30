@@ -14,12 +14,18 @@ import {
 export type ChildActionState = {
   /** ISO 8601 timestamp. Decides which spaced reviews are due. */
   now: string;
-  /** A mock the child started and has not handed in. */
-  unfinishedMock?: { attemptId: string };
+  /**
+   * A mock the child started and has not handed in. With `position` and `total` the mission says
+   * where they were ("Question 8 of 26").
+   */
+  unfinishedMock?: { attemptId: string; position?: number; total?: number };
   /** A practice set the child started and has not finished. */
   unfinishedPractice?: { sessionId: string; focusName?: string };
-  /** A mock a parent has assigned and the child has not started. */
-  dueMock?: { attemptId: string; label?: string };
+  /**
+   * A mock a parent has assigned and the child has not started. With `durationText` the mission is
+   * the paper itself: `label` as its title ("Mathematics WA2 · Mock 1") and the time as its detail.
+   */
+  dueMock?: { attemptId: string; label?: string; durationText?: string };
   /** Marked work with mistakes the child has not gone through yet. */
   mistakes?: { count: number; resultId: string };
   practice?: {
@@ -57,6 +63,16 @@ export const CHILD_ACTION_ORDER: readonly ChildActionKind[] = [
 
 export function nextChildAction(state: ChildActionState): ChildAction {
   if (state.unfinishedMock) {
+    const { position, total } = state.unfinishedMock;
+    if (position !== undefined && total !== undefined) {
+      return {
+        kind: "resume_mock",
+        title: "Carry on with your mock",
+        supportingText: `Question ${Math.min(Math.max(1, position), Math.max(1, total))} of ${total}`,
+        ctaLabel: "Continue",
+        href: `/mock/${state.unfinishedMock.attemptId}`,
+      };
+    }
     return {
       kind: "resume_mock",
       title: "Let's finish your mock",
@@ -78,6 +94,15 @@ export function nextChildAction(state: ChildActionState): ChildAction {
   }
 
   if (state.dueMock) {
+    if (state.dueMock.durationText !== undefined) {
+      return {
+        kind: "start_mock",
+        title: state.dueMock.label ?? "Your mock is ready",
+        supportingText: state.dueMock.durationText,
+        ctaLabel: "Start",
+        href: `/mock/${state.dueMock.attemptId}/start`,
+      };
+    }
     return {
       kind: "start_mock",
       title: state.dueMock.label ? `Your ${state.dueMock.label} is ready` : "Your mock is ready",

@@ -6,6 +6,7 @@ import { requireParent } from "@/application/queries/current-parent";
 import { buttonClassName } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
+import { IpadOption } from "./ipad-option";
 
 export const metadata: Metadata = { title: "Your mock · PaperKaki" };
 
@@ -41,6 +42,7 @@ export default async function MockPage({ params }: { params: Promise<{ assessmen
           Download mock paper
         </a>
         <p className="text-lg text-ink-soft">{mock.tip}</p>
+        <IpadOption paperId={mock.paperId} childNickname={mock.childNickname} status={mock.ipad} />
       </Card>
 
       <div className="flex flex-col gap-2">

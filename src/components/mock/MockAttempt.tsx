@@ -3,13 +3,14 @@
 import { useEffect, useMemo, useRef, useState, type ReactElement, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { QuestionView } from "@/components/paper/QuestionView";
-import { questionStatuses, type MockAttemptSnapshot } from "./attempt-state";
+import { hasStrokes, questionStatuses, type MockAttemptSnapshot } from "./attempt-state";
 import { HandwritingCanvas } from "./HandwritingCanvas";
 import { McqAnswer } from "./McqAnswer";
 import { MockModeLayout } from "./MockModeLayout";
 import { ModalDialog } from "./ModalDialog";
 import { FlagButton, QuestionNavigator } from "./QuestionNavigator";
 import { SubmitReview } from "./SubmitReview";
+import { SubmittedScreen } from "./SubmittedScreen";
 import { TypedAnswer } from "./TypedAnswer";
 import { serialiseStrokes } from "./stroke-model";
 import type { MockPaper, MockQuestion } from "./types";
@@ -31,6 +32,10 @@ export type MockAttemptProps = {
   imageUrls?: Readonly<Record<string, string>>;
   /** A copy saved on the server; the newer of this and the device copy is used. */
   initialSnapshot?: MockAttemptSnapshot | null;
+  /** Seconds since Start on the server's clock. When given, the countdown is anchored on it. */
+  serverElapsedSeconds?: number;
+  /** A calm line under the header, e.g. that saving is having trouble. */
+  notice?: string | undefined;
   /** Called after each change, debounced. Server persistence plugs in here later. */
   onSave?: (snapshot: MockAttemptSnapshot) => void;
   /** Hand the paper in. Throwing keeps the pupil on the review screen with their answers safe. */
@@ -56,7 +61,7 @@ export function MockAttempt(props: MockAttemptProps): ReactElement {
   return <MockAttemptSession {...props} />;
 }
 
-function MockAttemptSession({ paper, imageUrls, initialSnapshot, onSave, onSubmit, onLeave, submittedAction }: MockAttemptProps): ReactElement {
+function MockAttemptSession({ paper, imageUrls, initialSnapshot, serverElapsedSeconds, notice, onSave, onSubmit, onLeave, submittedAction }: MockAttemptProps): ReactElement {
   const questionIds = useMemo(() => paper.questions.map((q) => q.id), [paper.questions]);
   const [phase, setPhase] = useState<Phase>("answering");
   const [listOpen, setListOpen] = useState(false);
@@ -69,6 +74,7 @@ function MockAttemptSession({ paper, imageUrls, initialSnapshot, onSave, onSubmi
     durationSeconds: paper.durationMinutes * 60,
     ...(onSave ? { onSave } : {}),
     initialSnapshot: initialSnapshot ?? null,
+    ...(serverElapsedSeconds !== undefined ? { serverElapsedSeconds } : {}),
     clockStopped: phase === "submitted",
   });
   const { state, actions } = attempt;
@@ -87,6 +93,18 @@ function MockAttemptSession({ paper, imageUrls, initialSnapshot, onSave, onSubmi
     shownRef.current = shown;
     questionRef.current?.focus({ preventScroll: true });
   }, [currentIndex, phase]);
+
+  // When time runs out the pupil is taken to "Check your paper" once. Nothing is handed in for them.
+  const timeUpHandled = useRef(false);
+  const timeIsUp = attempt.remainingSeconds === 0;
+  useEffect(() => {
+    if (timeIsUp && phase === "answering" && !timeUpHandled.current) {
+      timeUpHandled.current = true;
+      setPhase("review");
+    }
+  }, [timeIsUp, phase]);
+
+  const [workingOpen, setWorkingOpen] = useState<readonly string[]>([]);
 
   const goTo = (index: number) => {
     actions.goTo(index);
@@ -118,16 +136,12 @@ function MockAttemptSession({ paper, imageUrls, initialSnapshot, onSave, onSubmi
   }
 
   if (phase === "submitted") {
-    return (
-      <div data-mock-mode data-mock-submitted className="flex h-dvh flex-col items-center justify-center gap-4 bg-paper p-6 text-center text-ink">
-        <h1 className="text-3xl font-semibold">Your paper is handed in</h1>
-        <p className="max-w-md text-lg text-ink-soft">Well done for finishing. You can put the iPad down now.</p>
-        {submittedAction}
-      </div>
-    );
+    return <SubmittedScreen>{submittedAction}</SubmittedScreen>;
   }
 
   const isLast = state.current === total - 1;
+  // Multiple choice keeps its working space out of the way until the child asks for it (or has already used it).
+  const showWorking = question.working && (!question.workingOptional || workingOpen.includes(question.id) || hasStrokes(state.responses[question.id]));
 
   return (
     <MockModeLayout
@@ -137,6 +151,7 @@ function MockAttemptSession({ paper, imageUrls, initialSnapshot, onSave, onSubmi
       remainingSeconds={attempt.remainingSeconds}
       onLeave={() => onLeave?.()}
       onReview={() => setPhase("review")}
+      notice={notice}
       footer={
         phase === "answering" ? (
           <div className="mx-auto flex w-full max-w-5xl items-center gap-2">
@@ -210,17 +225,23 @@ function MockAttemptSession({ paper, imageUrls, initialSnapshot, onSave, onSubmi
               />
             </section>
 
-            {question.working ? (
+            {showWorking ? (
               <section aria-label="Working space" className="flex min-h-0 flex-col gap-2 min-[900px]:landscape:col-start-2 min-[900px]:landscape:row-start-2">
                 <h2 className="text-lg font-semibold text-ink">Working</h2>
                 <HandwritingCanvas
                   key={question.id}
                   label={`Working space for question ${state.current + 1}`}
                   initialStrokes={state.responses[question.id]?.strokes ?? null}
-                  onChange={(strokes) => actions.setStrokes(question.id, serialiseStrokes(strokes))}
+                  onChange={(strokes, aspect) => actions.setStrokes(question.id, serialiseStrokes(strokes, aspect))}
                   className="flex-1"
                 />
               </section>
+            ) : question.working ? (
+              <div className="min-[900px]:landscape:col-start-2 min-[900px]:landscape:row-start-2">
+                <Button variant="secondary" onClick={() => setWorkingOpen((open) => [...open, question.id])}>
+                  Use working space
+                </Button>
+              </div>
             ) : null}
           </div>
         </div>

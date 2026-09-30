@@ -23,12 +23,13 @@ afterAll(async () => {
 });
 
 describe("local storage adapter contract", () => {
-  it("has the four private buckets", () => {
+  it("has the five private buckets", () => {
     expect([...STORAGE_BUCKETS]).toEqual([
       "paper-pdfs",
       "question-assets",
       "assessment-source-uploads",
       "submission-uploads",
+      "attempt-handwriting",
     ]);
   });
 

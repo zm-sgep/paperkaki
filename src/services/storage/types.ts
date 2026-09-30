@@ -9,6 +9,7 @@ export const STORAGE_BUCKETS = [
   "question-assets",
   "assessment-source-uploads",
   "submission-uploads",
+  "attempt-handwriting",
 ] as const;
 
 export type StorageBucket = (typeof STORAGE_BUCKETS)[number];

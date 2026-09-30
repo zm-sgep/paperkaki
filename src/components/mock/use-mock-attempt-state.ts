@@ -25,7 +25,8 @@ import { remainingSeconds } from "./timer";
  * - On the first render it restores from `initialSnapshot` (a server copy) or this device's copy,
  *   whichever was saved later. Read it only on the client: render the component that calls this
  *   after hydration (see `useIsClient`), so the server and the browser agree on the first paint.
- * - Elapsed time counts while the page is open, from the last saved value. It is saved with every
+ * - Elapsed time counts while the page is open, from the last saved value, or from the server's own
+ *   count when `serverElapsedSeconds` is given (a paper the server times). It is saved with every
  *   change and every ten seconds, so a reload loses at most a few seconds.
  * - Failure to write (private window, full storage) never interrupts the paper.
  */
@@ -40,6 +41,12 @@ export type UseMockAttemptStateOptions = {
   /** Where to keep the device copy. Defaults to `window.localStorage`; pass null to turn it off. */
   storage?: SavedStorage | null;
   initialSnapshot?: MockAttemptSnapshot | null;
+  /**
+   * Seconds since the paper was started, measured by the server when the page was made. When given,
+   * the clock counts on from this and ignores any elapsed time in the saved copies, so a reload or a
+   * second device never gives back time that has passed.
+   */
+  serverElapsedSeconds?: number;
   debounceMs?: number;
   /** Stops the clock, for example once the paper is handed in. */
   clockStopped?: boolean;
@@ -69,14 +76,18 @@ function newer(a: RestoredAttempt | null, b: RestoredAttempt | null): RestoredAt
 }
 
 export function useMockAttemptState(options: UseMockAttemptStateOptions) {
-  const { attemptId, questionIds, durationSeconds, onSave, initialSnapshot, debounceMs = 500, clockStopped = false } = options;
+  const { attemptId, questionIds, durationSeconds, onSave, initialSnapshot, serverElapsedSeconds, debounceMs = 500, clockStopped = false } = options;
   const storage = options.storage === undefined ? defaultStorage() : options.storage;
 
   const [start] = useState(() => {
     const fromServer = initialSnapshot ? restoreSnapshot(initialSnapshot, attemptId, questionIds) : null;
     const fromDevice = restoreSnapshot(readSaved(storage, attemptId), attemptId, questionIds);
     const restored = newer(fromDevice, fromServer);
-    return { restored, state: restored?.state ?? createAttemptState(questionIds), elapsed: restored?.elapsedSeconds ?? 0 };
+    return {
+      restored,
+      state: restored?.state ?? createAttemptState(questionIds),
+      elapsed: serverElapsedSeconds ?? restored?.elapsedSeconds ?? 0,
+    };
   });
 
   const [state, setState] = useState<MockAttemptState>(start.state);
@@ -131,6 +142,12 @@ export function useMockAttemptState(options: UseMockAttemptStateOptions) {
     },
     [flush, debounceMs],
   );
+
+  // A copy restored from this device may hold changes a page-hide never managed to send: hand it to
+  // onSave once, so the caller can catch the server up (it sends only what differs).
+  useEffect(() => {
+    if (start.restored) onSaveRef.current?.(toSnapshot(stateRef.current, attemptId, elapsedRef.current));
+  }, [attemptId, start.restored]);
 
   // The clock.
   useEffect(() => {

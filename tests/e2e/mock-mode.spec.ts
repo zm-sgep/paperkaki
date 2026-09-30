@@ -207,10 +207,10 @@ test("submit review lists unanswered and flagged questions, jumps back, and conf
   await expect(confirm).toContainText("You can't change answers after this.");
   await confirm.getByRole("button", { name: "Keep checking" }).click();
   await expect(confirm).toBeHidden();
-  await expect(page.getByRole("heading", { name: "Your paper is handed in" })).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "Paper submitted. Well done!" })).toHaveCount(0);
   await page.getByRole("button", { name: "Submit paper" }).click();
   await page.getByRole("dialog", { name: "Submit your paper?" }).getByRole("button", { name: "Yes, submit" }).click();
-  await expect(page.getByRole("heading", { name: "Your paper is handed in" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Paper submitted. Well done!" })).toBeVisible();
 });
 
 test("End asks first, keeps the paper safe and can stop for now", async ({ page }) => {
@@ -249,6 +249,22 @@ test("timer: can be hidden per device, turns amber at 10 minutes and shows a gen
   await expect(banner).toContainText("About 5 minutes left");
   await banner.getByRole("button", { name: "OK" }).click();
   await expect(banner).toHaveCount(0);
+});
+
+test("time is up: a calm banner, the pupil is taken to Check your paper, and nothing is handed in for them", async ({ page }) => {
+  await page.clock.install();
+  await openMock(page);
+  await page.locator("[data-mcq] label").nth(1).click();
+  await page.clock.fastForward("45:05");
+  const banner = page.locator("[data-timer-banner=time-up]");
+  await expect(banner).toContainText("Time is up. Please submit your paper.");
+  await expect(page.getByRole("heading", { name: "Check your paper" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Paper submitted. Well done!" })).toHaveCount(0);
+  // They can still go back and finish the question they were on, then submit themselves.
+  await page.getByRole("button", { name: "Back to questions" }).click();
+  await expect(progress(page)).toHaveText("Question 1 of 8");
+  await expect(page.getByRole("radio").nth(1)).toBeChecked();
+  await expect(banner).toBeVisible();
 });
 
 test("every button, choice card and input is at least 44px, on each main screen", async ({ page }) => {

@@ -39,8 +39,8 @@ export type HandwritingCanvasHandle = {
 export type HandwritingCanvasProps = {
   /** Saved working to start from. Read once when the canvas mounts; give the canvas a `key` per question. */
   initialStrokes?: StrokeDocument | null;
-  /** Called (debounced) with the strokes after each change, and once more when the canvas goes away. */
-  onChange?: (strokes: readonly Stroke[]) => void;
+  /** Called (debounced) with the strokes after each change, and once more when the canvas goes away. `aspect` is the writing area's width over height. */
+  onChange?: (strokes: readonly Stroke[], aspect?: number) => void;
   debounceMs?: number;
   /** Names the writing area for assistive technology, e.g. "Working space for question 3". */
   label: string;
@@ -134,7 +134,8 @@ export function HandwritingCanvas({ initialStrokes, onChange, debounceMs = 300, 
     const pending = pendingRef.current;
     if (pending) {
       pendingRef.current = null;
-      onChangeRef.current?.(pending);
+      const { width, height } = sizeRef.current;
+      onChangeRef.current?.(pending, width > 0 && height > 0 ? width / height : undefined);
     }
   }, []);
 

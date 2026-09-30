@@ -529,3 +529,55 @@ describe("nextChildAction", () => {
     expect(full).toEqual(copy);
   });
 });
+
+describe("attempt-driven copy on Today and Home", () => {
+  it("child: resume says where they were, without a menu", () => {
+    expect(nextChildAction({ now, unfinishedMock: { attemptId: "t1", position: 8, total: 26 } })).toEqual({
+      kind: "resume_mock",
+      title: "Carry on with your mock",
+      supportingText: "Question 8 of 26",
+      ctaLabel: "Continue",
+      href: "/mock/t1",
+    });
+  });
+
+  it("child: a given mock is the mission itself, with its time, never points or rewards", () => {
+    const action = nextChildAction({
+      now,
+      dueMock: { attemptId: "t2", label: "Mathematics End-of-year exam · Mock 1", durationText: "1 h 30 min" },
+    });
+    expect(action).toEqual({
+      kind: "start_mock",
+      title: "Mathematics End-of-year exam · Mock 1",
+      supportingText: "1 h 30 min",
+      ctaLabel: "Start",
+      href: "/mock/t2/start",
+    });
+    expect(JSON.stringify(action).toLowerCase()).not.toMatch(/point|reward|badge/);
+  });
+
+  it("child: an unfinished mock still beats a waiting one, and nothing left means done for today", () => {
+    expect(
+      nextChildAction({ now, unfinishedMock: { attemptId: "a", position: 1, total: 5 }, dueMock: { attemptId: "b", durationText: "45 min" } }).kind,
+    ).toBe("resume_mock");
+    expect(nextChildAction({ now }).title).toBe("You're done for today. Nice work.");
+  });
+
+  it("parent: a mock waiting on the iPad is the next action, after work in progress and answers to check", () => {
+    const waiting = attempt({ status: "assigned", id: "t9" });
+    expect(nextParentAction(state({ attempts: [waiting] }))).toEqual({
+      kind: "start_mock",
+      title: "Maths WA3 · Mock 1 is waiting on Mia's Today screen",
+      supportingText: "Hand the iPad over when they are ready to start.",
+      ctaLabel: "Hand over the iPad",
+      href: "/mock/t9",
+    });
+    expect(nextParentAction(state({ attempts: [waiting, attempt({ status: "in_progress", id: "t8" })] })).kind).toBe("continue_mock");
+    expect(nextParentAction(state({ attempts: [waiting, attempt({ status: "needs_review", id: "t7" })] })).kind).toBe("review_marking");
+  });
+
+  it("parent: a mock that was given to the iPad no longer asks to be printed", () => {
+    expect(nextParentAction(state({ attempts: [attempt({ status: "assigned" })] })).ctaLabel).not.toBe("Print mock");
+  });
+});
+

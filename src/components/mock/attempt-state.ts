@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { STROKE_DOCUMENT_VERSION, deserialiseStrokes, serialiseStrokes, type StrokeDocument } from "./stroke-model";
+import { STROKE_DOCUMENT_VERSION, readStrokeDocument, serialiseStrokes, type StrokeDocument } from "./stroke-model";
 
 /**
  * What the pupil has done so far in one mock attempt, as a pure reducer plus a saved snapshot
@@ -134,7 +134,7 @@ const SnapshotSchema = z.object({
       selected: z.enum(OPTION_IDS).optional(),
       typed: z.string().max(500).optional(),
       strokes: z
-        .object({ version: z.literal(STROKE_DOCUMENT_VERSION), strokes: z.array(z.unknown()) })
+        .object({ version: z.literal(STROKE_DOCUMENT_VERSION), aspect: z.number().optional(), strokes: z.array(z.unknown()) })
         .passthrough()
         .optional(),
     }),
@@ -168,8 +168,8 @@ export function restoreSnapshot(raw: unknown, attemptId: string, questionIds: re
   for (const [id, response] of Object.entries(parsed.data.responses)) {
     if (!known.has(id)) continue;
     const { strokes: rawStrokes, ...rest } = response;
-    const strokes = rawStrokes === undefined ? null : deserialiseStrokes(rawStrokes);
-    responses[id] = strokes && strokes.length > 0 ? { ...rest, strokes: serialiseStrokes(strokes) } : rest;
+    const read = rawStrokes === undefined ? null : readStrokeDocument(rawStrokes);
+    responses[id] = read && read.strokes.length > 0 ? { ...rest, strokes: serialiseStrokes(read.strokes, read.aspect) } : rest;
   }
   return {
     state: {

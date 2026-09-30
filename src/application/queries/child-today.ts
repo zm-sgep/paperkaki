@@ -1,7 +1,9 @@
+import { attemptLabel, formatDuration } from "@/domain/attempts";
 import { countdownText, formatAssessmentDate, todayInSingapore } from "@/domain/assessments/dates";
 import { nextChildAction, type ChildAction, type ChildActionState } from "@/domain/recommendations/next-child-action";
 import type { Database } from "@/repositories/postgres/client";
 import { listAssessmentsForParent } from "@/repositories/postgres/assessments";
+import { listOpenAttemptHeaders } from "@/repositories/postgres/attempts";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import type { CurrentChild } from "./current-child";
 
@@ -14,8 +16,28 @@ export type ChildToday = {
 };
 
 /** The state the child's next-action policy decides from. Grows as more kinds of activity exist. */
-export async function getChildActionState(_child: CurrentChild, context: Context = {}): Promise<ChildActionState> {
-  return { now: (context.now ?? new Date()).toISOString() };
+export async function getChildActionState(child: CurrentChild, context: Context = {}): Promise<ChildActionState> {
+  const db = context.db ?? (await getReadyDb());
+  const state: ChildActionState = { now: (context.now ?? new Date()).toISOString() };
+  const open = await listOpenAttemptHeaders(db, child.childId);
+  // A paper being sat comes first; among several, the one worked on most recently (headers are newest first).
+  const inProgress = open.find((header) => header.attempt.status === "in_progress");
+  if (inProgress) {
+    state.unfinishedMock = {
+      attemptId: inProgress.attempt.id,
+      position: inProgress.attempt.currentPosition,
+      total: inProgress.questionCount,
+    };
+  }
+  const due = open.find((header) => header.attempt.status === "assigned");
+  if (due) {
+    state.dueMock = {
+      attemptId: due.attempt.id,
+      label: attemptLabel(due.assessmentSubject, due.assessmentName, due.paperNumber),
+      durationText: formatDuration(due.attempt.timeLimitSeconds / 60),
+    };
+  }
+  return state;
 }
 
 /** Today: one mission, and one quiet line about the next assessment. Own child only. */

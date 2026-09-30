@@ -65,9 +65,11 @@ export type MockModeLayoutProps = {
   onReview: () => void;
   children: ReactNode;
   footer?: ReactNode;
+  /** A calm line under the header, e.g. that saving is paused. Not a countdown, not a score. */
+  notice?: string | undefined;
 };
 
-export function MockModeLayout({ title, progressLabel, progress, remainingSeconds, onLeave, onReview, children, footer }: MockModeLayoutProps): ReactElement {
+export function MockModeLayout({ title, progressLabel, progress, remainingSeconds, onLeave, onReview, children, footer, notice }: MockModeLayoutProps): ReactElement {
   const [timerHidden, setTimerHidden] = useHideTimerPreference();
   const [dismissedBanner, setDismissedBanner] = useState<string | null>(null);
   const [ending, setEnding] = useState(false);
@@ -109,16 +111,22 @@ export function MockModeLayout({ title, progressLabel, progress, remainingSecond
       </header>
 
       {banner ? (
-        <div role="status" data-timer-banner={banner} className="flex shrink-0 items-center gap-3 border-b-2 border-amber-400 bg-amber-50 px-4 py-1 text-base text-amber-950">
+        <div role="status" data-timer-banner={banner} className="flex shrink-0 items-center gap-3 border-b-2 border-warning bg-warning-soft px-4 py-1 text-base text-warning-strong">
           <p className="flex-1">{BANNER_TEXT[banner]}</p>
           <button
             type="button"
             onClick={() => setDismissedBanner(banner)}
-            className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-lg px-3 font-semibold underline underline-offset-4 hover:bg-amber-100"
+            className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-lg px-3 font-semibold underline underline-offset-4 hover:bg-warning/15"
           >
             OK
           </button>
         </div>
+      ) : null}
+
+      {notice ? (
+        <p role="status" data-save-notice className="shrink-0 border-b-2 border-line bg-surface px-4 py-1 text-base text-ink-soft">
+          {notice}
+        </p>
       ) : null}
 
       <main id="mock-main" className="flex min-h-0 flex-1 flex-col overflow-y-auto">
@@ -156,7 +164,7 @@ export function MockModeLayout({ title, progressLabel, progress, remainingSecond
 }
 
 function TimerChip({ remaining, tone }: { remaining: number; tone: "calm" | "amber" }): ReactElement {
-  const styles = tone === "amber" ? "border-amber-500 bg-amber-100 text-amber-950" : "border-kaki/30 bg-kaki-soft text-kaki-strong";
+  const styles = tone === "amber" ? "border-warning bg-warning-soft text-warning-strong" : "border-kaki/30 bg-kaki-soft text-kaki-strong";
   return (
     <div
       role="timer"

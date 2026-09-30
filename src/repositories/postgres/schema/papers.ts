@@ -64,6 +64,8 @@ export const papers = pgTable(
 export const paperQuestions = pgTable(
   "paper_questions",
   {
+    /** A stable handle for this question on this paper, so an attempt's answers can point at it. */
+    id: uuid("id").notNull().defaultRandom(),
     paperId: uuid("paper_id")
       .notNull()
       .references(() => papers.id, { onDelete: "restrict" }),
@@ -79,6 +81,7 @@ export const paperQuestions = pgTable(
   },
   (table) => [
     primaryKey({ name: "paper_questions_pkey", columns: [table.paperId, table.position] }),
+    unique("paper_questions_id_key").on(table.id),
     unique("paper_questions_question_key").on(table.paperId, table.questionId),
     index("idx_paper_questions_question").on(table.questionId),
     check("paper_questions_position_positive", sql`${table.position} >= 1`),

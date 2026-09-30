@@ -10,7 +10,9 @@ import {
   type ParentActionState,
 } from "@/domain/recommendations/next-parent-action";
 import type { Database } from "@/repositories/postgres/client";
+import { attemptLabel } from "@/domain/attempts";
 import { listAssessmentsForParent } from "@/repositories/postgres/assessments";
+import { listAttemptHeadersForParent } from "@/repositories/postgres/attempts";
 import { listPapersForAssessments } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import { getParentChildren } from "./children";
@@ -25,9 +27,10 @@ type Context = { db?: Database; now?: Date };
  */
 export async function getParentHomeState(parentProfileId: string, context: Context = {}): Promise<ParentActionState> {
   const db = context.db ?? (await getReadyDb());
-  const [{ children, selectedChildId }, assessments] = await Promise.all([
+  const [{ children, selectedChildId }, assessments, attemptHeaders] = await Promise.all([
     getParentChildren(parentProfileId, { db }),
     listAssessmentsForParent(db, parentProfileId),
+    listAttemptHeadersForParent(db, parentProfileId),
   ]);
   const papers = await listPapersForAssessments(db, assessments.map((assessment) => assessment.id));
   return {
@@ -45,6 +48,21 @@ export async function getParentHomeState(parentProfileId: string, context: Conte
         .map((paper) => ({ id: paper.id, number: paper.number, status: "ready" as const })),
     })),
     today: todayInSingapore(context.now),
+    // Marked attempts join once results exist; until then an attempt is given, in progress or handed in.
+    attempts: attemptHeaders.flatMap((header) => {
+      const { attempt } = header;
+      if (attempt.status === "marked") return [];
+      return [
+        {
+          id: attempt.id,
+          childId: attempt.childId,
+          paperId: attempt.paperId,
+          status: attempt.status,
+          startedAt: (attempt.startedAt ?? attempt.assignedAt).toISOString(),
+          label: attemptLabel(header.assessmentSubject, header.assessmentName, header.paperNumber),
+        },
+      ];
+    }),
   };
 }
 

@@ -52,6 +52,8 @@ type AttemptBase = {
 
 /** One attempt at a mock, in the state the parent needs to know about. */
 export type ParentActionAttempt =
+  /** Given to the child on the iPad; they have not pressed Start yet. `startedAt` is when it was given. */
+  | (AttemptBase & { status: "assigned" })
   | (AttemptBase & { status: "in_progress" })
   /** Handed in; marking has not finished. */
   | (AttemptBase & { status: "submitted" })
@@ -177,6 +179,17 @@ function attemptAction(state: ParentActionState, child: ParentActionChild): Pare
       supportingText: `We weren't sure how to mark some of ${child.nickname}'s answers, and it takes about a minute to check.`,
       ctaLabel: "Check answers",
       href: `/review/${needsReview.id}`,
+    };
+  }
+
+  const waiting = attempts.find((a) => a.status === "assigned");
+  if (waiting) {
+    return {
+      kind: "start_mock",
+      title: `${named(waiting)} is waiting on ${child.nickname}'s Today screen`,
+      supportingText: "Hand the iPad over when they are ready to start.",
+      ctaLabel: "Hand over the iPad",
+      href: `/mock/${waiting.id}`,
     };
   }
 

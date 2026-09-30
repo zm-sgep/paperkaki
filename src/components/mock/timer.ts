@@ -1,6 +1,6 @@
 /**
  * The mock clock, as plain functions (UX_SPEC section 10: "timer not excessively alarming until
- * meaningful thresholds"). It counts down, turns amber with ten minutes left, and shows one gentle
+ * meaningful thresholds"). It counts down, turns to the gentle warning colour with ten minutes left, and shows one gentle
  * banner with five minutes left. Nothing flashes and nothing is red.
  */
 
@@ -33,7 +33,7 @@ export function remainingSeconds(durationSeconds: number, elapsedSeconds: number
 }
 
 export type TimerPhase = {
-  /** "calm" until ten minutes are left, then "amber". */
+  /** "calm" until ten minutes are left, then "amber" (drawn in the warning colour). */
   tone: "calm" | "amber";
   /** The gentle five-minute banner. Stays up (with different words) once time is over. */
   banner: "none" | "five-minutes" | "time-up";
@@ -48,5 +48,5 @@ export function timerPhase(remaining: number): TimerPhase {
 
 export const BANNER_TEXT = {
   "five-minutes": "About 5 minutes left. Check your answers when you are ready.",
-  "time-up": "Time is up. Finish the question you are on, then review and submit.",
+  "time-up": "Time is up. Please submit your paper.",
 } as const;

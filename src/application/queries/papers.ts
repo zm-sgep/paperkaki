@@ -7,6 +7,8 @@ import { ANSWER_PACK_NOTE, mockReadyHeading, mockSummaryLine, printTip } from "@
 import { formatSummaryLine } from "@/domain/assessments";
 import { parsePaperFormat } from "@/schemas/paper-format";
 import type { Database } from "@/repositories/postgres/client";
+import { handedInText, inProgressOnIpadText, waitingOnTodayText } from "@/domain/attempts";
+import { listAttemptsForPaper } from "@/repositories/postgres/attempts";
 import { getOwnedPaper, type OwnedPaper } from "@/repositories/postgres/papers";
 import { getReadyDb } from "@/repositories/postgres/ready";
 import { isStorageBucket, type StorageService } from "@/services/storage";
@@ -36,12 +38,15 @@ export type MockPage = {
   studentHref: string;
   answersHref: string;
   backHref: string;
+  /** Whether this mock can go to the iPad, or where it already is. Null attempt means "not given to the iPad". */
+  ipad: { attemptId: string; status: "assigned" | "in_progress" | "submitted"; message: string } | null;
+  childNickname: string;
 };
 
 type SpecShape = { totalMarks?: unknown; durationMinutes?: unknown; scope?: unknown; format?: unknown };
 
 /** Marks, minutes and topic labels of the blueprint version the paper was built from. */
-function summaryOf(paper: OwnedPaper): { totalMarks: number; durationMinutes: number; topicLabels: string[]; line: string } {
+export function summaryOf(paper: OwnedPaper): { totalMarks: number; durationMinutes: number; topicLabels: string[]; line: string } {
   const spec = paper.blueprintSpec as SpecShape;
   const scope = Array.isArray(spec.scope) ? (spec.scope as { label?: unknown }[]) : [];
   const totalMarks = typeof spec.totalMarks === "number" ? spec.totalMarks : 0;
@@ -68,6 +73,15 @@ export async function getMockPage(
   const summary = summaryOf(paper);
   const today = todayInSingapore(context.now);
   const base = `/prepare/${assessmentId}/mocks/${paperId}`;
+  const db = await resolveDb(context);
+  const attempt = (await listAttemptsForPaper(db, paperId))[0];
+  const ipad: MockPage["ipad"] = !attempt
+    ? null
+    : attempt.status === "assigned"
+      ? { attemptId: attempt.id, status: "assigned", message: waitingOnTodayText(paper.number, paper.childNickname) }
+      : attempt.status === "in_progress"
+        ? { attemptId: attempt.id, status: "in_progress", message: inProgressOnIpadText(paper.number, paper.childNickname) }
+        : { attemptId: attempt.id, status: "submitted", message: handedInText(paper.number, paper.childNickname) };
   return {
     paperId,
     assessmentId,
@@ -81,6 +95,8 @@ export async function getMockPage(
     studentHref: `${base}/download/student`,
     answersHref: `${base}/download/answers`,
     backHref: `/prepare/${assessmentId}`,
+    ipad,
+    childNickname: paper.childNickname,
   };
 }
 
