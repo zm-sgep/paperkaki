@@ -93,7 +93,7 @@ export type NoticeReviewView = {
 
 export type NoticeScreen =
   | { state: "processing" }
-  | { state: "failed"; code: NoticeFailureCode; retry: boolean }
+  | { state: "failed"; code: NoticeFailureCode; retry: boolean; childId: string }
   | { state: "found"; view: NoticeReviewView }
   | { state: "confirmed"; assessmentId: string };
 
@@ -108,13 +108,13 @@ export async function getNoticeScreen(parentProfileId: string, sourceId: string,
   if (status.status === "queued" || status.status === "running") return { state: "processing" };
   if (status.status === "failed") {
     const code = (status.failureCode ?? "internal") as NoticeFailureCode;
-    return { state: "failed", code, retry: RETRYABLE_FAILURES.includes(code) };
+    return { state: "failed", code, retry: RETRYABLE_FAILURES.includes(code), childId: source.childId };
   }
 
   const stored = StoredNoticeSchema.safeParse(source.extraction);
   const child = await getOwnedChild(db, parentProfileId, source.childId);
   const published = await loadPublishedTopics(db);
-  if (!stored.success || !child || !published) return { state: "failed", code: "internal", retry: true };
+  if (!stored.success || !child || !published) return { state: "failed", code: "internal", retry: true, childId: source.childId };
 
   const { review } = stored.data;
   const today = todayInSingapore(context.now);

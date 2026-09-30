@@ -3,8 +3,17 @@ import { defineConfig, devices } from "@playwright/test";
 
 const PORT = 3100;
 const baseURL = `http://localhost:${PORT}`;
+/**
+ * A second server for the school-notice tests, on the same production build but with its own
+ * database and files and AI_PROVIDER=fixture (recorded answers, no model). The main server keeps the
+ * default, `disabled`, so every other spec sees the manual setup screen and the notice spec can also
+ * check that no upload is offered.
+ */
+const NOTICE_PORT = 3101;
+const noticeBaseURL = `http://localhost:${NOTICE_PORT}`;
 /** File-backed so the seed step and the server share one database. Recreated on every run. */
 const E2E_DB_DIR = "./.data/e2e-db";
+const NOTICE_DB_DIR = "./.data/e2e-db-notice";
 
 /**
  * Chromium location. In CI, `playwright install chromium` provides the matching browser and
@@ -57,32 +66,57 @@ export default defineConfig({
       },
     },
   ],
-  webServer: {
-    // Prepares the browser-test database first: a fresh file-backed PGlite database, migrated
-    // and seeded with the published P3 curriculum (development seed, ADR-0012), plus one
-    // fictional DRAFT curriculum version that the admin tests use to mark outcomes verified.
-    command: [
-      `node -e "require('node:fs').rmSync('${E2E_DB_DIR}', { recursive: true, force: true })"`,
-      "npm run db:seed",
-      "npm run curriculum:import -- tests/fixtures/curriculum/e2e-draft.json",
-      "npm run build",
-      `npm run start -- --port ${PORT}`,
-    ].join(" && "),
-    url: baseURL,
-    timeout: 240_000,
-    reuseExistingServer: false,
-    env: {
-      APP_BASE_URL: baseURL,
-      DATABASE_URL: `pglite://${E2E_DB_DIR}`,
-      LOG_LEVEL: "warn",
-      // Fictional, test-only values. The production build normally refuses the dev sign-in
-      // adapter; E2E_ALLOW_DEV_AUTH lets these browser tests use it.
-      AUTH_PROVIDER: "dev",
-      AUTH_SECRET: "e2e-only-auth-secret-not-used-anywhere-else-0123456789",
-      DEV_ADMIN_EMAILS: "admin@example.test",
-      E2E_ALLOW_DEV_AUTH: "true",
-      STORAGE_LOCAL_DIR: "./.data/e2e-storage",
-      STORAGE_SIGNING_SECRET: "e2e-only-storage-signing-secret-0123456789abcdef",
+  webServer: [
+    {
+      // Prepares the browser-test database first: a fresh file-backed PGlite database, migrated
+      // and seeded with the published P3 curriculum (development seed, ADR-0012), plus one
+      // fictional DRAFT curriculum version that the admin tests use to mark outcomes verified.
+      command: [
+        `node -e "require('node:fs').rmSync('${E2E_DB_DIR}', { recursive: true, force: true })"`,
+        "npm run db:seed",
+        "npm run curriculum:import -- tests/fixtures/curriculum/e2e-draft.json",
+        "npm run build",
+        `npm run start -- --port ${PORT}`,
+      ].join(" && "),
+      url: baseURL,
+      timeout: 240_000,
+      reuseExistingServer: false,
+      env: {
+        APP_BASE_URL: baseURL,
+        DATABASE_URL: `pglite://${E2E_DB_DIR}`,
+        LOG_LEVEL: "warn",
+        // Fictional, test-only values. The production build normally refuses the dev sign-in
+        // adapter; E2E_ALLOW_DEV_AUTH lets these browser tests use it.
+        AUTH_PROVIDER: "dev",
+        AUTH_SECRET: "e2e-only-auth-secret-not-used-anywhere-else-0123456789",
+        DEV_ADMIN_EMAILS: "admin@example.test",
+        E2E_ALLOW_DEV_AUTH: "true",
+        STORAGE_LOCAL_DIR: "./.data/e2e-storage",
+        STORAGE_SIGNING_SECRET: "e2e-only-storage-signing-secret-0123456789abcdef",
+      },
     },
-  },
+    {
+      // Reuses the build the first server made (servers start one after the other).
+      command: [
+        `node -e "require('node:fs').rmSync('${NOTICE_DB_DIR}', { recursive: true, force: true })"`,
+        "npm run db:seed",
+        `npm run start -- --port ${NOTICE_PORT}`,
+      ].join(" && "),
+      url: noticeBaseURL,
+      timeout: 120_000,
+      reuseExistingServer: false,
+      env: {
+        APP_BASE_URL: noticeBaseURL,
+        DATABASE_URL: `pglite://${NOTICE_DB_DIR}`,
+        LOG_LEVEL: "warn",
+        AUTH_PROVIDER: "dev",
+        AUTH_SECRET: "e2e-only-auth-secret-not-used-anywhere-else-0123456789",
+        DEV_ADMIN_EMAILS: "admin@example.test",
+        E2E_ALLOW_DEV_AUTH: "true",
+        STORAGE_LOCAL_DIR: "./.data/e2e-storage-notice",
+        STORAGE_SIGNING_SECRET: "e2e-only-storage-signing-secret-0123456789abcdef",
+        AI_PROVIDER: "fixture",
+      },
+    },
+  ],
 });

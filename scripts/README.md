@@ -7,6 +7,9 @@ Run with `npm run <name>`; each reads `DATABASE_URL` from the environment or `.e
 | `db-migrate.ts` | `npm run db:migrate` | Applies pending migrations. Safe to repeat. |
 | `db-seed.ts` | `npm run db:seed` | Development only. Migrates, imports the P3 Mathematics curriculum and publishes it with `allowUnverified` (ADR-0012). Refuses when `NODE_ENV=production`. Safe to repeat. |
 | `import-curriculum.ts` | `npm run curriculum:import -- <file.json>` | Imports a curriculum file into a DRAFT version. Never publishes. Safe to repeat. |
+| `make-sample-notice.ts` | `npx tsx scripts/make-sample-notice.ts` | Writes the INVENTED sample school notice (`tests/fixtures/notices/p3-eoy-sample.pdf`). Deterministic. |
+| `make-sample-notice-photo.py` | `python3 scripts/make-sample-notice-photo.py` | Renders the sample notice as two PNG photos (needs PyMuPDF). |
+| `record-notice-fixtures.ts` | `npx tsx scripts/record-notice-fixtures.ts` | Writes the recorded reading for each sample file to `tests/fixtures/ai/<sha256>.json`, used by `AI_PROVIDER=fixture`. |
 
 ## Curriculum import format
 
