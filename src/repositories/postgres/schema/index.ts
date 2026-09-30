@@ -10,3 +10,5 @@ export * from "./ai";
 export * from "./notices";
 export * from "./child-access";
 export * from "./attempts";
+export * from "./practice";
+export * from "./mastery";

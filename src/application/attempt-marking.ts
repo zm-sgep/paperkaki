@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { and, asc, eq } from "drizzle-orm";
+import { recordAttemptEvidence } from "@/application/mastery";
 import { markableOf } from "@/application/marking-support";
 import { decisionFromAiMarking, markAttempt, type MarkableQuestion } from "@/domain/marking";
 import { markingResponseFor, shownUnitOf, type SavedAnswer } from "@/domain/attempts";
@@ -58,6 +59,8 @@ export async function settleAttempt(db: Database, attemptId: string, now: Date):
     if (locked.status !== "submitted") return { marked: false, waiting };
     if (waiting === 0 && marking.length > 0) {
       await tx.update(attemptSessions).set({ status: "marked", markedAt: now, markingStage: "done" }).where(eq(attemptSessions.id, attemptId));
+      // The mark that counts is final now, so the answers become evidence of what the child can do.
+      await recordAttemptEvidence(tx, attemptId, now);
       return { marked: true, waiting: 0 };
     }
     await tx.update(attemptSessions).set({ markingStage: "done" }).where(eq(attemptSessions.id, attemptId));

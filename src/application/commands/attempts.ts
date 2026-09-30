@@ -1,6 +1,7 @@
 import { and, eq, inArray, sql } from "drizzle-orm";
 import { InputError, NotFoundError } from "@/application/errors";
 import { MARK_ATTEMPT_JOB } from "@/application/attempt-marking";
+import { recordAttemptEvidence } from "@/application/mastery";
 import { markableOf } from "@/application/marking-support";
 import { summaryOf } from "@/application/queries/papers";
 import type { CurrentChild } from "@/application/queries/current-child";
@@ -364,6 +365,8 @@ export async function submitAttempt(child: CurrentChild, attemptId: string, cont
         overTimeSeconds: overTimeSecondsFor(locked.timeLimitSeconds, elapsed),
       })
       .where(and(eq(attemptSessions.id, attemptId), inArray(attemptSessions.status, ["in_progress"])));
+    // A paper marked entirely by rule is final at once: its answers become mastery evidence now.
+    if (settledNow) await recordAttemptEvidence(tx, attemptId, now);
     await recordAuditEvent(tx, {
       action: "attempt.submitted",
       entityType: "attempt",
