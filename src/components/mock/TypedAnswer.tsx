@@ -24,6 +24,7 @@ export function TypedAnswer({
   onChange,
   unit,
   label = "Your answer",
+  shape = "control",
 }: {
   kind: TypedAnswerKind;
   value: string;
@@ -31,6 +32,8 @@ export function TypedAnswer({
   /** The unit the question states, e.g. "cm" or "$". */
   unit?: string | undefined;
   label?: string;
+  /** "soft" is the rounder corner the child's practice uses; Mock Mode keeps the default. */
+  shape?: "control" | "soft";
 }): ReactElement {
   const id = useId();
   const help = KIND_HELP[kind];
@@ -66,7 +69,7 @@ export function TypedAnswer({
           spellCheck={false}
           maxLength={kind === "text" ? 120 : 24}
           aria-describedby={[help ? helpId : null, unit ? unitId : null].filter(Boolean).join(" ") || undefined}
-          className={`${inputClassName} min-h-14 max-w-xs text-2xl`}
+          className={`${inputClassName} min-h-14 max-w-xs text-2xl ${shape === "soft" ? "rounded-2xl" : ""}`.trim()}
         />
         {unit && !unitBefore ? (
           <span id={unitId} className="text-2xl font-semibold text-ink">

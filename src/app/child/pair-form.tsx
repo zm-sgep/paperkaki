@@ -21,10 +21,12 @@ export function PairForm() {
           autoFocus
           aria-invalid={state.error ? true : undefined}
           aria-describedby={state.error ? "pair-code-error" : undefined}
-          className="min-h-16 w-full rounded-2xl border-2 border-line bg-surface px-5 text-center text-4xl font-semibold tracking-[0.3em] tabular-nums text-ink focus-visible:border-kaki aria-[invalid=true]:border-danger"
+          className="min-h-16 w-full rounded-2xl border-2 border-line-strong bg-surface px-5 text-center text-4xl font-extrabold tracking-[0.3em] tabular-nums text-ink focus-visible:border-kaki aria-[invalid=true]:border-danger"
         />
       </Field>
-      <SubmitButton className="min-h-14 w-full text-xl">Go</SubmitButton>
+      <SubmitButton size="xl" shape="pill" className="w-full">
+        Go
+      </SubmitButton>
     </form>
   );
 }

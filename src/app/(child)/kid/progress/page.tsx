@@ -1,9 +1,11 @@
+import { Lightbulb, Medal, Star } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { requireChild } from "@/application/queries/current-child";
 import { getChildProgress } from "@/application/queries/progress";
-import { ChildCard, ChildEmptyState } from "@/components/child/child-card";
+import { ChildCard, ChildEmptyState, ChildSectionTitle, ChildTitle } from "@/components/child/child-card";
+import { ChildRowLink } from "@/components/child/child-row";
 import { Stars } from "@/components/child/stars";
+import { Sprout } from "@/components/illustrations";
 import { ButtonLink } from "@/components/ui/button";
 
 export const metadata: Metadata = { title: "Progress · PaperKaki" };
@@ -17,22 +19,24 @@ export default async function ChildProgressPage() {
   const child = await requireChild();
   const progress = await getChildProgress(child);
   if (progress.topics.length === 0 && progress.recentResults.length === 0) {
-    return <ChildEmptyState title="Progress">Your progress will show here after your first mock.</ChildEmptyState>;
+    return (
+      <ChildEmptyState title="Progress" illustration={<Sprout className="h-28 w-auto sm:h-32" />}>
+        Your progress will show here after your first mock.
+      </ChildEmptyState>
+    );
   }
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Progress</h1>
+      <ChildTitle>Progress</ChildTitle>
 
       {progress.topics.length > 0 ? (
         <section aria-labelledby="map-heading" className="flex flex-col gap-3">
-          <h2 id="map-heading" className="text-2xl font-semibold text-ink">
-            My topics
-          </h2>
+          <ChildSectionTitle id="map-heading">My topics</ChildSectionTitle>
           <ul data-topic-map className="grid gap-4 sm:grid-cols-2">
             {progress.topics.map((topic) => (
-              <li key={topic.topicId} data-topic-card className="flex flex-col gap-2 rounded-3xl border-2 border-child-line bg-child-card p-5">
-                <span className="text-xl font-semibold text-ink">{topic.label}</span>
-                <Stars count={topic.stars} />
+              <li key={topic.topicId} data-topic-card className="flex flex-col gap-3 rounded-3xl border border-child-line bg-child-card p-5 shadow-child">
+                <span className="text-xl font-bold leading-snug text-ink">{topic.label}</span>
+                <Stars count={topic.stars} size="lg" />
                 <span className="text-lg text-ink-soft">{topic.word}</span>
               </li>
             ))}
@@ -41,40 +45,44 @@ export default async function ChildProgressPage() {
       ) : null}
 
       {progress.mistakes ? (
-        <ChildCard className="flex flex-col items-start gap-3">
-          <h2 className="text-2xl font-semibold text-ink">Mistakes to fix</h2>
-          <p className="text-xl text-ink-soft">
-            {progress.mistakes.label}: {progress.mistakes.count === 1 ? "1 mistake" : `${progress.mistakes.count} mistakes`}
-          </p>
-          <ButtonLink href={progress.mistakes.href} variant="secondary" className="min-h-14 rounded-2xl px-8 text-xl">
-            Review mistakes
-          </ButtonLink>
-        </ChildCard>
+        <section aria-labelledby="mistakes-heading" className="flex flex-col gap-3">
+          <ChildSectionTitle id="mistakes-heading">Mistakes to fix</ChildSectionTitle>
+          <ChildRowLink
+            href={progress.mistakes.href}
+            icon={<Lightbulb />}
+            tone="kaya"
+            title={progress.mistakes.label}
+            detail={progress.mistakes.count === 1 ? "1 mistake" : `${progress.mistakes.count} mistakes`}
+            action="Review mistakes"
+          />
+        </section>
       ) : null}
 
       {progress.recentResults.length > 0 ? (
-        <ChildCard className="flex flex-col gap-2">
-          <h2 className="text-2xl font-semibold text-ink">Your mocks</h2>
-          <ul className="flex flex-col">
+        <section aria-labelledby="mocks-heading" className="flex flex-col gap-3">
+          <ChildSectionTitle id="mocks-heading">Your mocks</ChildSectionTitle>
+          <ul className="flex flex-col gap-3">
             {progress.recentResults.map((result) => (
-              <li key={result.attemptId} className="border-b-2 border-child-line last:border-b-0">
-                <Link href={result.href} className="flex min-h-16 items-center justify-between gap-3 py-2 text-xl text-ink hover:underline">
-                  <span>{result.label}</span>
-                  <span className="text-2xl font-semibold">{result.scoreText}</span>
-                </Link>
+              <li key={result.attemptId}>
+                <ChildRowLink href={result.href} icon={<Star />} tone="teal" title={result.label} value={result.scoreText} />
               </li>
             ))}
           </ul>
-        </ChildCard>
+        </section>
       ) : null}
 
-      <ChildCard className="flex flex-col gap-2">
-        <h2 className="text-2xl font-semibold text-ink">Achievements</h2>
-        <p className="text-xl text-ink-soft">Badges you earn will show up here.</p>
+      <ChildCard className="flex items-center gap-4">
+        <span aria-hidden="true" className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-kaya-soft text-kaya-strong">
+          <Medal className="h-7 w-7" strokeWidth={2.25} />
+        </span>
+        <div className="flex min-w-0 flex-col gap-0.5">
+          <ChildSectionTitle>Achievements</ChildSectionTitle>
+          <p className="text-lg text-ink-soft">Badges you earn will show up here.</p>
+        </div>
       </ChildCard>
 
       <div>
-        <ButtonLink href="/practice" variant="quiet" className="min-h-14 rounded-2xl px-6 text-lg">
+        <ButtonLink href="/practice" variant="quiet" size="lg" shape="pill" flush>
           Go to Practice
         </ButtonLink>
       </div>

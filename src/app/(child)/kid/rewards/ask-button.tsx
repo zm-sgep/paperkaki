@@ -15,15 +15,15 @@ export function AskButton({ rewardId, title, firstAsk }: { rewardId: string; tit
 
   if (!confirming) {
     return (
-      <Button type="button" variant="secondary" className="min-h-14 w-full rounded-2xl px-6 text-lg sm:w-auto" onClick={() => setConfirming(true)}>
+      <Button type="button" variant="secondary" size="lg" shape="pill" className="w-full sm:w-auto" onClick={() => setConfirming(true)}>
         Ask for this
         <span className="sr-only">: {title}</span>
       </Button>
     );
   }
   return (
-    <div data-ask-confirm role="group" aria-label={`Ask for ${title}`} className="flex w-full flex-col gap-3 rounded-2xl bg-kaki-soft p-4">
-      <p className="text-xl font-semibold text-ink">Ask for {title}?</p>
+    <div data-ask-confirm role="group" aria-label={`Ask for ${title}`} className="flex w-full flex-col gap-3 rounded-3xl border border-kaki/20 bg-kaki-soft p-4 sm:p-5">
+      <p className="text-xl font-extrabold text-ink">Ask for {title}?</p>
       {firstAsk ? (
         <p data-first-ask-tip className="text-lg text-ink-soft">
           Your parent will check and say yes or no.
@@ -39,7 +39,9 @@ export function AskButton({ rewardId, title, firstAsk }: { rewardId: string; tit
           type="button"
           variant="primary"
           loading={pending}
-          className="min-h-14 w-full rounded-2xl px-6 text-lg sm:w-auto"
+          size="lg"
+          shape="pill"
+          className="w-full sm:w-auto"
           onClick={() =>
             startTransition(async () => {
               const result = await askForRewardAction(rewardId);
@@ -50,7 +52,7 @@ export function AskButton({ rewardId, title, firstAsk }: { rewardId: string; tit
         >
           Yes, ask
         </Button>
-        <Button type="button" variant="quiet" disabled={pending} className="min-h-14 rounded-2xl px-6 text-lg" onClick={() => setConfirming(false)}>
+        <Button type="button" variant="quiet" size="lg" shape="pill" disabled={pending} onClick={() => setConfirming(false)}>
           Not now
         </Button>
       </div>

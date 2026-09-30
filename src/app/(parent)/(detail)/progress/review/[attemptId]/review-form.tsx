@@ -25,14 +25,14 @@ export function ReviewForm({
   return (
     <form action={formAction} className="flex flex-col gap-4">
       <fieldset className="flex flex-col gap-3">
-        <legend className="pb-1 text-lg font-semibold text-ink">How many marks?</legend>
+        <legend className="pb-1 text-xl font-bold text-ink">How many marks?</legend>
         <div className="flex flex-wrap gap-3">
           {choices.map((choice) => (
             <label key={choice} className="group relative block cursor-pointer">
               <input type="radio" name="score" value={choice} defaultChecked={suggested === choice} className="peer sr-only" />
-              <span className="flex min-h-14 min-w-14 flex-col items-center justify-center rounded-xl border-2 border-line bg-surface px-4 py-2 text-xl font-semibold text-ink transition-colors group-hover:border-kaki/60 group-has-checked:border-kaki group-has-checked:bg-kaki-soft group-has-focus-visible:outline-3 group-has-focus-visible:outline-offset-3 group-has-focus-visible:outline-kaki">
-                <span>{choice}</span>
-                {suggested === choice ? <span className="text-sm font-normal text-ink-soft">Suggested</span> : null}
+              <span className="flex min-h-16 min-w-16 flex-col items-center justify-center rounded-card border-[1.5px] border-line-strong bg-surface px-5 py-2 text-3xl font-extrabold text-ink shadow-card transition-[border-color,background-color,box-shadow] group-hover:border-kaki/60 group-has-checked:border-kaki group-has-checked:bg-kaki-soft group-has-checked:text-kaki-strong group-has-checked:shadow-[inset_0_0_0_1px_var(--color-kaki)] group-has-focus-visible:outline-3 group-has-focus-visible:outline-offset-3 group-has-focus-visible:outline-kaki">
+                <span data-numeric>{choice}</span>
+                {suggested === choice ? <span className="text-sm font-semibold text-ink-soft">Suggested</span> : null}
               </span>
             </label>
           ))}
@@ -44,7 +44,9 @@ export function ReviewForm({
           {state.error}
         </p>
       ) : null}
-      <SubmitButton className="w-full sm:w-auto sm:self-start">Save and next</SubmitButton>
+      <SubmitButton size="lg" className="w-full sm:w-auto sm:self-start">
+        Save and next
+      </SubmitButton>
     </form>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { Check, CircleAlert, LoaderCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import type { MarkingStep } from "@/domain/attempts";
@@ -9,33 +10,28 @@ const POLL_MS = 2000;
 function Mark({ state }: { state: MarkingStep["state"] }) {
   if (state === "done") {
     return (
-      <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center rounded-full bg-kaki text-white">
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5 12.5 10 17.5 19 7" />
-        </svg>
+      <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-full bg-kaki text-white">
+        <Check className="h-4 w-4" strokeWidth={3.5} />
       </span>
     );
   }
   if (state === "active") {
     return (
-      <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center">
-        <svg viewBox="0 0 24 24" className="h-6 w-6 animate-spin text-kaki" fill="none">
-          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="3" opacity="0.3" />
-          <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-        </svg>
+      <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-full bg-kaki-soft text-kaki">
+        <LoaderCircle className="h-5 w-5 animate-spin" strokeWidth={2.75} />
       </span>
     );
   }
   if (state === "failed") {
     return (
-      <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center rounded-full bg-warning text-lg font-bold text-white">
-        !
+      <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-full bg-coral-soft text-coral-strong">
+        <CircleAlert className="h-5 w-5" strokeWidth={2.5} />
       </span>
     );
   }
   return (
-    <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center">
-      <span className="h-3 w-3 rounded-full border-2 border-line" />
+    <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center">
+      <span className="h-3.5 w-3.5 rounded-full border-2 border-line-strong bg-surface" />
     </span>
   );
 }
@@ -70,11 +66,21 @@ export function MarkingProgress({ attemptId, steps, live }: { attemptId: string;
   }, [attemptId, live, router, steps]);
 
   return (
-    <ol role="status" aria-live="polite" data-marking-steps className="flex flex-col gap-3 text-lg text-ink">
+    <ol
+      role="status"
+      aria-live="polite"
+      data-marking-steps
+      className="flex flex-col rounded-card border border-line bg-surface p-2 text-lg text-ink shadow-card sm:p-3"
+    >
       {steps.map((step) => (
-        <li key={step.id} data-step={step.id} data-state={step.state} className={`flex items-center gap-3 ${step.state === "waiting" ? "text-ink-soft" : ""}`}>
+        <li
+          key={step.id}
+          data-step={step.id}
+          data-state={step.state}
+          className={`flex min-h-14 items-center gap-4 rounded-control px-3 py-2 ${step.state === "waiting" ? "text-ink-soft" : ""} ${step.state === "active" ? "bg-kaki-soft" : ""}`}
+        >
           <Mark state={step.state} />
-          <span className={step.state === "active" || step.state === "failed" ? "font-semibold" : ""}>
+          <span className={step.state === "active" || step.state === "failed" ? "font-bold" : step.state === "done" ? "font-medium" : ""}>
             {step.label}
             {step.state === "done" ? <span className="sr-only"> (done)</span> : null}
           </span>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPracticeRun } from "@/application/queries/practice";
 import { requireChild } from "@/application/queries/current-child";
-import { ChildHero } from "@/components/child/child-card";
+import { ChildCta, ChildHero } from "@/components/child/child-card";
 import { PointsEarned } from "@/components/child/points-earned";
-import { SubmitButton } from "@/components/ui/submit-button";
+import { CheckCircleBurst } from "@/components/illustrations";
 import { finishAction } from "./actions";
 import { PracticeRunner } from "./practice-runner";
 
@@ -21,6 +21,7 @@ export default async function PracticeSessionPage({ params }: { params: Promise<
   if (run.state === "done") {
     return (
       <ChildHero
+        illustration={<CheckCircleBurst className="h-28 w-auto md:h-44" />}
         title={run.endText}
         // The heading is about the practice just done, so the next mission is named as what comes next,
         // and a bare "Start" says what it starts.
@@ -37,15 +38,16 @@ export default async function PracticeSessionPage({ params }: { params: Promise<
 
   if (run.state === "finish") {
     return (
-      <section className="flex flex-col items-start gap-4 rounded-3xl border-2 border-kaki/30 bg-kaki-soft p-6 sm:p-8">
-        <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">That was the last question</h1>
-        <p className="text-xl text-ink-soft">Well done for finishing your {run.focusLabel} practice.</p>
-        <form action={finishAction.bind(null, sessionId)} className="w-full sm:w-auto">
-          <SubmitButton variant="primary" className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
-            Finish
-          </SubmitButton>
-        </form>
-      </section>
+      <ChildHero
+        illustration={<CheckCircleBurst className="h-28 w-auto md:h-44" />}
+        title="That was the last question"
+        supportingText={`Well done for finishing your ${run.focusLabel} practice.`}
+        cta={
+          <form action={finishAction.bind(null, sessionId)} className="w-full sm:w-auto">
+            <ChildCta>Finish</ChildCta>
+          </form>
+        }
+      />
     );
   }
 

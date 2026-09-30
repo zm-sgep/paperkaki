@@ -19,11 +19,14 @@ export function McqAnswer({
   options,
   value,
   onChange,
+  shape = "control",
 }: {
   questionId: string;
   options: readonly McqOption[];
   value: OptionId | undefined;
   onChange: (option: OptionId | null) => void;
+  /** "soft" is the rounder corner the child's practice uses; Mock Mode keeps the default. */
+  shape?: "control" | "soft";
 }): ReactElement {
   return (
     <fieldset data-mcq className="flex min-w-0 flex-col gap-3">
@@ -34,6 +37,7 @@ export function McqAnswer({
           type="radio"
           name={`mcq-${questionId}`}
           value={option.id}
+          shape={shape}
           checked={value === option.id}
           onChange={(checked) => {
             if (checked) onChange(option.id);
@@ -52,7 +56,7 @@ export function McqAnswer({
         <button
           type="button"
           onClick={() => onChange(null)}
-          className="inline-flex min-h-12 items-center self-start rounded-lg px-3 text-base font-semibold text-kaki underline underline-offset-4 hover:bg-kaki-soft"
+          className="inline-flex min-h-12 items-center self-start rounded-lg px-3 text-base font-semibold text-kaki-strong underline underline-offset-4 hover:bg-kaki-soft"
         >
           Clear my choice
         </button>

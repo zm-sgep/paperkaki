@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState, useTransition, type ReactElement } from "react";
+import { BookOpenCheck, Lightbulb, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState, useTransition, type ReactElement, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { McqAnswer } from "@/components/mock/McqAnswer";
 import { TypedAnswer } from "@/components/mock/TypedAnswer";
@@ -19,24 +20,52 @@ type Props = {
   question: PracticeQuestionView;
 };
 
+/** Where the child is in the set. Decorative: the words above the dots say it. A wrong answer is a warm dot, never a red one. */
 function Dots({ dots, progressText }: { dots: PracticeDot[]; progressText: string }) {
   return (
-    <div className="flex flex-col gap-2">
-      <p data-progress className="text-xl font-semibold text-ink">
+    <div className="flex flex-col gap-3">
+      <p data-progress className="text-xl font-bold text-ink">
         {progressText}
       </p>
-      <ol aria-hidden="true" className="flex flex-wrap gap-2">
+      <ol aria-hidden="true" className="flex flex-wrap items-center gap-2.5">
         {dots.map((dot) => (
           <li
             key={dot.position}
             data-dot={dot.state}
             data-current={dot.current || undefined}
-            className={`h-4 w-4 rounded-full border-2 ${
-              dot.current ? "h-5 w-5 border-kaki bg-child-card ring-2 ring-kaki/40" : dot.state === "todo" ? "border-child-line bg-child-card" : "border-kaki bg-kaki"
+            className={`shrink-0 rounded-full transition-all ${
+              dot.current
+                ? "h-6 w-6 border-[3px] border-kaki bg-child-card ring-4 ring-kaki/20"
+                : dot.state === "todo"
+                  ? "h-4 w-4 bg-child-line"
+                  : dot.state === "right"
+                    ? "h-4 w-4 bg-kaki"
+                    : "h-4 w-4 bg-kaya"
             }`}
           />
         ))}
       </ol>
+    </div>
+  );
+}
+
+const PANEL: Record<PracticeFeedback["result"], { box: string; heading: string; icon: string }> = {
+  right: { box: "border-kaki/30 bg-kaki-soft", heading: "text-kaki-strong", icon: "bg-kaya text-ink" },
+  wrong: { box: "border-coral/40 bg-coral-soft", heading: "text-coral-strong", icon: "bg-coral text-white" },
+  unclear: { box: "border-kaya/50 bg-kaya-soft", heading: "text-kaya-strong", icon: "bg-kaya text-ink" },
+};
+
+/** A white card inside the feedback panel: "A hint" or "Here is how". */
+function PanelNote({ icon, title, children, ...marker }: { icon: ReactElement; title: string; children: ReactNode; "data-hint"?: boolean; "data-solution"?: boolean }) {
+  return (
+    <div {...marker} className="flex flex-col gap-2 rounded-2xl border border-child-line bg-child-card p-4 sm:p-5">
+      <h3 className="flex items-center gap-2.5 text-xl font-extrabold text-ink">
+        <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-kaya-soft text-kaya-strong [&>svg]:h-5 [&>svg]:w-5">
+          {icon}
+        </span>
+        {title}
+      </h3>
+      {children}
     </div>
   );
 }
@@ -98,84 +127,89 @@ export function PracticeRunner({ sessionId, focusLabel, progressText, dots, ques
     });
   }
 
+  const panel = feedback ? PANEL[feedback.result] : null;
+
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-3">
-        <h1 ref={headingRef} tabIndex={-1} className="text-3xl font-semibold tracking-tight text-ink outline-none sm:text-4xl">
+      <div className="flex flex-col gap-4">
+        <h1 ref={headingRef} tabIndex={-1} className="text-[2rem] font-extrabold leading-tight tracking-tight text-ink outline-none sm:text-4xl">
           {focusLabel}
         </h1>
         <Dots dots={dots} progressText={progressText} />
       </div>
 
-      <section aria-label="Question" data-question-card className="flex flex-col gap-5 rounded-3xl border-2 border-child-line bg-child-card p-5 sm:p-8">
+      <section aria-label="Question" data-question-card className="flex flex-col gap-6 rounded-3xl border border-child-line bg-child-card p-5 shadow-child sm:p-8">
         <QuestionView content={isMcq ? { stem: question.content.stem } : question.content} imageUrls={question.imageUrls} className="text-xl sm:text-2xl" />
 
         {feedback ? null : isMcq ? (
-          <McqAnswer questionId={`practice-${question.position}`} options={question.content.options ?? []} value={selected ?? undefined} onChange={setSelected} />
+          <McqAnswer questionId={`practice-${question.position}`} options={question.content.options ?? []} value={selected ?? undefined} onChange={setSelected} shape="soft" />
         ) : (
-          <TypedAnswer kind={input.kind === "fraction" ? "fraction" : input.kind === "text" ? "text" : "number"} value={typed} onChange={setTyped} unit={unit} />
+          <TypedAnswer kind={input.kind === "fraction" ? "fraction" : input.kind === "text" ? "text" : "number"} value={typed} onChange={setTyped} unit={unit} shape="soft" />
         )}
 
-        {error ? (
+        {error && !feedback ? (
           <p role="alert" className="text-lg font-semibold text-danger">
             {error}
           </p>
         ) : null}
 
         {feedback ? null : (
-          <Button type="button" variant="primary" disabled={!hasAnswer} loading={pending} onClick={check} className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto sm:self-start">
+          <Button type="button" variant="primary" size="xl" shape="pill" disabled={!hasAnswer} loading={pending} onClick={check} className="w-full sm:w-auto sm:self-start">
             Check answer
           </Button>
         )}
       </section>
 
-      {feedback ? (
+      {feedback && panel ? (
         <section
           ref={feedbackRef}
           tabIndex={-1}
           aria-live="polite"
           data-feedback={feedback.result}
-          className={`flex flex-col gap-4 rounded-3xl border-2 p-5 outline-none sm:p-8 ${feedback.result === "right" ? "border-kaki bg-kaki-soft" : "border-warning bg-warning-soft"}`}
+          className={`flex flex-col gap-5 rounded-3xl border p-5 shadow-child outline-none motion-safe:animate-enter sm:p-8 ${panel.box}`}
         >
-          <h2 data-feedback-heading className="text-3xl font-semibold text-ink">
-            {FEEDBACK_HEADING[feedback.result]}
-          </h2>
+          <div className="flex items-center gap-3">
+            <span aria-hidden="true" className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${panel.icon}`}>
+              {feedback.result === "right" ? <Sparkles className="h-6 w-6" strokeWidth={2.25} /> : <Lightbulb className="h-6 w-6" strokeWidth={2.25} />}
+            </span>
+            <h2 data-feedback-heading className={`text-3xl font-extrabold leading-tight tracking-tight ${panel.heading}`}>
+              {FEEDBACK_HEADING[feedback.result]}
+            </h2>
+          </div>
           {feedback.result !== "right" && feedback.hint ? (
-            <div data-hint className="flex flex-col gap-1">
-              <h3 className="text-xl font-semibold text-ink">A hint</h3>
+            <PanelNote icon={<Lightbulb />} title="A hint" data-hint>
               <div className="text-xl text-ink">
                 {feedback.hint.kind === "step" ? <BlockListView blocks={feedback.hint.blocks} imageUrls={question.imageUrls} /> : <p>{feedback.hint.text}</p>}
               </div>
-            </div>
+            </PanelNote>
           ) : null}
           {showHow ? (
-            <div data-solution className="flex flex-col gap-2">
-              <h3 className="text-xl font-semibold text-ink">Here is how</h3>
+            <PanelNote icon={<BookOpenCheck />} title="Here is how" data-solution>
               <div className="text-xl text-ink">
                 <BlockListView blocks={feedback.solution} imageUrls={question.imageUrls} />
               </div>
               <p className="text-xl text-ink">
-                <span className="font-semibold">Answer: </span>
+                <span className="font-bold">Answer: </span>
                 {feedback.correctAnswer}
               </p>
-            </div>
+            </PanelNote>
           ) : null}
           {error ? (
             <p role="alert" className="text-lg font-semibold text-danger">
               {error}
             </p>
           ) : null}
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button type="button" variant="primary" loading={pending} onClick={next} className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <Button type="button" variant="primary" size="xl" shape="pill" loading={pending} onClick={next} className="w-full sm:w-auto">
               {nextButtonLabel(feedback.isLast)}
             </Button>
             {feedback.result !== "right" && !showHow ? (
-              <Button type="button" variant="secondary" onClick={() => setShowHow(true)} className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
+              <Button type="button" variant="secondary" size="lg" shape="pill" onClick={() => setShowHow(true)} className="w-full sm:w-auto">
                 Show how
               </Button>
             ) : null}
             {feedback.result !== "right" && feedback.canTryLike ? (
-              <Button type="button" variant="secondary" disabled={pending} onClick={similar} className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
+              <Button type="button" variant="secondary" size="lg" shape="pill" disabled={pending} onClick={similar} className="w-full sm:w-auto">
                 Try one like this
               </Button>
             ) : null}

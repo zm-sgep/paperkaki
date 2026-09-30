@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 
 export type ChipTone = "neutral" | "teal" | "kaya" | "coral";
+/** `md` is the small one the parent screens use; `lg` is for the child screens (18px text). */
+export type ChipSize = "md" | "lg";
+
+const sizes: Record<ChipSize, string> = {
+  md: "px-3 py-1 text-sm",
+  lg: "px-4 py-1.5 text-base",
+};
 
 /** Every tone keeps its text at 4.5:1 or better on its own tint (checked in tests/unit/design-tokens.test.ts). */
 const tones: Record<ChipTone, string> = {
@@ -17,12 +24,14 @@ const tones: Record<ChipTone, string> = {
  */
 export function Chip({
   tone = "neutral",
+  size = "md",
   icon,
   children,
   className,
   ...rest
 }: {
   tone?: ChipTone;
+  size?: ChipSize;
   icon?: ReactNode;
   children: ReactNode;
   className?: string;
@@ -31,10 +40,10 @@ export function Chip({
   return (
     <span
       {...rest}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-semibold leading-snug ${tones[tone]} ${className ?? ""}`.trim()}
+      className={`inline-flex items-center gap-1.5 rounded-full border font-semibold leading-snug ${sizes[size]} ${tones[tone]} ${className ?? ""}`.trim()}
     >
       {icon ? (
-        <span aria-hidden="true" className="flex shrink-0 items-center [&>svg]:h-4 [&>svg]:w-4">
+        <span aria-hidden="true" className={`flex shrink-0 items-center ${size === "lg" ? "[&>svg]:h-5 [&>svg]:w-5" : "[&>svg]:h-4 [&>svg]:w-4"}`}>
           {icon}
         </span>
       ) : null}

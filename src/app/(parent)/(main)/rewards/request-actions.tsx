@@ -34,7 +34,7 @@ export function RequestActions({
 
   if (confirming) {
     return (
-      <div data-approve-confirm role="group" aria-label={`Approve ${title}`} className="flex w-full flex-col gap-3 rounded-lg bg-kaki-soft p-4">
+      <div data-approve-confirm role="group" aria-label={`Approve ${title}`} className="flex w-full flex-col gap-3 rounded-card border border-kaki/20 bg-kaki-soft p-4">
         <p className="text-lg font-semibold text-ink">
           Approve {title} for {childNickname}? This takes {cost} {cost === 1 ? "point" : "points"}.
         </p>

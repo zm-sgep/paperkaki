@@ -1,33 +1,57 @@
+import { ChevronDown, Lightbulb, Shapes } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPracticeHome, type PracticeCard as CardData } from "@/application/queries/practice";
 import { requireChild } from "@/application/queries/current-child";
-import { ChildCard, ChildEmptyState, ChildHero } from "@/components/child/child-card";
+import { ChildCard, ChildCta, ChildEmptyState, ChildHero, ChildSectionTitle, ChildTitle } from "@/components/child/child-card";
+import { ChildRowButton, ChildRowLink } from "@/components/child/child-row";
 import { Stars } from "@/components/child/stars";
-import { ButtonLink } from "@/components/ui/button";
-import { SubmitButton } from "@/components/ui/submit-button";
+import { Sunrise } from "@/components/illustrations";
+import { buttonClassName } from "@/components/ui/button";
 import { startChosenAction, startRecommendedAction } from "./actions";
 
 export const metadata: Metadata = { title: "Practice · PaperKaki" };
 export const dynamic = "force-dynamic";
 
+/** One topic as a tappable card: its stars and word, and one tap starts the practice. */
 function TopicRow({ card }: { card: CardData }) {
   return (
-    <li className="flex flex-wrap items-center justify-between gap-3 border-b-2 border-child-line py-3 last:border-b-0">
-      <div className="flex min-w-0 flex-col gap-1">
-        <span className="text-xl font-semibold text-ink">{card.label}</span>
-        <span className="flex items-center gap-2 text-base text-ink-soft">
-          <Stars count={card.stars} />
-          <span>{card.word}</span>
-        </span>
-      </div>
+    <li>
       <form action={startChosenAction}>
         <input type="hidden" name="topicId" value={card.topicId} />
-        <SubmitButton variant="secondary" aria-label={`Practise ${card.label}`} className="min-h-14 rounded-2xl px-6 text-lg">
-          Practise
-        </SubmitButton>
+        <ChildRowButton
+          label={`Practise ${card.label}`}
+          icon={<Shapes />}
+          title={card.label}
+          detail={
+            <span className="flex flex-wrap items-center gap-x-3 gap-y-0.5">
+              <Stars count={card.stars} />
+              <span>{card.word}</span>
+            </span>
+          }
+          action="Practise"
+        />
       </form>
     </li>
+  );
+}
+
+/** A folded-away list of topics: a heading that opens it, with a turning chevron. */
+function TopicsDisclosure({ title, cards }: { title: string; cards: CardData[] }) {
+  return (
+    <details className="group/details rounded-3xl border border-child-line bg-child-card p-5 shadow-child" data-browse>
+      <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 text-2xl font-extrabold text-ink [&::-webkit-details-marker]:hidden">
+        {title}
+        <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-kaki-soft text-kaki-strong transition-transform group-open/details:rotate-180">
+          <ChevronDown className="h-5 w-5" strokeWidth={2.75} />
+        </span>
+      </summary>
+      <ul className="flex flex-col gap-3 pt-4">
+        {cards.map((card) => (
+          <TopicRow key={card.topicId} card={card} />
+        ))}
+      </ul>
+    </details>
   );
 }
 
@@ -46,98 +70,82 @@ export default async function ChildPracticePage({ searchParams }: { searchParams
     return (
       <>
         <ChildEmptyState title="Practice">Practice will appear here after your first mock.</ChildEmptyState>
-        {home.browse.length > 0 ? (
-          <details className="rounded-3xl border-2 border-child-line bg-child-card p-6" data-browse>
-            <summary className="flex min-h-12 cursor-pointer items-center text-2xl font-semibold text-ink">Browse topics</summary>
-            <ul className="flex flex-col pt-2">
-              {home.browse.map((card) => (
-                <TopicRow key={card.topicId} card={card} />
-              ))}
-            </ul>
-          </details>
-        ) : null}
+        {home.browse.length > 0 ? <TopicsDisclosure title="Browse topics" cards={home.browse} /> : null}
       </>
     );
   }
 
   return (
     <>
-      <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Practice</h1>
+      <ChildTitle>Practice</ChildTitle>
 
       {primary?.kind === "resume" ? (
-        <ChildHero as="h2" overline="Keep going" title={primary.title} supportingText={primary.text} ctaLabel="Continue" href={`/practice/session/${primary.sessionId}`} />
+        <ChildHero
+          as="h2"
+          overline="Keep going"
+          title={primary.title}
+          supportingText={primary.text}
+          illustration={<Sunrise className="h-24 w-auto md:h-36" />}
+          ctaLabel="Continue"
+          href={`/practice/session/${primary.sessionId}`}
+        />
       ) : primary ? (
-        <section aria-labelledby="recommended-heading" className="flex flex-col items-start gap-4 rounded-3xl border-2 border-kaki/30 bg-kaki-soft p-6 sm:p-8">
-          <p className="text-base font-semibold uppercase tracking-wide text-kaki-strong">{home.requested ? "Just for you" : "Recommended for you"}</p>
-          <h2 id="recommended-heading" className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            {primary.title}
-          </h2>
-          <p className="text-xl text-ink-soft">{primary.text}</p>
-          {primary.outcomeId ? (
-            <form action={startChosenAction} className="w-full sm:w-auto">
-              <input type="hidden" name="outcomeId" value={primary.outcomeId} />
-              <SubmitButton variant="primary" className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
-                Start
-              </SubmitButton>
+        <ChildHero
+          as="h2"
+          headingId="recommended-heading"
+          overline={home.requested ? "Just for you" : "Recommended for you"}
+          title={primary.title}
+          supportingText={primary.text}
+          illustration={<Sunrise className="h-24 w-auto md:h-36" />}
+          cta={
+            <form action={primary.outcomeId ? startChosenAction : startRecommendedAction} className="w-full sm:w-auto">
+              {primary.outcomeId ? <input type="hidden" name="outcomeId" value={primary.outcomeId} /> : null}
+              <ChildCta>Start</ChildCta>
             </form>
-          ) : (
-            <form action={startRecommendedAction} className="w-full sm:w-auto">
-              <SubmitButton variant="primary" className="min-h-14 w-full rounded-2xl px-8 text-xl sm:w-auto">
-                Start
-              </SubmitButton>
-            </form>
-          )}
-        </section>
+          }
+        />
       ) : (
         <ChildCard className="flex flex-col gap-2">
-          <h2 className="text-2xl font-semibold text-ink">Nothing to practise right now</h2>
+          <ChildSectionTitle>Nothing to practise right now</ChildSectionTitle>
           <p className="text-xl text-ink-soft">Nice work. Come back after your next mock, or pick a topic below.</p>
         </ChildCard>
       )}
 
       {home.mistakes.length > 0 ? (
-        <ChildCard className="flex flex-col gap-2">
-          <h2 className="text-2xl font-semibold text-ink">Mistakes to fix</h2>
-          <ul className="flex flex-col">
+        <section aria-labelledby="mistakes-heading" className="flex flex-col gap-3">
+          <ChildSectionTitle id="mistakes-heading">Mistakes to fix</ChildSectionTitle>
+          <ul className="flex flex-col gap-3">
             {home.mistakes.map((mistake) => (
-              <li key={mistake.attemptId} className="flex flex-wrap items-center justify-between gap-3 border-b-2 border-child-line py-3 last:border-b-0">
-                <span className="text-xl text-ink">
-                  {mistake.label}
-                  <span className="block text-base text-ink-soft">{mistake.count === 1 ? "1 mistake" : `${mistake.count} mistakes`}</span>
-                </span>
-                <ButtonLink href={mistake.href} variant="secondary" className="min-h-14 rounded-2xl px-6 text-lg">
-                  Review mistakes
-                </ButtonLink>
+              <li key={mistake.attemptId}>
+                <ChildRowLink
+                  href={mistake.href}
+                  icon={<Lightbulb />}
+                  tone="kaya"
+                  title={mistake.label}
+                  detail={mistake.count === 1 ? "1 mistake" : `${mistake.count} mistakes`}
+                  action="Review mistakes"
+                />
               </li>
             ))}
           </ul>
-        </ChildCard>
+        </section>
       ) : null}
 
       {home.toWorkOn.length > 0 ? (
-        <ChildCard className="flex flex-col gap-2">
-          <h2 className="text-2xl font-semibold text-ink">Topics to work on</h2>
-          <ul data-topics-to-work-on className="flex flex-col">
+        <section aria-labelledby="work-on-heading" className="flex flex-col gap-3">
+          <ChildSectionTitle id="work-on-heading">Topics to work on</ChildSectionTitle>
+          <ul data-topics-to-work-on className="flex flex-col gap-3">
             {home.toWorkOn.map((card) => (
               <TopicRow key={card.topicId} card={card} />
             ))}
           </ul>
-        </ChildCard>
+        </section>
       ) : null}
 
-      {home.browse.length > 0 ? (
-        <details className="rounded-3xl border-2 border-child-line bg-child-card p-6" data-browse>
-          <summary className="flex min-h-12 cursor-pointer items-center text-2xl font-semibold text-ink">Browse other topics</summary>
-          <ul className="flex flex-col pt-2">
-            {home.browse.map((card) => (
-              <TopicRow key={card.topicId} card={card} />
-            ))}
-          </ul>
-        </details>
-      ) : null}
+      {home.browse.length > 0 ? <TopicsDisclosure title="Browse other topics" cards={home.browse} /> : null}
 
-      <p className="text-base text-ink-soft">
-        <Link href="/progress" className="inline-flex min-h-12 items-center underline underline-offset-4">
+      <p>
+        <Link href="/progress" className={buttonClassName("quiet", "md", { shape: "pill", flush: true })}>
           See how you are doing
         </Link>
       </p>
