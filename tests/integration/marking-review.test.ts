@@ -135,7 +135,20 @@ describe("marking review, results and the marked paper (M7)", () => {
     });
     await saveAttemptProgress(child, attemptId, { position: 1, savedAt: at(60).toISOString(), responses }, ctx(at(61)));
     const submitted = await submitAttempt(child, attemptId, { ...ctx(at(600)), ...(options.jobs ? { jobs: options.jobs } : {}) });
-    return { paperId, attemptId, items, wordProblem, submitted };
+    return { paperId, attemptId, items, wordProblem, wrongAnswerText: wrongAnswerText(wordProblem), submitted };
+  }
+
+  /**
+   * How the quick check and the marked paper show the wrong answer typed for a word problem. The answer box
+   * shows the question's unit, so it is shown with the answer: "$0.01", "0.01 cm" or "0.01". The paper (and
+   * so the unit) changes from run to run, because the assessment ID seeds the question choice.
+   */
+  function wrongAnswerText(item: { question: { answer: unknown } }): string {
+    const answer = AnswerSchema.parse(item.question.answer);
+    if (answer.kind === "fraction") return "1/99";
+    const unit = answer.kind === "number" ? answer.unit : undefined;
+    if (!unit) return "0.01";
+    return unit === "$" ? "$0.01" : `0.01 ${unit}`;
   }
 
   let first: Awaited<ReturnType<typeof play>>;
@@ -163,7 +176,7 @@ describe("marking review, results and the marked paper (M7)", () => {
   it("shows the quick check for one answer with everything the parent needs, and no suggestion when nobody looked", async () => {
     const check = await getQuickCheck(parentA, first.attemptId, ctx());
     if (check?.state !== "check") throw new Error("expected a check");
-    expect(check).toMatchObject({ position: first.wordProblem.position, marks: first.wordProblem.marks, childAnswer: "0.01", suggestion: null, progressText: "Last one to check", paperQuestionId: first.wordProblem.paperQuestionId });
+    expect(check).toMatchObject({ position: first.wordProblem.position, marks: first.wordProblem.marks, childAnswer: first.wrongAnswerText, suggestion: null, progressText: "Last one to check", paperQuestionId: first.wordProblem.paperQuestionId });
     expect(check.choices).toEqual(Array.from({ length: first.wordProblem.marks + 1 }, (_, i) => i));
     expect(check.workingUrl).toBe(`/api/attempts/${first.attemptId}/working/${first.wordProblem.position}`);
     expect(check.scheme[0]).toMatch(/for the right answer/);
@@ -262,7 +275,7 @@ describe("marking review, results and the marked paper (M7)", () => {
     expect(JSON.stringify(result)).not.toMatch(/rank|average|other children|weak/i);
 
     const paper = await getMarkedPaper({ kind: "child", childId: child.childId }, first.attemptId, ctx());
-    expect(paper?.entries[0]).toMatchObject({ position: first.wordProblem.position, mistake: true, answerLine: "0.01" });
+    expect(paper?.entries[0]).toMatchObject({ position: first.wordProblem.position, mistake: true, answerLine: first.wrongAnswerText });
     expect(paper?.entries[0]?.markText).toMatch(/^✗ \d\/\d$/);
     expect(paper?.entries[0]?.workedSolution.length).toBeGreaterThan(0);
     expect(paper?.entries[0]?.workingUrl).toBe(`/api/attempts/${first.attemptId}/working/${first.wordProblem.position}`);
