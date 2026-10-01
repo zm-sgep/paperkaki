@@ -25,7 +25,7 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 | Batch | What | Status |
 |---|---|---|
 | 0 | Fix the test that failed when the chosen word problem had a unit ("$0.01") | DONE |
-| 1 | Numbers up to 10 000 (P3-NA-WN): 41 new | checked, waiting for gate |
+| 1 | Numbers up to 10 000 (P3-NA-WN): 41 new | DONE |
 | 2 | Multiplication and division (P3-NA-MD) and mental addition (P3-NA-AS-04): 41 new | checked, waiting for gate |
 | 3 | Fractions (P3-NA-FR): 31 new | checked, waiting for gate |
 | 4 | Length, mass and volume (P3-MG-LM) and time (P3-MG-TM): 33 new | DONE |
@@ -58,3 +58,8 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 - Seen: it failed in the first full run on 1 October (before any change tonight) and in one full gate run tonight. It passed 8 times out of 8 when run alone, and it passed on the next full run.
 - Likely cause: the first practice has one wrong answer and the second has none. The reward rules pay for improvement, so the second can sometimes earn more. Which questions the practice picks changes from run to run.
 - Your decision: should a perfect second practice straight after the first ever earn more? If not, the reward rules change. If yes, the test should give both practices the same answers. I did not change either.
+
+### Batch 1 is done: 41 whole-number questions (2 October 2026)
+- File: `content/questions/p3-maths-g-wn.json`. Family codes `P3-NA-WN-G01` to `G41`.
+- Checks: the app's schema and answer verifier pass on all 41. Haiku solved the 37 questions that have a single answer without seeing the key, and agreed on all 37. Opus read the 4 written-answer questions (numbers in words, and a "<" answer). They are correct.
+- Gate: typecheck 0 errors, lint 0 warnings, Vitest 1,361 passed of 1,361, Playwright 128 passed of 128.
