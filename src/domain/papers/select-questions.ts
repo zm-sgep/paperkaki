@@ -97,8 +97,12 @@ const ATTEMPT_STEP_LIMIT = 100_000;
 /** Keeps every difficulty reachable even when the target for it is already met. */
 const MIN_DIFFICULTY_FRACTION = 0.02;
 
-/** Soft-goal weights. An avoided question outweighs everything else. */
-const SCORE = { avoided: 10_000, difficulty: 1, topicBalance: 1.5, spread: 4, outcomeRepeat: 2, dueMissing: 6 } as const;
+/**
+ * Soft-goal weights. An avoided question outweighs everything else. `topicGap` weighs the marks
+ * between the paper's biggest and smallest topic: the summed distance from each topic's target alone
+ * let about one paper in seven leave one topic far ahead of another.
+ */
+const SCORE = { avoided: 10_000, difficulty: 1, topicBalance: 1.5, topicGap: 6, spread: 4, outcomeRepeat: 2, dueMissing: 6 } as const;
 /** At most this many due skills are asked for, so retention stays a small share of the paper. */
 const MAX_DUE_SKILLS = 3;
 
@@ -401,6 +405,8 @@ function scoreAttempt(bp: Blueprint, slots: readonly Slot[], picks: readonly (re
     spread += Math.max(0, Math.min(slots.length, questions) - (topicSections.get(topic.topicId)?.size ?? 0));
     repeats += Math.max(0, Math.min(questions, topic.outcomeIds.length) - (topicOutcomes.get(topic.topicId)?.size ?? 0));
   }
+  const scopeMarks = bp.scope.map((topic) => topicMarks.get(topic.topicId) ?? 0);
+  const topicGap = scopeMarks.length > 1 ? Math.max(...scopeMarks) - Math.min(...scopeMarks) : 0;
   const present = new Set(all.map((c) => c.primaryOutcomeId));
   const dueMissing = prefs.due.filter((id) => !present.has(id)).length;
   return (
@@ -408,6 +414,7 @@ function scoreAttempt(bp: Blueprint, slots: readonly Slot[], picks: readonly (re
     SCORE.avoided * all.filter((c) => avoid.has(c.questionId)).length +
     SCORE.difficulty * difficultyDistance +
     SCORE.topicBalance * balance +
+    SCORE.topicGap * topicGap +
     SCORE.spread * spread +
     SCORE.outcomeRepeat * repeats
   );
