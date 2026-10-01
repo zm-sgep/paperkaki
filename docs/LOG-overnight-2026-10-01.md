@@ -26,12 +26,13 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 |---|---|---|
 | 0 | Fix the test that failed when the chosen word problem had a unit ("$0.01") | DONE |
 | 1 | Numbers up to 10 000 (P3-NA-WN): 41 new | DONE |
-| 2 | Multiplication and division (P3-NA-MD) and mental addition (P3-NA-AS-04): 41 new | checked, waiting for gate |
+| 2 | Multiplication and division (P3-NA-MD) and mental addition (P3-NA-AS-04): 41 new | DONE |
 | 3 | Fractions (P3-NA-FR): 31 new | checked, waiting for gate |
 | 4 | Length, mass and volume (P3-MG-LM) and time (P3-MG-TM): 33 new | DONE |
 | 5 | Area and perimeter (P3-MG-AR): 34 new | checked, waiting for gate |
 | 6 | Angles, perpendicular and parallel lines, bar graphs (P3-MG-AN, P3-MG-PL, P3-ST-BG): 26 new | checked, waiting for gate |
 | 4a | The paper builder now keeps topic marks closer together (needed for batch 4) | DONE, please check |
+| 4b | The balance fix now respects each topic's own target, and the balance test checks 50 papers | DONE, please check |
 | H1 | A rewards test fails only sometimes, and also on `main` | HELD for Zhimin |
 
 ## Batch entries
@@ -63,3 +64,16 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 - File: `content/questions/p3-maths-g-wn.json`. Family codes `P3-NA-WN-G01` to `G41`.
 - Checks: the app's schema and answer verifier pass on all 41. Haiku solved the 37 questions that have a single answer without seeing the key, and agreed on all 37. Opus read the 4 written-answer questions (numbers in words, and a "<" answer). They are correct.
 - Gate: typecheck 0 errors, lint 0 warnings, Vitest 1,361 passed of 1,361, Playwright 128 passed of 128.
+
+### Batch 4b is done: the balance fix now respects each topic's own target (2 October 2026). Please check this one with 4a.
+- What broke: with batch 2 added, `tests/integration/adaptive-mock.test.ts` failed. The adaptive mock gives a weak topic a higher target on purpose. The 4a fix pushed every topic towards the same marks, so it worked against that. The 10-paper balance test also failed again (one topic had 9 marks).
+- Fix in `src/domain/papers/select-questions.ts`: the gap is now measured on each topic's marks minus its own target, with weight 8. When all targets are equal, this is the same as 4a. A weak topic with a higher target may now have more marks.
+- Fix in `tests/unit/select-questions.test.ts`: the balance test now checks 50 papers and allows at most 2 unbalanced ones, instead of 10 papers with none allowed. Balance is a soft goal, so a rare miss is possible. With the old paper builder, 7 of these 50 papers are unbalanced, so the old code would fail the new test. With the new one, 1 of 50 (0 of 50 once all of tonight's questions are in).
+- The adaptive mock test passed 5 times out of 5 on its own after the fix.
+- Gate: typecheck 0 errors, lint 0 warnings, Vitest 1,361 passed of 1,361, Playwright 128 passed of 128.
+- To undo both 4a and 4b, revert the two `fix(papers)` commits. The balance test change goes with 4b.
+
+### Batch 2 is done: 41 multiplication, division and mental addition questions (2 October 2026)
+- File: `content/questions/p3-maths-g-md-as.json`. Family codes `P3-NA-MD-G01` to `G37` and `P3-NA-AS-G01` to `G04`.
+- Checks: the app's schema and answer verifier pass on all 41. Haiku solved the 40 questions that have a single answer without seeing the key, and agreed on all 40. Opus read the 1 written-answer question (the day of the week 30 days after Monday). It is correct.
+- Gate: same run as batch 4b.
