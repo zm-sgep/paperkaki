@@ -27,12 +27,13 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 | 0 | Fix the test that failed when the chosen word problem had a unit ("$0.01") | DONE |
 | 1 | Numbers up to 10 000 (P3-NA-WN): 41 new | DONE |
 | 2 | Multiplication and division (P3-NA-MD) and mental addition (P3-NA-AS-04): 41 new | DONE |
-| 3 | Fractions (P3-NA-FR): 31 new | checked, waiting for gate |
+| 3 | Fractions (P3-NA-FR): 31 new | DONE |
 | 4 | Length, mass and volume (P3-MG-LM) and time (P3-MG-TM): 33 new | DONE |
 | 5 | Area and perimeter (P3-MG-AR): 34 new | checked, waiting for gate |
 | 6 | Angles, perpendicular and parallel lines, bar graphs (P3-MG-AN, P3-MG-PL, P3-ST-BG): 26 new | checked, waiting for gate |
 | 4a | The paper builder now keeps topic marks closer together (needed for batch 4) | DONE, please check |
 | 4b | The balance fix now respects each topic's own target, and the balance test checks 50 papers | DONE, please check |
+| 3a | Four tests no longer depend on how many questions the bank holds | DONE |
 | H1 | A rewards test fails only sometimes, and also on `main` | HELD for Zhimin |
 
 ## Batch entries
@@ -77,3 +78,17 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 - File: `content/questions/p3-maths-g-md-as.json`. Family codes `P3-NA-MD-G01` to `G37` and `P3-NA-AS-G01` to `G04`.
 - Checks: the app's schema and answer verifier pass on all 41. Haiku solved the 40 questions that have a single answer without seeing the key, and agreed on all 40. Opus read the 1 written-answer question (the day of the week 30 days after Monday). It is correct.
 - Gate: same run as batch 4b.
+
+### Batch 3a is done: four tests no longer depend on how many questions the bank holds (2 October 2026)
+- `tests/integration/question-filters.test.ts` read only the first 2 pages (50 questions) of Fractions. Fractions now has 75. It now reads every page.
+- `tests/integration/paper-format.test.ts` and `tests/unit/select-questions.test.ts` used a paper the bank was too small to fill, for example a 50-mark paper from Fractions alone. The bank can now fill those. They now use papers that need 5-mark questions, which no question in the bank has. Each test first checks that no 5-mark question exists, so a future 5-mark question shows the reason at once.
+- `tests/e2e/marking-results.spec.ts` had the same fault as batch 0: it expected "0.01" even when the answer box showed a unit. It now reads the unit beside the box. To read it, `src/components/mock/TypedAnswer.tsx` gives the unit text a `data-answer-unit` label. Nothing on screen changes.
+- Before the final gate, I ran Vitest with all 6 new question files in place. All 1,361 tests passed, so the last 2 batches should not break other tests.
+- The machine was busy from about 11:00 (load average up to 17, with other apps running). Two gate runs had time-outs in tests that take 8 seconds on their own. From batch 3 on, the gate runs Vitest with `--maxWorkers=4`, like Playwright with `--workers=2`.
+- Gate: typecheck 0 errors, lint 0 warnings, Vitest 1,361 passed of 1,361, Playwright 128 passed of 128.
+
+### Batch 3 is done: 31 fraction questions (2 October 2026)
+- File: `content/questions/p3-maths-g-fr.json`. Family codes `P3-NA-FR-G01` to `G31`.
+- Checks: the app's schema and answer verifier pass on all 31. Haiku solved the 28 questions that have a single answer without seeing the key, and agreed on all 28. Opus read the 3 written-answer questions (two yes/no questions and a "<" answer). They are correct.
+- Gate: same run as batch 3a.
+- H1 (the rewards test) failed again in 2 of the 4 gate runs for this batch. It is still on hold.
