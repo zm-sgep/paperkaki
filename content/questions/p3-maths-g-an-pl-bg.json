@@ -1,0 +1,3050 @@
+[
+ {
+  "familyCode": "P3-MG-AN-G01",
+  "familyTitle": "Scissors opened wider",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jia is cutting paper with a pair of scissors. She opens the scissors wider. The two blades make an angle. What happens to the size of the angle? Write bigger or smaller."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "bigger",
+    "greater",
+    "larger",
+    "it gets bigger",
+    "it gets greater",
+    "it gets larger",
+    "gets bigger",
+    "the angle gets bigger"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "An angle is the opening between two straight lines that meet at a point."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "When Jia opens the scissors wider, the two blades move further apart. So the angle gets bigger."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G02",
+  "familyTitle": "Two angles the same size",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Two of these angles are the same size. Write the letters of the two angles."
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 65,
+     "armLengthMm": 22,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 40,
+     "armLengthMm": 30,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 105,
+     "armLengthMm": 18,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 65,
+     "armLengthMm": 38,
+     "label": "S"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "P and S",
+    "S and P",
+    "P, S",
+    "S, P",
+    "P,S",
+    "S,P",
+    "PS",
+    "SP",
+    "P & S",
+    "S & P",
+    "angles P and S",
+    "angle P and angle S"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The size of an angle depends on how wide it opens. It does not depend on how long the lines are."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angles P and S open the same amount, even though the lines of angle S are longer. Angle Q opens less. Angle R opens wider."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The two angles that are the same size are P and S."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Does not choose an angle just because its lines are longer (names P or S)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Names both P and S"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G03",
+  "familyTitle": "Minute hand turns",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The minute hand of a clock makes 1 full turn in 1 hour. A full turn is the same as 4 right angles."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei reads from 4.00 p.m. to 6.00 p.m. Ravi reads from 3.00 p.m. to 7.00 p.m. How many more right angles does the minute hand turn through while Ravi reads than while Mei reads?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "4*(7-3)-4*(6-4)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mei reads for 2 hours. In 2 hours the minute hand turns 2 × 4 = 8 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ravi reads for 4 hours. In 4 hours the minute hand turns 4 × 4 = 16 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "16 – 8 = 8. The minute hand turns through 8 more right angles while Ravi reads."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the reading times (2 hours and 4 hours)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the right angles for each (8 and 16)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 8"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G04",
+  "familyTitle": "Round things have no angles",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A craft box has 3 round plates, 2 rectangular mirrors and 4 triangular flags."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many angles are there on all these things altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "20"
+  },
+  "verification": {
+   "expression": "3*0+2*4+4*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A round plate has no straight lines meeting at a point, so it has no angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each rectangular mirror has 4 angles: 2 × 4 = 8 angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each triangular flag has 3 angles: 4 × 3 = 12 angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "0 + 8 + 12 = 20 angles altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Knows that the round plates have no angles"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the angles on the mirrors (8) and the flags (12)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 20"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G05",
+  "familyTitle": "Angle in the middle",
+  "primaryOutcomeCode": "P3-MG-AN-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei writes the 5 angles below in order, from the smallest to the greatest. Which angle is in the middle? Write the letter."
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 45,
+     "armLengthMm": 26,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 135,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 80,
+     "armLengthMm": 24,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 25,
+     "armLengthMm": 30,
+     "label": "S"
+    },
+    {
+     "t": "angle",
+     "degrees": 110,
+     "armLengthMm": 22,
+     "label": "T"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "R",
+    "angle R",
+    "Angle R"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Look at how wide each angle opens, not at how long its lines are."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From the smallest to the greatest: S, P, R, T, Q."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The angle in the middle is the 3rd one, which is angle R."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Orders the angles by how wide they open, not by the length of the lines"
+    },
+    {
+     "marks": 1,
+     "criterion": "Names angle R as the middle one"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G06",
+  "familyTitle": "Checking with the corner of paper",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei places the corner of a sheet of paper on angle P. The corner of the paper fits exactly on angle P, with no gap and no part sticking out. What does this show?"
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 26,
+     "label": "P"
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P is smaller than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P is a right angle."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P is greater than a right angle."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "The paper cannot show whether angle P is a right angle."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The corner of a sheet of paper is a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "If it fits exactly on angle P, then angle P is the same size as the corner. So angle P is a right angle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G07",
+  "familyTitle": "Corner guards for photo frames",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 160,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A shop sells rectangular photo frames. Mr Lim fixes 1 metal corner guard at each right angle of a frame. Each corner guard costs $3."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much does Mr Lim pay for the corner guards for 6 frames?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "72",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "6*4*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A rectangular frame has 4 right angles, so it needs 4 corner guards."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 frames need 6 × 4 = 24 corner guards."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "24 corner guards cost 24 × $3 = $72."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mr Lim pays $72."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Knows a rectangle has 4 right angles"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the number of corner guards (24)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by $3 to get $72"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G08",
+  "familyTitle": "Cutting cards along a diagonal",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular card has 4 right angles. Mr Hamid cuts each of 5 such cards along a straight line from one corner to the opposite corner. Each card now makes 2 triangles. Each of these triangles has exactly 1 right angle."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many fewer right angles are there on all the triangles than on the 5 cards before they were cut?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "10"
+  },
+  "verification": {
+   "expression": "5*4-5*2*1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Before cutting: 5 cards × 4 right angles = 20 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "After cutting: 5 cards make 5 × 2 = 10 triangles. Each triangle has 1 right angle, so there are 10 right angles."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "20 – 10 = 10 fewer right angles."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the right angles before cutting (20)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the right angles after cutting (10)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 10"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G09",
+  "familyTitle": "Draw a right angle at O",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        3,
+        1
+       ],
+       "to": [
+        3,
+        5
+       ]
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        3,
+        1
+       ],
+       "label": "O"
+      },
+      {
+       "at": [
+        3,
+        5
+       ],
+       "label": "A"
+      }
+     ],
+     "dotGrid": {
+      "cols": 7,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line from point O to make a right angle with line OA. You may use the corner of a piece of paper to help you."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A straight horizontal line from O, going to the left or to the right along the row of dots, so that it makes a square corner with OA."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A right angle is a square corner. Line OA goes straight up, so the new line must go straight across from O, to the left or to the right."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       3,
+       1
+      ],
+      "to": [
+       3,
+       5
+      ]
+     },
+     {
+      "from": [
+       3,
+       1
+      ],
+      "to": [
+       6,
+       1
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       3,
+       1
+      ],
+      "label": "O"
+     },
+     {
+      "at": [
+       3,
+       5
+      ],
+      "label": "A"
+     }
+    ],
+    "dotGrid": {
+     "cols": 7,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "The new line starts at O"
+    },
+    {
+     "marks": 1,
+     "criterion": "The new line goes straight across, so it makes a right angle with OA"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G10",
+  "familyTitle": "Right angles where lines cross",
+  "primaryOutcomeCode": "P3-MG-AN-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        2
+       ],
+       "to": [
+        8,
+        2
+       ]
+      },
+      {
+       "from": [
+        0,
+        5
+       ],
+       "to": [
+        8,
+        5
+       ]
+      },
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        7
+       ]
+      },
+      {
+       "from": [
+        6,
+        0
+       ],
+       "to": [
+        6,
+        7
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The figure is made of 4 straight lines. How many right angles are there in the figure?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "16"
+  },
+  "verification": {
+   "expression": "4*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Two lines that cross each other make 4 right angles at the point where they cross."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 4 lines cross at 4 points: 2 horizontal lines × 2 vertical lines = 4 crossing points."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 × 4 = 16 right angles."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Knows each crossing makes 4 right angles, and finds 4 crossing points"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies to get 16"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G11",
+  "familyTitle": "Clock hands at 2 o'clock",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The hands of a clock show 2 o'clock. The two hands make an angle. Is the angle smaller than a right angle or greater than a right angle? Write smaller or greater."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "smaller",
+    "smaller than a right angle",
+    "smaller than",
+    "it is smaller"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "At 3 o'clock the hands of a clock make a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "At 2 o'clock the minute hand points to 12 and the hour hand points to 2. The hour hand has not reached 3 yet, so the angle is smaller than a right angle."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G12",
+  "familyTitle": "Order three angles from words",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Angle P is smaller than a right angle. Angle Q is greater than angle P but smaller than a right angle. Angle R is greater than a right angle."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write P, Q and R in order, starting with the greatest angle."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "R, Q, P",
+    "R Q P",
+    "RQP",
+    "R,Q,P",
+    "R then Q then P",
+    "R, then Q, then P"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle R is greater than a right angle, so it is the greatest."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Angle Q is smaller than a right angle, but greater than angle P."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From the greatest to the smallest: R, Q, P."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Knows R is the greatest because it is greater than a right angle"
+    },
+    {
+     "marks": 1,
+     "criterion": "Puts Q before P to give R, Q, P"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G13",
+  "familyTitle": "Sort four angles with S and G",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write S if the angle is smaller than a right angle. Write G if the angle is greater than a right angle. Write your four letters for angles K, L, M and N, in that order. For example: SSGG."
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 110,
+     "armLengthMm": 24,
+     "label": "K"
+    },
+    {
+     "t": "angle",
+     "degrees": 60,
+     "armLengthMm": 24,
+     "label": "L"
+    },
+    {
+     "t": "angle",
+     "degrees": 140,
+     "armLengthMm": 24,
+     "label": "M"
+    },
+    {
+     "t": "angle",
+     "degrees": 35,
+     "armLengthMm": 24,
+     "label": "N"
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "GSGS",
+    "G S G S",
+    "G, S, G, S",
+    "G,S,G,S",
+    "G-S-G-S"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare each angle with the corner of a piece of paper."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "K is greater than a right angle (G). L is smaller (S). M is greater (G). N is smaller (S)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The answer is GSGS."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Two of the four letters are correct"
+    },
+    {
+     "marks": 1,
+     "criterion": "All four letters are correct"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G14",
+  "familyTitle": "Triangular tiles",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        6
+       ],
+       "to": [
+        7,
+        6
+       ]
+      },
+      {
+       "from": [
+        7,
+        6
+       ],
+       "to": [
+        10,
+        2
+       ]
+      },
+      {
+       "from": [
+        10,
+        2
+       ],
+       "to": [
+        1,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each tile in Mrs Tan's art box is shaped like the triangle above. She has 7 such tiles."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more angles smaller than a right angle than angles greater than a right angle are there on the 7 tiles altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7"
+  },
+  "verification": {
+   "expression": "7*2-7*1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare each angle of the triangle with the corner of a piece of paper. Two angles are smaller than a right angle. One angle is greater than a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 tiles have 7 × 2 = 14 angles smaller than a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 tiles have 7 × 1 = 7 angles greater than a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "14 – 7 = 7 more."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that each tile has 2 angles smaller than, and 1 angle greater than, a right angle"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds 14 and 7 for the 7 tiles"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 7"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AN-G15",
+  "familyTitle": "Angle card points game",
+  "primaryOutcomeCode": "P3-MG-AN-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Zara plays a game with the 6 angle cards below. She scores 1 point for each angle smaller than a right angle, 2 points for each right angle and 3 points for each angle greater than a right angle."
+      }
+     ]
+    },
+    {
+     "t": "angle",
+     "degrees": 120,
+     "armLengthMm": 20,
+     "label": "P"
+    },
+    {
+     "t": "angle",
+     "degrees": 45,
+     "armLengthMm": 20,
+     "label": "Q"
+    },
+    {
+     "t": "angle",
+     "degrees": 90,
+     "armLengthMm": 20,
+     "label": "R"
+    },
+    {
+     "t": "angle",
+     "degrees": 150,
+     "armLengthMm": 20,
+     "label": "S"
+    },
+    {
+     "t": "angle",
+     "degrees": 30,
+     "armLengthMm": 20,
+     "label": "T"
+    },
+    {
+     "t": "angle",
+     "degrees": 60,
+     "armLengthMm": 20,
+     "label": "U"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many points does Zara score for all 6 angle cards?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "11"
+  },
+  "verification": {
+   "expression": "3*1+1*2+2*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare each angle with the corner of a piece of paper."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Smaller than a right angle: Q, T and U. That is 3 angles, so 3 × 1 = 3 points."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A right angle: R. That is 1 angle, so 1 × 2 = 2 points."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Greater than a right angle: P and S. That is 2 angles, so 2 × 3 = 6 points."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 + 2 + 6 = 11 points."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Sorts the angles correctly (3 smaller, 1 right angle, 2 greater)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the points for each group (3, 2 and 6)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 11"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G01",
+  "familyTitle": "Lines perpendicular to P",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        4
+       ],
+       "to": [
+        10,
+        4
+       ],
+       "label": "P"
+      },
+      {
+       "from": [
+        2,
+        1
+       ],
+       "to": [
+        2,
+        7
+       ],
+       "label": "Q"
+      },
+      {
+       "from": [
+        5,
+        1
+       ],
+       "to": [
+        5,
+        7
+       ],
+       "label": "R"
+      },
+      {
+       "from": [
+        0,
+        6
+       ],
+       "to": [
+        10,
+        6
+       ],
+       "label": "S"
+      },
+      {
+       "from": [
+        7,
+        2
+       ],
+       "to": [
+        10,
+        5
+       ],
+       "label": "T"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many lines in the figure are perpendicular to line P?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2"
+  },
+  "verification": {
+   "expression": "1+1+0+0"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perpendicular lines meet at a right angle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines Q and R both cross line P at a right angle. Line S is parallel to line P. Line T crosses line P at a slant."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 2 lines are perpendicular to line P."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G02",
+  "familyTitle": "Pairs of perpendicular lines in E and H",
+  "primaryOutcomeCode": "P3-MG-PL-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The first figure shows the capital letter E. The second figure shows the capital letter H. Each letter is made of straight lines."
+      }
+     ]
+    },
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        0,
+        6
+       ]
+      },
+      {
+       "from": [
+        0,
+        6
+       ],
+       "to": [
+        4,
+        6
+       ]
+      },
+      {
+       "from": [
+        0,
+        3
+       ],
+       "to": [
+        3,
+        3
+       ]
+      },
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        4,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        0,
+        6
+       ]
+      },
+      {
+       "from": [
+        4,
+        0
+       ],
+       "to": [
+        4,
+        6
+       ]
+      },
+      {
+       "from": [
+        0,
+        3
+       ],
+       "to": [
+        4,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei writes the letter E 3 times and the letter H 4 times. How many pairs of perpendicular lines are there in all the letters she wrote?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "17"
+  },
+  "verification": {
+   "expression": "3*3+4*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "In the letter E, the long line on the left is perpendicular to each of the 3 short lines. So 1 letter E has 3 pairs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "In the letter H, the middle line is perpendicular to each of the 2 long lines. So 1 letter H has 2 pairs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 letters E: 3 × 3 = 9 pairs. 4 letters H: 4 × 2 = 8 pairs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 + 8 = 17 pairs."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 3 pairs in one E and 2 pairs in one H"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds 9 pairs for the E letters and 8 pairs for the H letters"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 17"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G03",
+  "familyTitle": "Parallel to a vertical line",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        5
+       ],
+       "label": "CD"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        6,
+        2
+       ],
+       "label": "Y"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line through point Y that is parallel to line CD."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A straight vertical line through Y, along the column of dots (the same direction as CD)."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line CD goes straight up and down. A line parallel to it also goes straight up and down, so it stays the same distance from CD all the way."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       2,
+       0
+      ],
+      "to": [
+       2,
+       5
+      ],
+      "label": "CD"
+     },
+     {
+      "from": [
+       6,
+       0
+      ],
+      "to": [
+       6,
+       5
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       6,
+       2
+      ],
+      "label": "Y"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G04",
+  "familyTitle": "Which point completes the rectangle",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        6,
+        1
+       ]
+      },
+      {
+       "from": [
+        6,
+        1
+       ],
+       "to": [
+        6,
+        4
+       ]
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        1,
+        1
+       ],
+       "label": "A"
+      },
+      {
+       "at": [
+        6,
+        1
+       ],
+       "label": "B"
+      },
+      {
+       "at": [
+        6,
+        4
+       ],
+       "label": "C"
+      },
+      {
+       "at": [
+        3,
+        4
+       ],
+       "label": "P"
+      },
+      {
+       "at": [
+        1,
+        2
+       ],
+       "label": "Q"
+      },
+      {
+       "at": [
+        1,
+        4
+       ],
+       "label": "R"
+      },
+      {
+       "at": [
+        7,
+        4
+       ],
+       "label": "S"
+      }
+     ],
+     "dotGrid": {
+      "cols": 9,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A, B and C are three corners of rectangle ABCD. Which point is corner D?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point P"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point Q"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point R"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Point S"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Side AD must be parallel to side BC, so D is straight above A."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Side DC must be parallel to side AB, so D is level with C."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Only point R is both straight above A and level with C."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       6,
+       1
+      ]
+     },
+     {
+      "from": [
+       6,
+       1
+      ],
+      "to": [
+       6,
+       4
+      ]
+     },
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       1,
+       4
+      ]
+     },
+     {
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       6,
+       4
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       1,
+       1
+      ],
+      "label": "A"
+     },
+     {
+      "at": [
+       6,
+       1
+      ],
+      "label": "B"
+     },
+     {
+      "at": [
+       6,
+       4
+      ],
+      "label": "C"
+     },
+     {
+      "at": [
+       1,
+       4
+      ],
+      "label": "D"
+     }
+    ],
+    "dotGrid": {
+     "cols": 9,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G05",
+  "familyTitle": "Draw a square from one side",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        4,
+        1
+       ]
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        1,
+        1
+       ],
+       "label": "A"
+      },
+      {
+       "at": [
+        4,
+        1
+       ],
+       "label": "B"
+      }
+     ],
+     "dotGrid": {
+      "cols": 7,
+      "rows": 6
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "AB is one side of square ABCD. Draw the other three sides of the square."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "Three lines drawn: one from B straight up to C (3 dots above B), one from A straight up to D (3 dots above A), and one from D straight across to C. With AB they make a square with sides 3 dots long."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The sides of a square are all the same length. Neighbouring sides are perpendicular and opposite sides are parallel."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "AB is 3 dots long. Draw BC and AD straight up from B and A, each 3 dots long, so they are perpendicular to AB. Then join D to C. DC is parallel to AB."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       4,
+       1
+      ]
+     },
+     {
+      "from": [
+       4,
+       1
+      ],
+      "to": [
+       4,
+       4
+      ]
+     },
+     {
+      "from": [
+       4,
+       4
+      ],
+      "to": [
+       1,
+       4
+      ]
+     },
+     {
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       1,
+       1
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       1,
+       1
+      ],
+      "label": "A"
+     },
+     {
+      "at": [
+       4,
+       1
+      ],
+      "label": "B"
+     },
+     {
+      "at": [
+       4,
+       4
+      ],
+      "label": "C"
+     },
+     {
+      "at": [
+       1,
+       4
+      ],
+      "label": "D"
+     }
+    ],
+    "dotGrid": {
+     "cols": 7,
+     "rows": 6
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Draws the side from B perpendicular to AB, 3 dots long (straight up)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Draws the side from A perpendicular to AB, 3 dots long (straight up)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Joins D to C so that DC is parallel to AB"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G06",
+  "familyTitle": "Draw the other side and shelves of a bookcase",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        0
+       ],
+       "to": [
+        1,
+        6
+       ]
+      }
+     ],
+     "dotGrid": {
+      "cols": 8,
+      "rows": 7
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bookcase has 2 sides that are parallel to each other. Its shelves are perpendicular to both sides. The left side of the bookcase is drawn above."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw the right side 5 dots to the right of the left side. It must be the same length. Then draw 2 shelves that join the two sides."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "The right side is a straight vertical line from the bottom row to the top row, 5 dots to the right of the left side (same length). The two shelves are straight horizontal lines joining the left side to the right side, at two different heights."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Parallel lines stay the same distance apart, so the right side goes straight up, 5 dots to the right and the same length as the left side."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shelves that are perpendicular to both sides go straight across, joining the two sides. For example, draw one shelf 2 dots up and one shelf 4 dots up."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       0
+      ],
+      "to": [
+       1,
+       6
+      ]
+     },
+     {
+      "from": [
+       6,
+       0
+      ],
+      "to": [
+       6,
+       6
+      ]
+     },
+     {
+      "from": [
+       1,
+       2
+      ],
+      "to": [
+       6,
+       2
+      ]
+     },
+     {
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       6,
+       4
+      ]
+     }
+    ],
+    "dotGrid": {
+     "cols": 8,
+     "rows": 7
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Draws the right side parallel to the left side, 5 dots away and the same length"
+    },
+    {
+     "marks": 1,
+     "criterion": "Draws one shelf perpendicular to both sides, joining them"
+    },
+    {
+     "marks": 1,
+     "criterion": "Draws a second shelf perpendicular to both sides, joining them"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G07",
+  "familyTitle": "Siti draws lines across and down",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 170,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Siti draws a straight line across her page. She draws 3 more straight lines across the page, each parallel to the first line. Then she draws 2 straight lines down the page. Each of these 2 lines crosses all the lines across the page at a right angle."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pairs of perpendicular lines are there in Siti's drawing?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "(1+3)*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Lines across the page: 1 + 3 = 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each line down the page is perpendicular to all 4 lines across. So 1 line down makes 4 pairs."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 lines down make 2 × 4 = 8 pairs."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the number of lines across the page (4)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds that each line down makes 4 pairs"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by 2 to get 8"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-PL-G08",
+  "familyTitle": "Perpendicular to a slanted line",
+  "primaryOutcomeCode": "P3-MG-PL-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "lines",
+     "segments": [
+      {
+       "from": [
+        1,
+        1
+       ],
+       "to": [
+        5,
+        5
+       ],
+       "label": "AB"
+      }
+     ],
+     "points": [
+      {
+       "at": [
+        3,
+        3
+       ],
+       "label": "X"
+      }
+     ],
+     "dotGrid": {
+      "cols": 7,
+      "rows": 7
+     }
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Draw a line through point X that is perpendicular to line AB."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "A slanted line through X that slopes the other way from AB (each step: one dot across and one dot down), for example from the dot 2 to the left and 2 up of X to the dot 2 to the right and 2 down of X."
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Line AB goes up to the right: each step is 1 dot across and 1 dot up. A line perpendicular to it goes the other way: each step is 1 dot across and 1 dot down."
+     }
+    ]
+   },
+   {
+    "t": "lines",
+    "segments": [
+     {
+      "from": [
+       1,
+       1
+      ],
+      "to": [
+       5,
+       5
+      ],
+      "label": "AB"
+     },
+     {
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       5,
+       1
+      ]
+     }
+    ],
+    "points": [
+     {
+      "at": [
+       3,
+       3
+      ],
+      "label": "X"
+     }
+    ],
+    "dotGrid": {
+     "cols": 7,
+     "rows": 7
+    }
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "The new line passes through X"
+    },
+    {
+     "marks": 1,
+     "criterion": "The new line slopes the other way at the same slant, so it is perpendicular to AB"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-G01",
+  "familyTitle": "Which way of travel has 8 pupils",
+  "primaryOutcomeCode": "P3-ST-BG-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "How Class 3C travel to school",
+     "categoryAxisLabel": "Way of travel",
+     "valueAxisLabel": "Number of pupils",
+     "scale": {
+      "max": 12,
+      "step": 2
+     },
+     "bars": [
+      {
+       "label": "Bus",
+       "value": 10
+      },
+      {
+       "label": "Walk",
+       "value": 6
+      },
+      {
+       "label": "MRT",
+       "value": 8
+      },
+      {
+       "label": "Car",
+       "value": 4
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Exactly 8 pupils travel to school in the same way. Which way do they use? Write your answer."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "MRT",
+    "by MRT",
+    "the MRT"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find the bar that ends at 8 on the scale. It is the bar for MRT."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So the 8 pupils travel by MRT."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-G02",
+  "familyTitle": "Cars washed, steps of 20",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Cars washed at a car wash",
+     "categoryAxisLabel": "Day",
+     "valueAxisLabel": "Number of cars",
+     "scale": {
+      "max": 100,
+      "step": 20
+     },
+     "bars": [
+      {
+       "label": "Mon",
+       "value": 40
+      },
+      {
+       "label": "Tue",
+       "value": 80
+      },
+      {
+       "label": "Wed",
+       "value": 60
+      },
+      {
+       "label": "Thu",
+       "value": 100
+      }
+     ],
+     "orientation": "vertical"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many cars were washed on Tuesday?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "80"
+  },
+  "verification": {
+   "expression": "4*20"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The scale goes up in steps of 20: 0, 20, 40, 60, 80, 100."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The bar for Tuesday ends at the 4th gridline, which is 80."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "80 cars were washed on Tuesday."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-ST-BG-G03",
+  "familyTitle": "Bottles collected, steps of 25",
+  "primaryOutcomeCode": "P3-ST-BG-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "bargraph",
+     "title": "Bottles collected for recycling",
+     "categoryAxisLabel": "Class",
+     "valueAxisLabel": "Number of bottles",
+     "scale": {
+      "max": 200,
+      "step": 25
+     },
+     "bars": [
+      {
+       "label": "Class 3A",
+       "value": 125
+      },
+      {
+       "label": "Class 3B",
+       "value": 175
+      },
+      {
+       "label": "Class 3C",
+       "value": 75
+      },
+      {
+       "label": "Class 3D",
+       "value": 150
+      }
+     ],
+     "orientation": "horizontal"
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many bottles did the four classes collect altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "525"
+  },
+  "verification": {
+   "expression": "125+175+75+150"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The scale goes up in steps of 25: 0, 25, 50, 75, 100, 125, 150, 175, 200."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Class 3A: 125. Class 3B: 175. Class 3C: 75. Class 3D: 150."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "125 + 175 + 75 + 150 = 525."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The four classes collected 525 bottles altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Reads all four bars correctly (125, 175, 75 and 150)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get 525"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]
