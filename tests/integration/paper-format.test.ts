@@ -12,7 +12,7 @@ import { parsePaperFormat } from "@/schemas/paper-format";
 import { insertParentProfile } from "../factories";
 import { confirmedAssessment, DATE_OK, NOW } from "../helpers/assessment-fixtures";
 import { createMemoryStorage } from "../helpers/memory-storage";
-import { BANK_TOPICS } from "../helpers/question-bank";
+import { BANK_CANDIDATES, BANK_TOPICS } from "../helpers/question-bank";
 import { seedRealBank } from "../helpers/seed-bank";
 import { silentLogger } from "../helpers/silent-logger";
 import { createTestDb, type TestDatabase } from "../helpers/test-db";
@@ -21,6 +21,18 @@ const ALL_TOPICS = BANK_TOPICS.map((topic) => topic.label);
 const key = (n: number): string => `00000000-0000-4000-8000-${String(n + 900).padStart(12, "0")}`;
 
 /** "Booklet A" / "Booklet B" style parts: what a parent who matches their school's paper might type. */
+/**
+ * Two word problems worth 10 marks together. No question in the bank is worth 5 marks, so those marks
+ * can never be made, however large the bank grows.
+ */
+const TEN_MARKS_FROM_TWO_WORD_PROBLEMS: PaperFormat = {
+  durationMinutes: 60,
+  sections: [
+    { label: "Section A", kind: "mcq", questionCount: 5, totalMarks: 5, marksEach: 1 },
+    { label: "Section B", kind: "word_problem", questionCount: 2, totalMarks: 10 },
+  ],
+};
+
 const BOOKLETS: PaperFormat = {
   durationMinutes: 60,
   sections: [
@@ -204,10 +216,12 @@ describe("paper formats (data, commands and the setup screen)", () => {
   });
 
   it("tells the parent when the bank cannot fill a format, without internal words", async () => {
+    expect(BANK_CANDIDATES.some((question) => question.marks === 5), "this test needs a bank with no 5-mark question").toBe(false);
     const { assessmentId } = await confirmedAssessment(db, parentA, ["Fractions"], { nickname: "Test Child T", type: "end_of_year" });
+    await setPaperFormat(parentA, assessmentId, { choice: "custom", customFormat: TEN_MARKS_FROM_TWO_WORD_PROBLEMS, saveForFuture: false }, ctx());
     const setup = await getAssessmentSetup(parentA, assessmentId, ctx());
     expect(setup?.canGenerate).toBe(false);
-    // With one topic, a 50-mark three-section paper cannot be filled; the reason is in plain words.
+    // The bank cannot make 10 marks from two word problems; the reason is in plain words.
     expect(setup?.problems.join(" ")).toMatch(/We (can't|don't)/);
     expect(setup?.problems.join(" ")).toMatch(/Try changing the marks or the number of questions, or add a topic\./);
     expect(setup?.problems.join(" ")).not.toMatch(/blueprint|outcome|inventory|preset|kind/i);

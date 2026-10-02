@@ -599,9 +599,11 @@ describe("the common end-of-year format (three sections, 50 marks)", () => {
       durationMinutes: 60,
       sections: [
         { label: "Section A", kind: "short", questionCount: 40, totalMarks: 60 },
-        { label: "Section B", kind: "word_problem", questionCount: 12, totalMarks: 36, marksEach: 3 },
+        { label: "Section B", kind: "word_problem", questionCount: 12, totalMarks: 60, marksEach: 5 },
       ],
     };
+    // No question in the bank is worth 5 marks, so Section B can never be filled, however large the bank grows.
+    expect(BANK_CANDIDATES.some((c) => c.marks === 5), "this test needs a bank with no 5-mark question").toBe(false);
     const bp = bankBlueprint(["FR", "AR"], 40, "balanced", format);
     const { value, ms } = time(() => selectQuestions({ blueprint: bp, candidates: BANK_CANDIDATES, seed: "impossible" }));
     expect(value.ok).toBe(false);
