@@ -29,7 +29,7 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 | 2 | Multiplication and division (P3-NA-MD) and mental addition (P3-NA-AS-04): 41 new | DONE |
 | 3 | Fractions (P3-NA-FR): 31 new | DONE |
 | 4 | Length, mass and volume (P3-MG-LM) and time (P3-MG-TM): 33 new | DONE |
-| 5 | Area and perimeter (P3-MG-AR): 34 new | checked, waiting for gate |
+| 5 | Area and perimeter (P3-MG-AR): 35 new | DONE |
 | 6 | Angles, perpendicular and parallel lines, bar graphs (P3-MG-AN, P3-MG-PL, P3-ST-BG): 26 new | checked, waiting for gate |
 | 4a | The paper builder now keeps topic marks closer together (needed for batch 4) | DONE, please check |
 | 4b | The balance fix now respects each topic's own target, and the balance test checks 50 papers | DONE, please check |
@@ -92,3 +92,9 @@ Every one of the 38 P3 Maths outcomes in `content/curriculum/p3-maths-moe-2025-1
 - Checks: the app's schema and answer verifier pass on all 31. Haiku solved the 28 questions that have a single answer without seeing the key, and agreed on all 28. Opus read the 3 written-answer questions (two yes/no questions and a "<" answer). They are correct.
 - Gate: same run as batch 3a.
 - H1 (the rewards test) failed again in 2 of the 4 gate runs for this batch. It is still on hold.
+
+### Batch 5 is done: 35 area and perimeter questions (2 October 2026)
+- File: `content/questions/p3-maths-g-ar.json`. Family codes `P3-MG-AR-G01` to `G35`. The writer wrote 1 more than the minimum for P3-MG-AR-01.
+- 4 questions use grid diagrams (shaded squares or a figure drawn on the grid). Area answers are plain numbers, and the question says "in cm²" or "in m²", because the answer unit list has no square units.
+- Checks: the app's schema and answer verifier pass on all 35. Haiku solved the 34 questions that have a single answer without seeing the key, and agreed on all 34.
+- Gate: typecheck 0 errors, lint 0 warnings, Vitest 1,361 passed of 1,361, Playwright 128 passed of 128.
