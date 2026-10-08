@@ -1,0 +1,4773 @@
+[
+ {
+  "familyCode": "P3-NA-FR-G01",
+  "familyTitle": "Which fraction equals three fifths",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 6
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "3/5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Multiply the numerator and the denominator of "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " by 2: 3 × 2 = 6 and 5 × 2 = 10."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ". The answer is C."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The other options are not equal to "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " come from adding the same number to the numerator and the denominator, which changes the fraction. "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " changes only the denominator."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G02",
+  "familyTitle": "Kueh lapis pieces given away",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Hassan cut a kueh lapis into 8 equal pieces and gave away 6 pieces. Madam Lee cut an identical kueh lapis into 4 equal pieces."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many pieces must Madam Lee give away so that she gives away the same amount of kueh lapis as Mrs Hassan?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "6/8*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mrs Hassan gave away "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " of her kueh lapis."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide the numerator and the denominator by 2: 6 ÷ 2 = 3 and 8 ÷ 2 = 4. So "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Madam Lee's kueh lapis has 4 equal pieces. "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " of it is 3 pieces."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Madam Lee must give away 3 pieces. The answer is B."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G03",
+  "familyTitle": "Pattern of equal thirds",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " = "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " = "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 9
+      },
+      {
+       "t": "text",
+       "v": " = "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": "/12"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number goes in the blank?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4"
+  },
+  "verification": {
+   "expression": "12/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Look at the pattern. The numerators go 1, 2, 3 and the denominators go 3, 6, 9. Each denominator is 3 times its numerator."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A denominator of 12 is 3 × 4, so the numerator is 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". The missing number is 4."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G04",
+  "familyTitle": "Kai checks if three eighths equals six twelfths",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kai says that "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      },
+      {
+       "t": "text",
+       "v": " is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": ". Is Kai correct? Write 'yes' or 'no'."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "no",
+    "not correct",
+    "he is not correct",
+    "kai is not correct",
+    "no, kai is not correct"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " because 6 ÷ 6 = 1 and 12 ÷ 6 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": ". But "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " has only 3 parts out of 8, not 4 parts out of 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " is not equal to "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". Kai is not correct. The answer is no."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G05",
+  "familyTitle": "Odd one out among equal fractions",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Three of these four fractions are equal to each other."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": "    "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 9
+      },
+      {
+       "t": "text",
+       "v": "    "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": "    "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write the fraction that is not equal to the other three."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "4/10",
+   "acceptEquivalent": false,
+   "requireSimplest": false
+  },
+  "verification": {
+   "expression": "4/10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Write each fraction in its simplest form: "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " are all equal to "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ". "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " is equal to "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fraction that is not equal to the other three is "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes at least two of the fractions in simplest form or as equal fractions"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G06",
+  "familyTitle": "Chocolate bars cut into different numbers of pieces",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Rui ate 3 pieces of a chocolate bar that has 12 equal pieces. Sam ate 2 pieces of an identical chocolate bar that has 6 equal pieces."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more pieces of the 12-piece bar must Rui eat to have eaten the same amount of chocolate as Sam?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1"
+  },
+  "verification": {
+   "expression": "2/6*12-3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Sam ate "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " of his chocolate bar. Change it to twelfths: 6 × 2 = 12, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". Sam ate the same amount as 4 pieces of the 12-piece bar."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Rui ate 3 pieces of the 12-piece bar, which is "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 4 − 3 = 1."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Rui must eat 1 more piece."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes {2/6} as {4/12} (or finds that Sam ate 4 twelfths)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds that Rui ate 3 twelfths and compares with 4 twelfths"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G07",
+  "familyTitle": "Shaded paper strips with the same amount",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 260,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Kiran has three identical paper strips. He cuts the first strip into 4 equal parts and shades 3 parts."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "He cuts the second strip into 8 equal parts and shades the same amount as on the first strip. He cuts the third strip into 12 equal parts and shades the same amount again."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many parts did he shade on the second strip and the third strip altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "15"
+  },
+  "verification": {
+   "expression": "3/4*8+3/4*12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: On the first strip, "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " is shaded."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The second strip has 8 equal parts. 4 × 2 = 8, so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": ". He shaded 6 parts."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: The third strip has 12 equal parts. 4 × 3 = 12, so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". He shaded 9 parts."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 4: 6 + 9 = 15."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "He shaded 15 parts altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that 6 parts are shaded on the second strip"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds that 9 parts are shaded on the third strip"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G08",
+  "familyTitle": "Count fractions equal to one third",
+  "primaryOutcomeCode": "P3-NA-FR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Some fractions are equal to "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": ". Each of these fractions has a whole-number numerator and a denominator of 12 or less."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Not counting "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " itself, how many such fractions are there?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3"
+  },
+  "verification": {
+   "expression": "12/3-1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Multiply the numerator and the denominator of "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " by the same number."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "By 2: "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ". By 3: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": ". By 4: "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "By 5 the denominator would be 15, which is more than 12, so we stop at 4."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 3 such fractions."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Lists some of the fractions equal to {1/3}, such as {2/6} and {3/9}, but gives a wrong count"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G09",
+  "familyTitle": "Simplest form of four tenths",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction is "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": " in its simplest form?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 5
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 5
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "4/10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find a number that divides both 4 and 10. It is 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 ÷ 2 = 2 and 10 ÷ 2 = 5, so "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 and 5 cannot both be divided by any number except 1, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " is in simplest form. The answer is C."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G10",
+  "familyTitle": "Pick the fraction already in simplest form",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of these fractions is already in its simplest form?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 9
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 12
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 10
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "5/12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A fraction is in simplest form when no number except 1 divides both the numerator and the denominator."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ": 4 and 6 can both be divided by 2. "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": ": 3 and 9 can both be divided by 3. "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ": 6 and 10 can both be divided by 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ": no number except 1 divides both 5 and 12. So "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is already in simplest form. The answer is C."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G11",
+  "familyTitle": "Denominator that gives a simplest-form fraction",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The numerator of a fraction is 6. The denominator is one of the numbers below."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "For which denominator is the fraction in its simplest form?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "9"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "10"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "11"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "11"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Test each denominator by looking for a number (other than 1) that divides both 6 and the denominator."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": ": both can be divided by 2. "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": ": both can be divided by 3. "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ": both can be divided by 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 11
+     },
+     {
+      "t": "text",
+      "v": ": no number except 1 divides both 6 and 11. So "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 11
+     },
+     {
+      "t": "text",
+      "v": " is in simplest form. The answer is D."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G12",
+  "familyTitle": "Spelling test score as a fraction",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sara scored 8 out of 10 marks for a spelling test."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of the marks did she score? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "4/5",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "8/10"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She scored 8 out of 10, so she scored "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " of the marks."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Divide the numerator and the denominator by 2: 8 ÷ 2 = 4 and 10 ÷ 2 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She scored "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " of the marks. 4 and 5 share no factor except 1, so "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " is in simplest form."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G13",
+  "familyTitle": "Chapters not yet read",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Hana's storybook has 8 chapters. She read 3 chapters on Monday and 3 chapters on Tuesday."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of the chapters has she not read? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/4",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "(8-3-3)/8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Chapters read: 3 + 3 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Chapters not read: 8 − 6 = 2. That is "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " of the chapters."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Divide the numerator and the denominator by 2: "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She has not read "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " of the chapters."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that 2 chapters are not read"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes {2/8}"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G14",
+  "familyTitle": "Boys in a choir after girls join",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 250,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A choir has 9 pupils. 3 of them are boys. Then 3 more girls join the choir."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What fraction of the choir are boys now? Give your answer in its simplest form."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "1/4",
+   "acceptEquivalent": false,
+   "requireSimplest": true
+  },
+  "verification": {
+   "expression": "3/(9+3)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: The number of boys stays at 3, because only girls joined."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: The choir now has 9 + 3 = 12 pupils. So "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " of the choir are boys."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: Divide the numerator and the denominator by 3: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " of the choir are boys."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that the choir now has 12 pupils"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes {3/12}"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G15",
+  "familyTitle": "Sum of numerators in simplest form",
+  "primaryOutcomeCode": "P3-NA-FR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 300,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Look at the fractions that have a denominator of 12, are greater than "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " and are smaller than 1."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Some of these fractions are in simplest form. Add up the numerators of the fractions that are in simplest form. What is the sum?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "18"
+  },
+  "verification": {
+   "expression": "7+11"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". So the fractions are "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 11,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ", so they are not in simplest form."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 11,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " are in simplest form, because no number except 1 divides both numbers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 4: 7 + 11 = 18."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Lists the fractions {7/12} to {11/12}"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds that only {7/12} and {11/12} are in simplest form"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G16",
+  "familyTitle": "Greater of five sixths and seven twelfths",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which is greater, "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " or "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write the greater fraction."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "5/6",
+   "acceptEquivalent": true,
+   "requireSimplest": false
+  },
+  "verification": {
+   "expression": "5/6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " to twelfths: 6 × 2 = 12, so "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". 10 is greater than 7, so "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is greater than "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " is the greater fraction."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G17",
+  "familyTitle": "Compare two thirds and nine twelfths with a symbol",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write >, < or = in the blank."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": " "
+      },
+      {
+       "t": "frac",
+       "n": 9,
+       "d": 12
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "<",
+    "less than",
+    "is less than",
+    "smaller than",
+    "is smaller than"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " to twelfths: 3 × 4 = 12, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". 8 is smaller than 9."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " is smaller than "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". The blank is <."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G18",
+  "familyTitle": "How many twelfths lie between a quarter and two thirds",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many fractions with a denominator of 12 are greater than "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " and smaller than "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4"
+  },
+  "verification": {
+   "expression": "8-3-1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change both fractions to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numerators between 3 and 8 are 4, 5, 6 and 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fractions are "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". There are 4 of them."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes {1/4} = {3/12} and {2/3} = {8/12}"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G19",
+  "familyTitle": "Cupcakes left at the stall that sold the fewest",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 230,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Three stalls at a school fair each started with 12 cupcakes. Stall A sold "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " of its cupcakes. Stall B sold "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " of its cupcakes. Stall C sold "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " of its cupcakes."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many cupcakes were left at the stall that sold the fewest cupcakes?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5"
+  },
+  "verification": {
+   "expression": "12*(1-7/12)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: Change all the fractions to twelfths: "
+     },
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 10,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ", "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " stays the same."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " is the smallest, so Stall C sold the fewest cupcakes. It sold 7 cupcakes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 12 − 7 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 cupcakes were left at Stall C."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes the fractions to twelfths and finds that Stall C sold the fewest"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds that Stall C sold 7 cupcakes"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G20",
+  "familyTitle": "Zara compares three eighths and one half",
+  "primaryOutcomeCode": "P3-NA-FR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Zara says that "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      },
+      {
+       "t": "text",
+       "v": " is greater than "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " because 8 is greater than 2."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Is Zara correct? Write 'yes' or 'no'."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "no",
+    "not correct",
+    "she is not correct",
+    "zara is not correct",
+    "no, zara is not correct"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " to eighths: 2 × 4 = 8, so "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Compare "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " and "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": ". 3 is smaller than 4, so "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " is smaller than "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Zara is not correct. A bigger denominator means the equal parts are smaller. It does not make the fraction greater."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G21",
+  "familyTitle": "Eight twelfths in thirds",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "frac",
+       "n": 8,
+       "d": 12
+      },
+      {
+       "t": "text",
+       "v": " = "
+      },
+      {
+       "t": "blank"
+      },
+      {
+       "t": "text",
+       "v": "/3"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What number goes in the blank?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "2"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "8"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "8/12*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominator changed from 12 to 3. 12 ÷ 4 = 3, so divide the numerator by 4 as well: 8 ÷ 4 = 2."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ". The answer is B."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G22",
+  "familyTitle": "Four fifths as tenths",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which fraction with a denominator of 10 is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 8,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 9,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 10
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "4/5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominator changed from 5 to 10. 5 × 2 = 10, so multiply the numerator by 2 as well: 4 × 2 = 8."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 8,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": ". The answer is B."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G23",
+  "familyTitle": "Denominator when the numerator is three",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A fraction is equal to "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": ". Its numerator is 3."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is its denominator?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "9"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "3*4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numerator changed from 1 to 3. 1 × 3 = 3, so multiply the denominator by 3 as well: 4 × 3 = 12."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": ". The denominator is 12. The answer is D."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G24",
+  "familyTitle": "One half and one third with a common denominator",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " and "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " as fractions that both have a denominator of 6."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the sum of the two numerators?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "6/2*1+6/3*1"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": ": 2 × 3 = 6, so multiply the numerator by 3 as well: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ": 3 × 2 = 6, so multiply the numerator by 2 as well: "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The numerators are 3 and 2. 3 + 2 = 5. The answer is C."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G25",
+  "familyTitle": "Boys in the second club",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 230,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "In Club A, 6 out of 8 pupils are girls. Club B has 12 pupils. The same fraction of the pupils in Club B are girls."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many boys are in Club B?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3"
+  },
+  "verification": {
+   "expression": "12-6/8*12"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 1: In Club A, "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " of the pupils are girls. "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " (divide the numerator and the denominator by 2)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 2: Club B has 12 pupils. "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 9,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": " (multiply the numerator and the denominator by 3). So 9 pupils in Club B are girls."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Step 3: 12 − 9 = 3."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 3 boys in Club B."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes {6/8} as {3/4} or finds a fraction equal to {6/8} with a denominator of 12"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds that 9 pupils in Club B are girls"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G26",
+  "familyTitle": "Denominators when the numerator is six",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 260,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      },
+      {
+       "t": "text",
+       "v": " and "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": " as fractions that both have a numerator of 6."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the difference between the two denominators?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3"
+  },
+  "verification": {
+   "expression": "6*2-6*3/2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": ": 1 × 6 = 6, so multiply the denominator by 6 as well: 2 × 6 = 12. "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 12
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": ": 2 × 3 = 6, so multiply the denominator by 3 as well: 3 × 3 = 9. "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominators are 12 and 9. 12 − 9 = 3."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Writes {1/2} = {6/12}"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes {2/3} = {6/9}"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G27",
+  "familyTitle": "Zul's mistake changing fifths to tenths",
+  "primaryOutcomeCode": "P3-NA-FR-07",
+  "secondaryOutcomeCodes": [],
+  "questionType": "fraction",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Zul wants to write "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": " as a fraction with a denominator of 10. He adds 5 to the numerator and 5 to the denominator, and gets "
+      },
+      {
+       "t": "frac",
+       "n": 8,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Write the correct fraction with a denominator of 10."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "fraction",
+   "value": "6/10",
+   "acceptEquivalent": false,
+   "requireSimplest": false
+  },
+  "verification": {
+   "expression": "3*2/(5*2)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Adding the same number to the numerator and the denominator does not keep a fraction equal."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "To keep it equal, multiply the numerator and the denominator by the same number. 5 × 2 = 10, so multiply 3 by 2 as well: 3 × 2 = 6."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The correct fraction is "
+     },
+     {
+      "t": "frac",
+      "n": 6,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Multiplies the denominator 5 by 2 to get 10 but makes a mistake with the numerator"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G28",
+  "familyTitle": "Add ninths",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is "
+      },
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 9
+      },
+      {
+       "t": "text",
+       "v": " + "
+      },
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 9
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 18
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 9
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 9
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 8,
+       "d": 9
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "4/9+3/9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The denominators are the same, so add the numerators and keep the denominator: 4 + 3 = 7."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": " + "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 9
+     },
+     {
+      "t": "text",
+      "v": ". The answer is C. Do not add the denominators: that would give "
+     },
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 18
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G29",
+  "familyTitle": "Subtract a third from five sixths",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 6
+      },
+      {
+       "t": "text",
+       "v": " − "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 3
+      },
+      {
+       "t": "text",
+       "v": "?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 3
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 6
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 2
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 6
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "5/6-1/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " to sixths: 3 × 2 = 6, so "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 3
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": ". Divide the numerator and the denominator by 3: "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 6
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 2
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The answer is C."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G30",
+  "familyTitle": "Rope left after cutting",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rope is "
+      },
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 8
+      },
+      {
+       "t": "text",
+       "v": " m long. Ken cuts off "
+      },
+      {
+       "t": "frac",
+       "n": 1,
+       "d": 4
+      },
+      {
+       "t": "text",
+       "v": " m from it."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How long is the rope that is left? Give your answer in metres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 6,
+       "d": 8
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 4,
+       "d": 4
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "5/8-1/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " to eighths: 4 × 2 = 8, so "
+     },
+     {
+      "t": "frac",
+      "n": 1,
+      "d": 4
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 5,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The rope that is left is "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 8
+     },
+     {
+      "t": "text",
+      "v": " m long. The answer is B."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-NA-FR-G31",
+  "familyTitle": "How much farther on Tuesday",
+  "primaryOutcomeCode": "P3-NA-FR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali ran "
+      },
+      {
+       "t": "frac",
+       "n": 2,
+       "d": 5
+      },
+      {
+       "t": "text",
+       "v": " km on Monday and "
+      },
+      {
+       "t": "frac",
+       "n": 7,
+       "d": 10
+      },
+      {
+       "t": "text",
+       "v": " km on Tuesday."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much farther did he run on Tuesday than on Monday? Give your answer in kilometres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "frac",
+       "n": 9,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "frac",
+       "n": 3,
+       "d": 10
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "frac",
+       "n": 5,
+       "d": 5
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "7/10-2/5"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " to tenths: 5 × 2 = 10, so "
+     },
+     {
+      "t": "frac",
+      "n": 2,
+      "d": 5
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "frac",
+      "n": 7,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " − "
+     },
+     {
+      "t": "frac",
+      "n": 4,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " = "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": "."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "He ran "
+     },
+     {
+      "t": "frac",
+      "n": 3,
+      "d": 10
+     },
+     {
+      "t": "text",
+      "v": " km farther on Tuesday. The answer is C."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ }
+]

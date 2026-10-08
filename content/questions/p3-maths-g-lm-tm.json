@@ -1,0 +1,2895 @@
+[
+ {
+  "familyCode": "P3-MG-LM-G01",
+  "familyTitle": "Best unit for a long distance",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the most suitable unit to measure the distance from Changi Airport to Jurong East MRT station?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "centimetres"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "metres"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "kilometres"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "grams"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The two places are far apart, so we use the largest length unit, kilometres."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Centimetres and metres are too small for such a long distance. Grams measure mass, not length."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G02",
+  "familyTitle": "Ferry route left in metres",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A ferry route between two islands is 7 km long. A ferry has already travelled 2 km 600 m along the route. How many more metres must it travel to finish the route? Choose the answer in metres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "9600"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "4400"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5600"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3400"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "7*1000-(2*1000+600)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change both distances to metres: 7 km = 7000 m and 2 km 600 m = 2600 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7000 m − 2600 m = 4400 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9600 comes from adding the two distances instead of subtracting. 5600 comes from taking away only 2 km and then adding the 600 m on. 3400 comes from changing 1 km into 1000 m but then forgetting to add the 1000 m back."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G03",
+  "familyTitle": "Round trip to the MRT station",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 50,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Dina's home is 2 km from the MRT station. She walks from her home to the station and then walks back home. How many kilometres does she walk altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4",
+   "unit": "km"
+  },
+  "verification": {
+   "expression": "2*2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She walks 2 km to the station and 2 km back."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 km + 2 km = 4 km."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G04",
+  "familyTitle": "Relay race length in km",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A school relay race has 8 runners. Each runner runs 250 m. How long is the whole race? Give your answer in kilometres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2",
+   "unit": "km"
+  },
+  "verification": {
+   "expression": "8*250/1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Total distance: 8 × 250 m = 2000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1000 m = 1 km, so 2000 m = 2 km."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The whole race is 2 km long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the total distance in metres (8 × 250 = 2000 m)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G05",
+  "familyTitle": "Charity walk distances",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 190,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Hui Min walked 3 km 200 m in a charity walk. Ibrahim walked 750 m less than Hui Min. Kavya walked twice as far as Ibrahim."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far did Kavya walk? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4900",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "4 km 900 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "2*(3200-750)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Hui Min: 3 km 200 m = 3200 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ibrahim: 3200 m − 750 m = 2450 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Kavya: 2 × 2450 m = 4900 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4900 m = 4 km 900 m. Kavya walked 4 km 900 m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds Ibrahim's distance (2450 m or 2 km 450 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Doubles Ibrahim's distance to get 4900 m"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the answer as 4 km 900 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G06",
+  "familyTitle": "Walking to school and back",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jia Hui's home is 1 km 350 m from her school. Every day she walks from home to school and back home again."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How far does she walk in 3 days? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8100",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "8 km 100 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "1350*2*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "One day: 1350 m + 1350 m = 2700 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 days: 3 × 2700 m = 8100 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8100 m = 8 km 100 m. Jia Hui walks 8 km 100 m in 3 days."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the distance walked in one day (2700 m)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies by 3 to get 8100 m"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the answer as 8 km 100 m"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G07",
+  "familyTitle": "Bus stops along a road",
+  "primaryOutcomeCode": "P3-MG-LM-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 200,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A straight road has 5 bus stops. The stops are evenly spaced, with 1 km 250 m from each stop to the next one."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the distance from the first stop to the last stop? Give your answer in km."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5",
+   "unit": "km"
+  },
+  "verification": {
+   "expression": "4*1250/1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 bus stops in a line have only 4 gaps between them, not 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each gap is 1 km 250 m = 1250 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 × 1250 m = 5000 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5000 m = 5 km. The distance from the first stop to the last stop is 5 km."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Sees that there are 4 gaps"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds 4 × 1250 = 5000 m"
+    },
+    {
+     "marks": 1,
+     "criterion": "Changes 5000 m to 5 km"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G08",
+  "familyTitle": "Best unit for a teaspoon of syrup",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of the following is the most suitable unit to measure the amount of cough syrup in a teaspoon?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "litres"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "millilitres"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "kilometres"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "grams"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A teaspoon holds only a very small amount of liquid, so we use millilitres."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A litre is far too big. Kilometres measure length and grams measure mass."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G09",
+  "familyTitle": "Soya milk shared equally",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mrs Lim poured 900 ml of soya milk equally into 3 cups. How many millilitres of soya milk were in each cup? Choose the answer in millilitres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "2700"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "300"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "897"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "900/3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Share 900 ml equally among 3 cups: 900 ÷ 3 = 300."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each cup has 300 ml of soya milk."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2700 comes from multiplying instead of dividing. 30 comes from losing a zero. 897 comes from taking away 3 instead of dividing by 3."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G10",
+  "familyTitle": "Two glasses of juice",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Aini pours 380 ml of juice into one glass and 270 ml of juice into another glass. How many millilitres of juice are in the two glasses altogether?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "650",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "380+270"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the two amounts: 380 ml + 270 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "380 + 270 = 650."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 650 ml of juice altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G11",
+  "familyTitle": "Water cooler jug in litres",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A water cooler gives 250 ml of water each time Hana presses the button. She presses the button 8 times to fill a jug. How many litres of water are in the jug? Give your answer in litres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "2",
+   "unit": "l"
+  },
+  "verification": {
+   "expression": "8*250/1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Water in the jug: 8 × 250 ml = 2000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1000 ml = 1 ℓ, so 2000 ml = 2 ℓ."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 2 ℓ of water in the jug."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the total in millilitres (8 × 250 = 2000 ml)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G12",
+  "familyTitle": "Two tanks, one has three times as much",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 230,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Tank A has 3 times as much water as Tank B. Together, the two tanks have 2 ℓ of water."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many millilitres of water are in Tank A?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "1500",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "2*1000/4*3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 ℓ = 2000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tank B is 1 unit and Tank A is 3 units, so together they are 4 units."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 units = 2000 ml, so 1 unit = 2000 ÷ 4 = 500 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tank A is 3 units: 3 × 500 ml = 1500 ml."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 2 ℓ to 2000 ml and sees that there are 4 units in all"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds 1 unit = 500 ml"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds Tank A = 1500 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G13",
+  "familyTitle": "Filling a 3 litre tank with a mug and a jug",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "application",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sam is filling an empty 3 ℓ tank. He pours in 3 mugs of water, each holding 400 ml, and 2 jugs of water, each holding 600 ml."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many more millilitres of water are needed to fill the tank?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "600",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "3*1000-(3*400+2*600)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Water from the mugs: 3 × 400 ml = 1200 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Water from the jugs: 2 × 600 ml = 1200 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Water in the tank: 1200 ml + 1200 ml = 2400 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 ℓ = 3000 ml. 3000 ml − 2400 ml = 600 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "600 ml more water is needed."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the water poured in (2400 ml)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Changes 3 ℓ to 3000 ml"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 600 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G14",
+  "familyTitle": "Leaking tap in one hour",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A leaking tap drips 15 ml of water every minute. How much water drips out in 1 hour? Give your answer in millilitres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "900",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "15*60"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 hour = 60 minutes."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Water in 1 hour: 60 × 15 ml = 900 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "900 ml of water drips out in 1 hour."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Uses 1 hour = 60 minutes"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G15",
+  "familyTitle": "Soup left over after filling bowls",
+  "primaryOutcomeCode": "P3-MG-LM-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mum has 1 ℓ of soup. She fills as many bowls as she can, with 150 ml of soup in each bowl. How many millilitres of soup are left over?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "100",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "1000-6*150"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 ℓ = 1000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 bowls need 6 × 150 ml = 900 ml. 7 bowls would need 1050 ml, which is more than 1000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So Mum fills 6 bowls."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Soup left over: 1000 ml − 900 ml = 100 ml."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that 6 full bowls can be filled (900 ml)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G16",
+  "familyTitle": "Two ropes added in cm",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rope is 2 m 30 cm long. Another rope is 1 m 20 cm long. What is the total length of the two ropes? Choose the answer in centimetres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "110"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "305"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "350"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "3050"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2*100+30+1*100+20"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change each length to centimetres: 2 m 30 cm = 230 cm and 1 m 20 cm = 120 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "230 cm + 120 cm = 350 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "110 comes from subtracting instead of adding. 305 and 3050 are place-value slips when writing 3 m 50 cm in centimetres."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G17",
+  "familyTitle": "Pineapple and papaya mass",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A pineapple has a mass of 1 kg 200 g. A papaya has a mass of 800 g. What is the total mass of the two fruits? Choose the answer in grams."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "400"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1000"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "1820"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "2000"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "1*1000+200+800"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 kg 200 g = 1200 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1200 g + 800 g = 2000 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "400 comes from subtracting. 1000 comes from forgetting the 1 kg. 1820 comes from writing 1 kg 200 g as 1020 g."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G18",
+  "familyTitle": "Water left in a bottle",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A bottle has 1 ℓ 500 ml of water. Dan drinks 300 ml of the water. How much water is left in the bottle? Choose the answer in millilitres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "1200"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "1020"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "1800"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "200"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "A"
+  },
+  "verification": {
+   "expression": "1*1000+500-300"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 ℓ 500 ml = 1500 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1500 ml − 300 ml = 1200 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1800 comes from adding. 200 comes from forgetting the 1 ℓ. 1020 is a place-value slip when writing 1 ℓ 200 ml in millilitres."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G19",
+  "familyTitle": "Four ribbons end to end",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A ribbon is 1 m 20 cm long. What is the total length of 4 such ribbons? Choose the answer in centimetres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "420"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "480"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "124"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "4080"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "4*(1*100+20)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 m 20 cm = 120 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 × 120 cm = 480 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "420 comes from multiplying only the 1 m by 4 and leaving the 20 cm. 124 comes from adding 4 instead of multiplying. 4080 is a place-value slip when writing 4 m 80 cm in centimetres."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G20",
+  "familyTitle": "Distance left on a road",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A road is 5 km 800 m long. Mrs Tan has driven 2 km 300 m along the road. How far does she still have to drive? Give your answer in km and m."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3500",
+   "unit": "m",
+   "display": [
+    {
+     "t": "text",
+     "v": "3 km 500 m"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "5800-2300"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Subtract the kilometres: 5 km − 2 km = 3 km."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Subtract the metres: 800 m − 300 m = 500 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She still has to drive 3 km 500 m."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G21",
+  "familyTitle": "Mass of books in a box",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A box of books has a mass of 4 kg 200 g. The empty box has a mass of 700 g. What is the mass of the books? Give your answer in kg and g."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "3500",
+   "unit": "g",
+   "display": [
+    {
+     "t": "text",
+     "v": "3 kg 500 g"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "4*1000+200-700"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 kg 200 g = 4200 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4200 g − 700 g = 3500 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3500 g = 3 kg 500 g. The books have a mass of 3 kg 500 g."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes to grams and subtracts to get 3500 g"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G22",
+  "familyTitle": "Barley water shared into cups",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A jug has 2 ℓ 400 ml of barley water. Hana pours it equally into 4 cups. How much barley water is in each cup? Give your answer in millilitres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "600",
+   "unit": "ml"
+  },
+  "verification": {
+   "expression": "(2*1000+400)/4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2 ℓ 400 ml = 2400 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "2400 ml ÷ 4 = 600 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each cup has 600 ml of barley water."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 2 ℓ 400 ml to 2400 ml"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G23",
+  "familyTitle": "Planks laid end to end",
+  "primaryOutcomeCode": "P3-MG-LM-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each plank is 1 m 35 cm long. Mr Chan places 5 of the planks end to end in a straight line. How long is the line of planks? Give your answer in m and cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "675",
+   "unit": "cm",
+   "display": [
+    {
+     "t": "text",
+     "v": "6 m 75 cm"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "5*(1*100+35)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 m 35 cm = 135 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "5 × 135 cm = 675 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "675 cm = 6 m 75 cm. The line of planks is 6 m 75 cm long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 5 × 135 = 675 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G24",
+  "familyTitle": "6 kg 500 g to grams",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 55,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Express 6 kg 500 g in grams. Choose the answer in grams."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "6050"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6500"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "650"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "6005"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "6*1000+500"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 kg = 1000 g, so 6 kg = 6000 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6000 g + 500 g = 6500 g."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "650 and 6005 and 6050 are place-value slips: the 500 g has to fill the hundreds place."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G25",
+  "familyTitle": "Pieces cut from a 3 metre ribbon",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Dan has a ribbon that is 3 m long. He cuts it into pieces that are each 60 cm long. How many pieces does he get?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "180"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "360"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "5"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "50"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "3*100/60"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change 3 m to centimetres: 3 m = 300 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Number of pieces: 300 ÷ 60 = 5."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Dan gets 5 pieces."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "180 comes from multiplying 3 × 60. 360 comes from adding 300 + 60. 50 comes from thinking 1 m = 1000 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G26",
+  "familyTitle": "4250 ml split into litres and millilitres",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "4250 ml is the same as 4 ℓ and how many millilitres? Choose the number of millilitres."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "4250"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "25"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "2500"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "250"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "D"
+  },
+  "verification": {
+   "expression": "4250-4*1000"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 ℓ = 4000 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4250 ml − 4000 ml = 250 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "So 4250 ml = 4 ℓ 250 ml."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4250 comes from not taking away the 4 ℓ. 25 and 2500 are place-value slips."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G27",
+  "familyTitle": "Centimetres in 7 m",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 40,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many centimetres are there in 7 m?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "700",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "7*100"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 m = 100 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 m = 7 × 100 cm = 700 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G28",
+  "familyTitle": "Two ropes compared in cm",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Amir's rope is 2 m 5 cm long. Mei's rope is 190 cm long. How many centimetres longer is Amir's rope than Mei's rope?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "15",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "2*100+5-190"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change Amir's rope to centimetres: 2 m 5 cm = 205 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "205 cm − 190 cm = 15 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Amir's rope is 15 cm longer."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 2 m 5 cm to 205 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-LM-G29",
+  "familyTitle": "Two ropes tied with an overlap",
+  "primaryOutcomeCode": "P3-MG-LM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Jia Le ties a rope that is 3 m 60 cm long to another rope that is 2 m 40 cm long. The two ropes overlap by 15 cm where they are tied together."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How long is the tied rope? Give your answer in m and cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "585",
+   "unit": "cm",
+   "display": [
+    {
+     "t": "text",
+     "v": "5 m 85 cm"
+    }
+   ]
+  },
+  "verification": {
+   "expression": "3*100+60+2*100+40-15"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "3 m 60 cm = 360 cm and 2 m 40 cm = 240 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Together the two ropes are 360 cm + 240 cm = 600 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The 15 cm overlap is counted twice, so take it away once: 600 cm − 15 cm = 585 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "585 cm = 5 m 85 cm. The tied rope is 5 m 85 cm long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes both ropes to centimetres and adds to get 600 cm"
+    },
+    {
+     "marks": 1,
+     "criterion": "Takes away the 15 cm overlap to get 585 cm"
+    },
+    {
+     "marks": 1,
+     "criterion": "Writes the answer as 5 m 85 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-G01",
+  "familyTitle": "Holding breath compared in seconds",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Zara held her breath for 1 min 25 s. Ben held his breath for 78 s. How many seconds longer did Zara hold her breath than Ben? Give your answer in seconds."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7"
+  },
+  "verification": {
+   "expression": "(60+25)-78"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Change Zara's time to seconds: 1 min 25 s = 60 s + 25 s = 85 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "85 s − 78 s = 7 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Zara held her breath 7 seconds longer."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Changes 1 min 25 s to 85 s"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-G02",
+  "familyTitle": "Filling bottles one after another",
+  "primaryOutcomeCode": "P3-MG-TM-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A water dispenser takes 12 seconds to fill one bottle. It fills 7 bottles one after another without stopping."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How long does it take altogether? Give your answer in minutes and seconds."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "1 min 24 s",
+    "1 min 24 sec",
+    "1 minute 24 seconds",
+    "1 minute and 24 seconds",
+    "1 min 24s",
+    "1min 24s",
+    "1 min and 24 s"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Time for 7 bottles: 7 × 12 s = 84 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "60 seconds make 1 minute, so 84 s = 1 min 24 s."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "It takes 1 min 24 s altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds 7 × 12 = 84 s"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-G03",
+  "familyTitle": "Two lessons compared in 24-hour time",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ravi's swimming lesson starts at 1620 h and ends at 1735 h. His sister's dance class starts at 1650 h and ends at 1810 h."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How many minutes longer is the dance class than the swimming lesson?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "5",
+   "unit": "min"
+  },
+  "verification": {
+   "expression": "((18*60+10)-(16*60+50))-((17*60+35)-(16*60+20))"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Swimming lesson: 1620 h to 1735 h. From 1620 h to 1720 h is 60 min and from 1720 h to 1735 h is 15 min, so it lasts 75 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Dance class: 1650 h to 1810 h. From 1650 h to 1750 h is 60 min and from 1750 h to 1810 h is 20 min, so it lasts 80 min."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "80 min − 75 min = 5 min. The dance class is 5 minutes longer."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the length of one lesson correctly (75 min or 80 min)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-TM-G04",
+  "familyTitle": "Hours a stall owner spends at a night market",
+  "primaryOutcomeCode": "P3-MG-TM-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 220,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A night market opens at 1730 h and closes at 2230 h. Mr Salleh, who owns a stall, arrives 1 h 15 min before the market opens and leaves 45 min after it closes."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "For how many hours is Mr Salleh at the market?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "7",
+   "unit": "h"
+  },
+  "verification": {
+   "expression": "((22*60+30+45)-(17*60+30-75))/60"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "1 h 15 min before 1730 h is 1615 h. This is when Mr Salleh arrives."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "45 min after 2230 h is 2315 h. This is when he leaves."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "From 1615 h to 2315 h is 7 hours."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mr Salleh is at the market for 7 hours."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the arrival time 1615 h"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the leaving time 2315 h"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the duration of 7 h"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]

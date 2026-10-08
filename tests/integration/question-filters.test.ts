@@ -92,9 +92,10 @@ describe("question list filters and pagination (M2-06)", () => {
     const combined = await list({ topicId: fractions?.id, questionType: "mcq", difficulty: "standard", status: "approved", level: "P3" });
     expect(combined.total).toBeLessThan(topicOnly.total);
     expect(combined.rows.every((r) => r.topicTitle === "Fractions" && r.questionType === "mcq" && r.difficulty === "standard")).toBe(true);
-    const expected = (await list({ topicId: fractions?.id })).rows
-      .concat((await list({ topicId: fractions?.id }, 2)).rows)
-      .filter((r) => r.questionType === "mcq" && r.difficulty === "standard").length;
+    const allFractions = [...topicOnly.rows];
+    for (let page = 2; page <= topicOnly.pageCount; page += 1) allFractions.push(...(await list({ topicId: fractions?.id }, page)).rows);
+    expect(allFractions).toHaveLength(topicOnly.total);
+    const expected = allFractions.filter((r) => r.questionType === "mcq" && r.difficulty === "standard").length;
     expect(combined.total).toBe(expected);
 
     const wrongTopicForOutcome = topics.find((t) => t.title === "Money")?.outcomes[0];
