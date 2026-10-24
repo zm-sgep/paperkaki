@@ -8,7 +8,8 @@
  * Calculation order follows spec section 6:
  *   base -> eligibility -> first-attempt factor -> mastery need -> difficulty -> accuracy
  *   -> bonuses (improvement, recovery, retention, variety) -> family repetition -> topic saturation
- *   -> difficulty floor / cooldown -> activity cap -> one-time mastery bonus -> deterministic rounding.
+ *   -> difficulty floor / cooldown -> activity cap -> one-time mastery bonus -> deterministic rounding
+ *   -> quick-repeat limit (rewards-v2 only).
  */
 import {
   ACTIVITY_TYPES,
@@ -59,6 +60,10 @@ export function validateRewardContext(context: RewardContext): string[] {
     ["topicRewardedSessionsRecent", context.topicRewardedSessionsRecent],
   ] as const) {
     if (!Number.isInteger(value) || value < 0) problems.push(`${name} must be a whole number of 0 or more`);
+  }
+  const earlier = context.recentSameScopePoints;
+  if (earlier !== undefined && !(Number.isInteger(earlier) && earlier >= 0)) {
+    problems.push("recentSameScopePoints must be a whole number of 0 or more");
   }
   const minutes = context.minutesSinceNearIdenticalActivity;
   if (minutes !== undefined && !(Number.isFinite(minutes) && minutes >= 0)) {
@@ -153,7 +158,12 @@ const NUDGE_TRIGGER_RULES = new Set([
   "topic_saturation",
   "difficulty_floor",
   "near_identical_cooldown",
+  "repeat_never_more",
 ]);
+
+function reducedEffect(factor: number): "reduced" | "suppressed" {
+  return factor === 0 ? "suppressed" : "reduced";
+}
 
 export function calculateReward(context: RewardContext, policy: RewardPolicy): RewardDecision {
   const problems = validateRewardContext(context);
@@ -252,8 +262,29 @@ export function calculateReward(context: RewardContext, policy: RewardPolicy): R
     factors.lowEffort > 0;
 
   // Step 12: deterministic rounding to whole points.
-  const breakdown = allocateWholePoints(parts);
-  if (masteryBonusEarned && policy.masteryBonus > 0) {
+  let breakdown = allocateWholePoints(parts);
+  let masteryBonusPaid = masteryBonusEarned && policy.masteryBonus > 0;
+
+  // Step 12a (rewards-v2): a quick repeat on the same scope never earns more than the earlier practice.
+  // The limit covers the whole award; learning points shrink first, and a mastery bonus that does not fit is not paid.
+  const repeatLimit = policy.repeatNeverMore !== undefined ? context.recentSameScopePoints : undefined;
+  let repeatScale = 1;
+  if (repeatLimit !== undefined) {
+    const learningTotal = breakdown.reduce((sum, item) => sum + item.points, 0);
+    if (learningTotal + (masteryBonusPaid ? policy.masteryBonus : 0) > repeatLimit) {
+      if (masteryBonusPaid && policy.masteryBonus > repeatLimit) masteryBonusPaid = false;
+      const budget = Math.min(learningTotal, repeatLimit - (masteryBonusPaid ? policy.masteryBonus : 0));
+      const exactTotal = [...parts.values()].reduce((sum, value) => sum + value, 0);
+      repeatScale = exactTotal > 0 ? budget / exactTotal : 0;
+      for (const [reason, value] of parts) parts.set(reason, value * repeatScale);
+      breakdown = allocateWholePoints(parts);
+      decision.capped = true;
+      decision.capReason = "repeat_never_more";
+      decision.antiFarmingDecisions.push({ rule: "repeat_never_more", effect: reducedEffect(repeatScale), factor: repeatScale });
+    }
+  }
+
+  if (masteryBonusPaid) {
     breakdown.unshift({ reason: "first_mastery", points: policy.masteryBonus });
   }
   breakdown.sort((a, b) => REASON_PRIORITY.indexOf(a.reason) - REASON_PRIORITY.indexOf(b.reason));
@@ -278,10 +309,11 @@ export function calculateReward(context: RewardContext, policy: RewardPolicy): R
     cooldown: factors.cooldown,
     low_effort: factors.lowEffort,
     activity_cap: capScale,
+    ...(repeatLimit !== undefined ? { repeat_never_more: repeatScale } : {}),
   };
 
   // Nudge: when yield is low because of mastery or repetition, redirect constructively.
-  const learningPoints = decision.points - (masteryBonusEarned ? policy.masteryBonus : 0);
+  const learningPoints = decision.points - (masteryBonusPaid ? policy.masteryBonus : 0);
   const lowEffort = factors.lowEffort < 1;
   const lowYield =
     evaluation.decisions.some((entry) => NUDGE_TRIGGER_RULES.has(entry.rule)) ||

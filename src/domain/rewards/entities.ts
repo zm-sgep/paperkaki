@@ -123,6 +123,11 @@ export type RewardContext = {
   minutesSinceNearIdenticalActivity?: number | undefined;
   /** Only true when robust evidence of random answering exists. Never inferred from speed alone. */
   reliableLowEffortSignal?: boolean | undefined;
+  /**
+   * The most points an earlier practice on the same scope earned inside the policy's repeat window.
+   * Left out when there was none. A policy with `repeatNeverMore` never pays more than this.
+   */
+  recentSameScopePoints?: number | undefined;
   nextActionCandidates?: NextActionCandidates | undefined;
 };
 
@@ -147,6 +152,7 @@ export type AntiFarmingRule =
   | "topic_saturation"
   | "difficulty_floor"
   | "near_identical_cooldown"
+  | "repeat_never_more"
   | "recovery_needs_mistake_review"
   | "low_effort_evidence";
 

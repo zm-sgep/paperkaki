@@ -22,12 +22,20 @@ test.use({ baseURL: FIXTURE_SERVER });
 const progress = (page: Page) => page.locator("[data-progress]");
 const next = (page: Page) => page.getByRole("button", { name: "Next question" });
 
-/** Steps forward to the first typed question worth 3 or more marks (a word problem) and returns its number. */
-async function goToWordProblem(page: Page): Promise<number> {
+/**
+ * Steps forward to the first typed question worth 3 or more marks (a word problem). Returns its number
+ * and how a typed "0.01" is shown back: with the unit beside the answer box, as "$0.01", "0.01 cm" or "0.01".
+ */
+async function goToWordProblem(page: Page): Promise<{ number: number; shownAnswer: string }> {
   for (let guard = 0; guard < 60; guard += 1) {
     const surface = await page.locator("[data-question-surface]").innerText();
     if (/\([3-9] marks\)/.test(surface) && (await page.locator("[data-typed-answer]").isVisible())) {
-      return Number(/Question (\d+) of/.exec((await progress(page).innerText()).trim())?.[1]);
+      const unitBox = page.locator("[data-typed-answer] [data-answer-unit]");
+      const unit = (await unitBox.count()) > 0 ? (await unitBox.innerText()).trim() : "";
+      return {
+        number: Number(/Question (\d+) of/.exec((await progress(page).innerText()).trim())?.[1]),
+        shownAnswer: unit === "$" ? "$0.01" : unit ? `0.01 ${unit}` : "0.01",
+      };
     }
     await next(page).click();
   }
@@ -55,7 +63,7 @@ test.describe("marking, quick check, results and the marked paper", () => {
     await page.getByRole("link", { name: "Start" }).click();
     await page.getByRole("button", { name: "Start" }).click();
     await expect(progress(page)).toHaveText(/^Question 1 of \d+$/);
-    const wordProblem = await goToWordProblem(page);
+    const { number: wordProblem, shownAnswer } = await goToWordProblem(page);
     await page.getByRole("textbox", { name: "Your answer" }).fill("0.01");
     await drawStroke(page, page.getByTestId("working-canvas"));
     await expect(page.getByTestId("working-canvas")).toHaveAttribute("data-stroke-count", "1");
@@ -84,7 +92,7 @@ test.describe("marking, quick check, results and the marked paper", () => {
     await expect(parent).toHaveURL(/\/progress\/review\/[0-9a-f-]{36}$/);
     const attemptId = /\/review\/([0-9a-f-]{36})$/.exec(parent.url())?.[1] ?? "";
     await expect(parent.getByRole("heading", { level: 1, name: `We need a quick check on Question ${wordProblem}.` })).toBeVisible();
-    await expect(parent.locator("[data-child-answer]")).toHaveText("0.01");
+    await expect(parent.locator("[data-child-answer]")).toHaveText(shownAnswer);
     await expect(parent.getByAltText(`${name}'s working for Question ${wordProblem}`)).toBeVisible();
     await expect(parent.getByRole("heading", { name: "The right answer" })).toBeVisible();
     await expect(parent.getByRole("heading", { name: "How it is marked" })).toBeVisible();
@@ -138,7 +146,7 @@ test.describe("marking, quick check, results and the marked paper", () => {
     const firstCard = parent.locator(`[data-mistakes] [data-question="${wordProblem}"]`);
     await expect(firstCard).toContainText(`Question ${wordProblem}`);
     await expect(firstCard).toContainText(/✗ 2\/\d/);
-    await expect(firstCard.locator("[data-answer-line]")).toHaveText("0.01");
+    await expect(firstCard.locator("[data-answer-line]")).toHaveText(shownAnswer);
     await expect(firstCard.getByAltText(`Working for Question ${wordProblem}`)).toBeVisible();
     // A mistake with all its marks lost comes before one that lost a single mark.
     expect(Number(await parent.locator("[data-mistakes] [data-question]").first().getAttribute("data-question"))).not.toBe(0);
@@ -160,7 +168,7 @@ test.describe("marking, quick check, results and the marked paper", () => {
     }
     const panel = parent.locator("[data-feedback-panel]");
     await expect(panel.getByRole("heading", { level: 2, name: `Question ${wordProblem}` })).toBeVisible();
-    await expect(panel.locator("[data-what-happened]")).toContainText("They wrote 0.01");
+    await expect(panel.locator("[data-what-happened]")).toContainText(`They wrote ${shownAnswer}`);
     // The parent reads the marker's specific note once, not the general sentence as well.
     await expect(panel.getByText("slip in the last step")).toBeVisible();
     await expect(panel.getByText("slip in the calculation")).toHaveCount(0);
@@ -209,7 +217,7 @@ test.describe("marking, quick check, results and the marked paper", () => {
     const childFirst = page.locator(`[data-mistakes] [data-question="${wordProblem}"]`);
     await expect(childFirst).toContainText(`Question ${wordProblem}`);
     await childFirst.getByRole("button", { name: /Show feedback/ }).click();
-    await expect(page.locator("[data-feedback-panel]").locator("[data-what-happened]")).toContainText("You wrote 0.01");
+    await expect(page.locator("[data-feedback-panel]").locator("[data-what-happened]")).toContainText(`You wrote ${shownAnswer}`);
     await expect(page.locator("[data-feedback-panel]").locator("[data-worked-solution]")).not.toBeEmpty();
     await expect(page.locator("[data-feedback-panel]").getByRole("link", { name: "Try one like this" })).toHaveAttribute("href", /\/practice\?outcome=/);
     expect(await page.locator("body").innerText()).not.toMatch(INTERNAL_WORDS);

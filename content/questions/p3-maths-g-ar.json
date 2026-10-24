@@ -1,0 +1,3500 @@
+[
+ {
+  "familyCode": "P3-MG-AR-G01",
+  "familyTitle": "Which job needs the perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 45,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which one of these jobs needs us to find the perimeter of a shape?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "Finding how many square tiles are needed to cover a kitchen floor"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "Finding how much paint is needed to paint a wall"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "Finding how long a string must be to go once round the edge of a painting"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "Finding how much grass is needed to cover a rectangular field"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is the distance all the way round the edge of a shape."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A string that goes once round the edge of a painting needs the perimeter."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Tiles, paint and grass cover a flat surface, so those jobs need the area."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G02",
+  "familyTitle": "Rectangle and square with the same perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is 10 cm long and 6 cm wide. A square has the same perimeter as the rectangle. Which statement is correct?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "The rectangle has the greater area."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "The square has the greater area."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "The rectangle and the square have the same area."
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "The square has the greater perimeter."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of the rectangle = 2 × (10 + 6) = 32 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The square has the same perimeter, so each side of the square is 32 ÷ 4 = 8 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of the rectangle = 10 × 6 = 60 cm². Area of the square = 8 × 8 = 64 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The square has the greater area, even though both shapes have the same perimeter."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G03",
+  "familyTitle": "Total area after cutting",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Sam has a rectangular piece of paper that is 8 cm long and 6 cm wide. He cuts it into two pieces and keeps both pieces. What is the total area of the two pieces? Give your answer in cm²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "48"
+  },
+  "verification": {
+   "expression": "8 * 6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Cutting the paper does not make the paper bigger or smaller."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The total area of the two pieces is the area of the whole piece of paper."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "8 × 6 = 48"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The total area is 48 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G04",
+  "familyTitle": "Same tiles, different perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Lina has 16 square tiles. Each tile has sides of 1 cm. She puts all 16 tiles together to make a rectangle that is 8 cm long and 2 cm wide. Then she puts all 16 tiles together again to make a square with sides of 4 cm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much shorter is the perimeter of the square than the perimeter of the rectangle? Give your answer in cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "4",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "2 * (8 + 2) - 4 * 4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of the rectangle = 2 × (8 + 2) = 20 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of the square = 4 × 4 = 16 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "20 – 16 = 4"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter of the square is 4 cm shorter. Both shapes use the same 16 tiles, so they have the same area, but not the same perimeter."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds both perimeters (20 cm and 16 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 4 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G05",
+  "familyTitle": "Stickers covering a card",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular card is 12 cm long and 6 cm wide. Dina covers the whole card exactly with square stickers. Each sticker has sides of 3 cm. How many stickers does she use?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "8"
+  },
+  "verification": {
+   "expression": "(12 / 3) * (6 / 3)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Along the length: 12 ÷ 3 = 4 stickers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Along the width: 6 ÷ 3 = 2 stickers."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 × 2 = 8"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "She uses 8 stickers."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds how many stickers fit along the length and the width (4 and 2)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G06",
+  "familyTitle": "Area from perimeter and length",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular vegetable plot has a perimeter of 30 m. Its length is 9 m."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the area of the plot? Give your answer in m²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "54"
+  },
+  "verification": {
+   "expression": "(30 / 2 - 9) * 9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Length + width is half of the perimeter: 30 ÷ 2 = 15 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Width = 15 – 9 = 6 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = 9 × 6 = 54 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The area of the plot is 54 m²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds length + width = 15 m"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the width, 6 m"
+    },
+    {
+     "marks": 1,
+     "criterion": "Multiplies to get the area, 54 m²"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G07",
+  "familyTitle": "Two squares joined side by side",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Two squares are the same size. Each square has sides of 5 cm. Aini puts the two squares side by side so that one whole side of each square fits exactly against the other. This makes a rectangle."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much shorter is the perimeter of the rectangle than the total perimeter of the two separate squares? Give your answer in cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "10",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "2 * 4 * 5 - 2 * (10 + 5)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of one square = 4 × 5 = 20 cm. Two squares: 20 + 20 = 40 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The rectangle is 10 cm long and 5 cm wide. Its perimeter = 2 × (10 + 5) = 30 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "40 – 30 = 10"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter of the rectangle is 10 cm shorter. The two sides that touch (5 cm + 5 cm) are no longer on the outside edge."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the total perimeter of the two squares (40 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the perimeter of the rectangle (30 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Subtracts to get 10 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G08",
+  "familyTitle": "Fence round and grass over a garden",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mr Ong has a rectangular garden that is 12 m long and 8 m wide. He builds a fence round the whole garden. The fence costs $5 for every metre. He also covers the whole garden with grass. The grass costs $3 for every square metre."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "How much does Mr Ong pay altogether? Give your answer in dollars."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "488",
+   "unit": "$"
+  },
+  "verification": {
+   "expression": "2 * (12 + 8) * 5 + 12 * 8 * 3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fence goes round the edge, so we need the perimeter."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 2 × (12 + 8) = 40 m. Cost of fence = 40 × $5 = $200."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The grass covers the whole garden, so we need the area."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = 12 × 8 = 96 m². Cost of grass = 96 × $3 = $288."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "$200 + $288 = $488"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Mr Ong pays $488 altogether."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the perimeter, 40 m, and the cost of the fence, $200"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the area, 96 m²"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the cost of the grass, $288"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds to get $488"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G09",
+  "familyTitle": "More squares, shorter perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-03",
+  "secondaryOutcomeCodes": [],
+  "questionType": "text",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape A"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 4,
+     "rows": 3,
+     "cellMm": 7,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Shape B"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cols": 5,
+     "rows": 2,
+     "cellMm": 7,
+     "shaded": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. Shape A has more squares than Shape B. Which shape has the longer perimeter? Write 'A' or 'B'."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "text",
+   "accepted": [
+    "B",
+    "b",
+    "Shape B",
+    "shape B"
+   ]
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shape A has 6 squares and is 3 cm long and 2 cm wide. Its perimeter is 3 + 2 + 3 + 2 = 10 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shape B has 5 squares. Going round the edge, the sides are 4, 1, 3, 1, 1 and 2 cm. Its perimeter is 4 + 1 + 3 + 1 + 1 + 2 = 12 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Shape B has fewer squares but a longer perimeter. Having more squares does not mean having a longer perimeter."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G10",
+  "familyTitle": "Flowers and grass in a bed",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 150,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 8,
+     "rows": 5,
+     "cellMm": 8,
+     "shaded": [
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       3
+      ]
+     ],
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each square has an area of 1 m². Mrs Lee grows flowers in the shaded part of her rectangular garden bed. The rest of the bed, inside the dark lines, is covered with grass. How many more square metres of grass than flowers are there? Choose the answer in m²."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "11"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "18"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "(6 * 3 - 7) - 7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The bed is 6 squares long and 3 squares wide: 6 × 3 = 18 squares."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Flowers (shaded): 4 + 2 + 1 = 7 squares, so 7 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Grass: 18 – 7 = 11 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "11 – 7 = 4"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "There are 4 m² more grass than flowers."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 8,
+    "rows": 5,
+    "cellMm": 8,
+    "shaded": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      7,
+      1
+     ],
+     [
+      7,
+      4
+     ],
+     [
+      1,
+      4
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G11",
+  "familyTitle": "Total area of three cards",
+  "primaryOutcomeCode": "P3-MG-AR-01",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each small square has an area of 1 cm². Card A is covered exactly by 6 rows of 7 small squares. The area of Card B is 9 cm² less than the area of Card A. The area of Card C is twice the area of Card B."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the total area of the three cards? Give your answer in cm²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "141"
+  },
+  "verification": {
+   "expression": "6 * 7 + (6 * 7 - 9) + 2 * (6 * 7 - 9)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Card A: 6 × 7 = 42 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Card B: 42 – 9 = 33 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Card C: 2 × 33 = 66 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Total: 42 + 33 + 66 = 141"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The total area is 141 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the area of Card A (42) and Card B (33)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the area of Card C (66)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Adds the three areas to get 141"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G12",
+  "familyTitle": "Perimeter of an L-shaped figure",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 7,
+     "rows": 6,
+     "cellMm": 8,
+     "shaded": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       4,
+       3
+      ]
+     ],
+     "outline": [
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the L-shaped figure in cm?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "13"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "14"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "6"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "11"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "1 + 2 + 3 + 1 + 4 + 3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter is the distance all the way round the figure."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add the length of each side going round: 1 + 2 + 3 + 1 + 4 + 3 = 14."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 14 cm. (6 is the number of squares, which is the area, not the perimeter.)"
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 7,
+    "rows": 6,
+    "cellMm": 8,
+    "shaded": [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      3
+     ]
+    ],
+    "outline": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      5,
+      3
+     ],
+     [
+      5,
+      4
+     ],
+     [
+      1,
+      4
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G13",
+  "familyTitle": "Perimeter of a cross",
+  "primaryOutcomeCode": "P3-MG-AR-02",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "grid",
+     "cols": 5,
+     "rows": 5,
+     "cellMm": 8,
+     "shaded": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "outline": [
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Each side of a square is 1 cm. What is the perimeter of the cross-shaped figure?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "12",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "4 * 3"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Go round the edge of the cross. Each of the 4 arms has 3 sides of 1 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 × 3 = 12"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 12 cm."
+     }
+    ]
+   },
+   {
+    "t": "grid",
+    "cols": 5,
+    "rows": 5,
+    "cellMm": 8,
+    "shaded": [
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "outline": [
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      4,
+      3
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ]
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G14",
+  "familyTitle": "Perimeter of a rectangular sign",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular sign is 30 cm long and 18 cm wide. What is its perimeter? Give your answer in cm."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "48"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "540"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "96"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "78"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2 * (30 + 18)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Length + width = 30 + 18 = 48 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 2 × 48 = 96 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G15",
+  "familyTitle": "Edging round a table top",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular table top is 120 cm long and 80 cm wide. Mum glues a strip of edging along all four edges of the table top. What length of edging does she need? Give your answer in cm."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "200"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "9600"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "400"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "320"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2 * (120 + 80)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The edging goes round the edge, so we find the perimeter."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Length + width = 120 + 80 = 200 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 2 × 200 = 400 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G16",
+  "familyTitle": "Which rectangle has the longest perimeter",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which rectangle has the longest perimeter?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "9 cm long and 8 cm wide"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "10 cm long and 6 cm wide"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "20 cm long and 1 cm wide"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "8 cm long and 7 cm wide"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find the perimeter of each rectangle."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A: 2 × (9 + 8) = 34 cm. B: 2 × (10 + 6) = 32 cm. C: 2 × (20 + 1) = 42 cm. D: 2 × (8 + 7) = 30 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The rectangle that is 20 cm long and 1 cm wide has the longest perimeter, even though it has the smallest area."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G17",
+  "familyTitle": "Square with the same perimeter as a rectangle",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is 17 cm long and 7 cm wide. A square has the same perimeter as the rectangle. What is the length of one side of the square? Choose the answer in cm."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "48"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "119"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "2 * (17 + 7) / 4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of the rectangle = 2 × (17 + 7) = 48 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A square has 4 equal sides, so one side = 48 ÷ 4 = 12 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G18",
+  "familyTitle": "Perimeter from the four sides of a banner",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "The two long sides of a rectangular banner are each 45 cm. The two short sides are each 20 cm. What is the perimeter of the banner? Give your answer in cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "130",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "45 + 45 + 20 + 20"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Add all four sides: 45 + 45 + 20 + 20 = 130."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter is 130 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G19",
+  "familyTitle": "Fence with a gate",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular garden is 18 m long and 11 m wide. Mr Chua puts a fence all the way round the garden, except for a gate that is 2 m wide. What is the length of the fence? Give your answer in metres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "56",
+   "unit": "m"
+  },
+  "verification": {
+   "expression": "2 * (18 + 11) - 2"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Distance all the way round the garden = 2 × (18 + 11) = 58 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The gate is 2 m wide and has no fence."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "58 – 2 = 56"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fence is 56 m long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the perimeter of the garden (58 m)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G20",
+  "familyTitle": "Fence on three sides",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular vegetable plot is 12 m long and 7 m wide. One of the 12 m sides is a wall, so Mr Lim puts a fence along the other three sides only. What is the length of the fence? Give your answer in metres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "26",
+   "unit": "m"
+  },
+  "verification": {
+   "expression": "12 + 7 + 7"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The side next to the wall needs no fence."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The three fenced sides are 12 m, 7 m and 7 m."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "12 + 7 + 7 = 26"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fence is 26 m long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Identifies the three sides to fence (12 m, 7 m and 7 m)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G21",
+  "familyTitle": "Perimeter after doubling both sides",
+  "primaryOutcomeCode": "P3-MG-AR-05",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is 10 cm long and 4 cm wide. Its length and its width are both made twice as long. What is the perimeter of the new rectangle? Give your answer in cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "56",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "2 * (10 * 2 + 4 * 2)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "New length = 2 × 10 = 20 cm. New width = 2 × 4 = 8 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 2 × (20 + 8) = 2 × 28 = 56 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the new length and width (20 cm and 8 cm)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G22",
+  "familyTitle": "Perimeter of a square tile",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square tile has sides of 25 cm. What is its perimeter? Give your answer in cm."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "50"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "100"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "625"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "75"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "4 * 25"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A square has 4 equal sides."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 4 × 25 = 100 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G23",
+  "familyTitle": "Side from the perimeter of a square",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square card has a perimeter of 28 cm. What is the length of one side of the card? Give your answer in cm."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "14"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "7"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "112"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "28 / 4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "A square has 4 equal sides."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "One side = 28 ÷ 4 = 7 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G24",
+  "familyTitle": "Possible perimeter of a square",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 1,
+  "estimatedSeconds": 100,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which of these could be the perimeter, in cm, of a square whose sides are a whole number of centimetres?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "36"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "22"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "18"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The perimeter of a square is 4 times the length of one side, so it must be in the 4 times table."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "30 ÷ 4 = 7 remainder 2. 22 ÷ 4 = 5 remainder 2. 18 ÷ 4 = 4 remainder 2. 36 ÷ 4 = 9 with nothing left over."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Only 36 works. A square with sides of 9 cm has a perimeter of 36 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G25",
+  "familyTitle": "Gold strip round three coasters",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ali sticks a gold strip along all the edges of 3 square coasters. Each coaster has sides of 8 cm. How many centimetres of gold strip does he use in all?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "96"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "64"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "32"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "3 * 4 * 8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of one coaster = 4 × 8 = 32 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "For 3 coasters: 3 × 32 = 96 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "He uses 96 cm of gold strip."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G26",
+  "familyTitle": "Fence round a square plot",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square vegetable plot has sides of 15 m. Mr Gan puts a fence all round the plot. What is the length of the fence? Give your answer in metres."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "60",
+   "unit": "m"
+  },
+  "verification": {
+   "expression": "4 * 15"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fence goes all round the plot, so we find the perimeter."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "4 × 15 = 60"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The fence is 60 m long."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G27",
+  "familyTitle": "Perimeter of a square from its area",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "reasoning",
+  "marks": 2,
+  "estimatedSeconds": 130,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square has an area of 64 cm². What is its perimeter? Give your answer in cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "32",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "4 * 8"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of a square = side × side. Since 8 × 8 = 64, each side is 8 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter = 4 × 8 = 32 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds that each side is 8 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G28",
+  "familyTitle": "Perimeter of a card with a border",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "challenging",
+  "cognitiveDemand": "reasoning",
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square photo with sides of 24 cm is stuck in the middle of a square card. There is a border of card, 4 cm wide, on every side of the photo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "What is the perimeter of the card? Give your answer in cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "128",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "4 * (24 + 4 + 4)"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The border is 4 cm wide on both sides of the photo."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Side of the card = 4 + 24 + 4 = 32 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Perimeter of the card = 4 × 32 = 128 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Adds the border on both sides of the photo"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the side of the card (32 cm)"
+    },
+    {
+     "marks": 1,
+     "criterion": "Finds the perimeter, 128 cm"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G29",
+  "familyTitle": "Ribbon left after a square card",
+  "primaryOutcomeCode": "P3-MG-AR-06",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Ms Tan has a ribbon that is 100 cm long. She uses some of it to go once round a square card with sides of 18 cm. How much ribbon does she have left? Give your answer in cm."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "28",
+   "unit": "cm"
+  },
+  "verification": {
+   "expression": "100 - 4 * 18"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ribbon used = perimeter of the card = 4 × 18 = 72 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Ribbon left = 100 – 72 = 28 cm."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact_with_unit",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the perimeter of the card (72 cm)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G30",
+  "familyTitle": "Area of a stage",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular stage is 8 m long and 6 m wide. What is the area of the stage? Give your answer in m²."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "28"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "48"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "14"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "42"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "expression": "8 * 6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = length × width = 8 × 6 = 48 m²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G31",
+  "familyTitle": "Which rectangle has area 24",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "basic",
+  "cognitiveDemand": "recall",
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Which rectangle has an area of 24 cm²?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "7 cm long and 3 cm wide"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "6 cm long and 4 cm wide"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "8 cm long and 4 cm wide"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "9 cm long and 2 cm wide"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "B"
+  },
+  "verification": {
+   "human": true
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Find the area of each rectangle by multiplying length × width."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "7 × 3 = 21, 6 × 4 = 24, 8 × 4 = 32, 9 × 2 = 18."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The rectangle that is 6 cm long and 4 cm wide has an area of 24 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G32",
+  "familyTitle": "Area of a longer rectangle",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "mcq",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 110,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangle is 7 cm long and 4 cm wide. A second rectangle has the same width as the first, but its length is 3 cm longer than the length of the first. What is the area of the second rectangle? Give your answer in cm²."
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "id": "A",
+     "c": [
+      {
+       "t": "text",
+       "v": "22"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "c": [
+      {
+       "t": "text",
+       "v": "28"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "c": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "c": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "mcq",
+   "correct": "C"
+  },
+  "verification": {
+   "expression": "(7 + 3) * 4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Length of the second rectangle = 7 + 3 = 10 cm. Its width is 4 cm."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area = 10 × 4 = 40 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G33",
+  "familyTitle": "Area of a square dance floor",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "basic",
+  "cognitiveDemand": "application",
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A square dance floor has sides of 9 m. What is the area of the dance floor? Give your answer in m²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "81"
+  },
+  "verification": {
+   "expression": "9 * 9"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of a square = side × side."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "9 × 9 = 81"
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "The area is 81 m²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact"
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G34",
+  "familyTitle": "Seven cards on a table",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "Mei Ling has 7 rectangular cards. Each card is 6 cm long and 4 cm wide. She puts the cards side by side on a table so that they do not overlap. What is the total area of the table covered by the cards? Give your answer in cm²."
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "168"
+  },
+  "verification": {
+   "expression": "7 * 6 * 4"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of one card = 6 × 4 = 24 cm²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Total area of 7 cards = 7 × 24 = 168 cm²."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the area of one card (24 cm²)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ },
+ {
+  "familyCode": "P3-MG-AR-G35",
+  "familyTitle": "Cans of paint for a wall",
+  "primaryOutcomeCode": "P3-MG-AR-04",
+  "secondaryOutcomeCodes": [],
+  "questionType": "number",
+  "difficulty": "standard",
+  "cognitiveDemand": "application",
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "content": {
+   "stem": [
+    {
+     "t": "p",
+     "c": [
+      {
+       "t": "text",
+       "v": "A rectangular wall is 9 m long and 4 m high. One can of paint covers 6 m². How many cans of paint are needed to paint the whole wall?"
+      }
+     ]
+    }
+   ]
+  },
+  "answer": {
+   "kind": "number",
+   "value": "6"
+  },
+  "verification": {
+   "expression": "(9 * 4) / 6"
+  },
+  "workedSolution": [
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Area of the wall = 9 × 4 = 36 m²."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "Each can covers 6 m², so we need 36 ÷ 6 = 6 cans."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "c": [
+     {
+      "t": "text",
+      "v": "6 cans of paint are needed."
+     }
+    ]
+   }
+  ],
+  "markingScheme": {
+   "method": "exact",
+   "partialMarks": [
+    {
+     "marks": 1,
+     "criterion": "Finds the area of the wall (36 m²)"
+    }
+   ]
+  },
+  "provenance": "original_ai"
+ }
+]

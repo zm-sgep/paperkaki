@@ -52,7 +52,7 @@ export function TypedAnswer({
       ) : null}
       <div className="flex items-center gap-3">
         {unit && unitBefore ? (
-          <span id={unitId} className="text-2xl font-semibold text-ink">
+          <span id={unitId} data-answer-unit className="text-2xl font-semibold text-ink">
             {unit}
           </span>
         ) : null}
@@ -72,7 +72,7 @@ export function TypedAnswer({
           className={`${inputClassName} min-h-14 max-w-xs text-2xl ${shape === "soft" ? "rounded-2xl" : ""}`.trim()}
         />
         {unit && !unitBefore ? (
-          <span id={unitId} className="text-2xl font-semibold text-ink">
+          <span id={unitId} data-answer-unit className="text-2xl font-semibold text-ink">
             {unit}
           </span>
         ) : null}

@@ -85,6 +85,23 @@ export async function listLedgerEntries(db: Database, childId: string, options: 
   return options.limit ? query.limit(options.limit) : query;
 }
 
+/** The most points one practice on the scope earned from `since` on, or null when none did. */
+export async function maxPracticePointsSince(db: Database, childId: string, scopeKey: string, since: Date): Promise<number | null> {
+  const [row] = await db
+    .select({ most: sql<number | null>`max(${pointLedger.amount})` })
+    .from(pointLedger)
+    .where(
+      and(
+        eq(pointLedger.childId, childId),
+        eq(pointLedger.origin, "learning"),
+        eq(pointLedger.sourceType, "practice_session"),
+        sql`${pointLedger.calculation} ->> 'scopeKey' = ${scopeKey}`,
+        gte(pointLedger.createdAt, since),
+      ),
+    );
+  return row?.most === null || row?.most === undefined ? null : Number(row.most);
+}
+
 /** True when this child was already paid the one-time mastery bonus for the scope. */
 export async function hasFirstMasteryBonus(db: Database, childId: string, scopeKey: string): Promise<boolean> {
   const rows = await db

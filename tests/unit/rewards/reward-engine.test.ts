@@ -4,6 +4,7 @@ import {
   DIFFICULTIES,
   MASTERY_STATES,
   REWARD_POLICY_V1,
+  REWARD_POLICY_V2,
   RewardContextError,
   calculateReward,
   roundHalfUp,
@@ -463,6 +464,73 @@ describe("rewards-v1 fixtures", () => {
     ["E rapid retries", scenarioE, 0, []],
   ] as const)("%s", (_name, build, expectedPoints, expectedReasons) => {
     const decision = calculateReward(build(), REWARD_POLICY_V1);
+    expect(decision.points).toBe(expectedPoints);
+    expect(decision.reasonCodes).toEqual(expectedReasons);
+  });
+});
+
+describe("rewards-v2: a quick repeat never earns more than the earlier practice", () => {
+  const v2 = REWARD_POLICY_V2;
+  const sum = (decision: ReturnType<typeof calculateReward>) => decision.breakdown.reduce((total, item) => total + item.points, 0);
+
+  it("pays the same as rewards-v1 when there was no earlier practice in the window", () => {
+    for (const build of [scenarioA, scenarioB, scenarioC, scenarioD, scenarioE]) {
+      const one = calculateReward(build(), REWARD_POLICY_V1);
+      const two = calculateReward(build(), v2);
+      expect({ ...two, policyVersion: one.policyVersion }).toEqual(one);
+    }
+  });
+
+  it("limits a better second practice to the earlier award, and says why", () => {
+    const decision = calculateReward({ ...scenarioA(), recentSameScopePoints: 16 }, v2);
+    expect(decision.points).toBe(16);
+    expect(sum(decision)).toBe(16);
+    expect(decision.capped).toBe(true);
+    expect(decision.capReason).toBe("repeat_never_more");
+    expect(decision.antiFarmingDecisions.map((entry) => entry.rule)).toContain("repeat_never_more");
+    expect(decision.recommendedNextAction).toBeDefined();
+  });
+
+  it("leaves an award that is already at or under the earlier one alone", () => {
+    expect(calculateReward({ ...scenarioA(), recentSameScopePoints: 25 }, v2)).toMatchObject({ points: 25, capped: false });
+    expect(calculateReward({ ...scenarioA(), recentSameScopePoints: 40 }, v2)).toMatchObject({ points: 25, capped: false });
+  });
+
+  it("pays nothing when the earlier practice earned nothing", () => {
+    const decision = calculateReward({ ...scenarioA(), recentSameScopePoints: 0 }, v2);
+    expect(decision.points).toBe(0);
+    expect(decision.breakdown).toEqual([]);
+  });
+
+  it("counts the mastery bonus inside the limit: learning points shrink first, and a bonus that does not fit is not paid", () => {
+    const mastering = context({ masteryBefore: "almost_mastered", masteryAfter: "mastered", accuracy: 1, previousAccuracy: 0.8 });
+    const fits = calculateReward({ ...mastering, recentSameScopePoints: 20 }, v2);
+    expect(fits.points).toBe(20);
+    expect(fits.breakdown[0]).toEqual({ reason: "first_mastery", points: 12 });
+    const tooSmall = calculateReward({ ...mastering, recentSameScopePoints: 5 }, v2);
+    expect(tooSmall.points).toBe(5);
+    expect(tooSmall.reasonCodes).not.toContain("first_mastery");
+  });
+
+  it("is ignored by rewards-v1", () => {
+    expect(calculateReward({ ...scenarioA(), recentSameScopePoints: 16 }, REWARD_POLICY_V1).points).toBe(25);
+  });
+
+  it("refuses an earlier award that is not a whole number of 0 or more", () => {
+    expect(() => calculateReward({ ...scenarioA(), recentSameScopePoints: -1 }, v2)).toThrow(RewardContextError);
+    expect(() => calculateReward({ ...scenarioA(), recentSameScopePoints: 2.5 }, v2)).toThrow(RewardContextError);
+  });
+});
+
+describe("rewards-v2 fixtures", () => {
+  // Fixed numbers for rewards-v2. A policy change means a new version and new fixtures, not edits here.
+  it.each([
+    ["A weak improvement, nothing earlier", undefined, 25, ["weak_area_recovery", "improvement", "activity_completion"]],
+    ["A weak improvement, 16 earlier", 16, 16, ["weak_area_recovery", "improvement", "activity_completion"]],
+    ["A weak improvement, 10 earlier", 10, 10, ["weak_area_recovery", "improvement", "activity_completion"]],
+    ["A weak improvement, 0 earlier", 0, 0, []],
+  ] as const)("%s", (_name, earlier, expectedPoints, expectedReasons) => {
+    const decision = calculateReward({ ...scenarioA(), ...(earlier !== undefined ? { recentSameScopePoints: earlier } : {}) }, REWARD_POLICY_V2);
     expect(decision.points).toBe(expectedPoints);
     expect(decision.reasonCodes).toEqual(expectedReasons);
   });

@@ -32,6 +32,7 @@ import {
   insertLedgerEntry,
   listUpcomingScopeOutcomeIds,
   lockChildPoints,
+  maxPracticePointsSince,
 } from "@/repositories/postgres/rewards";
 import type { RewardDecisionRow } from "@/repositories/postgres/schema";
 import { attemptSessions } from "@/repositories/postgres/schema";
@@ -267,6 +268,12 @@ async function award(db: Database, childId: string, source: Source, now: Date, b
   const built = await build();
   if (!built) return null;
   const policy = await resolveRewardPolicy(db, now);
+  // A practice straight after another on the same scope never earns more than it (rewards-v2 on).
+  if (policy.repeatNeverMore && source.sourceType === "practice_session") {
+    const since = new Date(now.getTime() - policy.repeatNeverMore.windowMinutes * 60_000);
+    const earlier = await maxPracticePointsSince(db, childId, built.scopeKey, since);
+    if (earlier !== null) built.context = { ...built.context, recentSameScopePoints: earlier };
+  }
   const decision: RewardDecision = built.noEvidence
     ? { points: 0, reasonCodes: [], breakdown: [], policyVersion: policy.version, multipliers: {}, antiFarmingDecisions: [], capped: false }
     : calculateReward(built.context, policy);

@@ -30,7 +30,7 @@ import {
   practiceEventId,
   resolveRewardPolicy,
 } from "@/application/rewards";
-import { REWARD_POLICY_V1, balance, summariseLedger } from "@/domain/rewards";
+import { REWARD_POLICY_V1, REWARD_POLICY_V2, balance, summariseLedger } from "@/domain/rewards";
 import type { Database } from "@/repositories/postgres/client";
 import { listPracticeItems, type PracticeItem } from "@/repositories/postgres/practice";
 import { getBalance, getDecision, insertLedgerEntry, listLedgerEntries } from "@/repositories/postgres/rewards";
@@ -117,11 +117,14 @@ describe("Learning Points and parent rewards (Milestone 11)", () => {
 
   // -------------------------------------------------------------------------
   describe("the policy", () => {
-    it("seeds rewards-v1 with the same numbers as the engine's policy, and resolves it by time", async () => {
-      const [row] = await db.select().from(rewardPolicies).where(eq(rewardPolicies.version, "rewards-v1"));
-      expect(row?.status).toBe("active");
-      expect(row?.policy).toEqual(JSON.parse(JSON.stringify(REWARD_POLICY_V1)));
-      expect(await resolveRewardPolicy(db, at(0))).toEqual(REWARD_POLICY_V1);
+    it("keeps rewards-v1 unchanged but retired, seeds rewards-v2 with the engine's numbers, and resolves v2", async () => {
+      const [v1] = await db.select().from(rewardPolicies).where(eq(rewardPolicies.version, "rewards-v1"));
+      expect(v1?.status).toBe("retired");
+      expect(v1?.policy).toEqual(JSON.parse(JSON.stringify(REWARD_POLICY_V1)));
+      const [v2] = await db.select().from(rewardPolicies).where(eq(rewardPolicies.version, "rewards-v2"));
+      expect(v2?.status).toBe("active");
+      expect(v2?.policy).toEqual(JSON.parse(JSON.stringify(REWARD_POLICY_V2)));
+      expect(await resolveRewardPolicy(db, at(0))).toEqual(REWARD_POLICY_V2);
     });
 
     it("keeps a published policy frozen: its numbers cannot change and it cannot be deleted", async () => {
@@ -182,10 +185,10 @@ describe("Learning Points and parent rewards (Milestone 11)", () => {
       const decision = await getDecision(db, child.childId, mockResultEventId(mock.attemptId));
       expect(decision).not.toBeNull();
       expect(decision!.points).toBeGreaterThan(0);
-      expect(decision!.policyVersion).toBe("rewards-v1");
+      expect(decision!.policyVersion).toBe("rewards-v2");
       const entries = (await listLedgerEntries(db, child.childId)).filter((row) => row.sourceEventId === mockResultEventId(mock.attemptId));
       expect(entries).toHaveLength(1);
-      expect(entries[0]).toMatchObject({ origin: "learning", amount: decision!.points, sourceType: "mock_attempt", sourceId: mock.attemptId, policyVersion: "rewards-v1" });
+      expect(entries[0]).toMatchObject({ origin: "learning", amount: decision!.points, sourceType: "mock_attempt", sourceId: mock.attemptId, policyVersion: "rewards-v2" });
       expect(entries[0]!.masteryBefore).not.toBeNull();
       expect(entries[0]!.calculation).toMatchObject({ activityType: "mock", scopeKey: expect.any(String) });
 
@@ -244,9 +247,12 @@ describe("Learning Points and parent rewards (Milestone 11)", () => {
         child.childId,
         practiceEventId((await db.select().from(practiceSessions).where(eq(practiceSessions.childId, child.childId)))[0]!.id),
       );
+      // The second set is all right and the first had a mistake, so improvement alone could pay more.
+      // rewards-v2 never lets it: the two sets end about 33 minutes apart, inside the 60-minute window.
       const { sessionId } = await practise(child, "Money", 5000);
       const second = await getDecision(db, child.childId, practiceEventId(sessionId));
       expect(second).not.toBeNull();
+      expect(second!.policyVersion).toBe("rewards-v2");
       expect(second!.points).toBeLessThanOrEqual(first!.points);
     });
 
@@ -262,13 +268,13 @@ describe("Learning Points and parent rewards (Milestone 11)", () => {
     });
 
     it("never lets awarding change a finished set: it is paid later, when the reward is found working again", async () => {
-      await db.update(rewardPolicies).set({ status: "retired" }).where(eq(rewardPolicies.version, "rewards-v1"));
+      await db.update(rewardPolicies).set({ status: "retired" }).where(eq(rewardPolicies.version, "rewards-v2"));
       const { sessionId } = await practise(child, "Fractions", 7000);
       const [session] = await db.select().from(practiceSessions).where(eq(practiceSessions.id, sessionId));
       expect(session?.status).toBe("completed");
       expect(await getDecision(db, child.childId, practiceEventId(sessionId))).toBeNull();
 
-      await db.update(rewardPolicies).set({ status: "active" }).where(eq(rewardPolicies.version, "rewards-v1"));
+      await db.update(rewardPolicies).set({ status: "active" }).where(eq(rewardPolicies.version, "rewards-v2"));
       const run = await getPracticeRun(child, sessionId, ctx(at(9000)));
       if (run?.state !== "done") throw new Error("expected the end screen");
       expect(run.reward).not.toBeNull();
