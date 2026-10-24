@@ -120,6 +120,13 @@
       "when": 1790743334856,
       "tag": "0016_rewards",
       "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1792886029780,
+      "tag": "0017_rewards_v2",
+      "breakpoints": true
     }
   ]
 }

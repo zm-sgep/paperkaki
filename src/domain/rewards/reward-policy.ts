@@ -68,6 +68,11 @@ export type RewardPolicy = {
   lowEffortMultiplier: number;
   /** A nudge is shown when anti-farming reduced the award or it is at most this many points. */
   lowYieldNudgeAtMostPoints: number;
+  /**
+   * A practice on the same scope inside this window never earns more than the earlier one, the
+   * one-time mastery bonus included. Absent in rewards-v1.
+   */
+  repeatNeverMore?: { windowMinutes: number };
 };
 
 function deepFreeze<T>(value: T): T {
@@ -127,6 +132,17 @@ export const REWARD_POLICY_V1: RewardPolicy = deepFreeze({
 } satisfies RewardPolicy);
 
 /**
+ * rewards-v2 (25 October 2026): rewards-v1 plus one rule. A second practice on the same scope within
+ * an hour of the first never earns more points than the first, even when it went better. Owner's
+ * decision: improvement still pays, but on a later practice, not straight after the first.
+ */
+export const REWARD_POLICY_V2: RewardPolicy = deepFreeze({
+  ...structuredClone(REWARD_POLICY_V1),
+  version: "rewards-v2",
+  repeatNeverMore: { windowMinutes: 60 },
+} satisfies RewardPolicy);
+
+/**
  * Checks a policy is usable: finite non-negative numbers, factors that only ever shrink a reward
  * where they should, and non-empty non-increasing decay lists. Returns plain-language problems;
  * an empty list means valid.
@@ -171,6 +187,7 @@ export function validateRewardPolicy(policy: RewardPolicy): string[] {
   check("cooldown.multiplier", policy.cooldown.multiplier, 1);
   check("lowEffortMultiplier", policy.lowEffortMultiplier, 1);
   check("lowYieldNudgeAtMostPoints", policy.lowYieldNudgeAtMostPoints);
+  if (policy.repeatNeverMore !== undefined) check("repeatNeverMore.windowMinutes", policy.repeatNeverMore.windowMinutes);
   for (const [name, list] of [
     ["sameFamilyDecay", policy.sameFamilyDecay],
     ["masteredTopicSessionDecay", policy.masteredTopicSessionDecay],

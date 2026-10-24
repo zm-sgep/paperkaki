@@ -37,6 +37,7 @@ export const RewardPolicySchema = z.object({
   cooldown: z.object({ windowMinutes: number, multiplier: number }),
   lowEffortMultiplier: number,
   lowYieldNudgeAtMostPoints: number,
+  repeatNeverMore: z.object({ windowMinutes: number }).optional(),
 });
 
 const Title = z

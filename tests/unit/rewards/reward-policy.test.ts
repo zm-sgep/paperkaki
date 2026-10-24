@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { REWARD_POLICY_V1, validateRewardPolicy, type RewardPolicy } from "@/domain/rewards";
+import { REWARD_POLICY_V1, REWARD_POLICY_V2, validateRewardPolicy, type RewardPolicy } from "@/domain/rewards";
 
 describe("REWARD_POLICY_V1", () => {
   it("is versioned and matches the spec's starting values", () => {
@@ -64,5 +64,20 @@ describe("validateRewardPolicy", () => {
     expect(edit((p) => { p.sameFamilyDecay = []; })).not.toHaveLength(0);
     expect(edit((p) => { p.sameFamilyDecay = [0.9, 0.5]; })).toHaveLength(1);
     expect(edit((p) => { p.masteredTopicSessionDecay = [1, 0.2, 0.5]; })).toHaveLength(1);
+  });
+});
+
+describe("REWARD_POLICY_V2", () => {
+  it("is rewards-v1 plus the 60-minute quick-repeat rule, and is valid", () => {
+    const { repeatNeverMore, ...rest } = REWARD_POLICY_V2;
+    expect(rest).toEqual({ ...REWARD_POLICY_V1, version: "rewards-v2" });
+    expect(repeatNeverMore).toEqual({ windowMinutes: 60 });
+    expect(validateRewardPolicy(REWARD_POLICY_V2)).toEqual([]);
+  });
+
+  it("rejects a negative repeat window", () => {
+    expect(validateRewardPolicy({ ...REWARD_POLICY_V2, repeatNeverMore: { windowMinutes: -1 } })).toContain(
+      "repeatNeverMore.windowMinutes must be a number of 0 or more",
+    );
   });
 });
