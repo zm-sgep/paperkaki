@@ -70,7 +70,11 @@ jobs:
           tables=$(PGPASSWORD=paperkaki_ci_only psql -h localhost -U paperkaki -d paperkaki -Atc \
             "select string_agg(table_name, ',' order by table_name collate \"C\") from information_schema.tables where table_schema = 'public'")
           echo "public tables: $tables"
-          test "$tables" = "audit_logs,curriculum_domains,curriculum_outcome_sources,curriculum_outcomes,curriculum_topics,curriculum_versions,outcome_relationships,parent_profiles,source_documents,subjects"
+          # Every table a committed migration creates must exist, and no other.
+          expected=$(grep -hoE 'CREATE TABLE "[a-z_]+"' drizzle/*.sql | sed -E 's/.*"([a-z_]+)"/\1/' | LC_ALL=C sort -u | paste -sd, -)
+          echo "expected tables: $expected"
+          test -n "$expected"
+          test "$tables" = "$expected"
 
       - name: Schema files match the committed migrations
         run: |
